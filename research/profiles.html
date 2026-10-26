@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gen Agent 업체 프로필</title>
+<style>
+  :root{--bg:#f7f7f5;--surface:#fff;--text:#1f2328;--muted:#5f6670;--line:#e3e3df;--accent:#2f5bd3;--accent-soft:#eaf0fd;--warn:#a15c00;--warn-soft:#fff4e0}
+  @media (prefers-color-scheme: dark){:root{--bg:#16181c;--surface:#1e2126;--text:#e6e8eb;--muted:#9aa1ab;--line:#30343b;--accent:#7ea2ff;--accent-soft:#232c42;--warn:#f0b35a;--warn-soft:#3a2f1c}}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Malgun Gothic",sans-serif;line-height:1.6;font-size:15px}
+  .wrap{max-width:1080px;margin:0 auto;padding:40px 16px 64px}
+  .eyebrow{font-size:13px;color:var(--accent);font-weight:600}
+  h1{font-size:28px;margin:6px 0 8px;line-height:1.3}
+  .meta{color:var(--muted);font-size:13px}
+  section{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:24px;margin:20px 0}
+  h2{font-size:19px;margin:0 0 14px}
+  h3{font-size:15px;margin:0 0 6px}
+  .find{display:grid;gap:12px;grid-template-columns:minmax(0,1fr)}
+  .find p,.find h3,details.co p,details.co li{overflow-wrap:anywhere}
+  .find div{border-left:3px solid var(--accent);padding:2px 0 2px 14px}
+  .find p{margin:0}
+  .table-wrap{overflow-x:auto}
+  table{width:100%;border-collapse:collapse;font-size:13px;min-width:780px}
+  th,td{text-align:left;padding:8px 9px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--muted);font-weight:600;background:var(--bg)}
+  td:first-child{font-weight:600;white-space:nowrap}
+  .filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+  .filters button{font:inherit;font-size:13px;background:var(--surface);color:var(--text);border:1px solid var(--line);padding:5px 12px;border-radius:999px;cursor:pointer}
+  .filters button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+  details.co{border:1px solid var(--line);border-radius:10px;margin-bottom:10px;background:var(--surface)}
+  details.co summary{cursor:pointer;padding:14px 16px;display:flex;flex-wrap:wrap;align-items:center;gap:10px;list-style:none}
+  details.co summary::-webkit-details-marker{display:none}
+  details.co summary b{font-size:16px}
+  details.co[open] summary{border-bottom:1px solid var(--line)}
+  .gtag{font-size:12px;background:var(--accent-soft);color:var(--accent);padding:2px 8px;border-radius:6px}
+  .ty{font-size:13px;color:var(--muted)}
+  details.co > *:not(summary){margin-left:16px;margin-right:16px}
+  .one{font-weight:600;margin-top:14px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  h4{font-size:13px;color:var(--muted);margin:12px 0 4px}
+  details.co p{margin:0 0 6px;font-size:14px}
+  details.co ul{margin:0;padding-left:18px;font-size:14px}
+  details.co li{margin:2px 0}
+  .src{font-size:12px;color:var(--muted);padding-bottom:14px}
+  .src a{color:var(--muted)}
+  .callout{background:var(--warn-soft);border-left:3px solid var(--warn);border-radius:8px;padding:14px 16px}
+  details.co .one{margin:14px 16px 6px}
+  details.co .src{margin:8px 16px 0}
+  @media (max-width:640px){h1{font-size:23px}.grid2{grid-template-columns:1fr;gap:0}}
+</style>
+</head>
+<body>
+<div class="wrap"><a href="../index.html" style="display:inline-block;font-size:13px;margin-bottom:12px;color:inherit;opacity:.7;text-decoration:none">← 리서치 홈</a>
+  <div class="eyebrow">AI Agent 업체 리서치 · 회사별 비즈니스 전략·프로덕트</div>
+  <h1>Gen Agent 사업 업체 프로필 (25곳)</h1>
+  <div class="meta">기준일 2026.10.23 · 공식 발표·IR·보도자료 기반 · 수치는 각 사 발표 기간 기준 · 확인 못 한 항목은 "미확인" · 계층별 기술 비교는 「Gen_Agent_아키텍처_비교.html」 참고</div>
+
+  <section>
+    <h2>핵심 발견</h2>
+    <div class="find">
+      <div><h3>1. 해자(moat)가 무엇이냐에 따라 전략이 7가지 유형으로 갈립니다</h3><p>인프라(AWS), 설치 기반(Microsoft), 풀스택 모델(Google), 프런티어 모델(OpenAI·Anthropic), 업무 데이터(Salesforce·SAP·ServiceNow·Oracle), 데이터 플랫폼(Databricks·Snowflake), 공공·그룹 채널(국내 SI)입니다. 모두 "에이전트 플랫폼"을 말하지만, 실제로 지키려는 자산이 다릅니다.</p></div>
+      <div><h3>2. 과금은 좌석제에서 소비·결과 기반으로 이동 중입니다</h3><p>Salesforce는 액션당 $0.10, Snowflake·Databricks는 좌석 없는 소비형, SAP는 AI Units 크레딧입니다. Microsoft만 좌석 번들(Copilot $30, E7 $99)을 강화합니다. 국내 SI는 여전히 구축형 SI 중심이고 공개 가격이 없습니다.</p></div>
+      <div><h3>3. 글로벌 모델사의 국내 유통 창구는 대형 SI입니다</h3><p>OpenAI는 삼성SDS(1호)·LG CNS(2호) 리셀러, Anthropic은 삼성SDS(CPN 셀렉트), Microsoft는 KT(SPC)를 통해 들어옵니다. 글로벌 25곳 중 국내 공공 수주가 확인된 곳은 없고, CSAP 하등급도 하이퍼스케일러 3사만 보유합니다.</p></div>
+      <div><h3>4. 국내 공공 에이전트 시장은 3개 층으로 나뉩니다</h3><p>플랫폼 층(삼성SDS·네이버클라우드 — 공통기반·온AI), 대형 구축 층(LG CNS·KT·한화시스템 — 100억 이상), 기관 단위 층(AI 전문기업·더존 — 10~50억)입니다. 그룹 SI(포스코DX·CJ·롯데·현대오토에버)는 아직 캡티브 단계입니다.</p></div>
+      <div><h3>5. 2026년 공통 화두는 "에이전트 통제"입니다</h3><p>에이전트 ID·레지스트리·게이트웨이를 AWS·MS·Google·Snowflake·ServiceNow·SAP·IBM이 일제히 출시했고, 국내에서도 현대오토에버(H-Launch 에이전트별 ID), 포스코DX(에이전트 HR 관리)가 같은 문제를 다룹니다.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>한눈에 보기</h2>
+    <div class="table-wrap"><table>
+      <thead><tr><th>업체</th><th>그룹</th><th>전략 유형</th><th>과금</th><th>한국·공공</th></tr></thead>
+      <tbody>
+<tr><td>AWS</td><td>글로벌 하이퍼스케일러</td><td>인프라·모델 중립 플랫폼형</td><td>Bedrock·AgentCore 사용량 과금. Amazon Quick: Professional 사용자당 월 $20, Enterprise 월 $40(+계정당 월 $250 인프라)</td><td>CSAP 하등급(2025.4, 서울 리전). 공공은 국내 SI·MSP 경유 간접 진출. 공공 AI 직접 수주 미확인</td></tr><tr><td>Microsoft</td><td>글로벌 하이퍼스케일러</td><td>설치 기반 좌석 업셀형</td><td>M365 Copilot 사용자당 월 $30, Agent 365 월 $15, M365 E7 월 $99(2026.5 GA). Foundry는 사용량 과금</td><td>CSAP 하등급. KT SPC로 공공·규제 산업 우회 진입. KT 컨소시엄의 대법원(145억)·경기도(131억) 사업에 협력 구도</td></tr><tr><td>Google Cloud</td><td>글로벌 하이퍼스케일러</td><td>풀스택 독자 모델·고성장형</td><td>Gemini Enterprise 사용자당 약 월 $21~60(에디션별, 3자 정리 자료 기준)</td><td>CSAP 하등급(2025.2). 서울 리전 보유. 공공 AI 수주·전략 미확인</td></tr><tr><td>OpenAI</td><td>글로벌 AI랩</td><td>모델 + 배포 기업형</td><td>ChatGPT Business·Enterprise 좌석제, API 토큰 과금. Frontier 가격 비공개</td><td>OpenAI Korea 운영. 국내 Enterprise 사용자 1년간 약 28배. 삼성전자·LG·크래프톤·토스 등. 과기정통부와 GTAC 협력(2026.5). CSAP·공공 도입 미확인</td></tr><tr><td>Anthropic</td><td>글로벌 AI랩</td><td>모델 + 에이전트 하네스형</td><td>API 토큰 과금, Team·Enterprise 좌석제. Managed Agents 단가 미확인</td><td>서울 오피스 개소(2026.6), 과기정통부 MOU. NAVER·LG CNS·삼성SDS·한화솔루션·넥슨 등. CSAP·공공 조달 미확인</td></tr><tr><td>Salesforce</td><td>글로벌 업무 SaaS</td><td>CRM 데이터 해자 + 디지털 노동력형</td><td>Flex Credits 액션당 $0.10, Agentforce 애드온 사용자당 월 $125, Agentforce 1 Editions 월 $550 (가장 투명한 공개 단가)</td><td>세일즈포스코리아. AWS 한국 리전 Hyperforce. 포스코·무신사. CSAP 미확인</td></tr><tr><td>ServiceNow</td><td>글로벌 업무 SaaS</td><td>워크플로우 + AI 관제탑형</td><td>상위 SKU(Pro Plus)에 구독+assist 소비 하이브리드. 단가 비공개</td><td>ServiceNow Korea 운영. 국내 대형 고객·CSAP·공공 미확인</td></tr><tr><td>SAP</td><td>글로벌 업무 SaaS</td><td>ERP 데이터 해자 + 클라우드 전환 결합형</td><td>Base AI는 구독에 무상 포함, Premium은 AI Units 크레딧 차감(단가 비공개)</td><td>SAP Korea. 삼성전기·LG이노텍·삼성SDS. Joule 한국어 지원·CSAP 미확인</td></tr><tr><td>Oracle</td><td>글로벌 업무 SaaS</td><td>DB·업무앱 내장형</td><td>Fusion용 Studio 추가 비용 없음. OCI Enterprise AI 단가 미확인</td><td>한국오라클, 서울·춘천 OCI 리전. OCI Enterprise AI는 한국 리전 미제공. 공공·CSAP 미확인</td></tr><tr><td>IBM</td><td>글로벌 데이터·엔터프라이즈 플랫폼</td><td>멀티 에이전트 컨트롤 플레인형</td><td>watsonx Orchestrate Essentials 월 $530~, Standard 월 $6,360~ (공개 정액)</td><td>한국IBM. 국내 Orchestrate 사례·CSAP 미확인</td></tr><tr><td>Databricks</td><td>글로벌 데이터·엔터프라이즈 플랫폼</td><td>데이터 레이크하우스 + 에이전트형</td><td>DBU 소비 과금. Genie는 좌석 과금 없음(사용자별 월 $10 무료 후 사용량)</td><td>데이터브릭스코리아, 국내 매출 100% 이상 성장. 삼성생명·LG유플러스·NH투자증권 등. 공공·CSAP 미확인</td></tr><tr><td>Snowflake</td><td>글로벌 데이터·엔터프라이즈 플랫폼</td><td>데이터 클라우드 + 에이전트형</td><td>AI Credits 토큰 소비 과금, 좌석 요금 없음(크레딧당 $2.0~2.2)</td><td>스노우플레이크 코리아, 국내 매출 2021~2025년 약 18배. KB국민은행 에이전트 약 300개 계획. 공공·CSAP 미확인</td></tr><tr><td>삼성SDS</td><td>국내 대형 SI</td><td>국가 인프라·공공 플랫폼 + 글로벌 모델 리셀형</td><td>GPUaaS 사용량 과금. FabriX·Brity 공개 가격 미확인</td><td>범정부 AI 공통기반 1차 수주·2차 단독 응찰, 온AI 14개 부처, AI국회(117억), 정부24 AI 검색</td></tr><tr><td>LG CNS</td><td>국내 대형 SI</td><td>모듈형 온프렘 + 산업 특화 SI형</td><td>SI 구축형 + 인프라 구독(XPUWorks). 공개 가격 미확인</td><td>외교부(300억), 경기도교육청(380억). 범정부 공통기반 입찰은 탈락</td></tr><tr><td>SK AX</td><td>국내 대형 SI</td><td>그룹 캡티브 + 에이전틱 컨설팅·ERP형</td><td>구축형·컨설팅 중심. 공개 가격 미확인</td><td>공공 AI 직접 수주 미확인. 조달청-SK㈜ 생성형 AI 역량 협약(교육)</td></tr><tr><td>네이버클라우드</td><td>국내 LLM·클라우드·플랫폼</td><td>소버린 AI(자체 모델) + 행정망 SaaS형</td><td>GPUaaS·클라우드 사용량, 네이버웍스 구독. 단가 미확인</td><td>범정부 공통기반, 온AI 18개 부처, 과기정통부 GPU 4,120장. 독파모 1차 탈락(독자성)</td></tr><tr><td>KT</td><td>국내 LLM·클라우드·플랫폼</td><td>멀티모델 브로커 + MS 협력 + 대형 SI형</td><td>구축·운영형 + 클라우드 사용량 + MS 라이선스 리셀</td><td>대법원 재판지원 AI(145억, KT·엘박스·코난·엠티데이타), 경기도 생성형 AI(131억 컨소시엄 참여), 범정부 공통기반 탈락</td></tr><tr><td>카카오</td><td>국내 LLM·클라우드·플랫폼</td><td>B2C 채널 + 공공 서비스 전달형</td><td>미확인</td><td>행안부 AI 국민비서 시범, 모두의 AI 사업자. 엔터프라이즈 B2B 에이전트 전략 미확인</td></tr><tr><td>NHN클라우드</td><td>국내 LLM·클라우드·플랫폼</td><td>AI 인프라 선점형</td><td>GPUaaS 사용량. 에이전트 플랫폼 요금 미확인</td><td>광주 국가 AI 데이터센터, 정부 GPU 사업. 공공 에이전트 수주 미확인</td></tr><tr><td>더존비즈온</td><td>국내 그룹 SI·업무SW</td><td>ERP·그룹웨어 내장형</td><td>미확인</td><td>서울시 챗봇 2.0 → 행정 AI 에이전트 2년 연속, 경기도 25개 공공기관, 한국공항공사 AI 업무혁신 플랫폼</td></tr><tr><td>포스코DX</td><td>국내 그룹 SI·업무SW</td><td>그룹 캡티브 + 에이전트 HR 관리형</td><td>미확인</td><td>공공 에이전트 사업 미확인(인천공항 엣지 AI만)</td></tr><tr><td>CJ올리브네트웍스</td><td>국내 그룹 SI·업무SW</td><td>그룹 캡티브 + 제조 AI형</td><td>미확인</td><td>공공 실적 미확인</td></tr><tr><td>롯데이노베이트</td><td>국내 그룹 SI·업무SW</td><td>그룹 캡티브 + 업무 에이전트 패키지형</td><td>미확인</td><td>공공 에이전트 수주 미확인</td></tr><tr><td>현대오토에버</td><td>국내 그룹 SI·업무SW</td><td>그룹 캡티브 + 피지컬 AI형</td><td>미확인</td><td>공공 에이전트 수주 미확인</td></tr><tr><td>한화시스템</td><td>국내 그룹 SI·업무SW</td><td>방산 특화 + 그룹 제조 AX형</td><td>미확인</td><td>국방 LLM 242억(네이버클라우드 컨소시엄)</td></tr>      </tbody></table></div>
+  </section>
+
+  <section>
+    <h2>회사별 상세</h2>
+    <div class="filters" id="f">
+      <button class="on" data-g="all">전체</button>
+      <button data-g="hyper">글로벌 하이퍼스케일러</button><button data-g="lab">글로벌 AI랩</button><button data-g="saas">글로벌 업무 SaaS</button>
+      <button data-g="data">글로벌 데이터 플랫폼</button><button data-g="si">국내 대형 SI</button><button data-g="kcloud">국내 LLM·클라우드</button><button data-g="group">국내 그룹 SI·업무SW</button>
+    </div>
+<details class="co" data-g="hyper"><summary><span class="gtag">글로벌 하이퍼스케일러</span><b>AWS</b><span class="ty">인프라·모델 중립 플랫폼형</span></summary>
+<p class="one">칩(Trainium)·클라우드·Bedrock/AgentCore로 &#x27;에이전트 실행 기반&#x27;을 장악하고, Quick·Kiro 등 자사 에이전트 앱으로 확장</p>
+<div class="grid2"><div><h4>비즈니스 전략</h4><ul><li>Bedrock에 Claude·GPT·Gemma·Grok 등 외부 모델을 폭넓게 탑재하는 모델 중립 전략</li><li>AgentCore를 10여 개 모듈(Runtime·Gateway·Memory·Identity·Policy 등)로 쪼개 조합형으로 제공</li><li>Trainium 자체 칩으로 수직계열화, Anthropic·OpenAI가 다년 약정</li><li>Forward Deployed Engineering 팀에 10억 달러 투자</li></ul>
+<h4>GTM·채널</h4><p>직판 + 파트너/SI + AWS Marketplace(AI Agents &amp; Tools). 국내는 삼성SDS(Bedrock 경유 Claude 리셀), SK AX 등과 협업</p><h4>과금</h4><p>Bedrock·AgentCore 사용량 과금. Amazon Quick: Professional 사용자당 월 $20, Enterprise 월 $40(+계정당 월 $250 인프라)</p><h4>실적 지표</h4><p>2026 Q2 AWS 매출 422.3억 달러(+37%), AI 사업 연 런레이트 250억 달러 초과</p></div>
+<div><h4>대표 프로덕트</h4><ul><li>Amazon Bedrock — 멀티모델 플랫폼</li><li>Bedrock AgentCore — 에이전트 런타임·게이트웨이·메모리·ID·정책·평가 (2025.10 GA)</li><li>Strands Agents — 오픈소스 에이전트 SDK</li><li>Amazon Quick — 업무용 에이전트 워크스페이스</li><li>Kiro — 에이전트형 코딩 IDE</li><li>AWS Transform / DevOps Agent — 마이그레이션·운영 에이전트</li></ul>
+<h4>아키텍처 요약</h4><p>MCP 게이트웨이(API·Lambda를 MCP 도구로 변환), microVM 세션 격리, Cedar 기반 결정론적 정책, 평가·최적화 루프. 서울 리전에서 AgentCore 핵심 서비스 제공. 온프렘은 AI Factories</p><h4>한국·공공</h4><p>CSAP 하등급(2025.4, 서울 리전). 공공은 국내 SI·MSP 경유 간접 진출. 공공 AI 직접 수주 미확인</p></div></div>
+<p class="src">출처: <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/release-notes.html">docs.aws.amazon.com</a> · <a href="https://aws.amazon.com/quick/pricing">aws.amazon.com</a> · <a href="https://www.nasdaq.com/press-release/amazoncom-announces-second-quarter-results-2026-07-30">www.nasdaq.com</a></p></details>
+<details class="co" data-g="hyper"><summary><span class="gtag">글로벌 하이퍼스케일러</span><b>Microsoft</b><span class="ty">설치 기반 좌석 업셀형</span></summary>
+<p class="one">M365 설치 기반에 Copilot·에이전트를 좌석 단위로 얹고, Agent 365로 &#x27;에이전트를 디지털 직원처럼&#x27; 관리</p>
+<div class="grid2"><div><h4>비즈니스 전략</h4><ul><li>M365 Copilot 유료 좌석 3,000만 개 초과, Fortune 500의 90%가 사용</li><li>E7(Frontier Suite) 번들로 Copilot·Agent 365·Entra를 묶어 업셀</li><li>Entra Agent ID로 에이전트에 사람과 같은 ID·감사 체계 적용</li><li>Foundry에서 OpenAI·Claude 등 멀티모델 + Model Router</li></ul>
+<h4>GTM·채널</h4><p>EA 직판, CSP 파트너 리셀, Marketplace. 한국은 KT가 전략 파트너(Secure Public Cloud, AX 전문 법인)</p><h4>과금</h4><p>M365 Copilot 사용자당 월 $30, Agent 365 월 $15, M365 E7 월 $99(2026.5 GA). Foundry는 사용량 과금</p><h4>실적 지표</h4><p>FY26 Q4 매출 900억 달러(+18%), Azure +43%, FY26 Azure 매출 첫 1,000억 달러 돌파</p></div>
+<div><h4>대표 프로덕트</h4><ul><li>Microsoft 365 Copilot / Copilot Cowork — 업무 에이전트</li><li>Copilot Studio — 로우코드 에이전트 빌더</li><li>Microsoft Foundry(구 Azure AI Foundry) — 모델·에이전트 개발·실행</li><li>Agent 365 — 에이전트 레지스트리·거버넌스 (2026.5 GA)</li><li>Microsoft Agent Framework — Semantic Kernel+AutoGen 통합 SDK</li><li>Sovereign Cloud / Azure Local — 단절 환경 운영</li></ul>
+<h4>아키텍처 요약</h4><p>Toolboxes(통합 MCP 엔드포인트), A2A GA, Foundry IQ·Work IQ(M365 그래프), 절차적 메모리, Entra·Purview·Defender를 에이전트에 적용. 완전 단절(air-gapped) 대형 모델 운영 지원</p><h4>한국·공공</h4><p>CSAP 하등급. KT SPC로 공공·규제 산업 우회 진입. KT 컨소시엄의 대법원(145억)·경기도(131억) 사업에 협력 구도</p></div></div>
+<p class="src">출처: <a href="https://devblogs.microsoft.com/foundry/agent-service-build2026/">devblogs.microsoft.com</a> · <a href="https://blogs.microsoft.com/blog/2026/03/09/introducing-the-first-frontier-suite-built-on-intelligence-trust/">blogs.microsoft.com</a> · <a href="https://www.sec.gov/Archives/edgar/data/0000789019/000119312526323632/msft-ex99_1.htm">www.sec.gov</a></p></details>
+<details class="co" data-g="hyper"><summary><span class="gtag">글로벌 하이퍼스케일러</span><b>Google Cloud</b><span class="ty">풀스택 독자 모델·고성장형</span></summary>
+<p class="one">TPU→Gemini→Agent Platform→Gemini Enterprise 수직 통합에 A2A·ADK 등 개방형 표준으로 생태계 주도</p>
+<div class="grid2"><div><h4>비즈니스 전략</h4><ul><li>Vertex AI를 &#x27;Gemini Enterprise Agent Platform&#x27;으로 개명(2026.4)할 만큼 에이전트 중심 재편</li><li>A2A·ADK·AP2로 에이전트 표준 주도(ADK 분기 다운로드 약 7,000만)</li><li>TPU를 외부 데이터센터에 판매 시작</li><li>Wiz 결합 보안</li></ul>
+<h4>GTM·채널</h4><p>직판 + 파트너 + Marketplace(거래 +7배). 국내는 삼성SDS가 3대 프런티어 협력사로 꼽음</p><h4>과금</h4><p>Gemini Enterprise 사용자당 약 월 $21~60(에디션별, 3자 정리 자료 기준)</p><h4>실적 지표</h4><p>2026 Q2 매출 248억 달러(+82%), 백로그 5,140억 달러</p></div>
+<div><h4>대표 프로덕트</h4><ul><li>Gemini Enterprise(구 Agentspace) — 전 직원용 에이전트 앱</li><li>Gemini Enterprise Agent Platform(구 Vertex AI) — 개발·실행 플랫폼</li><li>ADK — 오픈소스 에이전트 SDK</li><li>Agent Runtime / Memory Bank — 관리형 런타임·메모리</li><li>Agent Gateway·Registry·Identity — 거버넌스 (2026.6 GA)</li><li>Google Distributed Cloud — 에어갭 온프렘 Gemini</li></ul>
+<h4>아키텍처 요약</h4><p>A2A 원조 + MCP, Agent Gateway로 도구 연결 정책 적용, 시뮬레이션→평가→최적화 루프, 엔터프라이즈 검색 강점. GDC로 에어갭 환경 Gemini</p><h4>한국·공공</h4><p>CSAP 하등급(2025.2). 서울 리전 보유. 공공 AI 수주·전략 미확인</p></div></div>
+<p class="src">출처: <a href="https://cloud.google.com/blog/products/ai-machine-learning/introducing-gemini-enterprise-agent-platform">cloud.google.com</a> · <a href="https://blog.google/company-news/inside-google/message-ceo/alphabet-earnings-q2-2026/">blog.google</a></p></details>
+<details class="co" data-g="lab"><summary><span class="gtag">글로벌 AI랩</span><b>OpenAI</b><span class="ty">모델 + 배포 기업형</span></summary>
+<p class="one">모델 공급사에서 &#x27;배포 기업&#x27;으로 확장. Frontier를 기업 내 모든 에이전트의 기반 계층으로 포지셔닝</p>
+<div class="grid2"><div><h4>비즈니스 전략</h4><ul><li>ChatGPT Work·Codex(직원 작업공간)와 Frontier·API(플랫폼) 양면 공략</li><li>엔터프라이즈 매출 비중 40% 이상, 2026년 말 소비자 매출과 동급 목표</li><li>FDE + 컨설팅 제휴(Frontier Alliances: McKinsey·BCG·Accenture·Capgemini)</li><li>AWS Bedrock에서도 모델·Codex 제공(2026.6)</li></ul>
+<h4>GTM·채널</h4><p>직판·FDE, 컨설팅 제휴, AWS·Databricks·Snowflake, OpenAI Marketplace. 국내는 삼성SDS(1호)·LG CNS(2호) 리셀러</p><h4>과금</h4><p>ChatGPT Business·Enterprise 좌석제, API 토큰 과금. Frontier 가격 비공개</p><h4>실적 지표</h4><p>비즈니스 고객 100만 곳 이상, ChatGPT for Work 좌석 700만 이상(2025.11)</p></div>
+<div><h4>대표 프로덕트</h4><ul><li>OpenAI Frontier — 에이전트 구축·배포·관리 플랫폼 (2026.2)</li><li>ChatGPT Work — 업무 에이전트 작업공간 (2026.7)</li><li>Codex — 코딩 에이전트</li><li>AgentKit / Agents API — 에이전트 개발</li><li>Dots — 상시 실행 에이전트 (2026.9 발표)</li><li>ChatGPT for Financial Services (2026.9)</li></ul>
+<h4>아키텍처 요약</h4><p>Frontier가 공유 시맨틱 레이어·실행·메모리·평가·에이전트 ID를 담당. MCP 기반 플러그인·커넥터. 실행 위치를 로컬/기업 클라우드/OpenAI 호스팅 중 선택. 한국 데이터 레지던시 제공</p><h4>한국·공공</h4><p>OpenAI Korea 운영. 국내 Enterprise 사용자 1년간 약 28배. 삼성전자·LG·크래프톤·토스 등. 과기정통부와 GTAC 협력(2026.5). CSAP·공공 도입 미확인</p></div></div>
+<p class="src">출처: <a href="https://openai.com/index/introducing-openai-frontier/">openai.com</a> · <a href="https://openai.com/index/next-phase-of-enterprise-ai/">openai.com</a> · <a href="https://openai.com/index/devday-2026-recap/">openai.com</a></p></details>
+<details class="co" data-g="lab"><summary><span class="gtag">글로벌 AI랩</span><b>Anthropic</b><span class="ty">모델 + 에이전트 하네스형</span></summary>
+<p class="one">코딩 에이전트(Claude Code)로 진입해 지식노동(Cowork)·에이전트 인프라(Managed Agents)로 확장, MCP·Agent Skills 표준 주도</p>
+<div class="grid2"><div><h4>비즈니스 전략</h4><ul><li>엔터프라이즈·개발자 중심, 3대 클라우드 모두에서 제공되는 프런티어 모델</li><li>MCP 창시·AAIF 기증, Agent Skills 개방형 표준 공개</li><li>ServiceNow·SAP·Salesforce 등 업무 SaaS와 연동 제휴</li><li>SI 파트너 경로(국내 삼성SDS·LG CNS)</li></ul>
+<h4>GTM·채널</h4><p>직판 + AWS Bedrock·Google Vertex·Azure + SI 파트너(CPN). 국내 삼성SDS가 CPN 셀렉트 티어 첫 선정</p><h4>과금</h4><p>API 토큰 과금, Team·Enterprise 좌석제. Managed Agents 단가 미확인</p><h4>실적 지표</h4><p>연환산 매출 470억 달러 이상(2026.5 Series H 발표 기준), 연 100만 달러 이상 고객 1,000곳 이상</p></div>
+<div><h4>대표 프로덕트</h4><ul><li>Claude Code — 코딩 에이전트</li><li>Claude Cowork — 데스크톱 업무 에이전트 (2026.4 GA)</li><li>Claude Managed Agents — 호스팅 에이전트 API (2026.4 베타)</li><li>Claude Agent SDK — 에이전트 개발 SDK</li><li>Claude Enterprise·Team — 기업 좌석 플랜</li><li>Agent Skills — 재사용 스킬 표준</li></ul>
+<h4>아키텍처 요약</h4><p>Agent SDK·Managed Agents가 하네스·샌드박스·상태·권한 담당. MCP 기반 커넥터와 커넥터 단위 통제, RBAC·지출 한도, OpenTelemetry. Bedrock 경유 국내 리전 데이터 레지던시</p><h4>한국·공공</h4><p>서울 오피스 개소(2026.6), 과기정통부 MOU. NAVER·LG CNS·삼성SDS·한화솔루션·넥슨 등. CSAP·공공 조달 미확인</p></div></div>
+<p class="src">출처: <a href="https://www.anthropic.com/news/series-h">www.anthropic.com</a> · <a href="https://www.anthropic.com/news/seoul-office-partnerships-korean-ai-ecosystem">www.anthropic.com</a></p></details>
+<details class="co" data-g="saas"><summary><span class="gtag">글로벌 업무 SaaS</span><b>Salesforce</b><span class="ty">CRM 데이터 해자 + 디지털 노동력형</span></summary>
+<p class="one">CRM·Data 360·Slack 위에 Agentforce &#x27;디지털 노동력&#x27;을 얹고, 매출 공시 체계까지 Agentforce 중심으로 재편</p>
+<div class="grid2"><div><h4>비즈니스 전략</h4><ul><li>기존 CRM 고객 대상 에이전트 업셀</li><li>Data 360 + Informatica + MuleSoft로 데이터 계층 강화</li><li>AIforce로 Claude·Slack 등 외부 표면까지 확장</li><li>A2A 기반 멀티에이전트 오케스트레이션(AWS·Azure·Google 에이전트 조율)</li></ul>
+<h4>GTM·채널</h4><p>직판 + SI·컨설팅 + AppExchange + World Tour</p><h4>과금</h4><p>Flex Credits 액션당 $0.10, Agentforce 애드온 사용자당 월 $125, Agentforce 1 Editions 월 $550 (가장 투명한 공개 단가)</p><h4>실적 지표</h4><p>Agentforce ARR 약 15억 달러(+240%), Agentforce+Data 360 ARR 약 39억 달러 (FY27 Q2)</p></div>
+<div><h4>대표 프로덕트</h4><ul><li>Agentforce(Sales·Service·Marketing 등) — CRM 업무 에이전트</li><li>Agentforce Coworker — 자율 AI 동료 (2026.9 GA)</li><li>Job-ready agents(Piper·Fin·Hunter) — 사전 구축 에이전트</li><li>AIforce(Claudeforce·Slackforce) — 외부 표면 연동</li><li>Koa — CRM 추론 모델(Nemotron 기반)</li><li>Data 360 — 데이터 기반</li></ul>
+<h4>아키텍처 요약</h4><p>외부 LLM + 자체 Koa, 결정론적 실행, 호스팅 MCP 서버(Headless), A2A 오케스트레이션, Agent Optimizer·Health Monitoring. Hyperforce(퍼블릭)만, 온프렘 없음</p><h4>한국·공공</h4><p>세일즈포스코리아. AWS 한국 리전 Hyperforce. 포스코·무신사. CSAP 미확인</p></div></div>
+<p class="src">출처: <a href="https://investor.salesforce.com/news/news-details/2026/Salesforce-Delivers-Record-Second-Quarter-Fiscal-2027-Results/default.aspx">investor.salesforce.com</a> · <a href="https://www.salesforce.com/news/press-releases/2025/05/15/agentforce-flexible-pricing-news/">www.salesforce.com</a> · <a href="https://www.salesforce.com/blog/dreamforce-2026-announcements/">www.salesforce.com</a></p></details>
+<details class="co" data-g="saas"><summary><span class="gtag">글로벌 업무 SaaS</span><b>ServiceNow</b><span class="ty">워크플로우 + AI 관제탑형</span></summary>
+<p class="one">워크플로우 플랫폼에 AI Control Tower를 더해 &#x27;모든 AI·에이전트의 관제·거버넌스 계층&#x27;을 지향</p>
+<div class="grid2"><div><h4>비즈니스 전략</h4><ul><li>거버넌스·보안 중심 재포지셔닝(Traceloop·Veza·Armis 인수)</li><li>Action Fabric으로 플랫폼을 헤드리스 개방(외부 에이전트가 MCP로 사용)</li><li>역할 단위 에이전트(AI Specialists) 판매</li><li>Microsoft Agent 365 마켓 등 타사 생태계 입점</li></ul>
+<h4>GTM·채널</h4><p>직판 + Accenture 등 컨설팅 + Agent 365 마켓플레이스</p><h4>과금</h4><p>상위 SKU(Pro Plus)에 구독+assist 소비 하이브리드. 단가 비공개</p><h4>실적 지표</h4><p>AI 부문 ACV 10억 달러 돌파, 구독매출 38.77억 달러(+24.5%) (2026 Q2)</p></div>
+<div><h4>대표 프로덕트</h4><ul><li>Now Assist — 생성형 AI·에이전트 기능</li><li>AI Control Tower — AI 자산 발견·관측·거버넌스</li><li>AI Gateway — MCP 트랜잭션 통제</li><li>Action Fabric — 헤드리스 플랫폼</li><li>Autonomous Workforce(AI Specialists) — 역할 단위 에이전트</li><li>Evaluation Suite — 에이전트 평가</li></ul>
+<h4>아키텍처 요약</h4><p>외부 LLM + 자체 모델(Apriel Nemotron), CMDB·Knowledge Graph를 컨텍스트로, MCP 중심 연동, NIST·EU AI Act 리스크 프레임워크. SaaS 중심</p><h4>한국·공공</h4><p>ServiceNow Korea 운영. 국내 대형 고객·CSAP·공공 미확인</p></div></div>
+<p class="src">출처: <a href="https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-expands-AI-Control-Tower-to-discover-observe-govern-secure-and-measure-AI-deployed-across-any-system-in-the-enterprise/default.aspx">newsroom.servicenow.com</a> · <a href="https://www.sec.gov/Archives/edgar/data/0001373715/000137371526000072/erq2fy26.htm">www.sec.gov</a></p></details>
+<details class="co" data-g="saas"><summary><span class="gtag">글로벌 업무 SaaS</span><b>SAP</b><span class="ty">ERP 데이터 해자 + 클라우드 전환 결합형</span></summary>
+<p class="one">ERP 데이터·프로세스·권한 위에서 Joule이 업무를 자율 실행하는 &#x27;Autonomous Enterprise&#x27;</p>
+<div class="grid2"><div><h4>비즈니스 전략</h4><ul><li>Cloud ERP(RISE·GROW) 전환과 AI를 묶어 판매 — 온프렘 고객은 클라우드 전환 약정 필요</li><li>Joule Assistants 50개 이상이 하위 에이전트 200개 이상을 조율</li><li>Claude를 Joule 기반 모델로 채택(2026.5)</li><li>파트너 에이전트 배포 1억 유로 펀드</li></ul>
+<h4>GTM·채널</h4><p>직판 + SI(Accenture·PwC·Palantir). AI Agent Hub에 SK AX 등 파트너 에이전트 등록</p><h4>과금</h4><p>Base AI는 구독에 무상 포함, Premium은 AI Units 크레딧 차감(단가 비공개)</p><h4>실적 지표</h4><p>2026 Q3 매출 102.7억 유로(+13%), 클라우드 66.7억 유로(+26%)</p></div>
+<div><h4>대표 프로덕트</h4><ul><li>Joule Work — 자연어 업무 UI (2026.10 롤아웃)</li><li>Joule Assistants — 도메인별 업무 실행</li><li>SAP Autonomous Suite — 재무·구매·HCM 등 자율 프로세스</li><li>Joule Studio — 노코드~프로코드 에이전트 개발</li><li>SAP AI Agent Hub — 에이전트 인벤토리·거버넌스</li><li>SAP EU AI Cloud — 소버린 클라우드</li></ul>
+<h4>아키텍처 요약</h4><p>70개 이상 모델 선택(Claude 기본, Mistral·Cohere 소버린), NVIDIA OpenShell 샌드박스, HANA Cloud 장기 메모리, Knowledge Graph, ISO 42001. EU 소버린·관리형 온프렘</p><h4>한국·공공</h4><p>SAP Korea. 삼성전기·LG이노텍·삼성SDS. Joule 한국어 지원·CSAP 미확인</p></div></div>
+<p class="src">출처: <a href="https://news.sap.com/2026/05/sap-sapphire-sap-unveils-autonomous-enterprise/">news.sap.com</a> · <a href="https://www.sap.com/products/artificial-intelligence/pricing.html">www.sap.com</a></p></details>
+<details class="co" data-g="saas"><summary><span class="gtag">글로벌 업무 SaaS</span><b>Oracle</b><span class="ty">DB·업무앱 내장형</span></summary>
+<p class="one">&#x27;데이터를 옮기지 않는 에이전트&#x27; — DB(26ai)·OCI Enterprise AI·Fusion 앱 세 층에 에이전트 내장</p>
+<div class="grid2"><div><h4>비즈니스 전략</h4><ul><li>에이전트를 DB와 업무 앱 안에 직접 넣고 DB 계층에서 보안 강제(Deep Data Security)</li><li>Fusion 고객에게 AI Agent Studio 무상 제공으로 앱 잠금</li><li>OCI 대규모 GPU(Acceleron) 결합</li><li>Fusion AI Agent Marketplace(서드파티 21개 항목 검증)</li></ul>
+<h4>GTM·채널</h4><p>기존 DB·Fusion 고객 + 산업별 앱 + 멀티클라우드(Database@AWS/Azure/GCP)</p><h4>과금</h4><p>Fusion용 Studio 추가 비용 없음. OCI Enterprise AI 단가 미확인</p><h4>실적 지표</h4><p>FY27 Q1 매출 193억 달러(+30%), OCI +121%, RPO 6,640억 달러</p></div>
+<div><h4>대표 프로덕트</h4><ul><li>OCI Enterprise AI — 모델+에이전트+거버넌스 (2026.3 GA)</li><li>AI Agent Studio for Fusion / Industry Apps — 업무 앱 에이전트 빌더</li><li>AI Database Private Agent Factory — DB 노코드 빌더(온프렘)</li><li>Autonomous AI Database MCP Server</li><li>Fusion AI Agent Marketplace</li></ul>
+<h4>아키텍처 요약</h4><p>멀티모델(gpt-oss·Grok·Gemini) + Smart Model Router, MCP·A2A, NL2SQL·벡터·그래프 통합 DB, 최종 사용자 권한을 DB에서 강제. Dedicated Region·Cloud@Customer·에어갭 가능</p><h4>한국·공공</h4><p>한국오라클, 서울·춘천 OCI 리전. OCI Enterprise AI는 한국 리전 미제공. 공공·CSAP 미확인</p></div></div>
+<p class="src">출처: <a href="https://blogs.oracle.com/ai-and-datascience/announcing-oci-enterprise-ai-ga">blogs.oracle.com</a> · <a href="https://www.oracle.com/news/announcement/q1fy27-earnings-release-2026-09-10/">www.oracle.com</a></p></details>
+<details class="co" data-g="data"><summary><span class="gtag">글로벌 데이터·엔터프라이즈 플랫폼</span><b>IBM</b><span class="ty">멀티 에이전트 컨트롤 플레인형</span></summary>
+<p class="one">watsonx Orchestrate로 출처와 무관하게 모든 에이전트를 통합 관리하고, 하이브리드·소버린 환경에서 거버넌스 적용</p>
+<div class="grid2"><div><h4>비즈니스 전략</h4><ul><li>&#x27;Client Zero&#x27; — 자사 적용으로 효과 증명(45억 달러 생산성 주장)</li><li>도메인 특화 소형 모델(Granite)과 오픈 모델 활용</li><li>컨설팅 결합 판매</li><li>Red Hat 기반 Sovereign Core로 규제 산업 공략</li></ul>
+<h4>GTM·채널</h4><p>IBM Cloud, AWS Marketplace, OCI + IBM 컨설팅</p><h4>과금</h4><p>watsonx Orchestrate Essentials 월 $530~, Standard 월 $6,360~ (공개 정액)</p><h4>실적 지표</h4><p>2026 Q3 매출 171억 달러(+5%), 소프트웨어 78억 달러(+8%)</p></div>
+<div><h4>대표 프로덕트</h4><ul><li>watsonx Orchestrate — 멀티 에이전트 오케스트레이션·빌더</li><li>Orchestrate ADK — 에이전트·도구 개발 키트</li><li>IBM Bob — 에이전트·코드 개발 파트너</li><li>IBM Sovereign Core — 소버린 런타임 정책 (2026.5 GA)</li><li>IBM Concert — 에이전틱 운영(AIOps)</li></ul>
+<h4>아키텍처 요약</h4><p>Granite + 오픈 모델, MCP·A2A로 외부·LangGraph 에이전트를 한 대시보드에서 관리, 80개 이상 업무 앱 커넥터, OpenTelemetry. SaaS·온프렘·OpenShift 소버린</p><h4>한국·공공</h4><p>한국IBM. 국내 Orchestrate 사례·CSAP 미확인</p></div></div>
+<p class="src">출처: <a href="https://newsroom.ibm.com/2026-05-05-think-2026-ibm-delivers-the-blueprint-for-the-ai-operating-model-as-the-ai-divide-widens">newsroom.ibm.com</a> · <a href="https://www.ibm.com/products/watsonx-orchestrate/pricing">www.ibm.com</a></p></details>
+<details class="co" data-g="data"><summary><span class="gtag">글로벌 데이터·엔터프라이즈 플랫폼</span><b>Databricks</b><span class="ty">데이터 레이크하우스 + 에이전트형</span></summary>
+<p class="one">&#x27;자사 데이터 위에서 추론하는 에이전트&#x27; — 빌더용 Agent Bricks와 업무용 Genie 투트랙</p>
+<div class="grid2"><div><h4>비즈니스 전략</h4><ul><li>Unity Catalog로 데이터·모델·에이전트·MCP 통합 거버넌스</li><li>에이전트용 OLTP(Lakebase) 제공</li><li>LangGraph·CrewAI·OpenAI·Claude SDK 등 오픈 프레임워크 수용</li><li>Microsoft 전략 파트너십 확대(2026.7)</li></ul>
+<h4>GTM·채널</h4><p>3대 클라우드 위 소비형 서비스</p><h4>과금</h4><p>DBU 소비 과금. Genie는 좌석 과금 없음(사용자별 월 $10 무료 후 사용량)</p><h4>실적 지표</h4><p>연환산 매출 70억 달러 이상(+80%), 기업가치 1,900억 달러 (2026.8)</p></div>
+<div><h4>대표 프로덕트</h4><ul><li>Agent Bricks — 자동 평가·최적화 에이전트 빌더</li><li>Genie One — 업무팀용 에이전틱 동료 (2026.6 GA)</li><li>Supervisor Agent — 멀티 에이전트·MCP 오케스트레이션</li><li>Unity AI Gateway — 모델·에이전트·도구 런타임 거버넌스</li><li>Lakebase — 에이전트용 서버리스 Postgres</li><li>MLflow 3 — 트레이싱·평가</li></ul>
+<h4>아키텍처 요약</h4><p>외부·호스팅 모델, 자동 평가(LLM judge)와 품질·비용 최적화, OBO 인증으로 사용자 권한 적용. 퍼블릭 클라우드 SaaS만</p><h4>한국·공공</h4><p>데이터브릭스코리아, 국내 매출 100% 이상 성장. 삼성생명·LG유플러스·NH투자증권 등. 공공·CSAP 미확인</p></div></div>
+<p class="src">출처: <a href="https://www.databricks.com/kr/company/newsroom/press-releases/databricks-grows-80-yoy-surpasses-7b-revenue-run-rate-scales">www.databricks.com</a> · <a href="https://www.databricks.com/blog/agent-bricks-supervisor-agent-now-ga-orchestrate-enterprise-agents">www.databricks.com</a></p></details>
+<details class="co" data-g="data"><summary><span class="gtag">글로벌 데이터·엔터프라이즈 플랫폼</span><b>Snowflake</b><span class="ty">데이터 클라우드 + 에이전트형</span></summary>
+<p class="one">거버넌스된 데이터 위에 지식노동자용 CoWork와 개발자용 CoCo를 두는 &#x27;Agentic Enterprise runs on Snowflake&#x27;</p>
+<div class="grid2"><div><h4>비즈니스 전략</h4><ul><li>데이터가 있는 곳에서 에이전트 실행</li><li>Horizon 거버넌스를 에이전트 행동까지 확장(Natoma 인수로 MCP 게이트웨이)</li><li>시맨틱 레이어·Cortex Sense 컨텍스트</li><li>Claude 중심 프런티어 모델 제공</li></ul>
+<h4>GTM·채널</h4><p>소비형 과금 + Marketplace + Slack·Excel·iOS 채널</p><h4>과금</h4><p>AI Credits 토큰 소비 과금, 좌석 요금 없음(크레딧당 $2.0~2.2)</p><h4>실적 지표</h4><p>FY27 Q2 제품 매출 14.9억 달러(+37%), CoCo 9,100개·CoWork 5,800개 계정</p></div>
+<div><h4>대표 프로덕트</h4><ul><li>Snowflake CoWork(구 Intelligence) — 개인 업무 에이전트</li><li>Snowflake CoCo(구 Cortex Code) — 코딩·데이터 엔지니어링 에이전트</li><li>Cortex Agents — 오케스트레이션 API</li><li>Cortex Sense — 에이전트 컨텍스트 런타임</li><li>AI Agent Identity — 에이전트 ID·RBAC</li></ul>
+<h4>아키텍처 요약</h4><p>Claude·GPT·Gemini 등 멀티모델, Text-to-SQL·Cortex Search, MCP 커넥터·게이트웨이, 에이전트 ID. 퍼블릭 클라우드 SaaS만</p><h4>한국·공공</h4><p>스노우플레이크 코리아, 국내 매출 2021~2025년 약 18배. KB국민은행 에이전트 약 300개 계획. 공공·CSAP 미확인</p></div></div>
+<p class="src">출처: <a href="https://www.businesswire.com/news/home/20260902386235/en/Snowflake-Reports-Financial-Results-for-the-Second-Quarter-of-Fiscal-2027">www.businesswire.com</a> · <a href="https://atlan.com/know/snowflake/summit-2026-announcements/">atlan.com</a></p></details>
+<details class="co" data-g="si"><summary><span class="gtag">국내 대형 SI</span><b>삼성SDS</b><span class="ty">국가 인프라·공공 플랫폼 + 글로벌 모델 리셀형</span></summary>
+<p class="one">&#x27;AI 풀스택&#x27; — 국가 AI 인프라와 공공 표준 플랫폼을 선점하고, OpenAI·Anthropic 국내 1호 리셀러로 민간 시장 개척</p>
+<div class="grid2"><div><h4>비즈니스 전략</h4><ul><li>국가AI컴퓨팅센터 컨소시엄 주관(약 2조원), GPUaaS·NPUaaS</li><li>범정부 AI 공통기반(FabriX) + 온AI(Brity Works)로 공공 표준 선점</li><li>ChatGPT Enterprise 국내 첫 리셀러, Anthropic CPN 셀렉트 티어</li><li>삼성 관계사 캡티브(약 7만 명 Claude Enterprise)</li></ul>
+<h4>GTM·채널</h4><p>공공 SI 수주 + SaaS 전환(국정자원 대구 PPP) + 글로벌 모델 리셀</p><h4>과금</h4><p>GPUaaS 사용량 과금. FabriX·Brity 공개 가격 미확인</p><h4>실적 지표</h4><p>2025년 매출 13.93조원, 클라우드 2.68조원(+15.4%). 2026 Q2 클라우드 대외 매출 +75%</p></div>
+<div><h4>대표 프로덕트</h4><ul><li>FabriX — 에이전트 플랫폼(멀티 LLM·MCP·A2A·RAG), 2.0 2026.10 말 출시 예정</li><li>Brity Works / Copilot — AI 협업툴, 공공 SaaS</li><li>Brity Automation — RPA + 에이전틱 봇</li><li>FabriX AI 스토어 — 에이전트 마켓</li><li>SCP / GPUaaS — 클라우드·AI 인프라</li></ul>
+<h4>아키텍처 요약</h4><p>7~8개 LLM 선택·자동 라우팅, 노코드+코드 빌더, MCP 서버 구축 지원, 3중 망분리 운영, 토큰·비용 모니터링. SCP·온프렘·국정자원 PPP 존</p><h4>한국·공공</h4><p>범정부 AI 공통기반 1차 수주·2차 단독 응찰, 온AI 14개 부처, AI국회(117억), 정부24 AI 검색</p></div></div>
+<p class="src">출처: <a href="https://zdnet.co.kr/view/?no=20260624173649">zdnet.co.kr</a> · <a href="https://www.samsungsds.com/kr/news/openai-251223.html">www.samsungsds.com</a> · <a href="https://www.samsungsds.com/kr/news/ss-260730.html">www.samsungsds.com</a></p></details>
+<details class="co" data-g="si"><summary><span class="gtag">국내 대형 SI</span><b>LG CNS</b><span class="ty">모듈형 온프렘 + 산업 특화 SI형</span></summary>
+<p class="one">&#x27;AX 통합 서비스 기업&#x27; — AgenticWorks 6개 모듈과 EXAONE 특화 모델로 금융·제조·공공 대형 구축형 공략</p>
+<div class="grid2"><div><h4>비즈니스 전략</h4><ul><li>필요 모듈만 고르는 구조로 벤더 종속 해소</li><li>EXAONE 파인튜닝(리파이너)으로 기관 특화 모델</li><li>AI 데이터센터 DBO, 피지컬 AI(로봇)</li><li>OpenAI 국내 2호 리셀러, Palantir·Anthropic 협력</li></ul>
+<h4>GTM·채널</h4><p>로드맵 기반 AX 컨설팅 → 대형 SI 구축 + 플랫폼 구독</p><h4>과금</h4><p>SI 구축형 + 인프라 구독(XPUWorks). 공개 가격 미확인</p><h4>실적 지표</h4><p>2025년 매출 6.13조원, AI·클라우드 3.59조원(비중 58.5%)</p></div>
+<div><h4>대표 프로덕트</h4><ul><li>AgenticWorks — 빌더·스튜디오·지식레이크·허브·리파이너·라우터</li><li>a:xink — 업무 에이전트 슈퍼앱</li><li>ChatEXAONE / EXAONE 4.5</li><li>XPUWorks — AI 인프라 구독</li><li>ChatGPT Enterprise(리셀)</li></ul>
+<h4>아키텍처 요약</h4><p>EXAONE + Cohere + OpenAI·Gemini 멀티 LLM 라우터(장애 시 전환), 코드 IDE(LangGraph·MCP)+노코드 스튜디오, MCP·A2A, 시큐엑스퍼 AI 가드레일. 온프렘 기본</p><h4>한국·공공</h4><p>외교부(300억), 경기도교육청(380억). 범정부 공통기반 입찰은 탈락</p></div></div>
+<p class="src">출처: <a href="https://www.ddaily.co.kr/page/view/2025082507522372536">www.ddaily.co.kr</a> · <a href="https://zdnet.co.kr/view/?no=20260527142844">zdnet.co.kr</a> · <a href="https://byline.network/2026/01/27-545/">byline.network</a></p></details>
+<details class="co" data-g="si"><summary><span class="gtag">국내 대형 SI</span><b>SK AX</b><span class="ty">그룹 캡티브 + 에이전틱 컨설팅·ERP형</span></summary>
+<p class="one">&#x27;Being AX&#x27; 자사 선적용 방법론을 SK그룹 제조사와 금융·ERP로 확산</p>
+<div class="grid2"><div><h4>비즈니스 전략</h4><ul><li>SK하이닉스 등 그룹 제조 계열사 우선 적용 후 외부 확장</li><li>AXgenticWire 브랜드(플랫폼·LLM·데이터·인프라, 2026.3)</li><li>SAP MOU — ERP 에이전트를 SAP AI Agent Hub에 등록</li><li>AIOps 멀티에이전트 장애 대응(NPO)</li></ul>
+<h4>GTM·채널</h4><p>그룹사 우선 → 외부 확산, SAP 마켓, FDE</p><h4>과금</h4><p>구축형·컨설팅 중심. 공개 가격 미확인</p><h4>실적 지표</h4><p>2025 상반기 매출 1.23조원(별도). 2026 실적 미확인</p></div>
+<div><h4>대표 프로덕트</h4><ul><li>AXgenticWire — 에이전틱 AI 통합 브랜드</li><li>AXgenticWire NPO — 멀티에이전트 자율 운영</li><li>AI Studio / Agent Builder / MCP 빌더</li><li>AXgenticWire ERP Suite (2026.8)</li><li>에이닷 비즈 — 업무 AI 비서</li></ul>
+<h4>아키텍처 요약</h4><p>A.X(SKT) + OpenAI 멀티 LLM 라우팅, 노코드 빌더, MCP 빌더, HITL, AIOps. 설치형·BPO·ITO</p><h4>한국·공공</h4><p>공공 AI 직접 수주 미확인. 조달청-SK㈜ 생성형 AI 역량 협약(교육)</p></div></div>
+<p class="src">출처: <a href="https://www.skax.co.kr/axgenticwire">www.skax.co.kr</a> · <a href="https://www.ddaily.co.kr/page/view/2026032515425070306">www.ddaily.co.kr</a></p></details>
+<details class="co" data-g="kcloud"><summary><span class="gtag">국내 LLM·클라우드·플랫폼</span><b>네이버클라우드</b><span class="ty">소버린 AI(자체 모델) + 행정망 SaaS형</span></summary>
+<p class="one">HyperCLOVA X와 국내 데이터센터로 국내 공공과 해외 국가 단위 &#x27;소버린 AI&#x27; 수출</p>
+<div class="grid2"><div><h4>비즈니스 전략</h4><ul><li>자체 모델→CLOVA Studio→네이버웍스 수직 통합</li><li>공통기반 플랫폼 2종 중 하나(클로바 스튜디오 for Gov)</li><li>해외 소버린 AI(태국·사우디·모로코)</li><li>폐쇄망 온프렘(뉴로클라우드, 한국은행)</li></ul>
+<h4>GTM·채널</h4><p>공공 직접 수주 + FDE 파견으로 기관별 에이전트 발굴 + 해외 합작법인</p><h4>과금</h4><p>GPUaaS·클라우드 사용량, 네이버웍스 구독. 단가 미확인</p><h4>실적 지표</h4><p>네이버 엔터프라이즈 부문 2026 Q2 1,537억원(+21.3%), 네이버웍스 공공 매출 +157%</p></div>
+<div><h4>대표 프로덕트</h4><ul><li>HyperCLOVA X(HCX-GOV-Think 등) — 자체 LLM</li><li>CLOVA Studio / for Gov — 개발·에이전트 빌더</li><li>네이버웍스 EASY — 자연어 에이전트 생성 (2027 상반기 정식)</li><li>뉴로클라우드 — 고객사 설치형</li><li>GPUaaS</li></ul>
+<h4>아키텍처 요약</h4><p>자체+외부(K-엑사원·젬마·GPT-OSS) 멀티 LLM, 워크플로우·에이전틱 빌더, MCP 클라이언트 예정, N2SF 실증 완료. gov-ncloud·온프렘·PPP 존</p><h4>한국·공공</h4><p>범정부 공통기반, 온AI 18개 부처, 과기정통부 GPU 4,120장. 독파모 1차 탈락(독자성)</p></div></div>
+<p class="src">출처: <a href="https://www.ddaily.co.kr/page/view/2026062416435873544">www.ddaily.co.kr</a> · <a href="https://byline.network/2026/08/12-618/">byline.network</a> · <a href="https://byline.network/2026/08/07_29182737/">byline.network</a></p></details>
+<details class="co" data-g="kcloud"><summary><span class="gtag">국내 LLM·클라우드·플랫폼</span><b>KT</b><span class="ty">멀티모델 브로커 + MS 협력 + 대형 SI형</span></summary>
+<p class="one">&#x27;AX Platform Company&#x27; — 통신 B2B 기반과 MS 파트너십(SPC)에 자체 믿:음 모델·AI 데이터센터 결합</p>
+<div class="grid2"><div><h4>비즈니스 전략</h4><ul><li>MS 소버린 클라우드(SPC)·Azure OpenAI 리셀</li><li>자체 믿:음 K + 국산 모델을 토큰팩토리로 연결</li><li>부품형 PaaS(RAG 스위트·벡터DB)를 CSAP 중등급으로 조달</li><li>금융 AICC(5대 은행 중 4곳)</li></ul>
+<h4>GTM·채널</h4><p>통신 B2B 영업망 + MS 공동 영업 + 대형 구축형 SI</p><h4>과금</h4><p>구축·운영형 + 클라우드 사용량 + MS 라이선스 리셀</p><h4>실적 지표</h4><p>2026 Q2 AX 매출 3,678억원(+22.3%), KT클라우드 2,654억원(+19.8%)</p></div>
+<div><h4>대표 프로덕트</h4><ul><li>믿:음 K 2.5 Pro — 자체 LLM</li><li>에이전트 빌더(K 인텔리전스 스튜디오) — 노코드 (2026.3)</li><li>공공용 AI 파운드리 / RAG 스위트 2.0 — CSAP 중등급</li><li>Secure Public Cloud — MS 기반 소버린</li><li>에이전틱 AICC</li></ul>
+<h4>아키텍처 요약</h4><p>자체+MS+국산 멀티모델 브로커, 노코드 빌더(온프렘 지원), RAG 스위트 가드레일·PII 마스킹. MCP·A2A 미확인</p><h4>한국·공공</h4><p>대법원 재판지원 AI(145억, KT·엘박스·코난·엠티데이타), 경기도 생성형 AI(131억 컨소시엄 참여), 범정부 공통기반 탈락</p></div></div>
+<p class="src">출처: <a href="https://www.etoday.co.kr/news/view/2577605">www.etoday.co.kr</a> · <a href="https://biz.heraldcorp.com/article/10686214">biz.heraldcorp.com</a> · <a href="https://www.thelec.kr/news/articleView.html?idxno=38433">www.thelec.kr</a></p></details>
+<details class="co" data-g="kcloud"><summary><span class="gtag">국내 LLM·클라우드·플랫폼</span><b>카카오</b><span class="ty">B2C 채널 + 공공 서비스 전달형</span></summary>
+<p class="one">카카오톡 안에 카나나·OpenAI 모델을 붙인 생활형 에이전트를 공공(AI 국민비서·모두의 AI)으로 확장</p>
+<div class="grid2"><div><h4>비즈니스 전략</h4><ul><li>카카오톡 중심 &#x27;통합 에이전틱 AI&#x27;(독립 카나나 앱은 2026.10 종료)</li><li>OpenAI 전략 제휴(ChatGPT for Kakao)</li><li>개방형 MCP 플랫폼 PlayMCP(외부 MCP 서버 약 200개)</li><li>과기정통부 &#x27;모두의 AI&#x27; 사업(34개사 컨소시엄)</li></ul>
+<h4>GTM·채널</h4><p>카카오톡 5천만 이용자 채널</p><h4>과금</h4><p>미확인</p><h4>실적 지표</h4><p>AI 매출 공식 수치 미확인</p></div>
+<div><h4>대표 프로덕트</h4><ul><li>카나나 모델(Kanana-o 등)·카나나 세이프가드</li><li>ChatGPT for Kakao</li><li>PlayMCP — 개방형 MCP 플랫폼</li><li>카나나 스페이스 / 칸바스 — 개인 에이전트</li><li>AI 국민비서(행안부)·모두의 AI(2026.12 정식)</li></ul>
+<h4>아키텍처 요약</h4><p>자체+OpenAI 멀티 모델, AI 컨덕터 오케스트레이션, MCP 기반 도구 연동, 한국어 가드레일. 모두의 AI는 AWS 학습·온프렘 추론</p><h4>한국·공공</h4><p>행안부 AI 국민비서 시범, 모두의 AI 사업자. 엔터프라이즈 B2B 에이전트 전략 미확인</p></div></div>
+<p class="src">출처: <a href="https://www.kakaocorp.com/page/detail/12160">www.kakaocorp.com</a> · <a href="https://zdnet.co.kr/view/?no=20261014143204">zdnet.co.kr</a></p></details>
+<details class="co" data-g="kcloud"><summary><span class="gtag">국내 LLM·클라우드·플랫폼</span><b>NHN클라우드</b><span class="ty">AI 인프라 선점형</span></summary>
+<p class="one">GPU 인프라에서 에이전트 실행 환경까지 묶은 &#x27;FactoryX&#x27;로 국가대표 AI 인프라 기업 지향</p>
+<div class="grid2"><div><h4>비즈니스 전략</h4><ul><li>인프라·플랫폼·서비스 3계층 풀스택</li><li>정부 GPU 사업 최다 구축, 광주 국가 AI 데이터센터 운영</li><li>PoC를 사업으로 전환시키는 실행 환경</li></ul>
+<h4>GTM·채널</h4><p>정부 GPU 레퍼런스 기반 GPUaaS·프라이빗 AI 인프라 판매</p><h4>과금</h4><p>GPUaaS 사용량. 에이전트 플랫폼 요금 미확인</p><h4>실적 지표</h4><p>AI 매출 비중 50% 이상 목표</p></div>
+<div><h4>대표 프로덕트</h4><ul><li>NHN FactoryX — AI 풀스택 브랜드 (2026.5)</li><li>GPU Live — GPU 통합 관리</li><li>AI EasyMaker — 학습·배포 플랫폼</li><li>Project X / 에이전트 스튜디오 — 노코드 에이전트 (2026 하반기 예정)</li></ul>
+<h4>아키텍처 요약</h4><p>상용·오픈 모델, 노코드·바이브코딩 빌더, 쿠버네티스 런타임, 정책·감사 로그·토큰 비용 모니터링. 프라이빗·퍼블릭, CSAP 보유 언급</p><h4>한국·공공</h4><p>광주 국가 AI 데이터센터, 정부 GPU 사업. 공공 에이전트 수주 미확인</p></div></div>
+<p class="src">출처: <a href="https://www.ddaily.co.kr/page/view/2026052616363722771">www.ddaily.co.kr</a> · <a href="https://byline.network/2026/05/26-594/">byline.network</a></p></details>
+<details class="co" data-g="group"><summary><span class="gtag">국내 그룹 SI·업무SW</span><b>더존비즈온</b><span class="ty">ERP·그룹웨어 내장형</span></summary>
+<p class="one">자사 ERP·그룹웨어 데이터와 워크플로우 안에 내장된 실행형 업무 AI 에이전트(ONE AI)</p>
+<div class="grid2"><div><h4>비즈니스 전략</h4><ul><li>옴니이솔·아마란스10·위하고 등 핵심 솔루션에 AI 내재화</li><li>폐쇄망 ONE AI Private Edition으로 공공 진입</li><li>EQT파트너스 인수 추진(자진 상장폐지 예정)</li></ul>
+<h4>GTM·채널</h4><p>기존 ERP 고객 업셀 + 공공 폐쇄망 PE</p><h4>과금</h4><p>미확인</p><h4>실적 지표</h4><p>2025년 매출 4,463억원(+10.9%), 영업이익률 28.6%. ONE AI 도입 약 7,800곳</p></div>
+<div><h4>대표 프로덕트</h4><ul><li>ONE AI — ERP·회계·그룹웨어 내장 에이전트 (2024.6)</li><li>ONE AI Private Edition — 망분리 생성형 AI 플랫폼</li><li>서울시 행정지원 에이전트 (2026.10)</li></ul>
+<h4>아키텍처 요약</h4><p>망분리 최적화 LLM, 업무 데이터 RAG, MCP 기반 행정시스템 연계, 권한 확인·실행 이력. SaaS + 온프렘 폐쇄망</p><h4>한국·공공</h4><p>서울시 챗봇 2.0 → 행정 AI 에이전트 2년 연속, 경기도 25개 공공기관, 한국공항공사 AI 업무혁신 플랫폼</p></div></div>
+<p class="src">출처: <a href="https://www.taxwatch.co.kr/article/tax/2026/10/02/0002">www.taxwatch.co.kr</a> · <a href="https://byline.network/2026/09/0911-5/">byline.network</a></p></details>
+<details class="co" data-g="group"><summary><span class="gtag">국내 그룹 SI·업무SW</span><b>포스코DX</b><span class="ty">그룹 캡티브 + 에이전트 HR 관리형</span></summary>
+<p class="one">공장엔 피지컬 AI, 사무엔 에이전틱 AI — 에이전트를 직원처럼 채용·평가·육성하는 &#x27;AI 워크포스&#x27;</p>
+<div class="grid2"><div><h4>비즈니스 전략</h4><ul><li>&#x27;AI 네이티브 컴퍼니&#x27;, 커스터머 제로 전략</li><li>그룹 표준 구축 후 2027년부터 제조업 대외 확대</li></ul>
+<h4>GTM·채널</h4><p>그룹사 우선 → 플랫폼 공급 + AX 컨설팅</p><h4>과금</h4><p>미확인</p><h4>실적 지표</h4><p>내부거래 비중 약 92%(2024). AI 매출 미공개</p></div>
+<div><h4>대표 프로덕트</h4><ul><li>에이전티(Agentee) — 에이전트 생애주기 관리 (2026.7)</li><li>에이전티-씨 — 에이전트 도입 컨설팅 에이전트</li><li>사내 AI 직원 113종(그룹 약 200개)</li></ul>
+<h4>아키텍처 요약</h4><p>에이전트 개발·운영·평가·재배치 통합 관리, 내부망 중심, NPU 엣지 AI. 모델·MCP 미확인</p><h4>한국·공공</h4><p>공공 에이전트 사업 미확인(인천공항 엣지 AI만)</p></div></div>
+<p class="src">출처: <a href="https://www.ddaily.co.kr/page/view/2026072914522261864">www.ddaily.co.kr</a> · <a href="https://www.fnnews.com/news/202609220949059568">www.fnnews.com</a></p></details>
+<details class="co" data-g="group"><summary><span class="gtag">국내 그룹 SI·업무SW</span><b>CJ올리브네트웍스</b><span class="ty">그룹 캡티브 + 제조 AI형</span></summary>
+<p class="one">제조 &#x27;에이전틱 AI 팩토리&#x27;와 통합 AI 플랫폼 OneFlowAI의 그룹·산업 AX 사업자</p>
+<div class="grid2"><div><h4>비즈니스 전략</h4><ul><li>컨설팅~구축~운영 엔드투엔드</li><li>제조·유통·엔터 산업 AI 중심</li></ul>
+<h4>GTM·채널</h4><p>그룹사 + 대외 제조업(산업 전시회)</p><h4>과금</h4><p>미확인</p><h4>실적 지표</h4><p>미확인</p></div>
+<div><h4>대표 프로덕트</h4><ul><li>OneFlowAI — MLOps·RAG 통합 플랫폼 (2025.1)</li><li>에이전틱 AI 팩토리 — 공정·설비 진단 에이전트 (2026.3)</li></ul>
+<h4>아키텍처 요약</h4><p>sLLM·RAG, 하이브리드 클라우드(AWS·GCP·Azure+온프렘). 에이전트 런타임·MCP 미확인</p><h4>한국·공공</h4><p>공공 실적 미확인</p></div></div>
+<p class="src">출처: <a href="https://www.mt.co.kr/tech/2026/02/26/2026022608275257008">www.mt.co.kr</a></p></details>
+<details class="co" data-g="group"><summary><span class="gtag">국내 그룹 SI·업무SW</span><b>롯데이노베이트</b><span class="ty">그룹 캡티브 + 업무 에이전트 패키지형</span></summary>
+<p class="one">기업형 AI 에이전트 플랫폼 &#x27;아이멤버&#x27;와 현업 과제 해결형 에이전트</p>
+<div class="grid2"><div><h4>비즈니스 전략</h4><ul><li>그룹 운영 경험 기반 B2B 확대</li><li>AI 서비스·플랫폼 매출 비중 20% 목표</li></ul>
+<h4>GTM·채널</h4><p>롯데 계열사 → B2B 일반·공공</p><h4>과금</h4><p>미확인</p><h4>실적 지표</h4><p>고객사 약 100곳, 활성 사용자 약 7만 명(2025.7)</p></div>
+<div><h4>대표 프로덕트</h4><ul><li>아이멤버 3.0 — 6종 에이전트(비서·회의록·보고서 등)</li><li>현업형 에이전트 10여 종(수요예측 등, 2026.7)</li></ul>
+<h4>아키텍처 요약</h4><p>롯데 자체 모델, 자체 MCP 서버, Agentic RAG, STT·TTS</p><h4>한국·공공</h4><p>공공 에이전트 수주 미확인</p></div></div>
+<p class="src">출처: <a href="https://zdnet.co.kr/view/?no=20260716163741">zdnet.co.kr</a></p></details>
+<details class="co" data-g="group"><summary><span class="gtag">국내 그룹 SI·업무SW</span><b>현대오토에버</b><span class="ty">그룹 캡티브 + 피지컬 AI형</span></summary>
+<p class="one">그룹 사내 멀티 LLM 플랫폼 H Chat 개발사이자 로봇·공장·차량을 잇는 &#x27;피지컬 AI 관제탑&#x27;</p>
+<div class="grid2"><div><h4>비즈니스 전략</h4><ul><li>그룹 AX 인프라·플랫폼 담당</li><li>피지컬 AI(로봇 생산시설·공장 연동)와 AI 데이터센터 확장</li></ul>
+<h4>GTM·채널</h4><p>그룹 내 확산 우선</p><h4>과금</h4><p>미확인</p><h4>실적 지표</h4><p>H Chat Pro 사용자 3만 명(2026.7)</p></div>
+<div><h4>대표 프로덕트</h4><ul><li>H Chat / H Chat Pro — 사내 멀티 LLM(GPT·Claude·Gemini)</li><li>H-Launch — 에이전트 배포·고유 ID (2026.10)</li><li>치안·보안 솔루션(로봇 순찰·AI 관제)</li></ul>
+<h4>아키텍처 요약</h4><p>외부 멀티 LLM, API 기반 에이전트 제작, 에이전트별 ID·HITL 승인, 보안 게이트웨이</p><h4>한국·공공</h4><p>공공 에이전트 수주 미확인</p></div></div>
+<p class="src">출처: <a href="https://www.hyundaimotorgroup.com/ko/news/CONT0000000000165396">www.hyundaimotorgroup.com</a></p></details>
+<details class="co" data-g="group"><summary><span class="gtag">국내 그룹 SI·업무SW</span><b>한화시스템</b><span class="ty">방산 특화 + 그룹 제조 AX형</span></summary>
+<p class="one">기업용 에이전트 플랫폼 AgentOne과 국방 초거대 AI(지휘통제) 양축</p>
+<div class="grid2"><div><h4>비즈니스 전략</h4><ul><li>AX를 대외 사업으로 육성</li><li>한화오션·에어로스페이스와 제조 AX 실증</li></ul>
+<h4>GTM·채널</h4><p>그룹사·방산·제조 산업별 플랫폼 + 컨설팅</p><h4>과금</h4><p>미확인</p><h4>실적 지표</h4><p>국방부 초거대 AI 지휘통제체계 242억원 우선협상(2026.7~8)</p></div>
+<div><h4>대표 프로덕트</h4><ul><li>AgentOne — 기업용 에이전트 플랫폼(R&amp;D)</li><li>국방 LLM(범용 국방·합동 전장, 2026.9~2030.2)</li><li>쿼카 — LLM 지식 Q&amp;A</li></ul>
+<h4>아키텍처 요약</h4><p>에이전트 개발·운영·거버넌스 통합, 통제된 보안 환경. 국방 모델은 엑사원 오픈웨이트 기반 보도</p><h4>한국·공공</h4><p>국방 LLM 242억(네이버클라우드 컨소시엄)</p></div></div>
+<p class="src">출처: <a href="https://m.etnews.com/20260803000103">m.etnews.com</a> · <a href="https://www.hanwhasystems.com/ict/kr/business/solution/ai_agent.do">www.hanwhasystems.com</a></p></details>  </section>
+
+  
+</div>
+<script>
+  document.getElementById('f').addEventListener('click', function(e){
+    var b = e.target.closest('button'); if(!b) return;
+    document.querySelectorAll('#f button').forEach(function(x){x.classList.toggle('on', x===b)});
+    var g = b.dataset.g;
+    document.querySelectorAll('details.co').forEach(function(d){ d.style.display = (g==='all' || d.dataset.g===g) ? '' : 'none'; });
+  });
+</script>
+</body>
+</html>

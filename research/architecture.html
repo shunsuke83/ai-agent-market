@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gen Agent 아키텍처 비교</title>
+<style>
+  :root{--bg:#f7f7f5;--surface:#fff;--text:#1f2328;--muted:#5f6670;--line:#e3e3df;--accent:#2f5bd3;--accent-soft:#eaf0fd;--warn:#a15c00;--warn-soft:#fff4e0;--l1:#eef3fb;--l2:#f2f7ee;--l3:#fbf3ea;--l4:#f4effa}
+  @media (prefers-color-scheme: dark){:root{--bg:#16181c;--surface:#1e2126;--text:#e6e8eb;--muted:#9aa1ab;--line:#30343b;--accent:#7ea2ff;--accent-soft:#232c42;--warn:#f0b35a;--warn-soft:#3a2f1c;--l1:#1f2838;--l2:#20291f;--l3:#2e2619;--l4:#2a2333}}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Malgun Gothic",sans-serif;line-height:1.6;font-size:15px}
+  .wrap{max-width:1080px;margin:0 auto;padding:40px 16px 64px}
+  .eyebrow{font-size:13px;color:var(--accent);font-weight:600}
+  h1{font-size:28px;margin:6px 0 8px;line-height:1.3}
+  .meta{color:var(--muted);font-size:13px}
+  nav{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+  nav a{font-size:13px;color:var(--text);text-decoration:none;background:var(--surface);border:1px solid var(--line);padding:4px 10px;border-radius:999px}
+  section{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:24px;margin:20px 0}
+  h2{font-size:19px;margin:0 0 14px}
+  h3{font-size:15px;margin:0 0 6px}
+  p{margin:0 0 10px}
+  .lead{color:var(--muted)}
+  /* reference architecture */
+  .ref{display:grid;grid-template-columns:1fr 150px;gap:8px}
+  .stack{display:grid;gap:6px}
+  .layer{border-radius:8px;padding:10px 14px;border:1px solid var(--line)}
+  .layer b{display:block;font-size:14px}
+  .layer span{font-size:12.5px;color:var(--muted)}
+  .row3{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+  .a{background:var(--l1)}.b{background:var(--l2)}.c{background:var(--l3)}.d{background:var(--l4)}
+  .side{display:grid;gap:6px;grid-template-rows:1fr 1fr}
+  .side .layer{display:flex;flex-direction:column;justify-content:center;background:var(--warn-soft)}
+  .find{display:grid;gap:12px}
+  .find div{border-left:3px solid var(--accent);padding:2px 0 2px 14px}
+  .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table{width:100%;border-collapse:collapse;font-size:13px;min-width:760px}
+  th,td{text-align:left;padding:8px 9px;border-bottom:1px solid var(--line);vertical-align:top}
+  thead th{color:var(--muted);font-weight:600;background:var(--bg);position:sticky;top:0}
+  tbody th{font-weight:600;white-space:nowrap;background:var(--bg);width:110px}
+  .na{color:var(--muted)}
+  .vendors{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+  .v{border:1px solid var(--line);border-radius:10px;padding:16px}
+  .v .tag{display:inline-block;font-size:12px;background:var(--accent-soft);color:var(--accent);padding:2px 8px;border-radius:6px;margin-bottom:6px}
+  .v ul{margin:6px 0 0;padding-left:18px;font-size:14px}
+  .v li{margin:3px 0}
+  ul{margin:0;padding-left:20px} li{margin:4px 0}
+  .callout{background:var(--warn-soft);border-left:3px solid var(--warn);border-radius:8px;padding:14px 16px;margin-bottom:14px}
+  .callout strong{color:var(--warn)}
+  .check{display:grid;gap:8px}
+  .check div{display:grid;grid-template-columns:150px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+  .check div:last-child{border-bottom:none}
+  .check b{font-size:14px}
+  .src{font-size:12.5px;color:var(--muted);word-break:break-all}
+  .src a{color:var(--muted)}
+  @media (max-width:640px){h1{font-size:23px}.ref{grid-template-columns:1fr}.side{grid-template-rows:auto;grid-template-columns:1fr 1fr}.row3{grid-template-columns:1fr}.check div{grid-template-columns:1fr;gap:4px}}
+</style>
+</head>
+<body>
+<div class="wrap"><a href="../index.html" style="display:inline-block;font-size:13px;margin-bottom:12px;color:inherit;opacity:.7;text-decoration:none">← 리서치 홈</a>
+  <div class="eyebrow">AI Agent 업체 리서치 · 솔루션 아키텍처 분석</div>
+  <h1>대형 업체 Gen Agent 플랫폼 아키텍처 비교</h1>
+  <div class="meta">기준일 2026.10.23 · 대상 9곳: AWS, Microsoft, Google Cloud, 삼성SDS, LG CNS, SK AX, 네이버클라우드, KT, 범정부 AI 공통기반 · 공식 문서·보도자료 기반</div>
+  <nav>
+    <a href="#ref">공통 아키텍처</a><a href="#findings">핵심 발견</a><a href="#global">글로벌 비교</a><a href="#korea">국내 비교</a>
+    <a href="#vendors">업체별 특징</a><a href="#std">표준화 흐름</a>
+  </nav>
+
+  <section id="ref">
+    <h2>공통 레퍼런스 아키텍처</h2>
+    <p class="lead">9곳 모두 같은 11개 계층 구조로 수렴하고 있습니다. 업체마다 다른 것은 각 계층을 어떤 제품으로 채우고, 어느 계층에 힘을 주느냐입니다.</p>
+    <div class="ref">
+      <div class="stack">
+        <div class="layer a"><b>L10 사용자 앱 · L11 마켓플레이스</b><span>업무 Copilot·협업툴 안의 에이전트, 에이전트 스토어·사내 카탈로그</span></div>
+        <div class="layer b"><b>L2 에이전트 빌더</b><span>노코드(현업) → 로우코드 → SDK·프레임워크(개발자)</span></div>
+        <div class="layer b"><b>L3 런타임·오케스트레이션</b><span>관리형 실행환경, 세션 격리, 멀티에이전트·워크플로, 장기 실행·HITL</span></div>
+        <div class="row3">
+          <div class="layer c"><b>L4 도구 연동</b><span>MCP 게이트웨이, A2A, 레거시·ERP 커넥터, 브라우저·코드 실행</span></div>
+          <div class="layer c"><b>L5 지식·RAG</b><span>문서 파싱, 벡터DB, 하이브리드 검색, 지식그래프</span></div>
+          <div class="layer c"><b>L6 메모리</b><span>세션·장기·절차적 메모리, 개인화</span></div>
+        </div>
+        <div class="layer d"><b>L1 모델 계층</b><span>자체 + 서드파티 + 오픈웨이트 멀티 LLM, 모델 라우터·폴백</span></div>
+        <div class="layer d"><b>L9 배포 형태</b><span>퍼블릭 · 소버린/프라이빗 · 온프렘·에어갭 · 공공 PPP 존</span></div>
+      </div>
+      <div class="side">
+        <div class="layer"><b>L7 보안·거버넌스</b><span>에이전트 ID·권한, 정책, 가드레일, 감사, 레지스트리</span></div>
+        <div class="layer"><b>L8 관측성·평가</b><span>트레이싱, 자동 평가, 시뮬레이션, 최적화, 비용 관리</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="findings">
+    <h2>핵심 발견</h2>
+    <div class="find">
+      <div><h3>1. 경쟁의 중심이 "에이전트를 만드는 도구"에서 "에이전트를 통제하는 체계"로 옮겨갔습니다</h3><p>2026년 글로벌 3사는 모두 에이전트 ID, 레지스트리, 정책 엔진을 GA했습니다(AWS AgentCore Identity·Policy·Registry, MS Entra Agent ID·Agent 365, Google Agent Identity·Registry·Gateway). 에이전트 수가 늘면서 생긴 "에이전트 난립(sprawl)"을 통제하는 것이 핵심 과제가 됐습니다.</p></div>
+      <div><h3>2. MCP와 A2A가 사실상 표준이 됐습니다</h3><p>MCP(에이전트-도구)와 A2A(에이전트-에이전트)가 모두 Linux Foundation 산하 Agentic AI Foundation으로 들어갔습니다. 국내에서도 삼성SDS·LG CNS가 MCP·A2A를 지원하고, 범정부 공통기반 2차는 기존 시스템을 MCP 서버로 전환하는 방향을 제시했습니다.</p></div>
+      <div><h3>3. 모델은 "하나를 고르는 것"이 아니라 "여럿을 라우팅하는 것"이 됐습니다</h3><p>MS Model Router, LG CNS 라우터, 삼성SDS FabriX 2.0 자동 선택, KT 토큰팩토리처럼 모두 멀티 LLM에 라우팅·폴백을 붙입니다. 범정부 공통기반 2차도 AI 게이트웨이로 플랫폼사 모델 종속을 줄이는 쪽으로 바뀌었습니다.</p></div>
+      <div><h3>4. 평가·최적화 루프가 플랫폼 기본 기능이 됐습니다</h3><p>글로벌 3사는 관측 → 평가 → 시뮬레이션 → 최적화를 한 서비스 안에서 제공합니다. 국내 SI는 토큰·비용 모니터링(FinOps) 수준이 중심이고, 자동 평가·최적화 루프는 아직 공개 정보가 적습니다.</p></div>
+      <div><h3>5. 국내 공공은 "공통기반 SaaS + 부처별 에이전트" 구조로 굳어지고 있습니다</h3><p>삼성SDS(FabriX)와 네이버클라우드(클로바 스튜디오 for Gov)가 공통기반 플랫폼을 선점했습니다. LG CNS·KT는 기관별 대형 구축형(외교부 300억, 경기도교육청 380억, 대법원 145억)에서 앞서 있습니다. 글로벌 3사는 CSAP 하등급까지만 갖고 있어 행정망 사업에는 직접 들어오기 어렵습니다.</p></div>
+    </div>
+  </section>
+
+  <section id="global">
+    <h2>계층별 비교 ① 글로벌 하이퍼스케일러</h2>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>계층</th><th>AWS</th><th>Microsoft</th><th>Google Cloud</th></tr></thead>
+      <tbody>
+        <tr><th>L1 모델</th><td>Bedrock (Nova 2 + Anthropic·Mistral·Meta 등), Nova Forge, Gateway 모델 폴백</td><td>Foundry Models (OpenAI·Claude·Grok·Llama 등), Model Router(학습형)</td><td>Model Garden (Gemini 3.x·Gemma 4·Claude 등)</td></tr>
+        <tr><th>L2 빌더</th><td>Strands Agents SDK, AgentCore CLI, Kiro, Quick 노코드</td><td>Copilot Studio(로우코드), Microsoft Agent Framework</td><td>Agent Studio, ADK, Agent Designer(노코드)</td></tr>
+        <tr><th>L3 런타임</th><td>AgentCore Runtime(microVM 격리), Harness(관리형 에이전트)</td><td>Foundry Agent Service(hosted agents), Autopilot agents</td><td>Agent Runtime(구 Agent Engine), 장기 실행</td></tr>
+        <tr><th>L4 도구 연동</th><td>AgentCore Gateway(API→MCP 변환), Browser, Code Interpreter</td><td>Toolboxes(통합 MCP 엔드포인트), A2A GA, Computer-using agents</td><td>Agent Gateway, Agent Sandbox, A2A 주도, MCP</td></tr>
+        <tr><th>L5 지식·RAG</th><td>Knowledge Bases, Managed KB, S3 Vectors</td><td>Foundry IQ, Work IQ(M365 그래프)</td><td>RAG Engine, Agent Search, Agent Retrieval</td></tr>
+        <tr><th>L6 메모리</th><td>AgentCore Memory(에피소드 메모리)</td><td>Foundry Memory(절차적 메모리)</td><td>Memory Bank, Memory Profiles</td></tr>
+        <tr><th>L7 보안·거버넌스</th><td>Identity, Policy(Cedar), Guardrails, Agent Registry</td><td>Entra Agent ID, Agent 365, Purview, Defender</td><td>Agent Identity, Agent Registry, Model Armor</td></tr>
+        <tr><th>L8 관측성·평가</th><td>Observability, Evaluations(평가자 13종), 최적화 A/B</td><td>Control Plane, 트레이싱·평가, Agent optimizer</td><td>Observability, Evaluation, Simulation, Optimizer</td></tr>
+        <tr><th>L9 배포</th><td>퍼블릭(서울 리전 핵심 서비스 지원), GovCloud, AI Factories</td><td>퍼블릭, Sovereign Cloud(완전 단절 운영), Foundry Local</td><td>퍼블릭(서울 리전), GDC 에어갭 Gemini</td></tr>
+        <tr><th>L10 사용자 앱</th><td>Amazon Quick (후발)</td><td>M365 Copilot, Copilot Cowork, Teams (가장 강함)</td><td>Gemini Enterprise, Workspace</td></tr>
+        <tr><th>L11 마켓</th><td>Marketplace AI Agents &amp; Tools</td><td>Agent Store, Agent 365 레지스트리</td><td>Agent Gallery, Agent Garden</td></tr>
+        <tr><th>중심축</th><td><b>인프라 프리미티브</b> (모듈 조합)</td><td><b>ID·생산성</b> (에이전트 = 디지털 직원)</td><td><b>풀스택 수직 통합</b> (TPU→앱)</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </section>
+
+  <section id="korea">
+    <h2>계층별 비교 ② 국내 대형 업체와 범정부 공통기반</h2>
+    <div class="table-wrap">
+    <table>
+      <thead><tr><th>계층</th><th>삼성SDS</th><th>LG CNS</th><th>SK AX</th><th>네이버클라우드</th><th>KT</th><th>범정부 AI 공통기반</th></tr></thead>
+      <tbody>
+        <tr><th>L1 모델</th><td>FabriX 멀티 LLM(OpenAI·Google·Anthropic 파트너), 2.0 자동 선택</td><td>EXAONE 4.5·K-EXAONE, Cohere 공동개발, 라우터</td><td>A.X(SKT), OpenAI, LLM 라우팅</td><td>HyperCLOVA X·HCX-GOV-Think, 외부 모델(K-엑사원·젬마·GPT-OSS)</td><td>믿:음 K 2.5 Pro, SOTA K(MS), 토큰팩토리</td><td>모델 약 30종, 2차에 민간 모델 직접 선택 구조</td></tr>
+        <tr><th>L2 빌더</th><td>FabriX 에이전트 스튜디오(노코드+코드)</td><td>빌더(코드·LangGraph) + 스튜디오(노코드)</td><td>AI Studio, Agent Builder, MCP 빌더</td><td>CLOVA Studio, for Gov 빌더, 네이버웍스 EASY</td><td>에이전트 빌더(노코드, 2026.3)</td><td>FabriX, 클로바 스튜디오 for Gov</td></tr>
+        <tr><th>L3 런타임</th><td>FabriX 오케스트레이터, 2.0 역할 기반 협업</td><td>스튜디오 워크플로, 허브</td><td>AXgenticWire NPO(멀티에이전트)</td><td>라우터, 행정 AI 에이전트</td><td>컴포지트 AI(개념)</td><td>공통 에이전트, 2차 규정기반 검토 에이전트</td></tr>
+        <tr><th>L4 도구 연동</th><td>MCP·A2A, Brity Automation(RPA)</td><td>허브, MCP·A2A</td><td>MCP 빌더</td><td>스킬셋, MCP(클라이언트 예정)</td><td class="na">MCP·A2A 미확인</td><td><b>AI 게이트웨이(2차)</b>, MCP</td></tr>
+        <tr><th>L5 지식·RAG</th><td>FabriX RAG, 2.0 RAG 전략 자동 선택</td><td>지식 레이크</td><td class="na">미확인</td><td>RAG Reasoning, 그래프·멀티모달 RAG(예정)</td><td>RAG 스위트 2.0, 벡터DB(CSAP 중)</td><td>공통 RAG 13종 → 2차 통합</td></tr>
+        <tr><th>L6 메모리</th><td>퍼스널 에이전트</td><td class="na">미확인</td><td class="na">미확인</td><td class="na">미확인</td><td class="na">미확인</td><td class="na">미확인</td></tr>
+        <tr><th>L7 보안</th><td>권한 관리, 3중 망분리 운영, ISO 42001</td><td>시큐엑스퍼 AI, 가드레일</td><td>마스킹, 권한, 감사 로그</td><td>행정망 구축, N2SF 실증</td><td>SPC(Azure 소버린), PII 마스킹</td><td>N2SF, 국정원 보안성 검토</td></tr>
+        <tr><th>L8 관측·평가</th><td>토큰·비용 모니터링, AgentOps(계획)</td><td>리파이너(평가), 비용 모니터링</td><td>AI 서비스 관리 플랫폼, AIOps</td><td class="na">미확인</td><td>빌더 로그·성능 모니터링</td><td>평가 데이터셋</td></tr>
+        <tr><th>L9 배포</th><td>SCP, 온프렘, 국정자원 PPP 존</td><td><b>온프렘 기본</b>, 전용 프라이빗</td><td>설치형·BPO·ITO, GPUaaS</td><td>gov-ncloud, 뉴로클라우드(온프렘), PPP</td><td>공공 존(CSAP 중), SPC, 온프렘</td><td>국정자원 대구 PPP 클라우드</td></tr>
+        <tr><th>L10 사용자 앱</th><td>Brity Works + 코워크(온AI 14개 부처)</td><td>a:xink 슈퍼앱</td><td>AI 워크스페이스</td><td>네이버웍스(온AI 18개 부처)</td><td>에이전틱 AICC, 모두의 AI</td><td>내부망 AI 챗서비스 2종</td></tr>
+        <tr><th>L11 마켓</th><td>FabriX AI 스토어</td><td class="na">미확인</td><td>사내 에이전트 스토어</td><td class="na">미확인</td><td>산업별 템플릿</td><td class="na">미확인</td></tr>
+        <tr><th>중심축</th><td><b>풀스택 + 공공 표준 선점</b></td><td><b>모듈형 온프렘 + 특화 모델</b></td><td><b>IT 운영 자동화</b></td><td><b>자체 모델 + 행정망 SaaS</b></td><td><b>멀티모델 브로커 + 대형 SI</b></td><td><b>공유 PaaS + 공통 서비스</b></td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="meta" style="margin-top:10px">"미확인"은 공개 자료에서 확인하지 못한 항목입니다. 기능이 없다는 뜻은 아닙니다.</p>
+  </section>
+
+  <section id="vendors">
+    <h2>업체별 특징과 공공 공략 방식</h2>
+    <div class="vendors">
+      <div class="v"><span class="tag">AWS</span><h3>모델·프레임워크 중립 인프라</h3><ul><li>AgentCore를 10여 개 서비스로 쪼개 필요한 것만 조합</li><li>microVM 세션 격리, Cedar 기반 결정론적 정책 통제</li><li>공공: CSAP 하등급, 서울 리전에서 AgentCore 핵심 서비스 제공</li></ul></div>
+      <div class="v"><span class="tag">Microsoft</span><h3>에이전트를 디지털 직원처럼 관리</h3><ul><li>Entra Agent ID와 Agent 365로 사람과 같은 ID·감사 체계 적용</li><li>M365·Teams라는 사용자 접점이 최대 무기</li><li>공공: CSAP 하등급, KT와 SPC(소버린)로 우회 진입</li></ul></div>
+      <div class="v"><span class="tag">Google Cloud</span><h3>풀스택 + 개방형 프로토콜 주도</h3><ul><li>Vertex AI를 Agent Platform으로 개명할 만큼 에이전트 중심 재편</li><li>A2A·ADK·AP2로 생태계 표준 주도</li><li>공공: CSAP 하등급, GDC 에어갭 Gemini가 잠재 카드</li></ul></div>
+      <div class="v"><span class="tag">삼성SDS</span><h3>인프라부터 협업툴까지 수직 통합</h3><ul><li>FabriX(허브) + Brity Works(앱) + Brity Automation(RPA) + AI 스토어</li><li>자체 프런티어 모델 대신 OpenAI·Google·Anthropic 파트너십</li><li>공공: 국정자원 PPP + 공통기반 + 온AI로 표준 플랫폼 선점</li></ul></div>
+      <div class="v"><span class="tag">LG CNS</span><h3>6종 모듈형 온프렘 풀스택</h3><ul><li>빌더·스튜디오·지식 레이크·허브·리파이너·라우터</li><li>EXAONE 파인튜닝(리파이너)으로 기관 특화 모델</li><li>공공: 기관별 대형 구축형(외교부, 경기도교육청)</li></ul></div>
+      <div class="v"><span class="tag">SK AX</span><h3>운영 자동화 특화</h3><ul><li>AXgenticWire 브랜드(플랫폼·LLM·데이터·인프라)</li><li>AIOps 멀티에이전트 장애 대응, BPO·ITO 연계</li><li>공공: 직접 수주 확인 안 됨. 금융·제조 중심</li></ul></div>
+      <div class="v"><span class="tag">네이버클라우드</span><h3>자체 모델 + 행정망 SaaS</h3><ul><li>HyperCLOVA X → CLOVA Studio → 네이버웍스 수직 통합</li><li>개발자용 for Gov 빌더 + 현업용 EASY 이원화</li><li>공공: 공통기반 플랫폼 2종 중 하나, FDE 파견으로 에이전트 발굴</li></ul></div>
+      <div class="v"><span class="tag">KT</span><h3>멀티모델 브로커 + 부품형 PaaS</h3><ul><li>믿:음 K, SOTA K, 국산 모델을 토큰팩토리로 연결</li><li>RAG 스위트·벡터DB를 CSAP 중등급으로 조달</li><li>공공: 대법원 145억, 경기도 131억 등 대형 구축형</li></ul></div>
+      <div class="v"><span class="tag">범정부 AI 공통기반</span><h3>공공 아키텍처의 기준선</h3><ul><li>2차(약 65~66억): AI 게이트웨이, 통합 공통 RAG, MCP, N2SF, 행정망-인터넷망 연계</li><li>방향: 특정 플랫폼사 종속 완화, 모델 교체 가능 구조</li><li>2026.9 개찰 삼성SDS 단독 응찰</li></ul></div>
+    </div>
+  </section>
+
+  <section id="std">
+    <h2>업계 표준화 흐름</h2>
+    <ul>
+      <li><strong>MCP (에이전트 ↔ 도구):</strong> 글로벌 3사 모두 기본 연동 표준으로 채택. 2025.12 Linux Foundation 산하 Agentic AI Foundation(AAIF)에 기증됨.</li>
+      <li><strong>A2A (에이전트 ↔ 에이전트):</strong> Google이 2025.4 공개, MS는 GA, AWS는 Strands·Marketplace에서 지원. 2026.8 AAIF 합류.</li>
+      <li><strong>에이전트 ID·레지스트리:</strong> 3사 모두 2026년에 GA. 공공 조달에서도 "에이전트 권한·감사"가 평가 항목으로 들어올 가능성이 큽니다.</li>
+      <li><strong>관측성:</strong> OpenTelemetry 기반 에이전트 트레이싱이 공통 형식으로 자리 잡는 중.</li>
+      <li><strong>신흥 영역:</strong> 에이전트 결제(AP2, x402), 운영 규약(AGENTS.md).</li>
+    </ul>
+  </section>
+
+  
+
+  <section>
+    <h2>주요 출처</h2>
+    <p class="src">
+      <a href="https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/release-notes.html">AWS AgentCore 릴리스 노트</a> ·
+      <a href="https://www.aboutamazon.com/news/aws/aws-summit-nyc-2026-ai-agents">AWS Summit NYC 2026</a> ·
+      <a href="https://devblogs.microsoft.com/foundry/agent-service-build2026/">Microsoft Foundry Agent Service (Build 2026)</a> ·
+      <a href="https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/agent-identity">Microsoft Entra Agent ID</a> ·
+      <a href="https://cloud.google.com/blog/products/ai-machine-learning/introducing-gemini-enterprise-agent-platform">Google Gemini Enterprise Agent Platform</a> ·
+      <a href="https://docs.cloud.google.com/gemini-enterprise-agent-platform/release-notes">Google Agent Platform 릴리스 노트</a> ·
+      <a href="https://zdnet.co.kr/view/?no=20260624173649">삼성SDS FabriX (지디넷)</a> ·
+      <a href="https://v.daum.net/v/20260529174217469">삼성SDS AX 서밋</a> ·
+      <a href="https://www.ddaily.co.kr/page/view/2025082507522372536">LG CNS AgenticWorks</a> ·
+      <a href="https://zdnet.co.kr/view/?no=20260527142844">LG CNS AX Fair 2026</a> ·
+      <a href="https://www.skax.co.kr/axgenticwire">SK AX AXgenticWire</a> ·
+      <a href="https://www.ddaily.co.kr/page/view/2026062416435873544">클로바 스튜디오 for Gov 고도화</a> ·
+      <a href="https://byline.network/2026/08/12-618/">네이버웍스 EASY</a> ·
+      <a href="https://biz.heraldcorp.com/article/10686214">KT 에이전트 빌더</a> ·
+      <a href="https://www.etoday.co.kr/news/view/2577605">KT 공공용 AI 파운드리</a> ·
+      <a href="https://zdnet.co.kr/view/?no=20260810101425">범정부 AI 공통기반 2차</a> ·
+      <a href="https://www.ddaily.co.kr/page/view/2025111215142078532">범정부 AI 공통기반 1차 구성</a> ·
+      <a href="https://www.thelec.kr/news/articleView.html?idxno=38433">대법원 AI 플랫폼(KT)</a>
+    </p>
+  </section>
+</div>
+</body>
+</html>
