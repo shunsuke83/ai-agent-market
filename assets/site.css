@@ -16,6 +16,12 @@ h1{font-size:28px;line-height:1.25;margin:6px 0 8px;text-wrap:balance}h2{font-si
 table{width:100%;border-collapse:collapse;font-size:14px;min-width:640px}th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
 th{font-size:12px;color:var(--muted);font-weight:600;font-family:var(--f-mono);white-space:nowrap}tr:last-child td{border-bottom:none}
 td:first-child{white-space:nowrap}td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}td a{color:var(--fg)}td a:hover{color:var(--accent)}
+th.sortable-th{cursor:pointer;user-select:none;-webkit-user-select:none}
+th.sortable-th:hover,th.sortable-th:focus-visible{color:var(--accent);outline:none}
+th.sortable-th.is-sorted{color:var(--fg)}
+th.sortable-th .sort-ind{display:inline-block;min-width:1em;margin-left:.28em;font-size:10px;line-height:1;color:var(--accent);opacity:0}
+th.sortable-th:hover .sort-ind,th.sortable-th:focus-visible .sort-ind{opacity:.45}
+th.sortable-th.is-sorted .sort-ind{opacity:1}
 .empty{background:var(--surface);border:1px dashed var(--line);border-radius:8px;padding:16px;color:var(--muted)}
 .bars{display:grid;gap:7px;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px 18px}
 .bar{display:grid;grid-template-columns:72px minmax(0,1fr) 64px;gap:12px;align-items:center;font-size:13px;font-variant-numeric:tabular-nums}
