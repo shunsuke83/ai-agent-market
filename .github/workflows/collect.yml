@@ -1,0 +1,42 @@
+name: Collect G2B AI notices
+
+on:
+  schedule:
+    # Monday 00:30 KST = Sunday 15:30 UTC
+    - cron: "30 15 * * 0"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    if: ${{ secrets.DATA_GO_KR_SERVICE_KEY != '' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: pip install -r collector/requirements.txt
+
+      - name: Bootstrap from HTML (seed / regression baseline)
+        run: python -m g2b.collect bootstrap --out data/bootstrap.json
+        working-directory: collector
+
+      - name: Collect last 14 days from Open API
+        env:
+          DATA_GO_KR_SERVICE_KEY: ${{ secrets.DATA_GO_KR_SERVICE_KEY }}
+        run: python -m g2b.collect collect --days 14 --all-budgets --out ../data/notices.json
+        working-directory: collector
+
+      - name: Commit data if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/bootstrap.json data/notices.json
+          git diff --staged --quiet || git commit -m "data: refresh G2B AI notices"
+          git push
