@@ -63,18 +63,24 @@ def normalize_bid_item(item: dict[str, Any], rules: dict[str, Any] | None = None
         "source": "g2b_api",
         "bid_no": bid_no,
         "bid_ord": str(bid_ord).zfill(3) if bid_ord is not None else None,
-        "notice_date": parse_api_dt(item.get("bidNtceDate") or item.get("rgstDt")),
-        "open_date": parse_api_dt(item.get("opengDate") or item.get("bidClseDate")),
+        "notice_date": parse_api_dt(
+            item.get("bidNtceDt") or item.get("bidNtceDate") or item.get("rgstDt")
+        ),
+        "open_date": parse_api_dt(
+            item.get("opengDt") or item.get("opengDate") or item.get("bidClseDt")
+        ),
         "org": item.get("dminsttNm") or item.get("ntceInsttNm"),
         "title": title,
         "scope": labels["scope"],
         "fields": labels["fields"],
         "nature": labels["nature"],
         "budget_eok": won_to_eok(budget),
+        "presmpt_eok": won_to_eok(item.get("presmptPrce")),
         "contract_method": item.get("cntrctCnclsMthdNm") or item.get("bidMethdNm"),
+        "ntce_kind": item.get("ntceKindNm"),
         "biz": item.get("_biz"),
-        "g2b_url": g2b_notice_url(bid_no, str(bid_ord) if bid_ord is not None else None),
-        "raw_keys": sorted(item.keys()),
+        "g2b_url": item.get("bidNtceDtlUrl")
+        or g2b_notice_url(bid_no, str(bid_ord) if bid_ord is not None else None),
     }
 
 
