@@ -375,3 +375,421 @@ def render_index_stamp(repo_root: Path, day: date | None = None) -> dict[str, An
     )
     path.write_text(text, encoding="utf-8")
     return {"path": str(path), "stamp": day.isoformat()}
+
+
+# --- Phase B: awards.html -------------------------------------------------
+
+BUILD_NATURE = "시스템 구축·고도화"
+
+
+def _large_min_eok(rules: dict[str, Any] | None = None) -> float:
+    rules = rules or load_keywords()
+    return float(rules["filters"]["large_award_min_eok"])
+
+
+def _is_build_title(title: str | None, rules: dict[str, Any] | None = None) -> bool:
+    from .classify import classify_title
+
+    labels = classify_title(title or "", rules or load_keywords())
+    return labels.get("nature") == BUILD_NATURE
+
+
+def _award_amount(row: dict[str, Any]) -> float | None:
+    for key in ("award_amount_eok", "win_amount_eok"):
+        v = row.get(key)
+        if v not in (None, ""):
+            try:
+                return float(v)
+            except (TypeError, ValueError):
+                pass
+    bud = row.get("budget_eok")
+    rate = row.get("win_rate_pct")
+    if bud not in (None, "") and rate not in (None, ""):
+        try:
+            return round(float(bud) * float(rate) / 100.0, 1)
+        except (TypeError, ValueError):
+            return None
+    if bud not in (None, ""):
+        try:
+            return float(bud)
+        except (TypeError, ValueError):
+            return None
+    return None
+
+
+def _fmt_eok_display(v: Any) -> str:
+    if v is None or v == "":
+        return ""
+    try:
+        n = float(v)
+    except (TypeError, ValueError):
+        return ""
+    # Match awards.html: one decimal, with thousands separators for >= 1000
+    s = f"{n:,.1f}"
+    return s
+
+
+def _bid_count_str(v: Any) -> str:
+    if v is None or v == "":
+        return ""
+    try:
+        return str(int(float(v)))
+    except (TypeError, ValueError):
+        return html.escape(str(v))
+
+
+def load_large_awards(repo_root: Path) -> list[dict[str, Any]]:
+    """Bootstrap large awards ∪ notices with budget ≥ 30억 and a winner."""
+    rules = load_keywords()
+    min_eok = _large_min_eok(rules)
+    bootstrap_path = repo_root / "data" / "bootstrap.json"
+    notices_path = repo_root / "data" / "notices.json"
+
+    existing: list[dict[str, Any]] = []
+    if bootstrap_path.exists():
+        boot = json.loads(bootstrap_path.read_text(encoding="utf-8"))
+        existing = list(boot.get("large_awards") or [])
+
+    incoming: list[dict[str, Any]] = []
+    if notices_path.exists():
+        raw = json.loads(notices_path.read_text(encoding="utf-8"))
+        for n in raw.get("notices") or []:
+            b = n.get("budget_eok")
+            if b is None:
+                continue
+            try:
+                if float(b) < min_eok:
+                    continue
+            except (TypeError, ValueError):
+                continue
+            if not n.get("winner"):
+                continue
+            incoming.append(
+                {
+                    "source": n.get("source") or "g2b_api",
+                    "bid_no": n.get("bid_no"),
+                    "bid_ord": n.get("bid_ord"),
+                    "open_date": n.get("open_date"),
+                    "org": n.get("org"),
+                    "title": n.get("title"),
+                    "budget_eok": n.get("budget_eok"),
+                    "award_amount_eok": _award_amount(n),
+                    "winner": n.get("winner"),
+                    "bid_count": n.get("bid_count"),
+                    "second": n.get("second"),
+                    "g2b_url": n.get("g2b_url"),
+                }
+            )
+
+    merged = merge_by_bid(existing, incoming)
+    merged = [r for r in merged if r.get("winner")]
+    merged.sort(
+        key=lambda r: (
+            -(float(r["budget_eok"]) if r.get("budget_eok") is not None else -1),
+            r.get("open_date") or "",
+        )
+    )
+    return merged
+
+
+def load_award_pool(repo_root: Path) -> list[dict[str, Any]]:
+    """Rows usable for firm / yearly rollups (large awards + band notices with winners)."""
+    rules = load_keywords()
+    pool: list[dict[str, Any]] = []
+    for a in load_large_awards(repo_root):
+        row = dict(a)
+        row["_amount"] = _award_amount(a)
+        pool.append(row)
+    for n in load_merged_band(repo_root):
+        if not n.get("winner"):
+            continue
+        st = n.get("status")
+        if st and st not in ("낙찰", "1순위"):
+            continue
+        row = {
+            "bid_no": n.get("bid_no"),
+            "bid_ord": n.get("bid_ord"),
+            "open_date": n.get("open_date"),
+            "org": n.get("org"),
+            "title": n.get("title"),
+            "budget_eok": n.get("budget_eok"),
+            "award_amount_eok": _award_amount(n),
+            "winner": n.get("winner"),
+            "bid_count": n.get("bid_count"),
+            "win_rate_pct": n.get("win_rate_pct"),
+            "g2b_url": n.get("g2b_url"),
+            "nature": n.get("nature"),
+        }
+        row["_amount"] = _award_amount(n)
+        pool.append(row)
+    # de-dupe by bid
+    return merge_by_bid([], pool)
+
+
+def aggregate_top_winners(
+    pool: list[dict[str, Any]],
+    *,
+    limit: int = 20,
+    build_only: bool = True,
+    rules: dict[str, Any] | None = None,
+) -> list[tuple[str, int, float]]:
+    from collections import defaultdict
+
+    rules = rules or load_keywords()
+    wins: dict[str, dict[str, float]] = defaultdict(lambda: {"count": 0.0, "amount": 0.0})
+    for row in pool:
+        winner = (row.get("winner") or "").strip()
+        if not winner:
+            continue
+        if build_only and not _is_build_title(row.get("title"), rules):
+            continue
+        wins[winner]["count"] += 1
+        amt = row.get("_amount")
+        if amt is None:
+            amt = _award_amount(row)
+        if amt is not None:
+            wins[winner]["amount"] += float(amt)
+    ranked = sorted(
+        ((name, int(v["count"]), round(v["amount"], 1)) for name, v in wins.items()),
+        key=lambda x: (-x[2], -x[1], x[0]),
+    )
+    return ranked[:limit]
+
+
+def aggregate_yearly(
+    pool: list[dict[str, Any]],
+) -> list[tuple[str, int, float]]:
+    from collections import defaultdict
+
+    years: dict[str, dict[str, float]] = defaultdict(lambda: {"count": 0.0, "amount": 0.0})
+    for row in pool:
+        if not row.get("winner"):
+            continue
+        od = row.get("open_date") or ""
+        if len(od) < 4:
+            continue
+        y = od[:4]
+        years[y]["count"] += 1
+        amt = row.get("_amount")
+        if amt is None:
+            amt = _award_amount(row)
+        if amt is not None:
+            years[y]["amount"] += float(amt)
+    return [
+        (y, int(v["count"]), round(v["amount"], 1))
+        for y, v in sorted(years.items(), key=lambda x: x[0])
+    ]
+
+
+def load_needs_confirm(
+    repo_root: Path, *, limit: int = 30
+) -> tuple[list[dict[str, Any]], int]:
+    """개찰 확인 필요: bootstrap seed ∪ live inference; top-N by budget."""
+    today = _today_kst()
+    bootstrap_path = repo_root / "data" / "bootstrap.json"
+    seed: list[dict[str, Any]] = []
+    seed_total = 0
+    if bootstrap_path.exists():
+        boot = json.loads(bootstrap_path.read_text(encoding="utf-8"))
+        seed = list(boot.get("needs_confirm") or [])
+        seed_total = int(boot.get("needs_confirm_total") or len(seed))
+
+    rows: list[dict[str, Any]] = []
+    notices_path = repo_root / "data" / "notices.json"
+    if notices_path.exists():
+        raw = json.loads(notices_path.read_text(encoding="utf-8"))
+        rows = list(raw.get("notices") or [])
+    band = load_merged_band(repo_root)
+    merged = merge_by_bid(band, rows)
+    live: list[dict[str, Any]] = []
+    for n in merged:
+        st = infer_status(n, today)
+        if st != "개찰 확인 필요":
+            continue
+        row = dict(n)
+        row["status"] = "개찰 확인 필요"
+        live.append(row)
+
+    # Seed preserves historical top rows until award API covers full history
+    combined = merge_by_bid(seed, live)
+    combined.sort(
+        key=lambda r: (
+            -(float(r["budget_eok"]) if r.get("budget_eok") is not None else -1),
+            r.get("open_date") or "",
+        )
+    )
+    total = max(seed_total, len(live), len(combined))
+    return combined[:limit], total
+
+
+def render_large_award_row(row: dict[str, Any]) -> str:
+    href = _g2b_href(row)
+    title = row.get("title") or ""
+    return (
+        "<tr>"
+        f"<td>{html.escape(row.get('open_date') or '')}</td>"
+        f"<td>{html.escape(row.get('org') or '')}</td>"
+        f'<td><a href="{href}" target="_blank" rel="noopener">{html.escape(title)}</a></td>'
+        f'<td class="num">{_fmt_eok_display(row.get("budget_eok"))}</td>'
+        f'<td class="num">{_fmt_eok_display(_award_amount(row))}</td>'
+        f"<td>{html.escape(row.get('winner') or '')}</td>"
+        f'<td class="num">{_bid_count_str(row.get("bid_count"))}</td>'
+        f"<td>{html.escape(row.get('second') or '')}</td>"
+        "</tr>"
+    )
+
+
+def render_top_winner_row(name: str, count: int, amount: float) -> str:
+    return (
+        "<tr>"
+        f"<td>{html.escape(name)}</td>"
+        f'<td class="num">{count}</td>'
+        f'<td class="num">{_fmt_eok_display(amount)}</td>'
+        "</tr>"
+    )
+
+
+def render_yearly_row(year: str, count: int, amount: float) -> str:
+    return (
+        "<tr>"
+        f"<td>{html.escape(year)}</td>"
+        f'<td class="num">{count}</td>'
+        f'<td class="num">{_fmt_eok_display(amount)}</td>'
+        "</tr>"
+    )
+
+
+def render_needs_confirm_row(row: dict[str, Any]) -> str:
+    href = _g2b_href(row)
+    title = row.get("title") or ""
+    return (
+        "<tr>"
+        f"<td>{html.escape(row.get('open_date') or '')}</td>"
+        f"<td>{html.escape(row.get('org') or '')}</td>"
+        f'<td><a href="{href}" target="_blank" rel="noopener">{html.escape(title)}</a></td>'
+        f'<td class="num">{_fmt_eok_display(row.get("budget_eok"))}</td>'
+        f"<td>{html.escape(row.get('contract_method') or '')}</td>"
+        "</tr>"
+    )
+
+
+def replace_awards_table(
+    html_text: str,
+    *,
+    h2: str,
+    h2_out: str | None = None,
+    rows_html: str,
+    table_class: str = "notices",
+) -> str:
+    """Replace tbody of the table under a given <h2>…</h2> (optional meta)."""
+    h2_out = h2_out or h2
+    pattern = re.compile(
+        re.escape(f"<h2>{h2}</h2>")
+        + r"(?:<p class=\"meta\">.*?</p>)?"
+        + r'<div class="tbl"><table(?:\s+class="[^"]*")?>'
+        + r"(<thead>.*?</thead><tbody>)"
+        + r".*?"
+        + r"(</tbody></table></div>)",
+        re.S,
+    )
+
+    def repl(m: re.Match[str]) -> str:
+        # Preserve meta if present in original match span via separate search
+        return (
+            f"<h2>{h2_out}</h2>"
+            + _extract_meta_after_h2(html_text, h2)
+            + f'<div class="tbl"><table class="{table_class}">'
+            + f"{m.group(1)}{rows_html}{m.group(2)}"
+        )
+
+    new, n = pattern.subn(repl, html_text, count=1)
+    if n != 1:
+        raise RuntimeError(f"Could not locate awards table under h2 {h2!r}")
+    return new
+
+
+def _extract_meta_after_h2(html_text: str, h2: str) -> str:
+    marker = f"<h2>{h2}</h2>"
+    i = html_text.find(marker)
+    if i < 0:
+        return ""
+    after = html_text[i + len(marker) : i + len(marker) + 400]
+    m = re.match(r'<p class="meta">.*?</p>', after, re.S)
+    return m.group(0) if m else ""
+
+
+def replace_awards_table_by_prefix(
+    html_text: str,
+    *,
+    h2_prefix: str,
+    h2_out: str,
+    rows_html: str,
+    table_class: str = "notices",
+) -> str:
+    pattern = re.compile(
+        rf"<h2>{re.escape(h2_prefix)}[^<]*</h2>"
+        r"(?:<p class=\"meta\">.*?</p>)?"
+        r'<div class="tbl"><table(?:\s+class="[^"]*")?>'
+        r"(<thead>.*?</thead><tbody>)"
+        r".*?"
+        r"(</tbody></table></div>)",
+        re.S,
+    )
+
+    def repl(m: re.Match[str]) -> str:
+        meta = ""
+        full = m.group(0)
+        mm = re.search(r'<p class="meta">.*?</p>', full, re.S)
+        if mm:
+            meta = mm.group(0)
+        return (
+            f"<h2>{h2_out}</h2>{meta}"
+            f'<div class="tbl"><table class="{table_class}">'
+            f"{m.group(1)}{rows_html}{m.group(2)}"
+        )
+
+    new, n = pattern.subn(repl, html_text, count=1)
+    if n != 1:
+        raise RuntimeError(f"Could not locate awards table with prefix {h2_prefix!r}")
+    return new
+
+
+def render_awards_page(repo_root: Path) -> dict[str, Any]:
+    path = repo_root / "awards.html"
+    text = path.read_text(encoding="utf-8")
+
+    large = load_large_awards(repo_root)
+    large_rows = "".join(render_large_award_row(r) for r in large)
+    text = replace_awards_table(
+        text,
+        h2="예산 30억 원 이상 사업 낙찰 결과",
+        rows_html=large_rows,
+        table_class="notices",
+    )
+
+    # Top-20 / yearly / frequent / stats stay editorial until 낙찰 API fills
+    # participant lists and full award history (helpers kept for that follow-up).
+
+    needs, needs_total = load_needs_confirm(repo_root, limit=30)
+    needs_rows = "".join(render_needs_confirm_row(r) for r in needs)
+    text = replace_awards_table_by_prefix(
+        text,
+        h2_prefix="개찰 확인 필요",
+        h2_out=f"개찰 확인 필요 ({needs_total}개 사업)",
+        rows_html=needs_rows,
+        table_class="notices",
+    )
+
+    text = re.sub(
+        r"assets/site\.css\?v=\d+[a-z]?",
+        "assets/site.css?v=20261029f",
+        text,
+        count=1,
+    )
+    path.write_text(text, encoding="utf-8")
+    return {
+        "path": str(path),
+        "large_awards": len(large),
+        "needs_confirm_total": needs_total,
+        "needs_confirm_shown": len(needs),
+    }

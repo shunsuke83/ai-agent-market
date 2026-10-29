@@ -41,20 +41,22 @@ python -m g2b.collect classify "생성형 AI 플랫폼 구축"
 export DATA_GO_KR_SERVICE_KEY='발급키'
 python -m g2b.collect collect --days 30 --all-budgets --out ../data/notices.json
 
-# 4) HTML 렌더 (Phase A: band 공고표 + index 갱신일)
+# 4) HTML 렌더 (band + awards + index)
 python -m g2b.collect render all
 ```
 
-GitHub Actions: `.github/workflows/collect.yml` — secret `DATA_GO_KR_SERVICE_KEY` 가 있을 때 매주 수집 → `band.html`/`index.html` 렌더 → 커밋.
+GitHub Actions: `.github/workflows/collect.yml` — secret `DATA_GO_KR_SERVICE_KEY` 가 있을 때 매주 수집 → `band.html`/`awards.html`/`index.html` 렌더 → 커밋.
 
-## 렌더 범위 (Phase A)
+## 렌더 범위
 
 - `band.html` 공고별 결과 테이블 (+ 상단 공고 건수·예산 합계 스탯)
+- `awards.html` 예산 30억+ 낙찰 결과 + 개찰 확인 필요 (시드 ∪ 수집)
 - `index.html` `최종 갱신` 스탬프
-- 시드: `data/bootstrap.json` ∪ `data/notices.json` (8~30억)
+- 시드: `data/bootstrap.json` ∪ `data/notices.json`
 
 ## 아직 안 하는 것
 
-- awards / 주·월간 리포트 / band 차트 전체 재생성
+- awards 수주 상위·자주 투찰·연도별 재집계 (낙찰 API·투찰 참가자 필요)
+- 주·월간 리포트 / band 차트 전체 재생성
 - 낙찰 순위·투찰 전원 상세 수집
 - 경쟁사 프로필 문단 (편집 콘텐츠)
