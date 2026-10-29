@@ -48,7 +48,7 @@ jobs:
           python -m g2b.collect collect --days "$DAYS" --all-budgets --out ../data/notices.json
         working-directory: collector
 
-      - name: Render band.html + awards.html + index stamp
+      - name: Render band + awards + index + competitors
         run: python -m g2b.collect render all
         working-directory: collector
 
@@ -60,7 +60,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/bootstrap.json data/notices.json band.html awards.html index.html
+          git add data/bootstrap.json data/notices.json \
+            band.html awards.html index.html competitors.html
           if git diff --staged --quiet; then
             echo "No data changes."
           else
