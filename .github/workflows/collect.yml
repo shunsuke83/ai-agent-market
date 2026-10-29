@@ -54,6 +54,10 @@ jobs:
         run: python -m g2b.collect enrich-bidders --include-bootstrap --limit 300
         working-directory: collector
 
+      - name: Sanitize budgets stored as won
+        run: python -m g2b.collect sanitize-budgets
+        working-directory: collector
+
       - name: Render band + awards + index + competitors
         run: python -m g2b.collect render all
         working-directory: collector

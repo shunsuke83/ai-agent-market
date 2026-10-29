@@ -445,25 +445,29 @@ def load_large_awards(repo_root: Path) -> list[dict[str, Any]]:
     bootstrap_path = repo_root / "data" / "bootstrap.json"
     notices_path = repo_root / "data" / "notices.json"
 
+    from .normalize import coerce_stored_eok, sanitize_notice_money_fields
+
     existing: list[dict[str, Any]] = []
     if bootstrap_path.exists():
         boot = json.loads(bootstrap_path.read_text(encoding="utf-8"))
-        existing = list(boot.get("large_awards") or [])
+        for row in boot.get("large_awards") or []:
+            row, _ = sanitize_notice_money_fields(row)
+            existing.append(row)
 
     incoming: list[dict[str, Any]] = []
     if notices_path.exists():
         raw = json.loads(notices_path.read_text(encoding="utf-8"))
         for n in raw.get("notices") or []:
-            b = n.get("budget_eok")
+            n, _ = sanitize_notice_money_fields(n)
+            b = coerce_stored_eok(n.get("budget_eok"))
             if b is None:
                 continue
-            try:
-                if float(b) < min_eok:
-                    continue
-            except (TypeError, ValueError):
+            if b < min_eok:
                 continue
             if not n.get("winner"):
                 continue
+            award = _award_amount(n)
+            award = coerce_stored_eok(award) if award is not None else None
             incoming.append(
                 {
                     "source": n.get("source") or "g2b_api",
@@ -472,8 +476,8 @@ def load_large_awards(repo_root: Path) -> list[dict[str, Any]]:
                     "open_date": n.get("open_date"),
                     "org": n.get("org"),
                     "title": n.get("title"),
-                    "budget_eok": n.get("budget_eok"),
-                    "award_amount_eok": _award_amount(n),
+                    "budget_eok": b,
+                    "award_amount_eok": award,
                     "winner": n.get("winner"),
                     "bid_count": n.get("bid_count"),
                     "second": n.get("second"),
@@ -482,14 +486,26 @@ def load_large_awards(repo_root: Path) -> list[dict[str, Any]]:
             )
 
     merged = merge_by_bid(existing, incoming)
-    merged = [r for r in merged if r.get("winner")]
-    merged.sort(
+    # Drop rows whose budget is still missing or below threshold after coerce
+    kept: list[dict[str, Any]] = []
+    for r in merged:
+        if not r.get("winner"):
+            continue
+        b = coerce_stored_eok(r.get("budget_eok"))
+        if b is None or b < min_eok:
+            continue
+        r = dict(r)
+        r["budget_eok"] = b
+        if r.get("award_amount_eok") not in (None, ""):
+            r["award_amount_eok"] = coerce_stored_eok(r.get("award_amount_eok"))
+        kept.append(r)
+    kept.sort(
         key=lambda r: (
             -(float(r["budget_eok"]) if r.get("budget_eok") is not None else -1),
             r.get("open_date") or "",
         )
     )
-    return merged
+    return kept
 
 
 def load_award_pool(repo_root: Path) -> list[dict[str, Any]]:

@@ -17,21 +17,25 @@ def parse_api_dt(value: str | None) -> str | None:
     return f"{digits[0:4]}-{digits[4:6]}-{digits[6:8]}"
 
 
+# Budgets/awards stored as 억. Raw 원 sneaking through are typically ≥ 10만.
+_WON_HINT = 100_000.0
+
+
 def won_to_eok(value: Any) -> float | None:
+    """Heuristic: large numbers are 원, small ones already 억."""
     if value is None or value == "":
         return None
     try:
         n = float(str(value).replace(",", ""))
     except ValueError:
         return None
-    # API amounts are usually in 원. Values already in 억 are typically < 1e4.
-    if n >= 100_000:  # >= 10만 원 → treat as 원
+    if n >= _WON_HINT:
         return round(n / 100_000_000, 4)
-    return round(n, 2)
+    return round(n, 4)
 
 
 def always_won_to_eok(value: Any) -> float | None:
-    """Scsbid sucsfbidAmt is always documented as 원."""
+    """BidPublicInfo / Scsbid money fields documented as 원."""
     if value is None or value == "":
         return None
     try:
@@ -39,6 +43,42 @@ def always_won_to_eok(value: Any) -> float | None:
     except ValueError:
         return None
     return round(n / 100_000_000, 4)
+
+
+def coerce_stored_eok(value: Any) -> float | None:
+    """Repair a field that should already be 억 but may still hold 원."""
+    if value is None or value == "":
+        return None
+    try:
+        n = float(str(value).replace(",", ""))
+    except (TypeError, ValueError):
+        return None
+    if n >= _WON_HINT:
+        return round(n / 100_000_000, 4)
+    return round(n, 4)
+
+
+def sanitize_notice_money_fields(notice: dict[str, Any]) -> tuple[dict[str, Any], bool]:
+    """Fix budget/presmpt/award amounts left in 원. Returns (notice, changed)."""
+    changed = False
+    out = notice
+    for key in ("budget_eok", "presmpt_eok", "award_amount_eok", "win_amount_eok"):
+        raw = notice.get(key)
+        if raw in (None, ""):
+            continue
+        fixed = coerce_stored_eok(raw)
+        if fixed is None:
+            continue
+        try:
+            cur = float(raw)
+        except (TypeError, ValueError):
+            continue
+        if abs(cur - fixed) > 1e-9:
+            if out is notice:
+                out = dict(notice)
+            out[key] = fixed
+            changed = True
+    return out, changed
 
 
 def g2b_notice_url(bid_no: str | None, bid_ord: str | None = "000") -> str | None:
@@ -85,8 +125,9 @@ def normalize_bid_item(item: dict[str, Any], rules: dict[str, Any] | None = None
         "scope": labels["scope"],
         "fields": labels["fields"],
         "nature": labels["nature"],
-        "budget_eok": won_to_eok(budget),
-        "presmpt_eok": won_to_eok(item.get("presmptPrce")),
+        # asignBdgtAmt / presmptPrce are 원 (see docs/bid-public-info-api.md)
+        "budget_eok": always_won_to_eok(budget),
+        "presmpt_eok": always_won_to_eok(item.get("presmptPrce")),
         "contract_method": item.get("cntrctCnclsMthdNm") or item.get("bidMethdNm"),
         "ntce_kind": item.get("ntceKindNm"),
         "biz": item.get("_biz"),
@@ -165,7 +206,7 @@ def parse_openg_corp_info(raw: str | None) -> dict[str, Any]:
     if parts:
         out["winner"] = clean_firm_name(parts[0])
     if len(parts) >= 4 and parts[3]:
-        out["award_amount_eok"] = won_to_eok(parts[3])
+        out["award_amount_eok"] = always_won_to_eok(parts[3])
     return out
 
 

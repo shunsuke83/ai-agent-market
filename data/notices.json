@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-29T06:32:11Z",
+  "generated_at": "2026-10-29T06:46:42Z",
   "mode": "g2b_api",
   "range": {
     "since": "2026-10-15",
@@ -343,8 +343,8 @@
         "AI 일반"
       ],
       "nature": null,
-      "budget_eok": 9185000.0,
-      "presmpt_eok": 8350000.0,
+      "budget_eok": 0.0919,
+      "presmpt_eok": 0.0835,
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
@@ -1511,8 +1511,8 @@
         "생성형·LLM"
       ],
       "nature": null,
-      "budget_eok": 4275000.0,
-      "presmpt_eok": 3886364.0,
+      "budget_eok": 0.0428,
+      "presmpt_eok": 0.0389,
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
@@ -2795,7 +2795,7 @@
       ],
       "nature": null,
       "budget_eok": 0.11,
-      "presmpt_eok": 9822636.0,
+      "presmpt_eok": 0.0982,
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
@@ -3721,8 +3721,8 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화",
-      "budget_eok": 6434484.0,
-      "presmpt_eok": 5849531.0,
+      "budget_eok": 0.0643,
+      "presmpt_eok": 0.0585,
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
@@ -3801,8 +3801,8 @@
         "AI 일반"
       ],
       "nature": null,
-      "budget_eok": 5490000.0,
-      "presmpt_eok": 4990909.0,
+      "budget_eok": 0.0549,
+      "presmpt_eok": 0.0499,
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
@@ -3951,8 +3951,8 @@
         "AI 일반"
       ],
       "nature": "연구·교육·행사",
-      "budget_eok": 6655000.0,
-      "presmpt_eok": 6050000.0,
+      "budget_eok": 0.0665,
+      "presmpt_eok": 0.0605,
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
@@ -4248,8 +4248,8 @@
         "AI 일반"
       ],
       "nature": "연구·교육·행사",
-      "budget_eok": 6655000.0,
-      "presmpt_eok": 6050000.0,
+      "budget_eok": 0.0665,
+      "presmpt_eok": 0.0605,
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
@@ -4268,8 +4268,8 @@
         "AI 일반"
       ],
       "nature": "연구·교육·행사",
-      "budget_eok": 6655000.0,
-      "presmpt_eok": 6050000.0,
+      "budget_eok": 0.0665,
+      "presmpt_eok": 0.0605,
       "contract_method": "수의계약",
       "ntce_kind": "취소공고",
       "biz": "servc",
@@ -4706,8 +4706,8 @@
         "AI 일반"
       ],
       "nature": null,
-      "budget_eok": 5388900.0,
-      "presmpt_eok": 4899000.0,
+      "budget_eok": 0.0539,
+      "presmpt_eok": 0.049,
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
@@ -6086,8 +6086,8 @@
         "AI 일반"
       ],
       "nature": null,
-      "budget_eok": 6019000.0,
-      "presmpt_eok": 5471818.0,
+      "budget_eok": 0.0602,
+      "presmpt_eok": 0.0547,
       "contract_method": "일반경쟁",
       "ntce_kind": "변경공고",
       "biz": "thng",
@@ -45941,8 +45941,8 @@
         "생성형·LLM"
       ],
       "nature": "구독·라이선스",
-      "budget_eok": 3592800.0,
-      "presmpt_eok": 3266182.0,
+      "budget_eok": 0.0359,
+      "presmpt_eok": 0.0327,
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
@@ -49929,8 +49929,8 @@
         "AI 일반"
       ],
       "nature": "연구·교육·행사",
-      "budget_eok": 4018000.0,
-      "presmpt_eok": 3652727.0,
+      "budget_eok": 0.0402,
+      "presmpt_eok": 0.0365,
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
@@ -50150,8 +50150,8 @@
         "AI 일반"
       ],
       "nature": null,
-      "budget_eok": 5000001.0,
-      "presmpt_eok": 4545455.0,
+      "budget_eok": 0.05,
+      "presmpt_eok": 0.0455,
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
@@ -51733,8 +51733,8 @@
         "AX·전략"
       ],
       "nature": "ISP·전략",
-      "budget_eok": 8216100.0,
-      "presmpt_eok": 7469182.0,
+      "budget_eok": 0.0822,
+      "presmpt_eok": 0.0747,
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
@@ -52148,8 +52148,8 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화",
-      "budget_eok": 7147140.0,
-      "presmpt_eok": 6497400.0,
+      "budget_eok": 0.0715,
+      "presmpt_eok": 0.065,
       "contract_method": "일반경쟁",
       "ntce_kind": "재공고",
       "biz": "thng",
@@ -55039,8 +55039,8 @@
         "AI 일반"
       ],
       "nature": null,
-      "budget_eok": 4004470.0,
-      "presmpt_eok": 3640427.0,
+      "budget_eok": 0.04,
+      "presmpt_eok": 0.0364,
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
@@ -56035,8 +56035,8 @@
         "비전·영상"
       ],
       "nature": null,
-      "budget_eok": 8140000.0,
-      "presmpt_eok": 7400000.0,
+      "budget_eok": 0.0814,
+      "presmpt_eok": 0.074,
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
@@ -60597,8 +60597,8 @@
         "AI 일반"
       ],
       "nature": null,
-      "budget_eok": 9000000.0,
-      "presmpt_eok": 8181818.0,
+      "budget_eok": 0.09,
+      "presmpt_eok": 0.0818,
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
@@ -68070,8 +68070,8 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화",
-      "budget_eok": 7147140.0,
-      "presmpt_eok": 6497400.0,
+      "budget_eok": 0.0715,
+      "presmpt_eok": 0.065,
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
@@ -68297,8 +68297,8 @@
         "AI 일반"
       ],
       "nature": null,
-      "budget_eok": 5629800.0,
-      "presmpt_eok": 5118000.0,
+      "budget_eok": 0.0563,
+      "presmpt_eok": 0.0512,
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
@@ -68570,8 +68570,8 @@
         "AI 에이전트"
       ],
       "nature": "시스템 구축·고도화",
-      "budget_eok": 3448000.0,
-      "presmpt_eok": 3134545.0,
+      "budget_eok": 0.0345,
+      "presmpt_eok": 0.0313,
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
@@ -70614,8 +70614,8 @@
         "비전·영상"
       ],
       "nature": null,
-      "budget_eok": 4768500.0,
-      "presmpt_eok": 4335000.0,
+      "budget_eok": 0.0477,
+      "presmpt_eok": 0.0433,
       "contract_method": "일반경쟁",
       "ntce_kind": "재공고",
       "biz": "thng",
@@ -73627,8 +73627,8 @@
         "AI 일반"
       ],
       "nature": null,
-      "budget_eok": 6370000.0,
-      "presmpt_eok": 5790909.0,
+      "budget_eok": 0.0637,
+      "presmpt_eok": 0.0579,
       "contract_method": "일반경쟁",
       "ntce_kind": "재공고",
       "biz": "thng",
@@ -73647,8 +73647,8 @@
         "AI 일반"
       ],
       "nature": null,
-      "budget_eok": 9300200.0,
-      "presmpt_eok": 8454727.0,
+      "budget_eok": 0.093,
+      "presmpt_eok": 0.0845,
       "contract_method": "일반경쟁",
       "ntce_kind": "재공고",
       "biz": "thng",
@@ -75924,8 +75924,8 @@
         "AI 일반"
       ],
       "nature": null,
-      "budget_eok": 4037600.0,
-      "presmpt_eok": 3670545.0,
+      "budget_eok": 0.0404,
+      "presmpt_eok": 0.0367,
       "contract_method": "일반경쟁",
       "ntce_kind": "재공고",
       "biz": "thng",
@@ -78509,8 +78509,8 @@
         "AI 에이전트"
       ],
       "nature": "시스템 구축·고도화",
-      "budget_eok": 6400000.0,
-      "presmpt_eok": 5818182.0,
+      "budget_eok": 0.064,
+      "presmpt_eok": 0.0582,
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
@@ -78976,8 +78976,8 @@
         "비전·영상"
       ],
       "nature": null,
-      "budget_eok": 4768500.0,
-      "presmpt_eok": 4335000.0,
+      "budget_eok": 0.0477,
+      "presmpt_eok": 0.0433,
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
@@ -93062,6 +93062,7 @@
       "updated": 81,
       "empty": 39,
       "bootstrap_upserts": 0
-    }
+    },
+    "budget_sanitized": 27
   }
 }

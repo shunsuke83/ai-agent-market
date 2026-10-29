@@ -40,6 +40,9 @@ python -m g2b.collect classify "생성형 AI 플랫폼 구축"
 # 3) 나라장터 수집 + 낙찰 병합 (키 필요)
 export DATA_GO_KR_SERVICE_KEY='발급키'
 python -m g2b.collect collect --days 30 --all-budgets --out ../data/notices.json
+# 예산·낙찰금액이 원으로 남아 있으면 억으로 보정:
+python -m g2b.collect sanitize-budgets
+
 # 기존 파일만 낙찰 / 투찰업체 보강:
 # python -m g2b.collect enrich-awards --days 120 --lookup-missing
 # python -m g2b.collect enrich-bidders --limit 200

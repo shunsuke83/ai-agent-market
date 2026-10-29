@@ -16,6 +16,7 @@ from .normalize import (
     merge_by_bid,
     normalize_award_item,
     normalize_bid_item,
+    sanitize_notice_money_fields,
     sort_notices,
     utc_now_iso,
 )
@@ -394,6 +395,30 @@ def cmd_classify(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_sanitize_budgets(args: argparse.Namespace) -> int:
+    """Repair budget/award fields still stored in 원 instead of 억."""
+    out = Path(args.out)
+    if not out.exists():
+        print(f"error: {out} not found", file=sys.stderr)
+        return 2
+    payload = json.loads(out.read_text(encoding="utf-8"))
+    notices = list(payload.get("notices") or [])
+    fixed_n = 0
+    out_notices: list[dict[str, Any]] = []
+    for n in notices:
+        cleaned, changed = sanitize_notice_money_fields(n)
+        if changed:
+            fixed_n += 1
+        out_notices.append(cleaned)
+    payload["notices"] = sort_notices(out_notices)
+    payload["generated_at"] = utc_now_iso()
+    stats = payload.setdefault("stats", {})
+    stats["budget_sanitized"] = fixed_n
+    out.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(json.dumps({"path": str(out), "fixed": fixed_n, "total": len(out_notices)}))
+    return 0
+
+
 def cmd_render(args: argparse.Namespace) -> int:
     from .competitors import render_competitors_page
     from .render import render_awards_page, render_band_page, render_index_stamp
@@ -493,6 +518,13 @@ def build_parser() -> argparse.ArgumentParser:
     k = sub.add_parser("classify", help="Classify a single title")
     k.add_argument("title")
     k.set_defaults(func=cmd_classify)
+
+    sb = sub.add_parser(
+        "sanitize-budgets",
+        help="Convert budget/award fields wrongly stored as 원 into 억",
+    )
+    sb.add_argument("--out", default=str(DATA / "notices.json"))
+    sb.set_defaults(func=cmd_sanitize_budgets)
 
     r = sub.add_parser(
         "render",
