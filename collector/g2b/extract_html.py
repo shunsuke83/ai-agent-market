@@ -167,6 +167,36 @@ def extract_large_awards(repo_root: Path) -> list[dict[str, Any]]:
     return out
 
 
+def extract_needs_confirm(repo_root: Path) -> tuple[list[dict[str, Any]], int]:
+    """Top budget rows under 개찰 확인 필요 + total from the h2 count."""
+    html = (repo_root / "awards.html").read_text(encoding="utf-8")
+    m = re.search(r"<h2>개찰 확인 필요 \((\d+)개 사업\)</h2>", html)
+    total = int(m.group(1)) if m else 0
+    headers, rows = parse_table(html, "개찰 확인 필요")
+    idx = {h: i for i, h in enumerate(headers)}
+    out: list[dict[str, Any]] = []
+    for r in rows:
+        title_cell = r[idx["사업명"]]
+        bid_no, bid_ord = _bid_from_href(title_cell.get("href"))
+        out.append(
+            {
+                "source": "awards.html",
+                "bid_no": bid_no,
+                "bid_ord": bid_ord,
+                "open_date": r[idx["개찰일"]]["text"] or None,
+                "org": r[idx["수요기관"]]["text"] or None,
+                "title": title_cell["text"] or None,
+                "budget_eok": _parse_eok(r[idx["예산(억)"]]["text"]),
+                "contract_method": r[idx["계약방법"]]["text"] or None,
+                "g2b_url": title_cell.get("href"),
+                "status": "개찰 확인 필요",
+            }
+        )
+    if not total:
+        total = len(out)
+    return out, total
+
+
 def extract_competitors_overview(repo_root: Path) -> list[dict[str, Any]]:
     html = (repo_root / "competitors.html").read_text(encoding="utf-8")
     headers, rows = parse_table(html, "한눈에 보기")
@@ -188,9 +218,12 @@ def extract_competitors_overview(repo_root: Path) -> list[dict[str, Any]]:
 
 
 def bootstrap_all(repo_root: Path) -> dict[str, Any]:
+    needs, needs_total = extract_needs_confirm(repo_root)
     return {
         "schema_version": 1,
         "band_notices": extract_band_notices(repo_root),
         "large_awards": extract_large_awards(repo_root),
+        "needs_confirm": needs,
+        "needs_confirm_total": needs_total,
         "competitors_overview": extract_competitors_overview(repo_root),
     }

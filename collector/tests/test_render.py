@@ -6,8 +6,12 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from g2b.render import (
     infer_status,
+    load_large_awards,
     load_merged_band,
+    load_needs_confirm,
+    render_large_award_row,
     render_notice_row,
+    replace_awards_table,
     replace_band_results_table,
     update_stamp,
 )
@@ -59,3 +63,47 @@ def test_replace_table_and_stamp_roundtrip():
     idx = (ROOT / "index.html").read_text(encoding="utf-8")
     stamped = update_stamp(idx, date(2026, 10, 29))
     assert "최종 갱신 2026-10-29" in stamped
+
+
+def test_load_large_awards():
+    rows = load_large_awards(ROOT)
+    assert len(rows) >= 50
+    assert rows[0].get("winner")
+    assert rows[0].get("budget_eok") is not None
+
+
+def test_render_large_award_row():
+    row = render_large_award_row(
+        {
+            "open_date": "2026-04-30",
+            "org": "테스트",
+            "title": "AI 구축",
+            "budget_eok": 30.0,
+            "award_amount_eok": 29.5,
+            "winner": "테스트사",
+            "bid_count": 3,
+            "second": "2순위사",
+            "bid_no": "R26BK00000001",
+            "bid_ord": "000",
+        }
+    )
+    assert "테스트사" in row
+    assert 'class="num">30.0</td>' in row
+
+
+def test_needs_confirm_seeded():
+    rows, total = load_needs_confirm(ROOT, limit=30)
+    assert total >= 30
+    assert len(rows) >= 1
+
+
+def test_replace_awards_large_table():
+    awards = (ROOT / "awards.html").read_text(encoding="utf-8")
+    updated = replace_awards_table(
+        awards,
+        h2="예산 30억 원 이상 사업 낙찰 결과",
+        rows_html="<tr><td>x</td></tr>",
+        table_class="notices",
+    )
+    assert "<tr><td>x</td></tr>" in updated
+    assert 'class="notices"' in updated
