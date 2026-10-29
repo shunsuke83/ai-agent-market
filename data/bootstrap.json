@@ -12,7 +12,7 @@
       "fields": [
         "AI 일반"
       ],
-      "budget_eok": 13.88,
+      "budget_eok": 13.9,
       "open_date": "2026-11-18",
       "status": "개찰 예정",
       "bid_count": null,
@@ -70,7 +70,7 @@
       "fields": [
         "AI 인프라"
       ],
-      "budget_eok": 9.57,
+      "budget_eok": 9.6,
       "open_date": "2026-11-04",
       "status": "개찰 예정",
       "bid_count": null,
@@ -89,7 +89,7 @@
       "fields": [
         "AI 인프라"
       ],
-      "budget_eok": 9.57,
+      "budget_eok": 9.6,
       "open_date": "2026-11-04",
       "status": "개찰 예정",
       "bid_count": null,
@@ -127,7 +127,7 @@
       "fields": [
         "AI 일반"
       ],
-      "budget_eok": 8.57,
+      "budget_eok": 8.6,
       "open_date": "2026-11-17",
       "status": "개찰 예정",
       "bid_count": null,
@@ -165,7 +165,7 @@
       "fields": [
         "AI 일반"
       ],
-      "budget_eok": 8.81,
+      "budget_eok": 8.8,
       "open_date": "2026-11-24",
       "status": "개찰 예정",
       "bid_count": null,
@@ -184,7 +184,7 @@
       "fields": [
         "AI 일반"
       ],
-      "budget_eok": 8.74,
+      "budget_eok": 8.7,
       "open_date": "2026-11-06",
       "status": "개찰 예정",
       "bid_count": null,
@@ -203,7 +203,7 @@
       "fields": [
         "데이터·예측"
       ],
-      "budget_eok": 12.59,
+      "budget_eok": 12.6,
       "open_date": "2026-11-27",
       "status": "개찰 예정",
       "bid_count": null,
@@ -222,7 +222,7 @@
       "fields": [
         "AI 일반"
       ],
-      "budget_eok": 12.65,
+      "budget_eok": 12.7,
       "open_date": "2026-10-30",
       "status": "개찰 예정",
       "bid_count": null,
@@ -260,7 +260,7 @@
       "fields": [
         "AI 일반"
       ],
-      "budget_eok": 9.94,
+      "budget_eok": 9.9,
       "open_date": "2026-12-01",
       "status": "개찰 예정",
       "bid_count": null,
@@ -298,7 +298,7 @@
       "fields": [
         "AI 일반"
       ],
-      "budget_eok": 10.08,
+      "budget_eok": 10.1,
       "open_date": "2026-11-10",
       "status": "개찰 예정",
       "bid_count": null,
@@ -317,7 +317,7 @@
       "fields": [
         "생성형·LLM"
       ],
-      "budget_eok": 15.66,
+      "budget_eok": 15.7,
       "open_date": "2026-10-21",
       "status": "결과 등록 대기",
       "bid_count": null,
@@ -336,7 +336,7 @@
       "fields": [
         "AI 일반"
       ],
-      "budget_eok": 11.44,
+      "budget_eok": 11.4,
       "open_date": "2026-11-19",
       "status": "개찰 예정",
       "bid_count": null,
@@ -374,7 +374,7 @@
       "fields": [
         "AI 일반"
       ],
-      "budget_eok": 20.74,
+      "budget_eok": 20.7,
       "open_date": "2026-11-17",
       "status": "개찰 예정",
       "bid_count": null,
@@ -393,7 +393,7 @@
       "fields": [
         "AX·전략"
       ],
-      "budget_eok": 15.54,
+      "budget_eok": 15.5,
       "open_date": "2026-11-11",
       "status": "개찰 예정",
       "bid_count": null,
@@ -450,7 +450,7 @@
       "fields": [
         "AI 일반"
       ],
-      "budget_eok": 29.67,
+      "budget_eok": 29.7,
       "open_date": "2026-11-12",
       "status": "개찰 예정",
       "bid_count": null,
@@ -469,7 +469,7 @@
       "fields": [
         "AI 일반"
       ],
-      "budget_eok": 23.52,
+      "budget_eok": 23.5,
       "open_date": "2026-10-14",
       "status": "결과 등록 대기",
       "bid_count": null,
@@ -488,7 +488,7 @@
       "fields": [
         "AI 일반"
       ],
-      "budget_eok": 29.67,
+      "budget_eok": 29.7,
       "open_date": "2026-11-10",
       "status": "개찰 예정",
       "bid_count": null,
@@ -507,7 +507,7 @@
       "fields": [
         "AI 일반"
       ],
-      "budget_eok": 8.74,
+      "budget_eok": 8.7,
       "open_date": "2026-10-23",
       "status": "결과 등록 대기",
       "bid_count": null,
@@ -526,7 +526,7 @@
       "fields": [
         "AI 일반"
       ],
-      "budget_eok": 19.79,
+      "budget_eok": 19.8,
       "open_date": "2026-11-25",
       "status": "개찰 예정",
       "bid_count": null,
@@ -545,7 +545,7 @@
       "fields": [
         "AI 일반"
       ],
-      "budget_eok": 8.74,
+      "budget_eok": 8.7,
       "open_date": "2026-10-23",
       "status": "결과 등록 대기",
       "bid_count": null,
@@ -564,7 +564,7 @@
       "fields": [
         "AI 일반"
       ],
-      "budget_eok": 8.74,
+      "budget_eok": 8.7,
       "open_date": "2026-10-23",
       "status": "결과 등록 대기",
       "bid_count": null,
@@ -602,7 +602,7 @@
       "fields": [
         "AI 일반"
       ],
-      "budget_eok": 29.67,
+      "budget_eok": 29.7,
       "open_date": "2026-11-10",
       "status": "개찰 예정",
       "bid_count": null,
@@ -621,7 +621,7 @@
       "fields": [
         "AI 일반"
       ],
-      "budget_eok": 24.16,
+      "budget_eok": 24.2,
       "open_date": "2026-10-28",
       "status": "결과 등록 대기",
       "bid_count": null,
@@ -773,7 +773,7 @@
       "fields": [
         "AI 일반"
       ],
-      "budget_eok": 15.87,
+      "budget_eok": 15.9,
       "open_date": "2026-11-16",
       "status": "개찰 예정",
       "bid_count": null,
@@ -811,7 +811,7 @@
       "fields": [
         "의료·바이오 AI"
       ],
-      "budget_eok": 10.71,
+      "budget_eok": 10.7,
       "open_date": "2026-10-26",
       "status": "유찰",
       "bid_count": 1.0,
@@ -850,7 +850,7 @@
         "AI 인프라",
         "의료·바이오 AI"
       ],
-      "budget_eok": 11.78,
+      "budget_eok": 11.8,
       "open_date": "2026-10-08",
       "status": "결과 등록 대기",
       "bid_count": null,
@@ -869,7 +869,7 @@
       "fields": [
         "AI 일반"
       ],
-      "budget_eok": 12.15,
+      "budget_eok": 12.2,
       "open_date": "2026-10-21",
       "status": "결과 등록 대기",
       "bid_count": null,
@@ -907,7 +907,7 @@
       "fields": [
         "AI 일반"
       ],
-      "budget_eok": 15.87,
+      "budget_eok": 15.9,
       "open_date": "2026-11-10",
       "status": "개찰 예정",
       "bid_count": null,
@@ -983,7 +983,7 @@
       "fields": [
         "AI 일반"
       ],
-      "budget_eok": 15.87,
+      "budget_eok": 15.9,
       "open_date": "2026-11-09",
       "status": "개찰 예정",
       "bid_count": null,
@@ -1002,7 +1002,7 @@
       "fields": [
         "AI 인프라"
       ],
-      "budget_eok": 23.09,
+      "budget_eok": 23.1,
       "open_date": "2026-10-15",
       "status": "결과 등록 대기",
       "bid_count": null,
@@ -1040,7 +1040,7 @@
       "fields": [
         "AI 일반"
       ],
-      "budget_eok": 9.35,
+      "budget_eok": 9.3,
       "open_date": "2026-10-12",
       "status": "결과 등록 대기",
       "bid_count": null,
@@ -1059,7 +1059,7 @@
       "fields": [
         "AI 일반"
       ],
-      "budget_eok": 11.28,
+      "budget_eok": 11.3,
       "open_date": "2026-10-30",
       "status": "개찰 예정",
       "bid_count": null,
@@ -9932,6 +9932,6 @@
       "procurement": "GS 1등급 2건, CSAP(뷰어), 디지털서비스몰(뷰어)"
     }
   ],
-  "generated_at": "2026-10-29T00:53:14Z",
+  "generated_at": "2026-10-29T01:04:14Z",
   "mode": "bootstrap_html"
 }

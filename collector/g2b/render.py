@@ -97,10 +97,8 @@ def _fmt_budget(v: Any) -> str:
         n = float(v)
     except (TypeError, ValueError):
         return ""
-    # Match site style: one decimal when needed (8.4, 13.9)
-    if abs(n - round(n, 1)) < 1e-9:
-        return f"{n:.1f}"
-    return f"{n:.2f}".rstrip("0").rstrip(".")
+    # Match site style: one decimal (8.4, 13.9)
+    return f"{round(n, 1):.1f}"
 
 
 def _fmt_pct(v: Any) -> str:
@@ -224,6 +222,53 @@ def _status_meta(notices: list[dict[str, Any]], today: date | None = None) -> st
     return '<p class="meta">' + " · ".join(parts) + "</p>"
 
 
+def _bars_html(counts: list[tuple[str, int]]) -> str:
+    if not counts:
+        return '<div class="bars wide"></div>'
+    top = max(c for _, c in counts) or 1
+    parts = ['<div class="bars wide">']
+    for label, n in counts:
+        pct = 100.0 * n / top
+        parts.append(
+            f'<div class="bar"><span>{html.escape(label)}</span>'
+            f'<div class="track"><div class="fill" style="width:{pct:.1f}%"></div></div>'
+            f'<span class="n">{n}건</span></div>'
+        )
+    parts.append("</div>")
+    return "".join(parts)
+
+
+def replace_section_bars(html_text: str, section_h2: str, bars_html: str) -> str:
+    marker = f"<h2>{section_h2}</h2>"
+    start = html_text.find(marker)
+    if start < 0:
+        raise RuntimeError(f"Could not find section {section_h2!r}")
+    after = start + len(marker)
+    next_h2 = html_text.find("<h2>", after)
+    if next_h2 < 0:
+        raise RuntimeError(f"Could not find end of section {section_h2!r}")
+    return html_text[:after] + bars_html + html_text[next_h2:]
+
+
+def scope_field_counts(
+    notices: list[dict[str, Any]],
+) -> tuple[list[tuple[str, int]], list[tuple[str, int]]]:
+    from collections import Counter
+
+    scopes = Counter(n.get("scope") or "미분류" for n in notices)
+    # Prefer 생성형 first visually? Original put AI SW first (larger). Keep by count desc.
+    scope_list = sorted(scopes.items(), key=lambda x: (-x[1], x[0]))
+    fields = Counter()
+    for n in notices:
+        fs = n.get("fields") or ["AI 일반"]
+        if isinstance(fs, str):
+            fs = [fs]
+        for f in fs:
+            fields[f] += 1
+    field_list = sorted(fields.items(), key=lambda x: (-x[1], x[0]))
+    return scope_list, field_list
+
+
 def replace_band_results_table(
     html_text: str,
     rows_html: str,
@@ -233,7 +278,8 @@ def replace_band_results_table(
     pattern = re.compile(
         r"<h2>공고별 결과 \(\d+건\)</h2>"
         r"(?:<p class=\"meta\">.*?</p>)?"
-        r'(<div class="tbl"><table><thead>.*?</thead><tbody>)'
+        r'<div class="tbl"><table(?:\s+class="[^"]*")?>'
+        r"(<thead>.*?</thead><tbody>)"
         r".*?"
         r"(</tbody></table></div>)",
         re.S,
@@ -244,6 +290,7 @@ def replace_band_results_table(
         return (
             f"<h2>공고별 결과 ({count}건)</h2>"
             f"{meta}"
+            f'<div class="tbl"><table class="band-results">'
             f"{m.group(1)}{rows_html}{m.group(2)}"
         )
 
@@ -295,13 +342,36 @@ def render_band_page(repo_root: Path) -> dict[str, Any]:
         float(n["budget_eok"]) for n in notices if n.get("budget_eok") is not None
     )
     text = update_band_notice_stat(text, len(notices), budget_sum)
+    scope_counts, field_counts = scope_field_counts(notices)
+    text = replace_section_bars(text, "사업 범위", _bars_html(scope_counts))
+    text = replace_section_bars(text, "분야", _bars_html(field_counts))
+    # cache-bust CSS when we ship layout fixes
+    text = re.sub(
+        r"assets/site\.css\?v=\d+",
+        "assets/site.css?v=20261029",
+        text,
+        count=1,
+    )
     path.write_text(text, encoding="utf-8")
-    return {"path": str(path), "count": len(notices), "budget_sum_eok": round(budget_sum, 1)}
+    return {
+        "path": str(path),
+        "count": len(notices),
+        "budget_sum_eok": round(budget_sum, 1),
+        "scopes": dict(scope_counts),
+        "fields_top": dict(field_counts[:5]),
+    }
 
 
 def render_index_stamp(repo_root: Path, day: date | None = None) -> dict[str, Any]:
     path = repo_root / "index.html"
     text = path.read_text(encoding="utf-8")
     day = day or _today_kst()
-    path.write_text(update_stamp(text, day), encoding="utf-8")
+    text = update_stamp(text, day)
+    text = re.sub(
+        r"assets/site\.css\?v=\d+",
+        "assets/site.css?v=20261029",
+        text,
+        count=1,
+    )
+    path.write_text(text, encoding="utf-8")
     return {"path": str(path), "stamp": day.isoformat()}

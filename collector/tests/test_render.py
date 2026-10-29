@@ -54,6 +54,7 @@ def test_replace_table_and_stamp_roundtrip():
     )
     assert "공고별 결과 (1건)" in updated
     assert '<p class="meta">개찰 예정 1건</p>' in updated
+    assert 'class="band-results"' in updated
     assert "<tr><td>x</td></tr>" in updated
     idx = (ROOT / "index.html").read_text(encoding="utf-8")
     stamped = update_stamp(idx, date(2026, 10, 29))
