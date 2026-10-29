@@ -222,7 +222,7 @@
       "fields": [
         "AI 일반"
       ],
-      "budget_eok": 12.7,
+      "budget_eok": 12.6,
       "open_date": "2026-10-30",
       "status": "개찰 예정",
       "bid_count": null,
@@ -10477,6 +10477,6 @@
       "procurement": "GS 1등급 2건, CSAP(뷰어), 디지털서비스몰(뷰어)"
     }
   ],
-  "generated_at": "2026-10-29T02:54:01Z",
+  "generated_at": "2026-10-29T08:15:27Z",
   "mode": "bootstrap_html"
 }
