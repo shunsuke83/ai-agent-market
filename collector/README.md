@@ -43,21 +43,24 @@ python -m g2b.collect collect --days 30 --all-budgets --out ../data/notices.json
 # 기존 파일만 낙찰 보강:
 # python -m g2b.collect enrich-awards --days 120 --lookup-missing
 
-# 4) HTML 렌더 (band + awards + index)
+# 4) HTML 렌더 (band + awards + index + reports)
 python -m g2b.collect render all
+# 주·월간만: python -m g2b.collect render reports
 ```
 
-GitHub Actions: `.github/workflows/collect.yml` — secret `DATA_GO_KR_SERVICE_KEY` 가 있을 때 매주 수집(낙찰 포함) → `band.html`/`awards.html`/`index.html` 렌더 → 커밋.
+GitHub Actions: `.github/workflows/collect.yml` — secret `DATA_GO_KR_SERVICE_KEY` 가 있을 때 매주 수집(낙찰 포함) → `band`/`awards`/`index`/`reports` 렌더 → 커밋.
 
 ## 렌더 범위
 
 - `band.html` 공고별 결과 테이블 (+ 상단 공고 건수·예산 합계 스탯)
 - `awards.html` 30억+ 낙찰 · 수주 상위 · 연도별 · 개찰 확인 필요
 - `index.html` `최종 갱신` 스탬프
+- `reports/weekly-*` · `monthly-*` · `reports/index.html` · `data/reports.json`
+  - 핵심 성격: `시스템 구축·고도화` / `ISP·전략` / `구독·라이선스` / `운영·유지보수`
+  - 주간: 직전 완료 ISO 주(월~일). 월간: 당월(진행 중이면 오늘까지)
 - 시드: `data/bootstrap.json` ∪ `data/notices.json`
 
 ## 아직 안 하는 것
 
-- awards「자주 투찰」재집계 (투찰 참가자 BidResult API 미연동)
-- 주·월간 리포트 / band 차트 전체 재생성
+- awards「자주 투찰」·월간「투찰 참여」재집계 (투찰 참가자 BidResult API 미연동)
 - 경쟁사 프로필 문단 (편집 콘텐츠)

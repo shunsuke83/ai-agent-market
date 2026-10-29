@@ -212,10 +212,11 @@ def cmd_classify(args: argparse.Namespace) -> int:
 
 def cmd_render(args: argparse.Namespace) -> int:
     from .render import render_awards_page, render_band_page, render_index_stamp
+    from .reports import render_reports
 
     targets = args.target
     if "all" in targets:
-        targets = ["band", "awards", "index"]
+        targets = ["band", "awards", "index", "reports"]
     summary: dict[str, Any] = {}
     if "band" in targets:
         summary["band"] = render_band_page(ROOT)
@@ -223,6 +224,8 @@ def cmd_render(args: argparse.Namespace) -> int:
         summary["awards"] = render_awards_page(ROOT)
     if "index" in targets:
         summary["index"] = render_index_stamp(ROOT)
+    if "reports" in targets:
+        summary["reports"] = render_reports(ROOT)
     print(json.dumps(summary, ensure_ascii=False, indent=2))
     return 0
 
@@ -286,12 +289,12 @@ def build_parser() -> argparse.ArgumentParser:
 
     r = sub.add_parser(
         "render",
-        help="Render static HTML from data/*.json (band + awards + index)",
+        help="Render static HTML from data/*.json (band + awards + index + reports)",
     )
     r.add_argument(
         "target",
         nargs="+",
-        choices=["band", "awards", "index", "all"],
+        choices=["band", "awards", "index", "reports", "all"],
         help="What to render",
     )
     r.set_defaults(func=cmd_render)
