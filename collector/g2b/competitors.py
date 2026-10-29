@@ -137,18 +137,64 @@ def load_seed_overview(repo_root: Path) -> dict[str, dict[str, Any]]:
     return out
 
 
+def load_all_notices(repo_root: Path) -> list[dict[str, Any]]:
+    path = repo_root / "data" / "notices.json"
+    if not path.exists():
+        return []
+    raw = json.loads(path.read_text(encoding="utf-8"))
+    return list(raw.get("notices") or [])
+
+
+def count_live_bids(
+    notices: list[dict[str, Any]],
+    win_pool: list[dict[str, Any]],
+    alias_index: dict[str, str],
+    competitor_names: set[str],
+) -> dict[str, set[str]]:
+    """Notice keys where each competitor appears in OpengCompt bidders or as winner."""
+    bids_by: dict[str, set[str]] = {n: set() for n in competitor_names}
+
+    for row in notices:
+        key = _row_key(row)
+        found: set[str] = set()
+        for b in row.get("bidders") or []:
+            nm = b.get("name") if isinstance(b, dict) else str(b)
+            canon = match_competitor(nm, alias_index)
+            if canon and canon in bids_by:
+                found.add(canon)
+        # Winner always counts as a bid (even before bidders[] enrich)
+        w = match_competitor(row.get("winner"), alias_index)
+        if w and w in bids_by:
+            found.add(w)
+        for canon in found:
+            bids_by[canon].add(key)
+
+    # Bootstrap win pool may include awards not yet in notices.json
+    for row in win_pool:
+        canon = match_competitor(row.get("winner"), alias_index)
+        if not canon or canon not in bids_by:
+            continue
+        bids_by[canon].add(_row_key(row))
+
+    return bids_by
+
+
 def aggregate_competitor_kpis(
     repo_root: Path,
     competitors: list[dict[str, Any]] | None = None,
 ) -> list[dict[str, Any]]:
     """
-    Per competitor: wins/amount from win pool; bids from seed (BidResult 미연동).
+    Per competitor: wins/amount from win pool; bids from OpengCompt bidders[]
+    with seed floor while coverage is still growing.
     wins/amount never regress below seed overview values.
     """
     competitors = competitors or load_competitors_config()
     alias_index = build_alias_index(competitors)
     seed = load_seed_overview(repo_root)
     pool = load_win_pool(repo_root)
+    notices = load_all_notices(repo_root)
+    names = {c["name"] for c in competitors}
+    live_bid_keys = count_live_bids(notices, pool, alias_index, names)
 
     wins_by: dict[str, list[dict[str, Any]]] = {c["name"]: [] for c in competitors}
     seen_keys: dict[str, set[str]] = {c["name"]: set() for c in competitors}
@@ -168,6 +214,7 @@ def aggregate_competitor_kpis(
         name = c["name"]
         live = wins_by[name]
         live_wins = len(live)
+        live_bids = len(live_bid_keys.get(name) or ())
         live_amount = round(
             sum(_award_amount(r) or 0.0 for r in live),
             1,
@@ -188,8 +235,8 @@ def aggregate_competitor_kpis(
         else:
             wins = seed_wins
             amount = seed_amount
-        # 투찰: BidResult 전까지 시드 유지, 다만 낙찰 수보다 작지 않게
-        bids = max(seed_bids, wins)
+        # 투찰: OpengCompt 실측 + 시드 floor (커버리지 부족 시 시드 유지)
+        bids = max(seed_bids, live_bids, wins)
 
         live_sorted = sorted(
             live,
@@ -209,6 +256,7 @@ def aggregate_competitor_kpis(
                 "wins": wins,
                 "award_amount_eok": amount,
                 "live_wins": live_wins,
+                "live_bids": live_bids,
                 "live_amount_eok": live_amount,
                 "seed_wins": seed_wins,
                 "seed_bids": seed_bids,

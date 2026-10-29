@@ -58,7 +58,8 @@ GitHub Actions: `.github/workflows/collect.yml` — secret `DATA_GO_KR_SERVICE_K
 - `index.html` `최종 갱신` 스탬프
 - `competitors.html` 한눈에 보기 KPI + 상세 실적 수치 (`competitors.yaml` 별칭 매칭)
   - 낙찰·금액: notices ∪ bootstrap 낙찰 집계 (시드보다 줄이지 않음)
-  - 투찰: OpengCompt `bidders[]` 실측 (커버리지 부족 시 시드 floor)
+  - 투찰: OpengCompt `bidders[]` 실측 (`max(시드, live_bids, 낙찰)`; 커버리지 증가 시 시드 초과 가능)
+  - `enrich-bidders --include-bootstrap`: bootstrap 낙찰 공고를 notices에 upsert 후 경쟁사 낙찰 우선 보강
 - 시드: `data/bootstrap.json` ∪ `data/notices.json`
 
 ## 아직 안 하는 것

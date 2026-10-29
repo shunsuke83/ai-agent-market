@@ -6,6 +6,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from g2b.competitors import (
     aggregate_competitor_kpis,
     build_alias_index,
+    count_live_bids,
     load_competitors_config,
     match_competitor,
     normalize_firm,
@@ -47,8 +48,39 @@ def test_aggregate_keeps_seed_floor():
     assert konan["wins"] >= 7
     assert konan["award_amount_eok"] >= 106.5
     assert konan["bids"] >= konan["wins"]
+    assert konan["bids"] >= konan["live_bids"]
     # Sorted by amount desc
     assert rows[0]["award_amount_eok"] >= rows[1]["award_amount_eok"]
+
+
+def test_count_live_bids_from_openg_bidders():
+    idx = build_alias_index(load_competitors_config())
+    names = {c["name"] for c in load_competitors_config()}
+    notices = [
+        {
+            "bid_no": "A1",
+            "bid_ord": "000",
+            "winner": "와이즈넛",
+            "bidders": [
+                {"rank": 1, "name": "와이즈넛"},
+                {"rank": 2, "name": "코난테크놀로지"},
+                {"rank": 3, "name": "무관상사"},
+            ],
+        },
+        {
+            "bid_no": "A2",
+            "bid_ord": "000",
+            "winner": "코난테크놀로지",
+            "bidders": [
+                {"rank": 1, "name": "코난테크놀로지"},
+                {"rank": 2, "name": "솔트룩스"},
+            ],
+        },
+    ]
+    bids = count_live_bids(notices, [], idx, names)
+    assert len(bids["와이즈넛"]) == 1
+    assert len(bids["코난테크놀로지"]) == 2
+    assert len(bids["솔트룩스"]) == 1
 
 
 def test_replace_overview_roundtrip():

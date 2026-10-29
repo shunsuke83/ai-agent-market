@@ -203,9 +203,55 @@ def cmd_enrich_awards(args: argparse.Namespace) -> int:
     return 0
 
 
+def _notice_key(n: dict[str, Any]) -> str:
+    return f"{n.get('bid_no')}-{n.get('bid_ord') or '000'}"
+
+
+def _bootstrap_award_stubs(repo_root: Path) -> list[dict[str, Any]]:
+    """Award rows from bootstrap.html extract (band + large) as notice stubs."""
+    path = repo_root / "data" / "bootstrap.json"
+    if not path.exists():
+        return []
+    boot = json.loads(path.read_text(encoding="utf-8"))
+    stubs: list[dict[str, Any]] = []
+    for section in ("large_awards", "band_notices"):
+        for row in boot.get(section) or []:
+            if not row.get("bid_no"):
+                continue
+            stubs.append(
+                {
+                    "bid_no": row.get("bid_no"),
+                    "bid_ord": row.get("bid_ord") or "000",
+                    "title": row.get("title"),
+                    "org": row.get("org"),
+                    "open_date": row.get("open_date") or row.get("notice_date"),
+                    "notice_date": row.get("notice_date"),
+                    "budget_eok": row.get("budget_eok"),
+                    "award_amount_eok": row.get("award_amount_eok")
+                    or row.get("win_amount_eok"),
+                    "winner": row.get("winner"),
+                    "bid_count": row.get("bid_count"),
+                    "second": row.get("second"),
+                    "status": row.get("status") or ("낙찰" if row.get("winner") else None),
+                    "source": "bootstrap",
+                }
+            )
+    return stubs
+
+
+def _competitor_alias_index(repo_root: Path) -> dict[str, str]:
+    try:
+        from .competitors import build_alias_index, load_competitors_config
+
+        return build_alias_index(load_competitors_config())
+    except Exception:
+        return {}
+
+
 def cmd_enrich_bidders(args: argparse.Namespace) -> int:
     """Attach per-notice bidder ranking lists via OpengCompt (투찰업체별)."""
     from .client import G2BClient, G2BError
+    from .competitors import match_competitor
 
     out = Path(args.out)
     if not out.exists():
@@ -219,31 +265,77 @@ def cmd_enrich_bidders(args: argparse.Namespace) -> int:
 
     payload = json.loads(out.read_text(encoding="utf-8"))
     notices: list[dict[str, Any]] = list(payload.get("notices") or [])
+    by_key = {_notice_key(n): n for n in notices if n.get("bid_no")}
+
+    upserted = 0
+    if args.include_bootstrap:
+        for stub in _bootstrap_award_stubs(ROOT):
+            key = _notice_key(stub)
+            if key in by_key:
+                # Fill missing award fields on existing notice
+                cur = by_key[key]
+                for fld in (
+                    "winner",
+                    "award_amount_eok",
+                    "budget_eok",
+                    "second",
+                    "bid_count",
+                    "open_date",
+                    "title",
+                    "org",
+                ):
+                    if stub.get(fld) and not cur.get(fld):
+                        cur[fld] = stub[fld]
+            else:
+                by_key[key] = stub
+                upserted += 1
+        notices = list(by_key.values())
+
+    alias_index = _competitor_alias_index(ROOT)
     today = date.today().isoformat()
-    targets = [
-        n
-        for n in notices
-        if n.get("bid_no")
-        and n.get("open_date")
-        and n["open_date"] <= today
-        and (args.force or not n.get("bidders"))
-    ]
-    # Prefer notices that already have a winner / bid_count (opened), newest first
+
+    def _is_target(n: dict[str, Any]) -> bool:
+        if not n.get("bid_no"):
+            return False
+        open_d = n.get("open_date") or n.get("notice_date")
+        if open_d and str(open_d) > today:
+            return False
+        if args.force or not n.get("bidders"):
+            return True
+        return False
+
+    targets = [n for n in notices if _is_target(n)]
+
+    def _prio(n: dict[str, Any]) -> tuple[int, int, str]:
+        # 0 = competitor win (highest), 1 = has winner, 2 = other
+        winner = n.get("winner")
+        is_comp = 0 if match_competitor(winner, alias_index) else 1
+        has_winner = 0 if (winner or n.get("bid_count")) else 1
+        return (is_comp, has_winner, n.get("open_date") or "")
+
+    targets.sort(key=_prio)
+    # Within same prio, newest first — reverse open_date via secondary sort
     targets.sort(key=lambda n: n.get("open_date") or "", reverse=True)
-    targets.sort(key=lambda n: 0 if n.get("winner") or n.get("bid_count") else 1)
+    targets.sort(
+        key=lambda n: (
+            0 if match_competitor(n.get("winner"), alias_index) else 1,
+            0 if (n.get("winner") or n.get("bid_count")) else 1,
+        )
+    )
     if args.limit is not None:
         targets = targets[: args.limit]
 
-    print(f"Enrich bidders for {len(targets)} notices …")
+    print(
+        f"Enrich bidders for {len(targets)} notices "
+        f"(bootstrap_upserts={upserted}) …"
+    )
     updated = 0
     fetched = 0
     empty = 0
-    target_keys = {
-        f"{n.get('bid_no')}-{n.get('bid_ord') or '000'}" for n in targets
-    }
+    target_keys = {_notice_key(n) for n in targets}
     out_notices: list[dict[str, Any]] = []
     for n in notices:
-        key = f"{n.get('bid_no')}-{n.get('bid_ord') or '000'}"
+        key = _notice_key(n)
         if key not in target_keys:
             out_notices.append(n)
             continue
@@ -275,6 +367,7 @@ def cmd_enrich_bidders(args: argparse.Namespace) -> int:
         "fetched": fetched,
         "updated": updated,
         "empty": empty,
+        "bootstrap_upserts": upserted,
     }
     out.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(
@@ -285,6 +378,7 @@ def cmd_enrich_bidders(args: argparse.Namespace) -> int:
                 "updated": updated,
                 "fetched": fetched,
                 "empty": empty,
+                "bootstrap_upserts": upserted,
             },
             ensure_ascii=False,
         )
@@ -388,6 +482,11 @@ def build_parser() -> argparse.ArgumentParser:
         "--force",
         action="store_true",
         help="Re-fetch even when bidders already present",
+    )
+    eb.add_argument(
+        "--include-bootstrap",
+        action="store_true",
+        help="Upsert bootstrap band/large awards into notices, then enrich (competitor wins first)",
     )
     eb.set_defaults(func=cmd_enrich_bidders)
 
