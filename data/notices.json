@@ -220,7 +220,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": "시스템 구축·고도화",
+      "nature": "인프라",
       "budget_eok": 1.23,
       "presmpt_eok": 1.12,
       "contract_method": "제한경쟁",
@@ -455,7 +455,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": null,
+      "nature": "인프라",
       "budget_eok": 0.61,
       "presmpt_eok": 0.56,
       "contract_method": "일반경쟁",
@@ -892,7 +892,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": "시스템 구축·고도화",
+      "nature": "인프라",
       "budget_eok": 1.23,
       "presmpt_eok": 1.12,
       "contract_method": "제한경쟁",
@@ -1012,7 +1012,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": null,
+      "nature": "ISP·전략",
       "budget_eok": 2.52,
       "presmpt_eok": 2.27,
       "contract_method": "제한경쟁",
@@ -1133,7 +1133,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": "시스템 구축·고도화",
+      "nature": "인프라",
       "budget_eok": 1.23,
       "presmpt_eok": 1.12,
       "contract_method": "제한경쟁",
@@ -1841,7 +1841,7 @@
       "open_date": "2026-11-09",
       "org": "경민대학 산학협력단",
       "title": "2026 AID전환중점 지원사업 시스템(플랫폼)간 기능고도화_타임리AI플랫폼",
-      "scope": "AI SW 확대",
+      "scope": "생성형·Agent",
       "fields": [
         "AI 일반"
       ],
@@ -2229,7 +2229,7 @@
       "open_date": "2026-11-03",
       "org": "충북대학교산학협력단",
       "title": "K-유학생 지원 AI 플랫폼 고도화 및 운영 용역",
-      "scope": "AI SW 확대",
+      "scope": "생성형·Agent",
       "fields": [
         "AI 일반"
       ],
@@ -2719,7 +2719,7 @@
       "open_date": "2026-11-04",
       "org": "가천대학교 산학협력단",
       "title": "인공지능 플랫폼 보조유틸서버 구입",
-      "scope": "AI SW 확대",
+      "scope": "생성형·Agent",
       "fields": [
         "AI 일반"
       ],
@@ -2896,9 +2896,10 @@
       "title": "바이오 딥테크 AI 주도형 자율통합실증체계 구축사업 기획연구",
       "scope": "AI SW 확대",
       "fields": [
-        "의료·바이오 AI"
+        "의료·바이오 AI",
+        "AX·전략"
       ],
-      "nature": "시스템 구축·고도화",
+      "nature": "ISP·전략",
       "budget_eok": 0.39,
       "presmpt_eok": 0.35,
       "contract_method": "제한경쟁",
@@ -3565,7 +3566,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": null,
+      "nature": "인프라",
       "budget_eok": 0.3,
       "presmpt_eok": 0.27,
       "contract_method": "제한경쟁",
@@ -3685,7 +3686,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": null,
+      "nature": "인프라",
       "budget_eok": 0.98,
       "presmpt_eok": 0.89,
       "contract_method": "제한경쟁",
@@ -4312,7 +4313,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": null,
+      "nature": "인프라",
       "budget_eok": 0.8,
       "presmpt_eok": 0.73,
       "contract_method": "제한경쟁",
@@ -5545,9 +5546,10 @@
       "title": "AI 파운데이션 모델 기반 해양데이터 분석‧예측 기술 개발 사업(R&D) 기획연구",
       "scope": "AI SW 확대",
       "fields": [
-        "데이터·예측"
+        "데이터·예측",
+        "AX·전략"
       ],
-      "nature": "시스템 구축·고도화",
+      "nature": "ISP·전략",
       "budget_eok": 1.51,
       "presmpt_eok": 1.36,
       "contract_method": "제한경쟁",
@@ -5725,7 +5727,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": "시스템 구축·고도화",
+      "nature": "ISP·전략",
       "budget_eok": 1.4,
       "presmpt_eok": 1.27,
       "contract_method": "수의계약",
@@ -6291,9 +6293,9 @@
       "title": "북극항로 AI-ready 데이터 기반 지식체계 구축 사업(R& D) 기획연구",
       "scope": "AI SW 확대",
       "fields": [
-        "AI 일반"
+        "AX·전략"
       ],
-      "nature": "시스템 구축·고도화",
+      "nature": "ISP·전략",
       "budget_eok": 1.0,
       "presmpt_eok": 0.91,
       "contract_method": "제한경쟁",
@@ -46058,7 +46060,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": null,
+      "nature": "연구·교육·행사",
       "budget_eok": 0.49,
       "presmpt_eok": 0.45,
       "contract_method": "제한경쟁",
@@ -46993,7 +46995,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": "시스템 구축·고도화",
+      "nature": "인프라",
       "budget_eok": 3.35,
       "presmpt_eok": 3.04,
       "contract_method": "제한경쟁",
@@ -49677,7 +49679,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": null,
+      "nature": "연구·교육·행사",
       "budget_eok": 0.36,
       "presmpt_eok": 0.33,
       "contract_method": "제한경쟁",
@@ -49928,7 +49930,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": "연구·교육·행사",
+      "nature": "인프라",
       "budget_eok": 0.83,
       "presmpt_eok": 0.75,
       "contract_method": "제한경쟁",
@@ -50022,7 +50024,7 @@
       "open_date": "2026-10-23",
       "org": "재단법인 대구테크노파크",
       "title": "AI 플랫폼 구축용 고성능 GPU 서버 구매",
-      "scope": "AI SW 확대",
+      "scope": "생성형·Agent",
       "fields": [
         "AI 인프라"
       ],
@@ -50105,9 +50107,9 @@
       "title": "피지컬 AI기반 항만기술산업 육성 프로그램형 R&D사업 기획연구",
       "scope": "AI SW 확대",
       "fields": [
-        "AI 일반"
+        "AX·전략"
       ],
-      "nature": null,
+      "nature": "ISP·전략",
       "budget_eok": 1.51,
       "presmpt_eok": 1.36,
       "contract_method": "제한경쟁",
@@ -50282,7 +50284,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": null,
+      "nature": "연구·교육·행사",
       "budget_eok": 1.5,
       "presmpt_eok": 1.36,
       "contract_method": "제한경쟁",
@@ -51505,7 +51507,7 @@
       "open_date": "2026-10-29",
       "org": "한국투자공사",
       "title": "한국투자공사 내부 인공지능 플랫폼 고도화 감리",
-      "scope": "AI SW 확대",
+      "scope": "생성형·Agent",
       "fields": [
         "AI 일반"
       ],
@@ -52018,7 +52020,7 @@
       "open_date": "2026-11-06",
       "org": "한국산업단지공단",
       "title": "스마트K팩토리 AI플랫폼 기반구축 용역",
-      "scope": "AI SW 확대",
+      "scope": "생성형·Agent",
       "fields": [
         "AI 일반"
       ],
@@ -52192,7 +52194,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": null,
+      "nature": "연구·교육·행사",
       "budget_eok": 1.5,
       "presmpt_eok": 1.36,
       "contract_method": "제한경쟁",
@@ -52954,9 +52956,10 @@
       "title": "바이오 딥테크 AI 주도형 자율통합실증체계 구축사업 기획연구",
       "scope": "AI SW 확대",
       "fields": [
-        "의료·바이오 AI"
+        "의료·바이오 AI",
+        "AX·전략"
       ],
-      "nature": "시스템 구축·고도화",
+      "nature": "ISP·전략",
       "budget_eok": 0.39,
       "presmpt_eok": 0.35,
       "contract_method": "제한경쟁",
@@ -53603,9 +53606,9 @@
       "open_date": "2026-10-27",
       "org": "한국지능정보사회진흥원",
       "title": "지방세 AI 상담 서비스 개인정보 영향평가",
-      "scope": "AI SW 확대",
+      "scope": "생성형·Agent",
       "fields": [
-        "AI 일반"
+        "음성·언어·문서"
       ],
       "nature": null,
       "budget_eok": 0.7,
@@ -53747,7 +53750,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": null,
+      "nature": "인프라",
       "budget_eok": 0.61,
       "presmpt_eok": 0.56,
       "contract_method": "일반경쟁",
@@ -53937,9 +53940,9 @@
       "title": "NPU 기반 범정부 AI 서비스 구현",
       "scope": "AI SW 확대",
       "fields": [
-        "AI 일반"
+        "AI 인프라"
       ],
-      "nature": null,
+      "nature": "인프라",
       "budget_eok": 134.08,
       "presmpt_eok": 121.26,
       "contract_method": "일반경쟁",
@@ -54551,7 +54554,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": null,
+      "nature": "인프라",
       "budget_eok": 0.3,
       "presmpt_eok": 0.27,
       "contract_method": "일반경쟁",
@@ -54691,7 +54694,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": null,
+      "nature": "인프라",
       "budget_eok": 0.98,
       "presmpt_eok": 0.89,
       "contract_method": "제한경쟁",
@@ -55813,7 +55816,7 @@
       "open_date": "2026-10-26",
       "org": "충북대학교산학협력단",
       "title": "K-유학생 지원 AI 플랫폼 고도화 및 운영 용역",
-      "scope": "AI SW 확대",
+      "scope": "생성형·Agent",
       "fields": [
         "AI 일반"
       ],
@@ -58139,7 +58142,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": "시스템 구축·고도화",
+      "nature": "인프라",
       "budget_eok": 29.67,
       "presmpt_eok": 26.81,
       "contract_method": "제한경쟁",
@@ -59322,7 +59325,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": "시스템 구축·고도화",
+      "nature": "인프라",
       "budget_eok": 29.67,
       "presmpt_eok": 26.81,
       "contract_method": "제한경쟁",
@@ -59382,7 +59385,7 @@
       "open_date": "2026-10-26",
       "org": "전남대학교 정보화본부",
       "title": "생애전주기 AI교육 실습용 AI 플랫폼 임차",
-      "scope": "AI SW 확대",
+      "scope": "생성형·Agent",
       "fields": [
         "AI 일반"
       ],
@@ -59402,7 +59405,7 @@
       "open_date": "2026-10-26",
       "org": "전남대학교 정보화본부",
       "title": "생애전주기 AI교육 실습용 AI 플랫폼 임차",
-      "scope": "AI SW 확대",
+      "scope": "생성형·Agent",
       "fields": [
         "AI 일반"
       ],
@@ -59422,7 +59425,7 @@
       "open_date": "2026-10-26",
       "org": "전남대학교 정보화본부",
       "title": "생애전주기 AI교육 실습용 AI 플랫폼 임차",
-      "scope": "AI SW 확대",
+      "scope": "생성형·Agent",
       "fields": [
         "AI 일반"
       ],
@@ -60717,7 +60720,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": null,
+      "nature": "인프라",
       "budget_eok": 0.98,
       "presmpt_eok": 0.89,
       "contract_method": "제한경쟁",
@@ -62552,7 +62555,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": "시스템 구축·고도화",
+      "nature": "인프라",
       "budget_eok": 29.67,
       "presmpt_eok": 26.81,
       "contract_method": "제한경쟁",
@@ -62891,7 +62894,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": null,
+      "nature": "인프라",
       "budget_eok": 2.02,
       "presmpt_eok": 1.82,
       "contract_method": "수의계약",
@@ -63061,7 +63064,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": null,
+      "nature": "인프라",
       "budget_eok": 0.98,
       "presmpt_eok": 0.89,
       "contract_method": "제한경쟁",
@@ -69652,9 +69655,9 @@
       "title": "피지컬 AI 기반 냉동 컨테이너 장치장 무인 자동화 관리 기술 개발 기획연구",
       "scope": "AI SW 확대",
       "fields": [
-        "AI 일반"
+        "AX·전략"
       ],
-      "nature": "시스템 구축·고도화",
+      "nature": "ISP·전략",
       "budget_eok": 0.8,
       "presmpt_eok": 0.73,
       "contract_method": "제한경쟁",
@@ -69672,9 +69675,9 @@
       "title": "피지컬 AI 기반 냉동 컨테이너 장치장 무인 자동화 관리 기술 개발 기획연구",
       "scope": "AI SW 확대",
       "fields": [
-        "AI 일반"
+        "AX·전략"
       ],
-      "nature": "시스템 구축·고도화",
+      "nature": "ISP·전략",
       "budget_eok": 0.8,
       "presmpt_eok": 0.73,
       "contract_method": "제한경쟁",
@@ -69712,9 +69715,9 @@
       "title": "북극항로 AI-ready 데이터 기반 지식체계 구축 사업(R& D) 기획연구",
       "scope": "AI SW 확대",
       "fields": [
-        "AI 일반"
+        "AX·전략"
       ],
-      "nature": "시스템 구축·고도화",
+      "nature": "ISP·전략",
       "budget_eok": 1.0,
       "presmpt_eok": 0.91,
       "contract_method": "제한경쟁",
@@ -69732,9 +69735,9 @@
       "title": "북극항로 AI-ready 데이터 기반 지식체계 구축 사업(R& D) 기획연구",
       "scope": "AI SW 확대",
       "fields": [
-        "AI 일반"
+        "AX·전략"
       ],
-      "nature": "시스템 구축·고도화",
+      "nature": "ISP·전략",
       "budget_eok": 1.0,
       "presmpt_eok": 0.91,
       "contract_method": "제한경쟁",
@@ -70473,7 +70476,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": null,
+      "nature": "연구·교육·행사",
       "budget_eok": 0.36,
       "presmpt_eok": 0.33,
       "contract_method": "제한경쟁",
@@ -71209,7 +71212,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": null,
+      "nature": "연구·교육·행사",
       "budget_eok": 0.36,
       "presmpt_eok": 0.33,
       "contract_method": "제한경쟁",
@@ -71449,7 +71452,7 @@
       "open_date": "2026-10-14",
       "org": "(주)청명기연환경",
       "title": "강화 암석 풍화(ERW) 기반 탄소 제거량 산정을 위한 디지털 MRV-LCA 통합 AI 플랫폼 기술개발 과제 GPU 워크스테이션 구매",
-      "scope": "AI SW 확대",
+      "scope": "생성형·Agent",
       "fields": [
         "AI 인프라"
       ],
@@ -71772,7 +71775,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": null,
+      "nature": "연구·교육·행사",
       "budget_eok": 0.36,
       "presmpt_eok": 0.33,
       "contract_method": "제한경쟁",
@@ -71862,7 +71865,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": null,
+      "nature": "인프라",
       "budget_eok": 0.3,
       "presmpt_eok": 0.27,
       "contract_method": "일반경쟁",
@@ -72022,7 +72025,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": null,
+      "nature": "인프라",
       "budget_eok": 0.63,
       "presmpt_eok": 0.58,
       "contract_method": "제한경쟁",
@@ -72521,7 +72524,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": null,
+      "nature": "연구·교육·행사",
       "budget_eok": 0.11,
       "presmpt_eok": 0.1,
       "contract_method": "수의계약",
@@ -76270,7 +76273,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": "시스템 구축·고도화",
+      "nature": "인프라",
       "budget_eok": 0.28,
       "presmpt_eok": 0.25,
       "contract_method": "일반경쟁",
@@ -76548,7 +76551,7 @@
       "fields": [
         "비전·영상"
       ],
-      "nature": null,
+      "nature": "ISP·전략",
       "budget_eok": 1.01,
       "presmpt_eok": 0.92,
       "contract_method": "제한경쟁",
@@ -76568,7 +76571,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": null,
+      "nature": "연구·교육·행사",
       "budget_eok": 0.24,
       "presmpt_eok": 0.22,
       "contract_method": "일반경쟁",
@@ -76606,9 +76609,9 @@
       "title": "AI 연산용 NPU 가속기 카드",
       "scope": "AI SW 확대",
       "fields": [
-        "AI 일반"
+        "AI 인프라"
       ],
-      "nature": null,
+      "nature": "인프라",
       "budget_eok": 0.47,
       "presmpt_eok": 0.43,
       "contract_method": "제한경쟁",
@@ -76626,9 +76629,9 @@
       "title": "AI 연산용 NPU 가속기 카드",
       "scope": "AI SW 확대",
       "fields": [
-        "AI 일반"
+        "AI 인프라"
       ],
-      "nature": null,
+      "nature": "인프라",
       "budget_eok": 0.47,
       "presmpt_eok": 0.43,
       "contract_method": "제한경쟁",
@@ -78388,7 +78391,7 @@
       "fields": [
         "비전·영상"
       ],
-      "nature": "시스템 구축·고도화",
+      "nature": "인프라",
       "budget_eok": 0.78,
       "presmpt_eok": 0.71,
       "contract_method": "일반경쟁",
@@ -79179,7 +79182,7 @@
       "open_date": "2026-10-08",
       "org": "한국산업은행",
       "title": "AI 플랫폼 Cloudera 라이선스 연장(재공고)",
-      "scope": "AI SW 확대",
+      "scope": "생성형·Agent",
       "fields": [
         "AI 일반"
       ],
@@ -79253,9 +79256,9 @@
       "title": "NPU 기반 범정부 AI 서비스 구현",
       "scope": "AI SW 확대",
       "fields": [
-        "AI 일반"
+        "AI 인프라"
       ],
-      "nature": null,
+      "nature": "인프라",
       "budget_eok": 134.08,
       "presmpt_eok": 121.26,
       "contract_method": "일반경쟁",
@@ -79291,7 +79294,7 @@
       "open_date": "2026-10-08",
       "org": "한국산업은행",
       "title": "AI 플랫폼 Cloudera 라이선스 연장",
-      "scope": "AI SW 확대",
+      "scope": "생성형·Agent",
       "fields": [
         "AI 일반"
       ],
@@ -79311,7 +79314,7 @@
       "open_date": "2026-10-08",
       "org": "한국산업은행",
       "title": "AI 플랫폼 Cloudera 라이선스 연장",
-      "scope": "AI SW 확대",
+      "scope": "생성형·Agent",
       "fields": [
         "AI 일반"
       ],
@@ -83429,9 +83432,9 @@
       "open_date": "2026-10-15",
       "org": "한국지능정보사회진흥원",
       "title": "지방세 AI 상담 서비스 개인정보 영향평가",
-      "scope": "AI SW 확대",
+      "scope": "생성형·Agent",
       "fields": [
-        "AI 일반"
+        "음성·언어·문서"
       ],
       "nature": null,
       "budget_eok": 0.7,
@@ -84011,7 +84014,7 @@
           "ceo": "승현찬"
         }
       ],
-      "scope": "AI SW 확대",
+      "scope": "생성형·Agent",
       "nature": "시스템 구축·고도화",
       "fields": [
         "AI 일반"
@@ -84110,7 +84113,8 @@
       "scope": "AI SW 확대",
       "fields": [
         "디지털트윈"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R26BK01668972",
@@ -84586,7 +84590,8 @@
       "scope": "AI SW 확대",
       "fields": [
         "디지털트윈"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R26BK01631298",
@@ -84620,7 +84625,7 @@
           "ceo": "현재호"
         }
       ],
-      "scope": "AI SW 확대",
+      "scope": "생성형·Agent",
       "nature": "시스템 구축·고도화",
       "fields": [
         "의료·바이오 AI"
@@ -84643,7 +84648,8 @@
       "scope": "AI SW 확대",
       "fields": [
         "디지털트윈"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R26BK01642294",
@@ -85065,7 +85071,8 @@
       "scope": "AI SW 확대",
       "fields": [
         "디지털트윈"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R26BK01630907",
@@ -85432,7 +85439,8 @@
       "fields": [
         "생성형·LLM",
         "AI 에이전트"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R26BK01622572",
@@ -85708,7 +85716,8 @@
       "fields": [
         "생성형·LLM",
         "AI 에이전트"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R26BK01576623",
@@ -85826,8 +85835,9 @@
           "ceo": "이준호"
         }
       ],
-      "nature": "시스템 구축·고도화",
+      "nature": "인프라",
       "fields": [
+        "AI 인프라",
         "비전·영상"
       ],
       "scope": "AI SW 확대"
@@ -86605,7 +86615,8 @@
       "scope": "AI SW 확대",
       "fields": [
         "비전·영상"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R26BK01550380",
@@ -86645,7 +86656,8 @@
       "fields": [
         "생성형·LLM",
         "AI 에이전트"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R26BK01548609",
@@ -86769,10 +86781,11 @@
           "ceo": "옥정원"
         }
       ],
-      "scope": "AI SW 확대",
+      "scope": "생성형·Agent",
       "fields": [
-        "AI 일반"
-      ]
+        "음성·언어·문서"
+      ],
+      "nature": null
     },
     {
       "bid_no": "R26BK01537257",
@@ -86837,7 +86850,8 @@
       "scope": "AI SW 확대",
       "fields": [
         "비전·영상"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R26BK01532469",
@@ -87016,7 +87030,8 @@
       "scope": "AI SW 확대",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R26BK01525469",
@@ -87105,7 +87120,8 @@
       "scope": "AI SW 확대",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R26BK01524903",
@@ -87195,7 +87211,8 @@
       "fields": [
         "생성형·LLM",
         "AI 에이전트"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R26BK01524613",
@@ -87360,7 +87377,8 @@
       "scope": "AI SW 확대",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R26BK01515600",
@@ -87649,7 +87667,8 @@
       "scope": "AI SW 확대",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R26BK01499701",
@@ -87722,7 +87741,8 @@
       "scope": "AI SW 확대",
       "fields": [
         "비전·영상"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R26BK01491417",
@@ -87813,7 +87833,8 @@
       "scope": "AI SW 확대",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R26BK01487035",
@@ -88113,7 +88134,7 @@
           "ceo": "이세영"
         }
       ],
-      "scope": "AI SW 확대",
+      "scope": "생성형·Agent",
       "nature": "시스템 구축·고도화",
       "fields": [
         "AI 일반"
@@ -88260,7 +88281,8 @@
       "scope": "AI SW 확대",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R26BK01454146",
@@ -88445,7 +88467,8 @@
       "scope": "AI SW 확대",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R26BK01435313",
@@ -88544,7 +88567,8 @@
       "scope": "AI SW 확대",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R26BK01431832",
@@ -88733,7 +88757,8 @@
       "scope": "AI SW 확대",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R26BK01407167",
@@ -88918,7 +88943,8 @@
       "scope": "AI SW 확대",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R26BK01369919",
@@ -89107,7 +89133,8 @@
       "scope": "AI SW 확대",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R26BK01322100",
@@ -89798,7 +89825,8 @@
       "fields": [
         "AI 일반"
       ],
-      "scope": "AI SW 확대"
+      "scope": "AI SW 확대",
+      "nature": null
     },
     {
       "bid_no": "R25BK01148819",
@@ -89896,7 +89924,7 @@
           "ceo": "오성조"
         }
       ],
-      "scope": "AI SW 확대",
+      "scope": "생성형·Agent",
       "nature": "시스템 구축·고도화",
       "fields": [
         "AI 일반"
@@ -90109,7 +90137,8 @@
       "scope": "AI SW 확대",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R25BK01089652",
@@ -90185,7 +90214,7 @@
       "second": null,
       "status": "1순위",
       "source": "bootstrap",
-      "scope": "AI SW 확대",
+      "scope": "생성형·Agent",
       "nature": "시스템 구축·고도화",
       "fields": [
         "AI 일반"
@@ -90473,7 +90502,8 @@
       "scope": "생성형·Agent",
       "fields": [
         "생성형·LLM"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R25BK01017065",
@@ -90512,7 +90542,8 @@
       "scope": "AI SW 확대",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R25BK01011379",
@@ -90661,7 +90692,8 @@
       "scope": "AI SW 확대",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R25BK00954987",
@@ -90680,7 +90712,8 @@
       "scope": "생성형·Agent",
       "fields": [
         "생성형·LLM"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R25BK00954270",
@@ -90700,7 +90733,8 @@
       "fields": [
         "생성형·LLM",
         "AI 보안"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R25BK00953221",
@@ -90761,7 +90795,8 @@
       "fields": [
         "생성형·LLM",
         "AI 에이전트"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R25BK00945103",
@@ -90780,7 +90815,8 @@
       "scope": "AI SW 확대",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R25BK00945166",
@@ -90799,7 +90835,8 @@
       "scope": "AI SW 확대",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R25BK00944976",
@@ -91011,10 +91048,11 @@
           "ceo": "김남현"
         }
       ],
-      "scope": "AI SW 확대",
+      "scope": "생성형·Agent",
       "fields": [
-        "AI 일반"
-      ]
+        "AI 에이전트"
+      ],
+      "nature": null
     },
     {
       "bid_no": "R25BK00928661",
@@ -91090,7 +91128,7 @@
       "second": null,
       "status": "1순위",
       "source": "bootstrap",
-      "scope": "AI SW 확대",
+      "scope": "생성형·Agent",
       "nature": "인프라",
       "fields": [
         "AI 인프라"
@@ -91211,7 +91249,8 @@
       "scope": "생성형·Agent",
       "fields": [
         "생성형·LLM"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R25BK00911854",
@@ -91250,7 +91289,8 @@
       "scope": "AI SW 확대",
       "fields": [
         "비전·영상"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R25BK00899409",
@@ -91286,7 +91326,7 @@
       "second": null,
       "status": "유찰",
       "source": "bootstrap",
-      "scope": "AI SW 확대",
+      "scope": "생성형·Agent",
       "nature": "인프라",
       "fields": [
         "AI 인프라"
@@ -91475,7 +91515,8 @@
       "scope": "생성형·Agent",
       "fields": [
         "생성형·LLM"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R25BK00864954",
@@ -91715,7 +91756,8 @@
       "scope": "AI SW 확대",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R25BK00829775",
@@ -91794,7 +91836,8 @@
       "scope": "AI SW 확대",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R25BK00767738",
@@ -91934,7 +91977,8 @@
       "scope": "AI SW 확대",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R25BK00651543",
@@ -91993,7 +92037,8 @@
       "scope": "AI SW 확대",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R25BK00619004",
@@ -92255,7 +92300,8 @@
       "fields": [
         "의료·바이오 AI",
         "비전·영상"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "20241229807",
@@ -92295,7 +92341,8 @@
       "fields": [
         "의료·바이오 AI",
         "비전·영상"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "20241203488",
@@ -92355,7 +92402,8 @@
       "fields": [
         "의료·바이오 AI",
         "비전·영상"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "20241134311",
@@ -92375,7 +92423,8 @@
       "fields": [
         "의료·바이오 AI",
         "비전·영상"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "20241130376",
@@ -92534,7 +92583,8 @@
       "scope": "AI SW 확대",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "20241033639",
@@ -92553,7 +92603,8 @@
       "scope": "AI SW 확대",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "20241031835",
@@ -92572,7 +92623,8 @@
       "fields": [
         "AI 일반"
       ],
-      "scope": "AI SW 확대"
+      "scope": "AI SW 확대",
+      "nature": null
     },
     {
       "bid_no": "20241031037",
@@ -92631,7 +92683,8 @@
       "fields": [
         "AI 일반"
       ],
-      "scope": "AI SW 확대"
+      "scope": "AI SW 확대",
+      "nature": null
     },
     {
       "bid_no": "20241015648",
@@ -92752,7 +92805,8 @@
       "fields": [
         "AI 일반"
       ],
-      "scope": "AI SW 확대"
+      "scope": "AI SW 확대",
+      "nature": null
     },
     {
       "bid_no": "20240814144",
@@ -92851,7 +92905,8 @@
       "scope": "AI SW 확대",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "20240735244",
@@ -92890,7 +92945,8 @@
       "scope": "AI SW 확대",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "20240732922",
@@ -92949,7 +93005,8 @@
       "fields": [
         "AI 일반"
       ],
-      "scope": "AI SW 확대"
+      "scope": "AI SW 확대",
+      "nature": null
     },
     {
       "bid_no": "20240716816",
@@ -93268,7 +93325,8 @@
       "fields": [
         "비전·영상"
       ],
-      "scope": "AI SW 확대"
+      "scope": "AI SW 확대",
+      "nature": null
     },
     {
       "bid_no": "20240516019",
@@ -93427,7 +93485,8 @@
       "fields": [
         "AI 일반"
       ],
-      "scope": "AI SW 확대"
+      "scope": "AI SW 확대",
+      "nature": null
     },
     {
       "bid_no": "20240419764",
@@ -93446,7 +93505,8 @@
       "fields": [
         "비전·영상"
       ],
-      "scope": "AI SW 확대"
+      "scope": "AI SW 확대",
+      "nature": null
     },
     {
       "bid_no": "20240400615",
@@ -93485,7 +93545,8 @@
       "fields": [
         "AI 일반"
       ],
-      "scope": "AI SW 확대"
+      "scope": "AI SW 확대",
+      "nature": null
     },
     {
       "bid_no": "20240334630",
@@ -93564,7 +93625,8 @@
       "fields": [
         "AI 일반"
       ],
-      "scope": "AI SW 확대"
+      "scope": "AI SW 확대",
+      "nature": null
     },
     {
       "bid_no": "20240213186",
@@ -93624,7 +93686,8 @@
       "fields": [
         "AI 일반"
       ],
-      "scope": "AI SW 확대"
+      "scope": "AI SW 확대",
+      "nature": null
     },
     {
       "bid_no": "20240124325",
@@ -93680,9 +93743,10 @@
       "second": null,
       "status": "낙찰",
       "source": "bootstrap",
-      "scope": "AI SW 확대",
+      "scope": "생성형·Agent",
       "nature": "시스템 구축·고도화",
       "fields": [
+        "생성형·LLM",
         "의료·바이오 AI"
       ]
     },
@@ -93763,7 +93827,8 @@
       "fields": [
         "AI 일반"
       ],
-      "scope": "AI SW 확대"
+      "scope": "AI SW 확대",
+      "nature": null
     },
     {
       "bid_no": "20231207471",
@@ -93882,7 +93947,8 @@
       "fields": [
         "AI 일반"
       ],
-      "scope": "AI SW 확대"
+      "scope": "AI SW 확대",
+      "nature": null
     },
     {
       "bid_no": "20231021762",
@@ -93938,7 +94004,7 @@
       "second": null,
       "status": "낙찰",
       "source": "bootstrap",
-      "scope": "AI SW 확대",
+      "scope": "생성형·Agent",
       "nature": "시스템 구축·고도화",
       "fields": [
         "AI 일반"
@@ -94101,7 +94167,8 @@
       "fields": [
         "AI 일반"
       ],
-      "scope": "AI SW 확대"
+      "scope": "AI SW 확대",
+      "nature": null
     },
     {
       "bid_no": "20230734480",
@@ -94220,7 +94287,8 @@
       "fields": [
         "AI 일반"
       ],
-      "scope": "AI SW 확대"
+      "scope": "AI SW 확대",
+      "nature": null
     },
     {
       "bid_no": "20230637020",
@@ -94359,7 +94427,8 @@
       "fields": [
         "AI 일반"
       ],
-      "scope": "AI SW 확대"
+      "scope": "AI SW 확대",
+      "nature": null
     },
     {
       "bid_no": "20230601465",
@@ -94815,10 +94884,10 @@
       "second": null,
       "status": "낙찰",
       "source": "bootstrap",
-      "scope": "AI SW 확대",
+      "scope": "생성형·Agent",
       "nature": "시스템 구축·고도화",
       "fields": [
-        "AI 일반"
+        "음성·언어·문서"
       ]
     },
     {
@@ -95219,7 +95288,8 @@
       "scope": "생성형·Agent",
       "fields": [
         "생성형·LLM"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R26BK01677963",
@@ -95466,7 +95536,8 @@
       "nature": "시스템 구축·고도화",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "R26BK01646930",
@@ -95495,7 +95566,8 @@
       "scope": "AI SW 확대",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R26BK01644175",
@@ -95663,7 +95735,8 @@
       "scope": "생성형·Agent",
       "fields": [
         "생성형·LLM"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R26BK01606492",
@@ -95867,10 +95940,12 @@
           "ceo": "황광모"
         }
       ],
-      "nature": "시스템 구축·고도화",
+      "nature": "인프라",
       "fields": [
+        "AI 인프라",
         "비전·영상"
-      ]
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "R26BK01567888",
@@ -95937,7 +96012,8 @@
       "nature": "ISP·전략",
       "fields": [
         "AX·전략"
-      ]
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "R26BK01545871",
@@ -95966,7 +96042,8 @@
       "nature": "시스템 구축·고도화",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "R26BK01506822",
@@ -96802,7 +96879,8 @@
       "scope": "AI SW 확대",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R26BK01411985",
@@ -96955,7 +97033,8 @@
       "scope": "AI SW 확대",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R26BK01379357",
@@ -97305,7 +97384,7 @@
           "ceo": "이지환"
         }
       ],
-      "scope": "AI SW 확대",
+      "scope": "생성형·Agent",
       "nature": "시스템 구축·고도화",
       "fields": [
         "데이터·예측"
@@ -97338,7 +97417,8 @@
       "scope": "AI SW 확대",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R25BK01243590",
@@ -97357,7 +97437,8 @@
       "nature": "운영·유지보수",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "R25BK01233611",
@@ -97478,7 +97559,8 @@
       "nature": "시스템 구축·고도화",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "R25BK01222667",
@@ -97686,7 +97768,7 @@
       "second": "베스핀글로벌",
       "status": "낙찰",
       "source": "bootstrap",
-      "scope": "AI SW 확대",
+      "scope": "생성형·Agent",
       "nature": "시스템 구축·고도화",
       "fields": [
         "AI 일반"
@@ -97709,7 +97791,8 @@
       "scope": "생성형·Agent",
       "fields": [
         "생성형·LLM"
-      ]
+      ],
+      "nature": null
     },
     {
       "bid_no": "R25BK00753599",
@@ -97728,7 +97811,8 @@
       "nature": "시스템 구축·고도화",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "R25BK00751206",
@@ -97764,7 +97848,7 @@
       "second": "케이사인",
       "status": "낙찰",
       "source": "bootstrap",
-      "scope": "AI SW 확대",
+      "scope": "생성형·Agent",
       "nature": "시스템 구축·고도화",
       "fields": [
         "데이터·예측"
@@ -97784,7 +97868,7 @@
       "second": null,
       "status": "낙찰",
       "source": "bootstrap",
-      "scope": "AI SW 확대",
+      "scope": "생성형·Agent",
       "nature": "시스템 구축·고도화",
       "fields": [
         "데이터·예측"
@@ -97820,5 +97904,6 @@
       "bootstrap_upserts": 0
     },
     "budget_sanitized": 27
-  }
+  },
+  "reclassified_at": "2026-10-29T08:48:19Z"
 }

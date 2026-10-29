@@ -1,5 +1,9 @@
 # Title-keyword rules matching deliverables.html + reverse-engineered band.html labels.
 # First matching scope rule wins for 범위; field tags are multi-label.
+#
+# 생성형·Agent 핵심 (deliverables): 생성형, 초거대, LLM, RAG, AI 에이전트,
+# AI 상담·챗봇·플랫폼, AX 정보화전략 등.
+# AI 일반: 그 밖의 AI / 인공지능 / AX / OCR / 음성인식 / 지능형 등.
 
 scope:
   생성형·Agent:
@@ -13,9 +17,17 @@ scope:
       - AI 에이전트
       - AI에이전트
       - Agent
+      - 에이전틱
       - 챗봇
       - 콜봇
       - 언어모델
+      - 거대 언어
+      - 거대언어
+      - AI 상담
+      - AI상담
+      - AI 플랫폼
+      - AI플랫폼
+      - 인공지능 플랫폼
       - Generative
       - GAI
   AI SW 확대:
@@ -29,6 +41,11 @@ scope:
       - 딥러닝
       - 머신러닝
       - 기계학습
+      - 지능형
+      - NPU
+      - 컴퓨터비전
+      - 머신비전
+      - 에이전트
 
 fields:
   생성형·LLM:
@@ -40,11 +57,14 @@ fields:
     - RAG
     - 챗봇
     - 언어모델
+    - 거대 언어
+    - 거대언어
     - Generative
     - GAI
   AI 에이전트:
     - 에이전트
     - Agent
+    - 에이전틱
     - 어시스턴트
   AI 보안:
     - 침해대응
@@ -58,6 +78,7 @@ fields:
     - AI 인프라
     - 인공지능 인프라
     - H/W
+    - NPU
     - 온프레미스
   데이터·예측:
     - 학습데이터
@@ -80,6 +101,7 @@ fields:
     - CCTV
     - 판독
     - 컴퓨터비전
+    - 머신비전
   음성·언어·문서:
     - 음성인식
     - STT
@@ -87,6 +109,8 @@ fields:
     - OCR
     - 문서 AI
     - 콜봇
+    - AI 상담
+    - AI상담
   디지털트윈:
     - 디지털트윈
     - 디지털 트윈
@@ -99,6 +123,7 @@ fields:
     - 컨설팅
     - AX 전략
     - 활용방안
+    - 기획연구
 
 # Order matters — first match wins (prefer ISP/구독 over generic 구축).
 nature:
@@ -110,6 +135,8 @@ nature:
     - 전략계획
     - 컨설팅
     - 로드맵
+    - 기획연구
+    - 기획 연구
   구독·라이선스:
     - 구독
     - 라이선스
@@ -118,23 +145,41 @@ nature:
     - 유지관리
     - 유지보수
     - 운영·유지
+    - 운영 및 유지
   인프라:
     - GPU
     - 서버팜
     - AI 인프라
     - H/W
     - 하드웨어
+    - NPU
+    - 서버 구매
+    - 장비 구매
   연구·교육·행사:
     - 연구용역
     - 교육
     - 행사
     - 공모전
     - 위탁
+    - 워크숍
+    - 해커톤
   시스템 구축·고도화:
     - 구축
     - 고도화
     - 개발
     - 도입
+
+# Open API title search terms (collect). Keep short — each kw hits the API.
+search_keywords:
+  - AI
+  - 인공지능
+  - 생성형
+  - LLM
+  - RAG
+  - AX
+  - 지능형
+  - 챗봇
+  - 에이전트
 
 filters:
   # Budget band used by band.html (억 원)

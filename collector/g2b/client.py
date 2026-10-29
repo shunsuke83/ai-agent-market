@@ -211,7 +211,15 @@ class G2BClient:
         biz_types: list[str] | None = None,
     ) -> list[dict[str, Any]]:
         """Collect AI-related notices by several title keywords, dedupe by bidNtceNo+Ord."""
-        keywords = keywords or ["AI", "인공지능", "생성형", "LLM", "RAG", "AX"]
+        if keywords is None:
+            try:
+                from .classify import load_keywords
+
+                keywords = list(load_keywords().get("search_keywords") or [])
+            except Exception:
+                keywords = []
+        if not keywords:
+            keywords = ["AI", "인공지능", "생성형", "LLM", "RAG", "AX"]
         biz_types = biz_types or ["servc", "thng"]
         seen: dict[str, dict[str, Any]] = {}
         for biz in biz_types:

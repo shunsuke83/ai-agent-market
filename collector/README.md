@@ -35,8 +35,9 @@ python -m pip install -r requirements.txt
 # 1) 현재 HTML → 구조화 JSON (API 키 불필요)
 python -m g2b.collect bootstrap --out ../data/bootstrap.json
 
-# 2) 제목 분류 스모크
+# 2) 제목 분류 스모크 / notices 재분류
 python -m g2b.collect classify "생성형 AI 플랫폼 구축"
+python -m g2b.collect reclassify --out ../data/notices.json
 
 # 3) 나라장터 수집 + 낙찰 병합 (키 필요)
 export DATA_GO_KR_SERVICE_KEY='발급키'
