@@ -79,8 +79,13 @@ def month_windows(start: date, end: date) -> Iterator[tuple[date, date]]:
 
 
 class G2BClient:
-    def __init__(self, key: str | None = None, sleep_s: float = 0.15, timeout: float = 60.0):
+    def __init__(self, key: str | None = None, sleep_s: float | None = None, timeout: float = 60.0):
         self.key = key or service_key()
+        if sleep_s is None:
+            try:
+                sleep_s = float(os.environ.get("G2B_SLEEP", "0.15"))
+            except ValueError:
+                sleep_s = 0.15
         self.sleep_s = sleep_s
         self.timeout = timeout
         self.session = requests.Session()
@@ -92,29 +97,41 @@ class G2BClient:
         q.setdefault("type", "json")
         q.setdefault("numOfRows", 100)
         q.setdefault("pageNo", 1)
-        time.sleep(self.sleep_s)
-        if "%" in self.key:
-            # pre-encoded key — build URL carefully
-            from urllib.parse import urlencode
+        last_err: Exception | None = None
+        for attempt in range(5):
+            time.sleep(self.sleep_s if attempt == 0 else min(30.0, self.sleep_s * (2**attempt)))
+            if "%" in self.key:
+                # pre-encoded key — build URL carefully
+                from urllib.parse import urlencode
 
-            other = urlencode({k: v for k, v in q.items()})
-            full = f"{url}?serviceKey={self.key}&{other}"
-            resp = self.session.get(full, timeout=self.timeout)
-        else:
-            q["serviceKey"] = self.key
-            resp = self.session.get(url, params=q, timeout=self.timeout)
-        resp.raise_for_status()
-        data = resp.json()
-        header = (
-            data.get("response", {}).get("header")
-            or data.get("OpenAPI_ServiceResponse", {}).get("cmmMsgHeader")
-            or {}
-        )
-        code = str(header.get("resultCode") or header.get("returnReasonCode") or "")
-        msg = header.get("resultMsg") or header.get("returnAuthMsg") or header.get("errMsg")
-        if code and code not in ("00", "0", ""):
-            raise G2BError(f"API error {code}: {msg}")
-        return data
+                other = urlencode({k: v for k, v in q.items()})
+                full = f"{url}?serviceKey={self.key}&{other}"
+                resp = self.session.get(full, timeout=self.timeout)
+            else:
+                q["serviceKey"] = self.key
+                resp = self.session.get(url, params=q, timeout=self.timeout)
+            if resp.status_code == 429:
+                last_err = requests.HTTPError(f"429 Too Many Requests", response=resp)
+                continue
+            try:
+                resp.raise_for_status()
+            except requests.HTTPError as e:
+                last_err = e
+                if resp.status_code >= 500:
+                    continue
+                raise
+            data = resp.json()
+            header = (
+                data.get("response", {}).get("header")
+                or data.get("OpenAPI_ServiceResponse", {}).get("cmmMsgHeader")
+                or {}
+            )
+            code = str(header.get("resultCode") or header.get("returnReasonCode") or "")
+            msg = header.get("resultMsg") or header.get("returnAuthMsg") or header.get("errMsg")
+            if code and code not in ("00", "0", ""):
+                raise G2BError(f"API error {code}: {msg}")
+            return data
+        raise G2BError(f"HTTP retries exhausted: {last_err}")
 
     def _items(self, data: dict[str, Any]) -> list[dict[str, Any]]:
         body = data.get("response", {}).get("body") or {}

@@ -4,8 +4,10 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from g2b.competitors import (
+    SEED_FLOOR_COVERAGE,
     aggregate_competitor_kpis,
     build_alias_index,
+    core_bidder_coverage,
     count_live_bids,
     load_competitors_config,
     match_competitor,
@@ -51,6 +53,29 @@ def test_aggregate_keeps_seed_floor():
     assert konan["bids"] >= konan["live_bids"]
     # Sorted by amount desc
     assert rows[0]["award_amount_eok"] >= rows[1]["award_amount_eok"]
+
+
+def test_core_bidder_coverage_ratio():
+    cov = core_bidder_coverage(
+        [
+            {
+                "bid_no": "1",
+                "open_date": "2026-10-01",
+                "nature": "시스템 구축·고도화",
+                "bidders": [{"name": "A"}],
+            },
+            {
+                "bid_no": "2",
+                "open_date": "2026-10-02",
+                "nature": "시스템 구축·고도화",
+            },
+            {"bid_no": "3", "open_date": "2026-10-03", "nature": "인프라"},
+        ]
+    )
+    assert cov["core_open"] == 2
+    assert cov["with_bidders"] == 1
+    assert abs(float(cov["ratio"]) - 0.5) < 1e-9
+    assert SEED_FLOOR_COVERAGE == 0.75
 
 
 def test_count_live_bids_from_openg_bidders():

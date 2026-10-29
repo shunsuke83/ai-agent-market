@@ -179,14 +179,40 @@ def count_live_bids(
     return bids_by
 
 
+def core_bidder_coverage(notices: list[dict[str, Any]]) -> dict[str, float | int]:
+    """Share of core AI notices (with open_date) that already have bidders[]."""
+    try:
+        from .reports import is_core
+    except Exception:  # pragma: no cover
+        def is_core(n: dict[str, Any]) -> bool:  # type: ignore
+            return bool(n.get("nature"))
+
+    core_open = [
+        n
+        for n in notices
+        if n.get("bid_no") and n.get("open_date") and is_core(n)
+    ]
+    with_b = sum(1 for n in core_open if n.get("bidders"))
+    total = len(core_open)
+    return {
+        "core_open": total,
+        "with_bidders": with_b,
+        "ratio": (with_b / total) if total else 0.0,
+    }
+
+
+# When ≥ this share of core opened notices have OpengCompt lists, drop seed floor.
+SEED_FLOOR_COVERAGE = 0.75
+
+
 def aggregate_competitor_kpis(
     repo_root: Path,
     competitors: list[dict[str, Any]] | None = None,
 ) -> list[dict[str, Any]]:
     """
-    Per competitor: wins/amount from win pool; bids from OpengCompt bidders[]
-    with seed floor while coverage is still growing.
-    wins/amount never regress below seed overview values.
+    Per competitor: wins/amount from win pool; bids from OpengCompt bidders[].
+    Seed floor on bids applies only while core OpengCompt coverage is below
+    SEED_FLOOR_COVERAGE; wins/amount never regress below seed overview values.
     """
     competitors = competitors or load_competitors_config()
     alias_index = build_alias_index(competitors)
@@ -195,6 +221,8 @@ def aggregate_competitor_kpis(
     notices = load_all_notices(repo_root)
     names = {c["name"] for c in competitors}
     live_bid_keys = count_live_bids(notices, pool, alias_index, names)
+    coverage = core_bidder_coverage(notices)
+    use_seed_floor = float(coverage["ratio"]) < SEED_FLOOR_COVERAGE
 
     wins_by: dict[str, list[dict[str, Any]]] = {c["name"]: [] for c in competitors}
     seen_keys: dict[str, set[str]] = {c["name"]: set() for c in competitors}
@@ -235,8 +263,12 @@ def aggregate_competitor_kpis(
         else:
             wins = seed_wins
             amount = seed_amount
-        # 투찰: OpengCompt 실측 + 시드 floor (커버리지 부족 시 시드 유지)
-        bids = max(seed_bids, live_bids, wins)
+
+        # Seed floor until core OpengCompt coverage crosses SEED_FLOOR_COVERAGE.
+        if use_seed_floor:
+            bids = max(seed_bids, live_bids, wins)
+        else:
+            bids = max(live_bids, wins)
 
         live_sorted = sorted(
             live,
@@ -260,6 +292,8 @@ def aggregate_competitor_kpis(
                 "live_amount_eok": live_amount,
                 "seed_wins": seed_wins,
                 "seed_bids": seed_bids,
+                "seed_floor": use_seed_floor,
+                "coverage_ratio": round(float(coverage["ratio"]), 3),
                 "recent": live_sorted[:5],
             }
         )

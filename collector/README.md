@@ -73,7 +73,12 @@ python -m g2b.collect render reports   # weekly + monthly + reports/index
 
 월간「이번 달 투찰 참여 업체」는 OpengCompt `bidders[]` 집계(빈 업체명 제외).
 
+```bash
+# core AI 공고 투찰목록 우선 보강 (시드 floor 해제 임계: core 커버리지 ≥ 75%)
+python -m g2b.collect enrich-bidders --include-bootstrap --core-only --limit 400
+```
+
 ## 아직 안 하는 것
 
 - 경쟁사 프로필 문단 (편집 콘텐츠)
-- OpengCompt 커버리지 확대(시드 floor 해제)
+- 운영·보안(채팅 노출 키 재발급)

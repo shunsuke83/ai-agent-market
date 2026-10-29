@@ -51,7 +51,7 @@ jobs:
       - name: Enrich bidder rankings (OpengCompt)
         env:
           DATA_GO_KR_SERVICE_KEY: ${{ secrets.DATA_GO_KR_SERVICE_KEY }}
-        run: python -m g2b.collect enrich-bidders --include-bootstrap --limit 300
+        run: python -m g2b.collect enrich-bidders --include-bootstrap --core-only --limit 400
         working-directory: collector
 
       - name: Sanitize budgets stored as won

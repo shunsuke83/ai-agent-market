@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-29T06:46:42Z",
+  "generated_at": "2026-10-29T07:49:07Z",
   "mode": "g2b_api",
   "range": {
     "since": "2026-10-15",
@@ -1256,7 +1256,12 @@
       "bid_count": null,
       "second": null,
       "status": "개찰 예정",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "source": "g2b_api",
@@ -5588,7 +5593,45 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01783701&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01783701&bidPbancOrd=000",
+      "bidders": [
+        {
+          "rank": 1,
+          "name": "어진컴퍼니",
+          "amount_eok": 0.567,
+          "rate_pct": 90.436,
+          "bizno": "6928603697",
+          "ceo": "조현주"
+        },
+        {
+          "rank": 2,
+          "name": "새론아이",
+          "amount_eok": 0.5744,
+          "rate_pct": 91.612,
+          "bizno": "1228646713",
+          "ceo": "김사헌"
+        },
+        {
+          "rank": 3,
+          "name": "스타셀",
+          "amount_eok": 0.5775,
+          "rate_pct": 92.111,
+          "bizno": "1208667968",
+          "ceo": "박노헌"
+        },
+        {
+          "rank": null,
+          "name": "리즈너스",
+          "amount_eok": null,
+          "rate_pct": 0.0,
+          "bizno": "1728603252",
+          "ceo": "손동현"
+        }
+      ],
+      "bid_count": 4,
+      "second": "새론아이",
+      "winner": "어진컴퍼니",
+      "status": "1순위"
     },
     {
       "source": "g2b_api",
@@ -5971,7 +6014,12 @@
       "bid_count": null,
       "second": null,
       "status": "개찰 예정",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "연구·교육·행사",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "source": "g2b_api",
@@ -49716,7 +49764,37 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01778307&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01778307&bidPbancOrd=000",
+      "bidders": [
+        {
+          "rank": 1,
+          "name": "고래앤코",
+          "amount_eok": 0.4093,
+          "rate_pct": 74.418,
+          "bizno": "8098703763",
+          "ceo": "황해인"
+        },
+        {
+          "rank": 2,
+          "name": "다트워크",
+          "amount_eok": 0.4257,
+          "rate_pct": 77.4,
+          "bizno": "8928103744",
+          "ceo": "이상원"
+        },
+        {
+          "rank": 3,
+          "name": "포항공과대학교 산학협력단",
+          "amount_eok": 0.55,
+          "rate_pct": 100.0,
+          "bizno": "5068207303",
+          "ceo": "김종규"
+        }
+      ],
+      "bid_count": 3,
+      "second": "다트워크",
+      "winner": "고래앤코",
+      "status": "1순위"
     },
     {
       "source": "g2b_api",
@@ -50670,7 +50748,20 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01776505&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01776505&bidPbancOrd=000",
+      "bidders": [
+        {
+          "rank": 1,
+          "name": "코그니텀",
+          "amount_eok": 0.1467,
+          "rate_pct": 100.0,
+          "bizno": "6648702161",
+          "ceo": "정좌연"
+        }
+      ],
+      "bid_count": 1,
+      "winner": "코그니텀",
+      "status": "1순위"
     },
     {
       "source": "g2b_api",
@@ -51444,7 +51535,341 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01776394&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01776394&bidPbancOrd=000",
+      "bidders": [
+        {
+          "rank": 1,
+          "name": "아워스",
+          "amount_eok": 4.4919,
+          "rate_pct": 80.505,
+          "bizno": "3058149402",
+          "ceo": "송치선"
+        },
+        {
+          "rank": 2,
+          "name": "에버그린티앤씨",
+          "amount_eok": 4.4922,
+          "rate_pct": 80.51,
+          "bizno": "3388801483",
+          "ceo": "최재완"
+        },
+        {
+          "rank": 3,
+          "name": "보스테크",
+          "amount_eok": 4.4989,
+          "rate_pct": 80.631,
+          "bizno": "1078793378",
+          "ceo": "이헌웅"
+        },
+        {
+          "rank": 4,
+          "name": "이젠정보통신",
+          "amount_eok": 4.4994,
+          "rate_pct": 80.64,
+          "bizno": "1088154468",
+          "ceo": "이동필"
+        },
+        {
+          "rank": 5,
+          "name": "플러스넷",
+          "amount_eok": 4.5031,
+          "rate_pct": 80.705,
+          "bizno": "6158607681",
+          "ceo": "김길종"
+        },
+        {
+          "rank": 6,
+          "name": "에스에스아이코리아",
+          "amount_eok": 4.5033,
+          "rate_pct": 80.709,
+          "bizno": "1138690758",
+          "ceo": "박연익"
+        },
+        {
+          "rank": 7,
+          "name": "조양테크",
+          "amount_eok": 4.5173,
+          "rate_pct": 80.961,
+          "bizno": "3078143613",
+          "ceo": "송윤서"
+        },
+        {
+          "rank": 8,
+          "name": "멀티스퀘어",
+          "amount_eok": 4.529,
+          "rate_pct": 81.169,
+          "bizno": "3148800979",
+          "ceo": "정승원"
+        },
+        {
+          "rank": 9,
+          "name": "동우이앤지",
+          "amount_eok": 4.5352,
+          "rate_pct": 81.281,
+          "bizno": "1288666624",
+          "ceo": "김찬제"
+        },
+        {
+          "rank": 10,
+          "name": "우성텔레콤",
+          "amount_eok": 4.5489,
+          "rate_pct": 81.527,
+          "bizno": "1288602824",
+          "ceo": "송상의"
+        },
+        {
+          "rank": 11,
+          "name": "삼화텔콤",
+          "amount_eok": 4.5679,
+          "rate_pct": 81.867,
+          "bizno": "6040121503",
+          "ceo": "최호남"
+        },
+        {
+          "rank": 12,
+          "name": "케이피넷",
+          "amount_eok": 4.5798,
+          "rate_pct": 82.081,
+          "bizno": "5248701336",
+          "ceo": "김유빈"
+        },
+        {
+          "rank": 13,
+          "name": "두성이앤씨",
+          "amount_eok": 4.62,
+          "rate_pct": 82.801,
+          "bizno": "1298626678",
+          "ceo": "정윤수"
+        },
+        {
+          "rank": 14,
+          "name": "유앤",
+          "amount_eok": 4.7357,
+          "rate_pct": 84.875,
+          "bizno": "6168602428",
+          "ceo": "김대영"
+        },
+        {
+          "rank": 15,
+          "name": "에스엠티정보기술",
+          "amount_eok": 4.9159,
+          "rate_pct": 88.104,
+          "bizno": "1138184945",
+          "ceo": "이묵희"
+        },
+        {
+          "rank": 16,
+          "name": "엠토스솔루션스",
+          "amount_eok": 5.018,
+          "rate_pct": 89.934,
+          "bizno": "1198617662",
+          "ceo": "김관종"
+        },
+        {
+          "rank": 17,
+          "name": "영진씨엔씨",
+          "amount_eok": 5.1472,
+          "rate_pct": 92.25,
+          "bizno": "1218146073",
+          "ceo": "김미경"
+        },
+        {
+          "rank": 18,
+          "name": "엔코디",
+          "amount_eok": 5.174,
+          "rate_pct": 92.73,
+          "bizno": "3148645220",
+          "ceo": "김동욱"
+        },
+        {
+          "rank": 19,
+          "name": "제이에스정보통신",
+          "amount_eok": 5.2847,
+          "rate_pct": 94.714,
+          "bizno": "1308655815",
+          "ceo": "김종필"
+        },
+        {
+          "rank": 20,
+          "name": "부송",
+          "amount_eok": 5.3264,
+          "rate_pct": 95.462,
+          "bizno": "1188119473",
+          "ceo": "소병양"
+        },
+        {
+          "rank": 21,
+          "name": "에이텍씨앤",
+          "amount_eok": 5.4127,
+          "rate_pct": 97.007,
+          "bizno": "3988100677",
+          "ceo": "신승영"
+        },
+        {
+          "rank": 22,
+          "name": "다경테크",
+          "amount_eok": 5.428,
+          "rate_pct": 97.282,
+          "bizno": "7288600999",
+          "ceo": "박현승"
+        },
+        {
+          "rank": 23,
+          "name": "에이텍시스템",
+          "amount_eok": 5.4814,
+          "rate_pct": 98.239,
+          "bizno": "2148818539",
+          "ceo": "한가진"
+        },
+        {
+          "rank": 24,
+          "name": "동일이엔지",
+          "amount_eok": 5.56,
+          "rate_pct": 99.648,
+          "bizno": "1418116705",
+          "ceo": "이동식"
+        },
+        {
+          "rank": 25,
+          "name": "아원정보통신",
+          "amount_eok": 5.5625,
+          "rate_pct": 99.693,
+          "bizno": "3108135628",
+          "ceo": "장윤아"
+        },
+        {
+          "rank": 26,
+          "name": "경현",
+          "amount_eok": 5.57,
+          "rate_pct": 99.827,
+          "bizno": "6058701770",
+          "ceo": "노현서"
+        },
+        {
+          "rank": null,
+          "name": "에쓰오씨소프트",
+          "amount_eok": 4.4602,
+          "rate_pct": 79.936,
+          "bizno": "1168150463",
+          "ceo": "김한기"
+        },
+        {
+          "rank": null,
+          "name": "가을디에스",
+          "amount_eok": 4.4657,
+          "rate_pct": 80.036,
+          "bizno": "1058714362",
+          "ceo": "신연희"
+        },
+        {
+          "rank": null,
+          "name": "아이웍스",
+          "amount_eok": 4.4712,
+          "rate_pct": 80.135,
+          "bizno": "6098193120",
+          "ceo": "정민영"
+        },
+        {
+          "rank": null,
+          "name": "소노텍",
+          "amount_eok": 4.4768,
+          "rate_pct": 80.234,
+          "bizno": "8258101445",
+          "ceo": "문병일"
+        },
+        {
+          "rank": null,
+          "name": "엠투엠",
+          "amount_eok": 4.4795,
+          "rate_pct": 80.284,
+          "bizno": "2568102328",
+          "ceo": "고윤찬"
+        },
+        {
+          "rank": null,
+          "name": "세린정보기술",
+          "amount_eok": 4.4812,
+          "rate_pct": 80.314,
+          "bizno": "5868102229",
+          "ceo": "심재정"
+        },
+        {
+          "rank": null,
+          "name": "에스비정보기술",
+          "amount_eok": 4.4815,
+          "rate_pct": 80.318,
+          "bizno": "1078820815",
+          "ceo": "윤동권"
+        },
+        {
+          "rank": null,
+          "name": "모건시스",
+          "amount_eok": 4.4823,
+          "rate_pct": 80.333,
+          "bizno": "1138646816",
+          "ceo": "임종필"
+        },
+        {
+          "rank": null,
+          "name": "범산",
+          "amount_eok": 4.4858,
+          "rate_pct": 80.395,
+          "bizno": "2218131749",
+          "ceo": "변동희"
+        },
+        {
+          "rank": null,
+          "name": "아이티온",
+          "amount_eok": 4.4868,
+          "rate_pct": 80.415,
+          "bizno": "8358103023",
+          "ceo": "홍진두"
+        },
+        {
+          "rank": null,
+          "name": "더파트",
+          "amount_eok": 4.4878,
+          "rate_pct": 80.432,
+          "bizno": "4778800659",
+          "ceo": "강현준"
+        },
+        {
+          "rank": null,
+          "name": "오픈스택",
+          "amount_eok": 4.4883,
+          "rate_pct": 80.441,
+          "bizno": "1298617562",
+          "ceo": "남재권"
+        },
+        {
+          "rank": null,
+          "name": "아이앤비",
+          "amount_eok": 4.4892,
+          "rate_pct": 80.457,
+          "bizno": "8038700322",
+          "ceo": "김덕화"
+        },
+        {
+          "rank": null,
+          "name": "아이티 월드((IT. WORLD)",
+          "amount_eok": null,
+          "rate_pct": 0.0,
+          "bizno": "6140476461",
+          "ceo": "김영우"
+        },
+        {
+          "rank": null,
+          "name": "조흥테크",
+          "amount_eok": null,
+          "rate_pct": 0.0,
+          "bizno": "4128108897",
+          "ceo": "박희용"
+        }
+      ],
+      "bid_count": 41,
+      "second": "에버그린티앤씨",
+      "winner": "아워스",
+      "status": "1순위"
     },
     {
       "source": "g2b_api",
@@ -52113,7 +52538,53 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "변경공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01752471&bidPbancOrd=001"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01752471&bidPbancOrd=001",
+      "bidders": [
+        {
+          "rank": 1,
+          "name": "미림미디어랩",
+          "amount_eok": null,
+          "rate_pct": 9.0404,
+          "bizno": "1198661402",
+          "ceo": "남기환"
+        },
+        {
+          "rank": 2,
+          "name": "트루빈스",
+          "amount_eok": null,
+          "rate_pct": 10.0,
+          "bizno": "1298675086",
+          "ceo": "정현희"
+        },
+        {
+          "rank": 3,
+          "name": "프로그미디어랩",
+          "amount_eok": null,
+          "rate_pct": 8.9679,
+          "bizno": "1138677115",
+          "ceo": "이경우"
+        },
+        {
+          "rank": null,
+          "name": "페리앤로즈",
+          "amount_eok": null,
+          "rate_pct": 8.8263,
+          "bizno": "1138655450",
+          "ceo": "안태강"
+        },
+        {
+          "rank": null,
+          "name": "터그",
+          "amount_eok": null,
+          "rate_pct": 9.0526,
+          "bizno": "2352601605",
+          "ceo": "최선주"
+        }
+      ],
+      "bid_count": 5,
+      "second": "트루빈스",
+      "winner": "미림미디어랩",
+      "status": "1순위"
     },
     {
       "source": "g2b_api",
@@ -55529,7 +56000,1661 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01763959&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01763959&bidPbancOrd=000",
+      "bidders": [
+        {
+          "rank": 1,
+          "name": "애니텍",
+          "amount_eok": 2.341,
+          "rate_pct": 82.5,
+          "bizno": "5028138898",
+          "ceo": "홍종환"
+        },
+        {
+          "rank": 2,
+          "name": "창성테크",
+          "amount_eok": 2.3411,
+          "rate_pct": 82.501,
+          "bizno": "1492302146",
+          "ceo": "김용진"
+        },
+        {
+          "rank": 3,
+          "name": "하나정보통신",
+          "amount_eok": 2.3413,
+          "rate_pct": 82.508,
+          "bizno": "3138112508",
+          "ceo": "장정순"
+        },
+        {
+          "rank": 4,
+          "name": "에이치엠",
+          "amount_eok": 2.3413,
+          "rate_pct": 82.508,
+          "bizno": "6044071787",
+          "ceo": "이채경"
+        },
+        {
+          "rank": 5,
+          "name": "솔루파인",
+          "amount_eok": 2.3415,
+          "rate_pct": 82.516,
+          "bizno": "5308800718",
+          "ceo": "김학철"
+        },
+        {
+          "rank": 6,
+          "name": "위트콘",
+          "amount_eok": 2.342,
+          "rate_pct": 82.534,
+          "bizno": "2678701582",
+          "ceo": "이황기"
+        },
+        {
+          "rank": 7,
+          "name": "세명인포텍",
+          "amount_eok": 2.342,
+          "rate_pct": 82.535,
+          "bizno": "1318635525",
+          "ceo": "김영순"
+        },
+        {
+          "rank": 8,
+          "name": "삼우기전",
+          "amount_eok": 2.342,
+          "rate_pct": 82.535,
+          "bizno": "6051575260",
+          "ceo": "김문태"
+        },
+        {
+          "rank": 9,
+          "name": "다올아이엔",
+          "amount_eok": 2.3421,
+          "rate_pct": 82.536,
+          "bizno": "3858701949",
+          "ceo": "정은용"
+        },
+        {
+          "rank": 10,
+          "name": "에이번",
+          "amount_eok": 2.3422,
+          "rate_pct": 82.541,
+          "bizno": "2148842024",
+          "ceo": "김지윤"
+        },
+        {
+          "rank": 11,
+          "name": "시그널테크",
+          "amount_eok": 2.3423,
+          "rate_pct": 82.543,
+          "bizno": "3568800425",
+          "ceo": "심성욱"
+        },
+        {
+          "rank": 12,
+          "name": "유진아이티",
+          "amount_eok": 2.3423,
+          "rate_pct": 82.546,
+          "bizno": "3148197927",
+          "ceo": "홍영기"
+        },
+        {
+          "rank": 13,
+          "name": "유엔콘트롤",
+          "amount_eok": 2.3425,
+          "rate_pct": 82.552,
+          "bizno": "1068619820",
+          "ceo": "남성모"
+        },
+        {
+          "rank": 14,
+          "name": "현대아이티",
+          "amount_eok": 2.3425,
+          "rate_pct": 82.553,
+          "bizno": "2158786862",
+          "ceo": "장제만"
+        },
+        {
+          "rank": 15,
+          "name": "모아텍",
+          "amount_eok": 2.343,
+          "rate_pct": 82.569,
+          "bizno": "4858601669",
+          "ceo": "김동섭"
+        },
+        {
+          "rank": 16,
+          "name": "에이스건설산업",
+          "amount_eok": 2.3431,
+          "rate_pct": 82.572,
+          "bizno": "7810302068",
+          "ceo": "김진욱"
+        },
+        {
+          "rank": 17,
+          "name": "다온시스템",
+          "amount_eok": 2.3432,
+          "rate_pct": 82.575,
+          "bizno": "2898101727",
+          "ceo": "임교상"
+        },
+        {
+          "rank": 18,
+          "name": "오조씨엔에스",
+          "amount_eok": 2.3432,
+          "rate_pct": 82.577,
+          "bizno": "3058608726",
+          "ceo": "송준의"
+        },
+        {
+          "rank": 19,
+          "name": "프롬",
+          "amount_eok": 2.3432,
+          "rate_pct": 82.578,
+          "bizno": "4628601458",
+          "ceo": "안성희"
+        },
+        {
+          "rank": 20,
+          "name": "엠비에스",
+          "amount_eok": 2.3433,
+          "rate_pct": 82.581,
+          "bizno": "5778701330",
+          "ceo": "박문용"
+        },
+        {
+          "rank": 21,
+          "name": "거산인프라",
+          "amount_eok": 2.3434,
+          "rate_pct": 82.583,
+          "bizno": "6058185031",
+          "ceo": "문상철"
+        },
+        {
+          "rank": 21,
+          "name": "아이엘미디어",
+          "amount_eok": 2.3434,
+          "rate_pct": 82.583,
+          "bizno": "6828801658",
+          "ceo": "정은진"
+        },
+        {
+          "rank": 23,
+          "name": "케이피넷",
+          "amount_eok": 2.3434,
+          "rate_pct": 82.585,
+          "bizno": "5248701336",
+          "ceo": "김유빈"
+        },
+        {
+          "rank": 24,
+          "name": "한일디엔에스",
+          "amount_eok": 2.344,
+          "rate_pct": 82.606,
+          "bizno": "1138134111",
+          "ceo": "김경화"
+        },
+        {
+          "rank": 25,
+          "name": "패스넷",
+          "amount_eok": 2.3443,
+          "rate_pct": 82.616,
+          "bizno": "1388134347",
+          "ceo": "정정훈"
+        },
+        {
+          "rank": 26,
+          "name": "부송",
+          "amount_eok": 2.3444,
+          "rate_pct": 82.617,
+          "bizno": "1188119473",
+          "ceo": "소병양"
+        },
+        {
+          "rank": 27,
+          "name": "야베스텍",
+          "amount_eok": 2.3449,
+          "rate_pct": 82.637,
+          "bizno": "5048135669",
+          "ceo": "이현숙"
+        },
+        {
+          "rank": 28,
+          "name": "경기모아상사",
+          "amount_eok": 2.3449,
+          "rate_pct": 82.638,
+          "bizno": "2650101980",
+          "ceo": "최현준"
+        },
+        {
+          "rank": 29,
+          "name": "다온코아",
+          "amount_eok": 2.345,
+          "rate_pct": 82.641,
+          "bizno": "8254801069",
+          "ceo": "박지원"
+        },
+        {
+          "rank": 30,
+          "name": "그린아이티코리아",
+          "amount_eok": 2.3455,
+          "rate_pct": 82.657,
+          "bizno": "1328612506",
+          "ceo": "강원식"
+        },
+        {
+          "rank": 31,
+          "name": "유에프엠시스템즈",
+          "amount_eok": 2.3457,
+          "rate_pct": 82.666,
+          "bizno": "1198603630",
+          "ceo": "김교중"
+        },
+        {
+          "rank": 32,
+          "name": "미래정보기술",
+          "amount_eok": 2.3461,
+          "rate_pct": 82.677,
+          "bizno": "2238112850",
+          "ceo": "신동운"
+        },
+        {
+          "rank": 33,
+          "name": "도가테크",
+          "amount_eok": 2.3464,
+          "rate_pct": 82.688,
+          "bizno": "4030622224",
+          "ceo": "백선영"
+        },
+        {
+          "rank": 34,
+          "name": "삼성시스템공조",
+          "amount_eok": 2.3468,
+          "rate_pct": 82.702,
+          "bizno": "5128115645",
+          "ceo": "우명옥"
+        },
+        {
+          "rank": 35,
+          "name": "모아상사",
+          "amount_eok": 2.3469,
+          "rate_pct": 82.706,
+          "bizno": "3091861646",
+          "ceo": "최중강"
+        },
+        {
+          "rank": 36,
+          "name": "성우팜",
+          "amount_eok": 2.3472,
+          "rate_pct": 82.717,
+          "bizno": "6678100646",
+          "ceo": "박정희"
+        },
+        {
+          "rank": 37,
+          "name": "삼성티엔지",
+          "amount_eok": 2.3477,
+          "rate_pct": 82.735,
+          "bizno": "1098628406",
+          "ceo": "염상훈"
+        },
+        {
+          "rank": 38,
+          "name": "중앙통신",
+          "amount_eok": 2.3478,
+          "rate_pct": 82.737,
+          "bizno": "3058123509",
+          "ceo": "한의동"
+        },
+        {
+          "rank": 39,
+          "name": "갑천만수",
+          "amount_eok": 2.3488,
+          "rate_pct": 82.775,
+          "bizno": "4198802063",
+          "ceo": "안중철"
+        },
+        {
+          "rank": 40,
+          "name": "금호이엔에스",
+          "amount_eok": 2.3489,
+          "rate_pct": 82.776,
+          "bizno": "3882300549",
+          "ceo": "권대호"
+        },
+        {
+          "rank": 41,
+          "name": "웨이텍",
+          "amount_eok": 2.3498,
+          "rate_pct": 82.809,
+          "bizno": "5948701238",
+          "ceo": "송치봉"
+        },
+        {
+          "rank": 42,
+          "name": "아주산전",
+          "amount_eok": 2.3507,
+          "rate_pct": 82.839,
+          "bizno": "8838803486",
+          "ceo": "권희진"
+        },
+        {
+          "rank": 43,
+          "name": "씨티원 충남",
+          "amount_eok": 2.3508,
+          "rate_pct": 82.844,
+          "bizno": "7958701414",
+          "ceo": "조영숙"
+        },
+        {
+          "rank": 44,
+          "name": "엘제이이엔지",
+          "amount_eok": 2.3515,
+          "rate_pct": 82.868,
+          "bizno": "2048626080",
+          "ceo": "임성희"
+        },
+        {
+          "rank": 45,
+          "name": "엘림네트웍스",
+          "amount_eok": 2.3517,
+          "rate_pct": 82.876,
+          "bizno": "1218172625",
+          "ceo": "이경욱"
+        },
+        {
+          "rank": 46,
+          "name": "본정보",
+          "amount_eok": 2.3521,
+          "rate_pct": 82.89,
+          "bizno": "5828800285",
+          "ceo": "김명호"
+        },
+        {
+          "rank": 47,
+          "name": "사단법인153사회적농복중앙회",
+          "amount_eok": 2.3523,
+          "rate_pct": 82.896,
+          "bizno": "6888200543",
+          "ceo": "이재욱"
+        },
+        {
+          "rank": 48,
+          "name": "지노스포츠(포티스)",
+          "amount_eok": 2.3527,
+          "rate_pct": 82.913,
+          "bizno": "7595500382",
+          "ceo": "박종필"
+        },
+        {
+          "rank": 49,
+          "name": "나우시스템",
+          "amount_eok": 2.3528,
+          "rate_pct": 82.914,
+          "bizno": "1138636870",
+          "ceo": "이종한"
+        },
+        {
+          "rank": 50,
+          "name": "극동 아이.씨.엠",
+          "amount_eok": 2.3547,
+          "rate_pct": 82.982,
+          "bizno": "1318152607",
+          "ceo": "이영심"
+        },
+        {
+          "rank": 51,
+          "name": "원테크놀로지",
+          "amount_eok": 2.3555,
+          "rate_pct": 83.009,
+          "bizno": "1428100754",
+          "ceo": "김종달"
+        },
+        {
+          "rank": 52,
+          "name": "오정",
+          "amount_eok": 2.3567,
+          "rate_pct": 83.051,
+          "bizno": "5898103310",
+          "ceo": "김윤현"
+        },
+        {
+          "rank": 53,
+          "name": "네온텍",
+          "amount_eok": 2.3582,
+          "rate_pct": 83.106,
+          "bizno": "6078193177",
+          "ceo": "박연옥"
+        },
+        {
+          "rank": 54,
+          "name": "레브",
+          "amount_eok": 2.3586,
+          "rate_pct": 83.12,
+          "bizno": "6346100764",
+          "ceo": "김수선나"
+        },
+        {
+          "rank": 55,
+          "name": "장원정보통신",
+          "amount_eok": 2.3588,
+          "rate_pct": 83.125,
+          "bizno": "5108114413",
+          "ceo": "변성수"
+        },
+        {
+          "rank": 56,
+          "name": "마이크로닉시스템",
+          "amount_eok": 2.3622,
+          "rate_pct": 83.246,
+          "bizno": "3068126116",
+          "ceo": "김환배"
+        },
+        {
+          "rank": 57,
+          "name": "토페스",
+          "amount_eok": 2.3658,
+          "rate_pct": 83.373,
+          "bizno": "2078115520",
+          "ceo": "이강본"
+        },
+        {
+          "rank": 58,
+          "name": "서이과학교육",
+          "amount_eok": 2.3665,
+          "rate_pct": 83.398,
+          "bizno": "8660501030",
+          "ceo": "목정수"
+        },
+        {
+          "rank": 59,
+          "name": "한일에스티엠",
+          "amount_eok": 2.3672,
+          "rate_pct": 83.422,
+          "bizno": "2158185459",
+          "ceo": "한영기"
+        },
+        {
+          "rank": 60,
+          "name": "유앤",
+          "amount_eok": 2.3677,
+          "rate_pct": 83.44,
+          "bizno": "6168602428",
+          "ceo": "김대영"
+        },
+        {
+          "rank": 61,
+          "name": "저스트원",
+          "amount_eok": 2.3789,
+          "rate_pct": 83.834,
+          "bizno": "7808702013",
+          "ceo": "유효진"
+        },
+        {
+          "rank": 62,
+          "name": "株式會社 錦湖이.티.시",
+          "amount_eok": 2.4039,
+          "rate_pct": 84.715,
+          "bizno": "6158119727",
+          "ceo": "김두현"
+        },
+        {
+          "rank": 63,
+          "name": "뉴플러스",
+          "amount_eok": 2.422,
+          "rate_pct": 85.353,
+          "bizno": "1238147855",
+          "ceo": "윤여찬"
+        },
+        {
+          "rank": 64,
+          "name": "유한회사 스마트21",
+          "amount_eok": 2.4375,
+          "rate_pct": 85.898,
+          "bizno": "4098619544",
+          "ceo": "고주희"
+        },
+        {
+          "rank": 65,
+          "name": "에이지사이언스",
+          "amount_eok": 2.5014,
+          "rate_pct": 88.15,
+          "bizno": "3243601772",
+          "ceo": "이인순"
+        },
+        {
+          "rank": 66,
+          "name": "포라세",
+          "amount_eok": 2.53,
+          "rate_pct": 89.159,
+          "bizno": "3258601940",
+          "ceo": "이혜림"
+        },
+        {
+          "rank": 67,
+          "name": "에이엑스씨",
+          "amount_eok": 2.5663,
+          "rate_pct": 90.437,
+          "bizno": "6668701377",
+          "ceo": "박나래"
+        },
+        {
+          "rank": 68,
+          "name": "우강테크",
+          "amount_eok": 2.58,
+          "rate_pct": 90.921,
+          "bizno": "8978603889",
+          "ceo": "이희원"
+        },
+        {
+          "rank": 69,
+          "name": "알파유통",
+          "amount_eok": 2.6193,
+          "rate_pct": 92.305,
+          "bizno": "8918101078",
+          "ceo": "정승호"
+        },
+        {
+          "rank": 70,
+          "name": "씨엔비포시스템",
+          "amount_eok": 2.6217,
+          "rate_pct": 92.39,
+          "bizno": "3078140144",
+          "ceo": "윤선민"
+        },
+        {
+          "rank": 71,
+          "name": "새론아이",
+          "amount_eok": 2.6596,
+          "rate_pct": 93.726,
+          "bizno": "1228646713",
+          "ceo": "김사헌"
+        },
+        {
+          "rank": 72,
+          "name": "한국방송통신",
+          "amount_eok": 2.691,
+          "rate_pct": 94.833,
+          "bizno": "4168185732",
+          "ceo": "박은정"
+        },
+        {
+          "rank": 73,
+          "name": "제이나노텍",
+          "amount_eok": 2.72,
+          "rate_pct": 95.855,
+          "bizno": "8522002014",
+          "ceo": "권혁민"
+        },
+        {
+          "rank": 74,
+          "name": "씨앤",
+          "amount_eok": 2.7296,
+          "rate_pct": 96.192,
+          "bizno": "2938603001",
+          "ceo": "조재우"
+        },
+        {
+          "rank": 75,
+          "name": "천화",
+          "amount_eok": 2.7655,
+          "rate_pct": 97.458,
+          "bizno": "6158198528",
+          "ceo": "선승우"
+        },
+        {
+          "rank": 76,
+          "name": "리즈너스",
+          "amount_eok": 2.771,
+          "rate_pct": 97.652,
+          "bizno": "1728603252",
+          "ceo": "손동현"
+        },
+        {
+          "rank": 77,
+          "name": "어진컴퍼니",
+          "amount_eok": 2.7856,
+          "rate_pct": 98.166,
+          "bizno": "6928603697",
+          "ceo": "조현주"
+        },
+        {
+          "rank": 78,
+          "name": "서아기업",
+          "amount_eok": 2.7877,
+          "rate_pct": 98.239,
+          "bizno": "3448603328",
+          "ceo": "이승미"
+        },
+        {
+          "rank": 79,
+          "name": "드림골프클럽",
+          "amount_eok": 2.8036,
+          "rate_pct": 98.8,
+          "bizno": "6042624430",
+          "ceo": "선현동"
+        },
+        {
+          "rank": 80,
+          "name": "한성",
+          "amount_eok": 2.8039,
+          "rate_pct": 98.81,
+          "bizno": "4030863457",
+          "ceo": "최숙자"
+        },
+        {
+          "rank": 81,
+          "name": "삼화텔콤",
+          "amount_eok": 2.8075,
+          "rate_pct": 98.939,
+          "bizno": "6040121503",
+          "ceo": "최호남"
+        },
+        {
+          "rank": 82,
+          "name": "디오르마",
+          "amount_eok": 2.8105,
+          "rate_pct": 99.043,
+          "bizno": "1798102185",
+          "ceo": "윤정숙"
+        },
+        {
+          "rank": 83,
+          "name": "아이티온",
+          "amount_eok": 2.8155,
+          "rate_pct": 99.221,
+          "bizno": "8358103023",
+          "ceo": "홍진두"
+        },
+        {
+          "rank": 84,
+          "name": "신한약국",
+          "amount_eok": 2.8177,
+          "rate_pct": 99.298,
+          "bizno": "6120580971",
+          "ceo": "이정민"
+        },
+        {
+          "rank": 85,
+          "name": "아르떼",
+          "amount_eok": 2.8252,
+          "rate_pct": 99.562,
+          "bizno": "1640103711",
+          "ceo": "윤영승"
+        },
+        {
+          "rank": 86,
+          "name": "골드클래스",
+          "amount_eok": 2.8275,
+          "rate_pct": 99.645,
+          "bizno": "6752001719",
+          "ceo": "김경자"
+        },
+        {
+          "rank": null,
+          "name": "윌아이텍",
+          "amount_eok": 2.235,
+          "rate_pct": 78.763,
+          "bizno": "1238627437",
+          "ceo": "최웅지"
+        },
+        {
+          "rank": null,
+          "name": "삼호",
+          "amount_eok": 2.3067,
+          "rate_pct": 81.29,
+          "bizno": "1344101116",
+          "ceo": "신우탁"
+        },
+        {
+          "rank": null,
+          "name": "은환이엔씨",
+          "amount_eok": 2.31,
+          "rate_pct": 81.406,
+          "bizno": "2288700439",
+          "ceo": "황영숙"
+        },
+        {
+          "rank": null,
+          "name": "유비트론",
+          "amount_eok": 2.3113,
+          "rate_pct": 81.451,
+          "bizno": "1388155769",
+          "ceo": "정현욱"
+        },
+        {
+          "rank": null,
+          "name": "케이에스이엔지",
+          "amount_eok": 2.3145,
+          "rate_pct": 81.566,
+          "bizno": "1138600843",
+          "ceo": "김미옥"
+        },
+        {
+          "rank": null,
+          "name": "솔루션즈온넷",
+          "amount_eok": 2.3157,
+          "rate_pct": 81.606,
+          "bizno": "5068192685",
+          "ceo": "박용만"
+        },
+        {
+          "rank": null,
+          "name": "중앙시스템",
+          "amount_eok": 2.3163,
+          "rate_pct": 81.63,
+          "bizno": "1868602835",
+          "ceo": "한명환"
+        },
+        {
+          "rank": null,
+          "name": "다인정보기술",
+          "amount_eok": 2.3166,
+          "rate_pct": 81.64,
+          "bizno": "5658702812",
+          "ceo": "김인수"
+        },
+        {
+          "rank": null,
+          "name": "디알씨티에스",
+          "amount_eok": 2.3178,
+          "rate_pct": 81.681,
+          "bizno": "2208786374",
+          "ceo": "김완강"
+        },
+        {
+          "rank": null,
+          "name": "복은",
+          "amount_eok": 2.3183,
+          "rate_pct": 81.697,
+          "bizno": "6168628355",
+          "ceo": "김령은"
+        },
+        {
+          "rank": null,
+          "name": "엠스톤솔루션",
+          "amount_eok": 2.3184,
+          "rate_pct": 81.701,
+          "bizno": "4888801513",
+          "ceo": "최병문"
+        },
+        {
+          "rank": null,
+          "name": "하이테크미디어",
+          "amount_eok": 2.3188,
+          "rate_pct": 81.717,
+          "bizno": "7548700812",
+          "ceo": "강윤원"
+        },
+        {
+          "rank": null,
+          "name": "더원컴퍼니",
+          "amount_eok": 2.3194,
+          "rate_pct": 81.737,
+          "bizno": "7394000782",
+          "ceo": "박정희"
+        },
+        {
+          "rank": null,
+          "name": "비욘드에스",
+          "amount_eok": 2.3194,
+          "rate_pct": 81.738,
+          "bizno": "5338800245",
+          "ceo": "하정집"
+        },
+        {
+          "rank": null,
+          "name": "부광아이티",
+          "amount_eok": 2.3206,
+          "rate_pct": 81.781,
+          "bizno": "6478101447",
+          "ceo": "정상일"
+        },
+        {
+          "rank": null,
+          "name": "휴먼시스템즈",
+          "amount_eok": 2.3207,
+          "rate_pct": 81.784,
+          "bizno": "7588801751",
+          "ceo": "신인수"
+        },
+        {
+          "rank": null,
+          "name": "미성엔지니어링",
+          "amount_eok": 2.3208,
+          "rate_pct": 81.785,
+          "bizno": "1141708314",
+          "ceo": "김미솔"
+        },
+        {
+          "rank": null,
+          "name": "소노텍",
+          "amount_eok": 2.321,
+          "rate_pct": 81.793,
+          "bizno": "8258101445",
+          "ceo": "문병일"
+        },
+        {
+          "rank": null,
+          "name": "광일테크",
+          "amount_eok": 2.3219,
+          "rate_pct": 81.824,
+          "bizno": "4088142988",
+          "ceo": "김희식"
+        },
+        {
+          "rank": null,
+          "name": "영진씨엔씨",
+          "amount_eok": 2.322,
+          "rate_pct": 81.829,
+          "bizno": "1218146073",
+          "ceo": "김미경"
+        },
+        {
+          "rank": null,
+          "name": "유닛플러스",
+          "amount_eok": 2.3224,
+          "rate_pct": 81.842,
+          "bizno": "6258701338",
+          "ceo": "이혜인"
+        },
+        {
+          "rank": null,
+          "name": "크리에이티브넷",
+          "amount_eok": 2.3226,
+          "rate_pct": 81.852,
+          "bizno": "3081267835",
+          "ceo": "곽초롱"
+        },
+        {
+          "rank": null,
+          "name": "세진정보",
+          "amount_eok": 2.3227,
+          "rate_pct": 81.854,
+          "bizno": "1998100589",
+          "ceo": "김은경"
+        },
+        {
+          "rank": null,
+          "name": "넥스톤",
+          "amount_eok": 2.3229,
+          "rate_pct": 81.86,
+          "bizno": "5908102247",
+          "ceo": "이용택"
+        },
+        {
+          "rank": null,
+          "name": "온세계정보통신",
+          "amount_eok": 2.323,
+          "rate_pct": 81.865,
+          "bizno": "3058164776",
+          "ceo": "박미경"
+        },
+        {
+          "rank": null,
+          "name": "에스마루",
+          "amount_eok": 2.3234,
+          "rate_pct": 81.88,
+          "bizno": "3108130526",
+          "ceo": "김학철"
+        },
+        {
+          "rank": null,
+          "name": "삼일씨티에스",
+          "amount_eok": 2.3235,
+          "rate_pct": 81.88,
+          "bizno": "2158173822",
+          "ceo": "최종원"
+        },
+        {
+          "rank": null,
+          "name": "티엔에스",
+          "amount_eok": 2.3236,
+          "rate_pct": 81.886,
+          "bizno": "3018165400",
+          "ceo": "김태훈"
+        },
+        {
+          "rank": null,
+          "name": "모아테크",
+          "amount_eok": 2.3237,
+          "rate_pct": 81.891,
+          "bizno": "7820901711",
+          "ceo": "김은아"
+        },
+        {
+          "rank": null,
+          "name": "엔코디",
+          "amount_eok": 2.3238,
+          "rate_pct": 81.892,
+          "bizno": "3148645220",
+          "ceo": "김동욱"
+        },
+        {
+          "rank": null,
+          "name": "크리에이티브넷",
+          "amount_eok": 2.3239,
+          "rate_pct": 81.897,
+          "bizno": "6568100025",
+          "ceo": "주형진"
+        },
+        {
+          "rank": null,
+          "name": "에스엠씨",
+          "amount_eok": 2.3243,
+          "rate_pct": 81.911,
+          "bizno": "6058157739",
+          "ceo": "문성배"
+        },
+        {
+          "rank": null,
+          "name": "중부보안",
+          "amount_eok": 2.3249,
+          "rate_pct": 81.933,
+          "bizno": "3058171729",
+          "ceo": "도대욱"
+        },
+        {
+          "rank": null,
+          "name": "더파트",
+          "amount_eok": 2.3252,
+          "rate_pct": 81.942,
+          "bizno": "4778800659",
+          "ceo": "강현준"
+        },
+        {
+          "rank": null,
+          "name": "삼도",
+          "amount_eok": 2.3257,
+          "rate_pct": 81.958,
+          "bizno": "8125900833",
+          "ceo": "김수재"
+        },
+        {
+          "rank": null,
+          "name": "오토원",
+          "amount_eok": 2.3257,
+          "rate_pct": 81.958,
+          "bizno": "6058155008",
+          "ceo": "김영욱"
+        },
+        {
+          "rank": null,
+          "name": "아라온정보통신",
+          "amount_eok": 2.3258,
+          "rate_pct": 81.962,
+          "bizno": "3018607477",
+          "ceo": "유연선"
+        },
+        {
+          "rank": null,
+          "name": "유누 컴퍼니",
+          "amount_eok": 2.326,
+          "rate_pct": 81.969,
+          "bizno": "2872501915",
+          "ceo": "윤현미"
+        },
+        {
+          "rank": null,
+          "name": "인찬",
+          "amount_eok": 2.3264,
+          "rate_pct": 81.983,
+          "bizno": "1218193367",
+          "ceo": "강순금"
+        },
+        {
+          "rank": null,
+          "name": "아르스테크",
+          "amount_eok": 2.3266,
+          "rate_pct": 81.991,
+          "bizno": "5655900354",
+          "ceo": "신기범"
+        },
+        {
+          "rank": null,
+          "name": "수영개발산업",
+          "amount_eok": 2.3267,
+          "rate_pct": 81.993,
+          "bizno": "3058630913",
+          "ceo": "최별규"
+        },
+        {
+          "rank": null,
+          "name": "우정상사",
+          "amount_eok": 2.3267,
+          "rate_pct": 81.993,
+          "bizno": "4758700433",
+          "ceo": "오지녕"
+        },
+        {
+          "rank": null,
+          "name": "엘이디오션",
+          "amount_eok": 2.3268,
+          "rate_pct": 81.997,
+          "bizno": "6388600361",
+          "ceo": "김정수"
+        },
+        {
+          "rank": null,
+          "name": "가이드삼정",
+          "amount_eok": 2.3268,
+          "rate_pct": 81.997,
+          "bizno": "1078646179",
+          "ceo": "문용만"
+        },
+        {
+          "rank": null,
+          "name": "포딕스",
+          "amount_eok": 2.3271,
+          "rate_pct": 82.007,
+          "bizno": "1138645971",
+          "ceo": "정재호"
+        },
+        {
+          "rank": null,
+          "name": "마이크로닉",
+          "amount_eok": 2.3271,
+          "rate_pct": 82.007,
+          "bizno": "5138115783",
+          "ceo": "강범규"
+        },
+        {
+          "rank": null,
+          "name": "티앤에스",
+          "amount_eok": 2.3272,
+          "rate_pct": 82.011,
+          "bizno": "3078138196",
+          "ceo": "김지안"
+        },
+        {
+          "rank": null,
+          "name": "보스테크",
+          "amount_eok": 2.3273,
+          "rate_pct": 82.016,
+          "bizno": "1078793378",
+          "ceo": "이헌웅"
+        },
+        {
+          "rank": null,
+          "name": "인프리콘",
+          "amount_eok": 2.3275,
+          "rate_pct": 82.024,
+          "bizno": "1198170546",
+          "ceo": "김용곤"
+        },
+        {
+          "rank": null,
+          "name": "에스코한국 (ESCO Korea Co.,Ltd.)",
+          "amount_eok": 2.3275,
+          "rate_pct": 82.024,
+          "bizno": "3098603500",
+          "ceo": "연태훈"
+        },
+        {
+          "rank": null,
+          "name": "서온상사",
+          "amount_eok": 2.3276,
+          "rate_pct": 82.026,
+          "bizno": "2893001481",
+          "ceo": "김민지"
+        },
+        {
+          "rank": null,
+          "name": "세렌디피티",
+          "amount_eok": 2.3278,
+          "rate_pct": 82.034,
+          "bizno": "4358600613",
+          "ceo": "정시현"
+        },
+        {
+          "rank": null,
+          "name": "성민전기통신",
+          "amount_eok": 2.3279,
+          "rate_pct": 82.035,
+          "bizno": "2138800230",
+          "ceo": "홍종애"
+        },
+        {
+          "rank": null,
+          "name": "엠투엠",
+          "amount_eok": 2.328,
+          "rate_pct": 82.041,
+          "bizno": "2568102328",
+          "ceo": "고윤찬"
+        },
+        {
+          "rank": null,
+          "name": "광희테크윈",
+          "amount_eok": 2.3282,
+          "rate_pct": 82.047,
+          "bizno": "6088701288",
+          "ceo": "김광화"
+        },
+        {
+          "rank": null,
+          "name": "엘케이시스코",
+          "amount_eok": 2.3287,
+          "rate_pct": 82.065,
+          "bizno": "1068638093",
+          "ceo": "이기일"
+        },
+        {
+          "rank": null,
+          "name": "피엠피테크",
+          "amount_eok": 2.3288,
+          "rate_pct": 82.068,
+          "bizno": "1288644620",
+          "ceo": "남영욱"
+        },
+        {
+          "rank": null,
+          "name": "케이네트웍스",
+          "amount_eok": 2.3289,
+          "rate_pct": 82.071,
+          "bizno": "1198678316",
+          "ceo": "이동규"
+        },
+        {
+          "rank": null,
+          "name": "대한전력",
+          "amount_eok": 2.329,
+          "rate_pct": 82.074,
+          "bizno": "2108173069",
+          "ceo": "김미경"
+        },
+        {
+          "rank": null,
+          "name": "유준기술",
+          "amount_eok": 2.3291,
+          "rate_pct": 82.08,
+          "bizno": "1658703417",
+          "ceo": "김원"
+        },
+        {
+          "rank": null,
+          "name": "누리콘",
+          "amount_eok": 2.3292,
+          "rate_pct": 82.085,
+          "bizno": "1348675166",
+          "ceo": "정해창"
+        },
+        {
+          "rank": null,
+          "name": "뉴테크원",
+          "amount_eok": 2.3293,
+          "rate_pct": 82.086,
+          "bizno": "2204500435",
+          "ceo": "김정희"
+        },
+        {
+          "rank": null,
+          "name": "가을디에스",
+          "amount_eok": 2.3294,
+          "rate_pct": 82.09,
+          "bizno": "1058714362",
+          "ceo": "신연희"
+        },
+        {
+          "rank": null,
+          "name": "성우약국",
+          "amount_eok": 2.3295,
+          "rate_pct": 82.092,
+          "bizno": "1051428542",
+          "ceo": "박명희"
+        },
+        {
+          "rank": null,
+          "name": "케이에이치그룹한국역사문화원",
+          "amount_eok": 2.3295,
+          "rate_pct": 82.093,
+          "bizno": "1058762466",
+          "ceo": "윤석인"
+        },
+        {
+          "rank": null,
+          "name": "세원정보통신",
+          "amount_eok": 2.3296,
+          "rate_pct": 82.098,
+          "bizno": "5130276918",
+          "ceo": "박태수"
+        },
+        {
+          "rank": null,
+          "name": "명품시스템",
+          "amount_eok": 2.3297,
+          "rate_pct": 82.102,
+          "bizno": "3058194305",
+          "ceo": "장빛나"
+        },
+        {
+          "rank": null,
+          "name": "에스지에스",
+          "amount_eok": 2.3298,
+          "rate_pct": 82.103,
+          "bizno": "7620400047",
+          "ceo": "김상곤"
+        },
+        {
+          "rank": null,
+          "name": "지엔아이테크",
+          "amount_eok": 2.3299,
+          "rate_pct": 82.106,
+          "bizno": "1078805018",
+          "ceo": "박우정"
+        },
+        {
+          "rank": null,
+          "name": "에이스뷰",
+          "amount_eok": 2.3301,
+          "rate_pct": 82.116,
+          "bizno": "2148798098",
+          "ceo": "김종오"
+        },
+        {
+          "rank": null,
+          "name": "케이에스원",
+          "amount_eok": 2.3308,
+          "rate_pct": 82.138,
+          "bizno": "4088196091",
+          "ceo": "김형욱"
+        },
+        {
+          "rank": null,
+          "name": "엔씨엔스페이스",
+          "amount_eok": 2.331,
+          "rate_pct": 82.145,
+          "bizno": "1068704756",
+          "ceo": "김찬중"
+        },
+        {
+          "rank": null,
+          "name": "대원",
+          "amount_eok": 2.3314,
+          "rate_pct": 82.161,
+          "bizno": "5431303163",
+          "ceo": "박상미"
+        },
+        {
+          "rank": null,
+          "name": "진성네트웍스",
+          "amount_eok": 2.3315,
+          "rate_pct": 82.165,
+          "bizno": "3018625612",
+          "ceo": "박미영"
+        },
+        {
+          "rank": null,
+          "name": "용두애브컴",
+          "amount_eok": 2.3316,
+          "rate_pct": 82.169,
+          "bizno": "2218116734",
+          "ceo": "엄성철"
+        },
+        {
+          "rank": null,
+          "name": "아이티벨리",
+          "amount_eok": 2.3319,
+          "rate_pct": 82.179,
+          "bizno": "4088156110",
+          "ceo": "김종필"
+        },
+        {
+          "rank": null,
+          "name": "프람트",
+          "amount_eok": 2.3322,
+          "rate_pct": 82.19,
+          "bizno": "4658601952",
+          "ceo": "전종훈"
+        },
+        {
+          "rank": null,
+          "name": "에스에스티",
+          "amount_eok": 2.3324,
+          "rate_pct": 82.195,
+          "bizno": "4038159276",
+          "ceo": "김명성"
+        },
+        {
+          "rank": null,
+          "name": "용천전력",
+          "amount_eok": 2.3331,
+          "rate_pct": 82.22,
+          "bizno": "4118143703",
+          "ceo": "이용천"
+        },
+        {
+          "rank": null,
+          "name": "한일",
+          "amount_eok": 2.3333,
+          "rate_pct": 82.229,
+          "bizno": "4052302181",
+          "ceo": "유현상"
+        },
+        {
+          "rank": null,
+          "name": "모건시스",
+          "amount_eok": 2.3336,
+          "rate_pct": 82.239,
+          "bizno": "1138646816",
+          "ceo": "임종필"
+        },
+        {
+          "rank": null,
+          "name": "더펜상사",
+          "amount_eok": 2.3337,
+          "rate_pct": 82.24,
+          "bizno": "6098178075",
+          "ceo": "고혜숙"
+        },
+        {
+          "rank": null,
+          "name": "에스엠제이",
+          "amount_eok": 2.3337,
+          "rate_pct": 82.241,
+          "bizno": "6870700558",
+          "ceo": "이미정"
+        },
+        {
+          "rank": null,
+          "name": "상승종합통신",
+          "amount_eok": 2.3339,
+          "rate_pct": 82.247,
+          "bizno": "2098127963",
+          "ceo": "조남각"
+        },
+        {
+          "rank": null,
+          "name": "와이엠테크",
+          "amount_eok": 2.3348,
+          "rate_pct": 82.279,
+          "bizno": "3058632532",
+          "ceo": "홍용선"
+        },
+        {
+          "rank": null,
+          "name": "해강",
+          "amount_eok": 2.3348,
+          "rate_pct": 82.281,
+          "bizno": "3458100810",
+          "ceo": "서상경"
+        },
+        {
+          "rank": null,
+          "name": "대원정보통신",
+          "amount_eok": 2.3349,
+          "rate_pct": 82.282,
+          "bizno": "4678700543",
+          "ceo": "최수정"
+        },
+        {
+          "rank": null,
+          "name": "에쓰오씨소프트",
+          "amount_eok": 2.335,
+          "rate_pct": 82.288,
+          "bizno": "1168150463",
+          "ceo": "김한기"
+        },
+        {
+          "rank": null,
+          "name": "서이트레이드",
+          "amount_eok": 2.3353,
+          "rate_pct": 82.296,
+          "bizno": "2273001106",
+          "ceo": "이지연"
+        },
+        {
+          "rank": null,
+          "name": "다비전",
+          "amount_eok": 2.3355,
+          "rate_pct": 82.306,
+          "bizno": "4238801743",
+          "ceo": "박천응"
+        },
+        {
+          "rank": null,
+          "name": "경천일렉콤",
+          "amount_eok": 2.3362,
+          "rate_pct": 82.329,
+          "bizno": "2318106475",
+          "ceo": "유건준"
+        },
+        {
+          "rank": null,
+          "name": "케이에스비",
+          "amount_eok": 2.3362,
+          "rate_pct": 82.33,
+          "bizno": "2148628727",
+          "ceo": "박종복"
+        },
+        {
+          "rank": null,
+          "name": "우영물산",
+          "amount_eok": 2.3362,
+          "rate_pct": 82.33,
+          "bizno": "5978100217",
+          "ceo": "박미순"
+        },
+        {
+          "rank": null,
+          "name": "김스애드",
+          "amount_eok": 2.3363,
+          "rate_pct": 82.332,
+          "bizno": "2048610496",
+          "ceo": "김진희"
+        },
+        {
+          "rank": null,
+          "name": "엠앨캐스트",
+          "amount_eok": 2.3364,
+          "rate_pct": 82.337,
+          "bizno": "1068619586",
+          "ceo": "김철호"
+        },
+        {
+          "rank": null,
+          "name": "케이에스씨바이오",
+          "amount_eok": 2.3364,
+          "rate_pct": 82.338,
+          "bizno": "7454101269",
+          "ceo": "이기현"
+        },
+        {
+          "rank": null,
+          "name": "유한회사 동아테크놀로지",
+          "amount_eok": 2.3365,
+          "rate_pct": 82.339,
+          "bizno": "3408100800",
+          "ceo": "김한승"
+        },
+        {
+          "rank": null,
+          "name": "한화통신",
+          "amount_eok": 2.3372,
+          "rate_pct": 82.365,
+          "bizno": "3058187274",
+          "ceo": "최희순"
+        },
+        {
+          "rank": null,
+          "name": "제이디아이(JDI)",
+          "amount_eok": 2.3375,
+          "rate_pct": 82.374,
+          "bizno": "6671900936",
+          "ceo": "안홍진"
+        },
+        {
+          "rank": null,
+          "name": "케이에스정보기술",
+          "amount_eok": 2.3375,
+          "rate_pct": 82.377,
+          "bizno": "1428175099",
+          "ceo": "국경숙"
+        },
+        {
+          "rank": null,
+          "name": "유성티엔에스",
+          "amount_eok": 2.3376,
+          "rate_pct": 82.379,
+          "bizno": "5758700596",
+          "ceo": "이규한"
+        },
+        {
+          "rank": null,
+          "name": "포에스미디어",
+          "amount_eok": 2.3377,
+          "rate_pct": 82.383,
+          "bizno": "1068633138",
+          "ceo": "원태우"
+        },
+        {
+          "rank": null,
+          "name": "제이에스정보통신",
+          "amount_eok": 2.3378,
+          "rate_pct": 82.388,
+          "bizno": "1308655815",
+          "ceo": "김종필"
+        },
+        {
+          "rank": null,
+          "name": "플러스넷",
+          "amount_eok": 2.3383,
+          "rate_pct": 82.404,
+          "bizno": "6158607681",
+          "ceo": "김길종"
+        },
+        {
+          "rank": null,
+          "name": "미래정보기술",
+          "amount_eok": 2.3385,
+          "rate_pct": 82.41,
+          "bizno": "7928700191",
+          "ceo": "김기성"
+        },
+        {
+          "rank": null,
+          "name": "인코컴퍼니",
+          "amount_eok": 2.3385,
+          "rate_pct": 82.411,
+          "bizno": "5568101156",
+          "ceo": "김강현"
+        },
+        {
+          "rank": null,
+          "name": "케이원",
+          "amount_eok": 2.339,
+          "rate_pct": 82.427,
+          "bizno": "1078154150",
+          "ceo": "손기봉"
+        },
+        {
+          "rank": null,
+          "name": "오정",
+          "amount_eok": 2.3391,
+          "rate_pct": 82.433,
+          "bizno": "8272401230",
+          "ceo": "김영태"
+        },
+        {
+          "rank": null,
+          "name": "부영상사",
+          "amount_eok": 2.3393,
+          "rate_pct": 82.437,
+          "bizno": "6458800344",
+          "ceo": "정순연"
+        },
+        {
+          "rank": null,
+          "name": "성우음향정보통신",
+          "amount_eok": 2.3393,
+          "rate_pct": 82.439,
+          "bizno": "1048159651",
+          "ceo": "송민자"
+        },
+        {
+          "rank": null,
+          "name": "시큐인포",
+          "amount_eok": 2.3397,
+          "rate_pct": 82.452,
+          "bizno": "2148632482",
+          "ceo": "김기화"
+        },
+        {
+          "rank": null,
+          "name": "씨더블유정보통신",
+          "amount_eok": 2.3398,
+          "rate_pct": 82.457,
+          "bizno": "6058611650",
+          "ceo": "문상호"
+        },
+        {
+          "rank": null,
+          "name": "세종방송통신",
+          "amount_eok": 2.3401,
+          "rate_pct": 82.465,
+          "bizno": "3078140519",
+          "ceo": "김민주"
+        },
+        {
+          "rank": null,
+          "name": "에스오넷",
+          "amount_eok": 2.3401,
+          "rate_pct": 82.466,
+          "bizno": "2238112087",
+          "ceo": "박용복"
+        },
+        {
+          "rank": null,
+          "name": "세이브인시스템",
+          "amount_eok": 2.3401,
+          "rate_pct": 82.467,
+          "bizno": "2108170529",
+          "ceo": "이동섭"
+        },
+        {
+          "rank": null,
+          "name": "이노탑",
+          "amount_eok": 2.3404,
+          "rate_pct": 82.478,
+          "bizno": "4098193457",
+          "ceo": "권필준"
+        },
+        {
+          "rank": null,
+          "name": "아르곤닉스",
+          "amount_eok": 2.3407,
+          "rate_pct": 82.487,
+          "bizno": "3141435235",
+          "ceo": "최원택"
+        },
+        {
+          "rank": null,
+          "name": "에스앤브이테크",
+          "amount_eok": 2.3408,
+          "rate_pct": 82.49,
+          "bizno": "7538802022",
+          "ceo": "김용석"
+        },
+        {
+          "rank": null,
+          "name": "컴버스테크",
+          "amount_eok": 2.3408,
+          "rate_pct": 82.492,
+          "bizno": "2038164674",
+          "ceo": "김동훈"
+        },
+        {
+          "rank": null,
+          "name": "헤이치 인 헤이치(H in H)",
+          "amount_eok": 2.85,
+          "rate_pct": 100.436,
+          "bizno": "5658802615",
+          "ceo": "허희은"
+        }
+      ],
+      "bid_count": 206,
+      "second": "창성테크",
+      "winner": "애니텍",
+      "status": "1순위"
     },
     {
       "source": "g2b_api",
@@ -59902,7 +62027,69 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01762995&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01762995&bidPbancOrd=000",
+      "bidders": [
+        {
+          "rank": 1,
+          "name": "넥스트클라우드",
+          "amount_eok": null,
+          "rate_pct": 18.0,
+          "bizno": "3138703049",
+          "ceo": "박진성"
+        },
+        {
+          "rank": 2,
+          "name": "프리윌린",
+          "amount_eok": null,
+          "rate_pct": 18.0,
+          "bizno": "8348600713",
+          "ceo": "권기성"
+        },
+        {
+          "rank": 3,
+          "name": "달파",
+          "amount_eok": null,
+          "rate_pct": 18.0,
+          "bizno": "7448802542",
+          "ceo": "김도균"
+        },
+        {
+          "rank": 4,
+          "name": "지미디어시스",
+          "amount_eok": null,
+          "rate_pct": 19.2857,
+          "bizno": "6178630306",
+          "ceo": "박성훈"
+        },
+        {
+          "rank": null,
+          "name": "고래앤코",
+          "amount_eok": null,
+          "rate_pct": 20.0,
+          "bizno": "8098703763",
+          "ceo": "황해인"
+        },
+        {
+          "rank": null,
+          "name": "큐비틱",
+          "amount_eok": null,
+          "rate_pct": 0.0,
+          "bizno": "4758703255",
+          "ceo": "이서준"
+        },
+        {
+          "rank": null,
+          "name": "투에니원센추리",
+          "amount_eok": null,
+          "rate_pct": 0.0,
+          "bizno": "2918800166",
+          "ceo": "김영국"
+        }
+      ],
+      "bid_count": 7,
+      "second": "프리윌린",
+      "winner": "넥스트클라우드",
+      "status": "1순위"
     },
     {
       "source": "g2b_api",
@@ -59942,7 +62129,37 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01762882&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01762882&bidPbancOrd=000",
+      "bidders": [
+        {
+          "rank": 1,
+          "name": "한국데이터소프트",
+          "amount_eok": null,
+          "rate_pct": 9.5266,
+          "bizno": "7878103312",
+          "ceo": "김우중"
+        },
+        {
+          "rank": 2,
+          "name": "데이타트렌드",
+          "amount_eok": null,
+          "rate_pct": 10.0,
+          "bizno": "4638101723",
+          "ceo": "표성수"
+        },
+        {
+          "rank": null,
+          "name": "에이드올",
+          "amount_eok": null,
+          "rate_pct": 9.5266,
+          "bizno": "4818103073",
+          "ceo": "김제필"
+        }
+      ],
+      "bid_count": 3,
+      "second": "데이타트렌드",
+      "winner": "한국데이터소프트",
+      "status": "1순위"
     },
     {
       "source": "g2b_api",
@@ -69581,7 +71798,37 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01757347&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01757347&bidPbancOrd=000",
+      "bidders": [
+        {
+          "rank": 1,
+          "name": "위노베이트(WENOVATE)",
+          "amount_eok": null,
+          "rate_pct": 20.0,
+          "bizno": "3498803652",
+          "ceo": "구용욱"
+        },
+        {
+          "rank": 2,
+          "name": "데이타트렌드",
+          "amount_eok": null,
+          "rate_pct": 19.7015,
+          "bizno": "4638101723",
+          "ceo": "표성수"
+        },
+        {
+          "rank": null,
+          "name": "저스트스타트레이딩(Just Star Trading)",
+          "amount_eok": null,
+          "rate_pct": 18.9383,
+          "bizno": "7447400552",
+          "ceo": "김종태"
+        }
+      ],
+      "bid_count": 3,
+      "second": "데이타트렌드",
+      "winner": "위노베이트(WENOVATE)",
+      "status": "1순위"
     },
     {
       "source": "g2b_api",
@@ -71472,7 +73719,37 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "재공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01753723&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01753723&bidPbancOrd=000",
+      "bidders": [
+        {
+          "rank": 1,
+          "name": "더에스앤씨",
+          "amount_eok": null,
+          "rate_pct": 8.9595,
+          "bizno": "1678801241",
+          "ceo": "고유원"
+        },
+        {
+          "rank": 2,
+          "name": "팀모노리스",
+          "amount_eok": null,
+          "rate_pct": 10.0,
+          "bizno": "6438602226",
+          "ceo": "전종현"
+        },
+        {
+          "rank": 3,
+          "name": "에프지아이",
+          "amount_eok": null,
+          "rate_pct": 8.7943,
+          "bizno": "6238102076",
+          "ceo": "최재완"
+        }
+      ],
+      "bid_count": 3,
+      "second": "팀모노리스",
+      "winner": "더에스앤씨",
+      "status": "1순위"
     },
     {
       "source": "g2b_api",
@@ -73424,7 +75701,53 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01753444&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01753444&bidPbancOrd=000",
+      "bidders": [
+        {
+          "rank": 1,
+          "name": "세명소프트",
+          "amount_eok": null,
+          "rate_pct": 20.0,
+          "bizno": "4588101696",
+          "ceo": "황바울"
+        },
+        {
+          "rank": 2,
+          "name": "(사)한국능률협회",
+          "amount_eok": null,
+          "rate_pct": 18.7961,
+          "bizno": "1058201810",
+          "ceo": "최권석"
+        },
+        {
+          "rank": null,
+          "name": "케이아이티원",
+          "amount_eok": null,
+          "rate_pct": 19.125,
+          "bizno": "8748100230",
+          "ceo": "김대권"
+        },
+        {
+          "rank": null,
+          "name": "위노베이트(WENOVATE)",
+          "amount_eok": null,
+          "rate_pct": 19.3182,
+          "bizno": "3498803652",
+          "ceo": "구용욱"
+        },
+        {
+          "rank": null,
+          "name": "비엔비에셋",
+          "amount_eok": null,
+          "rate_pct": 17.0,
+          "bizno": "3338702438",
+          "ceo": "김복기"
+        }
+      ],
+      "bid_count": 5,
+      "second": "(사)한국능률협회",
+      "winner": "세명소프트",
+      "status": "1순위"
     },
     {
       "source": "g2b_api",
@@ -73444,7 +75767,29 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01753412&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01753412&bidPbancOrd=000",
+      "bidders": [
+        {
+          "rank": 1,
+          "name": "아이티센엔텍",
+          "amount_eok": null,
+          "rate_pct": 9.0009,
+          "bizno": "2028132975",
+          "ceo": "신장호"
+        },
+        {
+          "rank": 2,
+          "name": "데이타트렌드",
+          "amount_eok": null,
+          "rate_pct": 10.0,
+          "bizno": "4638101723",
+          "ceo": "표성수"
+        }
+      ],
+      "bid_count": 2,
+      "second": "데이타트렌드",
+      "winner": "아이티센엔텍",
+      "status": "1순위"
     },
     {
       "source": "g2b_api",
@@ -76147,7 +78492,28 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "재공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01750508&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01750508&bidPbancOrd=000",
+      "bidders": [
+        {
+          "rank": 1,
+          "name": "파이로직스",
+          "amount_eok": null,
+          "rate_pct": 9.5,
+          "bizno": "5498101478",
+          "ceo": "홍종림"
+        },
+        {
+          "rank": null,
+          "name": "몬즈",
+          "amount_eok": null,
+          "rate_pct": 10.0,
+          "bizno": "5904001338",
+          "ceo": "홍재승"
+        }
+      ],
+      "bid_count": 2,
+      "winner": "파이로직스",
+      "status": "1순위"
     },
     {
       "source": "g2b_api",
@@ -76870,7 +79236,12 @@
       "bid_count": null,
       "second": null,
       "status": "개찰 예정",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "source": "g2b_api",
@@ -77692,7 +80063,28 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01749239&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01749239&bidPbancOrd=000",
+      "bidders": [
+        {
+          "rank": 1,
+          "name": "피스페이스",
+          "amount_eok": null,
+          "rate_pct": 19.397,
+          "bizno": "5028175364",
+          "ceo": "곽현수"
+        },
+        {
+          "rank": null,
+          "name": "태건",
+          "amount_eok": null,
+          "rate_pct": 20.0,
+          "bizno": "1548102930",
+          "ceo": "김규랑"
+        }
+      ],
+      "bid_count": 2,
+      "winner": "피스페이스",
+      "status": "1순위"
     },
     {
       "source": "g2b_api",
@@ -78319,7 +80711,29 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01748119&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01748119&bidPbancOrd=000",
+      "bidders": [
+        {
+          "rank": 1,
+          "name": "인터로이드",
+          "amount_eok": null,
+          "rate_pct": 8.0,
+          "bizno": "2648104609",
+          "ceo": "김수화"
+        },
+        {
+          "rank": 2,
+          "name": "이노디스",
+          "amount_eok": null,
+          "rate_pct": 10.0,
+          "bizno": "1208657776",
+          "ceo": "권영민"
+        }
+      ],
+      "bid_count": 2,
+      "second": "이노디스",
+      "winner": "인터로이드",
+      "status": "1순위"
     },
     {
       "source": "g2b_api",
@@ -78474,7 +80888,29 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "재공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01747764&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01747764&bidPbancOrd=000",
+      "bidders": [
+        {
+          "rank": 1,
+          "name": "콘센트게임즈",
+          "amount_eok": null,
+          "rate_pct": 9.4286,
+          "bizno": "8390803338",
+          "ceo": "송창욱"
+        },
+        {
+          "rank": 2,
+          "name": "NBSP(엔비에스피)",
+          "amount_eok": null,
+          "rate_pct": 10.0,
+          "bizno": "7411000473",
+          "ceo": "이승민"
+        }
+      ],
+      "bid_count": 2,
+      "second": "NBSP(엔비에스피)",
+      "winner": "콘센트게임즈",
+      "status": "1순위"
     },
     {
       "source": "g2b_api",
@@ -78574,7 +81010,37 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "재공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01747636&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01747636&bidPbancOrd=000",
+      "bidders": [
+        {
+          "rank": 1,
+          "name": "프로스트",
+          "amount_eok": null,
+          "rate_pct": 10.0,
+          "bizno": "3578702472",
+          "ceo": "박정일"
+        },
+        {
+          "rank": 2,
+          "name": "아이온커뮤니케이션즈",
+          "amount_eok": null,
+          "rate_pct": 8.0402,
+          "bizno": "2298139181",
+          "ceo": "오재철"
+        },
+        {
+          "rank": null,
+          "name": "백슬래시파트너스",
+          "amount_eok": null,
+          "rate_pct": 0.0,
+          "bizno": "7878102609",
+          "ceo": "송주현"
+        }
+      ],
+      "bid_count": 3,
+      "second": "아이온커뮤니케이션즈",
+      "winner": "프로스트",
+      "status": "1순위"
     },
     {
       "source": "g2b_api",
@@ -80988,7 +83454,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R26BK01738503",
@@ -81077,6 +83548,11 @@
           "bizno": "1198682071",
           "ceo": "양해영"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -81092,7 +83568,12 @@
       "bid_count": null,
       "second": null,
       "status": "개찰 예정",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R26BK01731510",
@@ -81107,7 +83588,12 @@
       "bid_count": null,
       "second": null,
       "status": "개찰 예정",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R26BK01730521",
@@ -81172,6 +83658,11 @@
           "bizno": "2018615492",
           "ceo": "김동련"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -81187,7 +83678,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "의료·바이오 AI"
+      ]
     },
     {
       "bid_no": "R26BK01719926",
@@ -81228,6 +83724,11 @@
           "bizno": "3148629725",
           "ceo": "이언주"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "운영·유지보수",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -81243,7 +83744,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R26BK01714333",
@@ -81258,7 +83764,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "ISP·전략",
+      "fields": [
+        "AX·전략"
+      ]
     },
     {
       "bid_no": "R26BK01709540",
@@ -81273,7 +83784,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "의료·바이오 AI"
+      ]
     },
     {
       "bid_no": "R26BK01709248",
@@ -81288,7 +83804,12 @@
       "bid_count": null,
       "second": null,
       "status": "재공고됨",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "의료·바이오 AI"
+      ]
     },
     {
       "bid_no": "R26BK01704259",
@@ -81345,6 +83866,11 @@
           "bizno": "5268103003",
           "ceo": "서진욱"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -81402,6 +83928,11 @@
           "bizno": "2298137316",
           "ceo": "김영섬"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
       ]
     },
     {
@@ -81417,7 +83948,12 @@
       "bid_count": null,
       "second": null,
       "status": "재공고됨",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
+      ]
     },
     {
       "bid_no": "R26BK01686343",
@@ -81474,6 +84010,11 @@
           "bizno": "7288702830",
           "ceo": "승현찬"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -81507,6 +84048,11 @@
           "bizno": "6138178017",
           "ceo": "여두환"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -81522,7 +84068,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "의료·바이오 AI"
+      ]
     },
     {
       "bid_no": "R26BK01675969",
@@ -81555,6 +84106,10 @@
           "bizno": "6968603520",
           "ceo": "김영균"
         }
+      ],
+      "scope": "AI SW 확대",
+      "fields": [
+        "디지털트윈"
       ]
     },
     {
@@ -81580,6 +84135,11 @@
           "bizno": "3208601566",
           "ceo": "김경호"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -81605,6 +84165,11 @@
           "bizno": "3208601566",
           "ceo": "김경호"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -81620,7 +84185,13 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "ISP·전략",
+      "fields": [
+        "의료·바이오 AI",
+        "AX·전략"
+      ]
     },
     {
       "bid_no": "R26BK01660091",
@@ -81653,7 +84224,12 @@
           "bizno": "1078624267",
           "ceo": "강원호"
         }
-      ]
+      ],
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "비전·영상"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "R26BK01656277",
@@ -81686,6 +84262,12 @@
           "bizno": "5448601217",
           "ceo": "이용덕"
         }
+      ],
+      "scope": "생성형·Agent",
+      "nature": "인프라",
+      "fields": [
+        "AI 에이전트",
+        "AI 인프라"
       ]
     },
     {
@@ -81727,6 +84309,11 @@
           "bizno": "2148881328",
           "ceo": "김재홍"
         }
+      ],
+      "scope": "생성형·Agent",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 에이전트"
       ]
     },
     {
@@ -81824,6 +84411,11 @@
           "bizno": "3048131710",
           "ceo": "김효곤"
         }
+      ],
+      "scope": "생성형·Agent",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "생성형·LLM"
       ]
     },
     {
@@ -81839,7 +84431,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "ISP·전략",
+      "fields": [
+        "AX·전략"
+      ]
     },
     {
       "bid_no": "R26BK01648485",
@@ -81854,7 +84451,13 @@
       "bid_count": null,
       "second": null,
       "status": "개찰 확인 필요",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "의료·바이오 AI",
+        "음성·언어·문서"
+      ]
     },
     {
       "bid_no": "R26BK01648099",
@@ -81959,6 +84562,11 @@
           "bizno": "1468701247",
           "ceo": "최길주"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -81974,7 +84582,11 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "fields": [
+        "디지털트윈"
+      ]
     },
     {
       "bid_no": "R26BK01631298",
@@ -82007,6 +84619,11 @@
           "bizno": "2118778088",
           "ceo": "현재호"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "의료·바이오 AI"
       ]
     },
     {
@@ -82022,7 +84639,11 @@
       "bid_count": null,
       "second": null,
       "status": "개찰 확인 필요",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "fields": [
+        "디지털트윈"
+      ]
     },
     {
       "bid_no": "R26BK01642294",
@@ -82037,7 +84658,13 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "ISP·전략",
+      "fields": [
+        "의료·바이오 AI",
+        "AX·전략"
+      ]
     },
     {
       "bid_no": "R26BK01639771",
@@ -82206,6 +84833,11 @@
           "bizno": "4638101723",
           "ceo": "표성수"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -82287,6 +84919,11 @@
           "bizno": "3418602655",
           "ceo": "김민수"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -82312,6 +84949,11 @@
           "bizno": "2208670180",
           "ceo": "신수철"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 보안"
       ]
     },
     {
@@ -82353,6 +84995,11 @@
           "bizno": "1298639907",
           "ceo": "이해석"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -82394,6 +85041,11 @@
           "bizno": "4638101723",
           "ceo": "표성수"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -82409,7 +85061,11 @@
       "bid_count": null,
       "second": null,
       "status": "개찰 확인 필요",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "fields": [
+        "디지털트윈"
+      ]
     },
     {
       "bid_no": "R26BK01630907",
@@ -82424,7 +85080,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R26BK01627014",
@@ -82545,6 +85206,11 @@
           "bizno": "1938103327",
           "ceo": "황성욱"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -82560,7 +85226,12 @@
       "bid_count": null,
       "second": null,
       "status": "개찰 확인 필요",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "ISP·전략",
+      "fields": [
+        "AX·전략"
+      ]
     },
     {
       "bid_no": "R26BK01629231",
@@ -82575,7 +85246,13 @@
       "bid_count": null,
       "second": null,
       "status": "개찰 확인 필요",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "의료·바이오 AI",
+        "음성·언어·문서"
+      ]
     },
     {
       "bid_no": "R26BK01626217",
@@ -82672,6 +85349,11 @@
           "bizno": "1478602432",
           "ceo": "심재춘"
         }
+      ],
+      "scope": "생성형·Agent",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "생성형·LLM"
       ]
     },
     {
@@ -82745,6 +85427,11 @@
           "bizno": "2068665153",
           "ceo": "김종민"
         }
+      ],
+      "scope": "생성형·Agent",
+      "fields": [
+        "생성형·LLM",
+        "AI 에이전트"
       ]
     },
     {
@@ -82770,6 +85457,11 @@
           "bizno": "1198196788",
           "ceo": "김상하"
         }
+      ],
+      "scope": "생성형·Agent",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 에이전트"
       ]
     },
     {
@@ -82811,6 +85503,11 @@
           "bizno": "2148858206",
           "ceo": "최우식"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -82836,6 +85533,11 @@
           "bizno": "5508602185",
           "ceo": "이성진"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
       ]
     },
     {
@@ -82851,7 +85553,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R26BK01606766",
@@ -82884,6 +85591,11 @@
           "bizno": "6138114177",
           "ceo": "오상석"
         }
+      ],
+      "scope": "생성형·Agent",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 에이전트"
       ]
     },
     {
@@ -82899,7 +85611,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 보안"
+      ]
     },
     {
       "bid_no": "R26BK01590694",
@@ -82956,6 +85673,11 @@
           "bizno": "2148664984",
           "ceo": "전경헌"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -82981,6 +85703,11 @@
           "bizno": "1168135346",
           "ceo": "장종준"
         }
+      ],
+      "scope": "생성형·Agent",
+      "fields": [
+        "생성형·LLM",
+        "AI 에이전트"
       ]
     },
     {
@@ -83022,6 +85749,11 @@
           "bizno": "1658602221",
           "ceo": "이승현"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -83047,6 +85779,11 @@
           "bizno": "6018801455",
           "ceo": "이동재"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "ISP·전략",
+      "fields": [
+        "AX·전략"
       ]
     },
     {
@@ -83088,7 +85825,12 @@
           "bizno": "2648127825",
           "ceo": "이준호"
         }
-      ]
+      ],
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "비전·영상"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "R26BK01585355",
@@ -83103,7 +85845,12 @@
       "bid_count": null,
       "second": null,
       "status": "개찰 확인 필요",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "ISP·전략",
+      "fields": [
+        "AX·전략"
+      ]
     },
     {
       "bid_no": "R26BK01579419",
@@ -83160,6 +85907,11 @@
           "bizno": "6458102192",
           "ceo": "이동열"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -83193,6 +85945,11 @@
           "bizno": "4638800285",
           "ceo": "강대근"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "비전·영상"
       ]
     },
     {
@@ -83208,7 +85965,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R26BK01570646",
@@ -83241,6 +86003,11 @@
           "bizno": "2138632761",
           "ceo": "이권주"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -83256,7 +86023,12 @@
       "bid_count": null,
       "second": null,
       "status": "재공고됨",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R26BK01570760",
@@ -83313,6 +86085,11 @@
           "bizno": "1088606113",
           "ceo": "장순철"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "비전·영상"
       ]
     },
     {
@@ -83354,6 +86131,11 @@
           "bizno": "3118140288",
           "ceo": "정범호"
         }
+      ],
+      "scope": "생성형·Agent",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "생성형·LLM"
       ]
     },
     {
@@ -83369,7 +86151,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
+      ]
     },
     {
       "bid_no": "R26BK01567818",
@@ -83410,6 +86197,11 @@
           "bizno": "6158145211",
           "ceo": "최연정"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
       ]
     },
     {
@@ -83443,7 +86235,12 @@
           "bizno": "3148629730",
           "ceo": "이한호"
         }
-      ]
+      ],
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "R26BK01565901",
@@ -83476,6 +86273,11 @@
           "bizno": "2048612266",
           "ceo": "진병삼"
         }
+      ],
+      "scope": "생성형·Agent",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "생성형·LLM"
       ]
     },
     {
@@ -83525,6 +86327,11 @@
           "bizno": "1248739200",
           "ceo": "이상규"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -83590,6 +86397,11 @@
           "bizno": "1198679498",
           "ceo": "이정호"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -83605,7 +86417,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "생성형·Agent",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 에이전트"
+      ]
     },
     {
       "bid_no": "R26BK01559189",
@@ -83662,6 +86479,11 @@
           "bizno": "7068602890",
           "ceo": "정성욱"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
       ]
     },
     {
@@ -83687,6 +86509,11 @@
           "bizno": "1168170775",
           "ceo": "김숙희"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "ISP·전략",
+      "fields": [
+        "AX·전략"
       ]
     },
     {
@@ -83744,6 +86571,11 @@
           "bizno": "4168144274",
           "ceo": "이형각"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -83769,6 +86601,10 @@
           "bizno": "2018643339",
           "ceo": "황의준"
         }
+      ],
+      "scope": "AI SW 확대",
+      "fields": [
+        "비전·영상"
       ]
     },
     {
@@ -83784,7 +86620,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "연구·교육·행사",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R26BK01549822",
@@ -83799,7 +86640,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "생성형·Agent",
+      "fields": [
+        "생성형·LLM",
+        "AI 에이전트"
+      ]
     },
     {
       "bid_no": "R26BK01548609",
@@ -83814,7 +86660,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 보안"
+      ]
     },
     {
       "bid_no": "R26BK01542950",
@@ -83863,7 +86714,12 @@
           "bizno": "1078782570",
           "ceo": "곽순자"
         }
-      ]
+      ],
+      "nature": "운영·유지보수",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "R26BK01541143",
@@ -83912,6 +86768,10 @@
           "bizno": "2158711279",
           "ceo": "옥정원"
         }
+      ],
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -83953,6 +86813,11 @@
           "bizno": "1058716808",
           "ceo": "손영호"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -83968,7 +86833,11 @@
       "bid_count": null,
       "second": null,
       "status": "재공고됨",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "fields": [
+        "비전·영상"
+      ]
     },
     {
       "bid_no": "R26BK01532469",
@@ -83983,7 +86852,12 @@
       "bid_count": null,
       "second": null,
       "status": "개찰 확인 필요",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "R26BK01531798",
@@ -83998,7 +86872,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "ISP·전략",
+      "fields": [
+        "AX·전략"
+      ]
     },
     {
       "bid_no": "R26BK01529804",
@@ -84071,6 +86950,11 @@
           "bizno": "5628800151",
           "ceo": "김동환"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
       ]
     },
     {
@@ -84128,6 +87012,10 @@
           "bizno": "5248702048",
           "ceo": "이원철"
         }
+      ],
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -84143,7 +87031,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "생성형·Agent",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 에이전트"
+      ]
     },
     {
       "bid_no": "R26BK01526375",
@@ -84208,6 +87101,10 @@
           "bizno": "1438133020",
           "ceo": "박정숙"
         }
+      ],
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -84273,6 +87170,11 @@
           "bizno": "1628101174",
           "ceo": "박선춘"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -84288,7 +87190,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "생성형·Agent",
+      "fields": [
+        "생성형·LLM",
+        "AI 에이전트"
+      ]
     },
     {
       "bid_no": "R26BK01524613",
@@ -84337,6 +87244,11 @@
           "bizno": "2298139181",
           "ceo": "오재철"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -84386,7 +87298,12 @@
           "bizno": "1198682412",
           "ceo": "윤훈주"
         }
-      ]
+      ],
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "R26BK01520892",
@@ -84401,7 +87318,12 @@
       "bid_count": null,
       "second": null,
       "status": "재공고됨",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
+      ]
     },
     {
       "bid_no": "R26BK01519860",
@@ -84434,6 +87356,10 @@
           "bizno": "4508800071",
           "ceo": "유승모"
         }
+      ],
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -84491,6 +87417,11 @@
           "bizno": "1078615583",
           "ceo": "박경호"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -84506,7 +87437,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "연구·교육·행사",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R26BK01510650",
@@ -84521,7 +87457,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "ISP·전략",
+      "fields": [
+        "AX·전략"
+      ]
     },
     {
       "bid_no": "R26BK01507135",
@@ -84536,7 +87477,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
+      ]
     },
     {
       "bid_no": "R26BK01504467",
@@ -84585,6 +87531,11 @@
           "bizno": "3058702578",
           "ceo": "이용석"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -84626,6 +87577,11 @@
           "bizno": "2648102576",
           "ceo": "이병철"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -84651,6 +87607,11 @@
           "bizno": "1298176829",
           "ceo": "류재웅"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "ISP·전략",
+      "fields": [
+        "AX·전략"
       ]
     },
     {
@@ -84684,6 +87645,10 @@
           "bizno": "8158702319",
           "ceo": "안준형"
         }
+      ],
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -84733,6 +87698,11 @@
           "bizno": "1088606113",
           "ceo": "장순철"
         }
+      ],
+      "scope": "생성형·Agent",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "생성형·LLM"
       ]
     },
     {
@@ -84748,7 +87718,11 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "fields": [
+        "비전·영상"
+      ]
     },
     {
       "bid_no": "R26BK01491417",
@@ -84805,7 +87779,12 @@
           "bizno": "1378605882",
           "ceo": "김상진"
         }
-      ]
+      ],
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "R26BK01481598",
@@ -84830,6 +87809,10 @@
           "bizno": "1168119477",
           "ceo": "현신균"
         }
+      ],
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -84845,7 +87828,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "ISP·전략",
+      "fields": [
+        "AX·전략"
+      ]
     },
     {
       "bid_no": "R26BK01481295",
@@ -84902,6 +87890,11 @@
           "bizno": "2208209479",
           "ceo": "정명식"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "ISP·전략",
+      "fields": [
+        "AX·전략"
       ]
     },
     {
@@ -84935,7 +87928,12 @@
           "bizno": "1068119640",
           "ceo": "문홍기"
         }
-      ]
+      ],
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "R26BK01476793",
@@ -84968,6 +87966,11 @@
           "bizno": "1428128238",
           "ceo": "구천리"
         }
+      ],
+      "scope": "생성형·Agent",
+      "nature": "구독·라이선스",
+      "fields": [
+        "생성형·LLM"
       ]
     },
     {
@@ -85001,6 +88004,11 @@
           "bizno": "1078685473",
           "ceo": "정형수"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -85034,6 +88042,11 @@
           "bizno": "1078213097",
           "ceo": "강범구"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -85099,6 +88112,11 @@
           "bizno": "2028167042",
           "ceo": "이세영"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -85156,6 +88174,11 @@
           "bizno": "3148186546",
           "ceo": "조상호"
         }
+      ],
+      "scope": "생성형·Agent",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "생성형·LLM"
       ]
     },
     {
@@ -85213,6 +88236,11 @@
           "bizno": "2118697088",
           "ceo": "조창제"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
       ]
     },
     {
@@ -85228,7 +88256,11 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R26BK01454146",
@@ -85243,7 +88275,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R26BK01445448",
@@ -85258,7 +88295,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "ISP·전략",
+      "fields": [
+        "AX·전략"
+      ]
     },
     {
       "bid_no": "R26BK01443385",
@@ -85299,6 +88341,11 @@
           "bizno": "1148187983",
           "ceo": "곽민철"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -85340,6 +88387,11 @@
           "bizno": "6018800932",
           "ceo": "김정욱"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "ISP·전략",
+      "fields": [
+        "AX·전략"
       ]
     },
     {
@@ -85389,6 +88441,10 @@
           "bizno": "6108210640",
           "ceo": "허승현"
         }
+      ],
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -85422,6 +88478,11 @@
           "bizno": "5488800494",
           "ceo": "하윤호"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -85479,6 +88540,10 @@
           "bizno": "1168144864",
           "ceo": "박경진"
         }
+      ],
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -85494,7 +88559,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "ISP·전략",
+      "fields": [
+        "AX·전략"
+      ]
     },
     {
       "bid_no": "R26BK01423998",
@@ -85535,6 +88605,11 @@
           "bizno": "5398103047",
           "ceo": "박지광"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "연구·교육·행사",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -85568,6 +88643,11 @@
           "bizno": "5138141016",
           "ceo": "최대룡"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -85609,6 +88689,11 @@
           "bizno": "2148121976",
           "ceo": "이제동"
         }
+      ],
+      "scope": "생성형·Agent",
+      "nature": "운영·유지보수",
+      "fields": [
+        "생성형·LLM"
       ]
     },
     {
@@ -85624,7 +88709,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R26BK01407824",
@@ -85639,7 +88729,11 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R26BK01407167",
@@ -85672,6 +88766,11 @@
           "bizno": "8818801497",
           "ceo": "박진아"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -85687,7 +88786,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "ISP·전략",
+      "fields": [
+        "AX·전략"
+      ]
     },
     {
       "bid_no": "R26BK01379279",
@@ -85720,6 +88824,11 @@
           "bizno": "8978602240",
           "ceo": "김혜민"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "인프라",
+      "fields": [
+        "AI 인프라"
       ]
     },
     {
@@ -85785,6 +88894,11 @@
           "bizno": "5498603068",
           "ceo": "김종현"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
       ]
     },
     {
@@ -85800,7 +88914,11 @@
       "bid_count": null,
       "second": null,
       "status": "재공고됨",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R26BK01369919",
@@ -85849,7 +88967,12 @@
           "bizno": "3058620531",
           "ceo": "조은식"
         }
-      ]
+      ],
+      "nature": "운영·유지보수",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "R26BK01366452",
@@ -85864,7 +88987,12 @@
       "bid_count": null,
       "second": null,
       "status": "재공고됨",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
+      ]
     },
     {
       "bid_no": "R26BK01368463",
@@ -85879,7 +89007,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R26BK01358922",
@@ -85912,6 +89045,11 @@
           "bizno": "3148659383",
           "ceo": "박주한"
         }
+      ],
+      "scope": "생성형·Agent",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 에이전트"
       ]
     },
     {
@@ -85945,6 +89083,11 @@
           "bizno": "4638700328",
           "ceo": "채종현"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -85960,7 +89103,11 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R26BK01322100",
@@ -85985,6 +89132,11 @@
           "bizno": "2298103214",
           "ceo": "정상원"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -86026,6 +89178,11 @@
           "bizno": "2298125498",
           "ceo": "김진"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -86067,6 +89224,11 @@
           "bizno": "1198679498",
           "ceo": "이정호"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -86082,7 +89244,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R26BK01288780",
@@ -86115,6 +89282,11 @@
           "bizno": "4948601095",
           "ceo": "김맹진"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -86140,7 +89312,12 @@
           "bizno": "4398700058",
           "ceo": "조영란"
         }
-      ]
+      ],
+      "nature": "운영·유지보수",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "R25BK01245930",
@@ -86197,6 +89374,11 @@
           "bizno": "1338144350",
           "ceo": "황성규"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -86212,7 +89394,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "운영·유지보수",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "R25BK01243484",
@@ -86227,7 +89414,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "운영·유지보수",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "R25BK01243473",
@@ -86242,7 +89434,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
+      ]
     },
     {
       "bid_no": "R25BK01227810",
@@ -86257,7 +89454,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "의료·바이오 AI"
+      ]
     },
     {
       "bid_no": "R25BK01239875",
@@ -86272,7 +89474,12 @@
       "bid_count": 11.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK01227238",
@@ -86287,7 +89494,12 @@
       "bid_count": 3.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "ISP·전략",
+      "fields": [
+        "AX·전략"
+      ]
     },
     {
       "bid_no": "R25BK01225628",
@@ -86302,7 +89514,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK01214770",
@@ -86317,7 +89534,12 @@
       "bid_count": 2.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "생성형·Agent",
+      "nature": "운영·유지보수",
+      "fields": [
+        "생성형·LLM"
+      ]
     },
     {
       "bid_no": "R25BK01218170",
@@ -86332,7 +89554,12 @@
       "bid_count": 2.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK01198515",
@@ -86347,7 +89574,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "운영·유지보수",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "R25BK01184182",
@@ -86362,7 +89594,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK01178851",
@@ -86377,7 +89614,12 @@
       "bid_count": 2.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "생성형·Agent",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "음성·언어·문서"
+      ]
     },
     {
       "bid_no": "R25BK01176539",
@@ -86392,7 +89634,12 @@
       "bid_count": null,
       "second": null,
       "status": "개찰 확인 필요",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK01173449",
@@ -86407,7 +89654,12 @@
       "bid_count": 3.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "운영·유지보수",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK01165987",
@@ -86422,7 +89674,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "운영·유지보수",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "R25BK01163757",
@@ -86437,7 +89694,12 @@
       "bid_count": 4.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "연구·교육·행사",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK01160071",
@@ -86452,7 +89714,12 @@
       "bid_count": null,
       "second": null,
       "status": "개찰 확인 필요",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK01157583",
@@ -86467,7 +89734,12 @@
       "bid_count": 2.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "운영·유지보수",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK01156700",
@@ -86482,7 +89754,12 @@
       "bid_count": 2.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "R25BK01137316",
@@ -86497,7 +89774,12 @@
       "bid_count": 6.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "생성형·Agent",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "생성형·LLM"
+      ]
     },
     {
       "bid_no": "R25BK01153970",
@@ -86512,7 +89794,11 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "R25BK01148819",
@@ -86527,7 +89813,12 @@
       "bid_count": 10.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "의료·바이오 AI"
+      ]
     },
     {
       "bid_no": "R25BK01141537",
@@ -86542,7 +89833,12 @@
       "bid_count": 7.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "생성형·Agent",
+      "nature": "구독·라이선스",
+      "fields": [
+        "생성형·LLM"
+      ]
     },
     {
       "bid_no": "R25BK01133242",
@@ -86599,6 +89895,11 @@
           "bizno": "6638700651",
           "ceo": "오성조"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -86614,7 +89915,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "운영·유지보수",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "R25BK01125206",
@@ -86629,7 +89935,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
+      ]
     },
     {
       "bid_no": "R25BK01123269",
@@ -86694,6 +90005,11 @@
           "bizno": "8538600261",
           "ceo": "정인호"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -86709,7 +90025,12 @@
       "bid_count": 5.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK01111922",
@@ -86724,7 +90045,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "운영·유지보수",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "R25BK01111545",
@@ -86739,7 +90065,12 @@
       "bid_count": 41.0,
       "second": null,
       "status": "1순위",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK01107196",
@@ -86754,7 +90085,12 @@
       "bid_count": null,
       "second": null,
       "status": "재공고됨",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK01096283",
@@ -86769,7 +90105,11 @@
       "bid_count": 3.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK01089652",
@@ -86784,7 +90124,12 @@
       "bid_count": 3.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK01076193",
@@ -86799,7 +90144,12 @@
       "bid_count": null,
       "second": null,
       "status": "개찰 확인 필요",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "의료·바이오 AI"
+      ]
     },
     {
       "bid_no": "R25BK01082073",
@@ -86814,7 +90164,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK01077222",
@@ -86829,7 +90184,12 @@
       "bid_count": 3.0,
       "second": null,
       "status": "1순위",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK01068519",
@@ -86862,6 +90222,11 @@
           "bizno": "1028113061",
           "ceo": "이경일"
         }
+      ],
+      "scope": "생성형·Agent",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "생성형·LLM"
       ]
     },
     {
@@ -86877,7 +90242,12 @@
       "bid_count": 2.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK01051675",
@@ -86892,7 +90262,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK01010600",
@@ -86907,7 +90282,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "비전·영상"
+      ]
     },
     {
       "bid_no": "R25BK01032685",
@@ -86922,7 +90302,13 @@
       "bid_count": 5.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "생성형·Agent",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "생성형·LLM",
+        "AI 보안"
+      ]
     },
     {
       "bid_no": "R25BK01030209",
@@ -87003,6 +90389,11 @@
           "bizno": "1078827157",
           "ceo": "고평석"
         }
+      ],
+      "scope": "생성형·Agent",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "생성형·LLM"
       ]
     },
     {
@@ -87018,7 +90409,12 @@
       "bid_count": null,
       "second": null,
       "status": "재공고됨",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "생성형·Agent",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "생성형·LLM"
+      ]
     },
     {
       "bid_no": "R25BK01029385",
@@ -87033,7 +90429,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK01016563",
@@ -87048,7 +90449,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
+      ]
     },
     {
       "bid_no": "R25BK01021959",
@@ -87063,7 +90469,11 @@
       "bid_count": 6.0,
       "second": null,
       "status": "1순위",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "생성형·Agent",
+      "fields": [
+        "생성형·LLM"
+      ]
     },
     {
       "bid_no": "R25BK01017065",
@@ -87078,7 +90488,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 보안"
+      ]
     },
     {
       "bid_no": "R25BK01015717",
@@ -87093,7 +90508,11 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK01011379",
@@ -87108,7 +90527,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 보안"
+      ]
     },
     {
       "bid_no": "R25BK00996624",
@@ -87123,7 +90547,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK00991063",
@@ -87138,7 +90567,12 @@
       "bid_count": 5.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "생성형·Agent",
+      "nature": "구독·라이선스",
+      "fields": [
+        "생성형·LLM"
+      ]
     },
     {
       "bid_no": "R25BK00986210",
@@ -87153,7 +90587,12 @@
       "bid_count": null,
       "second": null,
       "status": "재공고됨",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "생성형·Agent",
+      "nature": "구독·라이선스",
+      "fields": [
+        "생성형·LLM"
+      ]
     },
     {
       "bid_no": "R25BK00982190",
@@ -87168,7 +90607,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK00978893",
@@ -87193,6 +90637,11 @@
           "bizno": "5868802378",
           "ceo": "안인구"
         }
+      ],
+      "scope": "생성형·Agent",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "생성형·LLM"
       ]
     },
     {
@@ -87208,7 +90657,11 @@
       "bid_count": 4.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK00954987",
@@ -87223,7 +90676,11 @@
       "bid_count": null,
       "second": null,
       "status": "개찰 확인 필요",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "생성형·Agent",
+      "fields": [
+        "생성형·LLM"
+      ]
     },
     {
       "bid_no": "R25BK00954270",
@@ -87238,7 +90695,12 @@
       "bid_count": 2.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "생성형·Agent",
+      "fields": [
+        "생성형·LLM",
+        "AI 보안"
+      ]
     },
     {
       "bid_no": "R25BK00953221",
@@ -87253,7 +90715,13 @@
       "bid_count": 4.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "생성형·Agent",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "생성형·LLM",
+        "데이터·예측"
+      ]
     },
     {
       "bid_no": "R25BK00945565",
@@ -87268,7 +90736,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
+      ]
     },
     {
       "bid_no": "R25BK00947082",
@@ -87283,7 +90756,12 @@
       "bid_count": 3.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "생성형·Agent",
+      "fields": [
+        "생성형·LLM",
+        "AI 에이전트"
+      ]
     },
     {
       "bid_no": "R25BK00945103",
@@ -87298,7 +90776,11 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK00945166",
@@ -87313,7 +90795,11 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK00944976",
@@ -87434,6 +90920,11 @@
           "bizno": "3468601103",
           "ceo": "김지웅"
         }
+      ],
+      "scope": "생성형·Agent",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "생성형·LLM"
       ]
     },
     {
@@ -87449,7 +90940,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK00937201",
@@ -87514,6 +91010,10 @@
           "bizno": "1058811095",
           "ceo": "김남현"
         }
+      ],
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -87529,7 +91029,12 @@
       "bid_count": 11.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "생성형·Agent",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "생성형·LLM"
+      ]
     },
     {
       "bid_no": "R25BK00927070",
@@ -87544,7 +91049,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK00925839",
@@ -87559,7 +91069,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
+      ]
     },
     {
       "bid_no": "R25BK00924703",
@@ -87574,7 +91089,12 @@
       "bid_count": 3.0,
       "second": null,
       "status": "1순위",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "인프라",
+      "fields": [
+        "AI 인프라"
+      ]
     },
     {
       "bid_no": "R25BK00924221",
@@ -87589,7 +91109,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "R25BK00915370",
@@ -87604,7 +91129,12 @@
       "bid_count": 12.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "생성형·Agent",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "생성형·LLM"
+      ]
     },
     {
       "bid_no": "R25BK00915212",
@@ -87677,6 +91207,10 @@
           "bizno": "7938101852",
           "ceo": "이준호"
         }
+      ],
+      "scope": "생성형·Agent",
+      "fields": [
+        "생성형·LLM"
       ]
     },
     {
@@ -87692,7 +91226,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "R25BK00905797",
@@ -87707,7 +91246,11 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "fields": [
+        "비전·영상"
+      ]
     },
     {
       "bid_no": "R25BK00899409",
@@ -87722,7 +91265,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "생성형·Agent",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "생성형·LLM"
+      ]
     },
     {
       "bid_no": "R25BK00900718",
@@ -87737,7 +91285,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "인프라",
+      "fields": [
+        "AI 인프라"
+      ]
     },
     {
       "bid_no": "R25BK00889441",
@@ -87752,7 +91305,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK00887553",
@@ -87767,7 +91325,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "R25BK00889910",
@@ -87782,7 +91345,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
+      ]
     },
     {
       "bid_no": "R25BK00884082",
@@ -87797,7 +91365,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK00884040",
@@ -87812,7 +91385,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK00877944",
@@ -87893,6 +91471,10 @@
           "bizno": "6258700800",
           "ceo": "천정희"
         }
+      ],
+      "scope": "생성형·Agent",
+      "fields": [
+        "생성형·LLM"
       ]
     },
     {
@@ -87908,7 +91490,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
+      ]
     },
     {
       "bid_no": "R25BK00855358",
@@ -87923,7 +91510,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "R25BK00859069",
@@ -87938,7 +91530,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK00859045",
@@ -87953,7 +91550,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK00857951",
@@ -87968,7 +91570,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK00857277",
@@ -87983,7 +91590,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK00857152",
@@ -87998,7 +91610,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK00857130",
@@ -88013,7 +91630,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK00855685",
@@ -88028,7 +91650,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "R25BK00845758",
@@ -88043,7 +91670,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK00833269",
@@ -88058,7 +91690,13 @@
       "bid_count": 16.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "생성형·Agent",
+      "nature": "인프라",
+      "fields": [
+        "생성형·LLM",
+        "AI 인프라"
+      ]
     },
     {
       "bid_no": "R25BK00832855",
@@ -88073,7 +91711,11 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK00829775",
@@ -88088,7 +91730,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "R25BK00800350",
@@ -88103,7 +91750,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "R25BK00791991",
@@ -88118,7 +91770,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK00782872",
@@ -88133,7 +91790,11 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK00767738",
@@ -88148,7 +91809,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
+      ]
     },
     {
       "bid_no": "R25BK00756664",
@@ -88163,7 +91829,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "R25BK00710315",
@@ -88178,7 +91849,13 @@
       "bid_count": 2.0,
       "second": null,
       "status": "1순위",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "생성형·Agent",
+      "nature": "ISP·전략",
+      "fields": [
+        "생성형·LLM",
+        "AX·전략"
+      ]
     },
     {
       "bid_no": "R25BK00716368",
@@ -88193,7 +91870,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK00710401",
@@ -88208,7 +91890,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
+      ]
     },
     {
       "bid_no": "R25BK00710287",
@@ -88223,7 +91910,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "비전·영상"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "R25BK00697077",
@@ -88238,7 +91930,11 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK00651543",
@@ -88253,7 +91949,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "R25BK00640426",
@@ -88268,7 +91969,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "유찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "생성형·Agent",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "생성형·LLM"
+      ]
     },
     {
       "bid_no": "R25BK00629680",
@@ -88283,7 +91989,11 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK00619004",
@@ -88298,7 +92008,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK00618046",
@@ -88313,7 +92028,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
+      ]
     },
     {
       "bid_no": "R25BK00599110",
@@ -88328,7 +92048,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "운영·유지보수",
+      "fields": [
+        "데이터·예측"
+      ]
     },
     {
       "bid_no": "R25BK00580477",
@@ -88343,7 +92068,13 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측",
+        "비전·영상"
+      ]
     },
     {
       "bid_no": "R25BK00580156",
@@ -88358,7 +92089,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
+      ]
     },
     {
       "bid_no": "R25BK00579353",
@@ -88373,7 +92109,13 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측",
+        "비전·영상"
+      ]
     },
     {
       "bid_no": "R25BK00579153",
@@ -88388,7 +92130,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
+      ]
     },
     {
       "bid_no": "R25BK00576263",
@@ -88403,7 +92150,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
+      ]
     },
     {
       "bid_no": "20241241295",
@@ -88418,7 +92170,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "운영·유지보수",
+      "fields": [
+        "데이터·예측"
+      ]
     },
     {
       "bid_no": "20241238312",
@@ -88433,7 +92190,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "운영·유지보수",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20241237759",
@@ -88448,7 +92210,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20241232276",
@@ -88463,7 +92230,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "운영·유지보수",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20241230545",
@@ -88478,7 +92250,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "fields": [
+        "의료·바이오 AI",
+        "비전·영상"
+      ]
     },
     {
       "bid_no": "20241229807",
@@ -88493,7 +92270,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "운영·유지보수",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20241229551",
@@ -88508,7 +92290,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "fields": [
+        "의료·바이오 AI",
+        "비전·영상"
+      ]
     },
     {
       "bid_no": "20241203488",
@@ -88523,7 +92310,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20241200574",
@@ -88538,7 +92330,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "비전·영상"
+      ]
     },
     {
       "bid_no": "20241142285",
@@ -88553,7 +92350,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "fields": [
+        "의료·바이오 AI",
+        "비전·영상"
+      ]
     },
     {
       "bid_no": "20241134311",
@@ -88568,7 +92370,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "fields": [
+        "의료·바이오 AI",
+        "비전·영상"
+      ]
     },
     {
       "bid_no": "20241130376",
@@ -88583,7 +92390,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "운영·유지보수",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20241127168",
@@ -88598,7 +92410,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20241114063",
@@ -88613,7 +92430,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
+      ]
     },
     {
       "bid_no": "20241109245",
@@ -88628,7 +92450,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
+      ]
     },
     {
       "bid_no": "20241105097",
@@ -88643,7 +92470,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
+      ]
     },
     {
       "bid_no": "20241104757",
@@ -88658,7 +92490,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
+      ]
     },
     {
       "bid_no": "20241102456",
@@ -88673,7 +92510,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20241036164",
@@ -88688,7 +92530,11 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20241033639",
@@ -88703,7 +92549,11 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20241031835",
@@ -88718,7 +92568,11 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20241031037",
@@ -88733,7 +92587,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "운영·유지보수",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20241023706",
@@ -88748,7 +92607,12 @@
       "bid_count": 4.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "생성형·Agent",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "생성형·LLM"
+      ]
     },
     {
       "bid_no": "20241027052",
@@ -88763,7 +92627,11 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20241015648",
@@ -88778,7 +92646,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20240923206",
@@ -88793,7 +92666,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
+      ]
     },
     {
       "bid_no": "20240905277",
@@ -88808,7 +92686,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
+      ]
     },
     {
       "bid_no": "20240909086",
@@ -88823,7 +92706,13 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "ISP·전략",
+      "fields": [
+        "데이터·예측",
+        "AX·전략"
+      ]
     },
     {
       "bid_no": "20240907648",
@@ -88838,7 +92727,13 @@
       "bid_count": 5.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "생성형·Agent",
+      "nature": "인프라",
+      "fields": [
+        "생성형·LLM",
+        "AI 인프라"
+      ]
     },
     {
       "bid_no": "20240817351",
@@ -88853,7 +92748,11 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20240814144",
@@ -88868,7 +92767,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "의료·바이오 AI"
+      ]
     },
     {
       "bid_no": "20240811182",
@@ -88883,7 +92787,12 @@
       "bid_count": 9.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "생성형·Agent",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "생성형·LLM"
+      ]
     },
     {
       "bid_no": "20240805593",
@@ -88898,7 +92807,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20240800365",
@@ -88913,7 +92827,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
+      ]
     },
     {
       "bid_no": "20240735295",
@@ -88928,7 +92847,11 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20240735244",
@@ -88943,7 +92866,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
+      ]
     },
     {
       "bid_no": "20240733102",
@@ -88958,7 +92886,11 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20240732922",
@@ -88973,7 +92905,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
+      ]
     },
     {
       "bid_no": "20240731748",
@@ -88988,7 +92925,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20240721343",
@@ -89003,7 +92945,11 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20240716816",
@@ -89018,7 +92964,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
+      ]
     },
     {
       "bid_no": "20240710730",
@@ -89033,7 +92984,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "연구·교육·행사",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20240700212",
@@ -89048,7 +93004,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
+      ]
     },
     {
       "bid_no": "20240637652",
@@ -89063,7 +93024,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20240632792",
@@ -89078,7 +93044,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20240624853",
@@ -89093,7 +93064,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20240624368",
@@ -89108,7 +93084,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20240623158",
@@ -89123,7 +93104,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20240621185",
@@ -89138,7 +93124,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20240610118",
@@ -89153,7 +93144,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
+      ]
     },
     {
       "bid_no": "20240609581",
@@ -89168,7 +93164,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20240600355",
@@ -89183,7 +93184,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20240528215",
@@ -89198,7 +93204,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "디지털트윈"
+      ]
     },
     {
       "bid_no": "20240516117",
@@ -89213,7 +93224,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20240441709",
@@ -89228,7 +93244,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20240516796",
@@ -89243,7 +93264,11 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "fields": [
+        "비전·영상"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20240516019",
@@ -89258,7 +93283,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20240508734",
@@ -89273,7 +93303,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20240507167",
@@ -89288,7 +93323,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20240433448",
@@ -89303,7 +93343,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20240440515",
@@ -89318,7 +93363,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20240409676",
@@ -89333,7 +93383,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20240437463",
@@ -89348,7 +93403,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20240422286",
@@ -89363,7 +93423,11 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20240419764",
@@ -89378,7 +93442,11 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "fields": [
+        "비전·영상"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20240400615",
@@ -89393,7 +93461,12 @@
       "bid_count": 5.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "생성형·Agent",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "생성형·LLM"
+      ]
     },
     {
       "bid_no": "20240347480",
@@ -89408,7 +93481,11 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20240334630",
@@ -89423,7 +93500,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20240313009",
@@ -89438,7 +93520,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "연구·교육·행사",
+      "fields": [
+        "AI 에이전트"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20240303803",
@@ -89453,7 +93540,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20240241140",
@@ -89468,7 +93560,11 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20240213186",
@@ -89483,7 +93579,13 @@
       "bid_count": 6.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "생성형·Agent",
+      "nature": "ISP·전략",
+      "fields": [
+        "생성형·LLM",
+        "AX·전략"
+      ]
     },
     {
       "bid_no": "20240202940",
@@ -89498,7 +93600,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "운영·유지보수",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20240201266",
@@ -89513,7 +93620,11 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20240124325",
@@ -89528,7 +93639,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20240122339",
@@ -89543,7 +93659,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20240121304",
@@ -89558,7 +93679,12 @@
       "bid_count": 8.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "의료·바이오 AI"
+      ]
     },
     {
       "bid_no": "20231238254",
@@ -89573,7 +93699,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20231235725",
@@ -89588,7 +93719,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "운영·유지보수",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20231234728",
@@ -89603,7 +93739,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20231209048",
@@ -89618,7 +93759,11 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20231207471",
@@ -89633,7 +93778,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20231205243",
@@ -89648,7 +93798,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20231204679",
@@ -89663,7 +93818,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20231112351",
@@ -89678,7 +93838,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "운영·유지보수",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20231034746",
@@ -89693,7 +93858,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "생성형·Agent",
+      "nature": "운영·유지보수",
+      "fields": [
+        "생성형·LLM"
+      ]
     },
     {
       "bid_no": "20231025884",
@@ -89708,7 +93878,11 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20231021762",
@@ -89723,7 +93897,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "운영·유지보수",
+      "fields": [
+        "데이터·예측"
+      ]
     },
     {
       "bid_no": "20231007709",
@@ -89738,7 +93917,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20231006263",
@@ -89753,7 +93937,12 @@
       "bid_count": 5.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20230919568",
@@ -89768,7 +93957,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20230902374",
@@ -89783,7 +93977,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20230834266",
@@ -89798,7 +93997,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20230817352",
@@ -89813,7 +94017,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "운영·유지보수",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20230816698",
@@ -89828,7 +94037,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "비전·영상"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20230807420",
@@ -89843,7 +94057,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20230807018",
@@ -89858,7 +94077,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20230801548",
@@ -89873,7 +94097,11 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20230734480",
@@ -89888,7 +94116,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "비전·영상"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20230721128",
@@ -89903,7 +94136,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20230716554",
@@ -89918,7 +94156,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20230711697",
@@ -89933,7 +94176,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "비전·영상"
+      ]
     },
     {
       "bid_no": "20230706947",
@@ -89948,7 +94196,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "운영·유지보수",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20230706336",
@@ -89963,7 +94216,11 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20230637020",
@@ -89978,7 +94235,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20230637202",
@@ -89993,7 +94255,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20230637133",
@@ -90008,7 +94275,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20230632705",
@@ -90023,7 +94295,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20230621712",
@@ -90038,7 +94315,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20230610326",
@@ -90053,7 +94335,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20230608313",
@@ -90068,7 +94355,11 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20230601465",
@@ -90083,7 +94374,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20230529278",
@@ -90098,7 +94394,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "비전·영상"
+      ]
     },
     {
       "bid_no": "20230544113",
@@ -90113,7 +94414,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20230533979",
@@ -90128,7 +94434,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20230530291",
@@ -90143,7 +94454,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "운영·유지보수",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20230530211",
@@ -90158,7 +94474,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20230528050",
@@ -90173,7 +94494,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20230527494",
@@ -90188,7 +94514,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20230517526",
@@ -90203,7 +94534,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20230520777",
@@ -90218,7 +94554,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
+      ]
     },
     {
       "bid_no": "20230517991",
@@ -90233,7 +94574,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20230517417",
@@ -90248,7 +94594,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20230514362",
@@ -90263,7 +94614,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20230512926",
@@ -90278,7 +94634,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20230511144",
@@ -90293,7 +94654,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20230509426",
@@ -90308,7 +94674,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20230506613",
@@ -90323,7 +94694,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20230504498",
@@ -90338,7 +94714,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20230502197",
@@ -90353,7 +94734,12 @@
       "bid_count": 2.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "생성형·Agent",
+      "nature": "연구·교육·행사",
+      "fields": [
+        "생성형·LLM"
+      ]
     },
     {
       "bid_no": "20230438174",
@@ -90368,7 +94754,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20230432537",
@@ -90383,7 +94774,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "ISP·전략",
+      "fields": [
+        "AX·전략"
+      ]
     },
     {
       "bid_no": "20230413425",
@@ -90398,7 +94794,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "운영·유지보수",
+      "fields": [
+        "데이터·예측"
+      ]
     },
     {
       "bid_no": "20230413631",
@@ -90413,7 +94814,12 @@
       "bid_count": 2.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20230410386",
@@ -90428,7 +94834,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20230405627",
@@ -90443,7 +94854,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20230400830",
@@ -90458,7 +94874,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20230354068",
@@ -90473,7 +94894,13 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "생성형·Agent",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "생성형·LLM",
+        "음성·언어·문서"
+      ]
     },
     {
       "bid_no": "20230403174",
@@ -90488,7 +94915,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20230355312",
@@ -90503,7 +94935,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20230337459",
@@ -90518,7 +94955,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20230332676",
@@ -90533,7 +94975,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20230320038",
@@ -90548,7 +94995,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "ISP·전략",
+      "fields": [
+        "AX·전략"
+      ]
     },
     {
       "bid_no": "20230310583",
@@ -90563,7 +95015,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20230300941",
@@ -90578,7 +95035,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20230301727",
@@ -90593,7 +95055,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "운영·유지보수",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20230228715",
@@ -90608,7 +95075,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "운영·유지보수",
+      "fields": [
+        "데이터·예측"
+      ]
     },
     {
       "bid_no": "20230130983",
@@ -90623,7 +95095,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "20230129086",
@@ -90638,7 +95115,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "20230125061",
@@ -90653,7 +95135,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "운영·유지보수",
+      "fields": [
+        "데이터·예측"
+      ]
     },
     {
       "bid_no": "20230116993",
@@ -90668,7 +95155,12 @@
       "bid_count": null,
       "second": null,
       "status": "낙찰 미수집",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "운영·유지보수",
+      "fields": [
+        "AI 일반"
+      ],
+      "scope": "AI SW 확대"
     },
     {
       "bid_no": "R26BK01693614",
@@ -90693,6 +95185,11 @@
           "bizno": "1078172385",
           "ceo": "이득춘"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 보안"
       ]
     },
     {
@@ -90718,6 +95215,10 @@
           "bizno": "1388125116",
           "ceo": "최병진"
         }
+      ],
+      "scope": "생성형·Agent",
+      "fields": [
+        "생성형·LLM"
       ]
     },
     {
@@ -90751,6 +95252,11 @@
           "bizno": "1048122547",
           "ceo": "윤찬의"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -90872,6 +95378,11 @@
           "bizno": "4638101723",
           "ceo": "표성수"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -90905,6 +95416,11 @@
           "bizno": "1028142945",
           "ceo": "박윤영"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -90946,6 +95462,10 @@
           "bizno": "1108128774",
           "ceo": "이준희"
         }
+      ],
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -90971,6 +95491,10 @@
           "bizno": "6218196850",
           "ceo": "김호원"
         }
+      ],
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -91012,6 +95536,12 @@
           "bizno": "1208767951",
           "ceo": "김대훈"
         }
+      ],
+      "scope": "생성형·Agent",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "생성형·LLM",
+        "AI 보안"
       ]
     },
     {
@@ -91045,6 +95575,11 @@
           "bizno": "1468701247",
           "ceo": "최길주"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -91070,6 +95605,11 @@
           "bizno": "3148200884",
           "ceo": "신석민"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
       ]
     },
     {
@@ -91119,6 +95659,10 @@
           "bizno": "2298103214",
           "ceo": "정상원"
         }
+      ],
+      "scope": "생성형·Agent",
+      "fields": [
+        "생성형·LLM"
       ]
     },
     {
@@ -91192,6 +95736,11 @@
           "bizno": "2288105280",
           "ceo": "김정범"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -91217,6 +95766,11 @@
           "bizno": "1048137225",
           "ceo": "정재헌"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -91250,6 +95804,11 @@
           "bizno": "1058796855",
           "ceo": "조당훈"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -91307,6 +95866,10 @@
           "bizno": "3148171228",
           "ceo": "황광모"
         }
+      ],
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "비전·영상"
       ]
     },
     {
@@ -91332,6 +95895,11 @@
           "bizno": "1168119477",
           "ceo": "현신균"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -91365,6 +95933,10 @@
           "bizno": "1108128774",
           "ceo": "이준희"
         }
+      ],
+      "nature": "ISP·전략",
+      "fields": [
+        "AX·전략"
       ]
     },
     {
@@ -91390,6 +95962,10 @@
           "bizno": "1108128774",
           "ceo": "이준희"
         }
+      ],
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -91423,6 +95999,11 @@
           "bizno": "1098173212",
           "ceo": "위장복"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -91464,6 +96045,11 @@
           "bizno": "1208821627",
           "ceo": "함기호"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "운영·유지보수",
+      "fields": [
+        "AI 인프라"
       ]
     },
     {
@@ -91505,6 +96091,11 @@
           "bizno": "5698800792",
           "ceo": "손진호"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -91546,6 +96137,12 @@
           "bizno": "1298629753",
           "ceo": "박양찬"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측",
+        "의료·바이오 AI"
       ]
     },
     {
@@ -91595,6 +96192,11 @@
           "bizno": "1388150425",
           "ceo": "김창환"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "인프라",
+      "fields": [
+        "AI 인프라"
       ]
     },
     {
@@ -91636,6 +96238,11 @@
           "bizno": "1208186581",
           "ceo": "이남작"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -91677,6 +96284,11 @@
           "bizno": "1108210500",
           "ceo": "홍종일"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -91718,6 +96330,11 @@
           "bizno": "2298801044",
           "ceo": "김대환"
         }
+      ],
+      "scope": "생성형·Agent",
+      "nature": "연구·교육·행사",
+      "fields": [
+        "생성형·LLM"
       ]
     },
     {
@@ -91759,6 +96376,11 @@
           "bizno": "1298639907",
           "ceo": "이해석"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -91904,6 +96526,11 @@
           "bizno": "1108137628",
           "ceo": "김동식"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
       ]
     },
     {
@@ -91937,6 +96564,11 @@
           "bizno": "6518800878",
           "ceo": "임영환"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "운영·유지보수",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -91986,6 +96618,11 @@
           "bizno": "1208602209",
           "ceo": "박상호"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -92051,6 +96688,11 @@
           "bizno": "4278602060",
           "ceo": "이장원"
         }
+      ],
+      "scope": "생성형·Agent",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "생성형·LLM"
       ]
     },
     {
@@ -92156,6 +96798,10 @@
           "bizno": "1308213573",
           "ceo": "이용권"
         }
+      ],
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -92213,6 +96859,11 @@
           "bizno": "1058716808",
           "ceo": "손영호"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -92262,6 +96913,11 @@
           "bizno": "2328800982",
           "ceo": "이주완"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "인프라",
+      "fields": [
+        "AI 인프라"
       ]
     },
     {
@@ -92295,6 +96951,10 @@
           "bizno": "2158620276",
           "ceo": "박진석"
         }
+      ],
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -92336,6 +96996,11 @@
           "bizno": "3148600301",
           "ceo": "김영천"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -92369,6 +97034,11 @@
           "bizno": "6278101744",
           "ceo": "이상준"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -92410,6 +97080,11 @@
           "bizno": "4028162555",
           "ceo": "김병기"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "비전·영상"
       ]
     },
     {
@@ -92443,6 +97118,11 @@
           "bizno": "2118697088",
           "ceo": "조창제"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -92540,6 +97220,11 @@
           "bizno": "2028167042",
           "ceo": "이세영"
         }
+      ],
+      "scope": "생성형·Agent",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "생성형·LLM"
       ]
     },
     {
@@ -92581,6 +97266,11 @@
           "bizno": "1058786298",
           "ceo": "이춘식"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -92614,6 +97304,11 @@
           "bizno": "4998802623",
           "ceo": "이지환"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
       ]
     },
     {
@@ -92639,6 +97334,10 @@
           "bizno": "1028142945",
           "ceo": "김영섭"
         }
+      ],
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -92654,7 +97353,11 @@
       "bid_count": 1.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "운영·유지보수",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK01233611",
@@ -92669,7 +97372,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "인프라",
+      "fields": [
+        "AI 인프라"
+      ]
     },
     {
       "bid_no": "R25BK01233449",
@@ -92766,6 +97474,10 @@
           "bizno": "6138114177",
           "ceo": "오상석"
         }
+      ],
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -92815,6 +97527,11 @@
           "bizno": "2208876854",
           "ceo": "한상진"
         }
+      ],
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
       ]
     },
     {
@@ -92830,7 +97547,12 @@
       "bid_count": 1.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK01109435",
@@ -92943,6 +97665,11 @@
           "bizno": "4968602770",
           "ceo": "김래환"
         }
+      ],
+      "scope": "생성형·Agent",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "생성형·LLM"
       ]
     },
     {
@@ -92958,7 +97685,12 @@
       "bid_count": 2.0,
       "second": "베스핀글로벌",
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK00756147",
@@ -92973,7 +97705,11 @@
       "bid_count": 3.0,
       "second": "엘지씨엔에스",
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "생성형·Agent",
+      "fields": [
+        "생성형·LLM"
+      ]
     },
     {
       "bid_no": "R25BK00753599",
@@ -92988,7 +97724,11 @@
       "bid_count": 2.0,
       "second": "가온아이",
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ]
     },
     {
       "bid_no": "R25BK00751206",
@@ -93003,7 +97743,12 @@
       "bid_count": 5.0,
       "second": "베스핀글로벌",
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "생성형·Agent",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "생성형·LLM"
+      ]
     },
     {
       "bid_no": "20241222141",
@@ -93018,7 +97763,12 @@
       "bid_count": 2.0,
       "second": "케이사인",
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
+      ]
     },
     {
       "bid_no": "20230927836",
@@ -93033,7 +97783,12 @@
       "bid_count": 3.0,
       "second": null,
       "status": "낙찰",
-      "source": "bootstrap"
+      "source": "bootstrap",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "데이터·예측"
+      ]
     }
   ],
   "stats": {
@@ -93055,12 +97810,13 @@
       "updated": 146,
       "lookups": 0
     },
-    "with_bidders": 351,
+    "with_bidders": 368,
     "bidders_enrich": {
-      "targets": 120,
-      "fetched": 120,
-      "updated": 81,
-      "empty": 39,
+      "targets": 30,
+      "fetched": 0,
+      "updated": 0,
+      "empty": 0,
+      "skipped": 8,
       "bootstrap_upserts": 0
     },
     "budget_sanitized": 27
