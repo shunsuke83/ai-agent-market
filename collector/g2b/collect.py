@@ -258,7 +258,7 @@ def _competitor_alias_index(repo_root: Path) -> dict[str, str]:
 
 def cmd_enrich_bidders(args: argparse.Namespace) -> int:
     """Attach per-notice bidder ranking lists via OpengCompt (투찰업체별)."""
-    from .client import G2BClient, G2BError
+    from .client import G2BClient, G2BError, redact_secrets
     from .competitors import match_competitor
 
     out = Path(args.out)
@@ -371,7 +371,7 @@ def cmd_enrich_bidders(args: argparse.Namespace) -> int:
             rows = client.fetch_bidders_by_bid(n["bid_no"], n.get("bid_ord"))
         except (G2BError, Exception) as e:
             skipped += 1
-            print(f"  skip {n.get('bid_no')}: {e}")
+            print(f"  skip {n.get('bid_no')}: {redact_secrets(str(e))}")
             if skipped >= 8:
                 print("  too many skips — checkpoint and stop")
                 _checkpoint()
