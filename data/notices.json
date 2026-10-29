@@ -1,12 +1,52 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-28T09:33:33Z",
+  "generated_at": "2026-10-29T00:33:48Z",
   "mode": "g2b_api",
   "range": {
-    "since": "2026-09-28",
-    "until": "2026-10-28"
+    "since": "2026-10-15",
+    "until": "2026-10-29"
   },
   "notices": [
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01797851",
+      "bid_ord": "000",
+      "notice_date": "2026-10-29",
+      "open_date": "2026-10-29",
+      "org": "충청북도교육청",
+      "title": "학교 AI 비상벨 시스템 도입",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "budget_eok": 1.2,
+      "presmpt_eok": 1.09,
+      "contract_method": "수의계약",
+      "ntce_kind": "등록공고",
+      "biz": "thng",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01797851&bidPbancOrd=000"
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01797584",
+      "bid_ord": "000",
+      "notice_date": "2026-10-28",
+      "open_date": "2026-11-03",
+      "org": "계명대학교 산학협력단",
+      "title": "AI·로봇 인증체계 개발 및 전문가 양성 자격취득 교육 운영",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "연구·교육·행사",
+      "budget_eok": 0.8,
+      "presmpt_eok": 0.73,
+      "contract_method": "일반경쟁",
+      "ntce_kind": "등록공고",
+      "biz": "servc",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01797584&bidPbancOrd=000"
+    },
     {
       "source": "g2b_api",
       "bid_no": "R26BK01797427",
@@ -107,6 +147,26 @@
       "ntce_kind": "재공고",
       "biz": "thng",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01797134&bidPbancOrd=000"
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01797064",
+      "bid_ord": "000",
+      "notice_date": "2026-10-28",
+      "open_date": "2026-11-10",
+      "org": "문화체육관광부 한국예술종합학교",
+      "title": "2026년 인간-다중 AI 에이전트 협업 기반 예술창작 커리큘럼 개발 실증 연구 용역",
+      "scope": "생성형·Agent",
+      "fields": [
+        "AI 에이전트"
+      ],
+      "nature": "시스템 구축·고도화",
+      "budget_eok": 1.0,
+      "presmpt_eok": 0.91,
+      "contract_method": "제한경쟁",
+      "ntce_kind": "재공고",
+      "biz": "servc",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01797064&bidPbancOrd=000"
     },
     {
       "source": "g2b_api",
@@ -227,6 +287,27 @@
       "ntce_kind": "등록공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01796586&bidPbancOrd=000"
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01796540",
+      "bid_ord": "000",
+      "notice_date": "2026-10-28",
+      "open_date": "2026-11-02",
+      "org": "(주)리빗",
+      "title": "AI OCR 고도화 기술 컨설팅 용역",
+      "scope": "AI SW 확대",
+      "fields": [
+        "음성·언어·문서",
+        "AX·전략"
+      ],
+      "nature": "ISP·전략",
+      "budget_eok": 0.55,
+      "presmpt_eok": 0.5,
+      "contract_method": "일반경쟁",
+      "ntce_kind": "등록공고",
+      "biz": "servc",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01796540&bidPbancOrd=000"
     },
     {
       "source": "g2b_api",
@@ -19523,13 +19604,13 @@
     }
   ],
   "stats": {
-    "raw": 978,
-    "classified": 974,
-    "stored": 974,
+    "raw": 431,
+    "classified": 428,
+    "stored": 978,
     "band": 53,
     "scope": {
-      "생성형·Agent": 77,
-      "AI SW 확대": 897
+      "생성형·Agent": 78,
+      "AI SW 확대": 900
     }
   }
 }
