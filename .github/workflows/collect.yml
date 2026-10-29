@@ -51,10 +51,14 @@ jobs:
       - name: Enrich bidder rankings (OpengCompt)
         env:
           DATA_GO_KR_SERVICE_KEY: ${{ secrets.DATA_GO_KR_SERVICE_KEY }}
-        run: python -m g2b.collect enrich-bidders --limit 200
+        run: python -m g2b.collect enrich-bidders --include-bootstrap --core-only --limit 400
         working-directory: collector
 
-      - name: Render band.html + awards.html + index stamp
+      - name: Sanitize budgets stored as won
+        run: python -m g2b.collect sanitize-budgets
+        working-directory: collector
+
+      - name: Render band + awards + index + competitors + reports
         run: python -m g2b.collect render all
         working-directory: collector
 
@@ -66,7 +70,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/bootstrap.json data/notices.json band.html awards.html index.html
+          git add data/bootstrap.json data/notices.json data/reports.json \
+            reports.json reports/ \
+            band.html awards.html index.html competitors.html
           if git diff --staged --quiet; then
             echo "No data changes."
           else

@@ -16,6 +16,7 @@ from .normalize import (
     merge_by_bid,
     normalize_award_item,
     normalize_bid_item,
+    sanitize_notice_money_fields,
     sort_notices,
     utc_now_iso,
 )
@@ -203,9 +204,62 @@ def cmd_enrich_awards(args: argparse.Namespace) -> int:
     return 0
 
 
+def _notice_key(n: dict[str, Any]) -> str:
+    return f"{n.get('bid_no')}-{n.get('bid_ord') or '000'}"
+
+
+def _bootstrap_award_stubs(repo_root: Path) -> list[dict[str, Any]]:
+    """Award rows from bootstrap.html extract (band + large) as notice stubs."""
+    from .classify import classify_title
+
+    path = repo_root / "data" / "bootstrap.json"
+    if not path.exists():
+        return []
+    boot = json.loads(path.read_text(encoding="utf-8"))
+    stubs: list[dict[str, Any]] = []
+    for section in ("large_awards", "band_notices"):
+        for row in boot.get(section) or []:
+            if not row.get("bid_no"):
+                continue
+            title = row.get("title") or ""
+            labels = classify_title(title) if title else {}
+            stubs.append(
+                {
+                    "bid_no": row.get("bid_no"),
+                    "bid_ord": row.get("bid_ord") or "000",
+                    "title": title or None,
+                    "org": row.get("org"),
+                    "open_date": row.get("open_date") or row.get("notice_date"),
+                    "notice_date": row.get("notice_date"),
+                    "budget_eok": row.get("budget_eok"),
+                    "award_amount_eok": row.get("award_amount_eok")
+                    or row.get("win_amount_eok"),
+                    "winner": row.get("winner"),
+                    "bid_count": row.get("bid_count"),
+                    "second": row.get("second"),
+                    "status": row.get("status") or ("낙찰" if row.get("winner") else None),
+                    "scope": row.get("scope") or labels.get("scope"),
+                    "fields": row.get("fields") or labels.get("fields"),
+                    "nature": row.get("nature") or labels.get("nature"),
+                    "source": "bootstrap",
+                }
+            )
+    return stubs
+
+
+def _competitor_alias_index(repo_root: Path) -> dict[str, str]:
+    try:
+        from .competitors import build_alias_index, load_competitors_config
+
+        return build_alias_index(load_competitors_config())
+    except Exception:
+        return {}
+
+
 def cmd_enrich_bidders(args: argparse.Namespace) -> int:
     """Attach per-notice bidder ranking lists via OpengCompt (투찰업체별)."""
-    from .client import G2BClient, G2BError
+    from .client import G2BClient, G2BError, redact_secrets
+    from .competitors import match_competitor
 
     out = Path(args.out)
     if not out.exists():
@@ -219,72 +273,137 @@ def cmd_enrich_bidders(args: argparse.Namespace) -> int:
 
     payload = json.loads(out.read_text(encoding="utf-8"))
     notices: list[dict[str, Any]] = list(payload.get("notices") or [])
+    by_key = {_notice_key(n): n for n in notices if n.get("bid_no")}
+
+    upserted = 0
+    if args.include_bootstrap:
+        for stub in _bootstrap_award_stubs(ROOT):
+            key = _notice_key(stub)
+            if key in by_key:
+                # Fill missing award / classify fields on existing notice
+                cur = by_key[key]
+                for fld in (
+                    "winner",
+                    "award_amount_eok",
+                    "budget_eok",
+                    "second",
+                    "bid_count",
+                    "open_date",
+                    "title",
+                    "org",
+                    "scope",
+                    "fields",
+                    "nature",
+                ):
+                    if stub.get(fld) and not cur.get(fld):
+                        cur[fld] = stub[fld]
+            else:
+                by_key[key] = stub
+                upserted += 1
+        notices = list(by_key.values())
+
+    from .reports import is_core
+
+    alias_index = _competitor_alias_index(ROOT)
     today = date.today().isoformat()
-    targets = [
-        n
-        for n in notices
-        if n.get("bid_no")
-        and n.get("open_date")
-        and n["open_date"] <= today
-        and (args.force or not n.get("bidders"))
-    ]
-    # Prefer notices that already have a winner / bid_count (opened), newest first
+
+    def _is_target(n: dict[str, Any]) -> bool:
+        if not n.get("bid_no"):
+            return False
+        open_d = n.get("open_date") or n.get("notice_date")
+        if open_d and str(open_d) > today:
+            return False
+        if getattr(args, "core_only", False) and not is_core(n):
+            return False
+        if n.get("bidders"):
+            return bool(args.force)
+        if n.get("bidders_empty") and not args.force:
+            return False
+        return True
+
+    targets = [n for n in notices if _is_target(n)]
+
+    # Priority: competitor win → core AI → has winner → newest
     targets.sort(key=lambda n: n.get("open_date") or "", reverse=True)
-    targets.sort(key=lambda n: 0 if n.get("winner") or n.get("bid_count") else 1)
+    targets.sort(
+        key=lambda n: (
+            0 if match_competitor(n.get("winner"), alias_index) else 1,
+            0 if is_core(n) else 1,
+            0 if (n.get("winner") or n.get("bid_count")) else 1,
+        )
+    )
     if args.limit is not None:
         targets = targets[: args.limit]
 
-    print(f"Enrich bidders for {len(targets)} notices …")
+    print(
+        f"Enrich bidders for {len(targets)} notices "
+        f"(bootstrap_upserts={upserted}, core_only={bool(getattr(args, 'core_only', False))}) …"
+    )
     updated = 0
     fetched = 0
     empty = 0
-    target_keys = {
-        f"{n.get('bid_no')}-{n.get('bid_ord') or '000'}" for n in targets
-    }
-    out_notices: list[dict[str, Any]] = []
-    for n in notices:
-        key = f"{n.get('bid_no')}-{n.get('bid_ord') or '000'}"
-        if key not in target_keys:
-            out_notices.append(n)
-            continue
+    skipped = 0
+    # Mutate in place by key so we can checkpoint mid-run
+    by_live = {_notice_key(n): n for n in notices if n.get("bid_no")}
+    # Preserve notices without bid_no
+    extras = [n for n in notices if not n.get("bid_no")]
+
+    def _checkpoint() -> None:
+        payload["notices"] = sort_notices(list(by_live.values()) + extras)
+        payload["generated_at"] = utc_now_iso()
+        stats = payload.setdefault("stats", {})
+        stats["with_bidders"] = sum(1 for n in payload["notices"] if n.get("bidders"))
+        stats["bidders_enrich"] = {
+            "targets": len(targets),
+            "fetched": fetched,
+            "updated": updated,
+            "empty": empty,
+            "skipped": skipped,
+            "bootstrap_upserts": upserted,
+        }
+        out.write_text(
+            json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+        )
+
+    for n in targets:
+        key = _notice_key(n)
         try:
             rows = client.fetch_bidders_by_bid(n["bid_no"], n.get("bid_ord"))
-        except G2BError as e:
-            print(f"  skip {n.get('bid_no')}: {e}")
-            out_notices.append(n)
+        except (G2BError, Exception) as e:
+            skipped += 1
+            print(f"  skip {n.get('bid_no')}: {redact_secrets(str(e))}")
+            if skipped >= 8:
+                print("  too many skips — checkpoint and stop")
+                _checkpoint()
+                break
             continue
         fetched += 1
         if not rows:
             empty += 1
-            out_notices.append(n)
-            continue
-        merged = apply_bidders_to_notice(n, rows)
-        if merged.get("bidders"):
-            updated += 1
-        out_notices.append(merged)
+            marked = dict(n)
+            marked["bidders_empty"] = True
+            by_live[key] = marked
+        else:
+            merged = apply_bidders_to_notice(n, rows)
+            merged.pop("bidders_empty", None)
+            by_live[key] = merged
+            if merged.get("bidders"):
+                updated += 1
         if fetched % 25 == 0:
             print(f"  … {fetched}/{len(targets)} fetched, updated={updated}")
+            _checkpoint()
 
-    out_notices = sort_notices(out_notices)
-    payload["notices"] = out_notices
-    payload["generated_at"] = utc_now_iso()
-    stats = payload.setdefault("stats", {})
-    stats["with_bidders"] = sum(1 for n in out_notices if n.get("bidders"))
-    stats["bidders_enrich"] = {
-        "targets": len(targets),
-        "fetched": fetched,
-        "updated": updated,
-        "empty": empty,
-    }
-    out.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    _checkpoint()
     print(
         json.dumps(
             {
                 "path": str(out),
-                "with_bidders": stats["with_bidders"],
+                "with_bidders": payload["stats"]["with_bidders"],
                 "updated": updated,
                 "fetched": fetched,
                 "empty": empty,
+                "skipped": skipped,
+                "bootstrap_upserts": upserted,
             },
             ensure_ascii=False,
         )
@@ -300,12 +419,38 @@ def cmd_classify(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_sanitize_budgets(args: argparse.Namespace) -> int:
+    """Repair budget/award fields still stored in 원 instead of 억."""
+    out = Path(args.out)
+    if not out.exists():
+        print(f"error: {out} not found", file=sys.stderr)
+        return 2
+    payload = json.loads(out.read_text(encoding="utf-8"))
+    notices = list(payload.get("notices") or [])
+    fixed_n = 0
+    out_notices: list[dict[str, Any]] = []
+    for n in notices:
+        cleaned, changed = sanitize_notice_money_fields(n)
+        if changed:
+            fixed_n += 1
+        out_notices.append(cleaned)
+    payload["notices"] = sort_notices(out_notices)
+    payload["generated_at"] = utc_now_iso()
+    stats = payload.setdefault("stats", {})
+    stats["budget_sanitized"] = fixed_n
+    out.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(json.dumps({"path": str(out), "fixed": fixed_n, "total": len(out_notices)}))
+    return 0
+
+
 def cmd_render(args: argparse.Namespace) -> int:
+    from .competitors import render_competitors_page
     from .render import render_awards_page, render_band_page, render_index_stamp
+    from .reports import render_reports
 
     targets = args.target
     if "all" in targets:
-        targets = ["band", "awards", "index"]
+        targets = ["band", "awards", "index", "competitors", "reports"]
     summary: dict[str, Any] = {}
     if "band" in targets:
         summary["band"] = render_band_page(ROOT)
@@ -313,6 +458,10 @@ def cmd_render(args: argparse.Namespace) -> int:
         summary["awards"] = render_awards_page(ROOT)
     if "index" in targets:
         summary["index"] = render_index_stamp(ROOT)
+    if "competitors" in targets:
+        summary["competitors"] = render_competitors_page(ROOT)
+    if "reports" in targets:
+        summary["reports"] = render_reports(ROOT)
     print(json.dumps(summary, ensure_ascii=False, indent=2))
     return 0
 
@@ -386,20 +535,37 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Re-fetch even when bidders already present",
     )
+    eb.add_argument(
+        "--include-bootstrap",
+        action="store_true",
+        help="Upsert bootstrap band/large awards into notices, then enrich (competitor wins first)",
+    )
+    eb.add_argument(
+        "--core-only",
+        action="store_true",
+        help="Only enrich core AI natures (구축·ISP·구독·운영)",
+    )
     eb.set_defaults(func=cmd_enrich_bidders)
 
     k = sub.add_parser("classify", help="Classify a single title")
     k.add_argument("title")
     k.set_defaults(func=cmd_classify)
 
+    sb = sub.add_parser(
+        "sanitize-budgets",
+        help="Convert budget/award fields wrongly stored as 원 into 억",
+    )
+    sb.add_argument("--out", default=str(DATA / "notices.json"))
+    sb.set_defaults(func=cmd_sanitize_budgets)
+
     r = sub.add_parser(
         "render",
-        help="Render static HTML from data/*.json (band + awards + index)",
+        help="Render static HTML from data/*.json (band + awards + index + competitors + reports)",
     )
     r.add_argument(
         "target",
         nargs="+",
-        choices=["band", "awards", "index", "all"],
+        choices=["band", "awards", "index", "competitors", "reports", "all"],
         help="What to render",
     )
     r.set_defaults(func=cmd_render)

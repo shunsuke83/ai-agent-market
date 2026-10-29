@@ -23,7 +23,8 @@
 | 입찰공고정보서비스 | [data.go.kr/15129394](https://www.data.go.kr/data/15129394/openapi.do) | 공고 검색 (`*PPSSrch`) |
 | 낙찰정보서비스 | [data.go.kr/15129397](https://www.data.go.kr/data/15129397/openapi.do) | 개찰·낙찰 (`winner`/`bid_count`/`award_amount_eok`) |
 
-환경변수: `DATA_GO_KR_SERVICE_KEY` (또는 `SERVICE_KEY`).
+환경변수: `DATA_GO_KR_SERVICE_KEY` (또는 `SERVICE_KEY`).  
+키 재발급: [`docs/key-rotation.md`](docs/key-rotation.md)
 
 ## 사용법
 
@@ -40,25 +41,45 @@ python -m g2b.collect classify "생성형 AI 플랫폼 구축"
 # 3) 나라장터 수집 + 낙찰 병합 (키 필요)
 export DATA_GO_KR_SERVICE_KEY='발급키'
 python -m g2b.collect collect --days 30 --all-budgets --out ../data/notices.json
+# 예산·낙찰금액이 원으로 남아 있으면 억으로 보정:
+python -m g2b.collect sanitize-budgets
+
 # 기존 파일만 낙찰 / 투찰업체 보강:
 # python -m g2b.collect enrich-awards --days 120 --lookup-missing
 # python -m g2b.collect enrich-bidders --limit 200
 
-# 4) HTML 렌더 (band + awards + index)
+# 4) HTML 렌더 (band + awards + index + competitors)
 python -m g2b.collect render all
+# 경쟁사 KPI만: python -m g2b.collect render competitors
 ```
 
-GitHub Actions: `.github/workflows/collect.yml` — secret `DATA_GO_KR_SERVICE_KEY` 가 있을 때 매주 수집(낙찰 포함) → `band.html`/`awards.html`/`index.html` 렌더 → 커밋.
+GitHub Actions: `.github/workflows/collect.yml` — secret `DATA_GO_KR_SERVICE_KEY` 가 있을 때 매주 수집(낙찰 포함) → 페이지 렌더 → 커밋.
 
 ## 렌더 범위
 
 - `band.html` 공고별 결과 테이블 (+ 상단 공고 건수·예산 합계 스탯)
 - `awards.html` 30억+ 낙찰 · 수주 상위 · 연도별 · 개찰 확인 필요
 - `index.html` `최종 갱신` 스탬프
+- `competitors.html` 한눈에 보기 KPI + 상세 실적 수치 (`competitors.yaml` 별칭 매칭)
+  - 낙찰·금액: notices ∪ bootstrap 낙찰 집계 (시드보다 줄이지 않음)
+  - 투찰: OpengCompt `bidders[]` 실측 (`max(시드, live_bids, 낙찰)`; 커버리지 증가 시 시드 초과 가능)
+  - `enrich-bidders --include-bootstrap`: bootstrap 낙찰 공고를 notices에 upsert 후 경쟁사 낙찰 우선 보강
 - 시드: `data/bootstrap.json` ∪ `data/notices.json`
+
+## 리포트
+
+```bash
+python -m g2b.collect render reports   # weekly + monthly + reports/index
+```
+
+월간「이번 달 투찰 참여 업체」는 OpengCompt `bidders[]` 집계(빈 업체명 제외).
+
+```bash
+# core AI 공고 투찰목록 우선 보강 (시드 floor 해제 임계: core 커버리지 ≥ 75%)
+python -m g2b.collect enrich-bidders --include-bootstrap --core-only --limit 400
+```
 
 ## 아직 안 하는 것
 
-- 경쟁사 투찰 KPI를 OpengCompt로 전량 재집계(시드 병합은 competitors KPI PR)
-- 주·월간 리포트 HTML 재생성 (별도 Phase C 브랜치)
 - 경쟁사 프로필 문단 (편집 콘텐츠)
+- 키 재발급 자체는 소유자가 data.go.kr + GitHub secret에서 수행 ([key-rotation.md](docs/key-rotation.md))

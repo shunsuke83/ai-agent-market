@@ -1,11 +1,14 @@
 from __future__ import annotations
 
 import os
+import re
 import time
 from datetime import date, datetime, timedelta
 from typing import Any, Iterator
 
 import requests
+
+_SERVICE_KEY_RE = re.compile(r"(serviceKey=)([^&\s]+)", re.IGNORECASE)
 
 # Public Data Portal endpoints (조달청 나라장터, 2024+ gateway paths)
 BID_BASE = "https://apis.data.go.kr/1230000/ad/BidPublicInfoService"
@@ -49,6 +52,13 @@ class G2BError(RuntimeError):
     pass
 
 
+def redact_secrets(text: str | None) -> str:
+    """Strip serviceKey query values from log/exception text."""
+    if not text:
+        return ""
+    return _SERVICE_KEY_RE.sub(r"\1***", str(text))
+
+
 def service_key() -> str:
     key = os.environ.get("DATA_GO_KR_SERVICE_KEY") or os.environ.get("SERVICE_KEY") or ""
     if not key:
@@ -79,8 +89,13 @@ def month_windows(start: date, end: date) -> Iterator[tuple[date, date]]:
 
 
 class G2BClient:
-    def __init__(self, key: str | None = None, sleep_s: float = 0.15, timeout: float = 60.0):
+    def __init__(self, key: str | None = None, sleep_s: float | None = None, timeout: float = 60.0):
         self.key = key or service_key()
+        if sleep_s is None:
+            try:
+                sleep_s = float(os.environ.get("G2B_SLEEP", "0.15"))
+            except ValueError:
+                sleep_s = 0.15
         self.sleep_s = sleep_s
         self.timeout = timeout
         self.session = requests.Session()
@@ -92,29 +107,44 @@ class G2BClient:
         q.setdefault("type", "json")
         q.setdefault("numOfRows", 100)
         q.setdefault("pageNo", 1)
-        time.sleep(self.sleep_s)
-        if "%" in self.key:
-            # pre-encoded key — build URL carefully
-            from urllib.parse import urlencode
+        last_err: Exception | None = None
+        for attempt in range(5):
+            time.sleep(self.sleep_s if attempt == 0 else min(30.0, self.sleep_s * (2**attempt)))
+            if "%" in self.key:
+                # pre-encoded key — build URL carefully
+                from urllib.parse import urlencode
 
-            other = urlencode({k: v for k, v in q.items()})
-            full = f"{url}?serviceKey={self.key}&{other}"
-            resp = self.session.get(full, timeout=self.timeout)
-        else:
-            q["serviceKey"] = self.key
-            resp = self.session.get(url, params=q, timeout=self.timeout)
-        resp.raise_for_status()
-        data = resp.json()
-        header = (
-            data.get("response", {}).get("header")
-            or data.get("OpenAPI_ServiceResponse", {}).get("cmmMsgHeader")
-            or {}
-        )
-        code = str(header.get("resultCode") or header.get("returnReasonCode") or "")
-        msg = header.get("resultMsg") or header.get("returnAuthMsg") or header.get("errMsg")
-        if code and code not in ("00", "0", ""):
-            raise G2BError(f"API error {code}: {msg}")
-        return data
+                other = urlencode({k: v for k, v in q.items()})
+                full = f"{url}?serviceKey={self.key}&{other}"
+                resp = self.session.get(full, timeout=self.timeout)
+            else:
+                q["serviceKey"] = self.key
+                resp = self.session.get(url, params=q, timeout=self.timeout)
+            if resp.status_code == 429:
+                last_err = G2BError(f"429 Too Many Requests ({url})")
+                continue
+            try:
+                resp.raise_for_status()
+            except requests.HTTPError as e:
+                # Never keep raw response URL — it embeds serviceKey.
+                last_err = G2BError(
+                    f"HTTP {resp.status_code} for {url}: {redact_secrets(str(e))}"
+                )
+                if resp.status_code >= 500:
+                    continue
+                raise last_err from None
+            data = resp.json()
+            header = (
+                data.get("response", {}).get("header")
+                or data.get("OpenAPI_ServiceResponse", {}).get("cmmMsgHeader")
+                or {}
+            )
+            code = str(header.get("resultCode") or header.get("returnReasonCode") or "")
+            msg = header.get("resultMsg") or header.get("returnAuthMsg") or header.get("errMsg")
+            if code and code not in ("00", "0", ""):
+                raise G2BError(f"API error {code}: {msg}")
+            return data
+        raise G2BError(f"HTTP retries exhausted: {redact_secrets(str(last_err))}")
 
     def _items(self, data: dict[str, Any]) -> list[dict[str, Any]]:
         body = data.get("response", {}).get("body") or {}
