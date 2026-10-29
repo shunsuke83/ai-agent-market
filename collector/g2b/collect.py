@@ -422,10 +422,11 @@ def cmd_sanitize_budgets(args: argparse.Namespace) -> int:
 def cmd_render(args: argparse.Namespace) -> int:
     from .competitors import render_competitors_page
     from .render import render_awards_page, render_band_page, render_index_stamp
+    from .reports import render_reports
 
     targets = args.target
     if "all" in targets:
-        targets = ["band", "awards", "index", "competitors"]
+        targets = ["band", "awards", "index", "competitors", "reports"]
     summary: dict[str, Any] = {}
     if "band" in targets:
         summary["band"] = render_band_page(ROOT)
@@ -435,6 +436,8 @@ def cmd_render(args: argparse.Namespace) -> int:
         summary["index"] = render_index_stamp(ROOT)
     if "competitors" in targets:
         summary["competitors"] = render_competitors_page(ROOT)
+    if "reports" in targets:
+        summary["reports"] = render_reports(ROOT)
     print(json.dumps(summary, ensure_ascii=False, indent=2))
     return 0
 
@@ -528,12 +531,12 @@ def build_parser() -> argparse.ArgumentParser:
 
     r = sub.add_parser(
         "render",
-        help="Render static HTML from data/*.json (band + awards + index + competitors)",
+        help="Render static HTML from data/*.json (band + awards + index + competitors + reports)",
     )
     r.add_argument(
         "target",
         nargs="+",
-        choices=["band", "awards", "index", "competitors", "all"],
+        choices=["band", "awards", "index", "competitors", "reports", "all"],
         help="What to render",
     )
     r.set_defaults(func=cmd_render)

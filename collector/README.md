@@ -65,8 +65,15 @@ GitHub Actions: `.github/workflows/collect.yml` — secret `DATA_GO_KR_SERVICE_K
   - `enrich-bidders --include-bootstrap`: bootstrap 낙찰 공고를 notices에 upsert 후 경쟁사 낙찰 우선 보강
 - 시드: `data/bootstrap.json` ∪ `data/notices.json`
 
+## 리포트
+
+```bash
+python -m g2b.collect render reports   # weekly + monthly + reports/index
+```
+
+월간「이번 달 투찰 참여 업체」는 OpengCompt `bidders[]` 집계(빈 업체명 제외).
+
 ## 아직 안 하는 것
 
-- 주·월간 리포트 HTML 재생성 (별도 Phase C 브랜치)
 - 경쟁사 프로필 문단 (편집 콘텐츠)
-- 월간 투찰 참여 표
+- OpengCompt 커버리지 확대(시드 floor 해제)

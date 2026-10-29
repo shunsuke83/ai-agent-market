@@ -1,16 +1,39 @@
-[
- {
-  "slug": "weekly-2026-W43",
-  "kind": "주간",
-  "title": "주간 브리프 2026년 43주차",
-  "period": "2026-10-19 ~ 2026-10-25",
-  "summary": "신규 핵심 공고 60건, 예산 510.5억, 개찰 결과 7건"
- },
- {
-  "slug": "monthly-2026-10",
-  "kind": "월간",
-  "title": "월간 리포트 2026년 10월 (진행 중)",
-  "period": "2026-10",
-  "summary": "핵심 공고 219건, 예산 1,083억"
- }
-]
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-29T16:22:08.784866+09:00",
+  "weekly": [
+    {
+      "year": 2026,
+      "week": 43,
+      "file": "weekly-2026-W43.html",
+      "slug": "weekly-2026-W43",
+      "core_count": 68,
+      "budget_sum": 462.1,
+      "awards_count": 51,
+      "other_count": 143,
+      "start": "2026-10-19",
+      "end": "2026-10-25"
+    }
+  ],
+  "monthly": [
+    {
+      "year": 2026,
+      "month": 10,
+      "file": "monthly-2026-10.html",
+      "slug": "monthly-2026-10",
+      "core_count": 284,
+      "budget_sum": 1112.9,
+      "large_count": 18,
+      "isp_count": 17,
+      "in_progress": true,
+      "start": "2026-10-01",
+      "end": "2026-10-29"
+    }
+  ],
+  "core_natures": [
+    "ISP·전략",
+    "구독·라이선스",
+    "시스템 구축·고도화",
+    "운영·유지보수"
+  ]
+}
