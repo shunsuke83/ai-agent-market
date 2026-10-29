@@ -48,6 +48,12 @@ jobs:
           python -m g2b.collect collect --days "$DAYS" --all-budgets --out ../data/notices.json
         working-directory: collector
 
+      - name: Enrich bidder rankings (OpengCompt)
+        env:
+          DATA_GO_KR_SERVICE_KEY: ${{ secrets.DATA_GO_KR_SERVICE_KEY }}
+        run: python -m g2b.collect enrich-bidders --limit 200
+        working-directory: collector
+
       - name: Render band.html + awards.html + index stamp
         run: python -m g2b.collect render all
         working-directory: collector
