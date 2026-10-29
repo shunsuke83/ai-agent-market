@@ -88,16 +88,35 @@ def month_windows(start: date, end: date) -> Iterator[tuple[date, date]]:
         cur = window_end + timedelta(days=1)
 
 
+def _env_float(name: str, default: float) -> float:
+    try:
+        return float(os.environ.get(name, str(default)))
+    except ValueError:
+        return default
+
+
+def _env_int(name: str, default: int) -> int:
+    try:
+        return int(os.environ.get(name, str(default)))
+    except ValueError:
+        return default
+
+
 class G2BClient:
-    def __init__(self, key: str | None = None, sleep_s: float | None = None, timeout: float = 60.0):
+    def __init__(
+        self,
+        key: str | None = None,
+        sleep_s: float | None = None,
+        timeout: float | None = None,
+        max_attempts: int | None = None,
+    ):
         self.key = key or service_key()
-        if sleep_s is None:
-            try:
-                sleep_s = float(os.environ.get("G2B_SLEEP", "0.15"))
-            except ValueError:
-                sleep_s = 0.15
-        self.sleep_s = sleep_s
-        self.timeout = timeout
+        self.sleep_s = _env_float("G2B_SLEEP", 0.15) if sleep_s is None else sleep_s
+        # Portal (apis.data.go.kr) often stalls from Actions — allow longer connect/read.
+        self.timeout = _env_float("G2B_TIMEOUT", 90.0) if timeout is None else timeout
+        self.max_attempts = (
+            _env_int("G2B_HTTP_RETRIES", 8) if max_attempts is None else max_attempts
+        )
         self.session = requests.Session()
 
     def _get(self, url: str, params: dict[str, Any]) -> dict[str, Any]:
@@ -108,18 +127,24 @@ class G2BClient:
         q.setdefault("numOfRows", 100)
         q.setdefault("pageNo", 1)
         last_err: Exception | None = None
-        for attempt in range(5):
-            time.sleep(self.sleep_s if attempt == 0 else min(30.0, self.sleep_s * (2**attempt)))
-            if "%" in self.key:
-                # pre-encoded key — build URL carefully
-                from urllib.parse import urlencode
+        attempts = max(1, self.max_attempts)
+        for attempt in range(attempts):
+            time.sleep(self.sleep_s if attempt == 0 else min(45.0, self.sleep_s * (2**attempt)))
+            try:
+                if "%" in self.key:
+                    # pre-encoded key — build URL carefully
+                    from urllib.parse import urlencode
 
-                other = urlencode({k: v for k, v in q.items()})
-                full = f"{url}?serviceKey={self.key}&{other}"
-                resp = self.session.get(full, timeout=self.timeout)
-            else:
-                q["serviceKey"] = self.key
-                resp = self.session.get(url, params=q, timeout=self.timeout)
+                    other = urlencode({k: v for k, v in q.items()})
+                    full = f"{url}?serviceKey={self.key}&{other}"
+                    resp = self.session.get(full, timeout=self.timeout)
+                else:
+                    q["serviceKey"] = self.key
+                    resp = self.session.get(url, params=q, timeout=self.timeout)
+            except requests.exceptions.RequestException as e:
+                # ConnectTimeout / ReadTimeout / ConnectionError — retry with backoff.
+                last_err = G2BError(f"transport error for {url}: {redact_secrets(str(e))}")
+                continue
             if resp.status_code == 429:
                 last_err = G2BError(f"429 Too Many Requests ({url})")
                 continue
