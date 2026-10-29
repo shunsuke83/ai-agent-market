@@ -114,6 +114,7 @@ competitors:
   procurement: GS 1등급, 디지털서비스몰(2026.6)
   aliases:
   - 올거나이즈
+  - 올거나이즈코리아
 - name: 애자일소다
   type: 신흥 투자형 에이전트 스타트업
   own_model: 미확인
@@ -126,6 +127,7 @@ competitors:
   procurement: 미확인
   aliases:
   - 타임리(업스테이지)
+  - 타임리
 - name: 사이오닉에이아이
   type: 신흥 투자형 에이전트 스타트업
   own_model: 산업 특화 sLLM 개발 중
