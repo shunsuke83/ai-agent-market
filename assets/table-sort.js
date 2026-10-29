@@ -106,10 +106,16 @@
 
     var state = { col: null, dir: "asc" };
 
+    var bodyRows = Array.prototype.slice.call(tbody.rows);
+
     for (var i = 0; i < ths.length; i++) {
       (function (col) {
         var th = ths[col];
         th.classList.add("sortable-th");
+        // Keep numeric headers right-aligned with td.num values
+        if (columnPrefersNum(bodyRows, col)) {
+          th.classList.add("num");
+        }
         th.tabIndex = 0;
         th.setAttribute("role", "columnheader");
         th.setAttribute("aria-sort", "none");

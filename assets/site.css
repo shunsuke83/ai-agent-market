@@ -16,6 +16,7 @@ h1{font-size:28px;line-height:1.25;margin:6px 0 8px;text-wrap:balance}h2{font-si
 table{width:100%;border-collapse:collapse;font-size:14px;min-width:640px}th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
 th{font-size:12px;color:var(--muted);font-weight:600;font-family:var(--f-mono);white-space:nowrap}tr:last-child td{border-bottom:none}
 td:first-child{white-space:nowrap}td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}td a{color:var(--fg)}td a:hover{color:var(--accent)}
+th.num{text-align:right;font-variant-numeric:tabular-nums}
 th.sortable-th{cursor:pointer;user-select:none;-webkit-user-select:none}
 th.sortable-th:hover,th.sortable-th:focus-visible{color:var(--accent);outline:none}
 th.sortable-th.is-sorted{color:var(--fg)}
