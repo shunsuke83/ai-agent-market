@@ -40,17 +40,32 @@ jobs:
         run: pip install -r collector/requirements.txt
 
       - name: Collect from Open API
+        id: collect
+        continue-on-error: true
         env:
           DATA_GO_KR_SERVICE_KEY: ${{ secrets.DATA_GO_KR_SERVICE_KEY }}
+          G2B_TIMEOUT: "90"
+          G2B_HTTP_RETRIES: "8"
+          G2B_SLEEP: "0.35"
         run: |
           DAYS="${{ github.event.inputs.days }}"
           DAYS="${DAYS:-14}"
           python -m g2b.collect collect --days "$DAYS" --all-budgets --out ../data/notices.json
         working-directory: collector
 
+      - name: Note collect outcome
+        if: steps.collect.outcome == 'failure'
+        run: |
+          echo "::warning::Collect timed out or failed talking to apis.data.go.kr."
+          echo "Continuing with existing data/notices.json so enrich/render can still run."
+
       - name: Enrich bidder rankings (OpengCompt)
         env:
           DATA_GO_KR_SERVICE_KEY: ${{ secrets.DATA_GO_KR_SERVICE_KEY }}
+          G2B_TIMEOUT: "90"
+          G2B_HTTP_RETRIES: "8"
+          G2B_SLEEP: "0.5"
+          G2B_429_COOLDOWN: "120"
         run: python -m g2b.collect enrich-bidders --include-bootstrap --core-only --limit 400
         working-directory: collector
 

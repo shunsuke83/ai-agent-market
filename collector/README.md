@@ -78,6 +78,9 @@ python -m g2b.collect render reports   # weekly + monthly + reports/index
 ```bash
 # core AI 공고 투찰목록 우선 보강 (시드 floor 해제 임계: core 커버리지 ≥ 75%)
 python -m g2b.collect enrich-bidders --include-bootstrap --core-only --limit 400
+
+# Optional tuning (Actions sets these too)
+# G2B_SLEEP=0.5 G2B_TIMEOUT=90 G2B_HTTP_RETRIES=8 G2B_429_COOLDOWN=120
 ```
 
 ## 아직 안 하는 것
