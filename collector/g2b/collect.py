@@ -11,6 +11,7 @@ from .classify import load_keywords
 from .extract_html import bootstrap_all
 from .normalize import (
     apply_awards_to_notices,
+    apply_bidders_to_notice,
     in_band,
     merge_by_bid,
     normalize_award_item,
@@ -202,6 +203,95 @@ def cmd_enrich_awards(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_enrich_bidders(args: argparse.Namespace) -> int:
+    """Attach per-notice bidder ranking lists via OpengCompt (투찰업체별)."""
+    from .client import G2BClient, G2BError
+
+    out = Path(args.out)
+    if not out.exists():
+        print(f"error: {out} not found", file=sys.stderr)
+        return 2
+    try:
+        client = G2BClient()
+    except G2BError as e:
+        print(f"error: {e}", file=sys.stderr)
+        return 2
+
+    payload = json.loads(out.read_text(encoding="utf-8"))
+    notices: list[dict[str, Any]] = list(payload.get("notices") or [])
+    today = date.today().isoformat()
+    targets = [
+        n
+        for n in notices
+        if n.get("bid_no")
+        and n.get("open_date")
+        and n["open_date"] <= today
+        and (args.force or not n.get("bidders"))
+    ]
+    # Prefer notices that already have a winner / bid_count (opened), newest first
+    targets.sort(key=lambda n: n.get("open_date") or "", reverse=True)
+    targets.sort(key=lambda n: 0 if n.get("winner") or n.get("bid_count") else 1)
+    if args.limit is not None:
+        targets = targets[: args.limit]
+
+    print(f"Enrich bidders for {len(targets)} notices …")
+    updated = 0
+    fetched = 0
+    empty = 0
+    target_keys = {
+        f"{n.get('bid_no')}-{n.get('bid_ord') or '000'}" for n in targets
+    }
+    out_notices: list[dict[str, Any]] = []
+    for n in notices:
+        key = f"{n.get('bid_no')}-{n.get('bid_ord') or '000'}"
+        if key not in target_keys:
+            out_notices.append(n)
+            continue
+        try:
+            rows = client.fetch_bidders_by_bid(n["bid_no"], n.get("bid_ord"))
+        except G2BError as e:
+            print(f"  skip {n.get('bid_no')}: {e}")
+            out_notices.append(n)
+            continue
+        fetched += 1
+        if not rows:
+            empty += 1
+            out_notices.append(n)
+            continue
+        merged = apply_bidders_to_notice(n, rows)
+        if merged.get("bidders"):
+            updated += 1
+        out_notices.append(merged)
+        if fetched % 25 == 0:
+            print(f"  … {fetched}/{len(targets)} fetched, updated={updated}")
+
+    out_notices = sort_notices(out_notices)
+    payload["notices"] = out_notices
+    payload["generated_at"] = utc_now_iso()
+    stats = payload.setdefault("stats", {})
+    stats["with_bidders"] = sum(1 for n in out_notices if n.get("bidders"))
+    stats["bidders_enrich"] = {
+        "targets": len(targets),
+        "fetched": fetched,
+        "updated": updated,
+        "empty": empty,
+    }
+    out.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(
+        json.dumps(
+            {
+                "path": str(out),
+                "with_bidders": stats["with_bidders"],
+                "updated": updated,
+                "fetched": fetched,
+                "empty": empty,
+            },
+            ensure_ascii=False,
+        )
+    )
+    return 0
+
+
 def cmd_classify(args: argparse.Namespace) -> int:
     from .classify import classify_title
 
@@ -279,6 +369,24 @@ def build_parser() -> argparse.ArgumentParser:
         help="Max per-bid lookups when --lookup-missing",
     )
     e.set_defaults(func=cmd_enrich_awards)
+
+    eb = sub.add_parser(
+        "enrich-bidders",
+        help="Attach OpengCompt bidder rankings (투찰업체별) onto notices.json",
+    )
+    eb.add_argument("--out", default=str(DATA / "notices.json"))
+    eb.add_argument(
+        "--limit",
+        type=int,
+        default=None,
+        help="Max notices to look up (default: all missing bidders)",
+    )
+    eb.add_argument(
+        "--force",
+        action="store_true",
+        help="Re-fetch even when bidders already present",
+    )
+    eb.set_defaults(func=cmd_enrich_bidders)
 
     k = sub.add_parser("classify", help="Classify a single title")
     k.add_argument("title")

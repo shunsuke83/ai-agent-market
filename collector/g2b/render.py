@@ -562,6 +562,64 @@ def aggregate_top_winners(
     return ranked[:limit]
 
 
+def aggregate_frequent_bidders(
+    notices: list[dict[str, Any]],
+    *,
+    min_bids: int = 3,
+    limit: int = 20,
+    build_only: bool = True,
+    rules: dict[str, Any] | None = None,
+) -> list[tuple[str, int, int, float]]:
+    """Return (name, bid_notices, wins, win_rate_pct) for firms with ≥min_bids."""
+    from collections import defaultdict
+
+    rules = rules or load_keywords()
+    bids: dict[str, set[str]] = defaultdict(set)
+    wins: dict[str, int] = defaultdict(int)
+    for n in notices:
+        if build_only and not _is_build_title(n.get("title"), rules):
+            continue
+        key = f"{n.get('bid_no')}-{n.get('bid_ord') or '000'}"
+        if not n.get("bid_no"):
+            key = f"t:{n.get('title')}|{n.get('open_date')}"
+        bidders = n.get("bidders") or []
+        names = set()
+        for b in bidders:
+            name = (b.get("name") or "").strip()
+            if name:
+                names.add(name)
+                bids[name].add(key)
+        winner = (n.get("winner") or "").strip()
+        if winner:
+            # Count win even if bidder list missing (award-only)
+            if not bidders:
+                bids[winner].add(key)
+            wins[winner] += 1
+
+    ranked: list[tuple[str, int, int, float]] = []
+    for name, notice_keys in bids.items():
+        bid_n = len(notice_keys)
+        if bid_n < min_bids:
+            continue
+        win_n = wins.get(name, 0)
+        rate = round(100.0 * win_n / bid_n) if bid_n else 0.0
+        ranked.append((name, bid_n, win_n, float(rate)))
+    ranked.sort(key=lambda x: (-x[1], -x[2], x[0]))
+    return ranked[:limit]
+
+
+def render_frequent_bidder_row(
+    name: str, bids: int, wins: int, rate: float
+) -> str:
+    rate_s = f"{int(rate)}%" if abs(rate - round(rate)) < 1e-9 else f"{rate:.0f}%"
+    return (
+        f"<tr><td>{html.escape(name)}</td>"
+        f'<td class="num">{bids}</td>'
+        f'<td class="num">{wins}</td>'
+        f'<td class="num">{rate_s}</td></tr>'
+    )
+
+
 def aggregate_yearly(
     pool: list[dict[str, Any]],
 ) -> list[tuple[str, int, float]]:
@@ -795,7 +853,38 @@ def render_awards_page(repo_root: Path) -> dict[str, Any]:
             table_class="rank",
         )
 
-    # 자주 투찰: needs full bidder lists (BidResult API) — left as editorial seed.
+    # 자주 투찰: OpengCompt bidder lists. Prefer 구축·고도화 ≥3; ease threshold
+    # while bidder coverage is still growing.
+    notices_path = repo_root / "data" / "notices.json"
+    bidder_notices: list[dict[str, Any]] = []
+    if notices_path.exists():
+        raw_n = json.loads(notices_path.read_text(encoding="utf-8"))
+        bidder_notices = list(raw_n.get("notices") or [])
+    frequent = aggregate_frequent_bidders(
+        bidder_notices, min_bids=3, limit=20, build_only=True, rules=rules
+    )
+    freq_label = "구축·고도화, 3건 이상"
+    if len(frequent) < 10:
+        frequent = aggregate_frequent_bidders(
+            bidder_notices, min_bids=2, limit=20, build_only=True, rules=rules
+        )
+        freq_label = "구축·고도화, 2건 이상"
+    if len(frequent) < 5:
+        frequent = aggregate_frequent_bidders(
+            bidder_notices, min_bids=3, limit=20, build_only=False, rules=rules
+        )
+        freq_label = "AI 공고, 3건 이상"
+    if frequent:
+        freq_rows = "".join(
+            render_frequent_bidder_row(n, b, w, r) for n, b, w, r in frequent
+        )
+        text = replace_awards_table_by_prefix(
+            text,
+            h2_prefix="자주 투찰하는 업체",
+            h2_out=f"자주 투찰하는 업체 ({freq_label})",
+            rows_html=freq_rows,
+            table_class="rank",
+        )
 
     needs, needs_total = load_needs_confirm(repo_root, limit=30)
     needs_rows = "".join(render_needs_confirm_row(r) for r in needs)
@@ -821,6 +910,7 @@ def render_awards_page(repo_root: Path) -> dict[str, Any]:
         "path": str(path),
         "large_awards": len(large),
         "top_winners": len(top),
+        "frequent_bidders": len(frequent),
         "yearly": {y: {"count": c, "amount": a} for y, c, a in yearly},
         "needs_confirm_total": needs_total,
         "needs_confirm_shown": len(needs),

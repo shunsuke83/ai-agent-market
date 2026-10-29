@@ -12,6 +12,9 @@
 |----|------|
 | `getScsbidListSttusServc` / `…Thng` | 기간별 낙찰 목록 (`inqryDiv=1`) 또는 공고번호 (`inqryDiv=4`) |
 | `getOpengResultListInfoServcPPSSrch` | 개찰결과·`opengCorpInfo` (보조) |
+| `getOpengResultListInfoOpengCompt` | **투찰업체별 순위** (`inqryDiv=1` + `bidNtceNo`) |
+
+`getBidResultList*` 는 게이트웨이 **400** — OpengCompt 가 동일 데이터.
 
 ## 주요 응답 필드 → Notice
 
@@ -23,8 +26,7 @@
 | `sucsfbidAmt` (원) | `award_amount_eok` |
 | `sucsfbidRate` | `win_rate_pct` (없으면 낙찰가/예산으로 추정) |
 | `rlOpengDt` | `open_date` (보강) |
-
-`2순위`(second)는 BidResult 오퍼레이션이 현재 400을 반환해 미연동.
+| OpengCompt `prcbdrNm` / `opengRank` | `bidders[]`, `second`(2순위) |
 
 ## CLI
 
@@ -34,4 +36,8 @@ python -m g2b.collect collect --days 14 --all-budgets
 
 # 기존 notices.json만 낙찰 보강
 python -m g2b.collect enrich-awards --days 120 --lookup-missing
+
+# 투찰 순위(업체별) 보강 → awards「자주 투찰」재집계에 사용
+python -m g2b.collect enrich-bidders --limit 200
+python -m g2b.collect render awards
 ```

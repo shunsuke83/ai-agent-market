@@ -39,6 +39,11 @@ OPENG_PPS_OPS = {
     "thng": f"{SCSBID_BASE}/getOpengResultListInfoThngPPSSrch",
 }
 
+# 개찰완료 투찰업체별 순위 (BidResult 대체 — getBidResult* 는 400)
+OPENG_COMPT = f"{SCSBID_BASE}/getOpengResultListInfoOpengCompt"
+OPENG_FAILING = f"{SCSBID_BASE}/getOpengResultListInfoFailing"
+OPENG_REBID = f"{SCSBID_BASE}/getOpengResultListInfoRebid"
+
 
 class G2BError(RuntimeError):
     pass
@@ -286,3 +291,41 @@ class G2BClient:
                 if str(it.get("bidNtceOrd") or "").zfill(3) == want:
                     return it
         return items[0]
+
+    def fetch_bidders_by_bid(
+        self,
+        bid_no: str,
+        bid_ord: str | None = None,
+        *,
+        include_failing: bool = False,
+        include_rebid: bool = False,
+        page_size: int = 100,
+    ) -> list[dict[str, Any]]:
+        """투찰업체별 순위 목록 (개찰완료 OpengCompt).
+
+        getBidResultList* 는 게이트웨이 400 — OpengCompt 가 동일 목적.
+        inqryDiv=1 + bidNtceNo 로 단건 공고의 전 순위 행을 반환.
+        """
+        urls = [OPENG_COMPT]
+        if include_failing:
+            urls.append(OPENG_FAILING)
+        if include_rebid:
+            urls.append(OPENG_REBID)
+        base = {
+            "inqryDiv": "1",
+            "bidNtceNo": bid_no,
+            "inqryBgnDt": "202301010000",
+            "inqryEndDt": "209912312359",
+        }
+        if bid_ord:
+            base["bidNtceOrd"] = str(bid_ord).zfill(3)
+        out: list[dict[str, Any]] = []
+        want = str(bid_ord).zfill(3) if bid_ord else None
+        for url in urls:
+            for item in self.iter_pages(url, dict(base), page_size=page_size):
+                if want and str(item.get("bidNtceOrd") or "").zfill(3) != want:
+                    continue
+                row = dict(item)
+                row["_source_op"] = url.rsplit("/", 1)[-1]
+                out.append(row)
+        return out

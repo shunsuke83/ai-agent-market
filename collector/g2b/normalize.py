@@ -169,6 +169,59 @@ def parse_openg_corp_info(raw: str | None) -> dict[str, Any]:
     return out
 
 
+def normalize_bidder_item(item: dict[str, Any]) -> dict[str, Any] | None:
+    """Map OpengCompt row → {rank, name, amount_eok, rate_pct, bizno}."""
+    name = clean_firm_name(item.get("prcbdrNm") or item.get("bidprcrNm"))
+    if not name:
+        return None
+    rank = item.get("opengRank")
+    try:
+        rank_i = int(float(rank)) if rank not in (None, "") else None
+    except (TypeError, ValueError):
+        rank_i = None
+    rate_raw = item.get("bidprcrt") or item.get("bidPrceEvlVal")
+    rate: float | None = None
+    if rate_raw not in (None, ""):
+        try:
+            rate = float(str(rate_raw).replace("%", "").replace(",", ""))
+        except ValueError:
+            rate = None
+    return {
+        "rank": rank_i,
+        "name": name,
+        "amount_eok": always_won_to_eok(item.get("bidprcAmt")),
+        "rate_pct": rate,
+        "bizno": (item.get("prcbdrBizno") or "").strip() or None,
+        "ceo": clean_firm_name(item.get("prcbdrCeoNm")) if item.get("prcbdrCeoNm") else None,
+    }
+
+
+def apply_bidders_to_notice(
+    notice: dict[str, Any],
+    bidder_rows: list[dict[str, Any]],
+) -> dict[str, Any]:
+    """Attach normalized bidders + second place onto a notice."""
+    bidders = [b for b in (normalize_bidder_item(r) for r in bidder_rows) if b]
+    bidders.sort(key=lambda b: (b.get("rank") is None, b.get("rank") or 9999))
+    merged = dict(notice)
+    if bidders:
+        merged["bidders"] = bidders
+        merged["bid_count"] = max(int(merged.get("bid_count") or 0), len(bidders)) or len(
+            bidders
+        )
+        second = next((b for b in bidders if b.get("rank") == 2), None)
+        if second and second.get("name"):
+            merged["second"] = second["name"]
+        # If no winner yet, rank-1 is the top opener (may be 1순위)
+        if not merged.get("winner"):
+            top = next((b for b in bidders if b.get("rank") == 1), bidders[0])
+            if top.get("name"):
+                merged["winner"] = top["name"]
+                if not merged.get("status"):
+                    merged["status"] = "1순위"
+    return merged
+
+
 def normalize_award_item(item: dict[str, Any]) -> dict[str, Any] | None:
     """Map ScsbidListSttus* item → award fields keyed by bid_no/ord."""
     bid_no = item.get("bidNtceNo") or item.get("bidPbancNo")

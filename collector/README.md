@@ -40,8 +40,9 @@ python -m g2b.collect classify "생성형 AI 플랫폼 구축"
 # 3) 나라장터 수집 + 낙찰 병합 (키 필요)
 export DATA_GO_KR_SERVICE_KEY='발급키'
 python -m g2b.collect collect --days 30 --all-budgets --out ../data/notices.json
-# 기존 파일만 낙찰 보강:
+# 기존 파일만 낙찰 / 투찰업체 보강:
 # python -m g2b.collect enrich-awards --days 120 --lookup-missing
+# python -m g2b.collect enrich-bidders --limit 200
 
 # 4) HTML 렌더 (band + awards + index)
 python -m g2b.collect render all
@@ -58,6 +59,6 @@ GitHub Actions: `.github/workflows/collect.yml` — secret `DATA_GO_KR_SERVICE_K
 
 ## 아직 안 하는 것
 
-- awards「자주 투찰」재집계 (투찰 참가자 BidResult API 미연동)
-- 주·월간 리포트 / band 차트 전체 재생성
+- 경쟁사 투찰 KPI를 OpengCompt로 전량 재집계(시드 병합은 competitors KPI PR)
+- 주·월간 리포트 HTML 재생성 (별도 Phase C 브랜치)
 - 경쟁사 프로필 문단 (편집 콘텐츠)
