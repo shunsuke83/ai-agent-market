@@ -15,14 +15,14 @@ h1{font-size:28px;line-height:1.25;margin:6px 0 8px;text-wrap:balance}h2{font-si
 /* Tables fit container — no horizontal scroll; long text wraps */
 .tbl{width:100%;max-width:100%;overflow-x:hidden;background:var(--surface);border:1px solid var(--line);border-radius:8px}
 .tbl table{width:100%;max-width:100%;border-collapse:collapse;font-size:14px;table-layout:fixed}
-th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top;overflow-wrap:anywhere;word-break:keep-all;overflow:hidden}
+th,td{text-align:left;padding:8px 8px;border-bottom:1px solid var(--line);vertical-align:top;overflow-wrap:anywhere;word-break:keep-all}
 th{font-size:12px;color:var(--muted);font-weight:600;font-family:var(--f-mono)}tr:last-child td{border-bottom:none}
 td a{color:var(--fg)}td a:hover{color:var(--accent)}
 th.num,td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
 /* Compact ranking tables: hug content within container */
 .tbl:has(> table.rank){width:fit-content;max-width:100%;overflow-x:hidden}
 table.rank{width:auto;max-width:100%;table-layout:auto}
-table.rank th,table.rank td{white-space:nowrap;overflow-wrap:normal;overflow:visible}
+table.rank th,table.rank td{white-space:nowrap;overflow-wrap:normal}
 table.rank th.num,table.rank td.num{padding-left:1.25em}
 th.sortable-th{cursor:pointer;user-select:none;-webkit-user-select:none}
 th.sortable-th:hover,th.sortable-th:focus-visible{color:var(--accent);outline:none}
@@ -30,27 +30,21 @@ th.sortable-th.is-sorted{color:var(--fg)}
 th.sortable-th .sort-ind{display:inline-block;min-width:1em;margin-left:.28em;font-size:10px;line-height:1;color:var(--accent);opacity:0}
 th.sortable-th:hover .sort-ind,th.sortable-th:focus-visible .sort-ind{opacity:.45}
 th.sortable-th.is-sorted .sort-ind{opacity:1}
-/* band.html 공고별 결과 — % widths only; text cols wrap */
+/* band.html 공고별 결과 — short cols sized in em; text cols take the rest and wrap */
 table.band-results th,table.band-results td{vertical-align:middle}
-table.band-results th:nth-child(1),table.band-results td:nth-child(1){width:7%}
-table.band-results th:nth-child(2),table.band-results td:nth-child(2){width:7%}
-table.band-results th:nth-child(3),table.band-results td:nth-child(3){width:10%}
-table.band-results th:nth-child(4),table.band-results td:nth-child(4){width:22%}
-table.band-results th:nth-child(5),table.band-results td:nth-child(5){width:10%}
-table.band-results th:nth-child(6),table.band-results td:nth-child(6){width:6%}
-table.band-results th:nth-child(7),table.band-results td:nth-child(7){width:7%}
-table.band-results th:nth-child(8),table.band-results td:nth-child(8){width:8%}
-table.band-results th:nth-child(9),table.band-results td:nth-child(9){width:5%}
-table.band-results th:nth-child(10),table.band-results td:nth-child(10){width:10%}
-table.band-results th:nth-child(11),table.band-results td:nth-child(11){width:8%}
-table.band-results td:nth-child(1),
-table.band-results td:nth-child(6),
-table.band-results td:nth-child(7),
-table.band-results td:nth-child(9),
-table.band-results td:nth-child(11){white-space:nowrap}
+table.band-results th:nth-child(1),table.band-results td:nth-child(1),
+table.band-results th:nth-child(7),table.band-results td:nth-child(7){width:8.6em;white-space:nowrap} /* 공고일·개찰일 */
+table.band-results th:nth-child(2),table.band-results td:nth-child(2){width:5.8em} /* 범위 */
+table.band-results th:nth-child(3),table.band-results td:nth-child(3){width:7.5em} /* 수요기관 */
+table.band-results th:nth-child(5),table.band-results td:nth-child(5){width:7em} /* 분야 */
+table.band-results th:nth-child(6),table.band-results td:nth-child(6),
+table.band-results th:nth-child(9),table.band-results td:nth-child(9),
+table.band-results th:nth-child(11),table.band-results td:nth-child(11){width:4.2em;white-space:nowrap} /* 예산·투찰·가율 */
+table.band-results th:nth-child(8),table.band-results td:nth-child(8){width:5.8em} /* 상태 */
+table.band-results th:nth-child(10),table.band-results td:nth-child(10){width:5.8em} /* 낙찰자 */
 table.band-results td a{text-decoration:none}table.band-results td a:hover{text-decoration:underline}
-/* Notice lists */
-table.notices td:first-child{white-space:nowrap}
+/* Notice lists: date col readable, other text wraps inside 100% table */
+table.notices th:first-child,table.notices td:first-child{width:8.6em;white-space:nowrap}
 .empty{background:var(--surface);border:1px dashed var(--line);border-radius:8px;padding:16px;color:var(--muted)}
 .bars{display:grid;gap:7px;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px 18px}
 .bar{display:grid;grid-template-columns:72px minmax(0,1fr) 64px;gap:12px;align-items:center;font-size:13px;font-variant-numeric:tabular-nums}
@@ -64,14 +58,12 @@ footer{margin-top:44px;padding-top:16px;border-top:1px solid var(--line);font-si
 @media (max-width:560px){
 .bars.wide .bar{grid-template-columns:110px minmax(0,1fr) 52px}h1{font-size:23px}.card{grid-template-columns:minmax(0,1fr)}.card .go{display:none}.bar{grid-template-columns:60px minmax(0,1fr) 52px}
 .tbl,.tbl:has(> table.rank){width:100%}
-.tbl table,table.rank{width:100%;max-width:100%;table-layout:fixed}
-th,td{padding:8px 6px}
-table.rank th,table.rank td{white-space:normal;overflow-wrap:anywhere;overflow:hidden}
-table.rank th.num,table.rank td.num{white-space:nowrap;padding-left:8px}
-table.notices td:first-child,
-table.band-results td:nth-child(1),
-table.band-results td:nth-child(6),
-table.band-results td:nth-child(7),
-table.band-results td:nth-child(9),
-table.band-results td:nth-child(11){white-space:normal}
+.tbl table,table.rank,table.band-results,table.notices{width:100%;max-width:100%;table-layout:fixed}
+th,td{padding:7px 5px;font-size:12.5px}
+table.rank th,table.rank td{white-space:normal;overflow-wrap:anywhere}
+table.rank th.num,table.rank td.num{white-space:nowrap;padding-left:6px}
+table.band-results th:nth-child(n),table.band-results td:nth-child(n),
+table.notices th:nth-child(n),table.notices td:nth-child(n){width:auto;white-space:normal}
+table.band-results td.num,table.band-results th.num,
+table.notices td.num,table.notices th.num{white-space:nowrap}
 }
