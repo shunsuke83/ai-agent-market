@@ -443,6 +443,30 @@ def cmd_sanitize_budgets(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_reclassify(args: argparse.Namespace) -> int:
+    """Refresh scope/fields/nature on existing notices.json from keywords.yaml."""
+    from .classify import classify_title
+
+    path = Path(args.out)
+    raw = json.loads(path.read_text(encoding="utf-8"))
+    notices = list(raw.get("notices") or [])
+    changed = 0
+    for n in notices:
+        labels = classify_title(n.get("title") or "")
+        before = (n.get("scope"), tuple(n.get("fields") or []), n.get("nature"))
+        n["scope"] = labels["scope"]
+        n["fields"] = labels["fields"]
+        n["nature"] = labels["nature"]
+        after = (n.get("scope"), tuple(n.get("fields") or []), n.get("nature"))
+        if before != after:
+            changed += 1
+    raw["notices"] = notices
+    raw["reclassified_at"] = utc_now_iso()
+    path.write_text(json.dumps(raw, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(json.dumps({"path": str(path), "notices": len(notices), "changed": changed}, ensure_ascii=False))
+    return 0
+
+
 def cmd_render(args: argparse.Namespace) -> int:
     from .competitors import render_competitors_page
     from .render import render_awards_page, render_band_page, render_index_stamp
@@ -557,6 +581,13 @@ def build_parser() -> argparse.ArgumentParser:
     )
     sb.add_argument("--out", default=str(DATA / "notices.json"))
     sb.set_defaults(func=cmd_sanitize_budgets)
+
+    rc = sub.add_parser(
+        "reclassify",
+        help="Re-apply keywords.yaml scope/fields/nature onto notices.json",
+    )
+    rc.add_argument("--out", default=str(DATA / "notices.json"))
+    rc.set_defaults(func=cmd_reclassify)
 
     r = sub.add_parser(
         "render",
