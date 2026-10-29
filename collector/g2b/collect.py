@@ -108,6 +108,21 @@ def cmd_classify(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_render(args: argparse.Namespace) -> int:
+    from .render import render_band_page, render_index_stamp
+
+    targets = args.target
+    if "all" in targets:
+        targets = ["band", "index"]
+    summary: dict[str, Any] = {}
+    if "band" in targets:
+        summary["band"] = render_band_page(ROOT)
+    if "index" in targets:
+        summary["index"] = render_index_stamp(ROOT)
+    print(json.dumps(summary, ensure_ascii=False, indent=2))
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(description="나라장터 AI Agent market collector")
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -132,6 +147,15 @@ def build_parser() -> argparse.ArgumentParser:
     k = sub.add_parser("classify", help="Classify a single title")
     k.add_argument("title")
     k.set_defaults(func=cmd_classify)
+
+    r = sub.add_parser("render", help="Render static HTML from data/*.json (Phase A: band+index)")
+    r.add_argument(
+        "target",
+        nargs="+",
+        choices=["band", "index", "all"],
+        help="What to render",
+    )
+    r.set_defaults(func=cmd_render)
 
     return p
 

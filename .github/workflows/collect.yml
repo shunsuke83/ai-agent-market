@@ -39,10 +39,6 @@ jobs:
       - name: Install
         run: pip install -r collector/requirements.txt
 
-      - name: Bootstrap from HTML (seed / regression baseline)
-        run: python -m g2b.collect bootstrap --out data/bootstrap.json
-        working-directory: collector
-
       - name: Collect from Open API
         env:
           DATA_GO_KR_SERVICE_KEY: ${{ secrets.DATA_GO_KR_SERVICE_KEY }}
@@ -52,14 +48,22 @@ jobs:
           python -m g2b.collect collect --days "$DAYS" --all-budgets --out ../data/notices.json
         working-directory: collector
 
-      - name: Commit data if changed
+      - name: Render band.html + index stamp
+        run: python -m g2b.collect render all
+        working-directory: collector
+
+      - name: Refresh bootstrap.json from rendered HTML
+        run: python -m g2b.collect bootstrap --out ../data/bootstrap.json
+        working-directory: collector
+
+      - name: Commit data and pages if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/bootstrap.json data/notices.json
+          git add data/bootstrap.json data/notices.json band.html index.html
           if git diff --staged --quiet; then
             echo "No data changes."
           else
-            git commit -m "data: refresh G2B AI notices"
+            git commit -m "data: refresh G2B AI notices and render band"
             git push
           fi
