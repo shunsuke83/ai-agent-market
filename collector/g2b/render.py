@@ -493,14 +493,21 @@ def load_large_awards(repo_root: Path) -> list[dict[str, Any]]:
 
 
 def load_award_pool(repo_root: Path) -> list[dict[str, Any]]:
-    """Rows usable for firm / yearly rollups (large awards + band notices with winners)."""
-    rules = load_keywords()
+    """Rows usable for firm / yearly rollups (large awards + notices with winners)."""
     pool: list[dict[str, Any]] = []
     for a in load_large_awards(repo_root):
         row = dict(a)
         row["_amount"] = _award_amount(a)
         pool.append(row)
-    for n in load_merged_band(repo_root):
+
+    # All notices (band merge ∪ notices.json) that have a winner
+    rows = list(load_merged_band(repo_root))
+    notices_path = repo_root / "data" / "notices.json"
+    if notices_path.exists():
+        raw = json.loads(notices_path.read_text(encoding="utf-8"))
+        rows = merge_by_bid(rows, list(raw.get("notices") or []))
+
+    for n in rows:
         if not n.get("winner"):
             continue
         st = n.get("status")
@@ -522,7 +529,6 @@ def load_award_pool(repo_root: Path) -> list[dict[str, Any]]:
         }
         row["_amount"] = _award_amount(n)
         pool.append(row)
-    # de-dupe by bid
     return merge_by_bid([], pool)
 
 
@@ -767,8 +773,29 @@ def render_awards_page(repo_root: Path) -> dict[str, Any]:
         table_class="notices",
     )
 
-    # Top-20 / yearly / frequent / stats stay editorial until 낙찰 API fills
-    # participant lists and full award history (helpers kept for that follow-up).
+    rules = load_keywords()
+    pool = load_award_pool(repo_root)
+    top = aggregate_top_winners(pool, limit=20, build_only=True, rules=rules)
+    if top:
+        top_rows = "".join(render_top_winner_row(n, c, a) for n, c, a in top)
+        text = replace_awards_table(
+            text,
+            h2="시스템 구축·고도화 수주 상위 20개사",
+            rows_html=top_rows,
+            table_class="rank",
+        )
+
+    yearly = aggregate_yearly(pool)
+    if yearly:
+        year_rows = "".join(render_yearly_row(y, c, a) for y, c, a in yearly)
+        text = replace_awards_table(
+            text,
+            h2="연도별 낙찰",
+            rows_html=year_rows,
+            table_class="rank",
+        )
+
+    # 자주 투찰: needs full bidder lists (BidResult API) — left as editorial seed.
 
     needs, needs_total = load_needs_confirm(repo_root, limit=30)
     needs_rows = "".join(render_needs_confirm_row(r) for r in needs)
@@ -780,6 +807,9 @@ def render_awards_page(repo_root: Path) -> dict[str, Any]:
         table_class="notices",
     )
 
+    # Stats: recompute from award pool + merged notices when we have winners
+    text = update_awards_stats(text, repo_root, pool)
+
     text = re.sub(
         r"assets/site\.css\?v=\d+[a-z]?",
         "assets/site.css?v=20261029f",
@@ -790,6 +820,73 @@ def render_awards_page(repo_root: Path) -> dict[str, Any]:
     return {
         "path": str(path),
         "large_awards": len(large),
+        "top_winners": len(top),
+        "yearly": {y: {"count": c, "amount": a} for y, c, a in yearly},
         "needs_confirm_total": needs_total,
         "needs_confirm_shown": len(needs),
+        "pool_size": len(pool),
     }
+
+
+def update_awards_stats(
+    html_text: str,
+    repo_root: Path,
+    pool: list[dict[str, Any]] | None = None,
+) -> str:
+    """Refresh the four awards.html summary cards from live data when possible."""
+    import statistics
+
+    today = _today_kst()
+    band = load_merged_band(repo_root)
+    notices_path = repo_root / "data" / "notices.json"
+    all_rows = list(band)
+    if notices_path.exists():
+        raw = json.loads(notices_path.read_text(encoding="utf-8"))
+        all_rows = merge_by_bid(all_rows, list(raw.get("notices") or []))
+
+    opened = 0
+    with_winner = 0
+    failed = 0
+    bid_counts: list[int] = []
+    for n in all_rows:
+        st = infer_status(n, today)
+        if st == "개찰 예정":
+            continue
+        opened += 1
+        if n.get("winner") or st == "낙찰":
+            with_winner += 1
+        if st == "유찰":
+            failed += 1
+        if _is_build_title(n.get("title")) and n.get("bid_count") not in (None, ""):
+            try:
+                bid_counts.append(int(float(n["bid_count"])))
+            except (TypeError, ValueError):
+                pass
+
+    if opened < 10 and with_winner < 10:
+        # Not enough live signal — keep editorial stats
+        return html_text
+
+    median_bids = int(statistics.median(bid_counts)) if bid_counts else 0
+
+    def fmt_int(n: int) -> str:
+        return f"{n:,}"
+
+    new, n = re.subn(
+        r'(<div class="stats">\s*<div class="stat"><div class="v">)[\d,]+건'
+        r'(</div><div class="l">개찰 결과 확보 공고</div></div>\s*'
+        r'<div class="stat"><div class="v">)[\d,]+건'
+        r'(</div><div class="l">낙찰자 확인</div></div>\s*'
+        r'<div class="stat"><div class="v">)[\d,]+건'
+        r'(</div><div class="l">유찰</div></div>\s*'
+        r'<div class="stat"><div class="v">)[\d,]+곳'
+        r'(</div><div class="l">구축 사업 투찰 업체 수\(중앙값\)</div></div></div>)',
+        rf"\g<1>{fmt_int(opened)}건\g<2>{fmt_int(with_winner)}건\g<3>{fmt_int(failed)}건\g<4>{fmt_int(median_bids)}곳\g<5>",
+        html_text,
+        count=1,
+        flags=re.S,
+    )
+    if n != 1:
+        # Non-fatal — layout may have drifted
+        return html_text
+    return new

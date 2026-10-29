@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-29T00:33:48Z",
+  "generated_at": "2026-10-29T02:53:18Z",
   "mode": "g2b_api",
   "range": {
     "since": "2026-10-15",
@@ -810,7 +810,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01795113&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01795113&bidPbancOrd=000",
+      "winner": "회계법인 나무",
+      "bid_count": 1,
+      "award_amount_eok": 0.2038,
+      "win_rate_pct": 95.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -1493,7 +1498,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01793176&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01793176&bidPbancOrd=000",
+      "winner": "에프엔피파트너스",
+      "bid_count": 1,
+      "award_amount_eok": 0.2156,
+      "win_rate_pct": 98.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -1693,7 +1703,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01792951&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01792951&bidPbancOrd=000",
+      "winner": "플라즈마큐어링",
+      "bid_count": 1,
+      "award_amount_eok": 0.1756,
+      "win_rate_pct": 97.555,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -1953,7 +1968,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01790778&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01790778&bidPbancOrd=000",
+      "winner": "디엔디이",
+      "bid_count": 1,
+      "award_amount_eok": 0.275,
+      "win_rate_pct": 99.134,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -2555,7 +2575,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01791012&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01791012&bidPbancOrd=000",
+      "winner": "지티시큐",
+      "bid_count": 1,
+      "award_amount_eok": 0.2804,
+      "win_rate_pct": 99.989,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -2635,7 +2660,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01790638&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01790638&bidPbancOrd=000",
+      "winner": "에이치피씨랩",
+      "bid_count": 1,
+      "award_amount_eok": 0.2932,
+      "win_rate_pct": 99.71,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -3517,7 +3547,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "재공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01788333&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01788333&bidPbancOrd=000",
+      "winner": "로드피아",
+      "bid_count": 1,
+      "award_amount_eok": 4.785,
+      "win_rate_pct": 99.119,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -3537,7 +3572,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01788063&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01788063&bidPbancOrd=000",
+      "winner": "옥토버스",
+      "bid_count": 1,
+      "award_amount_eok": 0.1045,
+      "win_rate_pct": 95.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -3577,7 +3617,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01788034&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01788034&bidPbancOrd=000",
+      "winner": "센랩",
+      "bid_count": 1,
+      "award_amount_eok": 0.0639,
+      "win_rate_pct": 96.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -3617,7 +3662,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "재공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01787967&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01787967&bidPbancOrd=000",
+      "winner": "밸류키움",
+      "bid_count": 1,
+      "award_amount_eok": 0.23,
+      "win_rate_pct": 97.993,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -3637,7 +3687,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01787916&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01787916&bidPbancOrd=000",
+      "winner": "양컴",
+      "bid_count": 1,
+      "award_amount_eok": 0.286,
+      "win_rate_pct": 98.113,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -3719,7 +3774,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01787856&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01787856&bidPbancOrd=000",
+      "winner": "아이와이시스템",
+      "bid_count": 3,
+      "award_amount_eok": 0.1915,
+      "win_rate_pct": 94.641,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -4139,7 +4199,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01786268&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01786268&bidPbancOrd=000",
+      "winner": "알앤디테크",
+      "bid_count": 1,
+      "award_amount_eok": 0.0528,
+      "win_rate_pct": 97.979,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -4159,7 +4224,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01786231&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01786231&bidPbancOrd=000",
+      "winner": "피브이티",
+      "bid_count": 1,
+      "award_amount_eok": 0.4213,
+      "win_rate_pct": 96.962,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -4319,7 +4389,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01785505&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01785505&bidPbancOrd=000",
+      "winner": "에이비웍스",
+      "bid_count": 1,
+      "award_amount_eok": 0.895,
+      "win_rate_pct": 99.614,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -4479,7 +4554,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01784522&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01784522&bidPbancOrd=000",
+      "winner": "코젠",
+      "bid_count": 1,
+      "award_amount_eok": 0.36,
+      "win_rate_pct": 100.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -4499,7 +4579,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01784211&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01784211&bidPbancOrd=000",
+      "winner": "상상스토리",
+      "bid_count": 1,
+      "award_amount_eok": 0.88,
+      "win_rate_pct": 100.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -5019,7 +5104,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "재공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01783245&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01783245&bidPbancOrd=000",
+      "winner": "에스엔아이인스티튜트",
+      "bid_count": 1,
+      "award_amount_eok": 1.4,
+      "win_rate_pct": 100.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -5660,7 +5750,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01781620&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01781620&bidPbancOrd=000",
+      "winner": "모노플로우",
+      "bid_count": 1,
+      "award_amount_eok": 0.0359,
+      "win_rate_pct": 100.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -5680,7 +5775,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "재공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01781599&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01781599&bidPbancOrd=000",
+      "winner": "한국전산감리원",
+      "bid_count": 1,
+      "award_amount_eok": 0.8578,
+      "win_rate_pct": 99.995,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -6281,7 +6381,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01779639&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01779639&bidPbancOrd=000",
+      "winner": "건축사사무소 갑비고차",
+      "bid_count": 199,
+      "award_amount_eok": 0.1424,
+      "win_rate_pct": 90.008,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -6321,7 +6426,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "재공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01779514&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01779514&bidPbancOrd=000",
+      "winner": "액츠원",
+      "bid_count": 1,
+      "award_amount_eok": 1.685,
+      "win_rate_pct": 99.763,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -6381,7 +6491,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01779286&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01779286&bidPbancOrd=000",
+      "winner": "에스디 바이오센서",
+      "bid_count": 1,
+      "award_amount_eok": 0.45,
+      "win_rate_pct": 100.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -6441,7 +6556,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01779083&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01779083&bidPbancOrd=000",
+      "winner": "피엘엠테크",
+      "bid_count": 6,
+      "award_amount_eok": 0.51,
+      "win_rate_pct": 86.564,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -6582,7 +6702,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "재공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01778193&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01778193&bidPbancOrd=000",
+      "winner": "몬드리안에이아이",
+      "bid_count": 4,
+      "award_amount_eok": 0.3465,
+      "win_rate_pct": 99.698,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -6702,7 +6827,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01777963&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01777963&bidPbancOrd=000",
+      "winner": "금도시스템",
+      "bid_count": 4,
+      "award_amount_eok": 0.9215,
+      "win_rate_pct": 96.234,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -6863,7 +6993,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01777466&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01777466&bidPbancOrd=000",
+      "winner": "프로젝트여름",
+      "bid_count": 1,
+      "award_amount_eok": 0.05,
+      "win_rate_pct": 100.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -7043,7 +7178,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01776752&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01776752&bidPbancOrd=000",
+      "winner": "바른한결",
+      "bid_count": 22,
+      "award_amount_eok": 0.5612,
+      "win_rate_pct": 88.023,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -7303,7 +7443,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01775790&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01775790&bidPbancOrd=000",
+      "winner": "시소",
+      "bid_count": 1,
+      "award_amount_eok": 0.15,
+      "win_rate_pct": 100.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -7323,7 +7468,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01776590&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01776590&bidPbancOrd=000",
+      "winner": "케이에스유통",
+      "bid_count": 57,
+      "award_amount_eok": 0.2152,
+      "win_rate_pct": 88.049,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -7343,7 +7493,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01776540&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01776540&bidPbancOrd=000",
+      "winner": "엔에스지",
+      "bid_count": 1,
+      "award_amount_eok": 0.193,
+      "win_rate_pct": 99.741,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -7423,7 +7578,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01776112&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01776112&bidPbancOrd=000",
+      "winner": "내스타일",
+      "bid_count": 1,
+      "award_amount_eok": 0.195,
+      "win_rate_pct": 100.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -7443,7 +7603,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "재공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01776053&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01776053&bidPbancOrd=000",
+      "winner": "한신정보",
+      "bid_count": 2,
+      "award_amount_eok": 0.4356,
+      "status": "낙찰",
+      "win_rate_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -7523,7 +7688,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01775166&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01775166&bidPbancOrd=000",
+      "winner": "씨이랩",
+      "bid_count": 1,
+      "award_amount_eok": 0.9599,
+      "win_rate_pct": 96.959,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -7623,7 +7793,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01774667&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01774667&bidPbancOrd=000",
+      "winner": "명성",
+      "bid_count": 1,
+      "award_amount_eok": 0.081,
+      "win_rate_pct": 98.586,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -7703,7 +7878,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01773854&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01773854&bidPbancOrd=000",
+      "winner": "한클러스터",
+      "bid_count": 14,
+      "award_amount_eok": 0.396,
+      "win_rate_pct": 98.828,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -7963,7 +8143,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01773988&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01773988&bidPbancOrd=000",
+      "winner": "인프라칩",
+      "bid_count": 3,
+      "award_amount_eok": 0.3277,
+      "win_rate_pct": 94.727,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -8023,7 +8208,12 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "재공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01773965&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01773965&bidPbancOrd=000",
+      "winner": "자임텍",
+      "bid_count": 2,
+      "award_amount_eok": 0.1829,
+      "win_rate_pct": 87.161,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -8123,7 +8313,12 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "재공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01773500&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01773500&bidPbancOrd=000",
+      "winner": "제이케이컴퍼니",
+      "bid_count": 2,
+      "award_amount_eok": 0.561,
+      "win_rate_pct": 95.771,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -8244,7 +8439,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01772892&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01772892&bidPbancOrd=000",
+      "winner": "늘푸른씨앤에이",
+      "bid_count": 55,
+      "award_amount_eok": 2.0325,
+      "win_rate_pct": 86.274,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -8504,7 +8704,12 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "변경공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01769663&bidPbancOrd=001"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01769663&bidPbancOrd=001",
+      "winner": "이너인포",
+      "bid_count": 2,
+      "award_amount_eok": 2.174,
+      "status": "낙찰",
+      "win_rate_pct": 97.7
     },
     {
       "source": "g2b_api",
@@ -8544,7 +8749,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "변경공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01757133&bidPbancOrd=001"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01757133&bidPbancOrd=001",
+      "winner": "트루빈스",
+      "bid_count": 5,
+      "award_amount_eok": 0.7224,
+      "win_rate_pct": 84.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -8604,7 +8814,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01771867&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01771867&bidPbancOrd=000",
+      "winner": "리더스시스템즈",
+      "bid_count": 50,
+      "award_amount_eok": 0.4534,
+      "win_rate_pct": 96.107,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -8725,7 +8940,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01771394&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01771394&bidPbancOrd=000",
+      "winner": "아이브이에스 IVS",
+      "bid_count": 2,
+      "award_amount_eok": 0.902,
+      "status": "낙찰",
+      "win_rate_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -8986,7 +9206,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01770514&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01770514&bidPbancOrd=000",
+      "winner": "칸쵸유통",
+      "bid_count": 61,
+      "award_amount_eok": 0.1709,
+      "win_rate_pct": 88.011,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -9006,7 +9231,12 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01770499&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01770499&bidPbancOrd=000",
+      "winner": "인피네트",
+      "bid_count": 3,
+      "award_amount_eok": 0.264,
+      "win_rate_pct": 96.819,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -9066,7 +9296,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01770159&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01770159&bidPbancOrd=000",
+      "winner": "한국에너지공과대학교",
+      "bid_count": 1,
+      "award_amount_eok": 0.539,
+      "win_rate_pct": 99.336,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -9086,7 +9321,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01770128&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01770128&bidPbancOrd=000",
+      "winner": "글로벌투어네트웍스",
+      "bid_count": 1,
+      "award_amount_eok": 0.1358,
+      "win_rate_pct": 99.757,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -9186,7 +9426,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01769761&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01769761&bidPbancOrd=000",
+      "winner": "한국그린피스",
+      "bid_count": 25,
+      "award_amount_eok": 0.7987,
+      "win_rate_pct": 88.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -9266,7 +9511,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "재공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01769505&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01769505&bidPbancOrd=000",
+      "winner": "한국전산감리원",
+      "bid_count": 1,
+      "award_amount_eok": 0.7398,
+      "win_rate_pct": 99.929,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -9448,7 +9698,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "변경공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01755090&bidPbancOrd=001"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01755090&bidPbancOrd=001",
+      "winner": "미디어큐브",
+      "bid_count": 3,
+      "award_amount_eok": 0.7469,
+      "status": "낙찰",
+      "win_rate_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -9569,7 +9824,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01768641&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01768641&bidPbancOrd=000",
+      "winner": "아토즈씨앤텍（ATOZ Sci & Tech）",
+      "bid_count": 1,
+      "award_amount_eok": 0.319,
+      "win_rate_pct": 98.976,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -9669,7 +9929,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "재공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01768274&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01768274&bidPbancOrd=000",
+      "winner": "에이아이이와이",
+      "bid_count": 1,
+      "award_amount_eok": 3.3,
+      "win_rate_pct": 100.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -9729,7 +9994,12 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01768180&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01768180&bidPbancOrd=000",
+      "winner": "디앤넷",
+      "bid_count": 10,
+      "award_amount_eok": 0.935,
+      "win_rate_pct": 86.354,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -9769,7 +10039,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01767985&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01767985&bidPbancOrd=000",
+      "winner": "씨에이치에이컴퍼니",
+      "bid_count": 29,
+      "award_amount_eok": 0.0729,
+      "win_rate_pct": 90.048,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -9789,7 +10064,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "재공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01767932&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01767932&bidPbancOrd=000",
+      "winner": "비앤비헬스케어",
+      "bid_count": 1,
+      "award_amount_eok": 0.19,
+      "win_rate_pct": 95.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -9869,7 +10149,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01767837&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01767837&bidPbancOrd=000",
+      "winner": "잇다에듀",
+      "bid_count": 1,
+      "award_amount_eok": 0.3,
+      "win_rate_pct": 100.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -10029,7 +10314,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01766988&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01766988&bidPbancOrd=000",
+      "winner": "하나에듀글로벌",
+      "bid_count": 14,
+      "award_amount_eok": 0.6903,
+      "win_rate_pct": 88.12,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -10089,7 +10379,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01766051&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01766051&bidPbancOrd=000",
+      "winner": "향상연구소",
+      "bid_count": 1,
+      "award_amount_eok": 0.319,
+      "win_rate_pct": 100.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -10109,7 +10404,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01765925&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01765925&bidPbancOrd=000",
+      "winner": "웨어밸리",
+      "bid_count": 1,
+      "award_amount_eok": 0.2352,
+      "win_rate_pct": 100.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -10189,7 +10489,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01765706&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01765706&bidPbancOrd=000",
+      "winner": "자연미각",
+      "bid_count": 25,
+      "award_amount_eok": 0.3096,
+      "win_rate_pct": 88.232,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -10209,7 +10514,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "재공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01764745&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01764745&bidPbancOrd=000",
+      "winner": "성지산업",
+      "bid_count": 1,
+      "award_amount_eok": 0.664,
+      "win_rate_pct": 99.939,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -10309,7 +10619,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01760292&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01760292&bidPbancOrd=000",
+      "winner": "남북의료기상사",
+      "bid_count": 2,
+      "award_amount_eok": 1.539,
+      "win_rate_pct": 95.822,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -10449,7 +10764,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01766369&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01766369&bidPbancOrd=000",
+      "winner": "캐럿글로벌",
+      "bid_count": 12,
+      "award_amount_eok": 0.4455,
+      "status": "낙찰",
+      "win_rate_pct": 90.0
     },
     {
       "source": "g2b_api",
@@ -10649,7 +10969,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01766023&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01766023&bidPbancOrd=000",
+      "winner": "위고로보틱스",
+      "bid_count": 1,
+      "award_amount_eok": 0.605,
+      "win_rate_pct": 97.638,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -10829,7 +11154,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01765813&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01765813&bidPbancOrd=000",
+      "winner": "바로에이아이",
+      "bid_count": 2,
+      "award_amount_eok": 1.02,
+      "win_rate_pct": 99.487,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -10889,7 +11219,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01765652&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01765652&bidPbancOrd=000",
+      "winner": "아이에스테크",
+      "bid_count": 3,
+      "award_amount_eok": 0.5831,
+      "win_rate_pct": 98.798,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -10909,7 +11244,12 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01765642&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01765642&bidPbancOrd=000",
+      "winner": "링크스타트",
+      "bid_count": 2,
+      "award_amount_eok": 0.647,
+      "status": "낙찰",
+      "win_rate_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -10929,7 +11269,12 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "재공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01765589&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01765589&bidPbancOrd=000",
+      "winner": "잉클",
+      "bid_count": 2,
+      "award_amount_eok": 6.6,
+      "status": "낙찰",
+      "win_rate_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -11050,7 +11395,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "재공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01765180&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01765180&bidPbancOrd=000",
+      "winner": "오픈패스로보틱스",
+      "bid_count": 1,
+      "award_amount_eok": 1.43,
+      "win_rate_pct": 100.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -11130,7 +11480,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01765054&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01765054&bidPbancOrd=000",
+      "winner": "엠에스테크",
+      "bid_count": 9,
+      "award_amount_eok": 1.85,
+      "win_rate_pct": 86.629,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -11311,7 +11666,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01764527&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01764527&bidPbancOrd=000",
+      "winner": "한울솔루션",
+      "bid_count": 1,
+      "award_amount_eok": 0.7227,
+      "win_rate_pct": 98.932,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -11371,7 +11731,12 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01764344&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01764344&bidPbancOrd=000",
+      "winner": "빅웨이브로보틱스",
+      "bid_count": 2,
+      "award_amount_eok": 0.5885,
+      "win_rate_pct": 96.704,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -11591,7 +11956,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01763266&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01763266&bidPbancOrd=000",
+      "winner": "로보티즈",
+      "bid_count": 1,
+      "award_amount_eok": 1.188,
+      "win_rate_pct": 100.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -11893,7 +12263,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01763757&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01763757&bidPbancOrd=000",
+      "winner": "하이버스이앤씨 (Hybus E&C)",
+      "bid_count": 3,
+      "award_amount_eok": 0.392,
+      "status": "낙찰",
+      "win_rate_pct": 97.5
     },
     {
       "source": "g2b_api",
@@ -11933,7 +12308,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01763750&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01763750&bidPbancOrd=000",
+      "winner": "블루소프트",
+      "bid_count": 3,
+      "award_amount_eok": 0.9,
+      "status": "낙찰",
+      "win_rate_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -12013,7 +12393,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01763429&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01763429&bidPbancOrd=000",
+      "winner": "미림씨스콘",
+      "bid_count": 1,
+      "award_amount_eok": 0.2959,
+      "win_rate_pct": 99.629,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -12034,7 +12419,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01763425&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01763425&bidPbancOrd=000",
+      "winner": "인천대학교 산학협력단",
+      "bid_count": 2,
+      "award_amount_eok": 0.9328,
+      "win_rate_pct": 88.609,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -12054,7 +12444,12 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "재공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01763411&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01763411&bidPbancOrd=000",
+      "winner": "우리시스템",
+      "bid_count": 2,
+      "award_amount_eok": 0.435,
+      "status": "낙찰",
+      "win_rate_pct": 97.7
     },
     {
       "source": "g2b_api",
@@ -12094,7 +12489,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01763278&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01763278&bidPbancOrd=000",
+      "winner": "와우시스템",
+      "bid_count": 29,
+      "award_amount_eok": 0.883,
+      "win_rate_pct": 98.471,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -12174,7 +12574,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "재공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01763028&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01763028&bidPbancOrd=000",
+      "winner": "제이엠로보틱스",
+      "bid_count": 1,
+      "award_amount_eok": 1.3374,
+      "win_rate_pct": 99.714,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -12415,7 +12820,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01762578&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01762578&bidPbancOrd=000",
+      "winner": "굿윌커뮤니케이션즈",
+      "bid_count": 3,
+      "award_amount_eok": 0.8,
+      "status": "낙찰",
+      "win_rate_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -12515,7 +12925,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01762350&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01762350&bidPbancOrd=000",
+      "winner": "지오엔소프트",
+      "bid_count": 3,
+      "award_amount_eok": 1.1,
+      "status": "낙찰",
+      "win_rate_pct": 93.2
     },
     {
       "source": "g2b_api",
@@ -12555,7 +12970,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01762238&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01762238&bidPbancOrd=000",
+      "winner": "양컴",
+      "bid_count": 1,
+      "award_amount_eok": 0.5937,
+      "win_rate_pct": 95.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -12595,7 +13015,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01762144&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01762144&bidPbancOrd=000",
+      "winner": "(사)한국능률협회",
+      "bid_count": 3,
+      "award_amount_eok": 0.4,
+      "status": "낙찰",
+      "win_rate_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -12695,7 +13120,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01761830&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01761830&bidPbancOrd=000",
+      "winner": "한국보건복지인재원",
+      "bid_count": 1,
+      "award_amount_eok": 0.186,
+      "win_rate_pct": 100.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -12735,7 +13165,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01761813&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01761813&bidPbancOrd=000",
+      "winner": "에이아이쓰리",
+      "bid_count": 1,
+      "award_amount_eok": 0.27,
+      "win_rate_pct": 90.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -12775,7 +13210,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01761623&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01761623&bidPbancOrd=000",
+      "winner": "프로젝트여름",
+      "bid_count": 1,
+      "award_amount_eok": 0.0882,
+      "win_rate_pct": 97.967,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -12795,7 +13235,12 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01761621&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01761621&bidPbancOrd=000",
+      "winner": "케이엑스티",
+      "bid_count": 2,
+      "award_amount_eok": 9.6,
+      "win_rate_pct": 98.298,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -12815,7 +13260,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "재공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01761603&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01761603&bidPbancOrd=000",
+      "winner": "굿퍼스트정보기술",
+      "bid_count": 1,
+      "award_amount_eok": 1.9463,
+      "win_rate_pct": 99.485,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -12855,7 +13305,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "재공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01761352&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01761352&bidPbancOrd=000",
+      "winner": "좋은소리창작소",
+      "bid_count": 4,
+      "award_amount_eok": 0.2809,
+      "win_rate_pct": 89.278,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -12875,7 +13330,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01761325&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01761325&bidPbancOrd=000",
+      "winner": "미래엔",
+      "bid_count": 1,
+      "award_amount_eok": 10.0,
+      "win_rate_pct": 100.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -12955,7 +13415,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01759021&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01759021&bidPbancOrd=000",
+      "winner": "능우개발",
+      "bid_count": 789,
+      "award_amount_eok": 6.1291,
+      "win_rate_pct": 89.995,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -12995,7 +13460,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01757073&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01757073&bidPbancOrd=000",
+      "winner": "휴인스",
+      "bid_count": 2,
+      "award_amount_eok": 0.286,
+      "win_rate_pct": 95.748,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -13095,7 +13565,12 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01761459&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01761459&bidPbancOrd=000",
+      "winner": "메디워크에이아이",
+      "bid_count": 1,
+      "award_amount_eok": 1.45,
+      "status": "낙찰",
+      "win_rate_pct": 91.2
     },
     {
       "source": "g2b_api",
@@ -13115,7 +13590,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "재공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01761445&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01761445&bidPbancOrd=000",
+      "winner": "액츠원",
+      "bid_count": 1,
+      "award_amount_eok": 1.88,
+      "win_rate_pct": 99.893,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -13295,7 +13775,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "재공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01761235&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01761235&bidPbancOrd=000",
+      "winner": "제이앤에프솔루션",
+      "bid_count": 1,
+      "award_amount_eok": 0.2702,
+      "win_rate_pct": 100.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -13436,7 +13921,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01760751&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01760751&bidPbancOrd=000",
+      "winner": "성우씨에스",
+      "bid_count": 36,
+      "award_amount_eok": 0.6976,
+      "win_rate_pct": 88.13,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -13496,7 +13986,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "재공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01760464&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01760464&bidPbancOrd=000",
+      "winner": "새온",
+      "bid_count": 2,
+      "award_amount_eok": 0.4224,
+      "win_rate_pct": 96.758,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -13556,7 +14051,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "재공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01760105&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01760105&bidPbancOrd=000",
+      "winner": "훌리악",
+      "bid_count": 2,
+      "award_amount_eok": 0.792,
+      "win_rate_pct": 99.322,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -13696,7 +14196,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01759687&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01759687&bidPbancOrd=000",
+      "winner": "에코디자인센터",
+      "bid_count": 2,
+      "award_amount_eok": 0.8712,
+      "status": "낙찰",
+      "win_rate_pct": 98.9
     },
     {
       "source": "g2b_api",
@@ -13716,7 +14221,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01759668&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01759668&bidPbancOrd=000",
+      "winner": "국립부경대학교 산학협력단",
+      "bid_count": 1,
+      "award_amount_eok": 0.796,
+      "win_rate_pct": 99.5,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -13796,7 +14306,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01759594&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01759594&bidPbancOrd=000",
+      "winner": "한국훼스토",
+      "bid_count": 1,
+      "award_amount_eok": 0.473,
+      "win_rate_pct": 100.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -13856,7 +14371,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01759415&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01759415&bidPbancOrd=000",
+      "winner": "투비와이드",
+      "bid_count": 8,
+      "award_amount_eok": 0.0302,
+      "win_rate_pct": 88.028,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -13956,7 +14476,12 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01758714&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01758714&bidPbancOrd=000",
+      "winner": "아스카넷",
+      "bid_count": 11,
+      "award_amount_eok": 0.858,
+      "win_rate_pct": 97.361,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -14076,7 +14601,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01758014&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01758014&bidPbancOrd=000",
+      "winner": "한국훼스토",
+      "bid_count": 1,
+      "award_amount_eok": 0.6226,
+      "win_rate_pct": 100.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -14196,7 +14726,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01758995&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01758995&bidPbancOrd=000",
+      "winner": "오프너디오씨",
+      "bid_count": 2,
+      "award_amount_eok": 4.9,
+      "status": "낙찰",
+      "win_rate_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -14316,7 +14851,12 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01758618&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01758618&bidPbancOrd=000",
+      "winner": "바로에이아이",
+      "bid_count": 2,
+      "award_amount_eok": 0.7865,
+      "win_rate_pct": 98.609,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -14516,7 +15056,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01758153&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01758153&bidPbancOrd=000",
+      "winner": "다복금속",
+      "bid_count": 1,
+      "award_amount_eok": 0.6523,
+      "win_rate_pct": 100.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -14856,7 +15401,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "재공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01756396&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01756396&bidPbancOrd=000",
+      "winner": "에스에이에스",
+      "bid_count": 1,
+      "award_amount_eok": 0.2803,
+      "win_rate_pct": 100.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -14876,7 +15426,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01756384&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01756384&bidPbancOrd=000",
+      "winner": "메가알앤씨",
+      "bid_count": 6,
+      "award_amount_eok": 0.49,
+      "status": "낙찰",
+      "win_rate_pct": 98.0
     },
     {
       "source": "g2b_api",
@@ -14916,7 +15471,12 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01756307&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01756307&bidPbancOrd=000",
+      "winner": "원퓨트",
+      "bid_count": 2,
+      "award_amount_eok": 0.429,
+      "win_rate_pct": 97.808,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -14957,7 +15517,12 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01756063&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01756063&bidPbancOrd=000",
+      "winner": "두루과학",
+      "bid_count": 22,
+      "award_amount_eok": 2.59,
+      "win_rate_pct": 97.193,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -15037,7 +15602,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01756238&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01756238&bidPbancOrd=000",
+      "winner": "디자인잇오앤오",
+      "bid_count": 1,
+      "award_amount_eok": 0.1079,
+      "win_rate_pct": 96.997,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -15057,7 +15627,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01755176&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01755176&bidPbancOrd=000",
+      "winner": "인텔리빅스",
+      "bid_count": 1,
+      "award_amount_eok": 0.015,
+      "win_rate_pct": 100.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -15077,7 +15652,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01755145&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01755145&bidPbancOrd=000",
+      "winner": "인텔리빅스",
+      "bid_count": 1,
+      "award_amount_eok": 0.1109,
+      "win_rate_pct": 100.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -15117,7 +15697,12 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01756010&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01756010&bidPbancOrd=000",
+      "winner": "메디워크에이아이",
+      "bid_count": 1,
+      "award_amount_eok": 1.6,
+      "status": "낙찰",
+      "win_rate_pct": 90.9
     },
     {
       "source": "g2b_api",
@@ -15137,7 +15722,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01755870&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01755870&bidPbancOrd=000",
+      "winner": "쓰리에스시스템",
+      "bid_count": 2,
+      "award_amount_eok": 1.47,
+      "win_rate_pct": 92.81,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -15237,7 +15827,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "재공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01755726&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01755726&bidPbancOrd=000",
+      "winner": "알트소프트",
+      "bid_count": 1,
+      "award_amount_eok": 0.347,
+      "win_rate_pct": 100.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -15277,7 +15872,12 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "재공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01755516&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01755516&bidPbancOrd=000",
+      "winner": "데이타큐브",
+      "bid_count": 2,
+      "award_amount_eok": 0.0442,
+      "status": "낙찰",
+      "win_rate_pct": 92.8
     },
     {
       "source": "g2b_api",
@@ -15297,7 +15897,12 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01755499&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01755499&bidPbancOrd=000",
+      "winner": "아이위스",
+      "bid_count": 2,
+      "award_amount_eok": 2.55,
+      "win_rate_pct": 97.418,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -15377,7 +15982,12 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01754977&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01754977&bidPbancOrd=000",
+      "winner": "에스마이스연구원",
+      "bid_count": 5,
+      "award_amount_eok": 0.5995,
+      "status": "낙찰",
+      "win_rate_pct": 99.9
     },
     {
       "source": "g2b_api",
@@ -15437,7 +16047,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01754615&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01754615&bidPbancOrd=000",
+      "winner": "이레산업",
+      "bid_count": 1,
+      "award_amount_eok": 0.3349,
+      "win_rate_pct": 100.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -15497,7 +16112,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01754338&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01754338&bidPbancOrd=000",
+      "winner": "아름정보",
+      "bid_count": 3,
+      "award_amount_eok": 0.49,
+      "win_rate_pct": 99.006,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -15517,7 +16137,12 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01754241&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01754241&bidPbancOrd=000",
+      "winner": "스마트소셜",
+      "bid_count": 2,
+      "award_amount_eok": 0.6435,
+      "status": "낙찰",
+      "win_rate_pct": 98.5
     },
     {
       "source": "g2b_api",
@@ -15557,7 +16182,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01752847&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01752847&bidPbancOrd=000",
+      "winner": "아이위스",
+      "bid_count": 2,
+      "award_amount_eok": 1.13,
+      "win_rate_pct": 99.144,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -15597,7 +16227,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01747588&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01747588&bidPbancOrd=000",
+      "winner": "소사이어티",
+      "bid_count": 10,
+      "award_amount_eok": 0.224,
+      "win_rate_pct": 88.167,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -15697,7 +16332,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01753955&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01753955&bidPbancOrd=000",
+      "winner": "씨제이올리브네트웍스",
+      "bid_count": 3,
+      "award_amount_eok": 1.65,
+      "win_rate_pct": 97.813,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -15737,7 +16377,12 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01753905&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01753905&bidPbancOrd=000",
+      "winner": "서호환경",
+      "bid_count": 3,
+      "award_amount_eok": 6.219,
+      "win_rate_pct": 88.843,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -15757,7 +16402,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01753843&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01753843&bidPbancOrd=000",
+      "winner": "휴안",
+      "bid_count": 1,
+      "award_amount_eok": 0.2033,
+      "win_rate_pct": 88.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -15817,7 +16467,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01753566&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01753566&bidPbancOrd=000",
+      "winner": "엠씨씨",
+      "bid_count": 233,
+      "award_amount_eok": 0.7252,
+      "win_rate_pct": 99.591,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -15897,7 +16552,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01753341&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01753341&bidPbancOrd=000",
+      "winner": "아이와이시스템",
+      "bid_count": 2,
+      "award_amount_eok": 0.181,
+      "win_rate_pct": 92.723,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -15917,7 +16577,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "재공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01753188&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01753188&bidPbancOrd=000",
+      "winner": "아이움",
+      "bid_count": 2,
+      "award_amount_eok": 0.45,
+      "status": "낙찰",
+      "win_rate_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -16057,7 +16722,12 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "재공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01752693&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01752693&bidPbancOrd=000",
+      "winner": "(사)한국에이아이사물인터넷협회",
+      "bid_count": 3,
+      "award_amount_eok": 0.36,
+      "status": "낙찰",
+      "win_rate_pct": 90.0
     },
     {
       "source": "g2b_api",
@@ -16217,7 +16887,12 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01752163&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01752163&bidPbancOrd=000",
+      "winner": "오픈네트웍시스템",
+      "bid_count": 5,
+      "award_amount_eok": 0.5214,
+      "win_rate_pct": 87.015,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -16237,7 +16912,12 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "재공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01752143&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01752143&bidPbancOrd=000",
+      "winner": "디지털서울오에이",
+      "bid_count": 2,
+      "award_amount_eok": 0.246,
+      "win_rate_pct": 93.52,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -16277,7 +16957,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01751861&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01751861&bidPbancOrd=000",
+      "winner": "인바이드",
+      "bid_count": 7,
+      "award_amount_eok": 0.3861,
+      "status": "낙찰",
+      "win_rate_pct": 88.6
     },
     {
       "source": "g2b_api",
@@ -16297,7 +16982,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01751348&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01751348&bidPbancOrd=000",
+      "winner": "한컴이노스트림",
+      "bid_count": 1,
+      "award_amount_eok": 0.4653,
+      "win_rate_pct": 100.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -16317,7 +17007,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01751347&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01751347&bidPbancOrd=000",
+      "winner": "한컴이노스트림",
+      "bid_count": 1,
+      "award_amount_eok": 0.3087,
+      "win_rate_pct": 100.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -16477,7 +17172,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "변경공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01751804&bidPbancOrd=001"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01751804&bidPbancOrd=001",
+      "winner": "퓨리오사에이아이",
+      "bid_count": 31,
+      "award_amount_eok": 0.4532,
+      "win_rate_pct": 96.467,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -16537,7 +17237,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01751725&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01751725&bidPbancOrd=000",
+      "winner": "피플데이터랩",
+      "bid_count": 1,
+      "award_amount_eok": 0.5096,
+      "win_rate_pct": 98.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -16617,7 +17322,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01751555&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01751555&bidPbancOrd=000",
+      "winner": "유한회사 대성기계",
+      "bid_count": 1,
+      "award_amount_eok": 0.6754,
+      "win_rate_pct": 100.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -16637,7 +17347,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01751509&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01751509&bidPbancOrd=000",
+      "winner": "신성목형",
+      "bid_count": 1,
+      "award_amount_eok": 0.5918,
+      "win_rate_pct": 100.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -16677,7 +17392,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01751477&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01751477&bidPbancOrd=000",
+      "winner": "에쓰엔",
+      "bid_count": 1,
+      "award_amount_eok": 0.3025,
+      "win_rate_pct": 100.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -16697,7 +17417,11 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "재공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01751431&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01751431&bidPbancOrd=000",
+      "winner": "정동회계법인",
+      "bid_count": 5,
+      "award_amount_eok": 0.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -16717,7 +17441,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01751430&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01751430&bidPbancOrd=000",
+      "winner": "디자인안동",
+      "bid_count": 79,
+      "award_amount_eok": 0.7944,
+      "win_rate_pct": 88.004,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -16737,7 +17466,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01751386&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01751386&bidPbancOrd=000",
+      "winner": "랩파트너",
+      "bid_count": 6,
+      "award_amount_eok": 0.4941,
+      "win_rate_pct": 88.513,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -16837,7 +17571,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01751106&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01751106&bidPbancOrd=000",
+      "winner": "(유)아성개발",
+      "bid_count": 24,
+      "award_amount_eok": 0.6514,
+      "win_rate_pct": 86.25,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -16897,7 +17636,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01750779&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01750779&bidPbancOrd=000",
+      "winner": "동양엔지니어링",
+      "bid_count": 4,
+      "award_amount_eok": 0.4013,
+      "win_rate_pct": 88.607,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -16937,7 +17681,12 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01750654&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01750654&bidPbancOrd=000",
+      "winner": "다온지능정보",
+      "bid_count": 2,
+      "award_amount_eok": 0.781,
+      "win_rate_pct": 100.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -16957,7 +17706,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01750615&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01750615&bidPbancOrd=000",
+      "winner": "수퍼빈",
+      "bid_count": 1,
+      "award_amount_eok": 0.198,
+      "win_rate_pct": 100.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -17057,7 +17811,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01750298&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01750298&bidPbancOrd=000",
+      "winner": "이레사이언텍",
+      "bid_count": 71,
+      "award_amount_eok": 0.3179,
+      "win_rate_pct": 88.025,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -17097,7 +17856,12 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01750208&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01750208&bidPbancOrd=000",
+      "winner": "비투엔",
+      "bid_count": 3,
+      "award_amount_eok": 4.895,
+      "win_rate_pct": 93.872,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -17197,7 +17961,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01750115&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01750115&bidPbancOrd=000",
+      "winner": "셀렉트스타",
+      "bid_count": 8,
+      "award_amount_eok": 0.868,
+      "status": "낙찰",
+      "win_rate_pct": 80.6
     },
     {
       "source": "g2b_api",
@@ -17298,7 +18067,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01750015&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01750015&bidPbancOrd=000",
+      "winner": "지아이웍스",
+      "bid_count": 2,
+      "award_amount_eok": 3.999,
+      "status": "낙찰",
+      "win_rate_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -17318,7 +18092,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01749888&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01749888&bidPbancOrd=000",
+      "winner": "우진",
+      "bid_count": 1,
+      "award_amount_eok": 0.122,
+      "win_rate_pct": 91.715,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -17338,7 +18117,12 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01749714&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01749714&bidPbancOrd=000",
+      "winner": "악티보",
+      "bid_count": 4,
+      "award_amount_eok": 2.4178,
+      "status": "낙찰",
+      "win_rate_pct": 79.3
     },
     {
       "source": "g2b_api",
@@ -17378,7 +18162,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01748404&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01748404&bidPbancOrd=000",
+      "winner": "한솔피엔에스",
+      "bid_count": 1,
+      "award_amount_eok": 2.095,
+      "win_rate_pct": 99.997,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -17558,7 +18347,12 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "변경공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01711665&bidPbancOrd=001"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01711665&bidPbancOrd=001",
+      "winner": "코코링크",
+      "bid_count": 2,
+      "award_amount_eok": 6.699,
+      "win_rate_pct": 98.492,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -17598,7 +18392,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "재공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01749501&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01749501&bidPbancOrd=000",
+      "winner": "프리윌린",
+      "bid_count": 3,
+      "award_amount_eok": 0.539,
+      "win_rate_pct": 98.27,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -17758,7 +18557,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01749107&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01749107&bidPbancOrd=000",
+      "winner": "아이엠씨에스",
+      "bid_count": 1,
+      "award_amount_eok": 0.715,
+      "win_rate_pct": 100.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -17778,7 +18582,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01749095&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01749095&bidPbancOrd=000",
+      "winner": "리키항공",
+      "bid_count": 2,
+      "award_amount_eok": 0.6985,
+      "status": "낙찰",
+      "win_rate_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -17818,7 +18627,12 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "재공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01749038&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01749038&bidPbancOrd=000",
+      "winner": "이지엠휴먼월드",
+      "bid_count": 4,
+      "award_amount_eok": 0.2995,
+      "win_rate_pct": 99.833,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -17858,7 +18672,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "재공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01748852&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01748852&bidPbancOrd=000",
+      "winner": "유미특허법인",
+      "bid_count": 1,
+      "award_amount_eok": 1.0472,
+      "win_rate_pct": 95.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -17878,7 +18697,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "재공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01748836&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01748836&bidPbancOrd=000",
+      "winner": "셀파이엔씨",
+      "bid_count": 2,
+      "award_amount_eok": 7.527,
+      "status": "낙찰",
+      "win_rate_pct": 96.5
     },
     {
       "source": "g2b_api",
@@ -17898,7 +18722,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01748821&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01748821&bidPbancOrd=000",
+      "winner": "애드아임",
+      "bid_count": 1,
+      "award_amount_eok": 0.704,
+      "win_rate_pct": 100.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -18058,7 +18887,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "재공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01748371&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01748371&bidPbancOrd=000",
+      "winner": "한테크",
+      "bid_count": 1,
+      "award_amount_eok": 1.2395,
+      "win_rate_pct": 97.996,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -18198,7 +19032,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01748110&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01748110&bidPbancOrd=000",
+      "winner": "넥스트클라우드",
+      "bid_count": 2,
+      "award_amount_eok": 0.6,
+      "win_rate_pct": 100.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -18219,7 +19058,12 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01747873&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01747873&bidPbancOrd=000",
+      "winner": "엠티씨엠",
+      "bid_count": 3,
+      "award_amount_eok": 1.254,
+      "win_rate_pct": 93.303,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -18319,7 +19163,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01747722&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01747722&bidPbancOrd=000",
+      "winner": "투비와이드",
+      "bid_count": 4,
+      "award_amount_eok": 0.0559,
+      "win_rate_pct": 88.091,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -18399,7 +19248,12 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01747506&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01747506&bidPbancOrd=000",
+      "winner": "씨에이에스",
+      "bid_count": 4,
+      "award_amount_eok": 3.7228,
+      "status": "낙찰",
+      "win_rate_pct": 79.1
     },
     {
       "source": "g2b_api",
@@ -18539,7 +19393,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01746540&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01746540&bidPbancOrd=000",
+      "winner": "반사",
+      "bid_count": 1,
+      "award_amount_eok": 0.52,
+      "win_rate_pct": 99.464,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -18559,7 +19418,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "변경공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01746430&bidPbancOrd=001"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01746430&bidPbancOrd=001",
+      "winner": "인바디 대전",
+      "bid_count": 13,
+      "award_amount_eok": 0.245,
+      "win_rate_pct": 88.002,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -18640,7 +19504,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01745574&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01745574&bidPbancOrd=000",
+      "winner": "도시혁신그룹 무브먼트",
+      "bid_count": 6,
+      "award_amount_eok": 0.5,
+      "status": "낙찰",
+      "win_rate_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -18680,7 +19549,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "변경공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01743942&bidPbancOrd=001"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01743942&bidPbancOrd=001",
+      "winner": "이노플",
+      "bid_count": 4,
+      "award_amount_eok": 6.0,
+      "status": "낙찰",
+      "win_rate_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -18860,7 +19734,12 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01746946&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01746946&bidPbancOrd=000",
+      "winner": "엔클라우드24",
+      "bid_count": 2,
+      "award_amount_eok": 22.8607,
+      "status": "낙찰",
+      "win_rate_pct": 99.0
     },
     {
       "source": "g2b_api",
@@ -18920,7 +19799,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01746638&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01746638&bidPbancOrd=000",
+      "winner": "GL컴퍼니",
+      "bid_count": 6,
+      "award_amount_eok": 0.2965,
+      "status": "낙찰",
+      "win_rate_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -18940,7 +19824,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "재공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01746499&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01746499&bidPbancOrd=000",
+      "winner": "슈퍼브에이아이",
+      "bid_count": 3,
+      "award_amount_eok": 0.4754,
+      "win_rate_pct": 97.907,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -19080,7 +19969,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01746215&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01746215&bidPbancOrd=000",
+      "winner": "라온데이터앤컨설팅",
+      "bid_count": 5,
+      "award_amount_eok": 0.4,
+      "status": "낙찰",
+      "win_rate_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -19140,7 +20034,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01746026&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01746026&bidPbancOrd=000",
+      "winner": "한주",
+      "bid_count": 4,
+      "award_amount_eok": 0.3926,
+      "status": "낙찰",
+      "win_rate_pct": 97.5
     },
     {
       "source": "g2b_api",
@@ -19160,7 +20059,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01746008&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01746008&bidPbancOrd=000",
+      "winner": "풍선껌",
+      "bid_count": 6,
+      "award_amount_eok": 0.2998,
+      "win_rate_pct": 90.397,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -19200,7 +20104,12 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "재공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01745771&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01745771&bidPbancOrd=000",
+      "winner": "라인월드",
+      "bid_count": 4,
+      "award_amount_eok": 0.396,
+      "win_rate_pct": 97.733,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -19240,7 +20149,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01745447&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01745447&bidPbancOrd=000",
+      "winner": "미루웨어",
+      "bid_count": 2,
+      "award_amount_eok": 9.163,
+      "win_rate_pct": 99.089,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -19320,7 +20234,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01745258&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01745258&bidPbancOrd=000",
+      "winner": "비주얼센터",
+      "bid_count": 2,
+      "award_amount_eok": 0.594,
+      "win_rate_pct": 99.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -19380,7 +20299,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01744914&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01744914&bidPbancOrd=000",
+      "winner": "인바디 대구",
+      "bid_count": 2,
+      "award_amount_eok": 0.45,
+      "win_rate_pct": 89.819,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -19460,7 +20384,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01743878&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01743878&bidPbancOrd=000",
+      "winner": "코어테크",
+      "bid_count": 58,
+      "award_amount_eok": 0.2908,
+      "win_rate_pct": 97.825,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -19480,7 +20409,12 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01743843&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01743843&bidPbancOrd=000",
+      "winner": "더블스택",
+      "bid_count": 2,
+      "award_amount_eok": 0.264,
+      "status": "낙찰",
+      "win_rate_pct": 86.7
     },
     {
       "source": "g2b_api",
@@ -19540,7 +20474,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "재공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01741334&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01741334&bidPbancOrd=000",
+      "winner": "경북대학교 산학협력단",
+      "bid_count": 1,
+      "award_amount_eok": 0.49,
+      "win_rate_pct": 99.24,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -19611,6 +20550,16 @@
     "scope": {
       "생성형·Agent": 78,
       "AI SW 확대": 900
+    },
+    "with_winner": 188,
+    "awards_enrich": {
+      "range": {
+        "since": "2026-07-01",
+        "until": "2026-10-29"
+      },
+      "fetched": 50873,
+      "updated": 146,
+      "lookups": 0
     }
   }
 }

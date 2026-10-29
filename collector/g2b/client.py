@@ -27,10 +27,16 @@ SCSBID_OPS = {
     "frgcpt": f"{SCSBID_BASE}/getScsbidListSttusFrgcpt",
 }
 
-# 개찰순위 (투찰 업체)
-SCSBID_RANK_OPS = {
-    "servc": f"{SCSBID_BASE}/getScsbidListSttusServcBidResult",
-    # Some deployments use ...OpenResult; keep configurable fallbacks in fetch helpers.
+# 나라장터 검색조건 낙찰 목록 (공고명 키워드)
+SCSBID_PPS_OPS = {
+    "servc": f"{SCSBID_BASE}/getScsbidListSttusServcPPSSrch",
+    "thng": f"{SCSBID_BASE}/getScsbidListSttusThngPPSSrch",
+}
+
+# 개찰결과 (용역/물품) — opengCorpInfo 등
+OPENG_PPS_OPS = {
+    "servc": f"{SCSBID_BASE}/getOpengResultListInfoServcPPSSrch",
+    "thng": f"{SCSBID_BASE}/getOpengResultListInfoThngPPSSrch",
 }
 
 
@@ -188,7 +194,9 @@ class G2BClient:
         start: date,
         end: date,
         biz: str = "servc",
+        page_size: int = 999,
     ) -> list[dict[str, Any]]:
+        """개찰·낙찰 완료 목록 (inqryDiv=1, 등록일시 기준, ~1개월 창)."""
         url = SCSBID_OPS[biz]
         out: list[dict[str, Any]] = []
         for bgn, edn in month_windows(start, end):
@@ -197,5 +205,84 @@ class G2BClient:
                 "inqryBgnDt": _dt_param(bgn),
                 "inqryEndDt": _dt_param(edn, end=True),
             }
-            out.extend(self.iter_pages(url, params))
+            for item in self.iter_pages(url, params, page_size=page_size):
+                row = dict(item)
+                row["_biz"] = biz
+                out.append(row)
         return out
+
+    def fetch_awards_range(
+        self,
+        start: date,
+        end: date,
+        biz_types: list[str] | None = None,
+    ) -> list[dict[str, Any]]:
+        """용역+물품 낙찰 목록을 기간으로 수집 후 bidNtceNo+Ord 기준 중복 제거."""
+        biz_types = biz_types or ["servc", "thng"]
+        seen: dict[str, dict[str, Any]] = {}
+        for biz in biz_types:
+            for item in self.fetch_award_status(start, end, biz=biz):
+                key = f"{item.get('bidNtceNo')}-{item.get('bidNtceOrd')}"
+                seen[key] = item
+        return list(seen.values())
+
+    def fetch_award_by_bid(
+        self,
+        bid_no: str,
+        bid_ord: str | None = None,
+        biz_types: list[str] | None = None,
+    ) -> dict[str, Any] | None:
+        """입찰공고번호로 낙찰 단건 조회 (inqryDiv=4)."""
+        biz_types = biz_types or ["servc", "thng"]
+        params = {
+            "inqryDiv": "4",
+            "bidNtceNo": bid_no,
+            "inqryBgnDt": "202301010000",
+            "inqryEndDt": "209912312359",
+            "numOfRows": 10,
+            "pageNo": 1,
+        }
+        if bid_ord:
+            params["bidNtceOrd"] = str(bid_ord).zfill(3)
+        for biz in biz_types:
+            url = SCSBID_OPS[biz]
+            try:
+                data = self._get(url, params)
+            except Exception:
+                continue
+            for item in self._items(data):
+                if bid_ord and str(item.get("bidNtceOrd") or "").zfill(3) != str(bid_ord).zfill(3):
+                    continue
+                row = dict(item)
+                row["_biz"] = biz
+                return row
+        return None
+
+    def fetch_openg_by_bid(
+        self,
+        bid_no: str,
+        bid_ord: str | None = None,
+        biz: str = "servc",
+    ) -> dict[str, Any] | None:
+        """개찰결과 PPSSrch (opengCorpInfo / progrsDivCdNm)."""
+        url = OPENG_PPS_OPS.get(biz) or OPENG_PPS_OPS["servc"]
+        params = {
+            "inqryDiv": "3",
+            "bidNtceNo": bid_no,
+            "inqryBgnDt": "202301010000",
+            "inqryEndDt": "209912312359",
+            "numOfRows": 10,
+            "pageNo": 1,
+        }
+        if bid_ord:
+            params["bidNtceOrd"] = str(bid_ord).zfill(3)
+        data = self._get(url, params)
+        items = self._items(data)
+        if not items:
+            return None
+        if bid_ord:
+            want = str(bid_ord).zfill(3)
+            for it in items:
+                if str(it.get("bidNtceOrd") or "").zfill(3) == want:
+                    return it
+        return items[0]
