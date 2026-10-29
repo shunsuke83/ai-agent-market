@@ -12,26 +12,24 @@ h1{font-size:28px;line-height:1.25;margin:6px 0 8px;text-wrap:balance}h2{font-si
 .stamp{display:inline-block;font-family:var(--f-mono);font-size:12px;color:var(--stamp);background:var(--stamp-soft);border-radius:4px;padding:3px 8px;margin-top:12px}
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin-top:20px}
 .stat{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px 16px}.stat .v{font-size:23px;font-weight:700;font-variant-numeric:tabular-nums}.stat .l{font-size:13px;color:var(--muted)}
-.tbl{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:8px}
-table{width:100%;border-collapse:collapse;font-size:14px;min-width:640px}th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+/* Tables: fluid by content; card hugs table up to container; only max caps on long text */
+.tbl{width:fit-content;max-width:100%;overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:8px}
+.tbl table{width:max-content;min-width:0;max-width:none;border-collapse:collapse;font-size:14px;table-layout:auto}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
 th{font-size:12px;color:var(--muted);font-weight:600;font-family:var(--f-mono);white-space:nowrap}tr:last-child td{border-bottom:none}
-td:first-child{white-space:nowrap}td a{color:var(--fg)}td a:hover{color:var(--accent)}
-/* Numeric cols hug content so ranking/summary tables don't leave headers floating mid-gap */
-th.num,td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;width:1%}
-/* Compact ranking / summary tables: size card + table to content */
-.tbl:has(> table.rank){width:fit-content;max-width:100%}
-table.rank{width:auto;min-width:0;max-width:100%}
-table.rank th.num,table.rank td.num{width:auto;padding-left:1.25em}
+td a{color:var(--fg)}td a:hover{color:var(--accent)}
+/* Long free-text cells wrap within a cap; short/num cells stay content-sized */
+.tbl td{max-width:28em}
+th.num,td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;max-width:none}
+table.rank th.num,table.rank td.num{padding-left:1.25em}
 th.sortable-th{cursor:pointer;user-select:none;-webkit-user-select:none}
 th.sortable-th:hover,th.sortable-th:focus-visible{color:var(--accent);outline:none}
 th.sortable-th.is-sorted{color:var(--fg)}
 th.sortable-th .sort-ind{display:inline-block;min-width:1em;margin-left:.28em;font-size:10px;line-height:1;color:var(--accent);opacity:0}
 th.sortable-th:hover .sort-ind,th.sortable-th:focus-visible .sort-ind{opacity:.45}
 th.sortable-th.is-sorted .sort-ind{opacity:1}
-/* band.html 공고별 결과: auto layout — grow with content, scroll inside .tbl */
-table.band-results{width:max-content;min-width:100%;table-layout:auto}
+/* band.html 공고별 결과 */
 table.band-results th,table.band-results td{vertical-align:middle}
-/* Short / numeric cols size to content; never overflow into neighbors */
 table.band-results th:nth-child(1),table.band-results td:nth-child(1),
 table.band-results th:nth-child(2),table.band-results td:nth-child(2),
 table.band-results th:nth-child(5),table.band-results td:nth-child(5),
@@ -40,14 +38,12 @@ table.band-results th:nth-child(7),table.band-results td:nth-child(7),
 table.band-results th:nth-child(8),table.band-results td:nth-child(8),
 table.band-results th:nth-child(9),table.band-results td:nth-child(9),
 table.band-results th:nth-child(10),table.band-results td:nth-child(10),
-table.band-results th:nth-child(11),table.band-results td:nth-child(11){white-space:nowrap}
-/* 수요기관·사업명 can wrap; keep title from dominating endlessly */
-table.band-results td:nth-child(3){max-width:11em}
+table.band-results th:nth-child(11),table.band-results td:nth-child(11){white-space:nowrap;max-width:none}
+table.band-results td:nth-child(3){max-width:12em}
 table.band-results td:nth-child(4){max-width:28em}
 table.band-results td a{text-decoration:none}table.band-results td a:hover{text-decoration:underline}
-/* Notice-style lists: date col hugs content; table can grow past container */
-table.notices{width:max-content;min-width:100%;table-layout:auto}
-table.notices th:first-child,table.notices td:first-child{white-space:nowrap}
+/* Notice lists: date / short label cols hug content */
+table.notices th:first-child,table.notices td:first-child{white-space:nowrap;max-width:none}
 .empty{background:var(--surface);border:1px dashed var(--line);border-radius:8px;padding:16px;color:var(--muted)}
 .bars{display:grid;gap:7px;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px 18px}
 .bar{display:grid;grid-template-columns:72px minmax(0,1fr) 64px;gap:12px;align-items:center;font-size:13px;font-variant-numeric:tabular-nums}
