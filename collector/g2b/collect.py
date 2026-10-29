@@ -2,7 +2,9 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
+import time
 from datetime import date, datetime, timedelta
 from pathlib import Path
 from typing import Any
@@ -343,6 +345,7 @@ def cmd_enrich_bidders(args: argparse.Namespace) -> int:
     fetched = 0
     empty = 0
     skipped = 0
+    consecutive_429 = 0
     # Mutate in place by key so we can checkpoint mid-run
     by_live = {_notice_key(n): n for n in notices if n.get("bid_no")}
     # Preserve notices without bid_no
@@ -370,13 +373,31 @@ def cmd_enrich_bidders(args: argparse.Namespace) -> int:
         try:
             rows = client.fetch_bidders_by_bid(n["bid_no"], n.get("bid_ord"))
         except (G2BError, Exception) as e:
+            msg = redact_secrets(str(e))
+            if "429" in msg:
+                consecutive_429 += 1
+                # OpengCompt quota recovers slowly — cool down instead of burning skips.
+                try:
+                    cool = float(os.environ.get("G2B_429_COOLDOWN", "90"))
+                except ValueError:
+                    cool = 90.0
+                wait = min(300.0, cool * consecutive_429)
+                print(f"  429 on {n.get('bid_no')} — cool down {wait:.0f}s ({consecutive_429})")
+                _checkpoint()
+                time.sleep(wait)
+                if consecutive_429 >= 5:
+                    print("  OpengCompt still rate-limited — checkpoint and stop")
+                    break
+                continue
+            consecutive_429 = 0
             skipped += 1
-            print(f"  skip {n.get('bid_no')}: {redact_secrets(str(e))}")
+            print(f"  skip {n.get('bid_no')}: {msg}")
             if skipped >= 8:
                 print("  too many skips — checkpoint and stop")
                 _checkpoint()
                 break
             continue
+        consecutive_429 = 0
         fetched += 1
         if not rows:
             empty += 1
