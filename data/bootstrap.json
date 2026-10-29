@@ -3,6 +3,102 @@
   "band_notices": [
     {
       "source": "band.html",
+      "bid_no": "R26BK01797166",
+      "bid_ord": "000",
+      "notice_date": "2026-10-28",
+      "scope": "AI SW 확대",
+      "org": "해양환경공단",
+      "title": "해양환경공단 KOEM AI 구축",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 13.9,
+      "open_date": "2026-11-18",
+      "status": "개찰 예정",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01797166&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01796910",
+      "bid_ord": "000",
+      "notice_date": "2026-10-28",
+      "scope": "AI SW 확대",
+      "org": "재단법인부산테크노파크",
+      "title": "명지녹산 AX실증산단 에코마린 소부장 특화 클라우드 인프라 구축 및 운영·유지관리",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 9.0,
+      "open_date": "2026-11-09",
+      "status": "개찰 예정",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01796910&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01795024",
+      "bid_ord": "000",
+      "notice_date": "2026-10-27",
+      "scope": "AI SW 확대",
+      "org": "국립암센터",
+      "title": "온프레미스 기반 AI 인프라·데이터 허브 구축 및 임상 AI 서비스 실증 사업",
+      "fields": [
+        "AI 인프라",
+        "의료·바이오 AI"
+      ],
+      "budget_eok": 25.5,
+      "open_date": "2026-12-08",
+      "status": "개찰 예정",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01795024&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01794772",
+      "bid_ord": "000",
+      "notice_date": "2026-10-27",
+      "scope": "AI SW 확대",
+      "org": "엔에이치엔와플랫 주식회사",
+      "title": "AI 스마트홈 돌봄앱 AI 서빙용 GPU 서버 구매 및 설치",
+      "fields": [
+        "AI 인프라"
+      ],
+      "budget_eok": 9.6,
+      "open_date": "2026-11-04",
+      "status": "개찰 예정",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01794772&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01794488",
+      "bid_ord": "000",
+      "notice_date": "2026-10-27",
+      "scope": "AI SW 확대",
+      "org": "엔에이치엔 주식회사",
+      "title": "AI 스마트홈 AI 학습·서빙용 GPU 서버 구매 및 설치",
+      "fields": [
+        "AI 인프라"
+      ],
+      "budget_eok": 9.6,
+      "open_date": "2026-11-04",
+      "status": "개찰 예정",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01794488&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
       "bid_no": "R26BK01794006",
       "bid_ord": "000",
       "notice_date": "2026-10-27",
@@ -19,6 +115,44 @@
       "winner": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01794006&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01793637",
+      "bid_ord": "000",
+      "notice_date": "2026-10-27",
+      "scope": "AI SW 확대",
+      "org": "한국연구재단 정보통신기획평가원",
+      "title": "2026년 AI ICT 사업 성과(활용) 조사 분석 연구",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 8.6,
+      "open_date": "2026-11-17",
+      "status": "개찰 예정",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01793637&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01788790",
+      "bid_ord": "000",
+      "notice_date": "2026-10-27",
+      "scope": "AI SW 확대",
+      "org": "과학기술정보통신부",
+      "title": "과학기술정보통신부 국민인공지능서비스혁신추진단 온프레미스 개발환경 구축을 위한 물품 구매",
+      "fields": [
+        "AI 인프라"
+      ],
+      "budget_eok": 13.2,
+      "open_date": "2026-11-17",
+      "status": "개찰 예정",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01788790&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -41,6 +175,25 @@
     },
     {
       "source": "band.html",
+      "bid_no": "R26BK01791632",
+      "bid_ord": "000",
+      "notice_date": "2026-10-26",
+      "scope": "AI SW 확대",
+      "org": "전남광주통합특별시 나주시",
+      "title": "세지농협 멜론 AI선별 및 포장라인 제작설치(민간입찰대행)(긴급)",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 8.7,
+      "open_date": "2026-11-06",
+      "status": "개찰 예정",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01791632&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
       "bid_no": "R26BK01787327",
       "bid_ord": "000",
       "notice_date": "2026-10-26",
@@ -48,7 +201,7 @@
       "org": "한국과학기술정보연구원",
       "title": "2027년 과학기술정보 AI 학습데이터 및 학술정보 DB구축",
       "fields": [
-        "AI 일반"
+        "데이터·예측"
       ],
       "budget_eok": 12.6,
       "open_date": "2026-11-27",
@@ -60,22 +213,41 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R26BK01780120",
+      "bid_no": "R26BK01786874",
       "bid_ord": "000",
-      "notice_date": "2026-10-21",
+      "notice_date": "2026-10-22",
       "scope": "AI SW 확대",
-      "org": "농림축산식품부 농림축산검역본부",
-      "title": "(연구용역)딥러닝 기반 검역해충 분류동정 플랫폼 개발(정보화)",
+      "org": "국방과학연구소",
+      "title": "딥러닝 모델 학습용 AI 슈퍼컴퓨터",
       "fields": [
         "AI 일반"
       ],
-      "budget_eok": 24.2,
-      "open_date": "2026-11-05",
+      "budget_eok": 12.7,
+      "open_date": "2026-10-30",
       "status": "개찰 예정",
       "bid_count": null,
       "winner": null,
       "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01780120&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01786874&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01784211",
+      "bid_ord": "000",
+      "notice_date": "2026-10-22",
+      "scope": "AI SW 확대",
+      "org": "각 수요기관",
+      "title": "상용SW 제3자단가(상상 AI(인공지능)기반 LMS(교육관리시스템) v2.0_상상스토리)",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 26.4,
+      "open_date": "2026-10-23",
+      "status": "결과 등록 대기",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01784211&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -98,6 +270,63 @@
     },
     {
       "source": "band.html",
+      "bid_no": "R26BK01780120",
+      "bid_ord": "000",
+      "notice_date": "2026-10-21",
+      "scope": "AI SW 확대",
+      "org": "농림축산식품부 농림축산검역본부",
+      "title": "(연구용역)딥러닝 기반 검역해충 분류동정 플랫폼 개발(정보화)",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 24.2,
+      "open_date": "2026-11-05",
+      "status": "개찰 예정",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01780120&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01778834",
+      "bid_ord": "000",
+      "notice_date": "2026-10-20",
+      "scope": "AI SW 확대",
+      "org": "재단법인부산테크노파크",
+      "title": "AI적용 간이측정기 자율 측정시스템",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 10.1,
+      "open_date": "2026-11-10",
+      "status": "개찰 예정",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01778834&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01776505",
+      "bid_ord": "000",
+      "notice_date": "2026-10-19",
+      "scope": "생성형·Agent",
+      "org": "각 수요기관",
+      "title": "SW 3자단가(DocuRAG 1.0.0 (유지관리) 코그니텀(주))",
+      "fields": [
+        "생성형·LLM"
+      ],
+      "budget_eok": 15.7,
+      "open_date": "2026-10-21",
+      "status": "결과 등록 대기",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01776505&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
       "bid_no": "R26BK01774434",
       "bid_ord": "000",
       "notice_date": "2026-10-19",
@@ -114,6 +343,44 @@
       "winner": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01774434&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01775322",
+      "bid_ord": "000",
+      "notice_date": "2026-10-16",
+      "scope": "AI SW 확대",
+      "org": "한국산업단지공단",
+      "title": "스마트K팩토리 AI플랫폼 기반구축 용역",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 9.1,
+      "open_date": "2026-11-06",
+      "status": "개찰 예정",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01775322&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01769283",
+      "bid_ord": "000",
+      "notice_date": "2026-10-16",
+      "scope": "AI SW 확대",
+      "org": "법무부 국립법무병원",
+      "title": "국립법무병원 AI기반 행동분석시스템 도입",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 20.7,
+      "open_date": "2026-11-17",
+      "status": "개찰 예정",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01769283&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -136,25 +403,6 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R26BK01775322",
-      "bid_ord": "000",
-      "notice_date": "2026-10-16",
-      "scope": "생성형·Agent",
-      "org": "한국산업단지공단",
-      "title": "스마트K팩토리 AI플랫폼 기반구축 용역",
-      "fields": [
-        "AI 일반"
-      ],
-      "budget_eok": 9.1,
-      "open_date": "2026-11-06",
-      "status": "개찰 예정",
-      "bid_count": null,
-      "winner": null,
-      "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01775322&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
       "bid_no": "R26BK01772829",
       "bid_ord": "000",
       "notice_date": "2026-10-15",
@@ -162,8 +410,7 @@
       "org": "재단법인부산테크노파크",
       "title": "명지녹산 AX실증산단 에코마린 소부장 특화 클라우드 인프라 구축 및 운영·유지관리",
       "fields": [
-        "AX·전략",
-        "AI 인프라"
+        "AI 일반"
       ],
       "budget_eok": 9.0,
       "open_date": "2026-10-26",
@@ -175,6 +422,101 @@
     },
     {
       "source": "band.html",
+      "bid_no": "R26BK01768480",
+      "bid_ord": "000",
+      "notice_date": "2026-10-14",
+      "scope": "AI SW 확대",
+      "org": "(재)지능형자동차부품진흥원",
+      "title": "제조 공정 최적화 AI 데이터 분석 서버",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 15.1,
+      "open_date": "2026-10-29",
+      "status": "결과 등록 대기",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01768480&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01768004",
+      "bid_ord": "000",
+      "notice_date": "2026-10-13",
+      "scope": "AI SW 확대",
+      "org": "충남테크노파크",
+      "title": "AIOps 서비스 인프라 구축 장비 구매",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 29.7,
+      "open_date": "2026-11-12",
+      "status": "개찰 예정",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01768004&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01765925",
+      "bid_ord": "000",
+      "notice_date": "2026-10-13",
+      "scope": "AI SW 확대",
+      "org": "각 수요기관",
+      "title": "상용SW 제3자단가(Chakra Max SAC v4.5_웨어밸리)",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 23.5,
+      "open_date": "2026-10-14",
+      "status": "결과 등록 대기",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01765925&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01762162",
+      "bid_ord": "001",
+      "notice_date": "2026-10-13",
+      "scope": "AI SW 확대",
+      "org": "충남테크노파크",
+      "title": "AIOps 서비스 인프라 구축 장비 구매",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 29.7,
+      "open_date": "2026-11-10",
+      "status": "개찰 예정",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01762162&bidPbancOrd=001"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01766341",
+      "bid_ord": "000",
+      "notice_date": "2026-10-12",
+      "scope": "AI SW 확대",
+      "org": "전남광주통합특별시 나주시",
+      "title": "세지농협 멜론 AI선별 및 포장라인 제작설치(민간입찰대행)(긴급)",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 8.7,
+      "open_date": "2026-10-23",
+      "status": "결과 등록 대기",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01766341&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
       "bid_no": "R26BK01764898",
       "bid_ord": "000",
       "notice_date": "2026-10-12",
@@ -182,7 +524,7 @@
       "org": "한국산업기술기획평가원",
       "title": "KEIT AX 기반 구축 사업",
       "fields": [
-        "AX·전략"
+        "AI 일반"
       ],
       "budget_eok": 19.8,
       "open_date": "2026-11-25",
@@ -191,6 +533,44 @@
       "winner": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01764898&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01760843",
+      "bid_ord": "000",
+      "notice_date": "2026-10-12",
+      "scope": "AI SW 확대",
+      "org": "전남광주통합특별시 나주시",
+      "title": "세지농협 멜론 AI선별 및 포장라인 제작설치(민간입찰대행)",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 8.7,
+      "open_date": "2026-10-23",
+      "status": "결과 등록 대기",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01760843&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01760843",
+      "bid_ord": "001",
+      "notice_date": "2026-10-12",
+      "scope": "AI SW 확대",
+      "org": "전남광주통합특별시 나주시",
+      "title": "세지농협 멜론 AI선별 및 포장라인 제작설치(민간입찰대행)",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 8.7,
+      "open_date": "2026-10-23",
+      "status": "결과 등록 대기",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01760843&bidPbancOrd=001"
     },
     {
       "source": "band.html",
@@ -213,6 +593,82 @@
     },
     {
       "source": "band.html",
+      "bid_no": "R26BK01762162",
+      "bid_ord": "000",
+      "notice_date": "2026-10-08",
+      "scope": "AI SW 확대",
+      "org": "충남테크노파크",
+      "title": "AIOps 서비스 인프라 구축 장비 구매",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 29.7,
+      "open_date": "2026-11-10",
+      "status": "개찰 예정",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01762162&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01761803",
+      "bid_ord": "000",
+      "notice_date": "2026-10-08",
+      "scope": "AI SW 확대",
+      "org": "(재)울산테크노파크",
+      "title": "계약품의및요구서-지역 주도형 AI 대전환 사업 제조 AI 허브 쇼룸 제작·설치 용역",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 24.2,
+      "open_date": "2026-10-28",
+      "status": "결과 등록 대기",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01761803&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01761621",
+      "bid_ord": "000",
+      "notice_date": "2026-10-08",
+      "scope": "AI SW 확대",
+      "org": "한국기초과학지원연구원",
+      "title": "AI 제어기반 Ga₂O₃ 단결정 성장 시스템(4인치Ga₂O₃ VB 성장로)",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 9.8,
+      "open_date": "2026-10-19",
+      "status": "결과 등록 대기",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01761621&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01761325",
+      "bid_ord": "000",
+      "notice_date": "2026-10-08",
+      "scope": "AI SW 확대",
+      "org": "각 수요기관",
+      "title": "디지털서비스_미래엔_(주)미래엔 AIDT 교육자료 for 엘리스그룹",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 10.0,
+      "open_date": "2026-10-08",
+      "status": "결과 등록 대기",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01761325&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
       "bid_no": "R26BK01760442",
       "bid_ord": "000",
       "notice_date": "2026-10-07",
@@ -232,22 +688,117 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R26BK01750175",
+      "bid_no": "R26BK01753905",
       "bid_ord": "000",
-      "notice_date": "2026-09-30",
+      "notice_date": "2026-10-01",
       "scope": "AI SW 확대",
-      "org": "한국생명공학연구원",
-      "title": "2026년 지능형 통합시스템 고도화 용역",
+      "org": "가천대학교",
+      "title": "AI타워ㆍ지하주차장 신축공사 폐목재 및 페합성수지 처리 용역",
       "fields": [
         "AI 일반"
       ],
-      "budget_eok": 8.4,
-      "open_date": "2026-10-27",
+      "budget_eok": 8.0,
+      "open_date": "2026-10-14",
+      "status": "결과 등록 대기",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01753905&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01752247",
+      "bid_ord": "000",
+      "notice_date": "2026-10-01",
+      "scope": "AI SW 확대",
+      "org": "가천대학교",
+      "title": "AI타워ㆍ지하주차장 신축공사 폐목재 및 페합성수지 처리 용역",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 8.0,
+      "open_date": "2026-10-14",
+      "status": "결과 등록 대기",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01752247&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01752247",
+      "bid_ord": "001",
+      "notice_date": "2026-10-01",
+      "scope": "AI SW 확대",
+      "org": "가천대학교",
+      "title": "AI타워ㆍ지하주차장 신축공사 폐목재 및 페합성수지 처리 용역",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 8.0,
+      "open_date": "2026-10-14",
+      "status": "결과 등록 대기",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01752247&bidPbancOrd=001"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01752247",
+      "bid_ord": "002",
+      "notice_date": "2026-10-01",
+      "scope": "AI SW 확대",
+      "org": "가천대학교",
+      "title": "AI타워ㆍ지하주차장 신축공사 폐목재 및 페합성수지 처리 용역",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 8.0,
+      "open_date": "2026-10-14",
+      "status": "결과 등록 대기",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01752247&bidPbancOrd=002"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01744201",
+      "bid_ord": "001",
+      "notice_date": "2026-10-01",
+      "scope": "AI SW 확대",
+      "org": "한국국제협력단",
+      "title": "우즈베키스탄 AI 기반 한국어·문화 이해증진 프로젝트봉사단 사업(26-29) PMC 용역",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 15.9,
+      "open_date": "2026-11-16",
       "status": "개찰 예정",
       "bid_count": null,
       "winner": null,
       "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01750175&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01744201&bidPbancOrd=001"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01751709",
+      "bid_ord": "000",
+      "notice_date": "2026-09-30",
+      "scope": "AI SW 확대",
+      "org": "국방부 국군재정관리단",
+      "title": "(266049-G) 인공지능 실증용 GPU 서버 도입(리스자산)",
+      "fields": [
+        "AI 인프라"
+      ],
+      "budget_eok": 12.0,
+      "open_date": "2026-10-26",
+      "status": "결과 등록 대기",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01751709&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -270,6 +821,140 @@
     },
     {
       "source": "band.html",
+      "bid_no": "R26BK01750175",
+      "bid_ord": "000",
+      "notice_date": "2026-09-30",
+      "scope": "AI SW 확대",
+      "org": "한국생명공학연구원",
+      "title": "2026년 지능형 통합시스템 고도화 용역",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 8.4,
+      "open_date": "2026-10-27",
+      "status": "개찰 예정",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01750175&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01750039",
+      "bid_ord": "000",
+      "notice_date": "2026-09-30",
+      "scope": "AI SW 확대",
+      "org": "경북대학교병원",
+      "title": "인공지능기반의료혁신센터 GPU 서버 구입",
+      "fields": [
+        "AI 인프라",
+        "의료·바이오 AI"
+      ],
+      "budget_eok": 11.8,
+      "open_date": "2026-10-08",
+      "status": "결과 등록 대기",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01750039&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01750037",
+      "bid_ord": "000",
+      "notice_date": "2026-09-30",
+      "scope": "AI SW 확대",
+      "org": "인사혁신처 국가공무원인재개발원",
+      "title": "2027년 나라배움터 이러닝 콘텐츠 및 AI 교육 패키지 운영 사업",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 12.2,
+      "open_date": "2026-10-21",
+      "status": "결과 등록 대기",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01750037&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01749201",
+      "bid_ord": "001",
+      "notice_date": "2026-09-30",
+      "scope": "AI SW 확대",
+      "org": "가천대학교",
+      "title": "AI타워ㆍ지하주차장 신축공사 폐목재 및 페합성수지 처리 용역",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 8.0,
+      "open_date": "2026-10-13",
+      "status": "결과 등록 대기",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01749201&bidPbancOrd=001"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01744201",
+      "bid_ord": "000",
+      "notice_date": "2026-09-30",
+      "scope": "AI SW 확대",
+      "org": "한국국제협력단",
+      "title": "우즈베키스탄 AI 기반 한국어·문화 이해증진 프로젝트봉사단 사업(26-29) PMC 용역",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 15.9,
+      "open_date": "2026-11-10",
+      "status": "개찰 예정",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01744201&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01749201",
+      "bid_ord": "000",
+      "notice_date": "2026-09-29",
+      "scope": "AI SW 확대",
+      "org": "가천대학교",
+      "title": "AI타워ㆍ지하주차장 신축공사 폐목재 및 페합성수지 처리 용역",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 8.0,
+      "open_date": "2026-10-13",
+      "status": "결과 등록 대기",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01749201&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01747442",
+      "bid_ord": "000",
+      "notice_date": "2026-09-29",
+      "scope": "AI SW 확대",
+      "org": "한국수출입은행",
+      "title": "우즈베키스탄 AI 바이옴센터(유전체분석센터 및 인체자원은행) 건립 F/S(타당성조사) 용역",
+      "fields": [
+        "의료·바이오 AI"
+      ],
+      "budget_eok": 19.0,
+      "open_date": "2026-11-10",
+      "status": "개찰 예정",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01747442&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
       "bid_no": "R26BK01747372",
       "bid_ord": "000",
       "notice_date": "2026-09-29",
@@ -286,6 +971,101 @@
       "winner": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01747372&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01745687",
+      "bid_ord": "000",
+      "notice_date": "2026-09-29",
+      "scope": "AI SW 확대",
+      "org": "한국국제협력단",
+      "title": "탄자니아 AI를 활용한 관광분야 직업역량강화 프로젝트봉사단 사업(26-29) PMC 용역",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 15.9,
+      "open_date": "2026-11-09",
+      "status": "개찰 예정",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01745687&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01746946",
+      "bid_ord": "000",
+      "notice_date": "2026-09-28",
+      "scope": "AI SW 확대",
+      "org": "오케스트로 주식회사",
+      "title": "2026년 충남 지역주도형 AI대전환 사업(AI컴퓨팅인프라 – GPU 등 구축사업)",
+      "fields": [
+        "AI 인프라"
+      ],
+      "budget_eok": 23.1,
+      "open_date": "2026-10-15",
+      "status": "결과 등록 대기",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01746946&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01745873",
+      "bid_ord": "000",
+      "notice_date": "2026-09-28",
+      "scope": "AI SW 확대",
+      "org": "(사)한국정보산업연합회",
+      "title": "AI·SW마에스트로 제17기 우수자(팀) 글로벌 AI·창업 역량 강화 교육 기획 및 운영",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 22.5,
+      "open_date": "2026-10-20",
+      "status": "결과 등록 대기",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01745873&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01745447",
+      "bid_ord": "000",
+      "notice_date": "2026-09-28",
+      "scope": "AI SW 확대",
+      "org": "한국공학대학교 산학협력단",
+      "title": "오픈형 고성능 AI서비스 운영플랫폼 구축용 서버",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 9.3,
+      "open_date": "2026-10-12",
+      "status": "결과 등록 대기",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01745447&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01741674",
+      "bid_ord": "000",
+      "notice_date": "2026-09-28",
+      "scope": "AI SW 확대",
+      "org": "부산대학교",
+      "title": "부산대학교 AI 기반 맞춤형 교육지원시스템(3단계) 구축",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 11.3,
+      "open_date": "2026-10-30",
+      "status": "개찰 예정",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01741674&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -384,25 +1164,6 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R26BK01719926",
-      "bid_ord": "000",
-      "notice_date": "2026-09-14",
-      "scope": "AI SW 확대",
-      "org": "전남광주통합특별시교육청 전남광주통합특별시교육청AI교육원",
-      "title": "[긴급] 2026년 광주아이온(AI-ON) 운영 기능개선 및 유지관리 사업",
-      "fields": [
-        "AI 일반"
-      ],
-      "budget_eok": 8.5,
-      "open_date": "2026-09-29",
-      "status": "낙찰",
-      "bid_count": 3.0,
-      "winner": "버블콘",
-      "win_rate_pct": 98.7,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01719926&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
       "bid_no": "R26BK01727277",
       "bid_ord": "000",
       "notice_date": "2026-09-14",
@@ -419,6 +1180,25 @@
       "winner": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01727277&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01719926",
+      "bid_ord": "000",
+      "notice_date": "2026-09-14",
+      "scope": "AI SW 확대",
+      "org": "전남광주통합특별시교육청 전남광주통합특별시교육청AI교육원",
+      "title": "[긴급] 2026년 광주아이온(AI-ON) 운영 기능개선 및 유지관리 사업",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 8.5,
+      "open_date": "2026-09-29",
+      "status": "낙찰",
+      "bid_count": 3.0,
+      "winner": "버블콘",
+      "win_rate_pct": 98.7,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01719926&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -460,25 +1240,6 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R26BK01709248",
-      "bid_ord": "000",
-      "notice_date": "2026-09-02",
-      "scope": "AI SW 확대",
-      "org": "원광대학교 광주한방병원, 원광병원",
-      "title": "AI의료 기술 개발 고도화 관련 임상연구정보검색시스템(CDW) 구축",
-      "fields": [
-        "의료·바이오 AI"
-      ],
-      "budget_eok": 10.7,
-      "open_date": "2026-09-29",
-      "status": "재공고됨",
-      "bid_count": null,
-      "winner": null,
-      "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01709248&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
       "bid_no": "R26BK01709540",
       "bid_ord": "000",
       "notice_date": "2026-09-02",
@@ -495,6 +1256,25 @@
       "winner": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01709540&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01709248",
+      "bid_ord": "000",
+      "notice_date": "2026-09-02",
+      "scope": "AI SW 확대",
+      "org": "원광대학교 광주한방병원, 원광병원",
+      "title": "AI의료 기술 개발 고도화 관련 임상연구정보검색시스템(CDW) 구축",
+      "fields": [
+        "의료·바이오 AI"
+      ],
+      "budget_eok": 10.7,
+      "open_date": "2026-09-29",
+      "status": "재공고됨",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01709248&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -746,26 +1526,6 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R26BK01648485",
-      "bid_ord": "000",
-      "notice_date": "2026-07-24",
-      "scope": "AI SW 확대",
-      "org": "충남대학교병원",
-      "title": "[충남대학교병원 권역책임의료기관 AI 기반 진료시스템 지원사업] 충남대학교병원(본,분원) 음성인식기반 AI 의무기록 서비스 도입 운영(재공고)",
-      "fields": [
-        "음성·언어·문서",
-        "의료·바이오 AI"
-      ],
-      "budget_eok": 25.7,
-      "open_date": "2026-08-04",
-      "status": "개찰 확인 필요",
-      "bid_count": null,
-      "winner": null,
-      "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01648485&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
       "bid_no": "R26BK01649516",
       "bid_ord": "000",
       "notice_date": "2026-07-24",
@@ -804,22 +1564,23 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R26BK01631298",
-      "bid_ord": "001",
-      "notice_date": "2026-07-23",
-      "scope": "생성형·Agent",
-      "org": "바이오글로벌 사업화지원센터",
-      "title": "바이오 생체활성제품 글로벌 사업화 지원 AI 플랫폼 구축 및 사업화 기반 마련",
+      "bid_no": "R26BK01648485",
+      "bid_ord": "000",
+      "notice_date": "2026-07-24",
+      "scope": "AI SW 확대",
+      "org": "충남대학교병원",
+      "title": "[충남대학교병원 권역책임의료기관 AI 기반 진료시스템 지원사업] 충남대학교병원(본,분원) 음성인식기반 AI 의무기록 서비스 도입 운영(재공고)",
       "fields": [
+        "음성·언어·문서",
         "의료·바이오 AI"
       ],
-      "budget_eok": 12.5,
-      "open_date": "2026-08-03",
-      "status": "1순위",
-      "bid_count": 2.0,
-      "winner": "바이오넥서스 (1순위)",
+      "budget_eok": 25.7,
+      "open_date": "2026-08-04",
+      "status": "개찰 확인 필요",
+      "bid_count": null,
+      "winner": null,
       "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01631298&bidPbancOrd=001"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01648485&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -858,6 +1619,25 @@
       "winner": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01648084&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01631298",
+      "bid_ord": "001",
+      "notice_date": "2026-07-23",
+      "scope": "생성형·Agent",
+      "org": "바이오글로벌 사업화지원센터",
+      "title": "바이오 생체활성제품 글로벌 사업화 지원 AI 플랫폼 구축 및 사업화 기반 마련",
+      "fields": [
+        "의료·바이오 AI"
+      ],
+      "budget_eok": 12.5,
+      "open_date": "2026-08-03",
+      "status": "1순위",
+      "bid_count": 2.0,
+      "winner": "바이오넥서스 (1순위)",
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01631298&bidPbancOrd=001"
     },
     {
       "source": "band.html",
@@ -937,25 +1717,6 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R26BK01628568",
-      "bid_ord": "000",
-      "notice_date": "2026-07-16",
-      "scope": "AI SW 확대",
-      "org": "한국주택금융공사",
-      "title": "HF AI 기반 지원시스템 통합 고도화 사업",
-      "fields": [
-        "AI 일반"
-      ],
-      "budget_eok": 28.1,
-      "open_date": "2026-08-19",
-      "status": "낙찰",
-      "bid_count": 3.0,
-      "winner": "가온아이",
-      "win_rate_pct": 98.9,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01628568&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
       "bid_no": "R26BK01635630",
       "bid_ord": "000",
       "notice_date": "2026-07-16",
@@ -975,6 +1736,25 @@
     },
     {
       "source": "band.html",
+      "bid_no": "R26BK01628568",
+      "bid_ord": "000",
+      "notice_date": "2026-07-16",
+      "scope": "AI SW 확대",
+      "org": "한국주택금융공사",
+      "title": "HF AI 기반 지원시스템 통합 고도화 사업",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 28.1,
+      "open_date": "2026-08-19",
+      "status": "낙찰",
+      "bid_count": 3.0,
+      "winner": "가온아이",
+      "win_rate_pct": 98.9,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01628568&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
       "bid_no": "R26BK01625804",
       "bid_ord": "000",
       "notice_date": "2026-07-15",
@@ -991,25 +1771,6 @@
       "winner": "아이웨이브",
       "win_rate_pct": 97.3,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01625804&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
-      "bid_no": "R26BK01627014",
-      "bid_ord": "000",
-      "notice_date": "2026-07-14",
-      "scope": "AI SW 확대",
-      "org": "한국과학기술기획평가원",
-      "title": "연구행정 효율화를 위한 AI기반 서비스 구축 사업",
-      "fields": [
-        "AI 일반"
-      ],
-      "budget_eok": 11.9,
-      "open_date": "2026-08-11",
-      "status": "낙찰",
-      "bid_count": 13.0,
-      "winner": "에이다루트",
-      "win_rate_pct": 98.8,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01627014&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -1067,6 +1828,25 @@
       "winner": "피씨엔",
       "win_rate_pct": 100.0,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01630323&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01627014",
+      "bid_ord": "000",
+      "notice_date": "2026-07-14",
+      "scope": "AI SW 확대",
+      "org": "한국과학기술기획평가원",
+      "title": "연구행정 효율화를 위한 AI기반 서비스 구축 사업",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 11.9,
+      "open_date": "2026-08-11",
+      "status": "낙찰",
+      "bid_count": 13.0,
+      "winner": "에이다루트",
+      "win_rate_pct": 98.8,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01627014&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -1167,25 +1947,6 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R26BK01619570",
-      "bid_ord": "000",
-      "notice_date": "2026-07-07",
-      "scope": "AI SW 확대",
-      "org": "부산항만공사",
-      "title": "AI기반 빅데이터 통계시스템 구축 및 체인포털 서비스 개선 사업",
-      "fields": [
-        "데이터·예측"
-      ],
-      "budget_eok": 15.5,
-      "open_date": "2026-07-09",
-      "status": "낙찰",
-      "bid_count": 1.0,
-      "winner": "컨테인어스",
-      "win_rate_pct": 97.7,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01619570&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
       "bid_no": "R26BK01620931",
       "bid_ord": "000",
       "notice_date": "2026-07-07",
@@ -1202,6 +1963,25 @@
       "winner": "피씨엔",
       "win_rate_pct": 99.3,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01620931&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01619570",
+      "bid_ord": "000",
+      "notice_date": "2026-07-07",
+      "scope": "AI SW 확대",
+      "org": "부산항만공사",
+      "title": "AI기반 빅데이터 통계시스템 구축 및 체인포털 서비스 개선 사업",
+      "fields": [
+        "데이터·예측"
+      ],
+      "budget_eok": 15.5,
+      "open_date": "2026-07-09",
+      "status": "낙찰",
+      "bid_count": 1.0,
+      "winner": "컨테인어스",
+      "win_rate_pct": 97.7,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01619570&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -1319,25 +2099,6 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R26BK01583959",
-      "bid_ord": "000",
-      "notice_date": "2026-06-17",
-      "scope": "AI SW 확대",
-      "org": "한국지능정보사회진흥원",
-      "title": "NPU기반 지능형 영상감시체계 시범 구축(공군) 사업",
-      "fields": [
-        "AI 인프라"
-      ],
-      "budget_eok": 21.4,
-      "open_date": "2026-07-07",
-      "status": "낙찰",
-      "bid_count": 3.0,
-      "winner": "케이엠넷",
-      "win_rate_pct": 79.5,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01583959&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
       "bid_no": "R26BK01585030",
       "bid_ord": "000",
       "notice_date": "2026-06-17",
@@ -1354,6 +2115,25 @@
       "winner": "올빅뎃",
       "win_rate_pct": 98.0,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01585030&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01583959",
+      "bid_ord": "000",
+      "notice_date": "2026-06-17",
+      "scope": "AI SW 확대",
+      "org": "한국지능정보사회진흥원",
+      "title": "NPU기반 지능형 영상감시체계 시범 구축(공군) 사업",
+      "fields": [
+        "AI 인프라"
+      ],
+      "budget_eok": 21.4,
+      "open_date": "2026-07-07",
+      "status": "낙찰",
+      "bid_count": 3.0,
+      "winner": "케이엠넷",
+      "win_rate_pct": 79.5,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01583959&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -1414,25 +2194,6 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R26BK01570646",
-      "bid_ord": "000",
-      "notice_date": "2026-06-12",
-      "scope": "AI SW 확대",
-      "org": "경기도 성남시",
-      "title": "AI 기반 도로관리 플랫폼 구축 용역(협상에 의한 계약)",
-      "fields": [
-        "AI 일반"
-      ],
-      "budget_eok": 10.0,
-      "open_date": "2026-07-03",
-      "status": "낙찰",
-      "bid_count": 2.0,
-      "winner": "다리소프트",
-      "win_rate_pct": 89.8,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01570646&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
       "bid_no": "R26BK01576454",
       "bid_ord": "000",
       "notice_date": "2026-06-12",
@@ -1452,22 +2213,22 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R26BK01570760",
+      "bid_no": "R26BK01570646",
       "bid_ord": "000",
-      "notice_date": "2026-06-11",
+      "notice_date": "2026-06-12",
       "scope": "AI SW 확대",
-      "org": "한국지능정보사회진흥원",
-      "title": "AI 국악 음원 및 이미지 데이터 개방체계 구축",
+      "org": "경기도 성남시",
+      "title": "AI 기반 도로관리 플랫폼 구축 용역(협상에 의한 계약)",
       "fields": [
         "AI 일반"
       ],
-      "budget_eok": 9.7,
-      "open_date": "2026-06-25",
+      "budget_eok": 10.0,
+      "open_date": "2026-07-03",
       "status": "낙찰",
-      "bid_count": 5.0,
-      "winner": "나라지식정보",
-      "win_rate_pct": 100.0,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01570760&bidPbancOrd=000"
+      "bid_count": 2.0,
+      "winner": "다리소프트",
+      "win_rate_pct": 89.8,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01570646&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -1490,6 +2251,25 @@
     },
     {
       "source": "band.html",
+      "bid_no": "R26BK01570760",
+      "bid_ord": "000",
+      "notice_date": "2026-06-11",
+      "scope": "AI SW 확대",
+      "org": "한국지능정보사회진흥원",
+      "title": "AI 국악 음원 및 이미지 데이터 개방체계 구축",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 9.7,
+      "open_date": "2026-06-25",
+      "status": "낙찰",
+      "bid_count": 5.0,
+      "winner": "나라지식정보",
+      "win_rate_pct": 100.0,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01570760&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
       "bid_no": "R26BK01569524",
       "bid_ord": "000",
       "notice_date": "2026-06-10",
@@ -1509,25 +2289,6 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R26BK01567818",
-      "bid_ord": "000",
-      "notice_date": "2026-06-09",
-      "scope": "AI SW 확대",
-      "org": "한국지능정보사회진흥원",
-      "title": "AI기반 실종자 예측 시스템 구축",
-      "fields": [
-        "데이터·예측"
-      ],
-      "budget_eok": 14.6,
-      "open_date": "2026-06-24",
-      "status": "낙찰",
-      "bid_count": 3.0,
-      "winner": "송우인포텍",
-      "win_rate_pct": 95.0,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01567818&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
       "bid_no": "R26BK01569355",
       "bid_ord": "000",
       "notice_date": "2026-06-09",
@@ -1544,6 +2305,25 @@
       "winner": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01569355&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01567818",
+      "bid_ord": "000",
+      "notice_date": "2026-06-09",
+      "scope": "AI SW 확대",
+      "org": "한국지능정보사회진흥원",
+      "title": "AI기반 실종자 예측 시스템 구축",
+      "fields": [
+        "데이터·예측"
+      ],
+      "budget_eok": 14.6,
+      "open_date": "2026-06-24",
+      "status": "낙찰",
+      "bid_count": 3.0,
+      "winner": "송우인포텍",
+      "win_rate_pct": 95.0,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01567818&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -1585,25 +2365,6 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R26BK01563637",
-      "bid_ord": "000",
-      "notice_date": "2026-06-08",
-      "scope": "AI SW 확대",
-      "org": "재단법인 이노베이션아카데미",
-      "title": "코디세이 플랫폼 AI 기능 확장 및 생태계 구축 용역",
-      "fields": [
-        "AI 일반"
-      ],
-      "budget_eok": 12.0,
-      "open_date": "2026-07-20",
-      "status": "낙찰",
-      "bid_count": 6.0,
-      "winner": "세이코어",
-      "win_rate_pct": 100.0,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01563637&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
       "bid_no": "R26BK01563663",
       "bid_ord": "000",
       "notice_date": "2026-06-08",
@@ -1620,6 +2381,25 @@
       "winner": "업스테이지",
       "win_rate_pct": 84.0,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01563663&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01563637",
+      "bid_ord": "000",
+      "notice_date": "2026-06-08",
+      "scope": "AI SW 확대",
+      "org": "재단법인 이노베이션아카데미",
+      "title": "코디세이 플랫폼 AI 기능 확장 및 생태계 구축 용역",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 12.0,
+      "open_date": "2026-07-20",
+      "status": "낙찰",
+      "bid_count": 6.0,
+      "winner": "세이코어",
+      "win_rate_pct": 100.0,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01563637&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -1680,22 +2460,22 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R26BK01550380",
+      "bid_no": "R26BK01552199",
       "bid_ord": "000",
       "notice_date": "2026-05-29",
       "scope": "AI SW 확대",
-      "org": "인공지능산업융합사업단",
-      "title": "광주 인공지능사관학교 AI 도약과정 위탁운영",
+      "org": "한국지식재산보호원",
+      "title": "AI 위조상품 감정지원 시스템 구축",
       "fields": [
         "AI 일반"
       ],
-      "budget_eok": 16.8,
-      "open_date": "2026-06-09",
-      "status": "유찰",
-      "bid_count": 1.0,
-      "winner": null,
-      "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01550380&bidPbancOrd=000"
+      "budget_eok": 15.0,
+      "open_date": "2026-06-11",
+      "status": "낙찰",
+      "bid_count": 5.0,
+      "winner": "피노키오랩",
+      "win_rate_pct": 96.7,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01552199&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -1718,22 +2498,22 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R26BK01552199",
+      "bid_no": "R26BK01550380",
       "bid_ord": "000",
       "notice_date": "2026-05-29",
       "scope": "AI SW 확대",
-      "org": "한국지식재산보호원",
-      "title": "AI 위조상품 감정지원 시스템 구축",
+      "org": "인공지능산업융합사업단",
+      "title": "광주 인공지능사관학교 AI 도약과정 위탁운영",
       "fields": [
         "AI 일반"
       ],
-      "budget_eok": 15.0,
-      "open_date": "2026-06-11",
-      "status": "낙찰",
-      "bid_count": 5.0,
-      "winner": "피노키오랩",
-      "win_rate_pct": 96.7,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01552199&bidPbancOrd=000"
+      "budget_eok": 16.8,
+      "open_date": "2026-06-09",
+      "status": "유찰",
+      "bid_count": 1.0,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01550380&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -1870,25 +2650,6 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R26BK01529804",
-      "bid_ord": "000",
-      "notice_date": "2026-05-19",
-      "scope": "AI SW 확대",
-      "org": "한국지능정보사회진흥원",
-      "title": "AI·빅데이터 분석기반 보훈심사 지원시스템 구축",
-      "fields": [
-        "데이터·예측"
-      ],
-      "budget_eok": 18.1,
-      "open_date": "2026-06-02",
-      "status": "낙찰",
-      "bid_count": 7.0,
-      "winner": "선도소프트",
-      "win_rate_pct": 99.1,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01529804&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
       "bid_no": "R26BK01531798",
       "bid_ord": "000",
       "notice_date": "2026-05-19",
@@ -1908,22 +2669,22 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R26BK01525469",
+      "bid_no": "R26BK01529804",
       "bid_ord": "000",
-      "notice_date": "2026-05-18",
+      "notice_date": "2026-05-19",
       "scope": "AI SW 확대",
       "org": "한국지능정보사회진흥원",
-      "title": "인공지능(AI) Agent 기반의 범정부『심사·심의·검토』업무 지원 시스템 개발",
+      "title": "AI·빅데이터 분석기반 보훈심사 지원시스템 구축",
       "fields": [
-        "AI 에이전트"
+        "데이터·예측"
       ],
       "budget_eok": 18.1,
-      "open_date": "2026-06-05",
-      "status": "유찰",
-      "bid_count": 1.0,
-      "winner": null,
-      "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01525469&bidPbancOrd=000"
+      "open_date": "2026-06-02",
+      "status": "낙찰",
+      "bid_count": 7.0,
+      "winner": "선도소프트",
+      "win_rate_pct": 99.1,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01529804&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -1946,41 +2707,22 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R26BK01524735",
+      "bid_no": "R26BK01525469",
       "bid_ord": "000",
-      "notice_date": "2026-05-15",
-      "scope": "생성형·Agent",
+      "notice_date": "2026-05-18",
+      "scope": "AI SW 확대",
       "org": "한국지능정보사회진흥원",
-      "title": "RAG 기반 치안 현장 AI 어시스턴트 시스템",
+      "title": "인공지능(AI) Agent 기반의 범정부『심사·심의·검토』업무 지원 시스템 개발",
       "fields": [
-        "생성형·LLM"
+        "AI 에이전트"
       ],
-      "budget_eok": 18.0,
-      "open_date": "2026-05-28",
+      "budget_eok": 18.1,
+      "open_date": "2026-06-05",
       "status": "유찰",
       "bid_count": 1.0,
       "winner": null,
       "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01524735&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
-      "bid_no": "R26BK01520892",
-      "bid_ord": "000",
-      "notice_date": "2026-05-15",
-      "scope": "AI SW 확대",
-      "org": "한국지능정보사회진흥원",
-      "title": "AI·빅데이터 분석기반 보훈심사 지원시스템 구축",
-      "fields": [
-        "데이터·예측"
-      ],
-      "budget_eok": 18.1,
-      "open_date": "2026-05-29",
-      "status": "재공고됨",
-      "bid_count": null,
-      "winner": null,
-      "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01520892&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01525469&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -2003,22 +2745,41 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R26BK01522731",
+      "bid_no": "R26BK01524903",
       "bid_ord": "000",
       "notice_date": "2026-05-15",
       "scope": "AI SW 확대",
-      "org": "법무부 서울출입국.외국인청",
-      "title": "지능형 이민행정 분석 데이터베이스 구축 사업",
+      "org": "한국지능정보사회진흥원",
+      "title": "지능형 AI 규제정보 분석시스템(국무조정실) 구축",
       "fields": [
         "AI 일반"
       ],
-      "budget_eok": 11.7,
-      "open_date": "2026-05-29",
+      "budget_eok": 17.9,
+      "open_date": "2026-06-05",
       "status": "낙찰",
-      "bid_count": 4.0,
-      "winner": "넥스인테크놀로지 (NexIn Technology Co., Ltd.)",
-      "win_rate_pct": 97.2,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01522731&bidPbancOrd=000"
+      "bid_count": 6.0,
+      "winner": "브이티더블유",
+      "win_rate_pct": 99.4,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01524903&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01524735",
+      "bid_ord": "000",
+      "notice_date": "2026-05-15",
+      "scope": "생성형·Agent",
+      "org": "한국지능정보사회진흥원",
+      "title": "RAG 기반 치안 현장 AI 어시스턴트 시스템",
+      "fields": [
+        "생성형·LLM"
+      ],
+      "budget_eok": 18.0,
+      "open_date": "2026-05-28",
+      "status": "유찰",
+      "bid_count": 1.0,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01524735&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -2041,22 +2802,41 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R26BK01524903",
+      "bid_no": "R26BK01522731",
+      "bid_ord": "000",
+      "notice_date": "2026-05-15",
+      "scope": "AI SW 확대",
+      "org": "법무부 서울출입국.외국인청",
+      "title": "지능형 이민행정 분석 데이터베이스 구축 사업",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 11.7,
+      "open_date": "2026-05-29",
+      "status": "낙찰",
+      "bid_count": 4.0,
+      "winner": "넥스인테크놀로지 (NexIn Technology Co., Ltd.)",
+      "win_rate_pct": 97.2,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01522731&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01520892",
       "bid_ord": "000",
       "notice_date": "2026-05-15",
       "scope": "AI SW 확대",
       "org": "한국지능정보사회진흥원",
-      "title": "지능형 AI 규제정보 분석시스템(국무조정실) 구축",
+      "title": "AI·빅데이터 분석기반 보훈심사 지원시스템 구축",
       "fields": [
-        "AI 일반"
+        "데이터·예측"
       ],
-      "budget_eok": 17.9,
-      "open_date": "2026-06-05",
-      "status": "낙찰",
-      "bid_count": 6.0,
-      "winner": "브이티더블유",
-      "win_rate_pct": 99.4,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01524903&bidPbancOrd=000"
+      "budget_eok": 18.1,
+      "open_date": "2026-05-29",
+      "status": "재공고됨",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01520892&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -2117,25 +2897,6 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R26BK01507135",
-      "bid_ord": "000",
-      "notice_date": "2026-05-08",
-      "scope": "AI SW 확대",
-      "org": "부산항만공사",
-      "title": "AI기반 빅데이터 통계시스템 구축 및 체인포털 서비스 개선 사업",
-      "fields": [
-        "데이터·예측"
-      ],
-      "budget_eok": 15.5,
-      "open_date": "2026-06-09",
-      "status": "유찰",
-      "bid_count": 1.0,
-      "winner": null,
-      "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01507135&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
       "bid_no": "R26BK01510650",
       "bid_ord": "000",
       "notice_date": "2026-05-08",
@@ -2152,6 +2913,25 @@
       "winner": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01510650&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01507135",
+      "bid_ord": "000",
+      "notice_date": "2026-05-08",
+      "scope": "AI SW 확대",
+      "org": "부산항만공사",
+      "title": "AI기반 빅데이터 통계시스템 구축 및 체인포털 서비스 개선 사업",
+      "fields": [
+        "데이터·예측"
+      ],
+      "budget_eok": 15.5,
+      "open_date": "2026-06-09",
+      "status": "유찰",
+      "bid_count": 1.0,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01507135&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -2269,25 +3049,6 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R26BK01481598",
-      "bid_ord": "000",
-      "notice_date": "2026-04-28",
-      "scope": "AI SW 확대",
-      "org": "한국해양진흥공사",
-      "title": "2026년 해양산업 AI 전환 및 기술 실증·확산 지원 용역",
-      "fields": [
-        "AI 일반"
-      ],
-      "budget_eok": 25.0,
-      "open_date": "2026-04-30",
-      "status": "낙찰",
-      "bid_count": 1.0,
-      "winner": "엘지씨엔에스",
-      "win_rate_pct": 99.0,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01481598&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
       "bid_no": "R26BK01491417",
       "bid_ord": "000",
       "notice_date": "2026-04-28",
@@ -2304,6 +3065,25 @@
       "winner": "트루본",
       "win_rate_pct": 99.3,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01491417&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01481598",
+      "bid_ord": "000",
+      "notice_date": "2026-04-28",
+      "scope": "AI SW 확대",
+      "org": "한국해양진흥공사",
+      "title": "2026년 해양산업 AI 전환 및 기술 실증·확산 지원 용역",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 25.0,
+      "open_date": "2026-04-30",
+      "status": "낙찰",
+      "bid_count": 1.0,
+      "winner": "엘지씨엔에스",
+      "win_rate_pct": 99.0,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01481598&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -2517,25 +3297,6 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R26BK01443385",
-      "bid_ord": "000",
-      "notice_date": "2026-04-07",
-      "scope": "AI SW 확대",
-      "org": "한국고용정보원",
-      "title": "AX 기반 국민체감 AI 고용서비스 구축 사업",
-      "fields": [
-        "AX·전략"
-      ],
-      "budget_eok": 28.3,
-      "open_date": "2026-05-01",
-      "status": "낙찰",
-      "bid_count": 3.0,
-      "winner": "와이즈넛",
-      "win_rate_pct": 100.0,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01443385&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
       "bid_no": "R26BK01445448",
       "bid_ord": "000",
       "notice_date": "2026-04-07",
@@ -2552,6 +3313,25 @@
       "winner": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01445448&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01443385",
+      "bid_ord": "000",
+      "notice_date": "2026-04-07",
+      "scope": "AI SW 확대",
+      "org": "한국고용정보원",
+      "title": "AX 기반 국민체감 AI 고용서비스 구축 사업",
+      "fields": [
+        "AX·전략"
+      ],
+      "budget_eok": 28.3,
+      "open_date": "2026-05-01",
+      "status": "낙찰",
+      "bid_count": 3.0,
+      "winner": "와이즈넛",
+      "win_rate_pct": 100.0,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01443385&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -2593,25 +3373,6 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R26BK01434903",
-      "bid_ord": "000",
-      "notice_date": "2026-04-01",
-      "scope": "AI SW 확대",
-      "org": "한국과학창의재단",
-      "title": "2026 K-AI 퓨처 페스티벌 기획 및 운영 대행 용역",
-      "fields": [
-        "AI 일반"
-      ],
-      "budget_eok": 9.0,
-      "open_date": "2026-05-12",
-      "status": "낙찰",
-      "bid_count": 5.0,
-      "winner": "에스피랩",
-      "win_rate_pct": 99.0,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01434903&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
       "bid_no": "R26BK01435313",
       "bid_ord": "000",
       "notice_date": "2026-04-01",
@@ -2628,6 +3389,25 @@
       "winner": "팀벨",
       "win_rate_pct": 99.2,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01435313&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01434903",
+      "bid_ord": "000",
+      "notice_date": "2026-04-01",
+      "scope": "AI SW 확대",
+      "org": "한국과학창의재단",
+      "title": "2026 K-AI 퓨처 페스티벌 기획 및 운영 대행 용역",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 9.0,
+      "open_date": "2026-05-12",
+      "status": "낙찰",
+      "bid_count": 5.0,
+      "winner": "에스피랩",
+      "win_rate_pct": 99.0,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01434903&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -2688,25 +3468,6 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R26BK01417193",
-      "bid_ord": "000",
-      "notice_date": "2026-03-24",
-      "scope": "AI SW 확대",
-      "org": "서울특별시",
-      "title": "용산국제업무지구 스마트도시 AI 생태계 구축 지원방안 마련 용역",
-      "fields": [
-        "AI 일반"
-      ],
-      "budget_eok": 9.0,
-      "open_date": "2026-04-07",
-      "status": "유찰",
-      "bid_count": 1.0,
-      "winner": null,
-      "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01417193&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
       "bid_no": "R26BK01419162",
       "bid_ord": "000",
       "notice_date": "2026-03-24",
@@ -2723,6 +3484,25 @@
       "winner": "엠티데이타",
       "win_rate_pct": 100.0,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01419162&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01417193",
+      "bid_ord": "000",
+      "notice_date": "2026-03-24",
+      "scope": "AI SW 확대",
+      "org": "서울특별시",
+      "title": "용산국제업무지구 스마트도시 AI 생태계 구축 지원방안 마련 용역",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 9.0,
+      "open_date": "2026-04-07",
+      "status": "유찰",
+      "bid_count": 1.0,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01417193&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -2840,25 +3620,6 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R26BK01366452",
-      "bid_ord": "000",
-      "notice_date": "2026-03-05",
-      "scope": "AI SW 확대",
-      "org": "전남광주통합특별시 소방본부 전남권역부본부",
-      "title": "소방출동 데이터 기반, AI빅데이터 분석시스템 구축 용역",
-      "fields": [
-        "데이터·예측"
-      ],
-      "budget_eok": 14.0,
-      "open_date": "2026-03-26",
-      "status": "재공고됨",
-      "bid_count": null,
-      "winner": null,
-      "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01366452&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
       "bid_no": "R26BK01369919",
       "bid_ord": "000",
       "notice_date": "2026-03-05",
@@ -2875,6 +3636,25 @@
       "winner": "셈웨어",
       "win_rate_pct": 100.0,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01369919&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01366452",
+      "bid_ord": "000",
+      "notice_date": "2026-03-05",
+      "scope": "AI SW 확대",
+      "org": "전남광주통합특별시 소방본부 전남권역부본부",
+      "title": "소방출동 데이터 기반, AI빅데이터 분석시스템 구축 용역",
+      "fields": [
+        "데이터·예측"
+      ],
+      "budget_eok": 14.0,
+      "open_date": "2026-03-26",
+      "status": "재공고됨",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01366452&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -2973,25 +3753,6 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R26BK01309172",
-      "bid_ord": "000",
-      "notice_date": "2026-02-03",
-      "scope": "AI SW 확대",
-      "org": "한국교육과정평가원",
-      "title": "고교학점제 수강 신청 시스템 AI 기능 고도화",
-      "fields": [
-        "AI 일반"
-      ],
-      "budget_eok": 10.0,
-      "open_date": "2026-03-16",
-      "status": "낙찰",
-      "bid_count": 3.0,
-      "winner": "포씨소프트",
-      "win_rate_pct": 98.0,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01309172&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
       "bid_no": "R26BK01312264",
       "bid_ord": "000",
       "notice_date": "2026-02-03",
@@ -3008,6 +3769,25 @@
       "winner": "플랜아이",
       "win_rate_pct": 99.0,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01312264&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R26BK01309172",
+      "bid_ord": "000",
+      "notice_date": "2026-02-03",
+      "scope": "AI SW 확대",
+      "org": "한국교육과정평가원",
+      "title": "고교학점제 수강 신청 시스템 AI 기능 고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 10.0,
+      "open_date": "2026-03-16",
+      "status": "낙찰",
+      "bid_count": 3.0,
+      "winner": "포씨소프트",
+      "win_rate_pct": 98.0,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01309172&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -3087,6 +3867,25 @@
     },
     {
       "source": "band.html",
+      "bid_no": "R25BK01244015",
+      "bid_ord": "000",
+      "notice_date": "2025-12-22",
+      "scope": "AI SW 확대",
+      "org": "해양수산부",
+      "title": "지능형 해양수산재난정보체계 운영 및 유지관리(2026~2027)",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 11.5,
+      "open_date": "2025-12-23",
+      "status": "낙찰",
+      "bid_count": 1.0,
+      "winner": "아이씨티웨이",
+      "win_rate_pct": 97.7,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK01244015&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
       "bid_no": "R25BK01243484",
       "bid_ord": "000",
       "notice_date": "2025-12-22",
@@ -3103,25 +3902,6 @@
       "winner": "위니텍",
       "win_rate_pct": 98.4,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK01243484&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
-      "bid_no": "R25BK01227810",
-      "bid_ord": "001",
-      "notice_date": "2025-12-22",
-      "scope": "AI SW 확대",
-      "org": "(사)한국제약바이오협회",
-      "title": "K-AI 파운데이션 모델 기반 신약개발 임상시험 지원 플랫폼 구축 및 클라우드 활용",
-      "fields": [
-        "의료·바이오 AI"
-      ],
-      "budget_eok": 26.3,
-      "open_date": "2025-12-26",
-      "status": "유찰",
-      "bid_count": 1.0,
-      "winner": null,
-      "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK01227810&bidPbancOrd=001"
     },
     {
       "source": "band.html",
@@ -3144,22 +3924,22 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R25BK01244015",
-      "bid_ord": "000",
+      "bid_no": "R25BK01227810",
+      "bid_ord": "001",
       "notice_date": "2025-12-22",
       "scope": "AI SW 확대",
-      "org": "해양수산부",
-      "title": "지능형 해양수산재난정보체계 운영 및 유지관리(2026~2027)",
+      "org": "(사)한국제약바이오협회",
+      "title": "K-AI 파운데이션 모델 기반 신약개발 임상시험 지원 플랫폼 구축 및 클라우드 활용",
       "fields": [
-        "AI 일반"
+        "의료·바이오 AI"
       ],
-      "budget_eok": 11.5,
-      "open_date": "2025-12-23",
-      "status": "낙찰",
+      "budget_eok": 26.3,
+      "open_date": "2025-12-26",
+      "status": "유찰",
       "bid_count": 1.0,
-      "winner": "아이씨티웨이",
-      "win_rate_pct": 97.7,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK01244015&bidPbancOrd=000"
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK01227810&bidPbancOrd=001"
     },
     {
       "source": "band.html",
@@ -3182,25 +3962,6 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R25BK01225628",
-      "bid_ord": "000",
-      "notice_date": "2025-12-12",
-      "scope": "AI SW 확대",
-      "org": "한남대학교",
-      "title": "한남대학교 AI시스템 구축 사업",
-      "fields": [
-        "AI 일반"
-      ],
-      "budget_eok": 20.0,
-      "open_date": "2026-01-22",
-      "status": "유찰",
-      "bid_count": 1.0,
-      "winner": null,
-      "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK01225628&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
       "bid_no": "R25BK01227238",
       "bid_ord": "000",
       "notice_date": "2025-12-12",
@@ -3217,6 +3978,25 @@
       "winner": "투이컨설팅",
       "win_rate_pct": 98.2,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK01227238&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R25BK01225628",
+      "bid_ord": "000",
+      "notice_date": "2025-12-12",
+      "scope": "AI SW 확대",
+      "org": "한남대학교",
+      "title": "한남대학교 AI시스템 구축 사업",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 20.0,
+      "open_date": "2026-01-22",
+      "status": "유찰",
+      "bid_count": 1.0,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK01225628&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -3296,25 +4076,6 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R25BK01176539",
-      "bid_ord": "001",
-      "notice_date": "2025-11-25",
-      "scope": "AI SW 확대",
-      "org": "한림대학교",
-      "title": "한림대학교 AI데이터 센터 구축 및 공간 이중화 업체 선정",
-      "fields": [
-        "AI 인프라"
-      ],
-      "budget_eok": 21.0,
-      "open_date": "2025-12-08",
-      "status": "개찰 확인 필요",
-      "bid_count": null,
-      "winner": null,
-      "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK01176539&bidPbancOrd=001"
-    },
-    {
-      "source": "band.html",
       "bid_no": "R25BK01178851",
       "bid_ord": "000",
       "notice_date": "2025-11-25",
@@ -3334,22 +4095,22 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R25BK01165987",
-      "bid_ord": "000",
-      "notice_date": "2025-11-24",
+      "bid_no": "R25BK01176539",
+      "bid_ord": "001",
+      "notice_date": "2025-11-25",
       "scope": "AI SW 확대",
-      "org": "한국승강기안전공단",
-      "title": "2026~2028년 지능형 승강기안전 플랫폼 정보시스템 유지관리 용역",
+      "org": "한림대학교",
+      "title": "한림대학교 AI데이터 센터 구축 및 공간 이중화 업체 선정",
       "fields": [
-        "AI 일반"
+        "AI 인프라"
       ],
-      "budget_eok": 9.6,
-      "open_date": "2025-12-10",
-      "status": "유찰",
-      "bid_count": 1.0,
+      "budget_eok": 21.0,
+      "open_date": "2025-12-08",
+      "status": "개찰 확인 필요",
+      "bid_count": null,
       "winner": null,
       "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK01165987&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK01176539&bidPbancOrd=001"
     },
     {
       "source": "band.html",
@@ -3372,6 +4133,25 @@
     },
     {
       "source": "band.html",
+      "bid_no": "R25BK01165987",
+      "bid_ord": "000",
+      "notice_date": "2025-11-24",
+      "scope": "AI SW 확대",
+      "org": "한국승강기안전공단",
+      "title": "2026~2028년 지능형 승강기안전 플랫폼 정보시스템 유지관리 용역",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 9.6,
+      "open_date": "2025-12-10",
+      "status": "유찰",
+      "bid_count": 1.0,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK01165987&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
       "bid_no": "R25BK01163757",
       "bid_ord": "000",
       "notice_date": "2025-11-19",
@@ -3388,25 +4168,6 @@
       "winner": "한국능률협회컨설팅",
       "win_rate_pct": 98.0,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK01163757&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
-      "bid_no": "R25BK01137316",
-      "bid_ord": "001",
-      "notice_date": "2025-11-17",
-      "scope": "생성형·Agent",
-      "org": "한국해양진흥공사",
-      "title": "대내 생성형 AI 서비스 구축",
-      "fields": [
-        "생성형·LLM"
-      ],
-      "budget_eok": 9.9,
-      "open_date": "2025-11-28",
-      "status": "낙찰",
-      "bid_count": 6.0,
-      "winner": "제논",
-      "win_rate_pct": 88.6,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK01137316&bidPbancOrd=001"
     },
     {
       "source": "band.html",
@@ -3467,6 +4228,25 @@
     },
     {
       "source": "band.html",
+      "bid_no": "R25BK01137316",
+      "bid_ord": "001",
+      "notice_date": "2025-11-17",
+      "scope": "생성형·Agent",
+      "org": "한국해양진흥공사",
+      "title": "대내 생성형 AI 서비스 구축",
+      "fields": [
+        "생성형·LLM"
+      ],
+      "budget_eok": 9.9,
+      "open_date": "2025-11-28",
+      "status": "낙찰",
+      "bid_count": 6.0,
+      "winner": "제논",
+      "win_rate_pct": 88.6,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK01137316&bidPbancOrd=001"
+    },
+    {
+      "source": "band.html",
       "bid_no": "R25BK01153970",
       "bid_ord": "000",
       "notice_date": "2025-11-14",
@@ -3483,25 +4263,6 @@
       "winner": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK01153970&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
-      "bid_no": "R25BK01141537",
-      "bid_ord": "000",
-      "notice_date": "2025-11-12",
-      "scope": "생성형·Agent",
-      "org": "전남광주통합특별시교육청 전남광주통합특별시교육청AI교육원",
-      "title": "[긴급]2025 광주아이온(AI-ON) 생성형 AI 라이선스 구독 및 플랫폼 연동 사업",
-      "fields": [
-        "생성형·LLM"
-      ],
-      "budget_eok": 8.3,
-      "open_date": "2025-11-25",
-      "status": "낙찰",
-      "bid_count": 7.0,
-      "winner": "포인투랩",
-      "win_rate_pct": 94.6,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK01141537&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -3525,6 +4286,25 @@
     },
     {
       "source": "band.html",
+      "bid_no": "R25BK01141537",
+      "bid_ord": "000",
+      "notice_date": "2025-11-12",
+      "scope": "생성형·Agent",
+      "org": "전남광주통합특별시교육청 전남광주통합특별시교육청AI교육원",
+      "title": "[긴급]2025 광주아이온(AI-ON) 생성형 AI 라이선스 구독 및 플랫폼 연동 사업",
+      "fields": [
+        "생성형·LLM"
+      ],
+      "budget_eok": 8.3,
+      "open_date": "2025-11-25",
+      "status": "낙찰",
+      "bid_count": 7.0,
+      "winner": "포인투랩",
+      "win_rate_pct": 94.6,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK01141537&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
       "bid_no": "R25BK01133242",
       "bid_ord": "000",
       "notice_date": "2025-11-04",
@@ -3544,25 +4324,6 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R25BK01125206",
-      "bid_ord": "000",
-      "notice_date": "2025-10-31",
-      "scope": "AI SW 확대",
-      "org": "한국과학기술정보연구원",
-      "title": "2026년 AI 학습 데이터 및 국내외 논문, 보고서 DB구축",
-      "fields": [
-        "AI 일반"
-      ],
-      "budget_eok": 13.7,
-      "open_date": "2025-11-25",
-      "status": "유찰",
-      "bid_count": 1.0,
-      "winner": null,
-      "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK01125206&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
       "bid_no": "R25BK01126516",
       "bid_ord": "000",
       "notice_date": "2025-10-31",
@@ -3579,6 +4340,25 @@
       "winner": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK01126516&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R25BK01125206",
+      "bid_ord": "000",
+      "notice_date": "2025-10-31",
+      "scope": "AI SW 확대",
+      "org": "한국과학기술정보연구원",
+      "title": "2026년 AI 학습 데이터 및 국내외 논문, 보고서 DB구축",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 13.7,
+      "open_date": "2025-11-25",
+      "status": "유찰",
+      "bid_count": 1.0,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK01125206&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -3869,25 +4649,6 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R25BK01030010",
-      "bid_ord": "000",
-      "notice_date": "2025-08-27",
-      "scope": "생성형·Agent",
-      "org": "서울특별시",
-      "title": "생성형 AI 기반 챗봇 2.0 구축 용역(긴급)",
-      "fields": [
-        "생성형·LLM"
-      ],
-      "budget_eok": 16.0,
-      "open_date": "2025-09-09",
-      "status": "재공고됨",
-      "bid_count": null,
-      "winner": null,
-      "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK01030010&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
       "bid_no": "R25BK01030209",
       "bid_ord": "000",
       "notice_date": "2025-08-27",
@@ -3904,6 +4665,25 @@
       "winner": "클라이온",
       "win_rate_pct": 99.0,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK01030209&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R25BK01030010",
+      "bid_ord": "000",
+      "notice_date": "2025-08-27",
+      "scope": "생성형·Agent",
+      "org": "서울특별시",
+      "title": "생성형 AI 기반 챗봇 2.0 구축 용역(긴급)",
+      "fields": [
+        "생성형·LLM"
+      ],
+      "budget_eok": 16.0,
+      "open_date": "2025-09-09",
+      "status": "재공고됨",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK01030010&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -4137,26 +4917,6 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R25BK00954270",
-      "bid_ord": "000",
-      "notice_date": "2025-07-11",
-      "scope": "생성형·Agent",
-      "org": "한국인터넷진흥원",
-      "title": "범정부 초거대 AI 공통기반 대상 국가 망 보안체계 시범 실증",
-      "fields": [
-        "생성형·LLM",
-        "AI 보안"
-      ],
-      "budget_eok": 15.1,
-      "open_date": "2025-08-07",
-      "status": "낙찰",
-      "bid_count": 2.0,
-      "winner": "투이컨설팅",
-      "win_rate_pct": 79.4,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00954270&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
       "bid_no": "R25BK00954987",
       "bid_ord": "000",
       "notice_date": "2025-07-11",
@@ -4176,22 +4936,23 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R25BK00945565",
+      "bid_no": "R25BK00954270",
       "bid_ord": "000",
-      "notice_date": "2025-07-10",
-      "scope": "AI SW 확대",
-      "org": "문화체육관광부 국립중앙도서관",
-      "title": "2025년 디지털화 원문(현대자료)AI 텍스트 데이터 구축 사업",
+      "notice_date": "2025-07-11",
+      "scope": "생성형·Agent",
+      "org": "한국인터넷진흥원",
+      "title": "범정부 초거대 AI 공통기반 대상 국가 망 보안체계 시범 실증",
       "fields": [
-        "AI 일반"
+        "생성형·LLM",
+        "AI 보안"
       ],
-      "budget_eok": 18.9,
-      "open_date": "2025-07-25",
-      "status": "낙찰 미수집",
-      "bid_count": null,
-      "winner": null,
-      "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00945565&bidPbancOrd=000"
+      "budget_eok": 15.1,
+      "open_date": "2025-08-07",
+      "status": "낙찰",
+      "bid_count": 2.0,
+      "winner": "투이컨설팅",
+      "win_rate_pct": 79.4,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00954270&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -4215,22 +4976,22 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R25BK00945103",
+      "bid_no": "R25BK00945565",
       "bid_ord": "000",
-      "notice_date": "2025-07-08",
+      "notice_date": "2025-07-10",
       "scope": "AI SW 확대",
-      "org": "한국인터넷진흥원",
-      "title": "AI 기반 악성도메인 탐지시스템 솔루션 구매",
+      "org": "문화체육관광부 국립중앙도서관",
+      "title": "2025년 디지털화 원문(현대자료)AI 텍스트 데이터 구축 사업",
       "fields": [
         "AI 일반"
       ],
-      "budget_eok": 13.1,
-      "open_date": "2025-08-08",
+      "budget_eok": 18.9,
+      "open_date": "2025-07-25",
       "status": "낙찰 미수집",
       "bid_count": null,
       "winner": null,
       "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00945103&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00945565&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -4254,22 +5015,22 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R25BK00944976",
+      "bid_no": "R25BK00945103",
       "bid_ord": "000",
-      "notice_date": "2025-07-07",
-      "scope": "생성형·Agent",
-      "org": "한국공항공사",
-      "title": "KAC 생성형 AI 서비스 시범 구축 용역",
+      "notice_date": "2025-07-08",
+      "scope": "AI SW 확대",
+      "org": "한국인터넷진흥원",
+      "title": "AI 기반 악성도메인 탐지시스템 솔루션 구매",
       "fields": [
-        "생성형·LLM"
+        "AI 일반"
       ],
-      "budget_eok": 8.2,
-      "open_date": "2025-08-04",
-      "status": "낙찰",
-      "bid_count": 13.0,
-      "winner": "엠큐닉",
-      "win_rate_pct": 97.0,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00944976&bidPbancOrd=000"
+      "budget_eok": 13.1,
+      "open_date": "2025-08-08",
+      "status": "낙찰 미수집",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00945103&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -4289,6 +5050,25 @@
       "winner": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00945166&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R25BK00944976",
+      "bid_ord": "000",
+      "notice_date": "2025-07-07",
+      "scope": "생성형·Agent",
+      "org": "한국공항공사",
+      "title": "KAC 생성형 AI 서비스 시범 구축 용역",
+      "fields": [
+        "생성형·LLM"
+      ],
+      "budget_eok": 8.2,
+      "open_date": "2025-08-04",
+      "status": "낙찰",
+      "bid_count": 13.0,
+      "winner": "엠큐닉",
+      "win_rate_pct": 97.0,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00944976&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -4387,25 +5167,6 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R25BK00924221",
-      "bid_ord": "000",
-      "notice_date": "2025-06-24",
-      "scope": "AI SW 확대",
-      "org": "경상북도 소방본부",
-      "title": "지능형 신고답신 및 대응지원 체계 고도화",
-      "fields": [
-        "AI 일반"
-      ],
-      "budget_eok": 16.8,
-      "open_date": "2025-06-27",
-      "status": "낙찰 미수집",
-      "bid_count": null,
-      "winner": null,
-      "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00924221&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
       "bid_no": "R25BK00924703",
       "bid_ord": "000",
       "notice_date": "2025-06-24",
@@ -4425,22 +5186,22 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R25BK00915212",
+      "bid_no": "R25BK00924221",
       "bid_ord": "000",
-      "notice_date": "2025-06-19",
-      "scope": "생성형·Agent",
-      "org": "한국지능정보사회진흥원",
-      "title": "생성형 AI 기반 국세 상담 지원 서비스",
+      "notice_date": "2025-06-24",
+      "scope": "AI SW 확대",
+      "org": "경상북도 소방본부",
+      "title": "지능형 신고답신 및 대응지원 체계 고도화",
       "fields": [
-        "생성형·LLM"
+        "AI 일반"
       ],
-      "budget_eok": 11.2,
-      "open_date": "2025-07-15",
-      "status": "낙찰",
-      "bid_count": 7.0,
-      "winner": "퍼블릭에이아이",
-      "win_rate_pct": 88.4,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00915212&bidPbancOrd=000"
+      "budget_eok": 16.8,
+      "open_date": "2025-06-27",
+      "status": "낙찰 미수집",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00924221&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -4463,6 +5224,25 @@
     },
     {
       "source": "band.html",
+      "bid_no": "R25BK00915212",
+      "bid_ord": "000",
+      "notice_date": "2025-06-19",
+      "scope": "생성형·Agent",
+      "org": "한국지능정보사회진흥원",
+      "title": "생성형 AI 기반 국세 상담 지원 서비스",
+      "fields": [
+        "생성형·LLM"
+      ],
+      "budget_eok": 11.2,
+      "open_date": "2025-07-15",
+      "status": "낙찰",
+      "bid_count": 7.0,
+      "winner": "퍼블릭에이아이",
+      "win_rate_pct": 88.4,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00915212&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
       "bid_no": "R25BK00911854",
       "bid_ord": "000",
       "notice_date": "2025-06-19",
@@ -4479,25 +5259,6 @@
       "winner": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00911854&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
-      "bid_no": "R25BK00899409",
-      "bid_ord": "000",
-      "notice_date": "2025-06-16",
-      "scope": "생성형·Agent",
-      "org": "소상공인시장진흥공단",
-      "title": "상권･경영 정보 관련 생성형 AI 서비스 및 모델링 고도화 용역",
-      "fields": [
-        "생성형·LLM"
-      ],
-      "budget_eok": 12.6,
-      "open_date": "2025-07-16",
-      "status": "유찰",
-      "bid_count": 1.0,
-      "winner": null,
-      "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00899409&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -4520,6 +5281,25 @@
     },
     {
       "source": "band.html",
+      "bid_no": "R25BK00899409",
+      "bid_ord": "000",
+      "notice_date": "2025-06-16",
+      "scope": "생성형·Agent",
+      "org": "소상공인시장진흥공단",
+      "title": "상권･경영 정보 관련 생성형 AI 서비스 및 모델링 고도화 용역",
+      "fields": [
+        "생성형·LLM"
+      ],
+      "budget_eok": 12.6,
+      "open_date": "2025-07-16",
+      "status": "유찰",
+      "bid_count": 1.0,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00899409&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
       "bid_no": "R25BK00900718",
       "bid_ord": "000",
       "notice_date": "2025-06-12",
@@ -4536,25 +5316,6 @@
       "winner": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00900718&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
-      "bid_no": "R25BK00887553",
-      "bid_ord": "000",
-      "notice_date": "2025-06-10",
-      "scope": "AI SW 확대",
-      "org": "주식회사 카카오엔터프라이즈",
-      "title": "고양시 거점형 스마트도시 조성사업 지능형 스마트 행정 서비스 구축",
-      "fields": [
-        "AI 일반"
-      ],
-      "budget_eok": 24.0,
-      "open_date": "2025-06-24",
-      "status": "낙찰 미수집",
-      "bid_count": null,
-      "winner": null,
-      "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00887553&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -4578,6 +5339,25 @@
     },
     {
       "source": "band.html",
+      "bid_no": "R25BK00887553",
+      "bid_ord": "000",
+      "notice_date": "2025-06-10",
+      "scope": "AI SW 확대",
+      "org": "주식회사 카카오엔터프라이즈",
+      "title": "고양시 거점형 스마트도시 조성사업 지능형 스마트 행정 서비스 구축",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 24.0,
+      "open_date": "2025-06-24",
+      "status": "낙찰 미수집",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00887553&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
       "bid_no": "R25BK00889910",
       "bid_ord": "000",
       "notice_date": "2025-06-09",
@@ -4597,25 +5377,6 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R25BK00884040",
-      "bid_ord": "000",
-      "notice_date": "2025-06-04",
-      "scope": "AI SW 확대",
-      "org": "국방과학연구소",
-      "title": "국방인공지능 무기체계용 MLSecOps 환경구축",
-      "fields": [
-        "AI 보안"
-      ],
-      "budget_eok": 24.1,
-      "open_date": "2025-07-18",
-      "status": "낙찰 미수집",
-      "bid_count": null,
-      "winner": null,
-      "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00884040&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
       "bid_no": "R25BK00884082",
       "bid_ord": "000",
       "notice_date": "2025-06-04",
@@ -4632,6 +5393,25 @@
       "winner": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00884082&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R25BK00884040",
+      "bid_ord": "000",
+      "notice_date": "2025-06-04",
+      "scope": "AI SW 확대",
+      "org": "국방과학연구소",
+      "title": "국방인공지능 무기체계용 MLSecOps 환경구축",
+      "fields": [
+        "AI 보안"
+      ],
+      "budget_eok": 24.1,
+      "open_date": "2025-07-18",
+      "status": "낙찰 미수집",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00884040&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -4730,22 +5510,41 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R25BK00855685",
+      "bid_no": "R25BK00857951",
       "bid_ord": "000",
       "notice_date": "2025-05-20",
       "scope": "AI SW 확대",
-      "org": "부산교통공사",
-      "title": "(재공고)다대포해수욕장역 등 15개 역사 지능형 디지털 메트로 구축 용역",
+      "org": "코리아경기도주식회사",
+      "title": "25년 「경기도 AI 통합 아동급식지원 플랫폼 고도화」 용역",
       "fields": [
         "AI 일반"
       ],
-      "budget_eok": 9.6,
+      "budget_eok": 9.9,
       "open_date": "2025-06-05",
       "status": "낙찰 미수집",
       "bid_count": null,
       "winner": null,
       "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00855685&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00857951&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R25BK00857277",
+      "bid_ord": "000",
+      "notice_date": "2025-05-20",
+      "scope": "AI SW 확대",
+      "org": "고용노동부 중앙노동위원회",
+      "title": "AI 디지털노동위원회(지능형서비스) 구축 1차",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 15.4,
+      "open_date": "2025-06-20",
+      "status": "낙찰 미수집",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00857277&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -4787,41 +5586,22 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R25BK00857277",
+      "bid_no": "R25BK00855685",
       "bid_ord": "000",
       "notice_date": "2025-05-20",
       "scope": "AI SW 확대",
-      "org": "고용노동부 중앙노동위원회",
-      "title": "AI 디지털노동위원회(지능형서비스) 구축 1차",
+      "org": "부산교통공사",
+      "title": "(재공고)다대포해수욕장역 등 15개 역사 지능형 디지털 메트로 구축 용역",
       "fields": [
         "AI 일반"
       ],
-      "budget_eok": 15.4,
-      "open_date": "2025-06-20",
-      "status": "낙찰 미수집",
-      "bid_count": null,
-      "winner": null,
-      "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00857277&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
-      "bid_no": "R25BK00857951",
-      "bid_ord": "000",
-      "notice_date": "2025-05-20",
-      "scope": "AI SW 확대",
-      "org": "코리아경기도주식회사",
-      "title": "25년 「경기도 AI 통합 아동급식지원 플랫폼 고도화」 용역",
-      "fields": [
-        "AI 일반"
-      ],
-      "budget_eok": 9.9,
+      "budget_eok": 9.6,
       "open_date": "2025-06-05",
       "status": "낙찰 미수집",
       "bid_count": null,
       "winner": null,
       "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00857951&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00855685&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -5035,25 +5815,6 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R25BK00710287",
-      "bid_ord": "000",
-      "notice_date": "2025-03-13",
-      "scope": "AI SW 확대",
-      "org": "관세청 관세국경인재개발원",
-      "title": "지능형 X-Ray 판독훈련 시스템 구축",
-      "fields": [
-        "AI 일반"
-      ],
-      "budget_eok": 9.2,
-      "open_date": "2025-04-08",
-      "status": "낙찰 미수집",
-      "bid_count": null,
-      "winner": null,
-      "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00710287&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
       "bid_no": "R25BK00710401",
       "bid_ord": "000",
       "notice_date": "2025-03-13",
@@ -5070,6 +5831,25 @@
       "winner": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00710401&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R25BK00710287",
+      "bid_ord": "000",
+      "notice_date": "2025-03-13",
+      "scope": "AI SW 확대",
+      "org": "관세청 관세국경인재개발원",
+      "title": "지능형 X-Ray 판독훈련 시스템 구축",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 9.2,
+      "open_date": "2025-04-08",
+      "status": "낙찰 미수집",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00710287&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -5130,22 +5910,22 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R25BK00618046",
+      "bid_no": "R25BK00629680",
       "bid_ord": "000",
       "notice_date": "2025-02-10",
       "scope": "AI SW 확대",
-      "org": "기상청 국립기상과학원",
-      "title": "AI기반 중기 기상예측 기술개발",
+      "org": "인천광역시",
+      "title": "AI기반 다중이용시설 피난안내시스템 확산 사업",
       "fields": [
-        "데이터·예측"
+        "AI 일반"
       ],
-      "budget_eok": 21.1,
-      "open_date": "2025-03-06",
+      "budget_eok": 10.7,
+      "open_date": "2025-02-21",
       "status": "낙찰 미수집",
       "bid_count": null,
       "winner": null,
       "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00618046&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00629680&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -5168,22 +5948,22 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R25BK00629680",
+      "bid_no": "R25BK00618046",
       "bid_ord": "000",
       "notice_date": "2025-02-10",
       "scope": "AI SW 확대",
-      "org": "인천광역시",
-      "title": "AI기반 다중이용시설 피난안내시스템 확산 사업",
+      "org": "기상청 국립기상과학원",
+      "title": "AI기반 중기 기상예측 기술개발",
       "fields": [
-        "AI 일반"
+        "데이터·예측"
       ],
-      "budget_eok": 10.7,
-      "open_date": "2025-02-21",
+      "budget_eok": 21.1,
+      "open_date": "2025-03-06",
       "status": "낙찰 미수집",
       "bid_count": null,
       "winner": null,
       "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00629680&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00618046&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -5206,25 +5986,6 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R25BK00580156",
-      "bid_ord": "000",
-      "notice_date": "2025-01-15",
-      "scope": "AI SW 확대",
-      "org": "질병관리청 국립보건연구원",
-      "title": "공간 전사체 기반 인공지능 학습용 데이터 구축",
-      "fields": [
-        "AI 일반"
-      ],
-      "budget_eok": 10.0,
-      "open_date": "2025-02-24",
-      "status": "낙찰 미수집",
-      "bid_count": null,
-      "winner": null,
-      "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00580156&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
       "bid_no": "R25BK00580477",
       "bid_ord": "000",
       "notice_date": "2025-01-15",
@@ -5244,9 +6005,9 @@
     },
     {
       "source": "band.html",
-      "bid_no": "R25BK00579153",
+      "bid_no": "R25BK00580156",
       "bid_ord": "000",
-      "notice_date": "2025-01-14",
+      "notice_date": "2025-01-15",
       "scope": "AI SW 확대",
       "org": "질병관리청 국립보건연구원",
       "title": "공간 전사체 기반 인공지능 학습용 데이터 구축",
@@ -5254,12 +6015,12 @@
         "AI 일반"
       ],
       "budget_eok": 10.0,
-      "open_date": "2025-02-25",
+      "open_date": "2025-02-24",
       "status": "낙찰 미수집",
       "bid_count": null,
       "winner": null,
       "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00579153&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00580156&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -5279,6 +6040,25 @@
       "winner": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00579353&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "R25BK00579153",
+      "bid_ord": "000",
+      "notice_date": "2025-01-14",
+      "scope": "AI SW 확대",
+      "org": "질병관리청 국립보건연구원",
+      "title": "공간 전사체 기반 인공지능 학습용 데이터 구축",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 10.0,
+      "open_date": "2025-02-25",
+      "status": "낙찰 미수집",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00579153&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -5396,25 +6176,6 @@
     },
     {
       "source": "band.html",
-      "bid_no": "20241229551",
-      "bid_ord": "000",
-      "notice_date": "2024-12-17",
-      "scope": "AI SW 확대",
-      "org": "국방부 국군의무사령부",
-      "title": "AI기반 의료영상 신체등급 판정서비스 용역",
-      "fields": [
-        "의료·바이오 AI"
-      ],
-      "budget_eok": 8.4,
-      "open_date": "2025-01-17",
-      "status": "낙찰 미수집",
-      "bid_count": null,
-      "winner": null,
-      "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20241229551&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
       "bid_no": "20241229807",
       "bid_ord": "000",
       "notice_date": "2024-12-17",
@@ -5431,6 +6192,25 @@
       "winner": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20241229807&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "20241229551",
+      "bid_ord": "000",
+      "notice_date": "2024-12-17",
+      "scope": "AI SW 확대",
+      "org": "국방부 국군의무사령부",
+      "title": "AI기반 의료영상 신체등급 판정서비스 용역",
+      "fields": [
+        "의료·바이오 AI"
+      ],
+      "budget_eok": 8.4,
+      "open_date": "2025-01-17",
+      "status": "낙찰 미수집",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20241229551&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -5700,25 +6480,6 @@
     },
     {
       "source": "band.html",
-      "bid_no": "20241023706",
-      "bid_ord": "000",
-      "notice_date": "2024-10-28",
-      "scope": "생성형·Agent",
-      "org": "국방통합데이터센터",
-      "title": "국방 행정분야 생성형 AI 서비스 개발 및 실증",
-      "fields": [
-        "생성형·LLM"
-      ],
-      "budget_eok": 16.1,
-      "open_date": "2024-11-21",
-      "status": "낙찰",
-      "bid_count": 4.0,
-      "winner": "엠티데이타",
-      "win_rate_pct": 94.4,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20241023706&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
       "bid_no": "20241031037",
       "bid_ord": "000",
       "notice_date": "2024-10-28",
@@ -5735,6 +6496,25 @@
       "winner": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20241031037&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "20241023706",
+      "bid_ord": "000",
+      "notice_date": "2024-10-28",
+      "scope": "생성형·Agent",
+      "org": "국방통합데이터센터",
+      "title": "국방 행정분야 생성형 AI 서비스 개발 및 실증",
+      "fields": [
+        "생성형·LLM"
+      ],
+      "budget_eok": 16.1,
+      "open_date": "2024-11-21",
+      "status": "낙찰",
+      "bid_count": 4.0,
+      "winner": "엠티데이타",
+      "win_rate_pct": 94.4,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20241023706&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -5986,25 +6766,6 @@
     },
     {
       "source": "band.html",
-      "bid_no": "20240732922",
-      "bid_ord": "000",
-      "notice_date": "2024-07-26",
-      "scope": "AI SW 확대",
-      "org": "국방부 국군재정관리단",
-      "title": "(24F054-B1)AI기반 해안경계작전체계 학습데이터 구축",
-      "fields": [
-        "AI 일반"
-      ],
-      "budget_eok": 8.9,
-      "open_date": "2024-09-04",
-      "status": "낙찰 미수집",
-      "bid_count": null,
-      "winner": null,
-      "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20240732922&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
       "bid_no": "20240733102",
       "bid_ord": "000",
       "notice_date": "2024-07-26",
@@ -6021,6 +6782,25 @@
       "winner": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20240733102&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "20240732922",
+      "bid_ord": "000",
+      "notice_date": "2024-07-26",
+      "scope": "AI SW 확대",
+      "org": "국방부 국군재정관리단",
+      "title": "(24F054-B1)AI기반 해안경계작전체계 학습데이터 구축",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 8.9,
+      "open_date": "2024-09-04",
+      "status": "낙찰 미수집",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20240732922&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -6309,25 +7089,6 @@
     },
     {
       "source": "band.html",
-      "bid_no": "20240441709",
-      "bid_ord": "001",
-      "notice_date": "2024-05-16",
-      "scope": "AI SW 확대",
-      "org": "경상북도 포항시",
-      "title": "AI 기반 인파 분석 플랫폼 구축(정정공고)",
-      "fields": [
-        "AI 일반"
-      ],
-      "budget_eok": 12.0,
-      "open_date": "2024-06-10",
-      "status": "낙찰 미수집",
-      "bid_count": null,
-      "winner": null,
-      "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20240441709&bidPbancOrd=001"
-    },
-    {
-      "source": "band.html",
       "bid_no": "20240516117",
       "bid_ord": "000",
       "notice_date": "2024-05-16",
@@ -6347,22 +7108,22 @@
     },
     {
       "source": "band.html",
-      "bid_no": "20240516019",
-      "bid_ord": "000",
-      "notice_date": "2024-05-14",
+      "bid_no": "20240441709",
+      "bid_ord": "001",
+      "notice_date": "2024-05-16",
       "scope": "AI SW 확대",
-      "org": "한국소비자원",
-      "title": "인공지능 기반 소비자 민원처리 통합 플랫폼 3차 구축",
+      "org": "경상북도 포항시",
+      "title": "AI 기반 인파 분석 플랫폼 구축(정정공고)",
       "fields": [
         "AI 일반"
       ],
-      "budget_eok": 11.8,
-      "open_date": "2024-06-14",
+      "budget_eok": 12.0,
+      "open_date": "2024-06-10",
       "status": "낙찰 미수집",
       "bid_count": null,
       "winner": null,
       "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20240516019&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20240441709&bidPbancOrd=001"
     },
     {
       "source": "band.html",
@@ -6382,6 +7143,25 @@
       "winner": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20240516796&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "20240516019",
+      "bid_ord": "000",
+      "notice_date": "2024-05-14",
+      "scope": "AI SW 확대",
+      "org": "한국소비자원",
+      "title": "인공지능 기반 소비자 민원처리 통합 플랫폼 3차 구축",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 11.8,
+      "open_date": "2024-06-14",
+      "status": "낙찰 미수집",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20240516019&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -6728,25 +7508,6 @@
     },
     {
       "source": "band.html",
-      "bid_no": "20240121304",
-      "bid_ord": "000",
-      "notice_date": "2024-01-22",
-      "scope": "생성형·Agent",
-      "org": "질병관리청 국립보건연구원",
-      "title": "[학술] 거대 언어 모델을 활용한 인공지능 기반 유전변이 분석 지원 알고리즘 개발",
-      "fields": [
-        "생성형·LLM"
-      ],
-      "budget_eok": 9.0,
-      "open_date": "2024-03-04",
-      "status": "낙찰",
-      "bid_count": 8.0,
-      "winner": "인실리코젠",
-      "win_rate_pct": 89.0,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20240121304&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
       "bid_no": "20240122339",
       "bid_ord": "000",
       "notice_date": "2024-01-22",
@@ -6763,6 +7524,25 @@
       "winner": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20240122339&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "20240121304",
+      "bid_ord": "000",
+      "notice_date": "2024-01-22",
+      "scope": "생성형·Agent",
+      "org": "질병관리청 국립보건연구원",
+      "title": "[학술] 거대 언어 모델을 활용한 인공지능 기반 유전변이 분석 지원 알고리즘 개발",
+      "fields": [
+        "생성형·LLM"
+      ],
+      "budget_eok": 9.0,
+      "open_date": "2024-03-04",
+      "status": "낙찰",
+      "bid_count": 8.0,
+      "winner": "인실리코젠",
+      "win_rate_pct": 89.0,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20240121304&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -6861,25 +7641,6 @@
     },
     {
       "source": "band.html",
-      "bid_no": "20231204679",
-      "bid_ord": "000",
-      "notice_date": "2023-12-04",
-      "scope": "AI SW 확대",
-      "org": "여주대학",
-      "title": "혁신지원사업 학생 역량 AI 통합 학사 시스템 구축 입찰 공고(긴급) 건",
-      "fields": [
-        "AI 일반"
-      ],
-      "budget_eok": 16.0,
-      "open_date": "2023-12-15",
-      "status": "낙찰 미수집",
-      "bid_count": null,
-      "winner": null,
-      "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20231204679&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
       "bid_no": "20231205243",
       "bid_ord": "000",
       "notice_date": "2023-12-04",
@@ -6896,6 +7657,25 @@
       "winner": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20231205243&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "20231204679",
+      "bid_ord": "000",
+      "notice_date": "2023-12-04",
+      "scope": "AI SW 확대",
+      "org": "여주대학",
+      "title": "혁신지원사업 학생 역량 AI 통합 학사 시스템 구축 입찰 공고(긴급) 건",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 16.0,
+      "open_date": "2023-12-15",
+      "status": "낙찰 미수집",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20231204679&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -7108,25 +7888,6 @@
     },
     {
       "source": "band.html",
-      "bid_no": "20230807018",
-      "bid_ord": "000",
-      "notice_date": "2023-08-07",
-      "scope": "AI SW 확대",
-      "org": "한국과학기술원",
-      "title": "2023년 제조데이터 AI 분석 서비스포털 고도화",
-      "fields": [
-        "AI 일반"
-      ],
-      "budget_eok": 17.1,
-      "open_date": "2023-08-22",
-      "status": "낙찰 미수집",
-      "bid_count": null,
-      "winner": null,
-      "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20230807018&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
       "bid_no": "20230807420",
       "bid_ord": "000",
       "notice_date": "2023-08-07",
@@ -7143,6 +7904,25 @@
       "winner": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20230807420&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "20230807018",
+      "bid_ord": "000",
+      "notice_date": "2023-08-07",
+      "scope": "AI SW 확대",
+      "org": "한국과학기술원",
+      "title": "2023년 제조데이터 AI 분석 서비스포털 고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 17.1,
+      "open_date": "2023-08-22",
+      "status": "낙찰 미수집",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20230807018&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -7374,25 +8154,6 @@
     },
     {
       "source": "band.html",
-      "bid_no": "20230608313",
-      "bid_ord": "000",
-      "notice_date": "2023-06-08",
-      "scope": "AI SW 확대",
-      "org": "해양수산부",
-      "title": "2023년 지능형 해상교통정보시스템 안정화 사업",
-      "fields": [
-        "AI 일반"
-      ],
-      "budget_eok": 9.4,
-      "open_date": "2023-07-04",
-      "status": "낙찰 미수집",
-      "bid_count": null,
-      "winner": null,
-      "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20230608313&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
       "bid_no": "20230610326",
       "bid_ord": "000",
       "notice_date": "2023-06-08",
@@ -7409,6 +8170,25 @@
       "winner": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20230610326&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "20230608313",
+      "bid_ord": "000",
+      "notice_date": "2023-06-08",
+      "scope": "AI SW 확대",
+      "org": "해양수산부",
+      "title": "2023년 지능형 해상교통정보시스템 안정화 사업",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 9.4,
+      "open_date": "2023-07-04",
+      "status": "낙찰 미수집",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20230608313&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -7621,22 +8401,22 @@
     },
     {
       "source": "band.html",
-      "bid_no": "20230512926",
+      "bid_no": "20230517417",
       "bid_ord": "000",
       "notice_date": "2023-05-12",
       "scope": "AI SW 확대",
-      "org": "헌법재판소",
-      "title": "지능형 헌법재판시스템 구축 3단계",
+      "org": "한국지능정보사회진흥원",
+      "title": "2023년 AI기반 현안 해결형 데이터 분석 모델개발 사업",
       "fields": [
-        "AI 일반"
+        "데이터·예측"
       ],
-      "budget_eok": 13.3,
-      "open_date": "2023-06-22",
+      "budget_eok": 15.1,
+      "open_date": "2023-06-09",
       "status": "낙찰 미수집",
       "bid_count": null,
       "winner": null,
       "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20230512926&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20230517417&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -7659,22 +8439,22 @@
     },
     {
       "source": "band.html",
-      "bid_no": "20230517417",
+      "bid_no": "20230512926",
       "bid_ord": "000",
       "notice_date": "2023-05-12",
       "scope": "AI SW 확대",
-      "org": "한국지능정보사회진흥원",
-      "title": "2023년 AI기반 현안 해결형 데이터 분석 모델개발 사업",
+      "org": "헌법재판소",
+      "title": "지능형 헌법재판시스템 구축 3단계",
       "fields": [
-        "데이터·예측"
+        "AI 일반"
       ],
-      "budget_eok": 15.1,
-      "open_date": "2023-06-09",
+      "budget_eok": 13.3,
+      "open_date": "2023-06-22",
       "status": "낙찰 미수집",
       "bid_count": null,
       "winner": null,
       "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20230517417&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20230512926&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -7887,25 +8667,6 @@
     },
     {
       "source": "band.html",
-      "bid_no": "20230354068",
-      "bid_ord": "000",
-      "notice_date": "2023-04-06",
-      "scope": "AI SW 확대",
-      "org": "국방부 국군재정관리단",
-      "title": "(23F013-G) 인사상담용 지능형 콜봇/가이드챗봇 시범구축",
-      "fields": [
-        "생성형·LLM"
-      ],
-      "budget_eok": 8.9,
-      "open_date": "2023-04-20",
-      "status": "낙찰 미수집",
-      "bid_count": null,
-      "winner": null,
-      "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20230354068&bidPbancOrd=000"
-    },
-    {
-      "source": "band.html",
       "bid_no": "20230400830",
       "bid_ord": "000",
       "notice_date": "2023-04-06",
@@ -7922,6 +8683,25 @@
       "winner": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20230400830&bidPbancOrd=000"
+    },
+    {
+      "source": "band.html",
+      "bid_no": "20230354068",
+      "bid_ord": "000",
+      "notice_date": "2023-04-06",
+      "scope": "AI SW 확대",
+      "org": "국방부 국군재정관리단",
+      "title": "(23F013-G) 인사상담용 지능형 콜봇/가이드챗봇 시범구축",
+      "fields": [
+        "생성형·LLM"
+      ],
+      "budget_eok": 8.9,
+      "open_date": "2023-04-20",
+      "status": "낙찰 미수집",
+      "bid_count": null,
+      "winner": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20230354068&bidPbancOrd=000"
     },
     {
       "source": "band.html",
@@ -9152,6 +9932,6 @@
       "procurement": "GS 1등급 2건, CSAP(뷰어), 디지털서비스몰(뷰어)"
     }
   ],
-  "generated_at": "2026-10-28T09:26:12Z",
+  "generated_at": "2026-10-29T01:04:14Z",
   "mode": "bootstrap_html"
 }

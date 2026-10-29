@@ -22,6 +22,21 @@ th.sortable-th.is-sorted{color:var(--fg)}
 th.sortable-th .sort-ind{display:inline-block;min-width:1em;margin-left:.28em;font-size:10px;line-height:1;color:var(--accent);opacity:0}
 th.sortable-th:hover .sort-ind,th.sortable-th:focus-visible .sort-ind{opacity:.45}
 th.sortable-th.is-sorted .sort-ind{opacity:1}
+/* band.html 공고별 결과: keep header/body columns aligned; avoid cramped 분야 wrap */
+table.band-results{min-width:1080px;table-layout:fixed}
+table.band-results th,table.band-results td{vertical-align:middle}
+table.band-results th:nth-child(1),table.band-results td:nth-child(1){width:7.2em;white-space:nowrap}
+table.band-results th:nth-child(2),table.band-results td:nth-child(2){width:6.5em;white-space:nowrap}
+table.band-results th:nth-child(3),table.band-results td:nth-child(3){width:8.5em}
+table.band-results th:nth-child(4),table.band-results td:nth-child(4){width:auto}
+table.band-results th:nth-child(5),table.band-results td:nth-child(5){width:9em;white-space:nowrap}
+table.band-results th:nth-child(6),table.band-results td:nth-child(6){width:4.8em}
+table.band-results th:nth-child(7),table.band-results td:nth-child(7){width:7.2em;white-space:nowrap}
+table.band-results th:nth-child(8),table.band-results td:nth-child(8){width:6.8em;white-space:nowrap}
+table.band-results th:nth-child(9),table.band-results td:nth-child(9){width:4.2em}
+table.band-results th:nth-child(10),table.band-results td:nth-child(10){width:6.5em}
+table.band-results th:nth-child(11),table.band-results td:nth-child(11){width:4.8em}
+table.band-results td a{text-decoration:none}table.band-results td a:hover{text-decoration:underline}
 .empty{background:var(--surface);border:1px dashed var(--line);border-radius:8px;padding:16px;color:var(--muted)}
 .bars{display:grid;gap:7px;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px 18px}
 .bar{display:grid;grid-template-columns:72px minmax(0,1fr) 64px;gap:12px;align-items:center;font-size:13px;font-variant-numeric:tabular-nums}
