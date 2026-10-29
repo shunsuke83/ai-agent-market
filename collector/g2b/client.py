@@ -1,11 +1,14 @@
 from __future__ import annotations
 
 import os
+import re
 import time
 from datetime import date, datetime, timedelta
 from typing import Any, Iterator
 
 import requests
+
+_SERVICE_KEY_RE = re.compile(r"(serviceKey=)([^&\s]+)", re.IGNORECASE)
 
 # Public Data Portal endpoints (조달청 나라장터, 2024+ gateway paths)
 BID_BASE = "https://apis.data.go.kr/1230000/ad/BidPublicInfoService"
@@ -47,6 +50,13 @@ OPENG_REBID = f"{SCSBID_BASE}/getOpengResultListInfoRebid"
 
 class G2BError(RuntimeError):
     pass
+
+
+def redact_secrets(text: str | None) -> str:
+    """Strip serviceKey query values from log/exception text."""
+    if not text:
+        return ""
+    return _SERVICE_KEY_RE.sub(r"\1***", str(text))
 
 
 def service_key() -> str:
@@ -111,15 +121,18 @@ class G2BClient:
                 q["serviceKey"] = self.key
                 resp = self.session.get(url, params=q, timeout=self.timeout)
             if resp.status_code == 429:
-                last_err = requests.HTTPError(f"429 Too Many Requests", response=resp)
+                last_err = G2BError(f"429 Too Many Requests ({url})")
                 continue
             try:
                 resp.raise_for_status()
             except requests.HTTPError as e:
-                last_err = e
+                # Never keep raw response URL — it embeds serviceKey.
+                last_err = G2BError(
+                    f"HTTP {resp.status_code} for {url}: {redact_secrets(str(e))}"
+                )
                 if resp.status_code >= 500:
                     continue
-                raise
+                raise last_err from None
             data = resp.json()
             header = (
                 data.get("response", {}).get("header")
@@ -131,7 +144,7 @@ class G2BClient:
             if code and code not in ("00", "0", ""):
                 raise G2BError(f"API error {code}: {msg}")
             return data
-        raise G2BError(f"HTTP retries exhausted: {last_err}")
+        raise G2BError(f"HTTP retries exhausted: {redact_secrets(str(last_err))}")
 
     def _items(self, data: dict[str, Any]) -> list[dict[str, Any]]:
         body = data.get("response", {}).get("body") or {}

@@ -23,7 +23,8 @@
 | 입찰공고정보서비스 | [data.go.kr/15129394](https://www.data.go.kr/data/15129394/openapi.do) | 공고 검색 (`*PPSSrch`) |
 | 낙찰정보서비스 | [data.go.kr/15129397](https://www.data.go.kr/data/15129397/openapi.do) | 개찰·낙찰 (`winner`/`bid_count`/`award_amount_eok`) |
 
-환경변수: `DATA_GO_KR_SERVICE_KEY` (또는 `SERVICE_KEY`).
+환경변수: `DATA_GO_KR_SERVICE_KEY` (또는 `SERVICE_KEY`).  
+키 재발급: [`docs/key-rotation.md`](docs/key-rotation.md)
 
 ## 사용법
 
@@ -81,4 +82,4 @@ python -m g2b.collect enrich-bidders --include-bootstrap --core-only --limit 400
 ## 아직 안 하는 것
 
 - 경쟁사 프로필 문단 (편집 콘텐츠)
-- 운영·보안(채팅 노출 키 재발급)
+- 키 재발급 자체는 소유자가 data.go.kr + GitHub secret에서 수행 ([key-rotation.md](docs/key-rotation.md))
