@@ -15,29 +15,37 @@ h1{font-size:28px;line-height:1.25;margin:6px 0 8px;text-wrap:balance}h2{font-si
 .tbl{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:8px}
 table{width:100%;border-collapse:collapse;font-size:14px;min-width:640px}th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
 th{font-size:12px;color:var(--muted);font-weight:600;font-family:var(--f-mono);white-space:nowrap}tr:last-child td{border-bottom:none}
-td:first-child{white-space:nowrap}td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}td a{color:var(--fg)}td a:hover{color:var(--accent)}
-th.num{text-align:right;font-variant-numeric:tabular-nums}
+td:first-child{white-space:nowrap}td a{color:var(--fg)}td a:hover{color:var(--accent)}
+/* Numeric cols hug content so ranking/summary tables don't leave headers floating mid-gap */
+th.num,td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap;width:1%}
+/* Compact ranking / summary tables: size card + table to content */
+.tbl:has(> table.rank){width:fit-content;max-width:100%}
+table.rank{width:auto;min-width:0;max-width:100%}
+table.rank th.num,table.rank td.num{width:auto;padding-left:1.25em}
 th.sortable-th{cursor:pointer;user-select:none;-webkit-user-select:none}
 th.sortable-th:hover,th.sortable-th:focus-visible{color:var(--accent);outline:none}
 th.sortable-th.is-sorted{color:var(--fg)}
 th.sortable-th .sort-ind{display:inline-block;min-width:1em;margin-left:.28em;font-size:10px;line-height:1;color:var(--accent);opacity:0}
 th.sortable-th:hover .sort-ind,th.sortable-th:focus-visible .sort-ind{opacity:.45}
 th.sortable-th.is-sorted .sort-ind{opacity:1}
-/* band.html 공고별 결과: keep header/body columns aligned; avoid cramped 분야 wrap */
-table.band-results{min-width:1080px;table-layout:fixed}
+/* band.html 공고별 결과: fixed grid so 11 cols stay aligned under scroll */
+table.band-results{min-width:1120px;table-layout:fixed}
 table.band-results th,table.band-results td{vertical-align:middle}
-table.band-results th:nth-child(1),table.band-results td:nth-child(1){width:7.2em;white-space:nowrap}
-table.band-results th:nth-child(2),table.band-results td:nth-child(2){width:6.5em;white-space:nowrap}
-table.band-results th:nth-child(3),table.band-results td:nth-child(3){width:8.5em}
-table.band-results th:nth-child(4),table.band-results td:nth-child(4){width:auto}
-table.band-results th:nth-child(5),table.band-results td:nth-child(5){width:9em;white-space:nowrap}
-table.band-results th:nth-child(6),table.band-results td:nth-child(6){width:4.8em}
-table.band-results th:nth-child(7),table.band-results td:nth-child(7){width:7.2em;white-space:nowrap}
-table.band-results th:nth-child(8),table.band-results td:nth-child(8){width:6.8em;white-space:nowrap}
-table.band-results th:nth-child(9),table.band-results td:nth-child(9){width:4.2em}
-table.band-results th:nth-child(10),table.band-results td:nth-child(10){width:6.5em}
-table.band-results th:nth-child(11),table.band-results td:nth-child(11){width:4.8em}
+table.band-results th:nth-child(1),table.band-results td:nth-child(1){width:6.8em;white-space:nowrap} /* 공고일 */
+table.band-results th:nth-child(2),table.band-results td:nth-child(2){width:6.2em;white-space:nowrap} /* 범위 */
+table.band-results th:nth-child(3),table.band-results td:nth-child(3){width:9.5em} /* 수요기관 */
+table.band-results th:nth-child(4),table.band-results td:nth-child(4){width:auto} /* 사업명 */
+table.band-results th:nth-child(5),table.band-results td:nth-child(5){width:7.2em;white-space:nowrap} /* 분야 */
+table.band-results th:nth-child(6),table.band-results td:nth-child(6){width:4.6em} /* 예산 */
+table.band-results th:nth-child(7),table.band-results td:nth-child(7){width:6.8em;white-space:nowrap} /* 개찰일 */
+table.band-results th:nth-child(8),table.band-results td:nth-child(8){width:6.4em;white-space:nowrap} /* 상태 */
+table.band-results th:nth-child(9),table.band-results td:nth-child(9){width:4em} /* 투찰 수 */
+table.band-results th:nth-child(10),table.band-results td:nth-child(10){width:6.2em;white-space:nowrap} /* 낙찰자 */
+table.band-results th:nth-child(11),table.band-results td:nth-child(11){width:4.6em} /* 낙찰가율 */
 table.band-results td a{text-decoration:none}table.band-results td a:hover{text-decoration:underline}
+/* Notice-style lists: keep date / short label cols from stretching like text */
+table.notices{min-width:720px}
+table.notices th:first-child,table.notices td:first-child{width:7em;white-space:nowrap}
 .empty{background:var(--surface);border:1px dashed var(--line);border-radius:8px;padding:16px;color:var(--muted)}
 .bars{display:grid;gap:7px;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px 18px}
 .bar{display:grid;grid-template-columns:72px minmax(0,1fr) 64px;gap:12px;align-items:center;font-size:13px;font-variant-numeric:tabular-nums}

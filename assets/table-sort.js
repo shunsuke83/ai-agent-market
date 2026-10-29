@@ -60,6 +60,22 @@
     return seen > 0 && numeric / seen >= 0.6;
   }
 
+  /** Display columns marked td.num — not dates/years that only sort numerically. */
+  function columnIsNumDisplay(rows, col) {
+    var marked = 0;
+    var seen = 0;
+    for (var i = 0; i < rows.length; i++) {
+      var cells = rows[i].cells;
+      if (!cells || col >= cells.length) continue;
+      var td = cells[col];
+      if (!cellText(td)) continue;
+      seen++;
+      if (td.classList.contains("num")) marked++;
+      if (seen >= 12) break;
+    }
+    return seen > 0 && marked / seen >= 0.6;
+  }
+
   function compare(a, b, dir) {
     if (a.empty && b.empty) return 0;
     if (a.empty) return 1;
@@ -112,9 +128,11 @@
       (function (col) {
         var th = ths[col];
         th.classList.add("sortable-th");
-        // Keep numeric headers right-aligned with td.num values
-        if (columnPrefersNum(bodyRows, col)) {
+        // Align headers only with marked numeric cells (not ISO dates / years)
+        if (columnIsNumDisplay(bodyRows, col)) {
           th.classList.add("num");
+        } else {
+          th.classList.remove("num");
         }
         th.tabIndex = 0;
         th.setAttribute("role", "columnheader");
