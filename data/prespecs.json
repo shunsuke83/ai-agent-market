@@ -1,11 +1,108 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-30T07:09:33Z",
+  "generated_at": "2026-10-30T08:31:19Z",
   "range": {
     "since": "2026-10-16",
     "until": "2026-10-30"
   },
   "prespecs": [
+    {
+      "prespec_no": "R26BD00293083",
+      "title": "[K-Health 국민의료 AI서비스] 거점병원 통합CDW 구축을 위한 임상 데이터 마이그레이션",
+      "org": "조선대학교병원",
+      "order_org": "조선대학교병원",
+      "registered_at": "2026-10-30 16:40",
+      "registered_date": "2026-10-30",
+      "opinion_close_at": "2026-11-04 23:59",
+      "asign_budget_eok": 0.0,
+      "scope": "AI SW 확대",
+      "fields": [
+        "의료·바이오 AI"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00293083&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00293083&fileType=BFDTL&fileSeq=2",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00293083&fileType=BFDTL&fileSeq=3"
+      ],
+      "biz": "servc",
+      "biz_div": "기술용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00293080",
+      "title": "[K-Health 국민의료 AI서비스] PACS 의료영상 일괄 추출 시스템",
+      "org": "조선대학교병원",
+      "order_org": "조선대학교병원",
+      "registered_at": "2026-10-30 16:38",
+      "registered_date": "2026-10-30",
+      "opinion_close_at": "2026-11-04 23:59",
+      "asign_budget_eok": 0.0,
+      "scope": "AI SW 확대",
+      "fields": [
+        "의료·바이오 AI",
+        "비전·영상"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00293080&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00293080&fileType=BFDTL&fileSeq=2",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00293080&fileType=BFDTL&fileSeq=3"
+      ],
+      "biz": "servc",
+      "biz_div": "기술용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00293033",
+      "title": "SKAI Eyes 디지털의료기기 소프트웨어 수명주기(IEC 62304) 및 사이버보안 컨설팅·시험 용역",
+      "org": "스카이엑스 주식회사",
+      "order_org": "스카이엑스 주식회사",
+      "registered_at": "2026-10-30 16:25",
+      "registered_date": "2026-10-30",
+      "opinion_close_at": "2026-11-04 18:00",
+      "asign_budget_eok": 1.0989,
+      "scope": "AI SW 확대",
+      "fields": [
+        "의료·바이오 AI",
+        "AX·전략"
+      ],
+      "nature": "ISP·전략",
+      "bid_nos": [
+        "R26BK01801863"
+      ],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00293033&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00293046",
+      "title": "서산시 AI 보이스봇 기반 민원응대 시스템 구축 사업",
+      "org": "충청남도 서산시",
+      "order_org": "충청남도 서산시",
+      "registered_at": "2026-10-30 16:14",
+      "registered_date": "2026-10-30",
+      "opinion_close_at": "2026-11-04 23:59",
+      "asign_budget_eok": 0.91,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00293046&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00293046&fileType=BFDTL&fileSeq=2"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
     {
       "prespec_no": "R26BD00293031",
       "title": "AI기반 가상환자 교육시스템 외 10종 구입",
