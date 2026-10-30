@@ -49,6 +49,13 @@ table.band-results td a{text-decoration:none}table.band-results td a:hover{text-
 table.band-results th:nth-child(2),table.band-results td:nth-child(2),
 table.band-results th:nth-child(5),table.band-results td:nth-child(5){display:none}
 }
+/* index.html 기회 목록: 3번째 열이 사업명 */
+table.home-list th:nth-child(3){width:42%}
+table.home-list td:first-child{white-space:nowrap}
+/* bids/*.html 사업 상세: label/value rows */
+table.kv{width:100%;table-layout:fixed}
+table.kv th{width:9.5em;text-align:left;color:var(--muted);font-weight:600;white-space:nowrap}
+table.kv td{overflow-wrap:anywhere}
 /* prespecs.html: 등록일·의견마감·상태·수요기관·사업명·범위·예산·규격서·본공고 */
 .wrap:has(table.prespecs){max-width:1200px}
 table.prespecs th,table.prespecs td{vertical-align:middle}

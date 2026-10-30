@@ -270,6 +270,8 @@ filters:
     - 생성형
     - LLM
     - 시스템
+  # index.html 오늘의 기회 목록: 이 금액 미만·장비 구매(prespec_goods_* 규칙)는 뺀다
+  home_min_eok: 1.0
   # band.html 후속 본사업 후보: ISP·전략 공고 lookback / floor / cap
   followup_days: 730
   followup_min_eok: 1.0
