@@ -49,7 +49,9 @@ OPENG_REBID = f"{SCSBID_BASE}/getOpengResultListInfoRebid"
 
 
 class G2BError(RuntimeError):
-    pass
+    def __init__(self, message: str, status_code: int | None = None):
+        super().__init__(message)
+        self.status_code = status_code
 
 
 def redact_secrets(text: str | None) -> str:
@@ -109,11 +111,16 @@ class G2BClient:
         sleep_s: float | None = None,
         timeout: float | None = None,
         max_attempts: int | None = None,
+        connect_timeout: float | None = None,
     ):
         self.key = key or service_key()
         self.sleep_s = _env_float("G2B_SLEEP", 0.15) if sleep_s is None else sleep_s
-        # Portal (apis.data.go.kr) often stalls from Actions — allow longer connect/read.
+        # Portal (apis.data.go.kr) often stalls from Actions — allow long reads, but fail
+        # connects fast so a dead portal doesn't burn minutes per attempt.
         self.timeout = _env_float("G2B_TIMEOUT", 90.0) if timeout is None else timeout
+        self.connect_timeout = (
+            _env_float("G2B_CONNECT_TIMEOUT", 15.0) if connect_timeout is None else connect_timeout
+        )
         self.max_attempts = (
             _env_int("G2B_HTTP_RETRIES", 8) if max_attempts is None else max_attempts
         )
@@ -127,6 +134,8 @@ class G2BClient:
         q.setdefault("numOfRows", 100)
         q.setdefault("pageNo", 1)
         last_err: Exception | None = None
+        rate_limited = False
+        timeout = (min(self.connect_timeout, self.timeout), self.timeout)
         attempts = max(1, self.max_attempts)
         for attempt in range(attempts):
             time.sleep(self.sleep_s if attempt == 0 else min(45.0, self.sleep_s * (2**attempt)))
@@ -137,28 +146,36 @@ class G2BClient:
 
                     other = urlencode({k: v for k, v in q.items()})
                     full = f"{url}?serviceKey={self.key}&{other}"
-                    resp = self.session.get(full, timeout=self.timeout)
+                    resp = self.session.get(full, timeout=timeout)
                 else:
                     q["serviceKey"] = self.key
-                    resp = self.session.get(url, params=q, timeout=self.timeout)
+                    resp = self.session.get(url, params=q, timeout=timeout)
             except requests.exceptions.RequestException as e:
                 # ConnectTimeout / ReadTimeout / ConnectionError — retry with backoff.
                 last_err = G2BError(f"transport error for {url}: {redact_secrets(str(e))}")
                 continue
             if resp.status_code == 429:
-                last_err = G2BError(f"429 Too Many Requests ({url})")
+                rate_limited = True
+                last_err = G2BError(f"429 Too Many Requests ({url})", status_code=429)
                 continue
             try:
                 resp.raise_for_status()
             except requests.HTTPError as e:
                 # Never keep raw response URL — it embeds serviceKey.
                 last_err = G2BError(
-                    f"HTTP {resp.status_code} for {url}: {redact_secrets(str(e))}"
+                    f"HTTP {resp.status_code} for {url}: {redact_secrets(str(e))}",
+                    status_code=resp.status_code,
                 )
                 if resp.status_code >= 500:
                     continue
                 raise last_err from None
-            data = resp.json()
+            try:
+                data = resp.json()
+            except ValueError:
+                # Overloaded gateway answers 200 with XML/HTML instead of JSON.
+                snippet = redact_secrets((resp.text or "")[:200])
+                last_err = G2BError(f"non-JSON response for {url}: {snippet}")
+                continue
             header = (
                 data.get("response", {}).get("header")
                 or data.get("OpenAPI_ServiceResponse", {}).get("cmmMsgHeader")
@@ -169,7 +186,10 @@ class G2BClient:
             if code and code not in ("00", "0", ""):
                 raise G2BError(f"API error {code}: {msg}")
             return data
-        raise G2BError(f"HTTP retries exhausted: {redact_secrets(str(last_err))}")
+        raise G2BError(
+            f"HTTP retries exhausted: {redact_secrets(str(last_err))}",
+            status_code=429 if rate_limited else getattr(last_err, "status_code", None),
+        )
 
     def _items(self, data: dict[str, Any]) -> list[dict[str, Any]]:
         body = data.get("response", {}).get("body") or {}

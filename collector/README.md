@@ -80,7 +80,7 @@ python -m g2b.collect render reports   # weekly + monthly + reports/index
 python -m g2b.collect enrich-bidders --include-bootstrap --core-only --limit 400
 
 # Optional tuning (Actions sets these too)
-# G2B_SLEEP=0.5 G2B_TIMEOUT=90 G2B_HTTP_RETRIES=8 G2B_429_COOLDOWN=120
+# G2B_SLEEP=0.5 G2B_CONNECT_TIMEOUT=15 G2B_TIMEOUT=90 G2B_HTTP_RETRIES=8 G2B_429_COOLDOWN=120
 ```
 
 ## 아직 안 하는 것
