@@ -1,6 +1,6 @@
 /**
  * Search, column filters and "show more" paging for result tables
- * (table.band-results). Works with table-sort.js: paging re-applies after a sort.
+ * (table.band-results, table.js-filter). Works with table-sort.js: paging re-applies after a sort.
  * Search, filters and sort live in the URL (?q=&status=&scope=&sort=) so a
  * link reopens the same view.
  */
@@ -76,19 +76,18 @@
     var statusCol = headerIndex(table, "상태");
     var scopeCol = headerIndex(table, "범위");
     var budgetCol = headerIndex(table, "예산(억)");
-    var searchCols = ["사업명", "수요기관", "낙찰자"]
-      .map(function (l) {
-        return headerIndex(table, l);
-      })
-      .filter(function (i) {
-        return i >= 0;
-      });
+    var searchLabels = ["사업명", "수요기관", "낙찰자"].filter(function (l) {
+      return headerIndex(table, l) >= 0;
+    });
+    var searchCols = searchLabels.map(function (l) {
+      return headerIndex(table, l);
+    });
 
     var tools = document.createElement("div");
     tools.className = "tbl-tools";
     var q = document.createElement("input");
     q.type = "search";
-    q.placeholder = "사업명·수요기관·낙찰자 검색";
+    q.placeholder = searchLabels.join("·") + " 검색";
     q.setAttribute("aria-label", "공고 검색");
     tools.appendChild(q);
     var statusSel = statusCol >= 0 ? buildSelect(rows, statusCol, "상태 전체") : null;
@@ -236,7 +235,7 @@
   }
 
   function init() {
-    var tables = document.querySelectorAll("table.band-results");
+    var tables = document.querySelectorAll("table.band-results, table.js-filter");
     for (var i = 0; i < tables.length; i++) enhance(tables[i], i === 0);
   }
 
