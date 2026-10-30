@@ -161,6 +161,50 @@ def normalize_bid_item(item: dict[str, Any], rules: dict[str, Any] | None = None
     }
 
 
+def _first(item: dict[str, Any], *keys: str) -> Any:
+    for k in keys:
+        v = item.get(k)
+        if v not in (None, ""):
+            return v
+    return None
+
+
+def normalize_prespec_item(
+    item: dict[str, Any], rules: dict[str, Any] | None = None
+) -> dict[str, Any] | None:
+    """Map a 사전규격 item → prespec record. Drops non-AI titles."""
+    rules = rules or load_keywords()
+    title = (_first(item, "prdctClsfcNoNm", "bfSpecRgstNm", "bsnsNm") or "").strip()
+    reg_no = _first(item, "bfSpecRgstNo")
+    if not title or not reg_no:
+        return None
+    labels = classify_title(title, rules)
+    if not labels["scope"]:
+        return None
+    files = [
+        item[k]
+        for k in sorted(item)
+        if re.fullmatch(r"specDocFileUrl\d+", k) and item.get(k)
+    ]
+    bid_nos = _first(item, "bidNtceNoList")
+    return {
+        "prespec_no": str(reg_no),
+        "title": title,
+        "org": _first(item, "rlDminsttNm", "orderInsttNm", "dminsttNm"),
+        "order_org": _first(item, "orderInsttNm"),
+        "registered_at": parse_api_dt_minutes(_first(item, "rcptDt", "rgstDt")),
+        "registered_date": parse_api_dt(_first(item, "rcptDt", "rgstDt")),
+        "opinion_close_at": parse_api_dt_minutes(_first(item, "opninRgstClseDt")),
+        "asign_budget_eok": always_won_to_eok(_first(item, "asignBdgtAmt")),
+        "scope": labels["scope"],
+        "fields": labels["fields"],
+        "nature": labels["nature"],
+        "bid_nos": [b.strip() for b in str(bid_nos).split(",") if b.strip()] if bid_nos else [],
+        "spec_files": files,
+        "biz": item.get("_biz"),
+    }
+
+
 def in_band(notice: dict[str, Any], rules: dict[str, Any] | None = None) -> bool:
     rules = rules or load_keywords()
     f = rules["filters"]
