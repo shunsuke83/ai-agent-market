@@ -1,12 +1,52 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-30T04:51:35Z",
+  "generated_at": "2026-10-30T05:18:14Z",
   "mode": "g2b_api",
   "range": {
     "since": "2026-10-16",
     "until": "2026-10-30"
   },
   "notices": [
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01801316",
+      "bid_ord": "000",
+      "notice_date": "2026-10-30",
+      "open_date": "2026-11-05",
+      "org": "한국광기술원",
+      "title": "로컬 LLM 환경 구축을 위한 AI 워크스테이션",
+      "scope": "생성형·Agent",
+      "fields": [
+        "생성형·LLM"
+      ],
+      "nature": "시스템 구축·고도화",
+      "budget_eok": 0.1935,
+      "presmpt_eok": 0.1759,
+      "contract_method": "수의계약",
+      "ntce_kind": "등록공고",
+      "biz": "thng",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01801316&bidPbancOrd=000"
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01801224",
+      "bid_ord": "000",
+      "notice_date": "2026-10-30",
+      "open_date": "2026-11-10",
+      "org": "한국인터넷진흥원",
+      "title": "지능형 포렌식센터 고성능 연산용워크스테이션 구매",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "budget_eok": 0.495,
+      "presmpt_eok": 0.45,
+      "contract_method": "제한경쟁",
+      "ntce_kind": "등록공고",
+      "biz": "thng",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01801224&bidPbancOrd=000"
+    },
     {
       "source": "g2b_api",
       "bid_no": "R26BK01801172",
@@ -2562,7 +2602,12 @@
       "ntce_kind": "등록공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01794057&bidPbancOrd=000",
-      "award_lookup_at": "2026-10-30"
+      "award_lookup_at": "2026-10-30",
+      "winner": "어드민",
+      "bid_count": 1,
+      "award_amount_eok": 0.98,
+      "win_rate_pct": 100.0,
+      "status": "낙찰"
     },
     {
       "bid_no": "R26BK01794006",
@@ -104555,38 +104600,29 @@
     }
   ],
   "stats": {
-    "raw": 485,
-    "classified": 481,
-    "stored": 1536,
+    "raw": 487,
+    "classified": 483,
+    "stored": 1538,
     "band": 474,
-    "with_winner": 531,
+    "with_winner": 532,
     "awards": {
-      "fetched": 7289,
-      "updated": 2
+      "fetched": 7331,
+      "updated": 1
     },
     "scope": {
-      "생성형·Agent": 175,
-      "AI SW 확대": 1361
-    },
-    "awards_enrich": {
-      "range": {
-        "since": "2026-09-30",
-        "until": "2026-10-30"
-      },
-      "fetched": 13692,
-      "updated": 5,
-      "lookups": 80
+      "생성형·Agent": 176,
+      "AI SW 확대": 1362
     },
     "with_bidders": 511,
     "bidders_enrich": {
-      "targets": 1,
-      "fetched": 1,
-      "updated": 1,
+      "targets": 0,
+      "fetched": 0,
+      "updated": 0,
       "empty": 0,
       "skipped": 0,
       "bootstrap_upserts": 0
     },
     "budget_sanitized": 0
   },
-  "reclassified_at": "2026-10-30T04:47:17Z"
+  "reclassified_at": "2026-10-30T05:17:41Z"
 }
