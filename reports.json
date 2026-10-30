@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-30T18:19:33.386934+09:00",
+  "generated_at": "2026-10-31T05:05:48.552815+09:00",
   "weekly": [
     {
       "year": 2026,
@@ -25,9 +25,9 @@
       "budget_sum": 1456.9,
       "large_count": 24,
       "isp_count": 37,
-      "in_progress": true,
+      "in_progress": false,
       "start": "2026-10-01",
-      "end": "2026-10-30"
+      "end": "2026-10-31"
     }
   ],
   "core_natures": [

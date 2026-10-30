@@ -1,8 +1,8 @@
 {
   "stages": {
     "collect": {
-      "last_attempt_at": "2026-10-30T09:19:19Z",
-      "last_outcome": "success",
+      "last_attempt_at": "2026-10-30T20:05:35Z",
+      "last_outcome": "failure",
       "last_success_at": "2026-10-30T09:19:19Z"
     },
     "awards": {
@@ -16,8 +16,8 @@
       "last_success_at": "2026-10-30T09:19:19Z"
     },
     "prespecs": {
-      "last_attempt_at": "2026-10-30T09:19:19Z",
-      "last_outcome": "success",
+      "last_attempt_at": "2026-10-30T20:05:35Z",
+      "last_outcome": "failure",
       "last_success_at": "2026-10-30T09:19:19Z"
     },
     "firms": {
@@ -26,5 +26,5 @@
       "last_success_at": "2026-10-30T09:19:19Z"
     }
   },
-  "run_id": "41031712649"
+  "run_id": "41120247580"
 }
