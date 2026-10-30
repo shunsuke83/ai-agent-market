@@ -113,13 +113,33 @@ def normalize_corp_item(item: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+_PROVINCE_SUFFIX = ("특별자치도", "특별자치시", "특별시", "광역시", "도")
+_PROVINCE_SHORT = {"충청북도": "충북", "충청남도": "충남", "전라북도": "전북", "전라남도": "전남",
+                   "경상북도": "경북", "경상남도": "경남", "전북특별자치도": "전북"}
+
+
+def short_region(region: str | None) -> str:
+    """'서울특별시 영등포구 당산동3가' → '서울 영등포구'."""
+    parts = str(region or "").split()
+    if not parts:
+        return ""
+    head = _PROVINCE_SHORT.get(parts[0])
+    if head is None:
+        head = parts[0]
+        for suf in _PROVINCE_SUFFIX:
+            if head.endswith(suf) and len(head) > len(suf) + 1:
+                head = head[: -len(suf)]
+                break
+    return " ".join([head, *parts[1:2]])
+
+
 def firm_profile_text(firm: dict[str, Any] | None) -> str:
-    """'서울 · 종업원 194명 · 개업 1999' from the 조달업체 기본정보; '' when not fetched."""
+    """'서울 서초구 · 종업원 194명 · 개업 1999' from the 조달업체 기본정보; '' when not fetched."""
     if not firm:
         return ""
     parts = []
     if firm.get("region"):
-        parts.append(str(firm["region"]))
+        parts.append(short_region(firm["region"]))
     if firm.get("employees"):
         parts.append(f"종업원 {firm['employees']:,}명")
     if firm.get("opened"):
