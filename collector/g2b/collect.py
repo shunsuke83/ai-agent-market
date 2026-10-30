@@ -9,7 +9,7 @@ from datetime import date, datetime, timedelta
 from pathlib import Path
 from typing import Any
 
-from .classify import load_keywords
+from .classify import classify_title, load_keywords
 from .extract_html import bootstrap_all
 from .normalize import (
     apply_awards_to_notices,
@@ -241,7 +241,7 @@ def cmd_enrich_awards(args: argparse.Namespace) -> int:
 def cmd_collect_prespecs(args: argparse.Namespace) -> int:
     """사전규격 (pre-specification) for AI titles → data/prespecs.json."""
     from .client import G2BClient, G2BError
-    from .normalize import normalize_prespec_item
+    from .normalize import normalize_prespec_item, prespec_excluded
 
     end = _parse_date(args.until) if args.until else date.today()
     start = end - timedelta(days=args.days)
@@ -262,6 +262,14 @@ def cmd_collect_prespecs(args: argparse.Namespace) -> int:
     by_no = {p["prespec_no"]: p for p in prev.get("prespecs") or []}
     for r in rows:
         by_no[r["prespec_no"]] = {**by_no.get(r["prespec_no"], {}), **r}
+    before = len(by_no)
+    for p in by_no.values():
+        p.update(classify_title(p.get("title") or "", rules))
+    by_no = {
+        k: p for k, p in by_no.items() if p["scope"] and not prespec_excluded(p, rules)
+    }
+    if before != len(by_no):
+        print(f"Dropped {before - len(by_no)} stored prespecs by current rules")
     merged = sorted(by_no.values(), key=lambda p: p.get("registered_at") or "", reverse=True)
     payload = {
         "schema_version": 1,
@@ -604,10 +612,15 @@ def cmd_reclassify(args: argparse.Namespace) -> int:
         after = (n.get("scope"), tuple(n.get("fields") or []), n.get("nature"))
         if before != after:
             changed += 1
+    dropped = [n for n in notices if not n.get("scope")]
+    notices = [n for n in notices if n.get("scope")]
+    for n in dropped[:20]:
+        print(f"  drop (no AI scope): {n.get('title')}")
     raw["notices"] = notices
     raw["reclassified_at"] = utc_now_iso()
     path.write_text(json.dumps(raw, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(json.dumps({"path": str(path), "notices": len(notices), "changed": changed}, ensure_ascii=False))
+    print(json.dumps({"path": str(path), "notices": len(notices), "changed": changed,
+                      "dropped": len(dropped)}, ensure_ascii=False))
     return 0
 
 

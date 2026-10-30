@@ -62,6 +62,31 @@ def test_prespec_keeps_ai_titles_with_files_and_linked_bids():
     assert normalize_prespec_item({"bfSpecRgstNo": "X", "prdctClsfcNoNm": "청사 청소용역"}) is None
 
 
+def test_latin_ai_keyword_skips_embedded_words():
+    from g2b.classify import classify_scope
+
+    for title in ("#1Block 가스터빈 Air Intake Filter 제작구매", "2026년 KAIST 안전관리통합시스템 유지관리",
+                  "ANSYS Maxwell 라이센스", "자동 염색기(Automated Slide Stainer)"):
+        assert classify_scope(title) is None, title
+    for title in ("AI기반 챗봇서비스 도입", "SW 3자단가(DocuRAG 1.0.0)", "VIXAI-SMART v4.0 유지관리",
+                  "AIOps 서비스 인프라", "SH-AI포털 개발"):
+        assert classify_scope(title), title
+
+
+def test_prespec_drops_hardware_goods_and_events():
+    base = {"bfSpecRgstNo": "R1", "rcptDt": "2026-10-30 10:00:00", "_biz": "thng"}
+    hw = normalize_prespec_item({**base, "prdctClsfcNoNm": "생성형 AI 플랫폼 기반 GPU 서버 구매"})
+    sw = normalize_prespec_item({**base, "prdctClsfcNoNm": "AI 데이터센터 GPU 자원 관리 소프트웨어 구매"})
+    flagged = normalize_prespec_item(
+        {**base, "prdctClsfcNoNm": "AI/HPC 클러스터용 GPU 가속기", "swBizObjYn": "Y"}
+    )
+    camp = normalize_prespec_item(
+        {**base, "_biz": "servc", "prdctClsfcNoNm": "AI Trend Marketing 글로벌 창업캠프 운영 용역"}
+    )
+    assert hw is None and camp is None
+    assert sw is not None and flagged is not None
+
+
 def test_bidders_do_not_overwrite_failed_status():
     n = apply_bidders_to_notice(
         {"bid_no": "X", "status": "유찰"}, [{"prcbdrNm": "알파", "opengRank": "1"}]

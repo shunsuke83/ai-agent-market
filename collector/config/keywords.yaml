@@ -46,6 +46,12 @@ scope:
       - 컴퓨터비전
       - 머신비전
       - 에이전트
+      # Latin keywords match only as whole words (no Air/KAIST/Maxwell); list compounds here.
+      - AIOps
+      - AIDT
+      - AXDX
+      - AID 전환
+      - AID전환
 
 fields:
   생성형·LLM:
@@ -172,6 +178,19 @@ nature:
     - 위탁
     - 워크숍
     - 해커톤
+    - 경진대회
+    - 챌린지 대회
+    - 컨퍼런스
+    - 세미나
+    - 포럼
+    - 간담회
+    - 캠프
+    - 연수
+    - 인턴십
+    - 벤치마킹
+    - 아카데미
+    - 박람회
+    - 전시
   시스템 구축·고도화:
     - 구축
     - 고도화
@@ -214,6 +233,43 @@ filters:
     - 고도화
     - 시스템
     - 플랫폼
+  # 사전규격 물품(thng): SW사업 대상(swBizObjYn=Y)이거나 SW 납품이 분명할 때만 남긴다.
+  # sw → 항상 유지, hardware → 제외, keep → 하드웨어 단어가 없을 때만 유지.
+  # 용역은 band_exclude_* 규칙을 그대로 쓴다.
+  prespec_goods_sw_title:
+    - 소프트웨어
+    - SW
+    - S/W
+    - 라이선스
+    - 라이센스
+    - 사용권
+    - 구독
+    - ChatGPT
+  prespec_goods_hardware_title:
+    - GPU
+    - 서버
+    - Server
+    - 스토리지
+    - 장비
+    - 장치
+    - 기자재
+    - 센서
+    - 모듈
+    - 인버터
+    - 워크스테이션
+    - 하드웨어
+    - H/W
+    - PC
+    - 로봇
+    - 차량
+  prespec_goods_keep_title:
+    - 솔루션
+    - 플랫폼
+    - 프로그램
+    - 챗봇
+    - 생성형
+    - LLM
+    - 시스템
   # band.html 후속 본사업 후보: ISP·전략 공고 lookback / floor / cap
   followup_days: 730
   followup_min_eok: 1.0

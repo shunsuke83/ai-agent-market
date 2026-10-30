@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import re
+from functools import lru_cache
 from pathlib import Path
 from typing import Any
 
@@ -14,9 +16,24 @@ def load_keywords(path: Path | None = None) -> dict[str, Any]:
         return yaml.safe_load(f)
 
 
+_ASCII_WORD = re.compile(r"[A-Za-z0-9/]+")
+
+
+@lru_cache(maxsize=512)
+def _patterns(keyword: str) -> tuple[re.Pattern[str], ...]:
+    # Latin keywords match as whole words so "AI" skips Air, KAIST, Maxwell, Stainer.
+    # An upper-case keyword may also end a product name (DocuRAG, VIXAI-SMART).
+    k = re.escape(keyword)
+    if not _ASCII_WORD.fullmatch(keyword):
+        return (re.compile(k, re.IGNORECASE),)
+    pats = [re.compile(rf"(?<![A-Za-z]){k}(?![A-Za-z])", re.IGNORECASE)]
+    if keyword.isupper():
+        pats.append(re.compile(rf"{k}(?![A-Za-z])"))
+    return tuple(pats)
+
+
 def _has_any(title: str, keywords: list[str]) -> bool:
-    t = title.casefold()
-    return any(k.casefold() in t for k in keywords)
+    return any(p.search(title) for k in keywords for p in _patterns(k))
 
 
 def classify_scope(title: str, rules: dict[str, Any] | None = None) -> str | None:

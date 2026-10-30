@@ -4,7 +4,7 @@ import re
 from datetime import datetime
 from typing import Any
 
-from .classify import classify_title, load_keywords
+from .classify import _has_any, classify_title, load_keywords
 
 
 def parse_api_dt(value: str | None) -> str | None:
@@ -187,7 +187,8 @@ def normalize_prespec_item(
         if re.fullmatch(r"specDocFileUrl\d+", k) and item.get(k)
     ]
     bid_nos = _first(item, "bidNtceNoList")
-    return {
+    sw = item.get("swBizObjYn")
+    record = {
         "prespec_no": str(reg_no),
         "title": title,
         "org": _first(item, "rlDminsttNm", "orderInsttNm", "dminsttNm"),
@@ -202,7 +203,26 @@ def normalize_prespec_item(
         "bid_nos": [b.strip() for b in str(bid_nos).split(",") if b.strip()] if bid_nos else [],
         "spec_files": files,
         "biz": item.get("_biz"),
+        "biz_div": item.get("bsnsDivNm"),
+        "sw_biz": sw == "Y" if sw in ("Y", "N") else None,
     }
+    return None if prespec_excluded(record, rules) else record
+
+
+def prespec_excluded(prespec: dict[str, Any], rules: dict[str, Any] | None = None) -> bool:
+    """본공고 band 제외 규칙 + 물품은 SW 납품만 남긴다."""
+    rules = rules or load_keywords()
+    f = rules["filters"]
+    if band_excluded(prespec, rules):
+        return True
+    if prespec.get("biz") != "thng" or prespec.get("sw_biz"):
+        return False
+    title = prespec.get("title") or ""
+    if _has_any(title, f.get("prespec_goods_sw_title") or []):
+        return False
+    if _has_any(title, f.get("prespec_goods_hardware_title") or []):
+        return True
+    return not _has_any(title, f.get("prespec_goods_keep_title") or [])
 
 
 def in_band(notice: dict[str, Any], rules: dict[str, Any] | None = None) -> bool:
