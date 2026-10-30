@@ -1,11 +1,34 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-30T08:58:07Z",
+  "generated_at": "2026-10-30T09:14:54Z",
   "range": {
     "since": "2026-10-16",
     "until": "2026-10-30"
   },
   "prespecs": [
+    {
+      "prespec_no": "R26BD00293182",
+      "title": "(긴급)2027년 서울 차세대 지능형교통시스템(C-ITS) 운영 및 유지관리",
+      "org": "서울특별시",
+      "order_org": "서울특별시",
+      "registered_at": "2026-10-30 18:00",
+      "registered_date": "2026-10-30",
+      "opinion_close_at": "2026-11-02 23:59",
+      "asign_budget_eok": 24.6428,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "운영·유지보수",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00293182&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00293182&fileType=BFDTL&fileSeq=2"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
     {
       "prespec_no": "R26BD00293155",
       "title": "성병 3종 고감도 자가진단용 Deep-LFA 플랫폼 및 AI 비전 판독 기술 IP-R&D 고도화 전략 수립 용역",
@@ -1401,7 +1424,9 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01802150"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00289804&fileType=BFDTL&fileSeq=1"
       ],
