@@ -48,6 +48,7 @@ OPENG_COMPT = f"{SCSBID_BASE}/getOpengResultListInfoOpengCompt"
 
 # 사전규격 (data.go.kr 15129437) — 입찰공고 전 규격 공개. 별도 활용신청 필요.
 PRESPEC_BASE = "https://apis.data.go.kr/1230000/ao/HrcspSsstndrdInfoService"
+CORP_BASIC = "https://apis.data.go.kr/1230000/ao/UsrInfoService02/getPrcrmntCorpBasicInfo02"
 PRESPEC_OPS = {
     "servc": f"{PRESPEC_BASE}/getPublicPrcureThngInfoServc",
     "thng": f"{PRESPEC_BASE}/getPublicPrcureThngInfoThng",
@@ -274,6 +275,25 @@ class G2BClient:
                     item["_biz"] = biz
                     out.append(item)
         return out
+
+    def fetch_corp_basic(self, bizno: str) -> dict[str, Any] | None:
+        """조달업체 기본정보 by 사업자번호. Docs disagree on inqryDiv (1 vs 3), so try both."""
+        errors: list[G2BError] = []
+        for div in ("3", "1"):
+            try:
+                data = self._get(CORP_BASIC, {"inqryDiv": div, "bizno": bizno, "numOfRows": 10})
+            except G2BError as e:
+                if e.status_code in (401, 403):
+                    raise
+                errors.append(e)
+                continue
+            for item in self._items(data):
+                digits = "".join(ch for ch in str(item.get("bizno") or "") if ch.isdigit())
+                if digits == bizno:
+                    return dict(item)
+        if len(errors) == 2:
+            raise errors[-1]
+        return None
 
     def search_bids_ai(
         self,

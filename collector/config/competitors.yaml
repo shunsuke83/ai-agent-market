@@ -1,114 +1,135 @@
 # Seed list from competitors.html (profiles are editorial; bids/awards refreshed by collector).
+# bizno pins each firm to its 사업자등록번호 (from OpengCompt bidders); aliases are only the
+# fallback for award rows without a bidder list.
 competitors:
 - name: 코난테크놀로지
+  bizno: '2298137316'
   type: 구축형 플랫폼 상장 3강
   own_model: 자체 LLM
   procurement: GS 1등급(RAG-X)
   aliases:
   - 코난테크놀로지
 - name: 와이즈넛
+  bizno: '2118698485'
   type: 구축형 플랫폼 상장 3강
   own_model: 에이전트 특화 LLM
   procurement: GS 1등급 2건, 디지털서비스몰 등록
   aliases:
   - 와이즈넛
 - name: 마인드로직
+  bizno: '3318101353'
   type: 구독·SaaS형 (교육·지자체)
   own_model: 없음(멀티 LLM)
   procurement: CSAP 환경 운영(보도)
   aliases:
   - 마인드로직
 - name: 페르소나에이아이
+  bizno: '6968600654'
   type: 공공 AI 구축 전문 중소기업
   own_model: 자체(STT·sLLM)
   procurement: TTA V&V
   aliases:
   - 페르소나에이아이
 - name: 클라이온
+  bizno: '6308702251'
   type: 공공 AI 구축 전문 중소기업
   own_model: 없음
   procurement: 미확인
   aliases:
   - 클라이온
 - name: 솔트룩스
+  bizno: '1028113061'
   type: 구축형 플랫폼 상장 3강
   own_model: 자체 LLM(LUXIA)
   procurement: GS 1등급 2건
   aliases:
   - 솔트룩스
 - name: 아이브릭스
+  bizno: '4638700328'
   type: 공공 AI 구축 전문 중소기업
   own_model: 자체 sLLM
   procurement: 미확인
   aliases:
   - 아이브릭스
 - name: 상상력집단
+  bizno: '1708702633'
   type: 구독·SaaS형 (교육·지자체)
   own_model: 없음
   procurement: AI바우처 공급기업
   aliases:
   - 상상력집단
 - name: 퍼블릭에이아이
+  bizno: '7248101517'
   type: 공공 AI 구축 전문 중소기업
   own_model: 미확인
   procurement: GS 1등급
   aliases:
   - 퍼블릭에이아이
 - name: 이스트소프트
+  bizno: '2298103214'
   type: 구독·SaaS형 (교육·지자체)
   own_model: 자체(앨런)
   procurement: 미확인
   aliases:
   - 이스트소프트
 - name: 리스트
+  bizno: '1078785562'
   type: 공공 AI 구축 전문 중소기업
   own_model: 없음
   procurement: GS 1등급(MESwiser)
   aliases:
   - 리스트
 - name: 인핸스
+  bizno: '1658602221'
   type: 신흥 투자형 에이전트 스타트업
   own_model: 액션 모델
   procurement: 미확인
   aliases:
   - 인핸스
 - name: 포티투마루
+  bizno: '5628800151'
   type: 컨소시엄·부품 공급형
   own_model: 자체 경량 LLM
   procurement: AI 신뢰성 인증(CAT), 인공지능 제품 확인제(2026.9)
   aliases:
   - 포티투마루
 - name: 클라비
+  bizno: '5868802378'
   type: 공공 AI 구축 전문 중소기업
   own_model: 없음(멀티 LLM)
   procurement: 네이버클라우드 프리미엄 MSP, GS 인증 진행 중
   aliases:
   - 클라비
 - name: 엠큐닉
+  bizno: '4508800071'
   type: 공공 AI 구축 전문 중소기업
   own_model: 도메인 sLLM 구축
   procurement: GS 1등급(빅데이터시스템 등), 이노비즈
   aliases:
   - 엠큐닉
 - name: 더아이엠씨
+  bizno: '5028172988'
   type: 공공 AI 구축 전문 중소기업
   own_model: 자체 sLLM(주장)
   procurement: 미확인
   aliases:
   - 더아이엠씨
 - name: 그리드원
+  bizno: '3148173245'
   type: 공공 AI 구축 전문 중소기업
   own_model: 자체 경량 LLM(주장)
   procurement: 미확인
   aliases:
   - 그리드원
 - name: 바이브컴퍼니
+  bizno: '1208608334'
   type: 컨소시엄·부품 공급형
   own_model: 자체 한국어 LLM(주장)
   procurement: GS 1등급 2건
   aliases:
   - 바이브컴퍼니
 - name: 올거나이즈
+  bizno: '7338101035'
   type: 신흥 투자형 에이전트 스타트업
   own_model: 경량 특화 모델
   procurement: GS 1등급, 디지털서비스몰(2026.6)
@@ -116,12 +137,14 @@ competitors:
   - 올거나이즈
   - 올거나이즈코리아
 - name: 애자일소다
+  bizno: '7898700079'
   type: 신흥 투자형 에이전트 스타트업
   own_model: 미확인
   procurement: 미확인
   aliases:
   - 애자일소다
 - name: 타임리(업스테이지)
+  bizno: '2298801044'
   type: 구독·SaaS형 (교육·지자체)
   own_model: 솔라 탑재 예정
   procurement: 미확인
@@ -129,12 +152,14 @@ competitors:
   - 타임리(업스테이지)
   - 타임리
 - name: 사이오닉에이아이
+  bizno: '2458602885'
   type: 신흥 투자형 에이전트 스타트업
   own_model: 산업 특화 sLLM 개발 중
   procurement: 미확인
   aliases:
   - 사이오닉에이아이
 - name: 사이냅소프트
+  bizno: '2148664984'
   type: 컨소시엄·부품 공급형
   own_model: 자체(주장)·하이퍼클로바X 연동
   procurement: GS 1등급 2건, CSAP(뷰어), 디지털서비스몰(뷰어)
