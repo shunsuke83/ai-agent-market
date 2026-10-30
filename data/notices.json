@@ -380,7 +380,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": null,
+      "nature": "ISP·전략",
       "budget_eok": 1.2,
       "presmpt_eok": 1.0909,
       "contract_method": "제한경쟁",
@@ -420,7 +420,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": null,
+      "nature": "연구·교육·행사",
       "budget_eok": 0.9102,
       "presmpt_eok": 0.8275,
       "contract_method": "제한경쟁",
@@ -1275,7 +1275,7 @@
       "fields": [
         "AI 에이전트"
       ],
-      "nature": "시스템 구축·고도화",
+      "nature": "연구·교육·행사",
       "budget_eok": 1.0,
       "presmpt_eok": 0.9091,
       "contract_method": "제한경쟁",
@@ -1874,7 +1874,7 @@
       "fields": [
         "생성형·LLM"
       ],
-      "nature": null,
+      "nature": "연구·교육·행사",
       "budget_eok": 0.3,
       "presmpt_eok": 0.2727,
       "contract_method": "제한경쟁",
@@ -1954,7 +1954,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": "시스템 구축·고도화",
+      "nature": "연구·교육·행사",
       "budget_eok": 1.54,
       "presmpt_eok": 1.4,
       "contract_method": "일반경쟁",
@@ -2537,7 +2537,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": null,
+      "nature": "연구·교육·행사",
       "budget_eok": 8.5677,
       "presmpt_eok": 7.7273,
       "contract_method": "일반경쟁",
@@ -3383,7 +3383,7 @@
       "fields": [
         "AI 인프라"
       ],
-      "nature": "시스템 구축·고도화",
+      "nature": "인프라",
       "budget_eok": 13.2,
       "presmpt_eok": 12.0,
       "contract_method": "제한경쟁",
@@ -3761,7 +3761,7 @@
       "fields": [
         "비전·영상"
       ],
-      "nature": null,
+      "nature": "인프라",
       "budget_eok": 0.4843,
       "presmpt_eok": 0.4402,
       "contract_method": "수의계약",
@@ -48939,7 +48939,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": "시스템 구축·고도화",
+      "nature": "ISP·전략",
       "budget_eok": 0.5,
       "presmpt_eok": 0.4545,
       "contract_method": "제한경쟁",
@@ -51980,7 +51980,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": null,
+      "nature": "연구·교육·행사",
       "budget_eok": 0.2998,
       "presmpt_eok": 0.2725,
       "contract_method": "제한경쟁",
@@ -52996,7 +52996,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": "시스템 구축·고도화",
+      "nature": "ISP·전략",
       "budget_eok": 0.5,
       "presmpt_eok": 0.4545,
       "contract_method": "제한경쟁",
@@ -54600,7 +54600,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": "시스템 구축·고도화",
+      "nature": "연구·교육·행사",
       "budget_eok": 1.54,
       "presmpt_eok": 1.4,
       "contract_method": "제한경쟁",
@@ -55908,7 +55908,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": null,
+      "nature": "연구·교육·행사",
       "budget_eok": 0.2,
       "presmpt_eok": 0.18,
       "contract_method": "일반경쟁",
@@ -60039,7 +60039,7 @@
       "fields": [
         "생성형·LLM"
       ],
-      "nature": null,
+      "nature": "연구·교육·행사",
       "budget_eok": 0.5,
       "presmpt_eok": 0.45,
       "contract_method": "일반경쟁",
@@ -62930,7 +62930,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": "시스템 구축·고도화",
+      "nature": "인프라",
       "budget_eok": 0.6,
       "presmpt_eok": 0.55,
       "contract_method": "일반경쟁",
@@ -64310,7 +64310,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": "시스템 구축·고도화",
+      "nature": "연구·교육·행사",
       "budget_eok": 0.97,
       "presmpt_eok": 0.88,
       "contract_method": "제한경쟁",
@@ -64460,7 +64460,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": "시스템 구축·고도화",
+      "nature": "ISP·전략",
       "budget_eok": 0.5,
       "presmpt_eok": 0.45,
       "contract_method": "제한경쟁",
@@ -73725,7 +73725,7 @@
       "fields": [
         "AI 에이전트"
       ],
-      "nature": "시스템 구축·고도화",
+      "nature": "연구·교육·행사",
       "budget_eok": 1.0,
       "presmpt_eok": 0.91,
       "contract_method": "제한경쟁",
@@ -73889,7 +73889,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": "시스템 구축·고도화",
+      "nature": "인프라",
       "budget_eok": 0.65,
       "presmpt_eok": 0.59,
       "contract_method": "수의계약",
@@ -74313,7 +74313,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": null,
+      "nature": "연구·교육·행사",
       "budget_eok": 0.5,
       "presmpt_eok": 0.45,
       "contract_method": "제한경쟁",
@@ -78070,7 +78070,7 @@
       "fields": [
         "데이터·예측"
       ],
-      "nature": "시스템 구축·고도화",
+      "nature": "연구·교육·행사",
       "budget_eok": 0.45,
       "presmpt_eok": 0.41,
       "contract_method": "제한경쟁",
@@ -78234,7 +78234,7 @@
       "fields": [
         "AX·전략"
       ],
-      "nature": null,
+      "nature": "연구·교육·행사",
       "budget_eok": 0.4,
       "presmpt_eok": 0.36,
       "contract_method": "일반경쟁",
@@ -84395,7 +84395,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": "연구·교육·행사",
+      "nature": "ISP·전략",
       "budget_eok": 0.4,
       "presmpt_eok": 0.36,
       "contract_method": "제한경쟁",
@@ -92247,7 +92247,7 @@
       "status": "낙찰",
       "source": "bootstrap",
       "scope": "AI SW 확대",
-      "nature": "연구·교육·행사",
+      "nature": "ISP·전략",
       "fields": [
         "AI 일반"
       ]
@@ -104349,5 +104349,6 @@
       "bootstrap_upserts": 0
     },
     "budget_sanitized": 0
-  }
+  },
+  "reclassified_at": "2026-10-30T04:36:29Z"
 }

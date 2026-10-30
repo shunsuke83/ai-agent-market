@@ -19,8 +19,7 @@ from .render import (
     _parse_date,
     _today_kst,
 )
-
-ASSET_VER = "20261029f"
+from .assets import ASSET_VER
 
 # 핵심 AI 사업 성격 (주간 「신규」·월간 「AI 사업」). 교육·장비·미분류는 기타.
 CORE_NATURES = frozenset(
@@ -736,8 +735,7 @@ def render_monthly_html(agg: dict[str, Any]) -> str:
             '<th>업체</th><th class="num">투찰 공고 수</th></tr></thead>'
             f"<tbody>{_bidder_rows(agg['bidders'])}</tbody></table></div>"
             '<p class="note">개찰일이 이번 달인 핵심 AI 공고(구축·ISP·구독·운영)의 '
-            "OpengCompt 투찰업체 목록 기준(목록 없는 공고는 낙찰·2순위만). "
-            "빈 업체명 제외.</p>"
+            "나라장터 개찰 결과의 투찰업체 목록 기준입니다(목록이 없는 공고는 낙찰·2순위 업체만 셉니다).</p>"
         )
     else:
         bid_sec = (

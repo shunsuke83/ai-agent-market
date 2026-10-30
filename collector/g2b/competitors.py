@@ -10,11 +10,11 @@ from typing import Any
 
 import yaml
 
+from .assets import stamp_asset_versions
 from .normalize import merge_by_bid
 from .render import _fmt_budget
 
 CONFIG = Path(__file__).resolve().parents[1] / "config" / "competitors.yaml"
-ASSET_VER = "20261029f"
 
 # Strip corporate suffixes / rank markers before alias match.
 _CORP_RE = re.compile(
@@ -440,12 +440,7 @@ def render_competitors_page(repo_root: Path) -> dict[str, Any]:
     for r in rows:
         text = update_competitor_detail(text, r)
 
-    text = re.sub(
-        r"assets/site\.css\?v=\d+[a-z]?",
-        f"assets/site.css?v={ASSET_VER}",
-        text,
-        count=1,
-    )
+    text = stamp_asset_versions(text)
     path.write_text(text, encoding="utf-8")
 
     matched = sum(1 for r in rows if r["live_wins"] > 0)

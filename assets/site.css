@@ -30,19 +30,32 @@ th.sortable-th.is-sorted{color:var(--fg)}
 th.sortable-th .sort-ind{display:inline-block;min-width:1em;margin-left:.28em;font-size:10px;line-height:1;color:var(--accent);opacity:0}
 th.sortable-th:hover .sort-ind,th.sortable-th:focus-visible .sort-ind{opacity:.45}
 th.sortable-th.is-sorted .sort-ind{opacity:1}
-/* band.html 공고별 결과 — short cols sized in em; text cols take the rest and wrap */
+/* band.html 공고별 결과 — fixed layout sizes from the <th> row (12px), so widths are in px.
+   Short cols are fixed; 사업명 takes the rest. Narrow screens drop secondary cols. */
+.wrap:has(table.band-results){max-width:1200px}
 table.band-results th,table.band-results td{vertical-align:middle}
-table.band-results th:nth-child(1),table.band-results td:nth-child(1),
-table.band-results th:nth-child(7),table.band-results td:nth-child(7){width:8.6em;white-space:nowrap} /* 공고일·개찰일 */
-table.band-results th:nth-child(2),table.band-results td:nth-child(2){width:5.8em} /* 범위 */
-table.band-results th:nth-child(3),table.band-results td:nth-child(3){width:7.5em} /* 수요기관 */
-table.band-results th:nth-child(5),table.band-results td:nth-child(5){width:7em} /* 분야 */
-table.band-results th:nth-child(6),table.band-results td:nth-child(6),
-table.band-results th:nth-child(9),table.band-results td:nth-child(9),
-table.band-results th:nth-child(11),table.band-results td:nth-child(11){width:4.2em;white-space:nowrap} /* 예산·투찰·가율 */
-table.band-results th:nth-child(8),table.band-results td:nth-child(8){width:5.8em} /* 상태 */
-table.band-results th:nth-child(10),table.band-results td:nth-child(10){width:5.8em} /* 낙찰자 */
+table.band-results th{white-space:normal;overflow-wrap:normal;word-break:keep-all;line-height:1.3}
+table.band-results th:nth-child(1),table.band-results th:nth-child(7){width:92px} /* 공고일·개찰일 */
+table.band-results td:nth-child(1),table.band-results td:nth-child(7){white-space:nowrap}
+table.band-results th:nth-child(2){width:72px} /* 범위 */
+table.band-results th:nth-child(3){width:100px} /* 수요기관 */
+table.band-results th:nth-child(5){width:84px} /* 분야 */
+table.band-results th:nth-child(6),table.band-results th:nth-child(11){width:62px} /* 예산·가율 */
+table.band-results th:nth-child(9){width:52px} /* 투찰 수 */
+table.band-results th:nth-child(8){width:74px} /* 상태 */
+table.band-results th:nth-child(10){width:90px} /* 낙찰자 */
 table.band-results td a{text-decoration:none}table.band-results td a:hover{text-decoration:underline}
+@media (max-width:1100px){
+table.band-results th:nth-child(2),table.band-results td:nth-child(2),
+table.band-results th:nth-child(5),table.band-results td:nth-child(5){display:none}
+}
+.tbl-tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 10px}
+.tbl-tools input,.tbl-tools select,.tbl-more{font:inherit;font-size:13px;color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:6px 10px}
+.tbl-tools input{flex:1 1 220px;min-width:0}
+.tbl-tools input:focus,.tbl-tools select:focus,.tbl-more:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.tbl-count{font-size:13px;color:var(--muted)}
+.tbl-more{display:block;width:100%;margin-top:8px;cursor:pointer;color:var(--accent)}
+.tbl-more:hover{border-color:var(--accent)}
 /* Notice lists: date col readable, other text wraps inside 100% table */
 table.notices th:first-child,table.notices td:first-child{width:8.6em;white-space:nowrap}
 .empty{background:var(--surface);border:1px dashed var(--line);border-radius:8px;padding:16px;color:var(--muted)}
@@ -64,6 +77,9 @@ table.rank th,table.rank td{white-space:normal;overflow-wrap:anywhere}
 table.rank th.num,table.rank td.num{white-space:nowrap;padding-left:6px}
 table.band-results th:nth-child(n),table.band-results td:nth-child(n),
 table.notices th:nth-child(n),table.notices td:nth-child(n){width:auto;white-space:normal}
+table.band-results th:nth-child(9),table.band-results td:nth-child(9),
+table.band-results th:nth-child(11),table.band-results td:nth-child(11){display:none}
+table.band-results th:nth-child(4){width:34%}
 table.band-results td.num,table.band-results th.num,
 table.notices td.num,table.notices th.num{white-space:nowrap}
 }

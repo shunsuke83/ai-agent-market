@@ -133,6 +133,8 @@ nature:
     - BPR
     - 정보화전략
     - 전략계획
+    - 전략 수립
+    - 전략수립
     - 컨설팅
     - 로드맵
     - 기획연구
@@ -155,8 +157,15 @@ nature:
     - NPU
     - 서버 구매
     - 장비 구매
+    - 물품 구매
+    - 구매 및 설치
+    - 구매설치
   연구·교육·행사:
     - 연구용역
+    - 연구 용역
+    - 조사 분석
+    - 조사·분석
+    - 실태조사
     - 교육
     - 행사
     - 공모전
@@ -185,6 +194,30 @@ filters:
   # Budget band used by band.html (억 원)
   band_min_eok: 8.0
   band_max_eok: 30.0
+  # band.html: not AI SW delivery work — kept in notices.json, dropped from the band
+  band_exclude_title:
+    - 감리
+    - PMO
+    - 사업관리
+    - 3자단가
+    - PMC
+    - 봉사단
+    - 신축공사
+    - 폐목재
+    - 폐기물
+  band_exclude_natures:
+    - 연구·교육·행사
+  # ...unless the title also says it builds something (교육지원시스템 구축 등)
+  band_keep_title:
+    - 구축
+    - 개발
+    - 고도화
+    - 시스템
+    - 플랫폼
+  # band.html 후속 본사업 후보: ISP·전략 공고 lookback / floor / cap
+  followup_days: 730
+  followup_min_eok: 1.0
+  followup_limit: 60
   # awards.html large awards threshold
   large_award_min_eok: 30.0
   # bid notice search start

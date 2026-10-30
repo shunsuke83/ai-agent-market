@@ -31,9 +31,9 @@ jobs:
           fi
           echo "Secret present (length ${#KEY})."
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
@@ -60,6 +60,23 @@ jobs:
         run: |
           echo "::warning::Collect timed out or failed talking to apis.data.go.kr."
           echo "Continuing with existing data/notices.json so enrich/render can still run."
+
+      - name: Reclassify notices with current keywords
+        run: python -m g2b.collect reclassify
+        working-directory: collector
+
+      # Opened notices past 60 days without a winner show as 개찰 확인 필요; look a
+      # bounded batch up by bid number each week. Shares Scsbid quota with OpengCompt.
+      - name: Backfill awards for opened notices
+        continue-on-error: true
+        env:
+          DATA_GO_KR_SERVICE_KEY: ${{ secrets.DATA_GO_KR_SERVICE_KEY }}
+          G2B_CONNECT_TIMEOUT: "15"
+          G2B_TIMEOUT: "90"
+          G2B_HTTP_RETRIES: "4"
+          G2B_SLEEP: "0.5"
+        run: python -m g2b.collect enrich-awards --days 30 --lookup-missing --lookup-limit 80
+        working-directory: collector
 
       - name: Enrich bidder rankings (OpengCompt)
         env:

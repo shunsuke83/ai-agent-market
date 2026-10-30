@@ -7,8 +7,9 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
-from .normalize import in_band, merge_by_bid, sort_notices
-from .classify import load_keywords
+from .assets import stamp_asset_versions
+from .normalize import band_excluded, in_band, merge_by_bid, sort_notices
+from .classify import classify_nature, load_keywords
 
 KST = timezone(timedelta(hours=9))
 
@@ -26,10 +27,16 @@ def _parse_date(s: str | None) -> date | None:
         return None
 
 
+# Outcomes read from 개찰/낙찰 data. Anything else stored (개찰 예정, 결과 등록 대기,
+# 개찰 확인 필요, 낙찰 미수집) is a date-relative guess and must be recomputed.
+_SOURCED_STATUSES = frozenset({"유찰", "1순위", "재공고됨"})
+
+
 def infer_status(notice: dict[str, Any], today: date | None = None) -> str:
-    if notice.get("status"):
-        return notice["status"]
-    if notice.get("winner"):
+    stored = notice.get("status")
+    if stored in _SOURCED_STATUSES:
+        return stored
+    if stored == "낙찰" or notice.get("winner"):
         return "낙찰"
     today = today or _today_kst()
     open_d = _parse_date(notice.get("open_date"))
@@ -191,11 +198,16 @@ def load_merged_band(
                 incoming.append(n)
 
     merged = sort_notices(merge_by_bid(existing, incoming))
-    # Ensure status filled for render
     today = _today_kst()
+    kept: list[dict[str, Any]] = []
     for n in merged:
+        if not n.get("nature"):
+            n["nature"] = classify_nature(n.get("title") or "", rules)
+        if band_excluded(n, rules):
+            continue
         n["status"] = infer_status(n, today)
-    return merged
+        kept.append(n)
+    return kept
 
 
 def _status_meta(notices: list[dict[str, Any]], today: date | None = None) -> str:
@@ -329,7 +341,187 @@ def update_stamp(html_text: str, day: date | None = None) -> str:
     return new
 
 
+# Name-based; first match wins. 중앙 before 지자체 so "경찰청 제주특별자치도경찰청" stays 중앙.
+ORG_TYPE_RULES: list[tuple[str, re.Pattern[str]]] = [
+    ("교육·대학", re.compile(r"대학|교육청|교육원|학교|교육학술|과학창의")),
+    (
+        "중앙행정·국방",
+        re.compile(
+            r"^(국방부|육군|해군|공군|해병대|국군|경찰청|해양경찰청)|사령부"
+            r"|^(?!한국)[가-힣]+부( |$)|^[가-힣]+처( |$)|^[가-힣]+청( |$)"
+            r"|위원회|국방|법원|재판소|검찰|감사원|국회"
+        ),
+    ),
+    (
+        "공기업·공단",
+        re.compile(r"공사$|공사 |공단|은행|기금|금고|공항|항만|발전|철도|공제회|보증"),
+    ),
+    (
+        "지자체",
+        re.compile(
+            r"특별시|광역시|특별자치|^[가-힣]+도$|^[가-힣]+도 |^[가-힣]+(시|군|구)( |$)"
+            r"|소방본부|상하수도"
+        ),
+    ),
+    (
+        "연구·진흥기관",
+        re.compile(r"연구|진흥|재단|테크노파크|정보원|평가원|센터|협회|본부|원$|과학기술|산학협력단"),
+    ),
+]
+
+
+def org_type(org: str | None) -> str:
+    o = (org or "").strip()
+    for label, pat in ORG_TYPE_RULES:
+        if pat.search(o):
+            return label
+    return "기타"
+
+
+def _quarter(d: str | None) -> str | None:
+    if not d or len(d) < 7:
+        return None
+    try:
+        month = int(d[5:7])
+    except ValueError:
+        return None
+    return f"{d[2:4]}-Q{(month - 1) // 3 + 1}"
+
+
+def quarter_counts(
+    notices: list[dict[str, Any]], today: date | None = None
+) -> tuple[list[tuple[str, int]], str]:
+    """(label, count) by 공고일 quarter; the running quarter is suffixed with '*'."""
+    from collections import Counter
+
+    today = today or _today_kst()
+    current = _quarter(today.isoformat()) or ""
+    counts = Counter(q for q in (_quarter(n.get("notice_date")) for n in notices) if q)
+    out = [
+        (f"{q}*" if q == current else q, c)
+        for q, c in sorted(counts.items())
+    ]
+    return out, current
+
+
+def _median(values: list[float]) -> float | None:
+    import statistics
+
+    return statistics.median(values) if values else None
+
+
+def _num_list(notices: list[dict[str, Any]], key: str) -> list[float]:
+    out: list[float] = []
+    for n in notices:
+        v = n.get(key)
+        if v in (None, ""):
+            continue
+        try:
+            out.append(float(v))
+        except (TypeError, ValueError):
+            continue
+    return out
+
+
+def replace_stat_card(html_text: str, label_html: str, value: str) -> str:
+    """Swap the value of the .stat card whose label equals label_html (already escaped)."""
+    pat = re.compile(
+        r'(<div class="stat"><div class="v">)[^<]*'
+        r'(</div><div class="l">' + re.escape(label_html) + r"</div></div>)"
+    )
+    new, n = pat.subn(rf"\g<1>{value}\g<2>", html_text, count=1)
+    if n != 1:
+        raise RuntimeError(f"Could not find stat card {label_html!r}")
+    return new
+
+
+def replace_note_after(html_text: str, anchor: str, note_html: str) -> str:
+    """Replace the first <p class="note"> that follows anchor."""
+    i = html_text.find(anchor)
+    if i < 0:
+        raise RuntimeError(f"Could not find anchor {anchor!r}")
+    m = re.compile(r'<p class="note">.*?</p>', re.S).search(html_text, i)
+    if not m:
+        raise RuntimeError(f"No note after {anchor!r}")
+    return html_text[: m.start()] + note_html + html_text[m.end() :]
+
+
+def band_winner_rollup(notices: list[dict[str, Any]]) -> list[tuple[str, int, float]]:
+    from collections import defaultdict
+
+    wins: dict[str, list[float]] = defaultdict(lambda: [0, 0.0])
+    for n in notices:
+        w = (n.get("winner") or "").strip()
+        if not w or infer_status(n) not in ("낙찰", "1순위"):
+            continue
+        wins[w][0] += 1
+        amt = _award_amount(n)
+        if amt is not None:
+            wins[w][1] += float(amt)
+    return sorted(
+        ((name, int(c), round(a, 1)) for name, (c, a) in wins.items()),
+        key=lambda x: (-x[1], -x[2], x[0]),
+    )
+
+
+def load_followup_candidates(
+    repo_root: Path, rules: dict[str, Any] | None = None, today: date | None = None
+) -> tuple[list[dict[str, Any]], int]:
+    """ISP·전략 공고 within followup_days, budget ≥ followup_min_eok, newest first."""
+    rules = rules or load_keywords()
+    f = rules["filters"]
+    today = today or _today_kst()
+    cutoff = (today - timedelta(days=int(f.get("followup_days", 730)))).isoformat()
+    min_eok = float(f.get("followup_min_eok", 1.0))
+    notices_path = repo_root / "data" / "notices.json"
+    if not notices_path.exists():
+        return [], 0
+    raw = json.loads(notices_path.read_text(encoding="utf-8"))
+    rows: list[dict[str, Any]] = []
+    for n in raw.get("notices") or []:
+        nature = n.get("nature") or classify_nature(n.get("title") or "", rules)
+        if nature != "ISP·전략":
+            continue
+        if (n.get("notice_date") or "") < cutoff:
+            continue
+        b = n.get("budget_eok")
+        if b in (None, "") or float(b) < min_eok:
+            continue
+        rows.append(n)
+    rows = sort_notices(merge_by_bid([], rows))
+    rows.sort(key=lambda n: n.get("notice_date") or "", reverse=True)
+    # 재공고·차수 변경은 같은 사업 — keep the newest notice per (기관, 사업명).
+    seen: set[tuple[str, str]] = set()
+    unique: list[dict[str, Any]] = []
+    for n in rows:
+        key = ((n.get("org") or "").strip(), re.sub(r"\s+", "", n.get("title") or ""))
+        if key in seen:
+            continue
+        seen.add(key)
+        unique.append(n)
+    rows = unique
+    total = len(rows)
+    return rows[: int(f.get("followup_limit", 60))], total
+
+
+def render_followup_row(n: dict[str, Any]) -> str:
+    return (
+        "<tr>"
+        f"<td>{html.escape(n.get('notice_date') or '')}</td>"
+        f"<td>{html.escape(n.get('org') or '')}</td>"
+        f'<td><a href="{_g2b_href(n)}" target="_blank" rel="noopener">'
+        f"{html.escape(n.get('title') or '')}</a></td>"
+        f'<td class="num">{_fmt_budget(n.get("budget_eok"))}</td>'
+        "</tr>"
+    )
+
+
 def render_band_page(repo_root: Path) -> dict[str, Any]:
+    from collections import Counter
+
+    from .reports import NATURE_LABELS
+
+    rules = load_keywords()
     notices = load_merged_band(repo_root)
     today = _today_kst()
     rows = "".join(render_notice_row(n, today) for n in notices)
@@ -342,16 +534,100 @@ def render_band_page(repo_root: Path) -> dict[str, Any]:
         float(n["budget_eok"]) for n in notices if n.get("budget_eok") is not None
     )
     text = update_band_notice_stat(text, len(notices), budget_sum)
+
+    med_bids = _median(_num_list(notices, "bid_count"))
+    if med_bids is not None:
+        text = replace_stat_card(text, "공고당 투찰 업체 (중앙값)", f"{med_bids:.1f}곳")
+    med_rate = _median(_num_list(notices, "win_rate_pct"))
+    if med_rate is not None:
+        text = replace_stat_card(text, "예산 대비 낙찰금액 (중앙값)", f"{med_rate:.1f}%")
+
+    quarters, current_q = quarter_counts(notices, today)
+    text = replace_section_bars(
+        text,
+        "분기별 공고 추이",
+        _bars_html(quarters).replace('<div class="bars wide">', '<div class="bars">')
+        + f'<p class="note">공고일 기준. {current_q}*는 진행 중인 분기라 갱신일까지 누계입니다. '
+        "2025년부터 기관 단위 생성형 AI 구축이 본격화했습니다.</p>",
+    )
+
+    org_counts = Counter(org_type(n.get("org")) for n in notices)
+    text = replace_section_bars(
+        text,
+        "발주 기관 유형",
+        _bars_html(sorted(org_counts.items(), key=lambda x: (-x[1], x[0]))),
+    )
     scope_counts, field_counts = scope_field_counts(notices)
     text = replace_section_bars(text, "사업 범위", _bars_html(scope_counts))
     text = replace_section_bars(text, "분야", _bars_html(field_counts))
-    # cache-bust CSS when we ship layout fixes
-    text = re.sub(
-        r"assets/site\.css\?v=\d+",
-        "assets/site.css?v=20261029",
-        text,
-        count=1,
+    nature_counts = Counter(
+        NATURE_LABELS.get(n.get("nature"), n.get("nature")) for n in notices
     )
+    text = replace_section_bars(
+        text,
+        "사업 성격",
+        _bars_html(sorted(nature_counts.items(), key=lambda x: (-x[1], x[0]))),
+    )
+
+    winners = band_winner_rollup(notices)
+    if winners:
+        text = replace_awards_table(
+            text,
+            h2="낙찰 업체",
+            rows_html="".join(render_top_winner_row(n, c, a) for n, c, a in winners[:20]),
+            table_class="rank",
+        )
+        n_won = sum(c for _, c, _ in winners)
+        top_name, top_c, _ = winners[0]
+        failed = sum(1 for n in notices if infer_status(n, today) == "유찰")
+        share = 100.0 * top_c / n_won
+        verdict = (
+            "이 구간에는 뚜렷한 지배 업체가 없습니다."
+            if share < 10
+            else f"상위 업체 비중이 {share:.0f}%로 높은 편입니다."
+        )
+        text = replace_note_after(
+            text,
+            "<h2>낙찰 업체</h2>",
+            f'<p class="note">낙찰자 확인 {n_won}건. 최다 낙찰은 {html.escape(top_name)} '
+            f"{top_c}건으로, {verdict} 유찰 {failed}건.</p>",
+        )
+
+    frequent = aggregate_frequent_bidders(
+        notices, min_bids=3, limit=20, build_only=False, rules=rules
+    )
+    if frequent:
+        text = replace_awards_table(
+            text,
+            h2="자주 투찰하는 업체",
+            rows_html="".join(render_frequent_bidder_row(*r) for r in frequent),
+            table_class="rank",
+        )
+
+    followup, followup_total = load_followup_candidates(repo_root, rules, today)
+    f = rules["filters"]
+    years = int(f.get("followup_days", 730)) // 365
+    min_eok = float(f.get("followup_min_eok", 1.0))
+    text = replace_awards_table_by_prefix(
+        text,
+        h2_prefix="후속 본사업 후보",
+        h2_out=f"후속 본사업 후보 (최근 {years}년 ISP·전략 공고, 예산 {min_eok:g}억 이상)",
+        rows_html="".join(render_followup_row(n) for n in followup),
+        table_class="notices",
+    )
+    shown_txt = (
+        f"조건에 맞는 {followup_total}건 중 최근 {len(followup)}건입니다."
+        if followup_total > len(followup)
+        else f"조건에 맞는 공고는 {followup_total}건입니다."
+    )
+    text = replace_note_after(
+        text,
+        "<h2>후속 본사업 후보",
+        '<p class="note">ISP를 마친 기관은 보통 1~2년 안에 본사업을 발주합니다. '
+        f"이 구간 영업의 선행 지표로 볼 수 있습니다. {shown_txt}</p>",
+    )
+
+    text = stamp_asset_versions(text)
     path.write_text(text, encoding="utf-8")
     return {
         "path": str(path),
@@ -359,6 +635,9 @@ def render_band_page(repo_root: Path) -> dict[str, Any]:
         "budget_sum_eok": round(budget_sum, 1),
         "scopes": dict(scope_counts),
         "fields_top": dict(field_counts[:5]),
+        "orgs": dict(org_counts),
+        "winners": len(winners),
+        "followup": {"shown": len(followup), "total": followup_total},
     }
 
 
@@ -367,13 +646,13 @@ def render_index_stamp(repo_root: Path, day: date | None = None) -> dict[str, An
     text = path.read_text(encoding="utf-8")
     day = day or _today_kst()
     text = update_stamp(text, day)
-    text = re.sub(
-        r"assets/site\.css\?v=\d+",
-        "assets/site.css?v=20261029",
-        text,
-        count=1,
-    )
+    text = stamp_asset_versions(text)
     path.write_text(text, encoding="utf-8")
+    # Hand-edited pages that no renderer owns still need fresh asset versions.
+    for extra in ("deliverables.html",):
+        p = repo_root / extra
+        if p.exists():
+            p.write_text(stamp_asset_versions(p.read_text(encoding="utf-8")), encoding="utf-8")
     return {"path": str(path), "stamp": day.isoformat()}
 
 
@@ -526,8 +805,7 @@ def load_award_pool(repo_root: Path) -> list[dict[str, Any]]:
     for n in rows:
         if not n.get("winner"):
             continue
-        st = n.get("status")
-        if st and st not in ("낙찰", "1순위"):
+        if infer_status(n) not in ("낙찰", "1순위"):
             continue
         row = {
             "bid_no": n.get("bid_no"),
@@ -915,12 +1193,7 @@ def render_awards_page(repo_root: Path) -> dict[str, Any]:
     # Stats: recompute from award pool + merged notices when we have winners
     text = update_awards_stats(text, repo_root, pool)
 
-    text = re.sub(
-        r"assets/site\.css\?v=\d+[a-z]?",
-        "assets/site.css?v=20261029f",
-        text,
-        count=1,
-    )
+    text = stamp_asset_versions(text)
     path.write_text(text, encoding="utf-8")
     return {
         "path": str(path),
