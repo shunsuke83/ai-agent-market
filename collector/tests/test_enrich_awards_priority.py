@@ -60,3 +60,21 @@ def test_lookup_skips_dead_notices_and_prefers_overdue(tmp_path, monkeypatch):
     saved = {n["bid_no"]: n for n in json.loads(out.read_text(encoding="utf-8"))["notices"]}
     assert saved["OVERDUE-BIG"]["award_lookup_at"] == date.today().isoformat()
     assert "award_lookup_at" not in saved["CANCELLED"]
+
+
+def test_range_fetch_failure_still_runs_lookups(tmp_path, monkeypatch):
+    class FlakyRange(FakeClient):
+        def fetch_awards_range(self, start, end):
+            raise client_mod.G2BError("HTTP retries exhausted: HTTP 500")
+
+    out = tmp_path / "notices.json"
+    out.write_text(
+        json.dumps({"notices": [_notice("OVERDUE", 90, budget_eok=10)]}), encoding="utf-8"
+    )
+    monkeypatch.setattr(client_mod, "G2BClient", FlakyRange)
+    args = argparse.Namespace(
+        out=str(out), until=None, days=30, since=None, max_span_days=120,
+        lookup_missing=True, lookup_limit=5,
+    )
+    assert cmd_enrich_awards(args) == 0
+    assert FakeClient.instance.looked == ["OVERDUE"]

@@ -155,7 +155,12 @@ def cmd_enrich_awards(args: argparse.Namespace) -> int:
             print(f"Clamped award fetch window to last {args.max_span_days} days")
 
     print(f"Enrich awards {start} → {end} for {len(notices)} notices …")
-    raw_awards = client.fetch_awards_range(start, end)
+    try:
+        raw_awards = client.fetch_awards_range(start, end)
+    except G2BError as e:
+        # Range listing 500s now and then; per-bid lookups below can still make progress.
+        print(f"::warning::award range fetch failed, continuing with per-bid lookups: {e}")
+        raw_awards = []
     awards = [a for a in (normalize_award_item(x) for x in raw_awards) if a]
     print(f"Award rows: {len(awards)}")
     merged, n_upd = apply_awards_to_notices(notices, awards)
