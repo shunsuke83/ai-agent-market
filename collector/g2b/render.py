@@ -10,6 +10,7 @@ from typing import Any
 from .assets import stamp_asset_versions
 from .normalize import band_excluded, in_band, merge_by_bid, sort_notices
 from .classify import classify_nature, load_keywords
+from .seed import load_seed
 
 KST = timezone(timedelta(hours=9))
 
@@ -158,6 +159,15 @@ def render_notice_row(notice: dict[str, Any], today: date | None = None) -> str:
         bid_count_s = ""
     win_rate = notice.get("win_rate_pct")
     win_s = _fmt_pct(win_rate) if win_rate not in (None, "") else ""
+    if notice.get("winner"):
+        winner_s = html.escape(notice["winner"])
+    elif notice.get("first_rank"):
+        winner_s = (
+            f'{html.escape(notice["first_rank"])} '
+            '<span class="meta" title="개찰 1순위, 낙찰 확정 전">(1순위)</span>'
+        )
+    else:
+        winner_s = ""
 
     return (
         "<tr>"
@@ -170,7 +180,7 @@ def render_notice_row(notice: dict[str, Any], today: date | None = None) -> str:
         f"<td>{html.escape(notice.get('open_date') or '')}</td>"
         f"{_status_cell(status)}"
         f'<td class="num">{bid_count_s}</td>'
-        f"<td>{html.escape(notice.get('winner') or '')}</td>"
+        f"<td>{winner_s}</td>"
         f'<td class="num">{win_s}</td>'
         "</tr>"
     )
@@ -182,13 +192,13 @@ def load_merged_band(
     bootstrap_path: Path | None = None,
 ) -> list[dict[str, Any]]:
     rules = load_keywords()
-    bootstrap_path = bootstrap_path or (repo_root / "data" / "bootstrap.json")
     notices_path = notices_path or (repo_root / "data" / "notices.json")
 
-    existing: list[dict[str, Any]] = []
-    if bootstrap_path.exists():
-        boot = json.loads(bootstrap_path.read_text(encoding="utf-8"))
-        existing = list(boot.get("band_notices") or [])
+    if bootstrap_path is not None:
+        boot = json.loads(bootstrap_path.read_text(encoding="utf-8")) if bootstrap_path.exists() else {}
+    else:
+        boot = load_seed(repo_root)
+    existing: list[dict[str, Any]] = list(boot.get("band_notices") or [])
 
     incoming: list[dict[str, Any]] = []
     if notices_path.exists():
@@ -327,17 +337,46 @@ def update_band_notice_stat(html_text: str, count: int, budget_sum_eok: float) -
     return new
 
 
-def update_stamp(html_text: str, day: date | None = None) -> str:
-    day = day or _today_kst()
-    stamp = day.isoformat()
+def _kst_date(iso: str | None) -> date | None:
+    if not iso:
+        return None
+    try:
+        dt = datetime.fromisoformat(iso.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt.astimezone(KST).date()
+
+
+def load_run_status(repo_root: Path) -> dict[str, Any]:
+    path = repo_root / "data" / "run_status.json"
+    if not path.exists():
+        return {}
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def stamp_text(status: dict[str, Any], fallback: date | None = None) -> str:
+    """'데이터 기준' = last successful 공고 collect, not the render date."""
+    collect = (status.get("stages") or {}).get("collect") or {}
+    ok_day = _kst_date(collect.get("last_success_at")) or fallback
+    text = f"데이터 기준 {ok_day.isoformat()}" if ok_day else "데이터 기준 미확인"
+    if collect.get("last_outcome") not in (None, "success"):
+        tried = _kst_date(collect.get("last_attempt_at"))
+        when = f" {tried.isoformat()}" if tried else ""
+        text += f" · 최근 수집 실패{when}, 기존 데이터 표시 중"
+    return text
+
+
+def update_stamp(html_text: str, text: str) -> str:
     new, n = re.subn(
-        r'(<div class="stamp">최종 갱신 )\d{4}-\d{2}-\d{2}(</div>)',
-        rf"\g<1>{stamp}\g<2>",
+        r'<div class="stamp">[^<]*</div>',
+        f'<div class="stamp">{html.escape(text)}</div>',
         html_text,
         count=1,
     )
     if n != 1:
-        raise RuntimeError("Could not update 최종 갱신 stamp")
+        raise RuntimeError("Could not update stamp")
     return new
 
 
@@ -435,6 +474,40 @@ def replace_stat_card(html_text: str, label_html: str, value: str) -> str:
     return new
 
 
+def replace_stat_card_by_prefix(
+    html_text: str, label_prefix: str, value: str, label_out: str
+) -> str:
+    pat = re.compile(
+        r'<div class="stat"><div class="v">[^<]*</div><div class="l">'
+        + re.escape(label_prefix)
+        + r"[^<]*</div></div>"
+    )
+    card = (
+        f'<div class="stat"><div class="v">{value}</div>'
+        f'<div class="l">{html.escape(label_out)}</div></div>'
+    )
+    new, n = pat.subn(lambda _m: card, html_text, count=1)
+    if n != 1:
+        raise RuntimeError(f"Could not find stat card {label_prefix!r}")
+    return new
+
+
+def award_to_budget_list(notices: list[dict[str, Any]]) -> list[float]:
+    """낙찰금액/예산 (%) for notices whose award amount was actually reported."""
+    out: list[float] = []
+    for n in notices:
+        amt, bud = _award_amount(n), n.get("budget_eok")
+        if amt is None or bud in (None, ""):
+            continue
+        try:
+            b = float(bud)
+        except (TypeError, ValueError):
+            continue
+        if b > 0:
+            out.append(100.0 * amt / b)
+    return out
+
+
 def replace_note_after(html_text: str, anchor: str, note_html: str) -> str:
     """Replace the first <p class="note"> that follows anchor."""
     i = html_text.find(anchor)
@@ -452,7 +525,7 @@ def band_winner_rollup(notices: list[dict[str, Any]]) -> list[tuple[str, int, fl
     wins: dict[str, list[float]] = defaultdict(lambda: [0, 0.0])
     for n in notices:
         w = (n.get("winner") or "").strip()
-        if not w or infer_status(n) not in ("낙찰", "1순위"):
+        if not w or infer_status(n) != "낙찰":
             continue
         wins[w][0] += 1
         amt = _award_amount(n)
@@ -538,9 +611,14 @@ def render_band_page(repo_root: Path) -> dict[str, Any]:
     med_bids = _median(_num_list(notices, "bid_count"))
     if med_bids is not None:
         text = replace_stat_card(text, "공고당 투찰 업체 (중앙값)", f"{med_bids:.1f}곳")
-    med_rate = _median(_num_list(notices, "win_rate_pct"))
-    if med_rate is not None:
-        text = replace_stat_card(text, "예산 대비 낙찰금액 (중앙값)", f"{med_rate:.1f}%")
+    ratios = award_to_budget_list(notices)
+    if ratios:
+        text = replace_stat_card_by_prefix(
+            text,
+            "예산 대비 낙찰금액 (중앙값",
+            f"{_median(ratios):.1f}%",
+            f"예산 대비 낙찰금액 (중앙값, 금액 확인 {len(ratios)}건)",
+        )
 
     quarters, current_q = quarter_counts(notices, today)
     text = replace_section_bars(
@@ -580,6 +658,12 @@ def render_band_page(repo_root: Path) -> dict[str, Any]:
         n_won = sum(c for _, c, _ in winners)
         top_name, top_c, _ = winners[0]
         failed = sum(1 for n in notices if infer_status(n, today) == "유찰")
+        first_only = sum(1 for n in notices if infer_status(n, today) == "1순위")
+        amt_known = sum(
+            1
+            for n in notices
+            if n.get("winner") and infer_status(n, today) == "낙찰" and _award_amount(n) is not None
+        )
         share = 100.0 * top_c / n_won
         verdict = (
             "이 구간에는 뚜렷한 지배 업체가 없습니다."
@@ -590,7 +674,9 @@ def render_band_page(repo_root: Path) -> dict[str, Any]:
             text,
             "<h2>낙찰 업체</h2>",
             f'<p class="note">낙찰자 확인 {n_won}건. 최다 낙찰은 {html.escape(top_name)} '
-            f"{top_c}건으로, {verdict} 유찰 {failed}건.</p>",
+            f"{top_c}건으로, {verdict} 유찰 {failed}건. "
+            f"개찰 1순위만 확인된 {first_only}건은 낙찰에 넣지 않았습니다. "
+            f"낙찰금액 합계는 금액이 확인된 {amt_known}건만 더한 값입니다.</p>",
         )
 
     frequent = aggregate_frequent_bidders(
@@ -641,11 +727,11 @@ def render_band_page(repo_root: Path) -> dict[str, Any]:
     }
 
 
-def render_index_stamp(repo_root: Path, day: date | None = None) -> dict[str, Any]:
+def render_index_stamp(repo_root: Path) -> dict[str, Any]:
     path = repo_root / "index.html"
     text = path.read_text(encoding="utf-8")
-    day = day or _today_kst()
-    text = update_stamp(text, day)
+    stamp = stamp_text(load_run_status(repo_root))
+    text = update_stamp(text, stamp)
     text = stamp_asset_versions(text)
     path.write_text(text, encoding="utf-8")
     # Hand-edited pages that no renderer owns still need fresh asset versions.
@@ -653,7 +739,7 @@ def render_index_stamp(repo_root: Path, day: date | None = None) -> dict[str, An
         p = repo_root / extra
         if p.exists():
             p.write_text(stamp_asset_versions(p.read_text(encoding="utf-8")), encoding="utf-8")
-    return {"path": str(path), "stamp": day.isoformat()}
+    return {"path": str(path), "stamp": stamp}
 
 
 # --- Phase B: awards.html -------------------------------------------------
@@ -674,6 +760,7 @@ def _is_build_title(title: str | None, rules: dict[str, Any] | None = None) -> b
 
 
 def _award_amount(row: dict[str, Any]) -> float | None:
+    """Reported award amount only; None when unknown (never budget-derived)."""
     for key in ("award_amount_eok", "win_amount_eok"):
         v = row.get(key)
         if v not in (None, ""):
@@ -681,19 +768,10 @@ def _award_amount(row: dict[str, Any]) -> float | None:
                 return float(v)
             except (TypeError, ValueError):
                 pass
-    bud = row.get("budget_eok")
-    rate = row.get("win_rate_pct")
-    if bud not in (None, "") and rate not in (None, ""):
-        try:
-            return round(float(bud) * float(rate) / 100.0, 1)
-        except (TypeError, ValueError):
-            return None
-    if bud not in (None, ""):
-        try:
-            return float(bud)
-        except (TypeError, ValueError):
-            return None
     return None
+
+
+AMOUNT_UNKNOWN = '<span class="meta" title="나라장터 낙찰금액 미공개·미수집">미확인</span>'
 
 
 def _fmt_eok_display(v: Any) -> str:
@@ -718,20 +796,19 @@ def _bid_count_str(v: Any) -> str:
 
 
 def load_large_awards(repo_root: Path) -> list[dict[str, Any]]:
-    """Bootstrap large awards ∪ notices with budget ≥ 30억 and a winner."""
+    """Seed large awards ∪ notices with budget ≥ 30억 and a confirmed winner."""
     rules = load_keywords()
     min_eok = _large_min_eok(rules)
-    bootstrap_path = repo_root / "data" / "bootstrap.json"
     notices_path = repo_root / "data" / "notices.json"
 
     from .normalize import coerce_stored_eok, sanitize_notice_money_fields
 
     existing: list[dict[str, Any]] = []
-    if bootstrap_path.exists():
-        boot = json.loads(bootstrap_path.read_text(encoding="utf-8"))
-        for row in boot.get("large_awards") or []:
-            row, _ = sanitize_notice_money_fields(row)
-            existing.append(row)
+    for row in load_seed(repo_root).get("large_awards") or []:
+        if not row.get("winner"):
+            continue
+        row, _ = sanitize_notice_money_fields(row)
+        existing.append(row)
 
     incoming: list[dict[str, Any]] = []
     if notices_path.exists():
@@ -805,7 +882,7 @@ def load_award_pool(repo_root: Path) -> list[dict[str, Any]]:
     for n in rows:
         if not n.get("winner"):
             continue
-        if infer_status(n) not in ("낙찰", "1순위"):
+        if infer_status(n) != "낙찰":
             continue
         row = {
             "bid_no": n.get("bid_no"),
@@ -942,15 +1019,9 @@ def aggregate_yearly(
 def load_needs_confirm(
     repo_root: Path, *, limit: int = 30
 ) -> tuple[list[dict[str, Any]], int]:
-    """개찰 확인 필요: bootstrap seed ∪ live inference; top-N by budget."""
+    """개찰 확인 필요 from live inference, plus seed rows not tracked in notices; top-N by budget."""
     today = _today_kst()
-    bootstrap_path = repo_root / "data" / "bootstrap.json"
-    seed: list[dict[str, Any]] = []
-    seed_total = 0
-    if bootstrap_path.exists():
-        boot = json.loads(bootstrap_path.read_text(encoding="utf-8"))
-        seed = list(boot.get("needs_confirm") or [])
-        seed_total = int(boot.get("needs_confirm_total") or len(seed))
+    seed = list(load_seed(repo_root).get("needs_confirm") or [])
 
     rows: list[dict[str, Any]] = []
     notices_path = repo_root / "data" / "notices.json"
@@ -968,16 +1039,21 @@ def load_needs_confirm(
         row["status"] = "개찰 확인 필요"
         live.append(row)
 
-    # Seed preserves historical top rows until award API covers full history
-    combined = merge_by_bid(seed, live)
+    # A seed row only stays while nothing live has resolved it.
+    known = {f"{n.get('bid_no')}-{n.get('bid_ord') or '000'}" for n in merged}
+    untracked = [
+        dict(r, status="개찰 확인 필요")
+        for r in seed
+        if f"{r.get('bid_no')}-{r.get('bid_ord') or '000'}" not in known
+    ]
+    combined = merge_by_bid(untracked, live)
     combined.sort(
         key=lambda r: (
             -(float(r["budget_eok"]) if r.get("budget_eok") is not None else -1),
             r.get("open_date") or "",
         )
     )
-    total = max(seed_total, len(live), len(combined))
-    return combined[:limit], total
+    return combined[:limit], len(combined)
 
 
 def render_large_award_row(row: dict[str, Any]) -> str:
@@ -989,7 +1065,7 @@ def render_large_award_row(row: dict[str, Any]) -> str:
         f"<td>{html.escape(row.get('org') or '')}</td>"
         f'<td><a href="{href}" target="_blank" rel="noopener">{html.escape(title)}</a></td>'
         f'<td class="num">{_fmt_eok_display(row.get("budget_eok"))}</td>'
-        f'<td class="num">{_fmt_eok_display(_award_amount(row))}</td>'
+        f'<td class="num">{_fmt_eok_display(_award_amount(row)) or AMOUNT_UNKNOWN}</td>'
         f"<td>{html.escape(row.get('winner') or '')}</td>"
         f'<td class="num">{_bid_count_str(row.get("bid_count"))}</td>'
         f"<td>{html.escape(row.get('second') or '')}</td>"

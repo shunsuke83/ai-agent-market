@@ -1059,8 +1059,9 @@
         }
       ],
       "bid_count": 1,
-      "winner": "본시스",
-      "status": "1순위"
+      "winner": null,
+      "status": "1순위",
+      "first_rank": "본시스"
     },
     {
       "source": "g2b_api",
@@ -2146,7 +2147,6 @@
       "winner": "회계법인 나무",
       "bid_count": 1,
       "award_amount_eok": 0.2038,
-      "win_rate_pct": 95.0,
       "status": "낙찰",
       "bidders": [
         {
@@ -2157,7 +2157,8 @@
           "bizno": "1208675852",
           "ceo": "홍창희"
         }
-      ]
+      ],
+      "award_to_budget_pct": 95.0
     },
     {
       "source": "g2b_api",
@@ -2606,8 +2607,8 @@
       "winner": "어드민",
       "bid_count": 1,
       "award_amount_eok": 0.98,
-      "win_rate_pct": 100.0,
-      "status": "낙찰"
+      "status": "낙찰",
+      "award_to_budget_pct": 100.0
     },
     {
       "bid_no": "R26BK01794006",
@@ -2916,7 +2917,6 @@
       "winner": "에프엔피파트너스",
       "bid_count": 1,
       "award_amount_eok": 0.2156,
-      "win_rate_pct": 98.0,
       "status": "낙찰",
       "bidders": [
         {
@@ -2927,7 +2927,8 @@
           "bizno": "3208100752",
           "ceo": "이세진"
         }
-      ]
+      ],
+      "award_to_budget_pct": 98.0
     },
     {
       "source": "g2b_api",
@@ -4060,8 +4061,9 @@
         }
       ],
       "bid_count": 1,
-      "winner": "그노티",
-      "status": "1순위"
+      "winner": null,
+      "status": "1순위",
+      "first_rank": "그노티"
     },
     {
       "source": "g2b_api",
@@ -4989,8 +4991,9 @@
         }
       ],
       "bid_count": 25,
-      "winner": "티키타카크리에이티브",
-      "status": "1순위"
+      "winner": null,
+      "status": "1순위",
+      "first_rank": "티키타카크리에이티브"
     },
     {
       "source": "g2b_api",
@@ -5437,7 +5440,6 @@
       "winner": "옥토버스",
       "bid_count": 1,
       "award_amount_eok": 0.1045,
-      "win_rate_pct": 95.0,
       "status": "낙찰",
       "bidders": [
         {
@@ -5448,7 +5450,8 @@
           "bizno": "8038802517",
           "ceo": "김종민"
         }
-      ]
+      ],
+      "award_to_budget_pct": 95.0
     },
     {
       "source": "g2b_api",
@@ -5691,8 +5694,9 @@
       ],
       "bid_count": 4,
       "second": "포항공과대학교 산학협력단",
-      "winner": "픽셀와이",
-      "status": "1순위"
+      "winner": null,
+      "status": "1순위",
+      "first_rank": "픽셀와이"
     },
     {
       "source": "g2b_api",
@@ -6189,8 +6193,9 @@
       ],
       "bid_count": 9,
       "second": "세온아이씨티",
-      "winner": "아이테크",
-      "status": "1순위"
+      "winner": null,
+      "status": "1순위",
+      "first_rank": "아이테크"
     },
     {
       "source": "g2b_api",
@@ -6841,8 +6846,9 @@
       ],
       "bid_count": 32,
       "second": "경기모아상사",
-      "winner": "대원",
-      "status": "1순위"
+      "winner": null,
+      "status": "1순위",
+      "first_rank": "대원"
     },
     {
       "source": "g2b_api",
@@ -6906,7 +6912,6 @@
       "winner": "코젠",
       "bid_count": 1,
       "award_amount_eok": 0.36,
-      "win_rate_pct": 100.0,
       "status": "낙찰",
       "bidders": [
         {
@@ -6917,7 +6922,8 @@
           "bizno": "2138176895",
           "ceo": "윤영근"
         }
-      ]
+      ],
+      "award_to_budget_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -7299,8 +7305,9 @@
       ],
       "bid_count": 2,
       "second": "자임텍",
-      "winner": "엑스디노드",
-      "status": "1순위"
+      "winner": null,
+      "status": "1순위",
+      "first_rank": "엑스디노드"
     },
     {
       "source": "g2b_api",
@@ -7481,8 +7488,9 @@
       ],
       "bid_count": 4,
       "second": "새론아이",
-      "winner": "어진컴퍼니",
-      "status": "1순위"
+      "winner": null,
+      "status": "1순위",
+      "first_rank": "어진컴퍼니"
     },
     {
       "source": "g2b_api",
@@ -7700,8 +7708,9 @@
       ],
       "bid_count": 10,
       "second": "행복마을연구소",
-      "winner": "지인연구소",
-      "status": "1순위"
+      "winner": null,
+      "status": "1순위",
+      "first_rank": "지인연구소"
     },
     {
       "source": "g2b_api",
@@ -7725,7 +7734,6 @@
       "winner": "에스엔아이인스티튜트",
       "bid_count": 1,
       "award_amount_eok": 1.4,
-      "win_rate_pct": 100.0,
       "status": "낙찰",
       "bidders": [
         {
@@ -7736,7 +7744,8 @@
           "bizno": "2908101955",
           "ceo": "신재호"
         }
-      ]
+      ],
+      "award_to_budget_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -47978,8 +47987,9 @@
       ],
       "bid_count": 4946,
       "second": "주사장",
-      "winner": "새움기획",
-      "status": "1순위"
+      "winner": null,
+      "status": "1순위",
+      "first_rank": "새움기획"
     },
     {
       "source": "g2b_api",
@@ -48024,7 +48034,6 @@
       "winner": "모노플로우",
       "bid_count": 1,
       "award_amount_eok": 0.0359,
-      "win_rate_pct": 100.0,
       "status": "낙찰",
       "bidders": [
         {
@@ -48035,7 +48044,8 @@
           "bizno": "5558802700",
           "ceo": "이기문"
         }
-      ]
+      ],
+      "award_to_budget_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -48787,8 +48797,9 @@
       ],
       "bid_count": 76,
       "second": "다드림한마음",
-      "winner": "썬앤문",
-      "status": "1순위"
+      "winner": null,
+      "status": "1순위",
+      "first_rank": "썬앤문"
     },
     {
       "source": "g2b_api",
@@ -49981,8 +49992,9 @@
       ],
       "bid_count": 69,
       "second": "와이에스제이",
-      "winner": "아르곤닉스",
-      "status": "1순위"
+      "winner": null,
+      "status": "1순위",
+      "first_rank": "아르곤닉스"
     },
     {
       "source": "g2b_api",
@@ -51727,7 +51739,6 @@
       "winner": "에스디 바이오센서",
       "bid_count": 1,
       "award_amount_eok": 0.45,
-      "win_rate_pct": 100.0,
       "status": "낙찰",
       "bidders": [
         {
@@ -51738,7 +51749,8 @@
           "bizno": "1358613315",
           "ceo": "이효근"
         }
-      ]
+      ],
+      "award_to_budget_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -51988,8 +52000,9 @@
       ],
       "bid_count": 3,
       "second": "다트워크",
-      "winner": "고래앤코",
-      "status": "1순위"
+      "winner": null,
+      "status": "1순위",
+      "first_rank": "고래앤코"
     },
     {
       "source": "g2b_api",
@@ -52190,8 +52203,9 @@
       ],
       "bid_count": 4,
       "second": "지구종합상사",
-      "winner": "포라세",
-      "status": "1순위"
+      "winner": null,
+      "status": "1순위",
+      "first_rank": "포라세"
     },
     {
       "source": "g2b_api",
@@ -52462,7 +52476,6 @@
       "winner": "프로젝트여름",
       "bid_count": 1,
       "award_amount_eok": 0.05,
-      "win_rate_pct": 100.0,
       "status": "낙찰",
       "bidders": [
         {
@@ -52473,7 +52486,8 @@
           "bizno": "3798603912",
           "ceo": "최여은"
         }
-      ]
+      ],
+      "award_to_budget_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -52712,8 +52726,9 @@
       ],
       "bid_count": 4,
       "second": "대화페인트공업",
-      "winner": "금강페인트공업",
-      "status": "1순위"
+      "winner": null,
+      "status": "1순위",
+      "first_rank": "금강페인트공업"
     },
     {
       "source": "g2b_api",
@@ -52989,8 +53004,9 @@
         }
       ],
       "bid_count": 1,
-      "winner": "코그니텀",
-      "status": "1순위"
+      "winner": null,
+      "status": "1순위",
+      "first_rank": "코그니텀"
     },
     {
       "source": "g2b_api",
@@ -53262,7 +53278,6 @@
       "winner": "시소",
       "bid_count": 1,
       "award_amount_eok": 0.15,
-      "win_rate_pct": 100.0,
       "status": "낙찰",
       "bidders": [
         {
@@ -53273,7 +53288,8 @@
           "bizno": "1718800464",
           "ceo": "박병규"
         }
-      ]
+      ],
+      "award_to_budget_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -54166,8 +54182,9 @@
       ],
       "bid_count": 41,
       "second": "에버그린티앤씨",
-      "winner": "아워스",
-      "status": "1순위"
+      "winner": null,
+      "status": "1순위",
+      "first_rank": "아워스"
     },
     {
       "source": "g2b_api",
@@ -54212,7 +54229,6 @@
       "winner": "내스타일",
       "bid_count": 1,
       "award_amount_eok": 0.195,
-      "win_rate_pct": 100.0,
       "status": "낙찰",
       "bidders": [
         {
@@ -54223,7 +54239,8 @@
           "bizno": "3828101860",
           "ceo": "이용균"
         }
-      ]
+      ],
+      "award_to_budget_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -54580,8 +54597,9 @@
       ],
       "bid_count": 2,
       "second": "테크원",
-      "winner": "리안아이티컨설팅",
-      "status": "1순위"
+      "winner": null,
+      "status": "1순위",
+      "first_rank": "리안아이티컨설팅"
     },
     {
       "source": "g2b_api",
@@ -54927,8 +54945,9 @@
       ],
       "bid_count": 5,
       "second": "트루빈스",
-      "winner": "미림미디어랩",
-      "status": "1순위"
+      "winner": null,
+      "status": "1순위",
+      "first_rank": "미림미디어랩"
     },
     {
       "source": "g2b_api",
@@ -55413,8 +55432,9 @@
       ],
       "bid_count": 7,
       "second": "바이오퍼스글로벌",
-      "winner": "원퓨트",
-      "status": "1순위"
+      "winner": null,
+      "status": "1순위",
+      "first_rank": "원퓨트"
     },
     {
       "source": "g2b_api",
@@ -56238,7 +56258,6 @@
       "winner": "트루빈스",
       "bid_count": 5,
       "award_amount_eok": 0.7224,
-      "win_rate_pct": 84.0,
       "status": "낙찰",
       "bidders": [
         {
@@ -56282,7 +56301,8 @@
           "ceo": "남기환"
         }
       ],
-      "second": "재미"
+      "second": "재미",
+      "award_to_budget_pct": 84.0
     },
     {
       "source": "g2b_api",
@@ -60344,7 +60364,6 @@
       "winner": "에이아이이와이",
       "bid_count": 1,
       "award_amount_eok": 3.3,
-      "win_rate_pct": 100.0,
       "status": "낙찰",
       "bidders": [
         {
@@ -60355,7 +60374,8 @@
           "bizno": "5068603421",
           "ceo": "조해듬"
         }
-      ]
+      ],
+      "award_to_budget_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -60807,7 +60827,6 @@
       "winner": "비앤비헬스케어",
       "bid_count": 1,
       "award_amount_eok": 0.19,
-      "win_rate_pct": 95.0,
       "status": "낙찰",
       "bidders": [
         {
@@ -60818,7 +60837,8 @@
           "bizno": "2128182545",
           "ceo": "추광현"
         }
-      ]
+      ],
+      "award_to_budget_pct": 95.0
     },
     {
       "source": "g2b_api",
@@ -60902,7 +60922,6 @@
       "winner": "잇다에듀",
       "bid_count": 1,
       "award_amount_eok": 0.3,
-      "win_rate_pct": 100.0,
       "status": "낙찰",
       "bidders": [
         {
@@ -60913,7 +60932,8 @@
           "bizno": "6667900427",
           "ceo": "박경미"
         }
-      ]
+      ],
+      "award_to_budget_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -62088,7 +62108,7 @@
       "bid_count": 2,
       "award_amount_eok": 1.65,
       "status": "낙찰",
-      "win_rate_pct": 100.0
+      "award_to_budget_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -62476,7 +62496,7 @@
       "bid_count": 2,
       "award_amount_eok": 0.4,
       "status": "낙찰",
-      "win_rate_pct": 100.0
+      "award_to_budget_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -62595,7 +62615,6 @@
       "bid_count": 2,
       "award_amount_eok": 6.6,
       "status": "낙찰",
-      "win_rate_pct": 100.0,
       "bidders": [
         {
           "rank": 1,
@@ -62614,7 +62633,8 @@
           "ceo": "이인식"
         }
       ],
-      "second": "윈텍에스에이"
+      "second": "윈텍에스에이",
+      "award_to_budget_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -62741,7 +62761,6 @@
       "winner": "오픈패스로보틱스",
       "bid_count": 1,
       "award_amount_eok": 1.43,
-      "win_rate_pct": 100.0,
       "status": "낙찰",
       "bidders": [
         {
@@ -62752,7 +62771,8 @@
           "bizno": "6398703261",
           "ceo": "차현제"
         }
-      ]
+      ],
+      "award_to_budget_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -63819,7 +63839,6 @@
       "bid_count": 3,
       "award_amount_eok": 0.9,
       "status": "낙찰",
-      "win_rate_pct": 100.0,
       "bidders": [
         {
           "rank": 1,
@@ -63845,7 +63864,8 @@
           "bizno": "1303441097",
           "ceo": "윤성민"
         }
-      ]
+      ],
+      "award_to_budget_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -64511,7 +64531,7 @@
       "winner": "넥스트클라우드",
       "status": "낙찰",
       "award_amount_eok": 1.5,
-      "win_rate_pct": 100.0
+      "award_to_budget_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -64580,8 +64600,9 @@
       ],
       "bid_count": 3,
       "second": "데이타트렌드",
-      "winner": "한국데이터소프트",
-      "status": "1순위"
+      "winner": null,
+      "status": "1순위",
+      "first_rank": "한국데이터소프트"
     },
     {
       "source": "g2b_api",
@@ -64748,7 +64769,6 @@
       "bid_count": 3,
       "award_amount_eok": 0.8,
       "status": "낙찰",
-      "win_rate_pct": 100.0,
       "bidders": [
         {
           "rank": 1,
@@ -64775,7 +64795,8 @@
           "ceo": "신정우"
         }
       ],
-      "second": "칼리아씨엠(callia CM)"
+      "second": "칼리아씨엠(callia CM)",
+      "award_to_budget_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -64881,7 +64902,6 @@
       "bid_count": 3,
       "award_amount_eok": 1.1,
       "status": "낙찰",
-      "win_rate_pct": 93.2,
       "bidders": [
         {
           "rank": 1,
@@ -64908,7 +64928,8 @@
           "ceo": "문원준"
         }
       ],
-      "second": "지트"
+      "second": "지트",
+      "award_to_budget_pct": 93.2
     },
     {
       "source": "g2b_api",
@@ -65008,7 +65029,6 @@
       "bid_count": 3,
       "award_amount_eok": 0.4,
       "status": "낙찰",
-      "win_rate_pct": 100.0,
       "bidders": [
         {
           "rank": 1,
@@ -65034,7 +65054,8 @@
           "bizno": "5048186061",
           "ceo": "서보경"
         }
-      ]
+      ],
+      "award_to_budget_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -65194,7 +65215,6 @@
       "winner": "에이아이쓰리",
       "bid_count": 1,
       "award_amount_eok": 0.27,
-      "win_rate_pct": 90.0,
       "status": "낙찰",
       "bidders": [
         {
@@ -65205,7 +65225,8 @@
           "bizno": "6048142515",
           "ceo": "표철민"
         }
-      ]
+      ],
+      "award_to_budget_pct": 90.0
     },
     {
       "source": "g2b_api",
@@ -65442,7 +65463,6 @@
       "winner": "미래엔",
       "bid_count": 1,
       "award_amount_eok": 10.0,
-      "win_rate_pct": 100.0,
       "status": "낙찰",
       "bidders": [
         {
@@ -65453,7 +65473,8 @@
           "bizno": "2148104977",
           "ceo": "신광수"
         }
-      ]
+      ],
+      "award_to_budget_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -72022,7 +72043,6 @@
       "bid_count": 1,
       "award_amount_eok": 1.45,
       "status": "낙찰",
-      "win_rate_pct": 91.2,
       "bidders": [
         {
           "rank": 1,
@@ -72032,7 +72052,8 @@
           "bizno": "4428703779",
           "ceo": "윤승규"
         }
-      ]
+      ],
+      "award_to_budget_pct": 91.2
     },
     {
       "source": "g2b_api",
@@ -73060,7 +73081,6 @@
       "winner": "국립부경대학교 산학협력단",
       "bid_count": 1,
       "award_amount_eok": 0.796,
-      "win_rate_pct": 99.5,
       "status": "낙찰",
       "bidders": [
         {
@@ -73071,7 +73091,8 @@
           "bizno": "6178206434",
           "ceo": "박상혁"
         }
-      ]
+      ],
+      "award_to_budget_pct": 99.5
     },
     {
       "source": "g2b_api",
@@ -73762,7 +73783,6 @@
       "bid_count": 2,
       "award_amount_eok": 4.9,
       "status": "낙찰",
-      "win_rate_pct": 100.0,
       "bidders": [
         {
           "rank": 1,
@@ -73781,7 +73801,8 @@
           "ceo": "박지광"
         }
       ],
-      "second": "유니원커뮤니케이션즈"
+      "second": "유니원커뮤니케이션즈",
+      "award_to_budget_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -74276,8 +74297,9 @@
       ],
       "bid_count": 3,
       "second": "데이타트렌드",
-      "winner": "위노베이트(WENOVATE)",
-      "status": "1순위"
+      "winner": null,
+      "status": "1순위",
+      "first_rank": "위노베이트(WENOVATE)"
     },
     {
       "source": "g2b_api",
@@ -74559,7 +74581,6 @@
       "bid_count": 6,
       "award_amount_eok": 0.49,
       "status": "낙찰",
-      "win_rate_pct": 98.0,
       "bidders": [
         {
           "rank": 1,
@@ -74610,7 +74631,8 @@
           "ceo": "김종태"
         }
       ],
-      "second": "코리아리서치센터"
+      "second": "코리아리서치센터",
+      "award_to_budget_pct": 98.0
     },
     {
       "source": "g2b_api",
@@ -75114,7 +75136,6 @@
       "bid_count": 1,
       "award_amount_eok": 1.6,
       "status": "낙찰",
-      "win_rate_pct": 90.9,
       "bidders": [
         {
           "rank": 1,
@@ -75124,7 +75145,8 @@
           "bizno": "4428703779",
           "ceo": "윤승규"
         }
-      ]
+      ],
+      "award_to_budget_pct": 90.9
     },
     {
       "source": "g2b_api",
@@ -75476,7 +75498,6 @@
       "bid_count": 5,
       "award_amount_eok": 0.5995,
       "status": "낙찰",
-      "win_rate_pct": 99.9,
       "bidders": [
         {
           "rank": 1,
@@ -75519,7 +75540,8 @@
           "ceo": "최근영"
         }
       ],
-      "second": "13컴퍼니"
+      "second": "13컴퍼니",
+      "award_to_budget_pct": 99.9
     },
     {
       "source": "g2b_api",
@@ -76210,8 +76232,9 @@
       ],
       "bid_count": 3,
       "second": "팀모노리스",
-      "winner": "더에스앤씨",
-      "status": "1순위"
+      "winner": null,
+      "status": "1순위",
+      "first_rank": "더에스앤씨"
     },
     {
       "source": "g2b_api",
@@ -78208,8 +78231,9 @@
       ],
       "bid_count": 5,
       "second": "(사)한국능률협회",
-      "winner": "세명소프트",
-      "status": "1순위"
+      "winner": null,
+      "status": "1순위",
+      "first_rank": "세명소프트"
     },
     {
       "source": "g2b_api",
@@ -78250,9 +78274,10 @@
       ],
       "bid_count": 2,
       "second": "데이타트렌드",
-      "winner": "아이티센엔텍",
+      "winner": null,
       "status": "1순위",
-      "award_amount_eok": 72.4
+      "award_amount_eok": 72.4,
+      "first_rank": "아이티센엔텍"
     },
     {
       "source": "g2b_api",
@@ -78321,7 +78346,6 @@
       "bid_count": 2,
       "award_amount_eok": 0.45,
       "status": "낙찰",
-      "win_rate_pct": 100.0,
       "bidders": [
         {
           "rank": 1,
@@ -78340,7 +78364,8 @@
           "ceo": "이응재"
         }
       ],
-      "second": "내일은개발"
+      "second": "내일은개발",
+      "award_to_budget_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -78485,7 +78510,6 @@
       "bid_count": 3,
       "award_amount_eok": 0.36,
       "status": "낙찰",
-      "win_rate_pct": 90.0,
       "bidders": [
         {
           "rank": 1,
@@ -78511,7 +78535,8 @@
           "bizno": "3498803652",
           "ceo": "구용욱"
         }
-      ]
+      ],
+      "award_to_budget_pct": 90.0
     },
     {
       "source": "g2b_api",
@@ -79420,7 +79445,6 @@
       "winner": "피플데이터랩",
       "bid_count": 1,
       "award_amount_eok": 0.5096,
-      "win_rate_pct": 98.0,
       "status": "낙찰",
       "bidders": [
         {
@@ -79431,7 +79455,8 @@
           "bizno": "3478603730",
           "ceo": "박정아"
         }
-      ]
+      ],
+      "award_to_budget_pct": 98.0
     },
     {
       "source": "g2b_api",
@@ -80983,8 +81008,9 @@
         }
       ],
       "bid_count": 2,
-      "winner": "파이로직스",
-      "status": "1순위"
+      "winner": null,
+      "status": "1순위",
+      "first_rank": "파이로직스"
     },
     {
       "source": "g2b_api",
@@ -81994,7 +82020,6 @@
       "bid_count": 2,
       "award_amount_eok": 3.999,
       "status": "낙찰",
-      "win_rate_pct": 100.0,
       "bidders": [
         {
           "rank": 1,
@@ -82012,7 +82037,8 @@
           "bizno": "2118868971",
           "ceo": "권세영"
         }
-      ]
+      ],
+      "award_to_budget_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -82072,7 +82098,6 @@
       "bid_count": 4,
       "award_amount_eok": 2.4178,
       "status": "낙찰",
-      "win_rate_pct": 79.3,
       "bidders": [
         {
           "rank": 1,
@@ -82107,7 +82132,8 @@
           "ceo": "서태일"
         }
       ],
-      "second": "케이씨에이"
+      "second": "케이씨에이",
+      "award_to_budget_pct": 79.3
     },
     {
       "source": "g2b_api",
@@ -82561,8 +82587,9 @@
         }
       ],
       "bid_count": 2,
-      "winner": "피스페이스",
-      "status": "1순위"
+      "winner": null,
+      "status": "1순위",
+      "first_rank": "피스페이스"
     },
     {
       "source": "g2b_api",
@@ -82840,7 +82867,6 @@
       "bid_count": 2,
       "award_amount_eok": 7.527,
       "status": "낙찰",
-      "win_rate_pct": 96.5,
       "bidders": [
         {
           "rank": 1,
@@ -82859,7 +82885,8 @@
           "ceo": "안영돈"
         }
       ],
-      "second": "보민글로벌"
+      "second": "보민글로벌",
+      "award_to_budget_pct": 96.5
     },
     {
       "source": "g2b_api",
@@ -83216,7 +83243,7 @@
       "winner": "인터로이드",
       "status": "낙찰",
       "award_amount_eok": 0.99,
-      "win_rate_pct": 100.0
+      "award_to_budget_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -83240,7 +83267,6 @@
       "winner": "넥스트클라우드",
       "bid_count": 2,
       "award_amount_eok": 0.6,
-      "win_rate_pct": 100.0,
       "status": "낙찰",
       "bidders": [
         {
@@ -83259,7 +83285,8 @@
           "bizno": "4218800471",
           "ceo": "이영복"
         }
-      ]
+      ],
+      "award_to_budget_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -83392,8 +83419,9 @@
       ],
       "bid_count": 2,
       "second": "NBSP(엔비에스피)",
-      "winner": "콘센트게임즈",
-      "status": "1순위"
+      "winner": null,
+      "status": "1순위",
+      "first_rank": "콘센트게임즈"
     },
     {
       "source": "g2b_api",
@@ -83522,8 +83550,9 @@
       ],
       "bid_count": 3,
       "second": "아이온커뮤니케이션즈",
-      "winner": "프로스트",
-      "status": "1순위"
+      "winner": null,
+      "status": "1순위",
+      "first_rank": "프로스트"
     },
     {
       "source": "g2b_api",
@@ -83997,7 +84026,6 @@
       "bid_count": 6,
       "award_amount_eok": 0.5,
       "status": "낙찰",
-      "win_rate_pct": 100.0,
       "bidders": [
         {
           "rank": 1,
@@ -84048,7 +84076,8 @@
           "ceo": "김영국"
         }
       ],
-      "second": "이너뷰"
+      "second": "이너뷰",
+      "award_to_budget_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -84094,7 +84123,6 @@
       "bid_count": 4,
       "award_amount_eok": 6.0,
       "status": "낙찰",
-      "win_rate_pct": 100.0,
       "bidders": [
         {
           "rank": 1,
@@ -84129,7 +84157,8 @@
           "ceo": "이영대"
         }
       ],
-      "second": "임팩트스테이션"
+      "second": "임팩트스테이션",
+      "award_to_budget_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -84315,7 +84344,6 @@
       "bid_count": 2,
       "award_amount_eok": 22.8607,
       "status": "낙찰",
-      "win_rate_pct": 99.0,
       "bidders": [
         {
           "rank": 1,
@@ -84334,7 +84362,8 @@
           "ceo": "박윤지"
         }
       ],
-      "second": "클라이온"
+      "second": "클라이온",
+      "award_to_budget_pct": 99.0
     },
     {
       "source": "g2b_api",
@@ -84646,7 +84675,6 @@
       "bid_count": 5,
       "award_amount_eok": 0.4,
       "status": "낙찰",
-      "win_rate_pct": 100.0,
       "bidders": [
         {
           "rank": 1,
@@ -84689,7 +84717,8 @@
           "ceo": "전준배"
         }
       ],
-      "second": "헤브론스타"
+      "second": "헤브론스타",
+      "award_to_budget_pct": 100.0
     },
     {
       "source": "g2b_api",
@@ -85092,7 +85121,6 @@
       "winner": "비주얼센터",
       "bid_count": 2,
       "award_amount_eok": 0.594,
-      "win_rate_pct": 99.0,
       "status": "낙찰",
       "bidders": [
         {
@@ -85111,7 +85139,8 @@
           "bizno": "5478700233",
           "ceo": "이정아"
         }
-      ]
+      ],
+      "award_to_budget_pct": 99.0
     },
     {
       "source": "g2b_api",
@@ -85838,7 +85867,7 @@
       "bid_count": 4,
       "award_amount_eok": 5.0452,
       "status": "낙찰",
-      "win_rate_pct": 98.9
+      "award_to_budget_pct": 98.9
     },
     {
       "source": "g2b_api",
@@ -86049,7 +86078,7 @@
       "fields": [
         "AI 일반"
       ],
-      "win_rate_pct": 86.8
+      "award_to_budget_pct": 86.8
     },
     {
       "bid_no": "R26BK01732487",
@@ -86160,7 +86189,7 @@
       "fields": [
         "AI 일반"
       ],
-      "win_rate_pct": 99.8
+      "award_to_budget_pct": 99.8
     },
     {
       "bid_no": "R26BK01727277",
@@ -86228,7 +86257,7 @@
       "fields": [
         "AI 일반"
       ],
-      "win_rate_pct": 98.7
+      "award_to_budget_pct": 98.7
     },
     {
       "bid_no": "R26BK01716243",
@@ -86375,7 +86404,7 @@
       "fields": [
         "AI 일반"
       ],
-      "win_rate_pct": 100.0
+      "award_to_budget_pct": 100.0
     },
     {
       "bid_no": "R26BK01693309",
@@ -86386,7 +86415,7 @@
       "notice_date": "2026-08-21",
       "budget_eok": 8.9,
       "award_amount_eok": null,
-      "winner": "스마트뱅크 (1순위)",
+      "winner": null,
       "bid_count": 5,
       "second": "넥스리얼",
       "status": "1순위",
@@ -86437,7 +86466,8 @@
       "nature": "시스템 구축·고도화",
       "fields": [
         "데이터·예측"
-      ]
+      ],
+      "first_rank": "스마트뱅크"
     },
     {
       "bid_no": "R26BK01691212",
@@ -86469,7 +86499,7 @@
       "notice_date": "2026-08-18",
       "budget_eok": 24.3,
       "award_amount_eok": null,
-      "winner": "퀀팃 (1순위)",
+      "winner": null,
       "bid_count": 5,
       "second": "인핸스",
       "status": "1순위",
@@ -86520,7 +86550,8 @@
       "nature": "시스템 구축·고도화",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "first_rank": "퀀팃"
     },
     {
       "bid_no": "R26BK01685562",
@@ -86658,7 +86689,7 @@
       "notice_date": "2026-08-05",
       "budget_eok": 19.0,
       "award_amount_eok": null,
-      "winner": "해연기술 (1순위)",
+      "winner": null,
       "bid_count": 1,
       "second": null,
       "status": "1순위",
@@ -86677,7 +86708,8 @@
       "nature": "시스템 구축·고도화",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "first_rank": "해연기술"
     },
     {
       "bid_no": "R26BK01665932",
@@ -86738,7 +86770,7 @@
         "비전·영상"
       ],
       "scope": "AI SW 확대",
-      "win_rate_pct": 100.4
+      "award_to_budget_pct": 100.4
     },
     {
       "bid_no": "R26BK01656277",
@@ -86788,7 +86820,7 @@
       "notice_date": "2026-07-28",
       "budget_eok": 18.0,
       "award_amount_eok": null,
-      "winner": "퍼블릭에이아이 (1순위)",
+      "winner": null,
       "bid_count": 3,
       "second": null,
       "status": "1순위",
@@ -86823,7 +86855,8 @@
       "nature": "시스템 구축·고도화",
       "fields": [
         "AI 에이전트"
-      ]
+      ],
+      "first_rank": "퍼블릭에이아이"
     },
     {
       "bid_no": "R26BK01649516",
@@ -86926,7 +86959,7 @@
       "fields": [
         "생성형·LLM"
       ],
-      "win_rate_pct": 88.9
+      "award_to_budget_pct": 88.9
     },
     {
       "bid_no": "R26BK01649241",
@@ -87111,7 +87144,7 @@
       "notice_date": "2026-07-23",
       "budget_eok": 12.5,
       "award_amount_eok": null,
-      "winner": "바이오넥서스 (1순위)",
+      "winner": null,
       "bid_count": 2,
       "second": null,
       "status": "1순위",
@@ -87138,7 +87171,8 @@
       "nature": "시스템 구축·고도화",
       "fields": [
         "의료·바이오 AI"
-      ]
+      ],
+      "first_rank": "바이오넥서스"
     },
     {
       "bid_no": "R26BK01645592",
@@ -87192,7 +87226,7 @@
       "notice_date": "2026-07-20",
       "budget_eok": 11.0,
       "award_amount_eok": null,
-      "winner": "누아 (1순위)",
+      "winner": null,
       "bid_count": 19,
       "second": "크라우드웍스",
       "status": "1순위",
@@ -87355,7 +87389,8 @@
       "nature": "시스템 구축·고도화",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "first_rank": "누아"
     },
     {
       "bid_no": "R26BK01639098",
@@ -87442,7 +87477,7 @@
       "fields": [
         "AI 일반"
       ],
-      "win_rate_pct": 100.0
+      "award_to_budget_pct": 100.0
     },
     {
       "bid_no": "R26BK01635630",
@@ -87519,7 +87554,7 @@
       "fields": [
         "AI 일반"
       ],
-      "win_rate_pct": 98.9
+      "award_to_budget_pct": 98.9
     },
     {
       "bid_no": "R26BK01625804",
@@ -87890,7 +87925,7 @@
       "notice_date": "2026-07-09",
       "budget_eok": 13.5,
       "award_amount_eok": null,
-      "winner": "마키나락스 (1순위)",
+      "winner": null,
       "bid_count": 7,
       "second": "만사시스템",
       "status": "1순위",
@@ -87958,7 +87993,8 @@
         "생성형·LLM",
         "AI 에이전트"
       ],
-      "nature": null
+      "nature": null,
+      "first_rank": "마키나락스"
     },
     {
       "bid_no": "R26BK01622572",
@@ -89214,7 +89250,7 @@
       "notice_date": "2026-05-26",
       "budget_eok": 12.0,
       "award_amount_eok": null,
-      "winner": "만사시스템 (1순위)",
+      "winner": null,
       "bid_count": 4,
       "second": "이에스이",
       "status": "1순위",
@@ -89257,7 +89293,8 @@
       "fields": [
         "AI 일반"
       ],
-      "scope": "AI SW 확대"
+      "scope": "AI SW 확대",
+      "first_rank": "만사시스템"
     },
     {
       "bid_no": "R26BK01541143",
@@ -93171,7 +93208,7 @@
       "notice_date": "2025-10-23",
       "budget_eok": 9.9,
       "award_amount_eok": null,
-      "winner": "다알시스 (1순위)",
+      "winner": null,
       "bid_count": 41,
       "second": "세린정보기술",
       "status": "1순위",
@@ -93510,7 +93547,8 @@
           "bizno": "2758600893",
           "ceo": "강봉수"
         }
-      ]
+      ],
+      "first_rank": "다알시스"
     },
     {
       "bid_no": "R25BK01107196",
@@ -93630,10 +93668,10 @@
       "notice_date": "2025-10-10",
       "budget_eok": 28.3,
       "award_amount_eok": null,
-      "winner": "아일리스프런티어",
+      "winner": null,
       "bid_count": 1,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -93649,7 +93687,8 @@
           "bizno": "2208868581",
           "ceo": "김성환"
         }
-      ]
+      ],
+      "first_rank": "아일리스프런티어"
     },
     {
       "bid_no": "R25BK01077222",
@@ -93660,7 +93699,7 @@
       "notice_date": "2025-09-25",
       "budget_eok": 12.5,
       "award_amount_eok": null,
-      "winner": "제논 (1순위)",
+      "winner": null,
       "bid_count": 3,
       "second": "애자일소다",
       "status": "1순위",
@@ -93695,7 +93734,8 @@
           "bizno": "7938600407",
           "ceo": "박대귀"
         }
-      ]
+      ],
+      "first_rank": "제논"
     },
     {
       "bid_no": "R25BK01068519",
@@ -93782,10 +93822,10 @@
       "notice_date": "2025-09-11",
       "budget_eok": 10.0,
       "award_amount_eok": null,
-      "winner": "굿링크",
+      "winner": null,
       "bid_count": 6,
       "second": "에스딘",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -93841,7 +93881,8 @@
           "bizno": "8938603475",
           "ceo": "임준우"
         }
-      ]
+      ],
+      "first_rank": "굿링크"
     },
     {
       "bid_no": "R25BK01010600",
@@ -93852,10 +93893,10 @@
       "notice_date": "2025-09-09",
       "budget_eok": 11.4,
       "award_amount_eok": null,
-      "winner": "지엠티",
+      "winner": null,
       "bid_count": 12,
       "second": "마크애니",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -93959,7 +94000,8 @@
           "bizno": "4688100660",
           "ceo": "김윤"
         }
-      ]
+      ],
+      "first_rank": "지엠티"
     },
     {
       "bid_no": "R25BK01032685",
@@ -94162,10 +94204,10 @@
       "notice_date": "2025-08-25",
       "budget_eok": 23.0,
       "award_amount_eok": null,
-      "winner": "위프코",
+      "winner": null,
       "bid_count": 5,
       "second": "오지큐",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -94213,7 +94255,8 @@
           "bizno": "5178800087",
           "ceo": "윤석원"
         }
-      ]
+      ],
+      "first_rank": "위프코"
     },
     {
       "bid_no": "R25BK01021959",
@@ -94224,7 +94267,7 @@
       "notice_date": "2025-08-22",
       "budget_eok": 15.0,
       "award_amount_eok": null,
-      "winner": "마키나락스 (1순위)",
+      "winner": null,
       "bid_count": 6.0,
       "second": null,
       "status": "1순위",
@@ -94233,7 +94276,8 @@
       "fields": [
         "생성형·LLM"
       ],
-      "nature": null
+      "nature": null,
+      "first_rank": "마키나락스"
     },
     {
       "bid_no": "R25BK01017065",
@@ -94244,10 +94288,10 @@
       "notice_date": "2025-08-21",
       "budget_eok": 19.2,
       "award_amount_eok": null,
-      "winner": "이베이테크",
+      "winner": null,
       "bid_count": 2,
       "second": "메이머스트",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -94271,7 +94315,8 @@
           "bizno": "7208100480",
           "ceo": "박상현"
         }
-      ]
+      ],
+      "first_rank": "이베이테크"
     },
     {
       "bid_no": "R25BK01015717",
@@ -94600,10 +94645,10 @@
       "notice_date": "2025-07-10",
       "budget_eok": 18.9,
       "award_amount_eok": null,
-      "winner": "이씨오",
+      "winner": null,
       "bid_count": 7,
       "second": "퓨쳐누리",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -94667,7 +94712,8 @@
           "bizno": "2448600486",
           "ceo": "이종윤"
         }
-      ]
+      ],
+      "first_rank": "이씨오"
     },
     {
       "bid_no": "R25BK00947082",
@@ -94731,7 +94777,7 @@
       ],
       "nature": null,
       "award_lookup_at": "2026-10-30",
-      "win_rate_pct": 90.0
+      "award_to_budget_pct": 90.0
     },
     {
       "bid_no": "R25BK00944976",
@@ -95070,10 +95116,10 @@
       "notice_date": "2025-06-26",
       "budget_eok": 12.6,
       "award_amount_eok": null,
-      "winner": "아일리스프런티어",
+      "winner": null,
       "bid_count": 3,
       "second": "타임게이트",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -95105,7 +95151,8 @@
           "bizno": "6918100014",
           "ceo": "민병국"
         }
-      ]
+      ],
+      "first_rank": "아일리스프런티어"
     },
     {
       "bid_no": "R25BK00925839",
@@ -95116,10 +95163,10 @@
       "notice_date": "2025-06-25",
       "budget_eok": 12.1,
       "award_amount_eok": null,
-      "winner": "나무아이씨티",
+      "winner": null,
       "bid_count": 1,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -95135,7 +95182,8 @@
           "bizno": "4328701342",
           "ceo": "이수병"
         }
-      ]
+      ],
+      "first_rank": "나무아이씨티"
     },
     {
       "bid_no": "R25BK00924703",
@@ -95146,7 +95194,7 @@
       "notice_date": "2025-06-24",
       "budget_eok": 26.1,
       "award_amount_eok": null,
-      "winner": "이든티앤에스 (1순위)",
+      "winner": null,
       "bid_count": 3.0,
       "second": null,
       "status": "1순위",
@@ -95155,7 +95203,8 @@
       "nature": "인프라",
       "fields": [
         "AI 인프라"
-      ]
+      ],
+      "first_rank": "이든티앤에스"
     },
     {
       "bid_no": "R25BK00924221",
@@ -95166,10 +95215,10 @@
       "notice_date": "2025-06-24",
       "budget_eok": 16.8,
       "award_amount_eok": null,
-      "winner": "위니텍",
+      "winner": null,
       "bid_count": 1,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "nature": "시스템 구축·고도화",
       "fields": [
@@ -95185,7 +95234,8 @@
           "bizno": "5048125346",
           "ceo": "추교관"
         }
-      ]
+      ],
+      "first_rank": "위니텍"
     },
     {
       "bid_no": "R25BK00915370",
@@ -95392,10 +95442,10 @@
       "notice_date": "2025-06-19",
       "budget_eok": 9.6,
       "award_amount_eok": null,
-      "winner": "위니텍",
+      "winner": null,
       "bid_count": 3,
       "second": "넥타르소프트",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "nature": "시스템 구축·고도화",
       "fields": [
@@ -95427,7 +95477,8 @@
           "bizno": "2208868581",
           "ceo": "김성환"
         }
-      ]
+      ],
+      "first_rank": "위니텍"
     },
     {
       "bid_no": "R25BK00905797",
@@ -95449,7 +95500,7 @@
       ],
       "nature": null,
       "award_lookup_at": "2026-10-30",
-      "win_rate_pct": 93.6
+      "award_to_budget_pct": 93.6
     },
     {
       "bid_no": "R25BK00899409",
@@ -95501,10 +95552,10 @@
       "notice_date": "2025-06-10",
       "budget_eok": 29.8,
       "award_amount_eok": null,
-      "winner": "지엔텔",
+      "winner": null,
       "bid_count": 4,
       "second": "오파스넷",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -95544,7 +95595,8 @@
           "bizno": "1138680944",
           "ceo": "박준규"
         }
-      ]
+      ],
+      "first_rank": "지엔텔"
     },
     {
       "bid_no": "R25BK00887553",
@@ -95555,10 +95607,10 @@
       "notice_date": "2025-06-10",
       "budget_eok": 24.0,
       "award_amount_eok": null,
-      "winner": "와이즈넛",
+      "winner": null,
       "bid_count": 2,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "nature": "시스템 구축·고도화",
       "fields": [
@@ -95582,7 +95634,8 @@
           "bizno": "1208767951",
           "ceo": "김대훈"
         }
-      ]
+      ],
+      "first_rank": "와이즈넛"
     },
     {
       "bid_no": "R25BK00889910",
@@ -95593,10 +95646,10 @@
       "notice_date": "2025-06-09",
       "budget_eok": 10.5,
       "award_amount_eok": null,
-      "winner": "위니텍",
+      "winner": null,
       "bid_count": 4,
       "second": "이웃",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -95636,7 +95689,8 @@
           "bizno": "1338145679",
           "ceo": "배호"
         }
-      ]
+      ],
+      "first_rank": "위니텍"
     },
     {
       "bid_no": "R25BK00884082",
@@ -95647,10 +95701,10 @@
       "notice_date": "2025-06-04",
       "budget_eok": 24.1,
       "award_amount_eok": null,
-      "winner": "마키나락스",
+      "winner": null,
       "bid_count": 5,
       "second": "한국이디에스",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -95698,7 +95752,8 @@
           "bizno": "5098802051",
           "ceo": "양순식"
         }
-      ]
+      ],
+      "first_rank": "마키나락스"
     },
     {
       "bid_no": "R25BK00884040",
@@ -95861,10 +95916,10 @@
       "notice_date": "2025-05-21",
       "budget_eok": 15.4,
       "award_amount_eok": null,
-      "winner": "솔트룩스",
+      "winner": null,
       "bid_count": 6,
       "second": "페르소나에이아이",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -95920,7 +95975,8 @@
           "bizno": "1208608334",
           "ceo": "김경서"
         }
-      ]
+      ],
+      "first_rank": "솔트룩스"
     },
     {
       "bid_no": "R25BK00859045",
@@ -95931,10 +95987,10 @@
       "notice_date": "2025-05-21",
       "budget_eok": 29.0,
       "award_amount_eok": null,
-      "winner": "비인텍",
+      "winner": null,
       "bid_count": 2,
       "second": "엠티데이타",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -95958,7 +96014,8 @@
           "bizno": "2158711279",
           "ceo": "옥정원"
         }
-      ]
+      ],
+      "first_rank": "비인텍"
     },
     {
       "bid_no": "R25BK00857951",
@@ -96013,10 +96070,10 @@
       "notice_date": "2025-05-20",
       "budget_eok": 19.8,
       "award_amount_eok": null,
-      "winner": "엘티메트릭",
+      "winner": null,
       "bid_count": 1,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -96032,7 +96089,8 @@
           "bizno": "4028158274",
           "ceo": "강인구"
         }
-      ]
+      ],
+      "first_rank": "엘티메트릭"
     },
     {
       "bid_no": "R25BK00857130",
@@ -96065,10 +96123,10 @@
       "notice_date": "2025-05-20",
       "budget_eok": 9.6,
       "award_amount_eok": null,
-      "winner": "엔플럭스",
+      "winner": null,
       "bid_count": 3,
       "second": "엔에스아이티",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "nature": "시스템 구축·고도화",
       "fields": [
@@ -96100,7 +96158,8 @@
           "bizno": "1058813720",
           "ceo": "윤재민"
         }
-      ]
+      ],
+      "first_rank": "엔플럭스"
     },
     {
       "bid_no": "R25BK00845758",
@@ -96111,10 +96170,10 @@
       "notice_date": "2025-05-15",
       "budget_eok": 12.4,
       "award_amount_eok": null,
-      "winner": "아로",
+      "winner": null,
       "bid_count": 3,
       "second": "비욘드테크",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -96146,7 +96205,8 @@
           "bizno": "1198145810",
           "ceo": "백세련"
         }
-      ]
+      ],
+      "first_rank": "아로"
     },
     {
       "bid_no": "R25BK00833269",
@@ -96220,10 +96280,10 @@
       "notice_date": "2025-04-21",
       "budget_eok": 12.0,
       "award_amount_eok": null,
-      "winner": "클로봇",
+      "winner": null,
       "bid_count": 1,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "nature": "시스템 구축·고도화",
       "fields": [
@@ -96239,7 +96299,8 @@
           "bizno": "3548600594",
           "ceo": "김창구"
         }
-      ]
+      ],
+      "first_rank": "클로봇"
     },
     {
       "bid_no": "R25BK00791991",
@@ -96294,10 +96355,10 @@
       "notice_date": "2025-04-07",
       "budget_eok": 21.1,
       "award_amount_eok": null,
-      "winner": "한국과학기술원",
+      "winner": null,
       "bid_count": 1,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -96313,7 +96374,8 @@
           "bizno": "3148201980",
           "ceo": "이광형"
         }
-      ]
+      ],
+      "first_rank": "한국과학기술원"
     },
     {
       "bid_no": "R25BK00756664",
@@ -96346,7 +96408,7 @@
       "notice_date": "2025-03-18",
       "budget_eok": 17.4,
       "award_amount_eok": null,
-      "winner": "삼성에스디에스 (1순위)",
+      "winner": null,
       "bid_count": 2,
       "second": "엘지씨엔에스",
       "status": "1순위",
@@ -96374,7 +96436,8 @@
           "bizno": "1168119477",
           "ceo": "현신균"
         }
-      ]
+      ],
+      "first_rank": "삼성에스디에스"
     },
     {
       "bid_no": "R25BK00716368",
@@ -96385,10 +96448,10 @@
       "notice_date": "2025-03-17",
       "budget_eok": 9.1,
       "award_amount_eok": null,
-      "winner": "한국과학기술원",
+      "winner": null,
       "bid_count": 1,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -96404,7 +96467,8 @@
           "bizno": "3148201980",
           "ceo": "이광형"
         }
-      ]
+      ],
+      "first_rank": "한국과학기술원"
     },
     {
       "bid_no": "R25BK00710401",
@@ -96437,10 +96501,10 @@
       "notice_date": "2025-03-13",
       "budget_eok": 9.2,
       "award_amount_eok": null,
-      "winner": "우리엘소프트",
+      "winner": null,
       "bid_count": 3,
       "second": "스마트포트테크놀로지",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "nature": "시스템 구축·고도화",
       "fields": [
@@ -96472,7 +96536,8 @@
           "bizno": "4088150697",
           "ceo": "강동진"
         }
-      ]
+      ],
+      "first_rank": "우리엘소프트"
     },
     {
       "bid_no": "R25BK00697077",
@@ -96504,10 +96569,10 @@
       "notice_date": "2025-02-18",
       "budget_eok": 9.8,
       "award_amount_eok": null,
-      "winner": "인튜브",
+      "winner": null,
       "bid_count": 4,
       "second": "셈웨어",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "nature": "시스템 구축·고도화",
       "fields": [
@@ -96547,7 +96612,8 @@
           "bizno": "2158197498",
           "ceo": "정진홍"
         }
-      ]
+      ],
+      "first_rank": "인튜브"
     },
     {
       "bid_no": "R25BK00640426",
@@ -96590,7 +96656,7 @@
       ],
       "nature": null,
       "award_lookup_at": "2026-10-30",
-      "win_rate_pct": 95.1
+      "award_to_budget_pct": 95.1
     },
     {
       "bid_no": "R25BK00619004",
@@ -96644,10 +96710,10 @@
       "notice_date": "2025-01-22",
       "budget_eok": 13.0,
       "award_amount_eok": null,
-      "winner": "씨이기술",
+      "winner": null,
       "bid_count": 1,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "운영·유지보수",
@@ -96663,7 +96729,8 @@
           "bizno": "1198603912",
           "ceo": "정영훈"
         }
-      ]
+      ],
+      "first_rank": "씨이기술"
     },
     {
       "bid_no": "R25BK00580477",
@@ -96674,10 +96741,10 @@
       "notice_date": "2025-01-15",
       "budget_eok": 9.0,
       "award_amount_eok": null,
-      "winner": "연세대학교 산학협력단",
+      "winner": null,
       "bid_count": 2,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -96702,7 +96769,8 @@
           "bizno": "4088213419",
           "ceo": "김용재"
         }
-      ]
+      ],
+      "first_rank": "연세대학교 산학협력단"
     },
     {
       "bid_no": "R25BK00580156",
@@ -96713,10 +96781,10 @@
       "notice_date": "2025-01-15",
       "budget_eok": 10.0,
       "award_amount_eok": null,
-      "winner": "이화여자대학교 산학협력단",
+      "winner": null,
       "bid_count": 3,
       "second": "화순전남대학교병원",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -96748,7 +96816,8 @@
           "bizno": "1108210500",
           "ceo": "홍종일"
         }
-      ]
+      ],
+      "first_rank": "이화여자대학교 산학협력단"
     },
     {
       "bid_no": "R25BK00579353",
@@ -96846,10 +96915,10 @@
       "notice_date": "2024-12-24",
       "budget_eok": 24.0,
       "award_amount_eok": null,
-      "winner": "지엠티",
+      "winner": null,
       "bid_count": 2,
       "second": "지씨",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "nature": "운영·유지보수",
       "fields": [
@@ -96873,7 +96942,8 @@
           "bizno": "6058141445",
           "ceo": "이상길"
         }
-      ]
+      ],
+      "first_rank": "지엠티"
     },
     {
       "bid_no": "20241237759",
@@ -96884,10 +96954,10 @@
       "notice_date": "2024-12-23",
       "budget_eok": 15.5,
       "award_amount_eok": null,
-      "winner": "싸이버테크",
+      "winner": null,
       "bid_count": 1,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -96903,7 +96973,8 @@
           "bizno": "4108129576",
           "ceo": "조성희"
         }
-      ]
+      ],
+      "first_rank": "싸이버테크"
     },
     {
       "bid_no": "20241232276",
@@ -96914,10 +96985,10 @@
       "notice_date": "2024-12-18",
       "budget_eok": 17.6,
       "award_amount_eok": null,
-      "winner": "글로벌시스템스",
+      "winner": null,
       "bid_count": 1,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "nature": "운영·유지보수",
       "fields": [
@@ -96933,7 +97004,8 @@
           "bizno": "4398700058",
           "ceo": "조영란"
         }
-      ]
+      ],
+      "first_rank": "글로벌시스템스"
     },
     {
       "bid_no": "20241230545",
@@ -96965,10 +97037,10 @@
       "notice_date": "2024-12-17",
       "budget_eok": 14.4,
       "award_amount_eok": null,
-      "winner": "피씨엔",
+      "winner": null,
       "bid_count": 1,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "운영·유지보수",
@@ -96984,7 +97056,8 @@
           "bizno": "2158607972",
           "ceo": "송광헌"
         }
-      ]
+      ],
+      "first_rank": "피씨엔"
     },
     {
       "bid_no": "20241229551",
@@ -97038,10 +97111,10 @@
       "notice_date": "2024-12-02",
       "budget_eok": 8.8,
       "award_amount_eok": null,
-      "winner": "무한정보기술",
+      "winner": null,
       "bid_count": 3,
       "second": "글로벌브릿지",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -97073,7 +97146,8 @@
           "bizno": "8418800637",
           "ceo": "장태철"
         }
-      ]
+      ],
+      "first_rank": "무한정보기술"
     },
     {
       "bid_no": "20241142285",
@@ -97148,10 +97222,10 @@
       "notice_date": "2024-11-20",
       "budget_eok": 13.6,
       "award_amount_eok": null,
-      "winner": "와이즈네스코",
+      "winner": null,
       "bid_count": 1,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "nature": "시스템 구축·고도화",
       "fields": [
@@ -97167,7 +97241,8 @@
           "bizno": "2128154485",
           "ceo": "백종석"
         }
-      ]
+      ],
+      "first_rank": "와이즈네스코"
     },
     {
       "bid_no": "20241114063",
@@ -97178,10 +97253,10 @@
       "notice_date": "2024-11-12",
       "budget_eok": 17.2,
       "award_amount_eok": null,
-      "winner": "지디엘시스템",
+      "winner": null,
       "bid_count": 8,
       "second": "에쓰오씨소프트",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -97253,7 +97328,8 @@
           "bizno": "7868101344",
           "ceo": "LIM DANIEL JESUPH"
         }
-      ]
+      ],
+      "first_rank": "지디엘시스템"
     },
     {
       "bid_no": "20241109245",
@@ -97264,10 +97340,10 @@
       "notice_date": "2024-11-07",
       "budget_eok": 16.0,
       "award_amount_eok": null,
-      "winner": "에스이티시스템",
+      "winner": null,
       "bid_count": 3,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -97299,7 +97375,8 @@
           "bizno": "5838701316",
           "ceo": "박영기"
         }
-      ]
+      ],
+      "first_rank": "에스이티시스템"
     },
     {
       "bid_no": "20241105097",
@@ -97352,10 +97429,10 @@
       "notice_date": "2024-11-04",
       "budget_eok": 13.0,
       "award_amount_eok": null,
-      "winner": "마인드원",
+      "winner": null,
       "bid_count": 2,
       "second": "비즈데이터",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -97379,7 +97456,8 @@
           "bizno": "2648135854",
           "ceo": "김태진"
         }
-      ]
+      ],
+      "first_rank": "마인드원"
     },
     {
       "bid_no": "20241036164",
@@ -97422,7 +97500,7 @@
       ],
       "nature": null,
       "award_lookup_at": "2026-10-30",
-      "win_rate_pct": 84.9
+      "award_to_budget_pct": 84.9
     },
     {
       "bid_no": "20241031835",
@@ -97571,10 +97649,10 @@
       "notice_date": "2024-09-25",
       "budget_eok": 9.0,
       "award_amount_eok": null,
-      "winner": "위즈아이(WIZAI.Co.,LTD)",
+      "winner": null,
       "bid_count": 5,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -97622,7 +97700,8 @@
           "bizno": "1198159594",
           "ceo": "오승준"
         }
-      ]
+      ],
+      "first_rank": "위즈아이(WIZAI.Co.,LTD)"
     },
     {
       "bid_no": "20240905277",
@@ -97633,10 +97712,10 @@
       "notice_date": "2024-09-11",
       "budget_eok": 8.0,
       "award_amount_eok": null,
-      "winner": "한국교원대학교산학협력단",
+      "winner": null,
       "bid_count": 7,
       "second": "데이터드리븐",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -97700,7 +97779,8 @@
           "bizno": "2098208298",
           "ceo": "권정환"
         }
-      ]
+      ],
+      "first_rank": "한국교원대학교산학협력단"
     },
     {
       "bid_no": "20240909086",
@@ -97711,10 +97791,10 @@
       "notice_date": "2024-09-10",
       "budget_eok": 9.0,
       "award_amount_eok": null,
-      "winner": "한국과학기술원",
+      "winner": null,
       "bid_count": 2,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "ISP·전략",
@@ -97739,7 +97819,8 @@
           "bizno": "6178701415",
           "ceo": "황인호"
         }
-      ]
+      ],
+      "first_rank": "한국과학기술원"
     },
     {
       "bid_no": "20240907648",
@@ -97791,10 +97872,10 @@
       "notice_date": "2024-08-14",
       "budget_eok": 10.1,
       "award_amount_eok": null,
-      "winner": "오톰",
+      "winner": null,
       "bid_count": 2,
       "second": "자유로운소프트",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -97818,7 +97899,8 @@
           "bizno": "4588101454",
           "ceo": "홍진희"
         }
-      ]
+      ],
+      "first_rank": "오톰"
     },
     {
       "bid_no": "20240811182",
@@ -97923,10 +98005,10 @@
       "notice_date": "2024-08-09",
       "budget_eok": 11.1,
       "award_amount_eok": null,
-      "winner": "인플랩",
+      "winner": null,
       "bid_count": 4,
       "second": "스피어에이엑스",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "nature": "시스템 구축·고도화",
       "fields": [
@@ -97966,7 +98048,8 @@
           "bizno": "2208193121",
           "ceo": "최일규"
         }
-      ]
+      ],
+      "first_rank": "인플랩"
     },
     {
       "bid_no": "20240800365",
@@ -97977,10 +98060,10 @@
       "notice_date": "2024-08-05",
       "budget_eok": 8.3,
       "award_amount_eok": null,
-      "winner": "인스페이스",
+      "winner": null,
       "bid_count": 2,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -98004,7 +98087,8 @@
           "bizno": "4578102412",
           "ceo": "이정훈"
         }
-      ]
+      ],
+      "first_rank": "인스페이스"
     },
     {
       "bid_no": "20240735295",
@@ -98036,10 +98120,10 @@
       "notice_date": "2024-07-29",
       "budget_eok": 8.9,
       "award_amount_eok": null,
-      "winner": "에이아이웍스( AIWORKX Inc.)",
+      "winner": null,
       "bid_count": 5,
       "second": "넥스리얼",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -98087,7 +98171,8 @@
           "bizno": "1078719801",
           "ceo": "조장관"
         }
-      ]
+      ],
+      "first_rank": "에이아이웍스( AIWORKX Inc.)"
     },
     {
       "bid_no": "20240733102",
@@ -98140,10 +98225,10 @@
       "notice_date": "2024-07-25",
       "budget_eok": 8.9,
       "award_amount_eok": null,
-      "winner": "그렉터",
+      "winner": null,
       "bid_count": 3,
       "second": "스코인포",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "nature": "시스템 구축·고도화",
       "fields": [
@@ -98175,7 +98260,8 @@
           "bizno": "6078151293",
           "ceo": "김태연"
         }
-      ]
+      ],
+      "first_rank": "그렉터"
     },
     {
       "bid_no": "20240721343",
@@ -98206,10 +98292,10 @@
       "notice_date": "2024-07-12",
       "budget_eok": 22.3,
       "award_amount_eok": null,
-      "winner": "코너스톤앤컴퍼니",
+      "winner": null,
       "bid_count": 1,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -98225,7 +98311,8 @@
           "bizno": "8308702400",
           "ceo": "이정석"
         }
-      ]
+      ],
+      "first_rank": "코너스톤앤컴퍼니"
     },
     {
       "bid_no": "20240710730",
@@ -98278,10 +98365,10 @@
       "notice_date": "2024-06-27",
       "budget_eok": 8.7,
       "award_amount_eok": null,
-      "winner": "코난테크놀로지",
+      "winner": null,
       "bid_count": 5,
       "second": "골든플래닛",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -98329,7 +98416,8 @@
           "bizno": "1148642166",
           "ceo": "이상훈"
         }
-      ]
+      ],
+      "first_rank": "코난테크놀로지"
     },
     {
       "bid_no": "20240632792",
@@ -98340,10 +98428,10 @@
       "notice_date": "2024-06-25",
       "budget_eok": 11.8,
       "award_amount_eok": null,
-      "winner": "그노티",
+      "winner": null,
       "bid_count": 1,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -98359,7 +98447,8 @@
           "bizno": "8398801249",
           "ceo": "장기석"
         }
-      ]
+      ],
+      "first_rank": "그노티"
     },
     {
       "bid_no": "20240624853",
@@ -98392,10 +98481,10 @@
       "notice_date": "2024-06-19",
       "budget_eok": 10.4,
       "award_amount_eok": null,
-      "winner": "팀벨",
+      "winner": null,
       "bid_count": 1,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -98411,7 +98500,8 @@
           "bizno": "2068158545",
           "ceo": "윤종후"
         }
-      ]
+      ],
+      "first_rank": "팀벨"
     },
     {
       "bid_no": "20240623158",
@@ -98422,10 +98512,10 @@
       "notice_date": "2024-06-18",
       "budget_eok": 25.3,
       "award_amount_eok": null,
-      "winner": "이씨에스텔레콤",
+      "winner": null,
       "bid_count": 4,
       "second": "브리지텍",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -98465,7 +98555,8 @@
           "bizno": "2158158684",
           "ceo": "채준원"
         }
-      ]
+      ],
+      "first_rank": "이씨에스텔레콤"
     },
     {
       "bid_no": "20240621185",
@@ -98476,10 +98567,10 @@
       "notice_date": "2024-06-17",
       "budget_eok": 12.8,
       "award_amount_eok": null,
-      "winner": "오픈노트",
+      "winner": null,
       "bid_count": 3,
       "second": "펜타시스템테크놀러지",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -98511,7 +98602,8 @@
           "bizno": "2118780100",
           "ceo": "정의윤"
         }
-      ]
+      ],
+      "first_rank": "오픈노트"
     },
     {
       "bid_no": "20240610118",
@@ -98522,10 +98614,10 @@
       "notice_date": "2024-06-11",
       "budget_eok": 8.1,
       "award_amount_eok": null,
-      "winner": "모비젠",
+      "winner": null,
       "bid_count": 2,
       "second": "펜타시스템테크놀러지",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -98549,7 +98641,8 @@
           "bizno": "1168135346",
           "ceo": "장종준"
         }
-      ]
+      ],
+      "first_rank": "모비젠"
     },
     {
       "bid_no": "20240609581",
@@ -98560,10 +98653,10 @@
       "notice_date": "2024-06-10",
       "budget_eok": 13.0,
       "award_amount_eok": null,
-      "winner": "라임솔루션",
+      "winner": null,
       "bid_count": 6,
       "second": "웨슬리퀘스트",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -98619,7 +98712,8 @@
           "bizno": "5028198620",
           "ceo": "박윤하"
         }
-      ]
+      ],
+      "first_rank": "라임솔루션"
     },
     {
       "bid_no": "20240600355",
@@ -98630,10 +98724,10 @@
       "notice_date": "2024-06-04",
       "budget_eok": 13.8,
       "award_amount_eok": null,
-      "winner": "지씨",
+      "winner": null,
       "bid_count": 2,
       "second": "지엠티",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -98657,7 +98751,8 @@
           "bizno": "2018173556",
           "ceo": "문병욱"
         }
-      ]
+      ],
+      "first_rank": "지씨"
     },
     {
       "bid_no": "20240528215",
@@ -98668,10 +98763,10 @@
       "notice_date": "2024-05-22",
       "budget_eok": 8.8,
       "award_amount_eok": null,
-      "winner": "한국정보기술",
+      "winner": null,
       "bid_count": 4,
       "second": "싸인텔레콤",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -98711,7 +98806,8 @@
           "bizno": "7058701008",
           "ceo": "김하율"
         }
-      ]
+      ],
+      "first_rank": "한국정보기술"
     },
     {
       "bid_no": "20240516117",
@@ -98744,10 +98840,10 @@
       "notice_date": "2024-05-16",
       "budget_eok": 12.0,
       "award_amount_eok": null,
-      "winner": "엘티메트릭",
+      "winner": null,
       "bid_count": 3,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -98779,7 +98875,8 @@
           "bizno": "7758801396",
           "ceo": "황욱철"
         }
-      ]
+      ],
+      "first_rank": "엘티메트릭"
     },
     {
       "bid_no": "20240516796",
@@ -98834,10 +98931,10 @@
       "notice_date": "2024-05-08",
       "budget_eok": 14.2,
       "award_amount_eok": null,
-      "winner": "한시스템",
+      "winner": null,
       "bid_count": 1,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "nature": "시스템 구축·고도화",
       "fields": [
@@ -98853,7 +98950,8 @@
           "bizno": "1388163629",
           "ceo": "한정수"
         }
-      ]
+      ],
+      "first_rank": "한시스템"
     },
     {
       "bid_no": "20240507167",
@@ -98864,10 +98962,10 @@
       "notice_date": "2024-05-07",
       "budget_eok": 17.4,
       "award_amount_eok": null,
-      "winner": "아일리스프런티어",
+      "winner": null,
       "bid_count": 3,
       "second": "유큐브",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -98899,7 +98997,8 @@
           "bizno": "1058811095",
           "ceo": "김남현"
         }
-      ]
+      ],
+      "first_rank": "아일리스프런티어"
     },
     {
       "bid_no": "20240433448",
@@ -98910,10 +99009,10 @@
       "notice_date": "2024-04-30",
       "budget_eok": 10.4,
       "award_amount_eok": null,
-      "winner": "유플러스아이티",
+      "winner": null,
       "bid_count": 3,
       "second": "비인텍",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "nature": "시스템 구축·고도화",
       "fields": [
@@ -98945,7 +99044,8 @@
           "bizno": "3608800841",
           "ceo": "변원"
         }
-      ]
+      ],
+      "first_rank": "유플러스아이티"
     },
     {
       "bid_no": "20240440515",
@@ -98956,10 +99056,10 @@
       "notice_date": "2024-04-26",
       "budget_eok": 9.8,
       "award_amount_eok": null,
-      "winner": "대흥정보",
+      "winner": null,
       "bid_count": 2,
       "second": "다래파크텍",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "nature": "시스템 구축·고도화",
       "fields": [
@@ -98983,7 +99083,8 @@
           "bizno": "2118199266",
           "ceo": "진정호"
         }
-      ]
+      ],
+      "first_rank": "대흥정보"
     },
     {
       "bid_no": "20240409676",
@@ -98994,10 +99095,10 @@
       "notice_date": "2024-04-26",
       "budget_eok": 10.1,
       "award_amount_eok": null,
-      "winner": "클로봇",
+      "winner": null,
       "bid_count": 2,
       "second": "엔디에스솔루션",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "nature": "시스템 구축·고도화",
       "fields": [
@@ -99021,7 +99122,8 @@
           "bizno": "1298620316",
           "ceo": "김남교"
         }
-      ]
+      ],
+      "first_rank": "클로봇"
     },
     {
       "bid_no": "20240437463",
@@ -99213,7 +99315,7 @@
       ],
       "scope": "AI SW 확대",
       "award_lookup_at": "2026-10-30",
-      "win_rate_pct": 99.4
+      "award_to_budget_pct": 99.4
     },
     {
       "bid_no": "20240303803",
@@ -99224,10 +99326,10 @@
       "notice_date": "2024-03-05",
       "budget_eok": 9.0,
       "award_amount_eok": null,
-      "winner": "인튜브",
+      "winner": null,
       "bid_count": 2,
       "second": "엔큐브",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "nature": "시스템 구축·고도화",
       "fields": [
@@ -99251,7 +99353,8 @@
           "bizno": "3058620531",
           "ceo": "조은식"
         }
-      ]
+      ],
+      "first_rank": "인튜브"
     },
     {
       "bid_no": "20240241140",
@@ -99354,10 +99457,10 @@
       "notice_date": "2024-02-05",
       "budget_eok": 19.7,
       "award_amount_eok": null,
-      "winner": "지씨",
+      "winner": null,
       "bid_count": 2,
       "second": "지엠티",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "nature": "운영·유지보수",
       "fields": [
@@ -99381,7 +99484,8 @@
           "bizno": "2018173556",
           "ceo": "문병욱"
         }
-      ]
+      ],
+      "first_rank": "지씨"
     },
     {
       "bid_no": "20240201266",
@@ -99413,10 +99517,10 @@
       "notice_date": "2024-01-24",
       "budget_eok": 13.3,
       "award_amount_eok": null,
-      "winner": "연세대학교 산학협력단",
+      "winner": null,
       "bid_count": 1,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -99432,7 +99536,8 @@
           "bizno": "1108210500",
           "ceo": null
         }
-      ]
+      ],
+      "first_rank": "연세대학교 산학협력단"
     },
     {
       "bid_no": "20240122339",
@@ -99574,10 +99679,10 @@
       "notice_date": "2023-12-20",
       "budget_eok": 11.5,
       "award_amount_eok": null,
-      "winner": "아이씨티웨이",
+      "winner": null,
       "bid_count": 1,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "nature": "운영·유지보수",
       "fields": [
@@ -99593,7 +99698,8 @@
           "bizno": "1388172429",
           "ceo": "조유복"
         }
-      ]
+      ],
+      "first_rank": "아이씨티웨이"
     },
     {
       "bid_no": "20231234728",
@@ -99668,10 +99774,10 @@
       "notice_date": "2023-12-04",
       "budget_eok": 9.9,
       "award_amount_eok": null,
-      "winner": "이지스",
+      "winner": null,
       "bid_count": 2,
       "second": "에이테크",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -99695,7 +99801,8 @@
           "bizno": "6858600969",
           "ceo": "김정완"
         }
-      ]
+      ],
+      "first_rank": "이지스"
     },
     {
       "bid_no": "20231204679",
@@ -99792,10 +99899,10 @@
       "notice_date": "2023-10-20",
       "budget_eok": 17.8,
       "award_amount_eok": null,
-      "winner": "아크릴",
+      "winner": null,
       "bid_count": 2,
       "second": "티쓰리큐",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "운영·유지보수",
@@ -99819,7 +99926,8 @@
           "bizno": "1138611016",
           "ceo": "박병훈"
         }
-      ]
+      ],
+      "first_rank": "아크릴"
     },
     {
       "bid_no": "20231007709",
@@ -99914,10 +100022,10 @@
       "notice_date": "2023-09-19",
       "budget_eok": 9.1,
       "award_amount_eok": null,
-      "winner": "빛가람정보",
+      "winner": null,
       "bid_count": 1,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -99933,7 +100041,8 @@
           "bizno": "4108180267",
           "ceo": "이미영"
         }
-      ]
+      ],
+      "first_rank": "빛가람정보"
     },
     {
       "bid_no": "20230902374",
@@ -99987,10 +100096,10 @@
       "notice_date": "2023-08-16",
       "budget_eok": 17.6,
       "award_amount_eok": null,
-      "winner": "글로벌시스템스",
+      "winner": null,
       "bid_count": 1,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "nature": "운영·유지보수",
       "fields": [
@@ -100006,7 +100115,8 @@
           "bizno": "4398700058",
           "ceo": "조영란"
         }
-      ]
+      ],
+      "first_rank": "글로벌시스템스"
     },
     {
       "bid_no": "20230816698",
@@ -100017,10 +100127,10 @@
       "notice_date": "2023-08-16",
       "budget_eok": 9.3,
       "award_amount_eok": null,
-      "winner": "글로벌브릿지",
+      "winner": null,
       "bid_count": 1,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "nature": "시스템 구축·고도화",
       "fields": [
@@ -100036,7 +100146,8 @@
           "bizno": "2398100645",
           "ceo": "홍윤국"
         }
-      ]
+      ],
+      "first_rank": "글로벌브릿지"
     },
     {
       "bid_no": "20230807420",
@@ -100068,10 +100179,10 @@
       "notice_date": "2023-08-07",
       "budget_eok": 17.1,
       "award_amount_eok": null,
-      "winner": "시그마체인",
+      "winner": null,
       "bid_count": 2,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -100095,7 +100206,8 @@
           "bizno": "1988801134",
           "ceo": "김동환"
         }
-      ]
+      ],
+      "first_rank": "시그마체인"
     },
     {
       "bid_no": "20230801548",
@@ -100147,10 +100259,10 @@
       "notice_date": "2023-07-17",
       "budget_eok": 8.1,
       "award_amount_eok": null,
-      "winner": "올포랜드",
+      "winner": null,
       "bid_count": 1,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "nature": "시스템 구축·고도화",
       "fields": [
@@ -100166,7 +100278,8 @@
           "bizno": "4028162555",
           "ceo": "김병기"
         }
-      ]
+      ],
+      "first_rank": "올포랜드"
     },
     {
       "bid_no": "20230716554",
@@ -100177,10 +100290,10 @@
       "notice_date": "2023-07-12",
       "budget_eok": 9.5,
       "award_amount_eok": null,
-      "winner": "엔플럭스",
+      "winner": null,
       "bid_count": 3,
       "second": "플럭시티",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "nature": "시스템 구축·고도화",
       "fields": [
@@ -100212,7 +100325,8 @@
           "bizno": "1058656119",
           "ceo": "이동철"
         }
-      ]
+      ],
+      "first_rank": "엔플럭스"
     },
     {
       "bid_no": "20230711697",
@@ -100223,10 +100337,10 @@
       "notice_date": "2023-07-10",
       "budget_eok": 16.1,
       "award_amount_eok": null,
-      "winner": "이노팸",
+      "winner": null,
       "bid_count": 1,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -100242,7 +100356,8 @@
           "bizno": "2048651274",
           "ceo": "이임평"
         }
-      ]
+      ],
+      "first_rank": "이노팸"
     },
     {
       "bid_no": "20230706947",
@@ -100295,10 +100410,10 @@
       "notice_date": "2023-06-26",
       "budget_eok": 22.3,
       "award_amount_eok": null,
-      "winner": "어빌리티시스템즈",
+      "winner": null,
       "bid_count": 1,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "nature": "시스템 구축·고도화",
       "fields": [
@@ -100314,7 +100429,8 @@
           "bizno": "1148637590",
           "ceo": "신재일"
         }
-      ]
+      ],
+      "first_rank": "어빌리티시스템즈"
     },
     {
       "bid_no": "20230637202",
@@ -100369,10 +100485,10 @@
       "notice_date": "2023-06-22",
       "budget_eok": 9.7,
       "award_amount_eok": null,
-      "winner": "위지원시스템즈",
+      "winner": null,
       "bid_count": 1,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -100388,7 +100504,8 @@
           "bizno": "1108609791",
           "ceo": "민경철"
         }
-      ]
+      ],
+      "first_rank": "위지원시스템즈"
     },
     {
       "bid_no": "20230621712",
@@ -100399,10 +100516,10 @@
       "notice_date": "2023-06-15",
       "budget_eok": 17.1,
       "award_amount_eok": null,
-      "winner": "마인드원",
+      "winner": null,
       "bid_count": 3,
       "second": "에이치에스씨엠티",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "nature": "시스템 구축·고도화",
       "fields": [
@@ -100434,7 +100551,8 @@
           "bizno": "1208635675",
           "ceo": "한윤기"
         }
-      ]
+      ],
+      "first_rank": "마인드원"
     },
     {
       "bid_no": "20230610326",
@@ -100486,10 +100604,10 @@
       "notice_date": "2023-06-02",
       "budget_eok": 20.1,
       "award_amount_eok": null,
-      "winner": "한국클라우드",
+      "winner": null,
       "bid_count": 4,
       "second": "미코에이아이",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -100529,7 +100647,8 @@
           "bizno": "2858701391",
           "ceo": "김효형"
         }
-      ]
+      ],
+      "first_rank": "한국클라우드"
     },
     {
       "bid_no": "20230529278",
@@ -100562,10 +100681,10 @@
       "notice_date": "2023-05-30",
       "budget_eok": 10.4,
       "award_amount_eok": null,
-      "winner": "포위즈시스템",
+      "winner": null,
       "bid_count": 4,
       "second": "셈웨어",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -100605,7 +100724,8 @@
           "bizno": "1208802692",
           "ceo": "오태형"
         }
-      ]
+      ],
+      "first_rank": "포위즈시스템"
     },
     {
       "bid_no": "20230533979",
@@ -100616,10 +100736,10 @@
       "notice_date": "2023-05-23",
       "budget_eok": 14.7,
       "award_amount_eok": null,
-      "winner": "지씨",
+      "winner": null,
       "bid_count": 1,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -100635,7 +100755,8 @@
           "bizno": "6058141445",
           "ceo": "이상길"
         }
-      ]
+      ],
+      "first_rank": "지씨"
     },
     {
       "bid_no": "20230530291",
@@ -100668,10 +100789,10 @@
       "notice_date": "2023-05-19",
       "budget_eok": 15.0,
       "award_amount_eok": null,
-      "winner": "엔에이치엔인재아이엔씨",
+      "winner": null,
       "bid_count": 1,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "nature": "시스템 구축·고도화",
       "fields": [
@@ -100687,7 +100808,8 @@
           "bizno": "1198145810",
           "ceo": "백세련"
         }
-      ]
+      ],
+      "first_rank": "엔에이치엔인재아이엔씨"
     },
     {
       "bid_no": "20230528050",
@@ -100719,10 +100841,10 @@
       "notice_date": "2023-05-18",
       "budget_eok": 16.7,
       "award_amount_eok": null,
-      "winner": "한시스템",
+      "winner": null,
       "bid_count": 1,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "nature": "시스템 구축·고도화",
       "fields": [
@@ -100738,7 +100860,8 @@
           "bizno": "1388163629",
           "ceo": "한정수"
         }
-      ]
+      ],
+      "first_rank": "한시스템"
     },
     {
       "bid_no": "20230517526",
@@ -100749,10 +100872,10 @@
       "notice_date": "2023-05-18",
       "budget_eok": 27.4,
       "award_amount_eok": null,
-      "winner": "지어소프트",
+      "winner": null,
       "bid_count": 1,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -100768,7 +100891,8 @@
           "bizno": "2118645334",
           "ceo": "김영준"
         }
-      ]
+      ],
+      "first_rank": "지어소프트"
     },
     {
       "bid_no": "20230520777",
@@ -100779,10 +100903,10 @@
       "notice_date": "2023-05-16",
       "budget_eok": 18.6,
       "award_amount_eok": null,
-      "winner": "모비젠",
+      "winner": null,
       "bid_count": 5,
       "second": "에이다루트",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -100830,7 +100954,8 @@
           "bizno": "1208635675",
           "ceo": "한윤기"
         }
-      ]
+      ],
+      "first_rank": "모비젠"
     },
     {
       "bid_no": "20230517991",
@@ -100841,10 +100966,10 @@
       "notice_date": "2023-05-12",
       "budget_eok": 27.5,
       "award_amount_eok": null,
-      "winner": "아크릴",
+      "winner": null,
       "bid_count": 5,
       "second": "딥브레인에이아이",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -100892,7 +101017,8 @@
           "bizno": "1988101168",
           "ceo": "고성욱"
         }
-      ]
+      ],
+      "first_rank": "아크릴"
     },
     {
       "bid_no": "20230517417",
@@ -100903,10 +101029,10 @@
       "notice_date": "2023-05-12",
       "budget_eok": 15.1,
       "award_amount_eok": null,
-      "winner": "웨슬리퀘스트",
+      "winner": null,
       "bid_count": 6,
       "second": "제논",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -100962,7 +101088,8 @@
           "bizno": "1058786298",
           "ceo": "이춘식"
         }
-      ]
+      ],
+      "first_rank": "웨슬리퀘스트"
     },
     {
       "bid_no": "20230514362",
@@ -100995,10 +101122,10 @@
       "notice_date": "2023-05-12",
       "budget_eok": 13.3,
       "award_amount_eok": null,
-      "winner": "유플러스아이티",
+      "winner": null,
       "bid_count": 3,
       "second": "에스아이시티",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "nature": "시스템 구축·고도화",
       "fields": [
@@ -101030,7 +101157,8 @@
           "bizno": "1138629442",
           "ceo": "김연기"
         }
-      ]
+      ],
+      "first_rank": "유플러스아이티"
     },
     {
       "bid_no": "20230511144",
@@ -101041,10 +101169,10 @@
       "notice_date": "2023-05-10",
       "budget_eok": 9.6,
       "award_amount_eok": null,
-      "winner": "팀벨",
+      "winner": null,
       "bid_count": 1,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -101060,7 +101188,8 @@
           "bizno": "2068158545",
           "ceo": "윤종후"
         }
-      ]
+      ],
+      "first_rank": "팀벨"
     },
     {
       "bid_no": "20230509426",
@@ -101071,10 +101200,10 @@
       "notice_date": "2023-05-08",
       "budget_eok": 11.8,
       "award_amount_eok": null,
-      "winner": "크렌진",
+      "winner": null,
       "bid_count": 5,
       "second": "스윙크",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -101122,7 +101251,8 @@
           "bizno": "2858701391",
           "ceo": "김효형"
         }
-      ]
+      ],
+      "first_rank": "크렌진"
     },
     {
       "bid_no": "20230506613",
@@ -101133,10 +101263,10 @@
       "notice_date": "2023-05-08",
       "budget_eok": 18.4,
       "award_amount_eok": null,
-      "winner": "가온아이",
+      "winner": null,
       "bid_count": 2,
       "second": "유큐브",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -101160,7 +101290,8 @@
           "bizno": "2288105280",
           "ceo": "김정범"
         }
-      ]
+      ],
+      "first_rank": "가온아이"
     },
     {
       "bid_no": "20230504498",
@@ -101171,10 +101302,10 @@
       "notice_date": "2023-05-03",
       "budget_eok": 15.8,
       "award_amount_eok": null,
-      "winner": "셈웨어",
+      "winner": null,
       "bid_count": 7,
       "second": "유컴패니온그룹",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -101238,7 +101369,8 @@
           "bizno": "1208802692",
           "ceo": "오태형"
         }
-      ]
+      ],
+      "first_rank": "셈웨어"
     },
     {
       "bid_no": "20230502197",
@@ -101291,10 +101423,10 @@
       "notice_date": "2023-04-20",
       "budget_eok": 20.1,
       "award_amount_eok": null,
-      "winner": "티지",
+      "winner": null,
       "bid_count": 1,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "ISP·전략",
@@ -101310,7 +101442,8 @@
           "bizno": "1058748713",
           "ceo": "전원영"
         }
-      ]
+      ],
+      "first_rank": "티지"
     },
     {
       "bid_no": "20230413425",
@@ -101321,10 +101454,10 @@
       "notice_date": "2023-04-11",
       "budget_eok": 8.8,
       "award_amount_eok": null,
-      "winner": "아크릴",
+      "winner": null,
       "bid_count": 6,
       "second": "제논",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "운영·유지보수",
@@ -101380,7 +101513,8 @@
           "bizno": "6168629484",
           "ceo": "김연섭"
         }
-      ]
+      ],
+      "first_rank": "아크릴"
     },
     {
       "bid_no": "20230413631",
@@ -101473,10 +101607,10 @@
       "notice_date": "2023-04-06",
       "budget_eok": 10.1,
       "award_amount_eok": null,
-      "winner": "클로봇",
+      "winner": null,
       "bid_count": 3,
       "second": "엔디에스솔루션",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "nature": "시스템 구축·고도화",
       "fields": [
@@ -101508,7 +101642,8 @@
           "bizno": "1238187503",
           "ceo": "민대홍"
         }
-      ]
+      ],
+      "first_rank": "클로봇"
     },
     {
       "bid_no": "20230354068",
@@ -101519,10 +101654,10 @@
       "notice_date": "2023-04-06",
       "budget_eok": 8.9,
       "award_amount_eok": null,
-      "winner": "마음에이아이",
+      "winner": null,
       "bid_count": 2,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "생성형·Agent",
       "nature": "시스템 구축·고도화",
@@ -101547,7 +101682,8 @@
           "bizno": "2298137316",
           "ceo": "김영섬"
         }
-      ]
+      ],
+      "first_rank": "마음에이아이"
     },
     {
       "bid_no": "20230403174",
@@ -101580,10 +101716,10 @@
       "notice_date": "2023-03-30",
       "budget_eok": 11.6,
       "award_amount_eok": null,
-      "winner": "쿠도커뮤니케이션",
+      "winner": null,
       "bid_count": 6,
       "second": "글로벌텔레콤",
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "nature": "시스템 구축·고도화",
       "fields": [
@@ -101639,7 +101775,8 @@
           "bizno": "8348800100",
           "ceo": "이정운"
         }
-      ]
+      ],
+      "first_rank": "쿠도커뮤니케이션"
     },
     {
       "bid_no": "20230337459",
@@ -101715,10 +101852,10 @@
       "notice_date": "2023-03-08",
       "budget_eok": 8.4,
       "award_amount_eok": null,
-      "winner": "이글루코퍼레이션",
+      "winner": null,
       "bid_count": 1,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
@@ -101734,7 +101871,8 @@
           "bizno": "1078172385",
           "ceo": "이득춘"
         }
-      ]
+      ],
+      "first_rank": "이글루코퍼레이션"
     },
     {
       "bid_no": "20230300941",
@@ -101745,10 +101883,10 @@
       "notice_date": "2023-03-06",
       "budget_eok": 11.1,
       "award_amount_eok": null,
-      "winner": "에이투지시스템",
+      "winner": null,
       "bid_count": 1,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "nature": "시스템 구축·고도화",
       "fields": [
@@ -101764,7 +101902,8 @@
           "bizno": "1238634807",
           "ceo": "이제호"
         }
-      ]
+      ],
+      "first_rank": "에이투지시스템"
     },
     {
       "bid_no": "20230301727",
@@ -101775,10 +101914,10 @@
       "notice_date": "2023-03-02",
       "budget_eok": 15.9,
       "award_amount_eok": null,
-      "winner": "지엠티",
+      "winner": null,
       "bid_count": 1,
       "second": null,
-      "status": "낙찰 미수집",
+      "status": "1순위",
       "source": "bootstrap",
       "nature": "운영·유지보수",
       "fields": [
@@ -101794,7 +101933,8 @@
           "bizno": "2018173556",
           "ceo": "문병욱"
         }
-      ]
+      ],
+      "first_rank": "지엠티"
     },
     {
       "bid_no": "20230228715",
@@ -102128,7 +102268,7 @@
       "fields": [
         "AI 일반"
       ],
-      "win_rate_pct": 99.0
+      "award_to_budget_pct": 99.0
     },
     {
       "bid_no": "R26BK01659421",
@@ -102167,7 +102307,7 @@
       "fields": [
         "AI 일반"
       ],
-      "win_rate_pct": 100.0
+      "award_to_budget_pct": 100.0
     },
     {
       "bid_no": "R26BK01648665",

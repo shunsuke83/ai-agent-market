@@ -6,7 +6,7 @@
 
 | 엔티티 | 주요 필드 | 사이트 매핑 |
 |--------|-----------|-------------|
-| **Notice** | `bid_no`, `bid_ord`, `notice_date`, `org`, `title`, `scope`, `fields[]`, `nature`, `budget_eok`, `open_date`, `status`, `winner`, … | `band.html` 공고별 결과, 주간/월간 리포트 |
+| **Notice** | `bid_no`, `bid_ord`, `notice_date`, `org`, `title`, `scope`, `fields[]`, `nature`, `budget_eok`, `open_date`, `status`, `winner`, `first_rank`, … | `band.html` 공고별 결과, 주간/월간 리포트 |
 | **Award** | `open_date`, `budget_eok`, `award_amount_eok`, `winner`, `bid_count`, `second` | `awards.html` 대형 낙찰 |
 | **Competitor** | `name`, `type`, `bids`, `wins`, `award_amount_eok`, … | `competitors.html` (프로필은 편집, 실적은 집계) |
 
@@ -15,6 +15,17 @@
 `fields` (분야): `생성형·LLM`, `AI 에이전트`, `AI 보안`, `AI 인프라`, `데이터·예측`, … 또는 `AI 일반`.
 
 예산 단위는 **억 원** (`budget_eok`). 8~30억 구간이 `band.html` 타깃.
+
+### 결과·금액 필드 규칙
+
+- `winner`: 낙찰 확정 업체만. 개찰 1순위(협상·적격심사 전)는 `first_rank`에 두고 낙찰 집계에 넣지 않습니다.
+- `award_amount_eok`: 나라장터가 공개한 낙찰금액만. 없으면 비워 두고 화면에 `미확인`으로 표시하며, 예산으로 대신 채우지 않습니다.
+- `win_rate_pct`: 나라장터 낙찰률(예정가격 대비) 원값. `award_to_budget_pct`: 낙찰금액 ÷ 예산 계산값. 둘을 섞지 않습니다.
+
+### 시드와 수집 상태
+
+- `data/seed/editorial-2026-10-28.json`: 자동 렌더 이전 수작업 HTML에서 추출한 **동결 시드**. 읽기 전용이며 렌더된 HTML에서 다시 만들지 않습니다(지난주 화면이 이번 주 입력이 되는 순환 방지). 실 수집값이 항상 우선하고, 집계 하한으로 쓰지 않습니다.
+- `data/run_status.json`: 단계별(`collect`·`awards`·`bidders`) 마지막 시도·결과·마지막 성공 시각. `index.html` 스탬프는 렌더 날짜가 아니라 공고 수집의 마지막 성공일을 `데이터 기준`으로 표시하고, 최근 수집이 실패했으면 "기존 데이터 표시 중"을 덧붙입니다.
 
 ## Open API
 
@@ -32,8 +43,8 @@
 cd collector
 python -m pip install -r requirements.txt
 
-# 1) 현재 HTML → 구조화 JSON (API 키 불필요)
-python -m g2b.collect bootstrap --out ../data/bootstrap.json
+# 1) (이관·복구용) 현재 HTML → 구조화 JSON. 동결 시드는 덮어쓰지 않음
+python -m g2b.collect bootstrap --out /tmp/extract.json
 
 # 2) 제목 분류 스모크 / notices 재분류
 python -m g2b.collect classify "생성형 AI 플랫폼 구축"
@@ -60,12 +71,13 @@ GitHub Actions: `.github/workflows/collect.yml` — secret `DATA_GO_KR_SERVICE_K
 
 - `band.html` 공고별 결과 테이블 (+ 상단 공고 건수·예산 합계 스탯)
 - `awards.html` 30억+ 낙찰 · 수주 상위 · 연도별 · 개찰 확인 필요
-- `index.html` `최종 갱신` 스탬프
+- `index.html` `데이터 기준` 스탬프 (`data/run_status.json`)
 - `competitors.html` 한눈에 보기 KPI + 상세 실적 수치 (`competitors.yaml` 별칭 매칭)
-  - 낙찰·금액: notices ∪ bootstrap 낙찰 집계 (시드보다 줄이지 않음)
-  - 투찰: OpengCompt `bidders[]` 실측 (`max(시드, live_bids, 낙찰)`; 커버리지 증가 시 시드 초과 가능)
-  - `enrich-bidders --include-bootstrap`: bootstrap 낙찰 공고를 notices에 upsert 후 경쟁사 낙찰 우선 보강
-- 시드: `data/bootstrap.json` ∪ `data/notices.json`
+  - 낙찰·금액: 동결 시드 ∪ notices 중 낙찰 확정 건, 공개 낙찰금액만 합산. 정정되면 줄어들 수 있음
+  - 투찰: OpengCompt `bidders[]` 실측 (`max(live_bids, 낙찰)`)
+  - 편집 조사값(2026-10-28)은 별도 열로만 표시하고 합치지 않음
+  - `enrich-bidders --include-bootstrap`: 시드 낙찰 공고를 notices에 upsert 후 경쟁사 낙찰 우선 보강
+- 이관: `python -m g2b.collect migrate-results` (1순위·계산 비율 분리, 재실행해도 변화 없음)
 
 ## 리포트
 
@@ -76,7 +88,7 @@ python -m g2b.collect render reports   # weekly + monthly + reports/index
 월간「이번 달 투찰 참여 업체」는 OpengCompt `bidders[]` 집계(빈 업체명 제외).
 
 ```bash
-# core AI 공고 투찰목록 우선 보강 (시드 floor 해제 임계: core 커버리지 ≥ 75%)
+# core AI 공고 투찰목록 우선 보강
 python -m g2b.collect enrich-bidders --include-bootstrap --core-only --limit 400
 
 # Optional tuning (Actions sets these too)

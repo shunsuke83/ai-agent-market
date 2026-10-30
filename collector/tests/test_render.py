@@ -61,8 +61,8 @@ def test_replace_table_and_stamp_roundtrip():
     assert 'class="band-results"' in updated
     assert "<tr><td>x</td></tr>" in updated
     idx = (ROOT / "index.html").read_text(encoding="utf-8")
-    stamped = update_stamp(idx, date(2026, 10, 29))
-    assert "최종 갱신 2026-10-29" in stamped
+    stamped = update_stamp(idx, "데이터 기준 2026-10-29")
+    assert '<div class="stamp">데이터 기준 2026-10-29</div>' in stamped
 
 
 def test_load_large_awards():
@@ -91,10 +91,11 @@ def test_render_large_award_row():
     assert 'class="num">30.0</td>' in row
 
 
-def test_needs_confirm_seeded():
+def test_needs_confirm_total_is_live_count():
     rows, total = load_needs_confirm(ROOT, limit=30)
-    assert total >= 30
-    assert len(rows) >= 1
+    assert 1 <= len(rows) <= 30
+    assert total >= len(rows)
+    assert total < 849  # the old editorial count is no longer a floor
 
 
 def test_replace_awards_large_table():

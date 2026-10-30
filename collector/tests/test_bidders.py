@@ -33,7 +33,8 @@ def test_apply_bidders_sets_second():
     merged = apply_bidders_to_notice(notice, raw)
     assert len(merged["bidders"]) == 2
     assert merged["second"] == "이등"
-    assert merged["winner"] == "일등"
+    assert merged.get("winner") is None  # 개찰 1순위 is not a confirmed award
+    assert merged["first_rank"] == "일등"
     assert merged["bid_count"] == 2
 
 

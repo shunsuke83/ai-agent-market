@@ -1,0 +1,20 @@
+{
+  "stages": {
+    "collect": {
+      "last_attempt_at": "2026-10-30T05:25:53Z",
+      "last_outcome": "success",
+      "last_success_at": "2026-10-30T05:25:53Z"
+    },
+    "awards": {
+      "last_attempt_at": "2026-10-30T05:25:53Z",
+      "last_outcome": "success",
+      "last_success_at": "2026-10-30T05:25:53Z"
+    },
+    "bidders": {
+      "last_attempt_at": "2026-10-30T05:25:53Z",
+      "last_outcome": "success",
+      "last_success_at": "2026-10-30T05:25:53Z"
+    }
+  },
+  "run_id": "41007855913"
+}

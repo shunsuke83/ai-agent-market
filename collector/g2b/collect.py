@@ -32,10 +32,15 @@ def _parse_date(s: str) -> date:
 
 
 def cmd_bootstrap(args: argparse.Namespace) -> int:
+    from .seed import seed_path
+
+    out = Path(args.out)
+    if out.resolve() == seed_path(ROOT).resolve():
+        print("error: refusing to overwrite the frozen editorial seed", file=sys.stderr)
+        return 2
     payload = bootstrap_all(ROOT)
     payload["generated_at"] = utc_now_iso()
     payload["mode"] = "bootstrap_html"
-    out = Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(
@@ -165,11 +170,11 @@ def cmd_enrich_awards(args: argparse.Namespace) -> int:
     print(f"Award rows: {len(awards)}")
     merged, n_upd = apply_awards_to_notices(notices, awards)
 
-    # Optional per-bid lookup for still-missing winners with past open_date
+    # Optional per-bid lookup for still-missing winners (or award amounts) with past open_date
     missing = [
         n
         for n in merged
-        if not n.get("winner")
+        if (not n.get("winner") or n.get("award_amount_eok") in (None, ""))
         and n.get("bid_no")
         and n.get("open_date")
         and n["open_date"] <= end.isoformat()
@@ -178,15 +183,16 @@ def cmd_enrich_awards(args: argparse.Namespace) -> int:
     ]
     overdue_before = (end - timedelta(days=60)).isoformat()
 
-    def _lookup_priority(n: dict[str, Any]) -> tuple[str, int, float]:
+    def _lookup_priority(n: dict[str, Any]) -> tuple[str, int, int, float]:
         # Least recently looked up first (rotation), then 개찰 확인 필요 (opened > 60 days
-        # ago — results should exist by now), then larger budgets.
+        # ago — results should exist by now), then missing winners before missing
+        # amounts, then larger budgets.
         overdue = 0 if n["open_date"] <= overdue_before else 1
         try:
             budget = float(n.get("budget_eok") or 0)
         except (TypeError, ValueError):
             budget = 0.0
-        return (n.get("award_lookup_at") or "", overdue, -budget)
+        return (n.get("award_lookup_at") or "", overdue, 1 if n.get("winner") else 0, -budget)
 
     missing.sort(key=_lookup_priority)
     looked = 0
@@ -237,13 +243,11 @@ def _notice_key(n: dict[str, Any]) -> str:
 
 
 def _bootstrap_award_stubs(repo_root: Path) -> list[dict[str, Any]]:
-    """Award rows from bootstrap.html extract (band + large) as notice stubs."""
+    """Award rows from the editorial seed (band + large) as notice stubs."""
     from .classify import classify_title
+    from .seed import load_seed
 
-    path = repo_root / "data" / "bootstrap.json"
-    if not path.exists():
-        return []
-    boot = json.loads(path.read_text(encoding="utf-8"))
+    boot = load_seed(repo_root)
     stubs: list[dict[str, Any]] = []
     for section in ("large_awards", "band_notices"):
         for row in boot.get(section) or []:
@@ -263,6 +267,7 @@ def _bootstrap_award_stubs(repo_root: Path) -> list[dict[str, Any]]:
                     "award_amount_eok": row.get("award_amount_eok")
                     or row.get("win_amount_eok"),
                     "winner": row.get("winner"),
+                    "first_rank": row.get("first_rank"),
                     "bid_count": row.get("bid_count"),
                     "second": row.get("second"),
                     "status": row.get("status") or ("낙찰" if row.get("winner") else None),
@@ -312,6 +317,7 @@ def cmd_enrich_bidders(args: argparse.Namespace) -> int:
                 cur = by_key[key]
                 for fld in (
                     "winner",
+                    "first_rank",
                     "award_amount_eok",
                     "budget_eok",
                     "second",
@@ -490,6 +496,61 @@ def cmd_sanitize_budgets(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_migrate_results(args: argparse.Namespace) -> int:
+    """One-off: split unconfirmed 1순위 winners and derived award/budget ratios."""
+    from .normalize import split_derived_rate, split_first_rank
+    from .seed import seed_path
+
+    summary: dict[str, Any] = {}
+    for label, path, key_names in (
+        ("notices", Path(args.out), ("notices",)),
+        ("seed", seed_path(ROOT), ("band_notices", "large_awards", "needs_confirm")),
+    ):
+        if not path.exists():
+            continue
+        raw = json.loads(path.read_text(encoding="utf-8"))
+        ranks = rates = 0
+        for k in key_names:
+            rows = []
+            for n in raw.get(k) or []:
+                n, a = split_first_rank(n)
+                n, b = split_derived_rate(n)
+                ranks += a
+                rates += b
+                rows.append(n)
+            raw[k] = rows
+        path.write_text(json.dumps(raw, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        summary[label] = {"first_rank_split": ranks, "derived_rate_split": rates}
+    print(json.dumps(summary, ensure_ascii=False))
+    return 0
+
+
+STAGES = ("collect", "awards", "bidders")
+
+
+def cmd_mark_run(args: argparse.Namespace) -> int:
+    """Record per-stage outcomes; last_success_at only moves on success."""
+    path = Path(args.out)
+    status: dict[str, Any] = {}
+    if path.exists():
+        status = json.loads(path.read_text(encoding="utf-8"))
+    stages = status.setdefault("stages", {})
+    now = utc_now_iso()
+    for name in STAGES:
+        outcome = getattr(args, name)
+        if not outcome:
+            continue
+        s = stages.setdefault(name, {})
+        s["last_attempt_at"] = now
+        s["last_outcome"] = outcome
+        if outcome == "success":
+            s["last_success_at"] = now
+    status["run_id"] = os.environ.get("GITHUB_RUN_ID")
+    path.write_text(json.dumps(status, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(json.dumps(stages, ensure_ascii=False))
+    return 0
+
+
 def cmd_reclassify(args: argparse.Namespace) -> int:
     """Refresh scope/fields/nature on existing notices.json from keywords.yaml."""
     from .classify import classify_title
@@ -541,9 +602,25 @@ def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(description="나라장터 AI Agent market collector")
     sub = p.add_subparsers(dest="cmd", required=True)
 
-    b = sub.add_parser("bootstrap", help="Extract structured JSON from current HTML pages")
-    b.add_argument("--out", default=str(DATA / "bootstrap.json"))
+    b = sub.add_parser(
+        "bootstrap",
+        help="Extract structured JSON from current HTML pages (migration/recovery only)",
+    )
+    b.add_argument("--out", required=True)
     b.set_defaults(func=cmd_bootstrap)
+
+    mg = sub.add_parser(
+        "migrate-results",
+        help="Split 1순위 out of winner and award/budget out of 낙찰률 (notices + seed)",
+    )
+    mg.add_argument("--out", default=str(DATA / "notices.json"))
+    mg.set_defaults(func=cmd_migrate_results)
+
+    mr = sub.add_parser("mark-run", help="Record stage outcomes in data/run_status.json")
+    mr.add_argument("--out", default=str(DATA / "run_status.json"))
+    for name in STAGES:
+        mr.add_argument(f"--{name}", choices=["success", "failure", "cancelled", "skipped"])
+    mr.set_defaults(func=cmd_mark_run)
 
     c = sub.add_parser("collect", help="Fetch AI notices from 나라장터 Open API")
     c.add_argument("--since", help="YYYY-MM-DD (default: config history_start)")
@@ -609,7 +686,7 @@ def build_parser() -> argparse.ArgumentParser:
     eb.add_argument(
         "--include-bootstrap",
         action="store_true",
-        help="Upsert bootstrap band/large awards into notices, then enrich (competitor wins first)",
+        help="Upsert editorial seed band/large awards into notices, then enrich (competitor wins first)",
     )
     eb.add_argument(
         "--core-only",

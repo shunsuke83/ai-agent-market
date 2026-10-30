@@ -12,7 +12,8 @@ import yaml
 
 from .assets import stamp_asset_versions
 from .normalize import merge_by_bid
-from .render import _fmt_budget
+from .render import _award_amount, _fmt_budget, infer_status
+from .seed import load_seed
 
 CONFIG = Path(__file__).resolve().parents[1] / "config" / "competitors.yaml"
 
@@ -73,29 +74,6 @@ def match_competitor(winner: str | None, alias_index: dict[str, str]) -> str | N
     return None
 
 
-def _award_amount(row: dict[str, Any]) -> float | None:
-    for key in ("award_amount_eok", "win_amount_eok"):
-        v = row.get(key)
-        if v not in (None, ""):
-            try:
-                return float(v)
-            except (TypeError, ValueError):
-                pass
-    bud = row.get("budget_eok")
-    rate = row.get("win_rate_pct")
-    if bud not in (None, "") and rate not in (None, ""):
-        try:
-            return round(float(bud) * float(rate) / 100.0, 1)
-        except (TypeError, ValueError):
-            return None
-    if bud not in (None, ""):
-        try:
-            return float(bud)
-        except (TypeError, ValueError):
-            return None
-    return None
-
-
 def _row_key(row: dict[str, Any]) -> str:
     if row.get("bid_no"):
         return f"{row.get('bid_no')}-{row.get('bid_ord') or '000'}"
@@ -103,32 +81,24 @@ def _row_key(row: dict[str, Any]) -> str:
 
 
 def load_win_pool(repo_root: Path) -> list[dict[str, Any]]:
-    """Union of band / large awards / notices that have a winner."""
-    pool: list[dict[str, Any]] = []
-    boot_path = repo_root / "data" / "bootstrap.json"
-    if boot_path.exists():
-        boot = json.loads(boot_path.read_text(encoding="utf-8"))
-        for n in boot.get("band_notices") or []:
-            if n.get("winner"):
-                pool.append(n)
-        for n in boot.get("large_awards") or []:
-            if n.get("winner"):
-                pool.append(n)
+    """Seed band / large awards ∪ notices, keeping confirmed awards only (no 1순위)."""
+    boot = load_seed(repo_root)
+    rows: list[dict[str, Any]] = list(boot.get("band_notices") or [])
+    rows += list(boot.get("large_awards") or [])
     notices_path = repo_root / "data" / "notices.json"
     if notices_path.exists():
         raw = json.loads(notices_path.read_text(encoding="utf-8"))
-        for n in raw.get("notices") or []:
-            if n.get("winner"):
-                pool.append(n)
-    return merge_by_bid([], pool)
+        rows += list(raw.get("notices") or [])
+    return [
+        n
+        for n in merge_by_bid([], rows)
+        if n.get("winner") and infer_status(n) == "낙찰"
+    ]
 
 
 def load_seed_overview(repo_root: Path) -> dict[str, dict[str, Any]]:
-    """Seed KPIs from bootstrap (editorial HTML extract) keyed by name."""
-    path = repo_root / "data" / "bootstrap.json"
-    if not path.exists():
-        return {}
-    boot = json.loads(path.read_text(encoding="utf-8"))
+    """Editorial competitor profile (type, model, procurement) keyed by name."""
+    boot = load_seed(repo_root)
     out: dict[str, dict[str, Any]] = {}
     for row in boot.get("competitors_overview") or []:
         name = row.get("name")
@@ -201,18 +171,14 @@ def core_bidder_coverage(notices: list[dict[str, Any]]) -> dict[str, float | int
     }
 
 
-# When ≥ this share of core opened notices have OpengCompt lists, drop seed floor.
-SEED_FLOOR_COVERAGE = 0.75
-
-
 def aggregate_competitor_kpis(
     repo_root: Path,
     competitors: list[dict[str, Any]] | None = None,
 ) -> list[dict[str, Any]]:
     """
-    Per competitor: wins/amount from win pool; bids from OpengCompt bidders[].
-    Seed floor on bids applies only while core OpengCompt coverage is below
-    SEED_FLOOR_COVERAGE; wins/amount never regress below seed overview values.
+    Per competitor: confirmed wins and reported award amounts from the win pool;
+    bids from OpengCompt bidders[]. No seed floor: values drop when sources are
+    corrected. Editorial seed counts are returned for reference only.
     """
     competitors = competitors or load_competitors_config()
     alias_index = build_alias_index(competitors)
@@ -222,7 +188,6 @@ def aggregate_competitor_kpis(
     names = {c["name"] for c in competitors}
     live_bid_keys = count_live_bids(notices, pool, alias_index, names)
     coverage = core_bidder_coverage(notices)
-    use_seed_floor = float(coverage["ratio"]) < SEED_FLOOR_COVERAGE
 
     wins_by: dict[str, list[dict[str, Any]]] = {c["name"]: [] for c in competitors}
     seen_keys: dict[str, set[str]] = {c["name"]: set() for c in competitors}
@@ -243,32 +208,14 @@ def aggregate_competitor_kpis(
         live = wins_by[name]
         live_wins = len(live)
         live_bids = len(live_bid_keys.get(name) or ())
-        live_amount = round(
-            sum(_award_amount(r) or 0.0 for r in live),
-            1,
-        )
+        amounts = [a for a in (_award_amount(r) for r in live) if a is not None]
+        live_amount = round(sum(amounts), 1)
         s = seed.get(name) or {}
         seed_wins = int(s.get("wins") or 0)
         seed_bids = int(s.get("bids") or 0)
-        seed_amount = float(s.get("award_amount_eok") or 0.0)
-
-        # Live pool is often a subset of editorial history. Only replace KPIs
-        # when live coverage is at least as wide as the seed win count.
-        if live_wins > seed_wins:
-            wins = live_wins
-            amount = live_amount
-        elif live_wins == seed_wins and live_wins > 0:
-            wins = live_wins
-            amount = max(seed_amount, live_amount)
-        else:
-            wins = seed_wins
-            amount = seed_amount
-
-        # Seed floor until core OpengCompt coverage crosses SEED_FLOOR_COVERAGE.
-        if use_seed_floor:
-            bids = max(seed_bids, live_bids, wins)
-        else:
-            bids = max(live_bids, wins)
+        wins = live_wins
+        amount = live_amount
+        bids = max(live_bids, wins)
 
         live_sorted = sorted(
             live,
@@ -287,21 +234,31 @@ def aggregate_competitor_kpis(
                 "bids": bids,
                 "wins": wins,
                 "award_amount_eok": amount,
+                "amount_known": len(amounts),
                 "live_wins": live_wins,
                 "live_bids": live_bids,
                 "live_amount_eok": live_amount,
                 "seed_wins": seed_wins,
                 "seed_bids": seed_bids,
-                "seed_floor": use_seed_floor,
+                "seed_amount_eok": s.get("award_amount_eok"),
                 "coverage_ratio": round(float(coverage["ratio"]), 3),
                 "recent": live_sorted[:5],
             }
         )
 
     results.sort(
-        key=lambda r: (-float(r["award_amount_eok"]), -int(r["wins"]), r["name"])
+        key=lambda r: (-int(r["wins"]), -float(r["award_amount_eok"]), r["name"])
     )
     return results
+
+
+def _fmt_amount(row: dict[str, Any]) -> str:
+    """Sum of reported amounts; 미확인 when wins exist but no amount was reported."""
+    if int(row["wins"]) == 0:
+        return "-"
+    if not row.get("amount_known", 1):
+        return "미확인"
+    return _fmt_budget(row["award_amount_eok"])
 
 
 def _anchor_id(name: str) -> str:
@@ -323,24 +280,52 @@ def render_overview_row(row: dict[str, Any]) -> str:
         f"<td>{html.escape(row.get('type') or '')}</td>"
         f'<td class="num">{int(row["bids"])}</td>'
         f'<td class="num">{int(row["wins"])}</td>'
-        f'<td class="num">{_fmt_budget(row["award_amount_eok"])}</td>'
+        f'<td class="num">{_fmt_amount(row)}</td>'
+        f'<td class="num">{_fmt_seed(row)}</td>'
         f"<td>{html.escape(row.get('own_model') or '')}</td>"
         f"<td>{html.escape(row.get('procurement') or '')}</td>"
         "</tr>"
     )
 
 
+def _fmt_seed(row: dict[str, Any]) -> str:
+    wins = int(row.get("seed_wins") or 0)
+    if not wins:
+        return "-"
+    amt = row.get("seed_amount_eok")
+    return f"{wins}건 · {_fmt_budget(amt)}억" if amt not in (None, "") else f"{wins}건"
+
+
+OVERVIEW_THEAD = (
+    "<thead><tr><th>업체</th><th>유형</th>"
+    '<th class="num" title="수집한 개찰 결과의 투찰업체 목록 기준">투찰</th>'
+    '<th class="num" title="나라장터 낙찰 확정 건(개찰 1순위 제외)">낙찰</th>'
+    '<th class="num" title="낙찰금액이 공개·수집된 건만 합산">낙찰금액(억)</th>'
+    '<th class="num" title="2026-10-28 편집 조사값. 소액 구독·라이선스 구매 포함, 수집 범위와 다름">'
+    "편집 조사 낙찰</th>"
+    "<th>자체 모델</th><th>조달 자격</th></tr></thead>"
+)
+
+OVERVIEW_NOTE = (
+    '<p class="note">낙찰 건수 순. 투찰·낙찰·낙찰금액은 이 사이트가 수집한 나라장터 개찰·낙찰 결과만 '
+    "집계합니다(2023년 이후 AI 사업). 개찰 1순위만 확인된 건은 낙찰에 넣지 않고, 낙찰금액은 금액이 "
+    "공개된 건만 더하므로 실제보다 적을 수 있습니다. 투찰업체 목록은 아직 모으는 중입니다. "
+    "‘편집 조사 낙찰’은 2026-10-28에 사람이 조사한 값으로 소액 구독·라이선스 구매까지 포함해 "
+    "집계 범위가 다르며, 두 값을 합치지 않습니다. 컨소시엄 구성원만 참여한 사업은 집계되지 않습니다.</p>"
+)
+
+
 def replace_overview_table(html_text: str, rows_html: str) -> str:
     pattern = re.compile(
-        r"(<h2>한눈에 보기</h2><div class=\"tbl\"><table(?:\s+class=\"[^\"]*\")?>"
-        r"<thead>.*?</thead><tbody>)"
+        r"(<h2>한눈에 보기</h2><div class=\"tbl\"><table(?:\s+class=\"[^\"]*\")?>)"
+        r"<thead>.*?</thead><tbody>"
         r".*?"
-        r"(</tbody></table></div>)",
+        r"(</tbody></table></div>)(?:<p class=\"note\">.*?</p>)?",
         re.S,
     )
 
     def repl(m: re.Match[str]) -> str:
-        return f"{m.group(1)}{rows_html}{m.group(2)}"
+        return f"{m.group(1)}{OVERVIEW_THEAD}<tbody>{rows_html}{m.group(2)}{OVERVIEW_NOTE}"
 
     new, n = pattern.subn(repl, html_text, count=1)
     if n != 1:
@@ -348,20 +333,34 @@ def replace_overview_table(html_text: str, rows_html: str) -> str:
     return new
 
 
-def _fmt_kpi_span(bids: int, wins: int, amount: float) -> str:
+def _amount_label(row: dict[str, Any]) -> str:
+    amt = _fmt_amount(row)
+    return {"-": "-", "미확인": "금액 미확인"}.get(amt, f"{amt}억")
+
+
+def _fmt_kpi_span(row: dict[str, Any]) -> str:
     return (
-        f'<span class="kpi">투찰 {bids} · 낙찰 {wins} · '
-        f"{_fmt_budget(amount)}억</span>"
+        f'<span class="kpi">투찰 {int(row["bids"])} · 낙찰 {int(row["wins"])} · '
+        f"{_amount_label(row)}</span>"
     )
 
 
-def _fmt_perf_p(bids: int, wins: int, amount: float) -> str:
+def _fmt_perf_p(row: dict[str, Any]) -> str:
+    bids, wins = int(row["bids"]), int(row["wins"])
+    known = int(row.get("amount_known") or 0)
     rate = _win_rate(bids, wins)
-    rate_s = f" · 낙찰률 {rate}%" if rate is not None else ""
-    return (
-        f"<p>투찰 {bids}건 · 낙찰 {wins}건{rate_s} · "
-        f"낙찰금액 {_fmt_budget(amount)}억</p>"
+    rate_s = f" · 투찰 대비 낙찰 {rate}%" if rate is not None else ""
+    lab = _amount_label(row)
+    amt_s = {"-": "", "금액 미확인": " · 낙찰금액 미확인"}.get(lab, f" · 낙찰금액 {lab}")
+    if 0 < known < wins:
+        amt_s += f"(금액 확인 {known}/{wins}건)"
+    seed_s = _fmt_seed(row)
+    seed_line = (
+        f'<br><span class="meta">편집 조사(2026-10-28, 소액 구독 포함): 낙찰 {seed_s}</span>'
+        if seed_s != "-"
+        else ""
     )
+    return f"<p>수집 확인: 투찰 {bids}건 · 낙찰 {wins}건{rate_s}{amt_s}{seed_line}</p>"
 
 
 def _recent_li(row: dict[str, Any]) -> str:
@@ -383,8 +382,6 @@ def update_competitor_detail(
     """Update kpi span + 나라장터 실적 paragraph (+ optional recent list)."""
     name = row["name"]
     anchor = re.escape(_anchor_id(name))
-    bids, wins = int(row["bids"]), int(row["wins"])
-    amount = float(row["award_amount_eok"])
 
     # kpi in summary
     kpi_pat = re.compile(
@@ -392,14 +389,11 @@ def update_competitor_detail(
         rf'(<span class="kpi">.*?</span>)',
         re.S,
     )
-    html_text, n = kpi_pat.subn(
-        rf"\g<1>{_fmt_kpi_span(bids, wins, amount)}",
+    html_text, _ = kpi_pat.subn(
+        lambda m: m.group(1) + _fmt_kpi_span(row),
         html_text,
         count=1,
     )
-    if n != 1:
-        # Some pages may reorder; try looser kpi inside that details block
-        pass
 
     # 나라장터 실적 paragraph (first <p> after that h4 inside this details)
     perf_pat = re.compile(
@@ -407,8 +401,8 @@ def update_competitor_detail(
         rf"\s*<p>.*?</p>",
         re.S,
     )
-    html_text, n2 = perf_pat.subn(
-        rf"\g<1>{_fmt_perf_p(bids, wins, amount)}",
+    html_text, _ = perf_pat.subn(
+        lambda m: m.group(1) + _fmt_perf_p(row),
         html_text,
         count=1,
     )
