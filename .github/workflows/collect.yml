@@ -122,6 +122,20 @@ jobs:
         run: python -m g2b.collect enrich-bidders --include-bootstrap --core-only --limit 400
         working-directory: collector
 
+      # 사용자정보 서비스 (15129466) needs its own 활용신청; failure is a warning only.
+      - name: Enrich firm profiles (조달업체 기본정보)
+        id: firms
+        if: steps.plan.outputs.weekly == 'true'
+        continue-on-error: true
+        env:
+          DATA_GO_KR_SERVICE_KEY: ${{ secrets.DATA_GO_KR_SERVICE_KEY }}
+          G2B_CONNECT_TIMEOUT: "15"
+          G2B_TIMEOUT: "60"
+          G2B_HTTP_RETRIES: "3"
+          G2B_SLEEP: "0.35"
+        run: python -m g2b.collect enrich-firms
+        working-directory: collector
+
       - name: Sanitize budgets stored as won
         run: python -m g2b.collect sanitize-budgets
         working-directory: collector
@@ -135,6 +149,7 @@ jobs:
           --prespecs "${{ steps.prespecs.outcome }}"
           --awards "${{ steps.awards.outcome }}"
           --bidders "${{ steps.bidders.outcome }}"
+          --firms "${{ steps.firms.outcome }}"
         working-directory: collector
 
       - name: Render band + awards + index + competitors + reports
@@ -150,6 +165,7 @@ jobs:
             reports.json reports/ \
             band.html awards.html index.html competitors.html prespecs.html
           if [ -f data/prespecs.json ]; then git add data/prespecs.json; fi
+          if [ -f data/firms.json ]; then git add data/firms.json; fi
           git add -A bids/
           if git diff --staged --quiet; then
             echo "No data changes."

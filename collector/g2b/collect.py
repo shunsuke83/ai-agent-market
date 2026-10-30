@@ -5,7 +5,7 @@ import json
 import os
 import sys
 import time
-from datetime import date, datetime, timedelta
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
@@ -280,6 +280,49 @@ def cmd_collect_prespecs(args: argparse.Namespace) -> int:
     out.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Wrote {out} ({len(merged)} prespecs)")
     return 0
+
+
+def cmd_enrich_firms(args: argparse.Namespace) -> int:
+    """조달업체 기본정보 (사용자정보 서비스) by 사업자번호 → data/firms.json."""
+    from .client import G2BClient, G2BError
+    from .competitors import firm_targets
+    from .firms import normalize_corp_item
+
+    out = Path(args.out)
+    prev = json.loads(out.read_text(encoding="utf-8")) if out.exists() else {}
+    firms: dict[str, dict[str, Any]] = dict(prev.get("firms") or {})
+    cutoff = (datetime.now(timezone.utc) - timedelta(days=args.max_age_days)).isoformat()
+    targets = [b for b in firm_targets(ROOT) if (firms.get(b) or {}).get("fetched_at", "") < cutoff]
+    print(f"Firm lookups: {len(targets)} due (cached {len(firms)})")
+    try:
+        client = G2BClient()
+    except G2BError as e:
+        print(f"::warning::firm lookup skipped: {e}")
+        return 1
+    fetched = missing = failed = 0
+    logged = False
+    for bizno in targets:
+        try:
+            item = client.fetch_corp_basic(bizno)
+        except G2BError as e:
+            failed += 1
+            print(f"::warning::corp info {bizno}: {e}")
+            if e.status_code in (401, 403):
+                print("::warning::사용자정보 서비스 활용신청 승인 확인 필요")
+                break
+            continue
+        if not item:
+            missing += 1
+            continue
+        if not logged:
+            print(f"Corp item keys: {sorted(item)}")
+            logged = True
+        firms[bizno] = {**normalize_corp_item(item), "bizno": bizno, "fetched_at": utc_now_iso()}
+        fetched += 1
+    payload = {"schema_version": 1, "generated_at": utc_now_iso(), "firms": firms}
+    out.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(f"Wrote {out}: fetched={fetched} missing={missing} failed={failed} total={len(firms)}")
+    return 1 if targets and failed == len(targets) else 0
 
 
 def _notice_key(n: dict[str, Any]) -> str:
@@ -569,7 +612,7 @@ def cmd_migrate_results(args: argparse.Namespace) -> int:
     return 0
 
 
-STAGES = ("collect", "prespecs", "awards", "bidders")
+STAGES = ("collect", "prespecs", "awards", "bidders", "firms")
 
 
 def cmd_mark_run(args: argparse.Namespace) -> int:
@@ -706,6 +749,14 @@ def build_parser() -> argparse.ArgumentParser:
     ps.add_argument("--until", help="YYYY-MM-DD (default: today)")
     ps.add_argument("--out", default=str(DATA / "prespecs.json"))
     ps.set_defaults(func=cmd_collect_prespecs)
+
+    ef = sub.add_parser(
+        "enrich-firms",
+        help="조달업체 기본정보 for competitors + top outside rivals into data/firms.json",
+    )
+    ef.add_argument("--out", default=str(DATA / "firms.json"))
+    ef.add_argument("--max-age-days", type=int, default=30)
+    ef.set_defaults(func=cmd_enrich_firms)
 
     e = sub.add_parser(
         "enrich-awards",

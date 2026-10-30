@@ -5,12 +5,14 @@ from __future__ import annotations
 import html
 import json
 import re
+from collections import Counter
 from pathlib import Path
 from typing import Any
 
 import yaml
 
 from .assets import stamp_asset_versions
+from .firms import bidder_stats, firm_profile_text, fmt_bizno, load_firms
 from .normalize import merge_by_bid
 from .render import _award_amount, _fmt_budget, infer_status
 from .seed import load_seed
@@ -115,21 +117,40 @@ def load_all_notices(repo_root: Path) -> list[dict[str, Any]]:
     return list(raw.get("notices") or [])
 
 
+def build_bizno_index(competitors: list[dict[str, Any]]) -> dict[str, str]:
+    """사업자번호 (digits only) → canonical name."""
+    out: dict[str, str] = {}
+    for c in competitors:
+        digits = "".join(ch for ch in str(c.get("bizno") or "") if ch.isdigit())
+        if digits:
+            out[digits] = c["name"]
+    return out
+
+
 def count_live_bids(
     notices: list[dict[str, Any]],
     win_pool: list[dict[str, Any]],
     alias_index: dict[str, str],
     competitor_names: set[str],
+    bizno_index: dict[str, str] | None = None,
 ) -> dict[str, set[str]]:
-    """Notice keys where each competitor appears in OpengCompt bidders or as winner."""
+    """Notice keys where each competitor appears in OpengCompt bidders or as winner.
+
+    Bidders carrying a 사업자번호 match by bizno only, so a same-named firm never counts.
+    """
     bids_by: dict[str, set[str]] = {n: set() for n in competitor_names}
+    bizno_index = bizno_index or {}
 
     for row in notices:
         key = _row_key(row)
         found: set[str] = set()
         for b in row.get("bidders") or []:
             nm = b.get("name") if isinstance(b, dict) else str(b)
-            canon = match_competitor(nm, alias_index)
+            bz = str(b.get("bizno") or "") if isinstance(b, dict) else ""
+            if bz and bizno_index:
+                canon = bizno_index.get(bz)
+            else:
+                canon = match_competitor(nm, alias_index)
             if canon and canon in bids_by:
                 found.add(canon)
         # Winner always counts as a bid (even before bidders[] enrich)
@@ -186,7 +207,9 @@ def aggregate_competitor_kpis(
     pool = load_win_pool(repo_root)
     notices = load_all_notices(repo_root)
     names = {c["name"] for c in competitors}
-    live_bid_keys = count_live_bids(notices, pool, alias_index, names)
+    live_bid_keys = count_live_bids(
+        notices, pool, alias_index, names, build_bizno_index(competitors)
+    )
     coverage = core_bidder_coverage(notices)
 
     wins_by: dict[str, list[dict[str, Any]]] = {c["name"]: [] for c in competitors}
@@ -228,6 +251,7 @@ def aggregate_competitor_kpis(
         results.append(
             {
                 "name": name,
+                "bizno": "".join(ch for ch in str(c.get("bizno") or "") if ch.isdigit()),
                 "type": c.get("type") or s.get("type") or "",
                 "own_model": c.get("own_model") or s.get("own_model") or "",
                 "procurement": c.get("procurement") or s.get("procurement") or "",
@@ -425,14 +449,170 @@ def update_competitor_detail(
     return html_text
 
 
+RIVALS_SHOWN = 4
+OUTSIDE_LIMIT = 20
+OUTSIDE_MIN_FACED = 2
+
+
+def _firm_name(bizno: str, stats: dict[str, Any], firms: dict[str, dict[str, Any]]) -> str:
+    official = (firms.get(bizno) or {}).get("corp_name")
+    s = stats.get(bizno)
+    return normalize_display(official or (s.name if s else "") or fmt_bizno(bizno))
+
+
+def normalize_display(name: str) -> str:
+    return _SPACE_RE.sub(" ", _CORP_RE.sub("", name or "")).strip()
+
+
+def rivals_line(
+    bizno: str,
+    stats: dict[str, Any],
+    firms: dict[str, dict[str, Any]],
+    bizno_index: dict[str, str],
+    old_rivals: str = "",
+) -> str:
+    """사업자번호·공식 정보 + 개찰에서 자주 맞붙은 업체(순위 앞섬/뒤짐)."""
+    head = []
+    if bizno:
+        head.append(f"사업자번호 {fmt_bizno(bizno)}")
+    profile = firm_profile_text(firms.get(bizno))
+    if profile:
+        head.append(profile)
+    s = stats.get(bizno)
+    if s and s.faced:
+        parts = []
+        for other, cnt in s.faced.most_common(RIVALS_SHOWN):
+            nm = bizno_index.get(other) or _firm_name(other, stats, firms)
+            parts.append(
+                f"{html.escape(nm)} {cnt}회(앞섬 {s.beat[other]}·뒤짐 {s.lost[other]})"
+            )
+        rivals = "자주 맞붙은 업체(개찰 순위 기준): " + ", ".join(parts)
+    elif old_rivals:
+        rivals = f"자주 맞붙은 업체: {old_rivals}"
+    else:
+        rivals = ""
+    lines = [html.escape(" · ".join(head))] if head else []
+    if rivals:
+        lines.append(rivals)
+    return f'<p class="meta rivals">{"<br>".join(lines)}</p>' if lines else ""
+
+
+_RIVALS_P = (
+    r'<p class="meta(?: rivals)?">(?:(?!</p>).)*?자주 맞붙은 업체(?:(?!</p>).)*?</p>'
+    r'|<p class="meta rivals">(?:(?!</p>).)*?</p>'
+)
+
+
+def update_rivals_line(
+    html_text: str,
+    name: str,
+    bizno: str,
+    stats: dict[str, Any],
+    firms: dict[str, dict[str, Any]],
+    bizno_index: dict[str, str],
+) -> str:
+    anchor = re.escape(_anchor_id(name))
+    pat = re.compile(
+        rf'(<details class="co" id="{anchor}">(?:(?!</details>).)*?'
+        rf"<h4>나라장터 실적 \(AI 사업 공고\)</h4>\s*<p>.*?</p>)\s*({_RIVALS_P})?",
+        re.S,
+    )
+    m = pat.search(html_text)
+    if not m:
+        return html_text
+    old = m.group(2) or ""
+    om = re.search(r"자주 맞붙은 업체: ((?:(?!</p>|<br>).)*)", old)
+    old_rivals = om.group(1).strip() if om and "개찰 순위 기준" not in old else ""
+    line = rivals_line(bizno, stats, firms, bizno_index, old_rivals)
+    sep = "\n" if line else ""
+    return html_text[: m.start()] + m.group(1) + sep + line + html_text[m.end():]
+
+
+def outside_rivals(
+    stats: dict[str, Any], bizno_index: dict[str, str], limit: int = OUTSIDE_LIMIT
+) -> list[tuple[Any, Counter]]:
+    """Firms not on the competitor list that most often bid against listed competitors."""
+    out = []
+    for bz, s in stats.items():
+        if bz in bizno_index:
+            continue
+        vs = Counter()
+        for other, cnt in s.faced.items():
+            if other in bizno_index:
+                vs[bizno_index[other]] += cnt
+        if sum(vs.values()) >= OUTSIDE_MIN_FACED:
+            out.append((s, vs))
+    out.sort(key=lambda t: (-sum(t[1].values()), -len(t[0].wins), -len(t[0].bids), t[0].name))
+    return out[:limit]
+
+
+OUTSIDE_THEAD = (
+    "<thead><tr><th>업체</th><th>사업자번호</th><th>지역·규모</th>"
+    '<th class="num" title="수집한 개찰 결과의 투찰업체 목록 기준">투찰</th>'
+    '<th class="num" title="나라장터 낙찰 확정 건">낙찰</th>'
+    "<th>맞붙은 경쟁사</th><th>최근 투찰</th></tr></thead>"
+)
+
+
+def render_outside_section(
+    rows: list[tuple[Any, Counter]], stats: dict[str, Any], firms: dict[str, dict[str, Any]]
+) -> str:
+    if not rows:
+        return ""
+    trs = []
+    for s, vs in rows:
+        top = ", ".join(f"{html.escape(n)} {c}" for n, c in vs.most_common(3))
+        trs.append(
+            "<tr>"
+            f"<td>{html.escape(_firm_name(s.bizno, stats, firms))}</td>"
+            f"<td>{fmt_bizno(s.bizno)}</td>"
+            f"<td>{html.escape(firm_profile_text(firms.get(s.bizno)) or '-')}</td>"
+            f'<td class="num">{len(s.bids)}</td>'
+            f'<td class="num">{len(s.wins)}</td>'
+            f"<td>{top}</td>"
+            f"<td>{html.escape(s.last_date[:7] or '-')}</td>"
+            "</tr>"
+        )
+    return (
+        "<h2>목록 밖 주요 경쟁 업체</h2>"
+        '<p class="note">위 목록에 없지만 개찰에서 목록 업체와 자주 함께 투찰한 업체입니다. '
+        "사업자번호 기준으로 묶었고, 맞붙은 경쟁사 옆 숫자는 같은 개찰에 함께 오른 횟수입니다. "
+        "지역·규모는 나라장터 조달업체 기본정보입니다.</p>"
+        f'<div class="tbl"><table class="outside">{OUTSIDE_THEAD}<tbody>{"".join(trs)}'
+        "</tbody></table></div>\n"
+    )
+
+
+def replace_outside_section(html_text: str, section: str) -> str:
+    html_text = re.sub(
+        r"<h2>목록 밖 주요 경쟁 업체</h2>.*?(?=<h2>유형별 상세</h2>)", "", html_text, flags=re.S
+    )
+    return html_text.replace("<h2>유형별 상세</h2>", section + "<h2>유형별 상세</h2>", 1)
+
+
+def firm_targets(repo_root: Path, competitors: list[dict[str, Any]] | None = None) -> list[str]:
+    """Biznos worth a 조달업체 기본정보 lookup: listed competitors + top outside rivals."""
+    competitors = competitors or load_competitors_config()
+    idx = build_bizno_index(competitors)
+    stats = bidder_stats(load_all_notices(repo_root))
+    return list(idx) + [s.bizno for s, _ in outside_rivals(stats, idx)]
+
+
 def render_competitors_page(repo_root: Path) -> dict[str, Any]:
     path = repo_root / "competitors.html"
     text = path.read_text(encoding="utf-8")
-    rows = aggregate_competitor_kpis(repo_root)
+    competitors = load_competitors_config()
+    rows = aggregate_competitor_kpis(repo_root, competitors)
     overview = "".join(render_overview_row(r) for r in rows)
     text = replace_overview_table(text, overview)
+    bizno_index = build_bizno_index(competitors)
+    stats = bidder_stats(load_all_notices(repo_root))
+    firms = load_firms(repo_root)
     for r in rows:
         text = update_competitor_detail(text, r)
+        text = update_rivals_line(text, r["name"], r.get("bizno") or "", stats, firms, bizno_index)
+    outside = outside_rivals(stats, bizno_index)
+    text = replace_outside_section(text, render_outside_section(outside, stats, firms))
 
     text = stamp_asset_versions(text)
     path.write_text(text, encoding="utf-8")
@@ -442,6 +622,8 @@ def render_competitors_page(repo_root: Path) -> dict[str, Any]:
         "path": str(path),
         "competitors": len(rows),
         "with_live_wins": matched,
+        "outside_rivals": len(outside),
+        "firms_profiled": len(firms),
         "top": [
             {
                 "name": r["name"],
