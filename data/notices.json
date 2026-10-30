@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-30T03:42:14Z",
+  "generated_at": "2026-10-30T03:49:48Z",
   "mode": "g2b_api",
   "range": {
     "since": "2026-10-16",
@@ -78011,7 +78011,8 @@
       "bid_count": 2,
       "second": "데이타트렌드",
       "winner": "아이티센엔텍",
-      "status": "1순위"
+      "status": "1순위",
+      "award_amount_eok": 72.4
     },
     {
       "source": "g2b_api",
@@ -101491,7 +101492,8 @@
       "nature": "시스템 구축·고도화",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "bidders_empty": true
     },
     {
       "bid_no": "20230125061",
@@ -101532,7 +101534,8 @@
       "fields": [
         "AI 일반"
       ],
-      "scope": "AI SW 확대"
+      "scope": "AI SW 확대",
+      "bidders_empty": true
     },
     {
       "bid_no": "R26BK01693614",
@@ -104327,10 +104330,10 @@
     "classified": 476,
     "stored": 1531,
     "band": 474,
-    "with_winner": 427,
+    "with_winner": 529,
     "awards": {
-      "fetched": 7201,
-      "updated": 20
+      "fetched": 7204,
+      "updated": 0
     },
     "scope": {
       "생성형·Agent": 174,
@@ -104338,10 +104341,10 @@
     },
     "with_bidders": 510,
     "bidders_enrich": {
-      "targets": 400,
-      "fetched": 400,
-      "updated": 142,
-      "empty": 258,
+      "targets": 2,
+      "fetched": 2,
+      "updated": 0,
+      "empty": 2,
       "skipped": 0,
       "bootstrap_upserts": 0
     },
