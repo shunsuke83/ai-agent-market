@@ -145,6 +145,22 @@ def in_band(notice: dict[str, Any], rules: dict[str, Any] | None = None) -> bool
     return f["band_min_eok"] <= b <= f["band_max_eok"]
 
 
+def band_excluded(notice: dict[str, Any], rules: dict[str, Any] | None = None) -> bool:
+    """감리·PMO 등 비(非)구축 공고 — band.html 집계에서 뺀다."""
+    from .classify import classify_nature
+
+    rules = rules or load_keywords()
+    f = rules["filters"]
+    title = notice.get("title") or ""
+    t = title.casefold()
+    if any(k.casefold() in t for k in f.get("band_exclude_title") or []):
+        return True
+    nature = notice.get("nature") or classify_nature(title, rules)
+    if nature not in set(f.get("band_exclude_natures") or []):
+        return False
+    return not any(k.casefold() in t for k in f.get("band_keep_title") or [])
+
+
 def merge_by_bid(existing: list[dict[str, Any]], incoming: list[dict[str, Any]]) -> list[dict[str, Any]]:
     by_key: dict[str, dict[str, Any]] = {}
     for row in existing + incoming:

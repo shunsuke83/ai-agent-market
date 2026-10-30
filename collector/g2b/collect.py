@@ -169,13 +169,18 @@ def cmd_enrich_awards(args: argparse.Namespace) -> int:
         and n.get("open_date")
         and n["open_date"] <= end.isoformat()
     ]
+    # Rotate: never-looked-up first, then least recently looked up, so notices that
+    # never get a result don't hog the weekly --lookup-limit.
+    missing.sort(key=lambda n: n.get("award_lookup_at") or "")
     looked = 0
     if args.lookup_missing and missing:
         limit = args.lookup_limit if args.lookup_limit is not None else len(missing)
         print(f"Per-bid lookup for up to {min(limit, len(missing))} / {len(missing)} missing …")
         extra: list[dict[str, Any]] = []
+        today_iso = date.today().isoformat()
         for n in missing[:limit]:
             item = client.fetch_award_by_bid(n["bid_no"], n.get("bid_ord"))
+            n["award_lookup_at"] = today_iso
             looked += 1
             if not item:
                 continue
