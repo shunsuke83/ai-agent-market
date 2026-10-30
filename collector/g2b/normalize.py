@@ -17,6 +17,25 @@ def parse_api_dt(value: str | None) -> str | None:
     return f"{digits[0:4]}-{digits[4:6]}-{digits[6:8]}"
 
 
+def parse_api_dt_minutes(value: str | None) -> str | None:
+    """API datetime → 'YYYY-MM-DD HH:MM' (KST as published); None without a time part."""
+    if not value:
+        return None
+    digits = re.sub(r"\D", "", value)
+    if len(digits) < 12:
+        return None
+    return f"{digits[0:4]}-{digits[4:6]}-{digits[6:8]} {digits[8:10]}:{digits[10:12]}"
+
+
+# Which money field fed budget_eok, in fallback order.
+BUDGET_SOURCES = (
+    ("asignBdgtAmt", "배정예산"),
+    ("bdgtAmt", "예산"),
+    ("presmptPrce", "추정가격"),
+    ("bsisAmount", "기초금액"),
+)
+
+
 # Budgets/awards stored as 억. Raw 원 sneaking through are typically ≥ 10만.
 _WON_HINT = 100_000.0
 
@@ -103,12 +122,13 @@ def normalize_bid_item(item: dict[str, Any], rules: dict[str, Any] | None = None
 
     bid_no = item.get("bidNtceNo") or item.get("bidPbancNo")
     bid_ord = item.get("bidNtceOrd") or item.get("bidPbancOrd") or "000"
-    budget = (
-        item.get("asignBdgtAmt")
-        or item.get("bdgtAmt")
-        or item.get("presmptPrce")
-        or item.get("bsisAmount")
-    )
+    budget, budget_kind = None, None
+    for key, kind in BUDGET_SOURCES:
+        if item.get(key) not in (None, "", "0"):
+            budget, budget_kind = item[key], kind
+            break
+    open_raw = item.get("opengDt") or item.get("opengDate")
+    close_raw = item.get("bidClseDt")
 
     return {
         "source": "g2b_api",
@@ -117,9 +137,11 @@ def normalize_bid_item(item: dict[str, Any], rules: dict[str, Any] | None = None
         "notice_date": parse_api_dt(
             item.get("bidNtceDt") or item.get("bidNtceDate") or item.get("rgstDt")
         ),
-        "open_date": parse_api_dt(
-            item.get("opengDt") or item.get("opengDate") or item.get("bidClseDt")
-        ),
+        # 입찰 마감과 개찰은 다른 사건: never fill one from the other.
+        "open_date": parse_api_dt(open_raw),
+        "open_at": parse_api_dt_minutes(open_raw),
+        "close_at": parse_api_dt_minutes(close_raw),
+        "close_date": parse_api_dt(close_raw),
         "org": item.get("dminsttNm") or item.get("ntceInsttNm"),
         "title": title,
         "scope": labels["scope"],
@@ -127,7 +149,10 @@ def normalize_bid_item(item: dict[str, Any], rules: dict[str, Any] | None = None
         "nature": labels["nature"],
         # asignBdgtAmt / presmptPrce are 원 (see docs/bid-public-info-api.md)
         "budget_eok": always_won_to_eok(budget),
+        "budget_kind": budget_kind,
+        "asign_budget_eok": always_won_to_eok(item.get("asignBdgtAmt")),
         "presmpt_eok": always_won_to_eok(item.get("presmptPrce")),
+        "base_amount_eok": always_won_to_eok(item.get("bsisAmount")),
         "contract_method": item.get("cntrctCnclsMthdNm") or item.get("bidMethdNm"),
         "ntce_kind": item.get("ntceKindNm"),
         "biz": item.get("_biz"),
@@ -273,7 +298,7 @@ def apply_bidders_to_notice(
         top = next((b for b in bidders if b.get("rank") == 1), bidders[0])
         if top.get("name"):
             merged["first_rank"] = top["name"]
-            if not merged.get("winner"):
+            if not merged.get("winner") and merged.get("status") not in ("유찰", "재공고됨"):
                 merged["status"] = "1순위"
     return merged
 

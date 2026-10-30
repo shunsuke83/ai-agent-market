@@ -538,7 +538,7 @@ def cmd_mark_run(args: argparse.Namespace) -> int:
     now = utc_now_iso()
     for name in STAGES:
         outcome = getattr(args, name)
-        if not outcome:
+        if not outcome or outcome == "skipped":
             continue
         s = stages.setdefault(name, {})
         s["last_attempt_at"] = now

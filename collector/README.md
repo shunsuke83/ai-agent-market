@@ -65,7 +65,9 @@ python -m g2b.collect render all
 # 경쟁사 KPI만: python -m g2b.collect render competitors
 ```
 
-GitHub Actions: `.github/workflows/collect.yml` — secret `DATA_GO_KR_SERVICE_KEY` 가 있을 때 매주 수집(낙찰 포함) → 페이지 렌더 → 커밋.
+GitHub Actions: `.github/workflows/collect.yml` — secret `DATA_GO_KR_SERVICE_KEY` 가 있을 때 매일 00:30 KST 최근 3일 공고 증분 수집 → 렌더 → 커밋. 월요일 실행과 수동 실행은 14일 수집에 더해 건별 낙찰 보강·투찰업체 보강까지 합니다. 예약 실행은 GitHub 사정으로 늦어질 수 있습니다.
+
+공고 일정·금액 필드: `close_at`(입찰 마감)과 `open_at`/`open_date`(개찰)는 서로 채우지 않습니다. `budget_eok`는 배정예산 → 예산 → 추정가격 → 기초금액 순으로 고른 값이고, 어느 필드인지 `budget_kind`에 남기며 원래 값은 `asign_budget_eok`·`presmpt_eok`·`base_amount_eok`에 따로 둡니다. 기존 공고는 다시 수집될 때 채워집니다.
 
 ## 렌더 범위
 

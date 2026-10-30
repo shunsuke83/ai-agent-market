@@ -2,8 +2,9 @@ name: Collect G2B AI notices
 
 on:
   schedule:
-    # Monday 00:30 KST = Sunday 15:30 UTC
-    - cron: "30 15 * * 0"
+    # Daily 00:30 KST = 15:30 UTC. The Monday run (Sunday UTC) also does the
+    # heavy award / bidder backfills.
+    - cron: "30 15 * * *"
   workflow_dispatch:
     inputs:
       days:
@@ -13,6 +14,10 @@ on:
 
 permissions:
   contents: write
+
+concurrency:
+  group: collect
+  cancel-in-progress: false
 
 jobs:
   collect:
@@ -40,6 +45,19 @@ jobs:
       - name: Install
         run: pip install -r collector/requirements.txt
 
+      - name: Plan run (daily incremental vs weekly full)
+        id: plan
+        run: |
+          if [ "${{ github.event_name }}" != "schedule" ] || [ "$(date -u +%u)" = "7" ]; then
+            echo "weekly=true" >> "$GITHUB_OUTPUT"
+            DEFAULT_DAYS=14
+          else
+            echo "weekly=false" >> "$GITHUB_OUTPUT"
+            DEFAULT_DAYS=3
+          fi
+          DAYS="${{ github.event.inputs.days }}"
+          echo "days=${DAYS:-$DEFAULT_DAYS}" >> "$GITHUB_OUTPUT"
+
       - name: Collect from Open API
         id: collect
         continue-on-error: true
@@ -49,10 +67,7 @@ jobs:
           G2B_TIMEOUT: "90"
           G2B_HTTP_RETRIES: "8"
           G2B_SLEEP: "0.35"
-        run: |
-          DAYS="${{ github.event.inputs.days }}"
-          DAYS="${DAYS:-14}"
-          python -m g2b.collect collect --days "$DAYS" --all-budgets --out ../data/notices.json
+        run: python -m g2b.collect collect --days "${{ steps.plan.outputs.days }}" --all-budgets --out ../data/notices.json
         working-directory: collector
 
       - name: Note collect outcome
@@ -69,6 +84,7 @@ jobs:
       # bounded batch up by bid number each week. Shares Scsbid quota with OpengCompt.
       - name: Backfill awards for opened notices
         id: awards
+        if: steps.plan.outputs.weekly == 'true'
         continue-on-error: true
         env:
           DATA_GO_KR_SERVICE_KEY: ${{ secrets.DATA_GO_KR_SERVICE_KEY }}
@@ -81,6 +97,7 @@ jobs:
 
       - name: Enrich bidder rankings (OpengCompt)
         id: bidders
+        if: steps.plan.outputs.weekly == 'true'
         continue-on-error: true
         env:
           DATA_GO_KR_SERVICE_KEY: ${{ secrets.DATA_GO_KR_SERVICE_KEY }}
