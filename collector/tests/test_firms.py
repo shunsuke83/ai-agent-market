@@ -6,7 +6,14 @@ from g2b.competitors import (
     outside_rivals,
     update_rivals_line,
 )
-from g2b.firms import bidder_stats, fmt_bizno, normalize_corp_item, winner_bizno
+from g2b.firms import bidder_stats, fmt_bizno, normalize_corp_item, short_region, winner_bizno
+
+
+def test_short_region():
+    assert short_region("서울특별시 영등포구 당산동3가") == "서울 영등포구"
+    assert short_region("경기도 성남시 분당구") == "경기 성남시"
+    assert short_region("경상북도 포항시") == "경북 포항시"
+    assert short_region("세종특별자치시") == "세종"
 
 COMPS = [
     {"name": "가회사", "bizno": "111-11-11111", "aliases": ["가회사"]},
