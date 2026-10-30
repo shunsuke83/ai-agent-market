@@ -1255,7 +1255,7 @@
       "status": "낙찰",
       "bid_count": 2.0,
       "winner": "포딕스시스템",
-      "win_rate_pct": 100.0,
+      "win_rate_pct": 100.4,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01660091&bidPbancOrd=000"
     },
     {
@@ -1313,7 +1313,7 @@
       "status": "낙찰",
       "bid_count": 10.0,
       "winner": "이스트소프트",
-      "win_rate_pct": 89.3,
+      "win_rate_pct": 88.9,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01649516&bidPbancOrd=000"
     },
     {
@@ -8641,6 +8641,20 @@
   "large_awards": [
     {
       "source": "awards.html",
+      "bid_no": "R26BK01791173",
+      "bid_ord": "000",
+      "open_date": "2026-10-30",
+      "org": "각 수요기관",
+      "title": "상용SW 제3자단가계약(swai for scoring v2.1 (주)소프트제국)",
+      "budget_eok": 275.0,
+      "award_amount_eok": 2.8,
+      "winner": "소프트제국",
+      "bid_count": 1.0,
+      "second": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01791173&bidPbancOrd=000"
+    },
+    {
+      "source": "awards.html",
       "bid_no": "R26BK01409553",
       "bid_ord": "001",
       "open_date": "2026-04-30",
@@ -10038,6 +10052,6 @@
       "procurement": "GS 1등급 2건, CSAP(뷰어), 디지털서비스몰(뷰어)"
     }
   ],
-  "generated_at": "2026-10-30T04:40:50Z",
+  "generated_at": "2026-10-30T04:51:45Z",
   "mode": "bootstrap_html"
 }

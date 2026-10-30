@@ -1,12 +1,92 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-30T03:49:48Z",
+  "generated_at": "2026-10-30T04:51:35Z",
   "mode": "g2b_api",
   "range": {
     "since": "2026-10-16",
     "until": "2026-10-30"
   },
   "notices": [
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01801172",
+      "bid_ord": "000",
+      "notice_date": "2026-10-30",
+      "open_date": "2026-11-10",
+      "org": "국가보안기술연구소",
+      "title": "AI 컴퓨팅센터 계획 수립",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "budget_eok": 0.9,
+      "presmpt_eok": 0.8182,
+      "contract_method": "제한경쟁",
+      "ntce_kind": "재공고",
+      "biz": "servc",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01801172&bidPbancOrd=000"
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01801014",
+      "bid_ord": "000",
+      "notice_date": "2026-10-30",
+      "open_date": "2026-11-09",
+      "org": "와프",
+      "title": "AI솔루션 개발·실증 지원(가치사슬형)_공기질검출 센서 세트(18식) 구매",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "budget_eok": 0.4752,
+      "presmpt_eok": 0.432,
+      "contract_method": "일반경쟁",
+      "ntce_kind": "등록공고",
+      "biz": "thng",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01801014&bidPbancOrd=000"
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01800872",
+      "bid_ord": "000",
+      "notice_date": "2026-10-30",
+      "open_date": "2026-11-13",
+      "org": "한국남동발전(주) 분당복합화력발전처",
+      "title": "#1Block 가스터빈 Air Intake Filter 제작구매",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "budget_eok": 3.2869,
+      "presmpt_eok": 2.9628,
+      "contract_method": "제한경쟁",
+      "ntce_kind": "등록공고",
+      "biz": "thng",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01800872&bidPbancOrd=000"
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01800828",
+      "bid_ord": "000",
+      "notice_date": "2026-10-30",
+      "open_date": "2026-11-10",
+      "org": "가천대학교 산학협력단",
+      "title": "인공지능 플랫폼 보조 디바이스 구입",
+      "scope": "생성형·Agent",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "budget_eok": 0.976,
+      "presmpt_eok": 0.8873,
+      "contract_method": "일반경쟁",
+      "ntce_kind": "등록공고",
+      "biz": "thng",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01800828&bidPbancOrd=000"
+    },
     {
       "source": "g2b_api",
       "bid_no": "R26BK01800626",
@@ -167,6 +247,26 @@
       "ntce_kind": "변경공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01798445&bidPbancOrd=001"
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01798345",
+      "bid_ord": "000",
+      "notice_date": "2026-10-30",
+      "open_date": "2026-11-04",
+      "org": "인공지능산업융합사업단",
+      "title": "2026년 인공지능산업융합사업단 업무용차량 임차",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "budget_eok": 0.4091,
+      "presmpt_eok": 0.3719,
+      "contract_method": "수의계약",
+      "ntce_kind": "등록공고",
+      "biz": "servc",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01798345&bidPbancOrd=000"
     },
     {
       "source": "g2b_api",
@@ -486,7 +586,8 @@
       "contract_method": "수의계약",
       "ntce_kind": "재공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01799384&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01799384&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -1000,7 +1101,8 @@
       "ntce_kind": "재공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01797169&bidPbancOrd=000",
-      "bidders_empty": true
+      "bidders_empty": true,
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -2155,7 +2257,8 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01793689&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01793689&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -2458,7 +2561,8 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01794057&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01794057&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "bid_no": "R26BK01794006",
@@ -3309,7 +3413,8 @@
       "ntce_kind": "등록공고",
       "biz": "thng",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01790264&bidPbancOrd=000",
-      "bidders_empty": true
+      "bidders_empty": true,
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -3464,7 +3569,8 @@
       "contract_method": "수의계약",
       "ntce_kind": "취소공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01775434&bidPbancOrd=002"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01775434&bidPbancOrd=002",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -3544,7 +3650,8 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "취소공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01761250&bidPbancOrd=002"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01761250&bidPbancOrd=002",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -3727,7 +3834,8 @@
       "ntce_kind": "등록공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01791922&bidPbancOrd=000",
-      "bidders_empty": true
+      "bidders_empty": true,
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -3852,7 +3960,8 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01791354&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01791354&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -3873,7 +3982,8 @@
       "ntce_kind": "등록공고",
       "biz": "thng",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01791352&bidPbancOrd=000",
-      "bidders_empty": true
+      "bidders_empty": true,
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -3926,7 +4036,12 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01791173&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01791173&bidPbancOrd=000",
+      "winner": "소프트제국",
+      "bid_count": 1,
+      "award_amount_eok": 2.75,
+      "win_rate_pct": 100.0,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -4116,7 +4231,8 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01790626&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01790626&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -4418,7 +4534,8 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01787699&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01787699&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -4560,7 +4677,8 @@
       "ntce_kind": "취소공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01765353&bidPbancOrd=001",
-      "bidders_empty": true
+      "bidders_empty": true,
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -4601,7 +4719,8 @@
       "ntce_kind": "취소공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01774120&bidPbancOrd=001",
-      "bidders_empty": true
+      "bidders_empty": true,
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -4846,7 +4965,8 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "재공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01789461&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01789461&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -4906,7 +5026,8 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "재공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01789166&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01789166&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -5026,7 +5147,8 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "재공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01788902&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01788902&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -5618,7 +5740,8 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01787830&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01787830&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -5638,7 +5761,8 @@
       "contract_method": "수의계약",
       "ntce_kind": "취소공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01787830&bidPbancOrd=001"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01787830&bidPbancOrd=001",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -5698,7 +5822,8 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "재공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01786288&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01786288&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -5818,7 +5943,8 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "변경공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01768184&bidPbancOrd=001"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01768184&bidPbancOrd=001",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -5859,7 +5985,8 @@
       "ntce_kind": "등록공고",
       "biz": "thng",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01787204&bidPbancOrd=000",
-      "bidders_empty": true
+      "bidders_empty": true,
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -5899,7 +6026,8 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01787073&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01787073&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -6037,7 +6165,8 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01786874&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01786874&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -6167,7 +6296,8 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "재공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01786047&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01786047&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -6248,7 +6378,8 @@
       "ntce_kind": "재공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01785748&bidPbancOrd=000",
-      "bidders_empty": true
+      "bidders_empty": true,
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -6268,7 +6399,8 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "재공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01785718&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01785718&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -6835,7 +6967,8 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "재공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01780380&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01780380&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -6876,7 +7009,8 @@
       "ntce_kind": "등록공고",
       "biz": "thng",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01778847&bidPbancOrd=000",
-      "bidders_empty": true
+      "bidders_empty": true,
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -6936,7 +7070,8 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01784921&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01784921&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -7036,7 +7171,8 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01784541&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01784541&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -7076,7 +7212,8 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01784097&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01784097&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -7158,7 +7295,8 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01784049&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01784049&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -7178,7 +7316,8 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "재공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01783985&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01783985&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -7239,7 +7378,8 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "재공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01783775&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01783775&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -7317,7 +7457,8 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01783666&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01783666&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -7590,7 +7731,8 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01783209&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01783209&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -7745,7 +7887,8 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01782037&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01782037&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -7805,7 +7948,8 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01780580&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01780580&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "bid_no": "R26BK01780120",
@@ -7845,7 +7989,8 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "취소공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01779643&bidPbancOrd=001"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01779643&bidPbancOrd=001",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -7885,7 +8030,8 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "취소공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01778192&bidPbancOrd=001"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01778192&bidPbancOrd=001",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -7905,7 +8051,8 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "취소공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01774680&bidPbancOrd=001"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01774680&bidPbancOrd=001",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -7965,7 +8112,8 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "변경공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01769887&bidPbancOrd=001"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01769887&bidPbancOrd=001",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -8005,7 +8153,8 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01782438&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01782438&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -8045,7 +8194,8 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01782314&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01782314&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -8065,7 +8215,8 @@
       "contract_method": "수의계약",
       "ntce_kind": "재공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01782243&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01782243&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -8145,7 +8296,8 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01782008&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01782008&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -8166,7 +8318,8 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01781959&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01781959&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -8186,7 +8339,8 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01781805&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01781805&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -47800,7 +47954,8 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01781690&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01781690&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -47911,7 +48066,8 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01781373&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01781373&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -47931,7 +48087,8 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01780990&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01780990&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -47951,7 +48108,8 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "재공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01780989&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01780989&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -48605,7 +48763,8 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01780902&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01780902&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -48625,7 +48784,8 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01780836&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01780836&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -48645,7 +48805,8 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "재공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01780538&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01780538&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -48665,7 +48826,8 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "재공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01780531&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01780531&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -48685,7 +48847,8 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "변경공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01780531&bidPbancOrd=001"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01780531&bidPbancOrd=001",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -48865,7 +49028,8 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01779907&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01779907&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -48925,7 +49089,8 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01779643&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01779643&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -49006,7 +49171,8 @@
       "ntce_kind": "등록공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01778396&bidPbancOrd=000",
-      "bidders_empty": true
+      "bidders_empty": true,
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -49026,7 +49192,8 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "재공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01777245&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01777245&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -49046,7 +49213,8 @@
       "contract_method": "수의계약",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01775434&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01775434&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -49066,7 +49234,8 @@
       "contract_method": "수의계약",
       "ntce_kind": "변경공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01775434&bidPbancOrd=001"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01775434&bidPbancOrd=001",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -49167,7 +49336,8 @@
       "ntce_kind": "취소공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01770646&bidPbancOrd=001",
-      "bidders_empty": true
+      "bidders_empty": true,
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -49188,7 +49358,8 @@
       "ntce_kind": "취소공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01770560&bidPbancOrd=001",
-      "bidders_empty": true
+      "bidders_empty": true,
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -51461,7 +51632,8 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01779349&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01779349&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -51561,7 +51733,8 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "재공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01779091&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01779091&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -51657,7 +51830,8 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01778901&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01778901&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -51677,7 +51851,8 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01778882&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01778882&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -51697,7 +51872,8 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "재공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01778399&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01778399&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -51788,7 +51964,8 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01778225&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01778225&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -51808,7 +51985,8 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01778212&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01778212&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -51888,7 +52066,8 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01778192&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01778192&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -51908,7 +52087,8 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01778130&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01778130&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -51986,7 +52166,8 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01778078&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01778078&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -52006,7 +52187,8 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01778011&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01778011&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -52087,7 +52269,8 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01777764&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01777764&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -52128,7 +52311,8 @@
       "ntce_kind": "등록공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01777724&bidPbancOrd=000",
-      "bidders_empty": true
+      "bidders_empty": true,
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -52148,7 +52332,8 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01777550&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01777550&bidPbancOrd=000",
+      "award_lookup_at": "2026-10-30"
     },
     {
       "source": "g2b_api",
@@ -74849,7 +75034,12 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "thng",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01756046&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01756046&bidPbancOrd=000",
+      "winner": "아이와이시스템",
+      "bid_count": 2,
+      "award_amount_eok": 4.44,
+      "win_rate_pct": 96.153,
+      "status": "낙찰"
     },
     {
       "source": "g2b_api",
@@ -85951,7 +86141,7 @@
       "open_date": "2026-09-29",
       "notice_date": "2026-09-14",
       "budget_eok": 8.5,
-      "award_amount_eok": null,
+      "award_amount_eok": 8.39,
       "winner": "버블콘",
       "bid_count": 3,
       "second": null,
@@ -85987,7 +86177,8 @@
       "nature": "운영·유지보수",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "win_rate_pct": 98.7
     },
     {
       "bid_no": "R26BK01716243",
@@ -86468,7 +86659,7 @@
       "open_date": "2026-08-25",
       "notice_date": "2026-07-31",
       "budget_eok": 9.8,
-      "award_amount_eok": null,
+      "award_amount_eok": 9.84,
       "winner": "포딕스시스템",
       "bid_count": 2,
       "second": "다누시스",
@@ -86496,7 +86687,8 @@
       "fields": [
         "비전·영상"
       ],
-      "scope": "AI SW 확대"
+      "scope": "AI SW 확대",
+      "win_rate_pct": 100.4
     },
     {
       "bid_no": "R26BK01656277",
@@ -86591,7 +86783,7 @@
       "open_date": "2026-09-03",
       "notice_date": "2026-07-24",
       "budget_eok": 8.1,
-      "award_amount_eok": null,
+      "award_amount_eok": 7.1975,
       "winner": "이스트소프트",
       "bid_count": 10,
       "second": "엠큐닉",
@@ -86683,7 +86875,8 @@
       "nature": "시스템 구축·고도화",
       "fields": [
         "생성형·LLM"
-      ]
+      ],
+      "win_rate_pct": 88.9
     },
     {
       "bid_no": "R26BK01649241",
@@ -87120,7 +87313,7 @@
       "open_date": "2026-08-31",
       "notice_date": "2026-07-20",
       "budget_eok": 19.9,
-      "award_amount_eok": null,
+      "award_amount_eok": 19.899,
       "winner": "와이즈넛",
       "bid_count": 8,
       "second": "인타운",
@@ -87196,7 +87389,8 @@
       "nature": "시스템 구축·고도화",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "win_rate_pct": 100.0
     },
     {
       "bid_no": "R26BK01635630",
@@ -87236,7 +87430,7 @@
       "open_date": "2026-08-19",
       "notice_date": "2026-07-16",
       "budget_eok": 28.1,
-      "award_amount_eok": null,
+      "award_amount_eok": 27.78,
       "winner": "가온아이",
       "bid_count": 3,
       "second": "코비젼",
@@ -87272,7 +87466,8 @@
       "nature": "시스템 구축·고도화",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "win_rate_pct": 98.9
     },
     {
       "bid_no": "R26BK01625804",
@@ -92242,14 +92437,48 @@
       "budget_eok": 11.0,
       "award_amount_eok": null,
       "winner": "한국능률협회컨설팅",
-      "bid_count": 4.0,
-      "second": null,
+      "bid_count": 4,
+      "second": "삼정회계법인",
       "status": "낙찰",
       "source": "bootstrap",
       "scope": "AI SW 확대",
       "nature": "ISP·전략",
       "fields": [
         "AI 일반"
+      ],
+      "bidders": [
+        {
+          "rank": 1,
+          "name": "한국능률협회컨설팅",
+          "amount_eok": 10.78,
+          "rate_pct": 9.3878,
+          "bizno": "1168129581",
+          "ceo": "한수희"
+        },
+        {
+          "rank": 2,
+          "name": "삼정회계법인",
+          "amount_eok": 10.175,
+          "rate_pct": 9.9459,
+          "bizno": "1028134334",
+          "ceo": "김교태"
+        },
+        {
+          "rank": 3,
+          "name": "씨에이에스",
+          "amount_eok": 10.12,
+          "rate_pct": 10.0,
+          "bizno": "1168137757",
+          "ceo": "전영하"
+        },
+        {
+          "rank": 4,
+          "name": "넥스트아이앤아이",
+          "amount_eok": 10.835,
+          "rate_pct": 9.3401,
+          "bizno": "1298176829",
+          "ceo": "류재웅"
+        }
       ]
     },
     {
@@ -104326,29 +104555,38 @@
     }
   ],
   "stats": {
-    "raw": 480,
-    "classified": 476,
-    "stored": 1531,
+    "raw": 485,
+    "classified": 481,
+    "stored": 1536,
     "band": 474,
-    "with_winner": 529,
+    "with_winner": 531,
     "awards": {
-      "fetched": 7204,
-      "updated": 0
+      "fetched": 7289,
+      "updated": 2
     },
     "scope": {
-      "생성형·Agent": 174,
-      "AI SW 확대": 1357
+      "생성형·Agent": 175,
+      "AI SW 확대": 1361
     },
-    "with_bidders": 510,
+    "awards_enrich": {
+      "range": {
+        "since": "2026-09-30",
+        "until": "2026-10-30"
+      },
+      "fetched": 13692,
+      "updated": 5,
+      "lookups": 80
+    },
+    "with_bidders": 511,
     "bidders_enrich": {
-      "targets": 2,
-      "fetched": 2,
-      "updated": 0,
-      "empty": 2,
+      "targets": 1,
+      "fetched": 1,
+      "updated": 1,
+      "empty": 0,
       "skipped": 0,
       "bootstrap_upserts": 0
     },
     "budget_sanitized": 0
   },
-  "reclassified_at": "2026-10-30T04:36:29Z"
+  "reclassified_at": "2026-10-30T04:47:17Z"
 }
