@@ -150,6 +150,7 @@ jobs:
             reports.json reports/ \
             band.html awards.html index.html competitors.html prespecs.html
           if [ -f data/prespecs.json ]; then git add data/prespecs.json; fi
+          git add -A bids/
           if git diff --staged --quiet; then
             echo "No data changes."
           else

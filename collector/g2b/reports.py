@@ -15,9 +15,9 @@ from .render import (
     _bars_html,
     _fmt_budget,
     _fmt_num,
-    _g2b_href,
     _parse_date,
     _today_kst,
+    title_link,
 )
 from .assets import ASSET_VER
 
@@ -191,11 +191,7 @@ def _sort_by_budget(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
 
 
 def _title_link(notice: dict[str, Any]) -> str:
-    title = html.escape(notice.get("title") or "")
-    href = _g2b_href(notice)
-    if href:
-        return f'<a href="{href}" target="_blank" rel="noopener">{title}</a>'
-    return title
+    return title_link(notice, "../")
 
 
 def _fmt_int_comma(n: int | float) -> str:

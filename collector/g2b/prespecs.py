@@ -8,9 +8,9 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
-from .assets import ASSET_VER
 from .classify import load_keywords
 from .render import KST, _fmt_budget, _kst_date, load_run_status
+from .site import DETAIL_DIR, page, stat
 
 STATUS_BID = "본공고 게시"
 STATUS_OPEN = "의견 접수 중"
@@ -21,40 +21,6 @@ STATUS_TITLE = {
     STATUS_OPEN: "의견등록 마감 전 — 규격 의견을 낼 수 있음",
     STATUS_CLOSED: "의견등록 마감, 본공고 대기",
 }
-
-NAV = (
-    '<nav class="top"><b>공공 AI Agent 시장 리서치</b>'
-    '<a href="index.html">홈</a>'
-    '<a href="band.html">8~30억 분석</a>'
-    '<a href="awards.html">수주 현황</a>'
-    '<a href="prespecs.html">사전규격</a>'
-    '<a href="competitors.html">국내 전문기업</a>'
-    '<a href="reports/index.html">리포트 목록</a>'
-    '<a href="deliverables.html">산출물 안내</a></nav>'
-)
-
-HEAD = (
-    '<!doctype html><html lang="ko"><head><meta charset="utf-8">'
-    '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'
-    "<title>AI 사업 사전규격</title>"
-    '<link rel="preconnect" href="https://fonts.googleapis.com">'
-    '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?'
-    'family=IBM+Plex+Sans+KR:wght@400;600;700&family=IBM+Plex+Mono:wght@500&display=swap">'
-    '<meta http-equiv="Cache-Control" content="no-cache">'
-    f'<link rel="stylesheet" href="assets/site.css?v={ASSET_VER}"></head><body>'
-    '<div class="wrap">'
-)
-
-FOOTER = (
-    "<footer>데이터 출처: 조달청 나라장터 사전규격정보(공공데이터포털 Open API). "
-    "사업명 기준 자동 분류라 일부 오분류가 있을 수 있습니다. "
-    "규격서 링크는 나라장터 원문 파일입니다.</footer>"
-)
-
-TAIL = (
-    f'</div><script src="assets/table-sort.js?v={ASSET_VER}" defer></script>'
-    f'<script src="assets/table-filter.js?v={ASSET_VER}" defer></script></body></html>'
-)
 
 THEAD = (
     "<thead><tr><th>등록일</th><th>의견마감</th><th>상태</th><th>수요기관</th>"
@@ -81,22 +47,23 @@ def prespec_status(p: dict[str, Any], now: datetime | None = None) -> str:
     return STATUS_CLOSED
 
 
-def _bid_href(bid_no: str) -> str:
+def _bid_link(bid_no: str, details: dict[str, str]) -> str:
     no = bid_no.split("-")[0]
-    return html.escape(
-        f"https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo={no}&bidPbancOrd=000",
-        quote=True,
+    if no in details:
+        return f'<a href="{DETAIL_DIR}/{html.escape(details[no])}.html">{html.escape(no)}</a>'
+    url = f"https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo={no}&bidPbancOrd=000"
+    return (
+        f'<a href="{html.escape(url, quote=True)}" target="_blank" rel="noopener"'
+        f' title="나라장터 원문 (AI 분류 밖이거나 미수집)">{html.escape(no)} ↗</a>'
     )
 
 
-def render_row(p: dict[str, Any], status: str) -> str:
+def render_row(p: dict[str, Any], status: str, details: dict[str, str] | None = None) -> str:
     files = " ".join(
         f'<a href="{html.escape(u, quote=True)}" rel="noopener">{i}</a>'
         for i, u in enumerate(p.get("spec_files") or [], 1)
     )
-    bids = " ".join(
-        f'<a href="{_bid_href(b)}" rel="noopener">{html.escape(b)}</a>' for b in p.get("bid_nos") or []
-    )
+    bids = " ".join(_bid_link(b, details or {}) for b in p.get("bid_nos") or [])
     close = (p.get("opinion_close_at") or "")[:10]
     style = "color:var(--accent)" if status == STATUS_OPEN else "color:var(--muted)"
     return (
@@ -117,10 +84,6 @@ def render_row(p: dict[str, Any], status: str) -> str:
     )
 
 
-def _stat(value: str, label: str) -> str:
-    return f'<div class="stat"><div class="v">{value}</div><div class="l">{label}</div></div>'
-
-
 def stamp_for(status: dict[str, Any]) -> str:
     stage = (status.get("stages") or {}).get("prespecs") or {}
     ok_day = _kst_date(stage.get("last_success_at"))
@@ -132,8 +95,12 @@ def stamp_for(status: dict[str, Any]) -> str:
 
 
 def render_prespecs_html(
-    prespecs: list[dict[str, Any]], run_status: dict[str, Any], now: datetime | None = None
+    prespecs: list[dict[str, Any]],
+    run_status: dict[str, Any],
+    now: datetime | None = None,
+    details: dict[str, str] | None = None,
 ) -> str:
+    """details: 공고번호 → bids/ slug for notices that have a 사업 상세 page."""
     rules = load_keywords()
     lo, hi = rules["filters"]["band_min_eok"], rules["filters"]["band_max_eok"]
     rows = sorted(prespecs, key=lambda p: p.get("registered_at") or "", reverse=True)
@@ -146,24 +113,22 @@ def render_prespecs_html(
 
     stats = (
         '<div class="stats">'
-        + _stat(f"{len(rows):,}건", f"AI 사전규격 ({since} 이후)" if since else "AI 사전규격")
-        + _stat(f"{n_open:,}건", "의견 접수 중")
-        + _stat(f"{n_band:,}건", f"배정예산 {lo:g}~{hi:g}억")
-        + _stat(f"{n_bid:,}건", "본공고 게시")
-        + _stat(f"{round(sum(budgets)):,}억", "배정예산 합계")
+        + stat(f"{len(rows):,}건", f"AI 사전규격 ({since} 이후)" if since else "AI 사전규격")
+        + stat(f"{n_open:,}건", "의견 접수 중")
+        + stat(f"{n_band:,}건", f"배정예산 {lo:g}~{hi:g}억")
+        + stat(f"{n_bid:,}건", "본공고 게시")
+        + stat(f"{round(sum(budgets)):,}억", "배정예산 합계")
         + "</div>"
     )
-    body_rows = "".join(render_row(p, s) for p, s in zip(rows, statuses))
+    body_rows = "".join(render_row(p, s, details) for p, s in zip(rows, statuses))
     table = (
         '<div class="tbl"><table class="notices prespecs js-filter">'
         f"{THEAD}<tbody>{body_rows}</tbody></table></div>"
         if rows
         else '<p class="note">수집된 사전규격이 아직 없습니다.</p>'
     )
-    return (
-        HEAD
-        + NAV
-        + '<div class="eyebrow">사전규격</div><h1>AI 사업 사전규격</h1>'
+    body = (
+        '<div class="eyebrow">사전규격</div><h1>AI 사업 사전규격</h1>'
         '<p class="lede">본공고 전에 공개되는 사전규격(규격서 초안)입니다. '
         "의견등록 마감 전이면 규격에 의견을 낼 수 있고, 규격서로 본공고 RFP를 미리 볼 수 있습니다.</p>"
         f'<div class="stamp">{html.escape(stamp_for(run_status))}</div>'
@@ -172,15 +137,24 @@ def render_prespecs_html(
         '<p class="note">상태로 거르면 의견 접수 중인 건만 볼 수 있습니다. '
         "물품은 SW 납품이 분명한 건만 포함하고, GPU·서버 등 장비 구매와 교육·행사성 용역은 제외합니다.</p>"
         + table
-        + FOOTER
-        + TAIL
     )
+    return page("AI 사업 사전규격", body, scripts=("table-sort.js", "table-filter.js"))
+
+
+def detail_index(repo_root: Path) -> dict[str, str]:
+    from .detail import load_detail_notices
+    from .site import detail_slug
+
+    return {n["bid_no"]: detail_slug(n) for n in load_detail_notices(repo_root)}
 
 
 def render_prespecs_page(repo_root: Path) -> dict[str, Any]:
     prespecs = load_prespecs(repo_root)
     path = repo_root / "prespecs.html"
     path.write_text(
-        render_prespecs_html(prespecs, load_run_status(repo_root)), encoding="utf-8"
+        render_prespecs_html(
+            prespecs, load_run_status(repo_root), details=detail_index(repo_root)
+        ),
+        encoding="utf-8",
     )
     return {"path": str(path), "prespecs": len(prespecs)}

@@ -25,10 +25,17 @@ def _bid_from_href(href: str | None) -> tuple[str | None, str | None]:
     if not href:
         return None, None
     href = href.replace("&amp;", "&")
+    detail = re.search(r"bids/([^/]+)-(\d{3})\.html$", href)
+    if detail:
+        return detail.group(1), detail.group(2)
     q = parse_qs(urlparse(href).query)
     no = (q.get("bidPbancNo") or q.get("bidNtceNo") or [None])[0]
     ord_ = (q.get("bidPbancOrd") or q.get("bidNtceOrd") or [None])[0]
     return no, ord_
+
+
+def _g2b_only(href: str | None) -> str | None:
+    return href if href and "g2b.go.kr" in href else None
 
 
 class _TableParser(HTMLParser):
@@ -134,7 +141,7 @@ def extract_band_notices(repo_root: Path) -> list[dict[str, Any]]:
                 "bid_count": _parse_eok(r[idx["투찰 수"]]["text"]),
                 "winner": r[idx["낙찰자"]]["text"] or None,
                 "win_rate_pct": _parse_eok(r[idx.get("낙찰률", idx.get("낙찰가율"))]["text"]),
-                "g2b_url": title_cell.get("href"),
+                "g2b_url": _g2b_only(title_cell.get("href")),
             }
         )
     return out
@@ -161,7 +168,7 @@ def extract_large_awards(repo_root: Path) -> list[dict[str, Any]]:
                 "winner": r[idx["낙찰자"]]["text"] or None,
                 "bid_count": _parse_eok(r[idx["투찰 수"]]["text"]),
                 "second": r[idx["2순위"]]["text"] or None,
-                "g2b_url": title_cell.get("href"),
+                "g2b_url": _g2b_only(title_cell.get("href")),
             }
         )
     return out
@@ -188,7 +195,7 @@ def extract_needs_confirm(repo_root: Path) -> tuple[list[dict[str, Any]], int]:
                 "title": title_cell["text"] or None,
                 "budget_eok": _parse_eok(r[idx["예산(억)"]]["text"]),
                 "contract_method": r[idx["계약방법"]]["text"] or None,
-                "g2b_url": title_cell.get("href"),
+                "g2b_url": _g2b_only(title_cell.get("href")),
                 "status": "개찰 확인 필요",
             }
         )

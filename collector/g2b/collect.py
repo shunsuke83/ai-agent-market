@@ -631,14 +631,12 @@ def cmd_render(args: argparse.Namespace) -> int:
 
     targets = args.target
     if "all" in targets:
-        targets = ["band", "awards", "index", "competitors", "reports", "prespecs"]
+        targets = ["band", "awards", "index", "competitors", "reports", "prespecs", "details"]
     summary: dict[str, Any] = {}
     if "band" in targets:
         summary["band"] = render_band_page(ROOT)
     if "awards" in targets:
         summary["awards"] = render_awards_page(ROOT)
-    if "index" in targets:
-        summary["index"] = render_index_stamp(ROOT)
     if "competitors" in targets:
         summary["competitors"] = render_competitors_page(ROOT)
     if "reports" in targets:
@@ -647,6 +645,16 @@ def cmd_render(args: argparse.Namespace) -> int:
         from .prespecs import render_prespecs_page
 
         summary["prespecs"] = render_prespecs_page(ROOT)
+    if "details" in targets:
+        from .detail import render_detail_pages
+
+        summary["details"] = render_detail_pages(ROOT)
+    if "index" in targets:
+        from .home import render_home
+
+        # Home reads data/reports.json, so it renders after reports.
+        summary["index"] = render_home(ROOT)
+        render_index_stamp(ROOT, home=False)
     print(json.dumps(summary, ensure_ascii=False, indent=2))
     return 0
 
@@ -779,7 +787,7 @@ def build_parser() -> argparse.ArgumentParser:
     r.add_argument(
         "target",
         nargs="+",
-        choices=["band", "awards", "index", "competitors", "reports", "prespecs", "all"],
+        choices=["band", "awards", "index", "competitors", "reports", "prespecs", "details", "all"],
         help="What to render",
     )
     r.set_defaults(func=cmd_render)

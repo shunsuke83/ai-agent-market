@@ -11,6 +11,7 @@ from .assets import stamp_asset_versions
 from .normalize import band_excluded, in_band, merge_by_bid, sort_notices
 from .classify import classify_nature, load_keywords
 from .seed import load_seed
+from .site import detail_href
 
 KST = timezone(timedelta(hours=9))
 
@@ -130,6 +131,16 @@ def _g2b_href(notice: dict[str, Any]) -> str:
     return html.escape(url, quote=True)
 
 
+def title_link(notice: dict[str, Any], prefix: str = "") -> str:
+    """사업명 → bids/ 사업 상세; 공고번호가 없으면 나라장터 원문."""
+    title = html.escape(notice.get("title") or "")
+    href = detail_href(notice, prefix)
+    if href:
+        return f'<a href="{html.escape(href, quote=True)}">{title}</a>'
+    g2b = _g2b_href(notice)
+    return f'<a href="{g2b}" target="_blank" rel="noopener">{title}</a>' if g2b else title
+
+
 def _status_cell(status: str) -> str:
     style, title = STATUS_STYLE.get(
         status, ("color:var(--muted);white-space:nowrap", status)
@@ -152,8 +163,6 @@ def render_notice_row(notice: dict[str, Any], today: date | None = None) -> str:
         field_txt = fields
     else:
         field_txt = ", ".join(fields)
-    title = notice.get("title") or ""
-    href = _g2b_href(notice)
     bid_count = notice.get("bid_count")
     if bid_count is not None and bid_count != "":
         try:
@@ -179,7 +188,7 @@ def render_notice_row(notice: dict[str, Any], today: date | None = None) -> str:
         f"<td>{html.escape(notice.get('notice_date') or '')}</td>"
         f"<td>{html.escape(notice.get('scope') or '')}</td>"
         f"<td>{html.escape(notice.get('org') or '')}</td>"
-        f'<td><a href="{href}" target="_blank" rel="noopener">{html.escape(title)}</a></td>'
+        f"<td>{title_link(notice)}</td>"
         f"<td>{html.escape(field_txt)}</td>"
         f'<td class="num"{_budget_title(notice)}>{_fmt_budget(notice.get("budget_eok"))}</td>'
         f"<td>{html.escape(notice.get('open_date') or '')}</td>"
@@ -587,8 +596,7 @@ def render_followup_row(n: dict[str, Any]) -> str:
         "<tr>"
         f"<td>{html.escape(n.get('notice_date') or '')}</td>"
         f"<td>{html.escape(n.get('org') or '')}</td>"
-        f'<td><a href="{_g2b_href(n)}" target="_blank" rel="noopener">'
-        f"{html.escape(n.get('title') or '')}</a></td>"
+        f"<td>{title_link(n)}</td>"
         f'<td class="num">{_fmt_budget(n.get("budget_eok"))}</td>'
         "</tr>"
     )
@@ -732,13 +740,12 @@ def render_band_page(repo_root: Path) -> dict[str, Any]:
     }
 
 
-def render_index_stamp(repo_root: Path) -> dict[str, Any]:
+def render_index_stamp(repo_root: Path, home: bool = True) -> dict[str, Any]:
     path = repo_root / "index.html"
-    text = path.read_text(encoding="utf-8")
     stamp = stamp_text(load_run_status(repo_root))
-    text = update_stamp(text, stamp)
-    text = stamp_asset_versions(text)
-    path.write_text(text, encoding="utf-8")
+    if home:
+        text = update_stamp(path.read_text(encoding="utf-8"), stamp)
+        path.write_text(stamp_asset_versions(text), encoding="utf-8")
     # Hand-edited pages that no renderer owns still need fresh asset versions.
     for extra in ("deliverables.html",):
         p = repo_root / extra
@@ -1062,13 +1069,11 @@ def load_needs_confirm(
 
 
 def render_large_award_row(row: dict[str, Any]) -> str:
-    href = _g2b_href(row)
-    title = row.get("title") or ""
     return (
         "<tr>"
         f"<td>{html.escape(row.get('open_date') or '')}</td>"
         f"<td>{html.escape(row.get('org') or '')}</td>"
-        f'<td><a href="{href}" target="_blank" rel="noopener">{html.escape(title)}</a></td>'
+        f"<td>{title_link(row)}</td>"
         f'<td class="num">{_fmt_eok_display(row.get("budget_eok"))}</td>'
         f'<td class="num">{_fmt_eok_display(_award_amount(row)) or AMOUNT_UNKNOWN}</td>'
         f"<td>{html.escape(row.get('winner') or '')}</td>"
@@ -1099,13 +1104,11 @@ def render_yearly_row(year: str, count: int, amount: float) -> str:
 
 
 def render_needs_confirm_row(row: dict[str, Any]) -> str:
-    href = _g2b_href(row)
-    title = row.get("title") or ""
     return (
         "<tr>"
         f"<td>{html.escape(row.get('open_date') or '')}</td>"
         f"<td>{html.escape(row.get('org') or '')}</td>"
-        f'<td><a href="{href}" target="_blank" rel="noopener">{html.escape(title)}</a></td>'
+        f"<td>{title_link(row)}</td>"
         f'<td class="num">{_fmt_eok_display(row.get("budget_eok"))}</td>'
         f"<td>{html.escape(row.get('contract_method') or '')}</td>"
         "</tr>"
