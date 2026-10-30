@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-29T17:48:24.599653+09:00",
+  "generated_at": "2026-10-30T12:42:22.012680+09:00",
   "weekly": [
     {
       "year": 2026,
       "week": 43,
       "file": "weekly-2026-W43.html",
       "slug": "weekly-2026-W43",
-      "core_count": 68,
-      "budget_sum": 460.3,
-      "awards_count": 60,
-      "other_count": 143,
+      "core_count": 75,
+      "budget_sum": 576.8,
+      "awards_count": 62,
+      "other_count": 152,
       "start": "2026-10-19",
       "end": "2026-10-25"
     }
@@ -21,13 +21,13 @@
       "month": 10,
       "file": "monthly-2026-10.html",
       "slug": "monthly-2026-10",
-      "core_count": 280,
-      "budget_sum": 1030.0,
-      "large_count": 15,
-      "isp_count": 29,
+      "core_count": 310,
+      "budget_sum": 1260.5,
+      "large_count": 22,
+      "isp_count": 30,
       "in_progress": true,
       "start": "2026-10-01",
-      "end": "2026-10-29"
+      "end": "2026-10-30"
     }
   ],
   "core_natures": [
