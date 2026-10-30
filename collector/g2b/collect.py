@@ -374,7 +374,7 @@ def cmd_enrich_bidders(args: argparse.Namespace) -> int:
             rows = client.fetch_bidders_by_bid(n["bid_no"], n.get("bid_ord"))
         except (G2BError, Exception) as e:
             msg = redact_secrets(str(e))
-            if "429" in msg:
+            if getattr(e, "status_code", None) == 429:
                 consecutive_429 += 1
                 # OpengCompt quota recovers slowly — cool down instead of burning skips.
                 try:

@@ -17,6 +17,7 @@ permissions:
 jobs:
   collect:
     runs-on: ubuntu-latest
+    timeout-minutes: 120
     steps:
       - name: Require DATA_GO_KR_SERVICE_KEY
         env:
@@ -44,6 +45,7 @@ jobs:
         continue-on-error: true
         env:
           DATA_GO_KR_SERVICE_KEY: ${{ secrets.DATA_GO_KR_SERVICE_KEY }}
+          G2B_CONNECT_TIMEOUT: "15"
           G2B_TIMEOUT: "90"
           G2B_HTTP_RETRIES: "8"
           G2B_SLEEP: "0.35"
@@ -62,6 +64,7 @@ jobs:
       - name: Enrich bidder rankings (OpengCompt)
         env:
           DATA_GO_KR_SERVICE_KEY: ${{ secrets.DATA_GO_KR_SERVICE_KEY }}
+          G2B_CONNECT_TIMEOUT: "15"
           G2B_TIMEOUT: "90"
           G2B_HTTP_RETRIES: "8"
           G2B_SLEEP: "0.5"
@@ -94,3 +97,9 @@ jobs:
             git commit -m "data: refresh G2B AI notices and render pages"
             git push
           fi
+
+      - name: Fail run if collect failed
+        if: steps.collect.outcome == 'failure'
+        run: |
+          echo "::error::Collect step failed; pages were refreshed from existing notices only."
+          exit 1
