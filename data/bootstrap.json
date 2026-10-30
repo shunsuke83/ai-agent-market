@@ -4492,10 +4492,10 @@
       ],
       "budget_eok": 13.1,
       "open_date": "2025-08-21",
-      "status": "개찰 확인 필요",
-      "bid_count": null,
-      "winner": null,
-      "win_rate_pct": null,
+      "status": "낙찰",
+      "bid_count": 1.0,
+      "winner": "시큐레이어",
+      "win_rate_pct": 100.0,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK01015717&bidPbancOrd=000"
     },
     {
@@ -4761,10 +4761,10 @@
       ],
       "budget_eok": 14.9,
       "open_date": "2025-07-22",
-      "status": "개찰 확인 필요",
-      "bid_count": null,
-      "winner": null,
-      "win_rate_pct": null,
+      "status": "낙찰",
+      "bid_count": 2.0,
+      "winner": "엠큐닉",
+      "win_rate_pct": 90.0,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00945166&bidPbancOrd=000"
     },
     {
@@ -4989,10 +4989,10 @@
       ],
       "budget_eok": 11.3,
       "open_date": "2025-07-08",
-      "status": "개찰 확인 필요",
-      "bid_count": null,
-      "winner": null,
-      "win_rate_pct": null,
+      "status": "낙찰",
+      "bid_count": 2.0,
+      "winner": "엠비엔미디어렙",
+      "win_rate_pct": 93.6,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00905797&bidPbancOrd=000"
     },
     {
@@ -5446,10 +5446,10 @@
       ],
       "budget_eok": 10.4,
       "open_date": "2025-04-17",
-      "status": "개찰 확인 필요",
-      "bid_count": null,
-      "winner": null,
-      "win_rate_pct": null,
+      "status": "낙찰",
+      "bid_count": 1.0,
+      "winner": "팀벨",
+      "win_rate_pct": 100.0,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00782872&bidPbancOrd=000"
     },
     {
@@ -5637,10 +5637,10 @@
       ],
       "budget_eok": 10.7,
       "open_date": "2025-02-21",
-      "status": "개찰 확인 필요",
-      "bid_count": null,
-      "winner": null,
-      "win_rate_pct": null,
+      "status": "낙찰",
+      "bid_count": 4.0,
+      "winner": "코너스",
+      "win_rate_pct": 95.1,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R25BK00629680&bidPbancOrd=000"
     },
     {
@@ -6175,10 +6175,10 @@
       ],
       "budget_eok": 23.8,
       "open_date": "2024-11-13",
-      "status": "개찰 확인 필요",
-      "bid_count": null,
-      "winner": null,
-      "win_rate_pct": null,
+      "status": "낙찰",
+      "bid_count": 2.0,
+      "winner": "미스터마인드",
+      "win_rate_pct": 84.9,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20241033639&bidPbancOrd=000"
     },
     {
@@ -6842,10 +6842,10 @@
       ],
       "budget_eok": 12.4,
       "open_date": "2024-05-17",
-      "status": "개찰 확인 필요",
-      "bid_count": null,
-      "winner": null,
-      "win_rate_pct": null,
+      "status": "낙찰",
+      "bid_count": 1.0,
+      "winner": "케이티텔레캅",
+      "win_rate_pct": 100.0,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20240516796&bidPbancOrd=000"
     },
     {
@@ -6994,10 +6994,10 @@
       ],
       "budget_eok": 10.4,
       "open_date": "2024-04-18",
-      "status": "개찰 확인 필요",
-      "bid_count": null,
-      "winner": null,
-      "win_rate_pct": null,
+      "status": "낙찰",
+      "bid_count": 1.0,
+      "winner": "솔트룩스",
+      "win_rate_pct": 99.3,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=20240422286&bidPbancOrd=000"
     },
     {
@@ -10052,6 +10052,6 @@
       "procurement": "GS 1등급 2건, CSAP(뷰어), 디지털서비스몰(뷰어)"
     }
   ],
-  "generated_at": "2026-10-30T05:18:25Z",
+  "generated_at": "2026-10-30T05:26:03Z",
   "mode": "bootstrap_html"
 }
