@@ -45,6 +45,13 @@ OPENG_PPS_OPS = {
 
 # 개찰완료 투찰업체별 순위 (BidResult 대체 — getBidResult* 는 400)
 OPENG_COMPT = f"{SCSBID_BASE}/getOpengResultListInfoOpengCompt"
+
+# 사전규격 (data.go.kr 15129437) — 입찰공고 전 규격 공개. 별도 활용신청 필요.
+PRESPEC_BASE = "https://apis.data.go.kr/1230000/ao/HrcspSsstndrdInfoService"
+PRESPEC_OPS = {
+    "servc": f"{PRESPEC_BASE}/getPublicPrcureThngInfoServc",
+    "thng": f"{PRESPEC_BASE}/getPublicPrcureThngInfoThng",
+}
 OPENG_FAILING = f"{SCSBID_BASE}/getOpengResultListInfoFailing"
 OPENG_REBID = f"{SCSBID_BASE}/getOpengResultListInfoRebid"
 
@@ -248,6 +255,24 @@ class G2BClient:
                 "bidNtceNm": keyword,
             }
             out.extend(self.iter_pages(url, params))
+        return out
+
+    def fetch_prespecs(
+        self, start: date, end: date, biz_types: list[str] | None = None
+    ) -> list[dict[str, Any]]:
+        """All 사전규격 registered in [start, end] (등록일시, ≤1개월 창); classify locally."""
+        out: list[dict[str, Any]] = []
+        for biz in biz_types or ["servc", "thng"]:
+            for bgn, edn in month_windows(start, end):
+                params = {
+                    "inqryDiv": "1",
+                    "inqryBgnDt": _dt_param(bgn),
+                    "inqryEndDt": _dt_param(edn, end=True),
+                }
+                for item in self.iter_pages(PRESPEC_OPS[biz], params, page_size=500):
+                    item = dict(item)
+                    item["_biz"] = biz
+                    out.append(item)
         return out
 
     def search_bids_ai(

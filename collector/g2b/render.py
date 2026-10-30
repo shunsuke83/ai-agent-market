@@ -140,6 +140,11 @@ def _status_cell(status: str) -> str:
     )
 
 
+def _budget_title(notice: dict[str, Any]) -> str:
+    kind = notice.get("budget_kind")
+    return f' title="{html.escape(kind)} 기준"' if kind else ""
+
+
 def render_notice_row(notice: dict[str, Any], today: date | None = None) -> str:
     status = infer_status(notice, today)
     fields = notice.get("fields") or []
@@ -176,7 +181,7 @@ def render_notice_row(notice: dict[str, Any], today: date | None = None) -> str:
         f"<td>{html.escape(notice.get('org') or '')}</td>"
         f'<td><a href="{href}" target="_blank" rel="noopener">{html.escape(title)}</a></td>'
         f"<td>{html.escape(field_txt)}</td>"
-        f'<td class="num">{_fmt_budget(notice.get("budget_eok"))}</td>'
+        f'<td class="num"{_budget_title(notice)}>{_fmt_budget(notice.get("budget_eok"))}</td>'
         f"<td>{html.escape(notice.get('open_date') or '')}</td>"
         f"{_status_cell(status)}"
         f'<td class="num">{bid_count_s}</td>'

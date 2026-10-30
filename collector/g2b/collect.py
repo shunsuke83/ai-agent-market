@@ -238,6 +238,42 @@ def cmd_enrich_awards(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_collect_prespecs(args: argparse.Namespace) -> int:
+    """사전규격 (pre-specification) for AI titles → data/prespecs.json."""
+    from .client import G2BClient, G2BError
+    from .normalize import normalize_prespec_item
+
+    end = _parse_date(args.until) if args.until else date.today()
+    start = end - timedelta(days=args.days)
+    try:
+        client = G2BClient()
+        raw = client.fetch_prespecs(start, end)
+    except G2BError as e:
+        print(f"::warning::prespec fetch failed (활용신청 확인 필요?): {e}")
+        return 1
+    if raw:
+        print(f"Prespec item keys: {sorted(k for k in raw[0] if not k.startswith('_'))}")
+    rules = load_keywords()
+    rows = [r for r in (normalize_prespec_item(x, rules) for x in raw) if r]
+    print(f"Prespecs {start} → {end}: raw={len(raw)} ai={len(rows)}")
+
+    out = Path(args.out)
+    prev = json.loads(out.read_text(encoding="utf-8")) if out.exists() else {}
+    by_no = {p["prespec_no"]: p for p in prev.get("prespecs") or []}
+    for r in rows:
+        by_no[r["prespec_no"]] = {**by_no.get(r["prespec_no"], {}), **r}
+    merged = sorted(by_no.values(), key=lambda p: p.get("registered_at") or "", reverse=True)
+    payload = {
+        "schema_version": 1,
+        "generated_at": utc_now_iso(),
+        "range": {"since": start.isoformat(), "until": end.isoformat()},
+        "prespecs": merged,
+    }
+    out.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(f"Wrote {out} ({len(merged)} prespecs)")
+    return 0
+
+
 def _notice_key(n: dict[str, Any]) -> str:
     return f"{n.get('bid_no')}-{n.get('bid_ord') or '000'}"
 
@@ -525,7 +561,7 @@ def cmd_migrate_results(args: argparse.Namespace) -> int:
     return 0
 
 
-STAGES = ("collect", "awards", "bidders")
+STAGES = ("collect", "prespecs", "awards", "bidders")
 
 
 def cmd_mark_run(args: argparse.Namespace) -> int:
@@ -537,8 +573,8 @@ def cmd_mark_run(args: argparse.Namespace) -> int:
     stages = status.setdefault("stages", {})
     now = utc_now_iso()
     for name in STAGES:
-        outcome = getattr(args, name)
-        if not outcome:
+        outcome = getattr(args, name, None)
+        if not outcome or outcome == "skipped":
             continue
         s = stages.setdefault(name, {})
         s["last_attempt_at"] = now
@@ -639,6 +675,12 @@ def build_parser() -> argparse.ArgumentParser:
         help="Skip Scsbid award enrichment for this collect window",
     )
     c.set_defaults(func=cmd_collect)
+
+    ps = sub.add_parser("collect-prespecs", help="Fetch AI 사전규격 into data/prespecs.json")
+    ps.add_argument("--days", type=int, default=14)
+    ps.add_argument("--until", help="YYYY-MM-DD (default: today)")
+    ps.add_argument("--out", default=str(DATA / "prespecs.json"))
+    ps.set_defaults(func=cmd_collect_prespecs)
 
     e = sub.add_parser(
         "enrich-awards",

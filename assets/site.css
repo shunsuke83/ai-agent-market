@@ -50,12 +50,14 @@ table.band-results th:nth-child(2),table.band-results td:nth-child(2),
 table.band-results th:nth-child(5),table.band-results td:nth-child(5){display:none}
 }
 .tbl-tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 10px}
-.tbl-tools input,.tbl-tools select,.tbl-more{font:inherit;font-size:13px;color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:6px 10px}
+.tbl-tools input,.tbl-tools select,.tbl-more,.tbl-clear{font:inherit;font-size:13px;color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:6px 10px}
 .tbl-tools input{flex:1 1 220px;min-width:0}
-.tbl-tools input:focus,.tbl-tools select:focus,.tbl-more:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.tbl-tools input:focus,.tbl-tools select:focus,.tbl-more:focus-visible,.tbl-clear:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
 .tbl-count{font-size:13px;color:var(--muted)}
 .tbl-more{display:block;width:100%;margin-top:8px;cursor:pointer;color:var(--accent)}
-.tbl-more:hover{border-color:var(--accent)}
+.tbl-more:hover,.tbl-clear:hover{border-color:var(--accent)}
+.tbl-clear{cursor:pointer;color:var(--muted)}
+.tbl-clear[hidden],.tbl-more[hidden]{display:none}
 /* Notice lists: date col readable, other text wraps inside 100% table */
 table.notices th:first-child,table.notices td:first-child{width:8.6em;white-space:nowrap}
 .empty{background:var(--surface);border:1px dashed var(--line);border-radius:8px;padding:16px;color:var(--muted)}
