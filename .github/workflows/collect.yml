@@ -148,7 +148,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/notices.json data/reports.json data/run_status.json \
             reports.json reports/ \
-            band.html awards.html index.html competitors.html
+            band.html awards.html index.html competitors.html prespecs.html
           if [ -f data/prespecs.json ]; then git add data/prespecs.json; fi
           if git diff --staged --quiet; then
             echo "No data changes."
