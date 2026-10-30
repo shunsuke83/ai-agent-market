@@ -168,10 +168,22 @@ def cmd_enrich_awards(args: argparse.Namespace) -> int:
         and n.get("bid_no")
         and n.get("open_date")
         and n["open_date"] <= end.isoformat()
+        and n.get("ntce_kind") != "취소공고"
+        and n.get("status") not in ("유찰", "재공고됨")
     ]
-    # Rotate: never-looked-up first, then least recently looked up, so notices that
-    # never get a result don't hog the weekly --lookup-limit.
-    missing.sort(key=lambda n: n.get("award_lookup_at") or "")
+    overdue_before = (end - timedelta(days=60)).isoformat()
+
+    def _lookup_priority(n: dict[str, Any]) -> tuple[str, int, float]:
+        # Least recently looked up first (rotation), then 개찰 확인 필요 (opened > 60 days
+        # ago — results should exist by now), then larger budgets.
+        overdue = 0 if n["open_date"] <= overdue_before else 1
+        try:
+            budget = float(n.get("budget_eok") or 0)
+        except (TypeError, ValueError):
+            budget = 0.0
+        return (n.get("award_lookup_at") or "", overdue, -budget)
+
+    missing.sort(key=_lookup_priority)
     looked = 0
     if args.lookup_missing and missing:
         limit = args.lookup_limit if args.lookup_limit is not None else len(missing)
@@ -190,7 +202,10 @@ def cmd_enrich_awards(args: argparse.Namespace) -> int:
         if extra:
             merged, n2 = apply_awards_to_notices(merged, extra)
             n_upd += n2
-            print(f"Per-bid hits: {len(extra)} (lookups={looked})")
+        print(
+            f"Per-bid hits: {len(extra)} (lookups={looked}, "
+            f"api_errors={client.lookup_errors})"
+        )
 
     merged = sort_notices(merged)
     payload["notices"] = merged
@@ -202,6 +217,7 @@ def cmd_enrich_awards(args: argparse.Namespace) -> int:
         "fetched": len(awards),
         "updated": n_upd,
         "lookups": looked,
+        "lookup_api_errors": client.lookup_errors,
     }
     out.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(

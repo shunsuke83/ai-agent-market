@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import os
 import re
+import sys
 import time
 from datetime import date, datetime, timedelta
 from typing import Any, Iterator
@@ -125,6 +126,7 @@ class G2BClient:
             _env_int("G2B_HTTP_RETRIES", 8) if max_attempts is None else max_attempts
         )
         self.session = requests.Session()
+        self.lookup_errors = 0
 
     def _get(self, url: str, params: dict[str, Any]) -> dict[str, Any]:
         # data.go.kr keys are often already URL-encoded; requests will encode again if we pass
@@ -336,7 +338,13 @@ class G2BClient:
             url = SCSBID_OPS[biz]
             try:
                 data = self._get(url, params)
-            except Exception:
+            except G2BError as e:
+                self.lookup_errors += 1
+                if self.lookup_errors <= 5:
+                    print(
+                        f"  award lookup {bid_no} ({biz}) failed: {redact_secrets(str(e))}",
+                        file=sys.stderr,
+                    )
                 continue
             for item in self._items(data):
                 if bid_ord and str(item.get("bidNtceOrd") or "").zfill(3) != str(bid_ord).zfill(3):
