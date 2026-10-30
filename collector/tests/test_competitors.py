@@ -4,7 +4,6 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from g2b.competitors import (
-    SEED_FLOOR_COVERAGE,
     aggregate_competitor_kpis,
     build_alias_index,
     core_bidder_coverage,
@@ -33,26 +32,16 @@ def test_match_timeli_alias():
     assert match_competitor("업스테이지", idx) is None
 
 
-def test_live_wins_can_raise_above_seed():
-    rows = {r["name"]: r for r in aggregate_competitor_kpis(ROOT)}
-    pub = rows["퍼블릭에이아이"]
-    assert pub["live_wins"] >= 3
-    assert pub["wins"] >= 3
-    assert pub["award_amount_eok"] >= 40.0
-
-
-def test_aggregate_keeps_seed_floor():
+def test_aggregate_uses_live_values_only():
     rows = aggregate_competitor_kpis(ROOT)
     assert len(rows) == 23
-    by_name = {r["name"]: r for r in rows}
-    konan = by_name["코난테크놀로지"]
-    # Seed was 7 wins / 106.5억 — must not regress
-    assert konan["wins"] >= 7
-    assert konan["award_amount_eok"] >= 106.5
-    assert konan["bids"] >= konan["wins"]
-    assert konan["bids"] >= konan["live_bids"]
-    # Sorted by amount desc
-    assert rows[0]["award_amount_eok"] >= rows[1]["award_amount_eok"]
+    for r in rows:
+        assert r["wins"] == r["live_wins"]
+        assert r["award_amount_eok"] == r["live_amount_eok"]
+        assert r["bids"] == max(r["live_bids"], r["wins"])
+    assert [(-r["wins"], -r["award_amount_eok"]) for r in rows] == sorted(
+        (-r["wins"], -r["award_amount_eok"]) for r in rows
+    )
 
 
 def test_core_bidder_coverage_ratio():
@@ -75,7 +64,6 @@ def test_core_bidder_coverage_ratio():
     assert cov["core_open"] == 2
     assert cov["with_bidders"] == 1
     assert abs(float(cov["ratio"]) - 0.5) < 1e-9
-    assert SEED_FLOOR_COVERAGE == 0.75
 
 
 def test_count_live_bids_from_openg_bidders():
@@ -124,3 +112,5 @@ def test_replace_overview_roundtrip():
     updated = replace_overview_table(html, row)
     assert "테스트사" in updated
     assert 'class="num">1.5</td>' in updated
+    assert updated.count("편집 조사 낙찰</th>") == 1
+    assert replace_overview_table(updated, row).count('<p class="note">낙찰 건수 순.') == 1

@@ -108,7 +108,7 @@ def notice_bidder_names(notice: dict[str, Any]) -> set[str]:
             names.add(nm)
     if names:
         return names
-    for fld in ("winner", "second"):
+    for fld in ("winner", "first_rank", "second"):
         nm = clean_bidder_name(notice.get(fld))
         if nm:
             names.add(nm)
@@ -232,7 +232,8 @@ def aggregate_weekly(
     awards = [
         n
         for n in notices
-        if _in_range(n.get("open_date"), start, end) and n.get("winner")
+        if _in_range(n.get("open_date"), start, end)
+        and (n.get("winner") or n.get("first_rank"))
     ]
     awards.sort(
         key=lambda n: (
@@ -303,11 +304,8 @@ def _weekly_award_rows(rows: list[dict[str, Any]]) -> str:
     parts: list[str] = []
     for n in rows:
         winner = html.escape(n.get("winner") or "")
-        status = n.get("status") or ""
-        if status == "1순위" or (
-            n.get("winner") and not n.get("award_amount_eok") and status != "낙찰"
-        ):
-            winner = f'{winner} <span class="meta">(1순위)</span>'
+        if not winner and n.get("first_rank"):
+            winner = f'{html.escape(n["first_rank"])} <span class="meta">(1순위)</span>'
         amt = sane_budget(n.get("award_amount_eok"))
         bid_count = n.get("bid_count")
         try:

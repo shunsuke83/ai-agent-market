@@ -44,7 +44,8 @@ def test_lookup_skips_dead_notices_and_prefers_overdue(tmp_path, monkeypatch):
         _notice("OVERDUE-BIG", 120, budget_eok=25.0),
         _notice("LOOKED-LAST-WEEK", 200, budget_eok=30.0,
                 award_lookup_at=(date.today() - timedelta(days=7)).isoformat()),
-        _notice("WON", 120, winner="A", budget_eok=25.0),
+        _notice("WON", 120, winner="A", budget_eok=25.0, award_amount_eok=24.0),
+        _notice("WON-NO-AMOUNT", 120, winner="B", status="낙찰", budget_eok=29.0),
     ]
     out = tmp_path / "notices.json"
     out.write_text(json.dumps({"notices": notices}, ensure_ascii=False), encoding="utf-8")
@@ -52,10 +53,13 @@ def test_lookup_skips_dead_notices_and_prefers_overdue(tmp_path, monkeypatch):
 
     args = argparse.Namespace(
         out=str(out), until=None, days=30, since=None, max_span_days=120,
-        lookup_missing=True, lookup_limit=3,
+        lookup_missing=True, lookup_limit=4,
     )
     assert cmd_enrich_awards(args) == 0
-    assert FakeClient.instance.looked == ["OVERDUE-BIG", "OVERDUE-SMALL", "RECENT-SMALL"]
+    # Missing winners before missing amounts within the overdue bucket.
+    assert FakeClient.instance.looked == [
+        "OVERDUE-BIG", "OVERDUE-SMALL", "WON-NO-AMOUNT", "RECENT-SMALL"
+    ]
 
     saved = {n["bid_no"]: n for n in json.loads(out.read_text(encoding="utf-8"))["notices"]}
     assert saved["OVERDUE-BIG"]["award_lookup_at"] == date.today().isoformat()

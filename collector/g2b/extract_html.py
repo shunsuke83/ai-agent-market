@@ -133,7 +133,7 @@ def extract_band_notices(repo_root: Path) -> list[dict[str, Any]]:
                 "status": r[idx["상태"]]["text"] or None,
                 "bid_count": _parse_eok(r[idx["투찰 수"]]["text"]),
                 "winner": r[idx["낙찰자"]]["text"] or None,
-                "win_rate_pct": _parse_eok(r[idx["낙찰가율"]]["text"]),
+                "win_rate_pct": _parse_eok(r[idx.get("낙찰률", idx.get("낙찰가율"))]["text"]),
                 "g2b_url": title_cell.get("href"),
             }
         )

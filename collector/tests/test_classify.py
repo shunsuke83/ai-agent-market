@@ -11,6 +11,7 @@ from g2b.classify import (
     classify_title,
     load_keywords,
 )
+from g2b.seed import load_seed
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -80,7 +81,7 @@ def test_search_keywords_configured():
 
 def test_bootstrap_scope_accuracy_floor():
     """Tuned keywords should stay ≥90% vs editorial band.html labels."""
-    boot = json.loads((ROOT / "data" / "bootstrap.json").read_text(encoding="utf-8"))
+    boot = load_seed(ROOT)
     rules = load_keywords()
     agree = disagree = 0
     for n in boot.get("band_notices") or []:

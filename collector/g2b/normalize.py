@@ -269,14 +269,53 @@ def apply_bidders_to_notice(
         second = next((b for b in bidders if b.get("rank") == 2), None)
         if second and second.get("name"):
             merged["second"] = second["name"]
-        # If no winner yet, rank-1 is the top opener (may be 1순위)
-        if not merged.get("winner"):
-            top = next((b for b in bidders if b.get("rank") == 1), bidders[0])
-            if top.get("name"):
-                merged["winner"] = top["name"]
-                if not merged.get("status"):
-                    merged["status"] = "1순위"
+        # Rank 1 at opening is not a confirmed award (협상·적격심사 may follow).
+        top = next((b for b in bidders if b.get("rank") == 1), bidders[0])
+        if top.get("name"):
+            merged["first_rank"] = top["name"]
+            if not merged.get("winner"):
+                merged["status"] = "1순위"
     return merged
+
+
+def split_first_rank(notice: dict[str, Any]) -> tuple[dict[str, Any], bool]:
+    """Move an unconfirmed winner (1순위 or rank-1 filled without award data) to first_rank."""
+    w = notice.get("winner")
+    status = notice.get("status")
+    if not w or status == "낙찰":
+        return notice, False
+    marked = "(1순위)" in w
+    if status is None and not marked:
+        # Editorial award rows carry no status; only the explicit marker is provisional.
+        return notice, False
+    if status != "1순위" and not marked and notice.get("award_amount_eok") not in (None, ""):
+        return notice, False
+    out = dict(notice)
+    out["first_rank"] = w.replace("(1순위)", "").strip()
+    out["winner"] = None
+    out["status"] = "1순위"
+    return out, True
+
+
+def split_derived_rate(notice: dict[str, Any]) -> tuple[dict[str, Any], bool]:
+    """win_rate_pct equal to award/budget was computed here, not the API 낙찰률."""
+    r, amt, bud = (
+        notice.get("win_rate_pct"),
+        notice.get("award_amount_eok"),
+        notice.get("budget_eok"),
+    )
+    if r in (None, "") or amt in (None, "") or bud in (None, ""):
+        return notice, False
+    try:
+        derived = round(100.0 * float(amt) / float(bud), 1)
+        if float(bud) <= 0 or abs(float(r) - derived) > 1e-9:
+            return notice, False
+    except (TypeError, ValueError, ZeroDivisionError):
+        return notice, False
+    out = dict(notice)
+    out.pop("win_rate_pct", None)
+    out["award_to_budget_pct"] = derived
+    return out, True
 
 
 def normalize_award_item(item: dict[str, Any]) -> dict[str, Any] | None:
@@ -361,16 +400,16 @@ def apply_awards_to_notices(
             if merged.get(field) != val:
                 merged[field] = val
                 changed = True
-        # Derive win rate if API left it blank (and budget looks like 억, not 원)
-        if merged.get("win_rate_pct") in (None, "") and merged.get("award_amount_eok") and merged.get(
-            "budget_eok"
-        ):
+        # API 낙찰률 is vs 예정가격; award/budget is a different ratio, kept apart.
+        if merged.get("award_amount_eok") and merged.get("budget_eok"):
             try:
                 bud = float(merged["budget_eok"])
                 amt = float(merged["award_amount_eok"])
                 if 0 < bud < 100_000 and amt >= 0:
-                    merged["win_rate_pct"] = round(100.0 * amt / bud, 1)
-                    changed = True
+                    pct = round(100.0 * amt / bud, 1)
+                    if merged.get("award_to_budget_pct") != pct:
+                        merged["award_to_budget_pct"] = pct
+                        changed = True
             except (TypeError, ValueError):
                 pass
         if merged.get("winner") and merged.get("status") in (

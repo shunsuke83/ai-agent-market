@@ -108,4 +108,6 @@ def test_apply_awards_to_notices():
     assert n == 1
     assert out[0]["winner"] == "대신정보통신"
     assert out[0]["status"] == "낙찰"
-    assert out[0]["win_rate_pct"] == 99.5  # derived from amount/budget
+    # award/budget is not the API 낙찰률 (vs 예정가격); keep them apart
+    assert out[0].get("win_rate_pct") is None
+    assert out[0]["award_to_budget_pct"] == 99.5

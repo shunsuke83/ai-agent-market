@@ -67,13 +67,15 @@ def test_quarter_counts_marks_running_quarter():
     assert counts == [("26-Q3", 2), ("26-Q4*", 1)]
 
 
-def test_band_winner_rollup_counts_stale_status_winners():
+def test_band_winner_rollup_counts_confirmed_awards_with_reported_amounts():
     notices = [
         {"winner": "A", "status": "낙찰 미수집", "budget_eok": 10, "win_rate_pct": 90},
         {"winner": "A", "status": "낙찰", "award_amount_eok": 5},
+        {"first_rank": "C", "status": "1순위", "budget_eok": 20},
         {"winner": "B", "status": "유찰"},
     ]
-    assert band_winner_rollup(notices) == [("A", 2, 14.0)]
+    # Budget is never used as a stand-in amount; 1순위 is not an award.
+    assert band_winner_rollup(notices) == [("A", 2, 5.0)]
 
 
 def test_replace_stat_card_and_note():
