@@ -210,9 +210,16 @@ def _esc(s: str) -> str:
     return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace("|", "¦")
 
 
-def slack_text(rows: list[tuple[dict[str, Any], dict[str, Any]]], today: date, site_url: str, total: int) -> str:
+def slack_text(
+    rows: list[tuple[dict[str, Any], dict[str, Any]]],
+    today: date,
+    site_url: str,
+    total: int,
+    summaries: dict[str, dict[str, Any]] | None = None,
+) -> str:
     from .site import detail_href
 
+    summaries = summaries or {}
     lines = [f"*Go/No-Go 추천 {len(rows)}건* ({today.isoformat()}, 새 공고 {total}건 중)"]
     for n, s in rows:
         url = site_url + detail_href(n) if n.get("bid_no") else n.get("g2b_url") or site_url
@@ -222,6 +229,10 @@ def slack_text(rows: list[tuple[dict[str, Any], dict[str, Any]]], today: date, s
         lines.append(f"    {_esc(meta)}")
         if s["reasons"]:
             lines.append(f"    {_esc(' / '.join(s['reasons'][:4]))}")
+        overview = ((summaries.get(n.get("bid_no") or "") or {}).get("summary") or {}).get("overview")
+        if overview:
+            short = overview if len(overview) <= 140 else overview[:139] + "…"
+            lines.append(f"    요약: {_esc(short)}")
     return "\n".join(lines)
 
 
@@ -256,7 +267,9 @@ def run_gonogo(
     if not picked:
         summary["slack"] = "nothing to send"
         return summary
-    text = slack_text(picked, now.date(), load_alert_config()["site_url"], len(pool))
+    from .rfp import load_summaries
+
+    text = slack_text(picked, now.date(), load_alert_config()["site_url"], len(pool), load_summaries(repo_root))
     if dry_run:
         print(text)
         summary["slack"] = "dry run"

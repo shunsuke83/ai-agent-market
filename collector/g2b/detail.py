@@ -179,6 +179,7 @@ def render_detail_html(
     same_org: list[dict[str, Any]] | None = None,
     competition_html: str = "",
     contract_html: str = "",
+    summary_html: str = "",
     today: date | None = None,
 ) -> str:
     today = today or _today_kst()
@@ -213,7 +214,8 @@ def render_detail_html(
         f'<p class="lede">{html.escape(n.get("org") or "")}</p>'
         "<h2>공고 정보</h2>"
         f'<div class="tbl"><table class="kv"><tbody>{info}</tbody></table></div>'
-        "<h2>개찰·낙찰 결과</h2>"
+        + summary_html
+        + "<h2>개찰·낙찰 결과</h2>"
         f'<div class="tbl"><table class="kv"><tbody>{_result_rows(n, status)}</tbody></table></div>'
         + _bidder_table(n.get("bidders") or [])
         + contract_html
@@ -228,9 +230,11 @@ def render_detail_pages(repo_root: Path, today: date | None = None) -> dict[str,
     from .plans import contract_block, contracts_by_bid
     from .pricing import ContextIndex, context_html, load_notices
     from .prespecs import load_prespecs
+    from .rfp import load_summaries, summary_block
 
     today = today or _today_kst()
     notices = load_detail_notices(repo_root)
+    summaries = load_summaries(repo_root)
     contexts = ContextIndex(load_notices(repo_root))
     contracts = contracts_by_bid(repo_root)
     by_bid: dict[str, list[dict[str, Any]]] = {}
@@ -258,6 +262,7 @@ def render_detail_pages(repo_root: Path, today: date | None = None) -> dict[str,
             same_org=same,
             competition_html=context_html(contexts.context(n)),
             contract_html=contract_block(contracts.get(n["bid_no"])),
+            summary_html=summary_block(summaries.get(n["bid_no"])),
             today=today,
         )
         path = out_dir / f"{slug}.html"

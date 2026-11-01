@@ -778,6 +778,14 @@ def cmd_gonogo(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_summarize_rfp(args: argparse.Namespace) -> int:
+    from .rfp import run_summaries
+
+    summary = run_summaries(ROOT, limit=args.limit, api_key="" if args.no_llm else None)
+    print(json.dumps(summary, ensure_ascii=False))
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(description="나라장터 AI Agent market collector")
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -947,6 +955,14 @@ def build_parser() -> argparse.ArgumentParser:
     gn.add_argument("--no-slack", action="store_true")
     gn.add_argument("--dry-run", action="store_true", help="Print the Slack message instead of posting")
     gn.set_defaults(func=cmd_gonogo)
+
+    sr = sub.add_parser(
+        "summarize-rfp",
+        help="Extract open notices' attachments and summarize with Gemini into data/rfp_summaries.json",
+    )
+    sr.add_argument("--limit", type=int, default=8, help="Notices per run (Gemini free tier)")
+    sr.add_argument("--no-llm", action="store_true", help="Rule fields only, never call Gemini")
+    sr.set_defaults(func=cmd_summarize_rfp)
 
     return p
 
