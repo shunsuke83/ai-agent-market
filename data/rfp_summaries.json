@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-01T13:37:37Z",
+  "generated_at": "2026-11-01T13:58:13Z",
   "summaries": {
     "R26BK01771112": {
       "bid_no": "R26BK01771112",
@@ -58,7 +58,7 @@
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00282370&fileType=BFDTL&fileSeq=1",
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00282370&fileType=BFDTL&fileSeq=2"
       ],
-      "updated_at": "2026-11-01T13:36:36Z",
+      "updated_at": "2026-11-01T13:55:48Z",
       "attempts": 1,
       "files": [
         {
@@ -74,8 +74,41 @@
         "period": "계약체결일로부터 8개월"
       },
       "chars": 40740,
-      "status": "error",
-      "error": "gemini HTTP 402"
+      "summary": {
+        "overview": "전국 등록공장 정보 및 산업단지 데이터를 자연어로 용이하게 검색·활용할 수 있도록 LLM과 RAG 기반의 AI 통합 서비스를 구축합니다. 또한 AI 모델 및 데이터셋 등 AX 실증 성과를 통합 관리하는 AX공유허브 포털을 구축하고 AIDC 및 5G 특화망 인프라 플랫폼과의 API 연계 체계를 마련합니다.",
+        "evaluation": "제한경쟁입찰 및 협상에 의한 계약 방식으로 낙찰자를 선정합니다.",
+        "tasks": [
+          "AX공유허브 포털 및 메타데이터 카탈로그 구축",
+          "LLM 기반 하이브리드 검색 및 RAG 구축",
+          "대화형 챗봇 및 질의 라우팅 오케스트레이션 구현",
+          "AIDC 및 5G 특화망 플랫폼 표준 API 연계",
+          "데이터 정비, 스키마 표준화 및 품질 관리",
+          "GPU 서버 연산 인프라 및 서빙 환경 구축"
+        ],
+        "tech": [
+          "LLM",
+          "RAG",
+          "Vector DB",
+          "NVIDIA H100 GPU",
+          "Docker",
+          "Open API"
+        ],
+        "requirements": [
+          "소프트웨어사업자(컴퓨터관련서비스사업 또는 데이터베이스제작 및 검색서비스사업) 등록 업체",
+          "소프트웨어 진흥법에 의거 대기업 및 중견기업 참여가 제한된 중소 SW 사업자",
+          "국가를 당사자로 하는 계약에 관한 법률상 부정당업자에 해당하지 않는 자",
+          "본 사업 기간 동안 투입인력의 타 사업 중복 수행 금지",
+          "사업 완료 후 12개월간 무상 하자보수 제공 (2명 이상 지원)"
+        ],
+        "cautions": [
+          "연계 사업 동시 추진 및 적기 집행을 위해 단축된 일정의 긴급입찰로 추진됩니다.",
+          "공동수급 제안 시 주사업자 비율은 50% 이상이어야 하며 재하도급은 원칙적으로 불허합니다.",
+          "H/W 및 S/W 세부 구성 정보는 비공개 대상으로 사전 보안서약 후 열람할 수 있습니다.",
+          "작업 장소, 통신망, PC, 집기비품 등 사업 수행에 필요한 경비 및 인프라는 수주자가 부담합니다."
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
     },
     "R26BK01793314": {
       "bid_no": "R26BK01793314",
@@ -85,7 +118,7 @@
         "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01793314&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03",
         "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01793314&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
       ],
-      "updated_at": "2026-11-01T13:36:49Z",
+      "updated_at": "2026-11-01T13:56:10Z",
       "attempts": 2,
       "files": [
         {
@@ -99,8 +132,36 @@
         "presentation": true
       },
       "chars": 21937,
-      "status": "error",
-      "error": "gemini HTTP 402"
+      "summary": {
+        "overview": "본 사업은 제주특별자치도의 Geo-AI 플랫폼 관련 SW 및 HW의 안정적인 운영과 유지관리를 목적으로 수행됩니다. 과업 범위는 Geo-AI 플랫폼 시스템 전반에 대한 유지관리 서비스 제공 및 기술지원입니다. 사업기간은 2027년 1월 1일부터 2027년 12월 31일까지이며, 총 사업예산은 2억 3,000만 원(부가가치세 포함)입니다.",
+        "evaluation": "기술능력평가 90%와 입찰가격평가 10%를 합산한 종합평가로 고득점자순 협상을 진행하며, 기술능력 배점한도의 85% 이상이어야 협상적격자로 선정됩니다.",
+        "tasks": [
+          "Geo-AI 플랫폼 SW 유지관리",
+          "HW 인프라 유지관리",
+          "장애 예방 점검 및 응급 복구",
+          "기술지원 및 시스템 운영 지원"
+        ],
+        "tech": [
+          "Geo-AI",
+          "정보시스템 유지관리",
+          "HW 인프라",
+          "소프트웨어 유지관리"
+        ],
+        "requirements": [
+          "소프트웨어사업자(컴퓨터관련서비스사업, 업종코드 1468) 등록 업체",
+          "직접생산확인증명서(정보시스템유지관리서비스 8111189901) 소지 업체",
+          "중·소기업·소상공인확인서를 소지한 중소기업 또는 소상공인 (대기업 참여 불가)",
+          "입찰서 제출마감일 전일 기준 자사 소속 투입인력 증빙 제출"
+        ],
+        "cautions": [
+          "공동이행방식의 공동수급 참여 가능(5개사 이하, 구성원별 최소 지분율 5% 이상)",
+          "제안서 제출 완료 후에만 가격입찰서 제출이 가능하며, 미제출 시 무효 처리됨",
+          "낙찰자는 계약 체결 후 10일 이내 물품공급 및 기술지원확약서를 수요기관에 제출해야 함",
+          "정보누출금지대상 사업으로 보안 규정을 준수해야 하며, 사전 승인 없는 하도급은 금지됨"
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
     },
     "R26BK01795110": {
       "bid_no": "R26BK01795110",
@@ -111,7 +172,7 @@
         "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01795110&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01",
         "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01795110&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
       ],
-      "updated_at": "2026-11-01T13:37:19Z",
+      "updated_at": "2026-11-01T13:57:00Z",
       "attempts": 1,
       "files": [
         {
@@ -129,8 +190,41 @@
         "presentation": true
       },
       "chars": 41991,
-      "status": "error",
-      "error": "gemini HTTP 402"
+      "summary": {
+        "overview": "본 사업은 RAG(검색증강생성) 기반 파이프라인의 성능 및 안정성 검증을 위한 모듈형 클러스터 시제품(테스트베드)을 설계하고 제작하는 사업입니다. 프레임, 네트워크, 보안, 모니터링 모듈과 시험 환경부를 분리·재조립 가능한 표준 인터페이스 구조로 일괄 제작하여 지정 장소에 현장 설치 납품합니다.",
+        "evaluation": "규격·가격 동시입찰 방식으로 제안서 평가(기술능력) 85점 이상을 받은 규격 적격자 중 예정가격 이하 최저가격으로 투찰한 업체를 낙찰자로 선정합니다.",
+        "tasks": [
+          "클러스터 모듈 설계 및 인클로저 제작",
+          "L3 데이터 스위치 및 통신 배선 구축",
+          "차세대 통합보안 게이트웨이 및 접근통제 구성",
+          "모니터링 단말 및 디스플레이·콘솔 조립",
+          "이중마루 및 시험 환경 차폐 패널 시공",
+          "통합 시운전 및 2년간 GPU 연동 기술지원"
+        ],
+        "tech": [
+          "RAG",
+          "L3 데이터 스위치 (25G/100G)",
+          "차세대 통합보안 (NGFW/VPN)",
+          "42U 인클로저 랙",
+          "액세스플로어 이중마루",
+          "32인치 일체형 PC 및 55인치 4K 디스플레이"
+        ],
+        "requirements": [
+          "중소기업 또는 소상공인 확인서 소지자",
+          "나라장터 물품분류번호 네트워크시스템장비용랙(4322330801) 등록 업체",
+          "제작 책임자로 정보통신기술자 중급 이상 지정",
+          "보안 게이트웨이 CC 인증(EAL2 이상) 및 KCMVP 검증필 암호모듈 탑재 제품 납품",
+          "정보통신공사업 및 실내건축공사업 등록 업체 시공 (사전 승인 가능)"
+        ],
+        "cautions": [
+          "공동수급(공동계약) 및 재하도급 불가 (단, 미보유 공종 시공은 사전 승인 후 가능)",
+          "검사검수 완료일로부터 2년간 GPU 연산 노드 증설 및 연동 무상 기술지원 확약서 제출",
+          "계약체결일로부터 60일 이내 천안 지정장소에 현장설치도 납품 완료",
+          "네트워크·보안 장비 설정 정보는 누출금지 대상 정보로 관리 및 보안확약서 제출"
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
     },
     "R26BK01796464": {
       "bid_no": "R26BK01796464",
@@ -142,7 +236,7 @@
         "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01796464&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03",
         "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01796464&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
       ],
-      "updated_at": "2026-11-01T13:37:28Z",
+      "updated_at": "2026-11-01T13:57:35Z",
       "attempts": 1,
       "files": [
         {
@@ -160,8 +254,89 @@
         "presentation": true
       },
       "chars": 22408,
-      "status": "error",
-      "error": "gemini HTTP 402"
+      "summary": {
+        "overview": "동의대학교 첨단AI인재양성부트캠프 수강생 100여명을 대상으로 AI Agent 개발 실습 환경을 제공하기 위해 SaaS 기반 AI Agent 빌더 플랫폼 구독권 및 계정 관리, 크레딧 운영, 기술 지원 등을 구축하는 사업입니다. 사업기간은 계약일부터 2027년 2월 28일까지이며 배정예산은 1억 2천만원입니다.",
+        "evaluation": "규격·가격 동시입찰 방식을 적용하며 제안서 평가 점수 80점 이상인 적격자를 대상으로 가격 입찰을 진행하여 예정가격 이하 최저가격 입찰자를 낙찰자로 결정합니다.",
+        "tasks": [
+          "AI Agent 빌더 플랫폼 SaaS 구독권 제공",
+          "수강생 계정 발급 및 워크스페이스 권한 관리",
+          "AI 크레딧 충전 및 정산 관리",
+          "기술 지원 헬프데스크 상시 운영",
+          "수강생 진도 모니터링 및 산출물 피드백",
+          "운영 결과보고서 및 수료 데이터 납품"
+        ],
+        "tech": [
+          "LLM",
+          "RAG",
+          "No-Code 빌더",
+          "Vector 임베딩",
+          "SaaS",
+          "외부 API"
+        ],
+        "requirements": [
+          "소프트웨어사업자(패키지소프트웨어개발·공급사업) 업종코드 1426 등록 업체",
+          "중소기업 또는 소상공인 확인서 소지 업체",
+          "사업총괄 PM: 소프트웨어 운영 또는 유사 관리 경력 5년 이상",
+          "기술 지원 담당: AI/SaaS 플랫폼 운영 또는 CS 경력 2년 이상",
+          "운영 지원 담당: 교육 운영 또는 행정·정산 경력 1년 이상"
+        ],
+        "cautions": [
+          "하도급 작업이 불가하며 직접 작업만 가능함",
+          "공동계약(공동수급)이 불가한 사업임",
+          "제안서 내용 허위 작성 시 평가 제외 및 계약 파기 가능",
+          "투입 인력은 임의로 교체할 수 없으며 교체 시 사전 승인 필요"
+        ]
+      },
+      "model": "gemini-flash-lite-latest",
+      "status": "ok"
+    },
+    "R26BK01797064": {
+      "bid_no": "R26BK01797064",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01797064&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01797064&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+      ],
+      "updated_at": "2026-11-01T13:57:50Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "입찰공고서(재공고)_2026년 인간-다중 AI 에이전트 협업 기반 예술창작 커리큘럼 개발 실증 연구 용역.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01797064&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        }
+      ],
+      "fields": {
+        "period": "계약체결일로부터 2026.12.11.(금)까지",
+        "sme_only": true,
+        "subcontract_limit": true
+      },
+      "chars": 10003,
+      "summary": {
+        "overview": "본 사업은 인간과 다중 AI 에이전트의 협업을 기반으로 한 예술창작 커리큘럼을 개발하고 실증 연구를 수행하기 위해 추진됩니다. 한국예술종합학교 융합예술센터 AT랩이 주관하며 예술 분야에서의 AI 활용 방안과 실증 과업을 도출합니다.",
+        "evaluation": "기술능력평가 90%와 가격평가 10%를 합산하여 평가하며, 기술평가 점수가 배점한도의 85% 이상인 협상적격자를 대상으로 협상을 진행합니다.",
+        "tasks": [
+          "인간-다중 AI 에이전트 협업 예술창작 커리큘럼 개발",
+          "커리큘럼 실증 연구 수행 및 과업 분석"
+        ],
+        "tech": [
+          "다중 AI 에이전트",
+          "AI 기반 예술창작"
+        ],
+        "requirements": [
+          "학술·연구용역(1169) 또는 비디오물제작업(3244) 등록업체",
+          "중·소기업·소상공인 확인서 소지업체(비영리법인 예외)",
+          "국가계약법 시행령 제12조 자격요건 구비자"
+        ],
+        "cautions": [
+          "공동수급 및 하도급 불가",
+          "제안서는 우편 제출 불가하며 지정 장소에 직접 방문 제출 필수",
+          "가격입찰서(나라장터 전자제출)와 제안서(방문제출) 모두 제출해야 유효",
+          "면세사업자도 부가가치세 포함 금액으로 투찰"
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
     },
     "R26BK01799636": {
       "bid_no": "R26BK01799636",
@@ -208,7 +383,7 @@
       "source_urls": [
         "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01799826&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
       ],
-      "updated_at": "2026-11-01T13:32:09Z",
+      "updated_at": "2026-11-01T13:55:34Z",
       "attempts": 1,
       "files": [
         {
@@ -221,8 +396,41 @@
         "subcontract_limit": true
       },
       "chars": 37219,
-      "status": "error",
-      "error": "model gemini-2.5-flash not found"
+      "summary": {
+        "overview": "작전상황 발생 시 신속·정확한 의사결정 지원을 위해 2개년에 걸쳐 생성형 AI 기반 지능형 작전지원체계를 실증하고 구축하는 사업입니다. 1단계(26년)는 하드웨어 및 상용 소프트웨어 도입과 개발환경 기반 구축을 수행하며, 2단계(27년)는 멀티모달 데이터 파이프라인 구축 및 생성형 AI 기반 대화형 검색·대응 권고 모델 개발을 수행합니다.",
+        "evaluation": "기술능력 평가 90%와 입찰가격 평가 10%를 합산하여 협상에 의한 계약방식으로 낙찰자를 결정합니다.",
+        "tasks": [
+          "HW 및 상용 SW 도입 및 설치",
+          "GPU 자원관리솔루션 도입 및 설정",
+          "멀티모달 데이터 파이프라인 구축",
+          "생성형 AI 대화형 검색 및 대응 권고 모델 개발",
+          "해군 자체 체계 연계 및 탑재",
+          "통합시험평가 및 실증"
+        ],
+        "tech": [
+          "생성형 AI",
+          "RAG",
+          "VLM",
+          "벡터 DB",
+          "GPU 서버",
+          "클라우드"
+        ],
+        "requirements": [
+          "소프트웨어사업자(컴퓨터 관련 서비스사업) 신고 업체",
+          "중소기업자간 경쟁품목의 경우 직접생산확인증명서 보유",
+          "공동수급(공동이행방식) 허용 (5인 이하, 구성원별 10% 이상)",
+          "제조사의 정품 공급 및 규격 증명서 제출 가능 업체",
+          "7년 이상 수리부속 공급 및 기술지원 확약 가능 업체"
+        ],
+        "cautions": [
+          "공동수급체 구성 시 대표사는 구성원사의 입찰보증금 미납 및 부정당업자 제재 이력을 확인해야 함",
+          "하도급 시 소프트웨어 진흥법에 따라 사전 승인을 받아야 하며 50%를 초과할 수 없음",
+          "재하도급은 원칙적으로 불허함",
+          "군사 보안 규정 및 국방보안업무훈령을 철저히 준수해야 함"
+        ]
+      },
+      "model": "gemini-flash-lite-latest",
+      "status": "ok"
     },
     "R26BK01800069": {
       "bid_no": "R26BK01800069",
@@ -301,7 +509,7 @@
         "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01800536&bidPbancOrd=000&fileType=&fileSeq=6&prcmBsneSeCd=01",
         "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01800536&bidPbancOrd=000&fileType=&fileSeq=7&prcmBsneSeCd=01"
       ],
-      "updated_at": "2026-11-01T13:36:59Z",
+      "updated_at": "2026-11-01T13:56:27Z",
       "attempts": 1,
       "files": [
         {
@@ -321,8 +529,40 @@
         "sme_only": true
       },
       "chars": 4900,
-      "status": "error",
-      "error": "gemini HTTP 402"
+      "summary": {
+        "overview": "대구경북과학기술원에서 거대 생성형 모델 학습용 GPU Server를 구매하기 위한 입찰 공고입니다. 계약일로부터 30일 이내에 지정 장소에 하드웨어를 납품하고 운영 체제 및 소프트웨어 환경을 설치·검증해야 합니다.",
+        "evaluation": "규격심사를 통과한 자에 한해 예정가격 이하로 최저가 투찰한 자가 낙찰되는 최저가낙찰제 방식입니다.",
+        "tasks": [
+          "GPU 서버 하드웨어 납품",
+          "운영체제 및 드라이버 설치",
+          "머신러닝 프레임워크 설치",
+          "컨테이너 환경 구성",
+          "병렬 라이브러리 설치",
+          "현장 설치 및 동작 검증"
+        ],
+        "tech": [
+          "GPU Server",
+          "AMD EPYC",
+          "NVIDIA RTX PRO 5000",
+          "Ubuntu 24.04 LTS",
+          "CUDA Toolkit",
+          "PyTorch/TensorFlow"
+        ],
+        "requirements": [
+          "국가종합전자조달시스템 입찰참가자격 등록 업체",
+          "중소기업 또는 소상공인 확인서 소지 업체",
+          "컴퓨터서버 직접생산확인증명서 소지 업체",
+          "공동수급 불허"
+        ],
+        "cautions": [
+          "공동수급은 불허하며 단독 입찰만 가능합니다.",
+          "직접 방문에 의한 서류 제출은 불가하며 우편 또는 전자메일로 제출해야 합니다.",
+          "낙찰자는 낙찰일로부터 10일 이내에 계약을 체결해야 합니다.",
+          "납품 후 계약금액의 5%에 해당하는 3년 만기의 하자보증서를 제출해야 합니다."
+        ]
+      },
+      "model": "gemini-flash-lite-latest",
+      "status": "ok"
     },
     "R26BK01800626": {
       "bid_no": "R26BK01800626",
@@ -416,7 +656,7 @@
         "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01801316&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01",
         "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01801316&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
       ],
-      "updated_at": "2026-11-01T13:37:08Z",
+      "updated_at": "2026-11-01T13:56:39Z",
       "attempts": 1,
       "files": [
         {
@@ -434,8 +674,39 @@
       ],
       "fields": {},
       "chars": 6413,
-      "status": "error",
-      "error": "gemini HTTP 402"
+      "summary": {
+        "overview": "본 사업은 생성형 AI 및 로컬 LLM 관련 교육과정 운영을 위한 AI 실습환경을 구축하는 것을 목적으로 합니다. 고성능 연산자원을 기반으로 하는 AI 워크스테이션 2대를 지정 장소에 현장 설치하고 분산 구동 환경을 구축하는 사업입니다.",
+        "evaluation": "예정가격 이하로서 낙찰하한율 88% 이상 최저가격으로 견적을 제출한 업체를 낙찰자로 선정합니다.",
+        "tasks": [
+          "AI 워크스테이션 2대 현장 설치",
+          "Thunderbolt 5 기반 장비 간 연결 및 분산 구동 환경 구성",
+          "정품 운영체제 설치 및 시운전",
+          "128GB 초과 LLM 분산 적재 및 답변 출력 검수",
+          "납품서류 제출 및 1년 무상 하자보증 지원"
+        ],
+        "tech": [
+          "로컬 LLM",
+          "CPU 18코어 이상",
+          "GPU 40코어 이상",
+          "RAM 128GB 이상",
+          "Thunderbolt 5",
+          "10Gb 이더넷 / Wi-Fi 6"
+        ],
+        "requirements": [
+          "G2B 세부품명번호 10자리(43211501) 물품등록 업체",
+          "소프트웨어사업자(컴퓨터관련서비스사업) 등록 업체",
+          "물품규격 적합 확인서 및 세부규격서 제출 가능 업체",
+          "계약 후 50일 이내 납품 및 검수 완료 가능 업체"
+        ],
+        "cautions": [
+          "공동계약(공동수급)은 불가능합니다.",
+          "물품규격 적합 확인서 및 관련 서류를 제출 마감 시한(2026.11.04 15:00)까지 이메일로 제출해야 합니다.",
+          "2대를 Thunderbolt 5로 상호 연결하여 128GB 초과 언어모델 분산 구동 검수를 통과해야 합니다.",
+          "수요기관 임직원 사칭 대납/긴급계약 피싱 사기에 유의해야 합니다."
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
     },
     "R26BK01801693": {
       "bid_no": "R26BK01801693",
