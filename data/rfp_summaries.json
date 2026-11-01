@@ -1,0 +1,334 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-01T12:42:39Z",
+  "summaries": {
+    "R26BK01793314": {
+      "bid_no": "R26BK01793314",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01793314&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01793314&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+      ],
+      "updated_at": "2026-11-01T12:32:43Z",
+      "attempts": 1,
+      "files": [
+        {
+          "name": "공고서_R26BK01793314(지방, 조평).hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01793314&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        },
+        {
+          "name": "공고서_R26BK01793314(지방, 조평).pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01793314&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+        }
+      ],
+      "fields": {
+        "period": "2027. 1. 1. ~ 2027. 12. 31.로 산정하여 투찰하시기 바라며, 계약체결이 지연될 경우 용역",
+        "sme_only": true,
+        "presentation": true
+      },
+      "chars": 40209,
+      "status": "error",
+      "error": "HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=120)"
+    },
+    "R26BK01799636": {
+      "bid_no": "R26BK01799636",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01799636&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01799636&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01799636&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01799636&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01799636&bidPbancOrd=000&fileType=&fileSeq=5&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01799636&bidPbancOrd=000&fileType=&fileSeq=6&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01799636&bidPbancOrd=000&fileType=&fileSeq=7&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01799636&bidPbancOrd=000&fileType=&fileSeq=8&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01799636&bidPbancOrd=000&fileType=&fileSeq=9&prcmBsneSeCd=01"
+      ],
+      "updated_at": "2026-11-01T12:30:23Z",
+      "attempts": 1,
+      "files": [
+        {
+          "name": "26-KK114 입찰공고문(적격심사)(재공고).pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01799636&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01"
+        },
+        {
+          "name": "26-KK114 00. 구매사양설명서.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01799636&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        },
+        {
+          "name": "1. (계약예규) 물품구매(제조)입찰유의서.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01799636&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01"
+        }
+      ],
+      "fields": {
+        "sme_only": true
+      },
+      "chars": 20988,
+      "status": "error",
+      "error": "HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=120)"
+    },
+    "R26BK01800069": {
+      "bid_no": "R26BK01800069",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01800069&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01800069&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01800069&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01800069&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
+      ],
+      "updated_at": "2026-11-01T12:38:43Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "[제안요청서] 「특수교육 AI 디지털 교육자료 현장 활용 역량강화 연수 및 성과공유회」 위탁 용역.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01800069&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
+        },
+        {
+          "name": "[과업지시서] 「특수교육 AI 디지털 교육자료 현장 활용 역량강화 연수 및 성과공유회」 위탁 용역 .hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01800069&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+        },
+        {
+          "name": "★[공고문(안)] 특수교육 AI 디지털 교육자료 현장 활용 역량강화 연수 및 성과공유회 위탁 용역.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01800069&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        }
+      ],
+      "fields": {
+        "period": "계약일 ~ 2026. 12. 11.(금)까지",
+        "sme_only": true,
+        "presentation": true
+      },
+      "chars": 40369,
+      "summary": {
+        "overview": "특수교육대상학생 맞춤형 교육 지원 및 디지털 정보 격차 해소를 위해 특수교육교원의 AI·디지털 기반 교수·학습 역량을 강화하는 사업입니다. 대전광역시 소재 호텔에서 교육부, 시도교육청 전문직 및 특수학교 교사 등 약 350명을 대상으로 2기에 걸쳐 집합연수 및 성과공유회를 운영합니다.",
+        "evaluation": "2단계(규격·가격동시) 입찰로 규격제안서 평가점수가 80점 이상인 적격자 중 예정가격 이하 최저가격으로 입찰한 자를 낙찰자로 선정합니다.",
+        "tasks": [
+          "연수 및 성과공유회 프로그램 기획·운영",
+          "전문 강사 및 실습 보조강사 섭외 지원",
+          "대전 소재 호텔 연수 장소 대관 및 숙식·다과 제공",
+          "연수 교재, 명찰 및 현수막·배너 등 제작 및 배부",
+          "실습용 장비 점검 및 무선 네트워크(AP) 환경 구축",
+          "연수 만족도 설문조사 및 종합 결과보고서 제출"
+        ],
+        "tech": [
+          "특수교육 AI·디지털 교육자료(학생용 앱/교사용 플랫폼)",
+          "동시 접속 무선 네트워크(AP) 인프라",
+          "실습용 노트북 및 기자재"
+        ],
+        "requirements": [
+          "입찰공고일 180일 전부터 본점 소재지가 대전광역시에 위치한 업체",
+          "G2B 기타자유업[행사대행업, 9901] 등록 업체",
+          "직접생산확인증명서[회의기획및대행서비스(8014190201) 또는 기타행사기획및대행서비스(8014199001)] 소지 업체",
+          "중·소기업·소상공인 확인서를 소지한 자"
+        ],
+        "cautions": [
+          "공동수급(공동이행) 및 하도급 불가",
+          "가격입찰서는 G2B 전자 제출, 규격입찰서(제안서)는 대전광역시교육청으로 직접 방문 제출 필수",
+          "정성적 제안서 사본 및 발표 자료 내 업체명·로고 등 식별 표기 엄격 금지(위반 시 감점 또는 평가 제외)",
+          "연수 참여 인원 증감 및 숙박·식음료 실사용 내역에 따른 사후 정산 실시"
+        ]
+      },
+      "model": "gemini-flash-latest",
+      "status": "ok"
+    },
+    "R26BK01800626": {
+      "bid_no": "R26BK01800626",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01800626&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01800626&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+      ],
+      "updated_at": "2026-11-01T12:29:26Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "공고서(기관평가_공동불허_업종).hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01800626&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        },
+        {
+          "name": "공고서(기관평가_공동불허_업종).pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01800626&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+        }
+      ],
+      "fields": {},
+      "chars": 29693,
+      "summary": {
+        "overview": "본 사업은 AI 기반 수중물체 탐지체계 개발을 위해 수중타겟을 실해역에 설치하고, 측면주사소나를 활용하여 인공지능 학습용 수중음향 데이터를 취득하는 용역입니다. 한국해양과학기술원 부설 선박해양플랜트연구소가 발주하며 총 3억 3천만 원 규모의 예산으로 진행됩니다.",
+        "evaluation": "기술능력평가 80%와 입찰가격평가 20%를 종합평가하며, 기술능력 배점한도의 85% 이상인 협상적격자 중 고득점순으로 협상을 진행합니다.",
+        "tasks": [
+          "수중타겟 실해역 설치",
+          "측면주사소나를 이용한 수중음향 데이터 취득",
+          "학습용 수중음향 데이터 구축"
+        ],
+        "tech": [
+          "측면주사소나(Side Scan Sonar)",
+          "AI 기반 수중물체 탐지체계"
+        ],
+        "requirements": [
+          "나라장터에 학술·연구용역(업종코드 1169)으로 입찰참가자격을 등록한 자",
+          "국가를 당사자로 하는 계약에 관한 법률 시행령 제12조 및 동법 제27조의5에 따른 결격사유가 없는 자"
+        ],
+        "cautions": [
+          "공동수급(공동계약) 불허 사업임",
+          "제안서 최종 제출이 완료되어야 가격입찰서 제출이 가능하며 제안서 미제출 시 입찰 무효 처리됨",
+          "제안서 관련 제출서류는 PDF 형식으로 제출해야 하며 총용량은 300MB를 초과할 수 없음",
+          "중대재해처벌법 및 인공지능기본법 관련 준수 사항(인공지능의 투명성·안전성·신뢰성 등) 의무 준수 필요"
+        ]
+      },
+      "model": "gemini-flash-latest",
+      "status": "ok"
+    },
+    "R26BK01801172": {
+      "bid_no": "R26BK01801172",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01801172&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01801172&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01801172&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+      ],
+      "updated_at": "2026-11-01T12:40:29Z",
+      "attempts": 1,
+      "files": [
+        {
+          "name": "제안요청서_AI 컴퓨팅센터 계획 수립.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01801172&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+        },
+        {
+          "name": "입찰공고서_AI 컴퓨팅센터 계획 수립.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01801172&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        },
+        {
+          "name": "입찰공고서_AI 컴퓨팅센터 계획 수립.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01801172&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+        }
+      ],
+      "fields": {
+        "period": "계약체결일로부터 2026. 12. 20.까지",
+        "sme_only": true,
+        "subcontract_limit": true,
+        "presentation": true
+      },
+      "chars": 46143,
+      "status": "error",
+      "error": "HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=120)"
+    },
+    "R26BK01801693": {
+      "bid_no": "R26BK01801693",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01801693&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01801693&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+      ],
+      "updated_at": "2026-11-01T12:34:53Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "제안요청서_CG 작업 용역_주식회사 고포잇.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01801693&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        },
+        {
+          "name": "제안요청서_CG 작업 용역_주식회사 고포잇.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01801693&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+        }
+      ],
+      "fields": {
+        "period": "계약체결일 ~ 2026.12.31"
+      },
+      "chars": 37683,
+      "summary": {
+        "overview": "영화 <체리보이>의 후반작업 과정에서 필요한 VFX 제작에 AI 기술 등을 적용하여 극장 상영에 적합한 고품질 영상을 확보하기 위한 사업입니다. 첨단 제작 공정에 공적 지원을 투입하여 기술 수준을 높이고 VFX 기획부터 3D 에셋 및 샷 제작, 최종 마스터 납품까지 전 과정을 수행합니다.",
+        "evaluation": "기술능력평가(80%)와 입찰가격평가(20%)를 종합 평가하며, 기술평가 배점의 85% 이상인 협상적격자 중 고득점순으로 우선협상을 실시함.",
+        "tasks": [
+          "VFX 기획 및 총괄 관리",
+          "공정·일정·데이터 등 VFX 제작 관리",
+          "3D Asset 제작 (모델링, 텍스처링, 룩디벨롭)",
+          "VFX Shot 제작 및 합성 (애니메이션, 매트페인팅 등)",
+          "수정사항 반영 및 최종 마스터 결과물 납품"
+        ],
+        "tech": [
+          "AI 영상 제작 기술",
+          "3D Modeling & Animation",
+          "2D Compositing",
+          "Matte Painting",
+          "Motion Graphics",
+          "Tracking & Rotoscoping"
+        ],
+        "requirements": [
+          "나라장터 기타자유업종[업종코드: 9999] 등록 업체",
+          "법인등기부상 본점(개인사업자는 사업장) 소재지가 서울특별시인 업체",
+          "입찰마감일 기준 최근 3년 내 3건 이상 드라마 또는 영화 제작 후반작업 CG 실적 보유 업체",
+          "제작 인력 전원 제안사 자체 인력 구성 (VFX Supervisor, VFX Producer 포함)"
+        ],
+        "cautions": [
+          "공동수급(공동도급) 불허",
+          "가격입찰서는 나라장터 전자 제출하고 제안서 및 입찰 서류는 반드시 발주처에 방문 제출해야 함 (우편/이메일 접수 불가)",
+          "하도급 실적은 발주처 승인 건에 한해 인정되며 제작 인력은 자체 인력으로 전담해야 함",
+          "제작된 콘텐츠의 외부 유출 및 무단 상업적 이용을 엄격히 금하며 저작권 문제 발생 시 수행업체가 전적 책임 부담"
+        ]
+      },
+      "model": "gemini-flash-latest",
+      "status": "ok"
+    },
+    "R26BK01801863": {
+      "bid_no": "R26BK01801863",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01801863&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01801863&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+      ],
+      "updated_at": "2026-11-01T12:36:35Z",
+      "attempts": 1,
+      "files": [
+        {
+          "name": "입찰공고서_SKAI Eyes_IEC62304_사이버보안 컨설팅 및 시험 용역_261030.docx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01801863&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        },
+        {
+          "name": "입찰공고서_SKAI Eyes_IEC62304_사이버보안 컨설팅 및 시험 용역_261030.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01801863&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+        }
+      ],
+      "fields": {},
+      "chars": 4365,
+      "status": "error",
+      "error": "HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=120)"
+    },
+    "R26BK01802150": {
+      "bid_no": "R26BK01802150",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01802150&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01802150&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01802150&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
+      ],
+      "updated_at": "2026-11-01T12:40:16Z",
+      "attempts": 1,
+      "files": [
+        {
+          "name": "제안요청서13.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01802150&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+        },
+        {
+          "name": "입찰공고문.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01802150&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
+        }
+      ],
+      "fields": {
+        "sme_only": true,
+        "big_firm_limit": true,
+        "subcontract_limit": true,
+        "presentation": true
+      },
+      "chars": 45947,
+      "status": "error",
+      "error": "gemini HTTP 503"
+    }
+  }
+}
