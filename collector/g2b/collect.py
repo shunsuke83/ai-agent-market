@@ -770,6 +770,14 @@ def cmd_alerts(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_gonogo(args: argparse.Namespace) -> int:
+    from .gonogo import run_gonogo
+
+    summary = run_gonogo(ROOT, days=args.days, webhook="" if args.no_slack else None, dry_run=args.dry_run)
+    print(json.dumps(summary, ensure_ascii=False))
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(description="나라장터 AI Agent market collector")
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -930,6 +938,15 @@ def build_parser() -> argparse.ArgumentParser:
     al.add_argument("--no-slack", action="store_true", help="Write feeds only, never post")
     al.add_argument("--dry-run", action="store_true", help="Print the Slack message instead of posting")
     al.set_defaults(func=cmd_alerts)
+
+    gn = sub.add_parser(
+        "gonogo",
+        help="Score new open notices against COMPANY_PROFILE and post the top ones to Slack (never to files)",
+    )
+    gn.add_argument("--days", type=int, default=1, help="공고일 기준 최근 N일")
+    gn.add_argument("--no-slack", action="store_true")
+    gn.add_argument("--dry-run", action="store_true", help="Print the Slack message instead of posting")
+    gn.set_defaults(func=cmd_gonogo)
 
     return p
 
