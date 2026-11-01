@@ -111,7 +111,10 @@ class _Session:
 
     def post(self, url, json=None, timeout=None, headers=None):
         self.posts.append((url, json, headers))
-        return self.gemini.pop(0)
+        nxt = self.gemini.pop(0)
+        if isinstance(nxt, Exception):
+            raise nxt
+        return nxt
 
 
 def _gemini_ok(summary):
@@ -158,3 +161,27 @@ def test_summary_block_hidden_without_content():
     assert rfp.summary_block({"status": "fields_only", "fields": {}}) == ""
     fields_only = rfp.summary_block({"status": "fields_only", "fields": {"sme_only": True}, "files": []})
     assert "중소기업 제한 언급" in fields_only and "규칙으로 추출" in fields_only
+
+
+def test_gemini_moves_to_next_model_on_timeout_or_5xx():
+    import requests
+
+    summary = {"overview": "o", "tasks": [], "tech": [], "requirements": [], "evaluation": "", "cautions": []}
+    s = _Session({}, [requests.Timeout("slow"), _Resp(503), _gemini_ok(summary)])
+    out, model = rfp.gemini_summary("t", "o", "x", "K", session=s, models=("a", "b", "c"))
+    assert model == "c" and out["overview"] == "o"
+    s = _Session({}, [_Resp(503)])
+    try:
+        rfp.gemini_summary("t", "o", "x", "K", session=s, models=("a",))
+    except RuntimeError as e:
+        assert "503" in str(e)
+    else:
+        raise AssertionError("expected RuntimeError")
+
+
+def test_same_document_in_two_formats_is_read_once():
+    doc = _hwpx(["공고 내용 문장입니다."] * 40)
+    files = [{"name": "공고서.hwpx", "url": "a"}, {"name": "공고서.pdf", "url": "b"}, {"name": "제안요청서.hwpx", "url": "c"}]
+    s = _Session({"a": _Resp(200, content=doc), "b": _Resp(200, content=doc), "c": _Resp(200, content=doc)}, [])
+    _, used = rfp.collect_text(files, s)
+    assert [u["name"] for u in used] == ["제안요청서.hwpx", "공고서.hwpx"]

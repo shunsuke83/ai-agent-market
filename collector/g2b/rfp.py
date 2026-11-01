@@ -28,6 +28,7 @@ from .render import KST
 SUMMARIES_REL = Path("data") / "rfp_summaries.json"
 GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
 GEMINI_MODELS = ("gemini-flash-latest", "gemini-2.5-flash")
+GEMINI_TIMEOUT = 180
 MAX_DOWNLOAD = 25 * 1024 * 1024
 MAX_FILES = 3
 FILE_CHARS = 40_000
@@ -246,8 +247,15 @@ def collect_text(files: list[dict[str, str]], session: requests.Session | None =
         if len(text) >= MIN_CHARS:
             docs.append((name, f["url"], text))
     docs.sort(key=lambda d: _rank(d[0]))
+    seen: set[str] = set()
+    unique = []
+    for d in docs:
+        stem = re.sub(r"\.[A-Za-z0-9]{2,5}$", "", d[0]).strip()
+        if stem not in seen:
+            seen.add(stem)
+            unique.append(d)
     used, chunks, total = [], [], 0
-    for name, url, text in docs[:MAX_FILES]:
+    for name, url, text in unique[:MAX_FILES]:
         part = text[: min(FILE_CHARS, TOTAL_CHARS - total)]
         if not part:
             break
@@ -323,13 +331,20 @@ def gemini_summary(
     }
     last = ""
     for model in models or ((env_model,) if env_model else GEMINI_MODELS):
-        r = s.post(GEMINI_URL.format(model=model), json=body, timeout=120,
-                   headers={"x-goog-api-key": api_key})
+        try:
+            r = s.post(GEMINI_URL.format(model=model), json=body, timeout=GEMINI_TIMEOUT,
+                       headers={"x-goog-api-key": api_key})
+        except requests.Timeout:
+            last = f"gemini {model} timeout"
+            continue
         if r.status_code == 404:
             last = f"model {model} not found"
             continue
         if r.status_code == 429:
             raise QuotaExceeded(model)
+        if r.status_code >= 500:
+            last = f"gemini {model} HTTP {r.status_code}"
+            continue
         if r.status_code >= 400:
             raise RuntimeError(f"gemini HTTP {r.status_code}")
         cand = (r.json().get("candidates") or [{}])[0]
