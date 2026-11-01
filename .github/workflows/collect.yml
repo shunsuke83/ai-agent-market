@@ -2,9 +2,10 @@ name: Collect G2B AI notices
 
 on:
   schedule:
-    # Daily 00:30 KST = 15:30 UTC. The Monday run (Sunday UTC) also does the
-    # heavy award / bidder backfills.
-    - cron: "30 15 * * *"
+    # Daily 13:17 KST = 04:17 UTC. Keep it in daytime KST (apis.data.go.kr
+    # times out overnight) and off the hour (scheduled starts lag). The Monday
+    # (KST) run also does the heavy award / bidder backfills.
+    - cron: "17 4 * * *"
   workflow_dispatch:
     inputs:
       days:
@@ -48,7 +49,7 @@ jobs:
       - name: Plan run (daily incremental vs weekly full)
         id: plan
         run: |
-          if [ "${{ github.event_name }}" != "schedule" ] || [ "$(date -u +%u)" = "7" ]; then
+          if [ "${{ github.event_name }}" != "schedule" ] || [ "$(TZ=Asia/Seoul date +%u)" = "1" ]; then
             echo "weekly=true" >> "$GITHUB_OUTPUT"
             DEFAULT_DAYS=14
           else
