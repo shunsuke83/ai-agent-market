@@ -1,0 +1,33 @@
+# Go/No-Go 회사 프로필 예시. 실제 값은 repo secret COMPANY_PROFILE에 이 YAML 그대로 넣습니다.
+# 로컬 시험은 같은 폴더의 profile.local.yaml (gitignore)에 두면 됩니다. 저장소에 커밋하지 마세요.
+name: 예시주식회사
+aliases: []
+
+# 사업 성격별 가중치 0~1. 0이면 No-Go. 목록에 없는 성격은 other_nature_weight.
+natures:
+  시스템 구축·고도화: 1.0
+  ISP·전략: 0.8
+  구독·라이선스: 0.5
+  운영·유지보수: 0.4
+  인프라: 0.0
+  연구·교육·행사: 0.0
+other_nature_weight: 0.3
+
+# 비어 있으면 범위를 가리지 않음. 목록 밖이면 적합도 절반.
+scopes: [생성형·Agent, AI SW 확대]
+
+keywords_prefer: [LLM, RAG, 챗봇, 에이전트, 생성형]
+keywords_avoid: [CCTV, 로봇, 교과서, 드론]
+orgs_prefer: []
+
+# 억 원. sweet 범위면 만점, min~max면 일부, 2배 넘게 벗어나면 No-Go.
+budget_eok: {min: 3, max: 30, sweet_min: 5, sweet_max: 15}
+
+# 단골 투찰 업체 중 이 이름이 있으면 경쟁 점수 감점.
+rivals: []
+
+min_days_to_prepare: 7
+go_score: 70
+review_score: 50
+min_score: 55
+top_n: 10

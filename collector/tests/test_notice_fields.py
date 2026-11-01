@@ -41,6 +41,23 @@ def test_budget_kind_records_which_money_field_was_used():
     assert 'title="배정예산 기준"' in render_notice_row(n)
 
 
+def test_bid_terms_and_files():
+    n = normalize_bid_item(dict(
+        BASE,
+        sucsfbidMthdNm="협상에의한계약-협상에 의한 낙찰자 결정(SW사업)",
+        techAbltEvlRt="90", bidPrceEvlRt="10",
+        cmmnSpldmdMethdNm="(전자)공동이행",
+        indstrytyLmtYn="Y", bidPrtcptLmtYn="N", reNtceYn="Y", befBidBbancNo="R26BK01766727",
+        ntceSpecFileNm1="제안요청서.hwp", ntceSpecDocUrl1="https://g2b/1",
+        ntceSpecDocUrl2="https://g2b/2",
+    ))
+    assert (n["tech_rate"], n["price_rate"]) == (90.0, 10.0)
+    assert n["industry_limit"] is True and n["participation_limit"] is False and n["record_limit"] is None
+    assert n["rebid"] and n["prev_bid_no"] == "R26BK01766727"
+    assert n["notice_files"] == [{"name": "제안요청서.hwp", "url": "https://g2b/1"},
+                                 {"name": "첨부 2", "url": "https://g2b/2"}]
+
+
 def test_prespec_keeps_ai_titles_with_files_and_linked_bids():
     p = normalize_prespec_item(
         {

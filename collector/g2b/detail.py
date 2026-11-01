@@ -148,6 +148,30 @@ def _same_org_table(rows: list[dict[str, Any]], today: date) -> str:
     )
 
 
+LIMIT_LABELS = (("industry_limit", "업종"), ("participation_limit", "참가 자격"), ("record_limit", "실적"))
+
+
+def _terms_rows(n: dict[str, Any]) -> str:
+    """평가·참가 조건 from the notice API (공고서 원문이 우선)."""
+    rate = ""
+    if n.get("tech_rate") is not None and n.get("price_rate") is not None:
+        rate = f"기술 {n['tech_rate']:g} : 가격 {n['price_rate']:g}"
+    limits = [label for key, label in LIMIT_LABELS if n.get(key)]
+    prev = n.get("prev_bid_no")
+    files = " · ".join(
+        f'<a href="{html.escape(f["url"], quote=True)}" rel="noopener">{html.escape(f["name"])}</a>'
+        for f in n.get("notice_files") or []
+    )
+    return (
+        _kv("낙찰 방법", html.escape(n.get("award_method") or ""))
+        + _kv("평가 비율", rate)
+        + _kv("공동수급", html.escape(n.get("joint_method") or ""))
+        + _kv("제한", html.escape(" · ".join(limits) + " 제한 — 공고서에서 조건 확인") if limits else "")
+        + _kv("이전 공고", html.escape(prev) + ' <span class="meta">재공고</span>' if prev else "")
+        + _kv("공고 첨부", files)
+    )
+
+
 def render_detail_html(
     n: dict[str, Any],
     *,
@@ -180,6 +204,7 @@ def render_detail_html(
         + _kv("배정예산", _eok(n.get("asign_budget_eok")))
         + _kv("추정가격", _eok(n.get("presmpt_eok")))
         + _kv("기초금액", _eok(n.get("base_amount_eok")))
+        + _terms_rows(n)
         + _kv("나라장터 원문", f'<a href="{g2b}" target="_blank" rel="noopener">공고 보기 ↗</a>' if g2b else "")
     )
     body = (

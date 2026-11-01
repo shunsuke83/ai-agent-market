@@ -84,7 +84,25 @@ python -m g2b.collect render all
 # 7) 알림: feeds/*.xml(RSS) + feeds/deadlines.ics + alerts.html, SLACK_WEBHOOK_URL이 있으면 Slack 전송
 python -m g2b.collect alerts
 # Slack 없이 파일만: --no-slack / 보낼 내용만 확인: --dry-run
+
+# 8) Go/No-Go: COMPANY_PROFILE(YAML)로 최근 공고 점수 → Slack에만 전송 (파일·로그에는 건수만)
+python -m g2b.collect gonogo --days 1 --dry-run
 ```
+
+### Go/No-Go (`g2b/gonogo.py`)
+
+회사 프로필은 공개 저장소에 두지 않습니다. 형식은 `config/profile.example.yaml`이고, 실제 값은 repo secret `COMPANY_PROFILE`에 YAML 그대로 넣습니다. 로컬에서는 `config/profile.local.yaml`(gitignore)을 읽습니다.
+
+| 항목 | 배점 | 기준 |
+|------|------|------|
+| 적합도 | 35 | 사업 성격 가중치, 선호 키워드, 관심 기관. 범위가 프로필 밖이면 절반 |
+| 예산 | 15 | sweet 범위 만점, min~max 일부 |
+| 경쟁 | 20 | 비슷한 과거 사업 투찰 수 중앙값(`pricing.ContextIndex`), 경쟁사가 단골이면 감점 |
+| 평가 | 10 | 기술 평가 비율 80% 이상 만점 |
+| 일정 | 10 | 마감까지 남은 날 vs `min_days_to_prepare` |
+| 신호 | 10 | 재공고(유찰 이력)·사전규격·발주계획 연계 가점, 같은 기관 비슷한 계약의 기존 수행사 감점(우리 회사면 가점) |
+
+회피 키워드, 가중치 0인 성격, 예산이 기준의 2배 넘게 벗어남, 마감 지남은 바로 No-Go입니다. `go_score`(70) 이상 Go, `review_score`(50) 이상 검토이고, `min_score` 이상 상위 `top_n`건만 보냅니다.
 
 ## GitHub Actions
 
@@ -98,6 +116,7 @@ python -m g2b.collect alerts
 - 예약 실행은 GitHub 사정으로 몇 시간 늦게 시작할 수 있습니다. 새벽(KST)에 apis.data.go.kr 연결 타임아웃으로 실패한 적이 있어 낮 시간대·정각이 아닌 분에 둡니다.
 - 일일/주간 판정은 실행되는 시점의 KST 요일로 합니다. 예약 실행을 Re-run 해도 월요일이면 주간 모드로 돕니다.
 - 사전규격 다음에 발주계획·계약 수집이 매일 돕니다. 각각 별도 활용신청이 필요하고 실패해도 경고만 남깁니다.
+- 알림 다음에 Go/No-Go가 돕니다. secret `COMPANY_PROFILE`이 없으면 건너뜁니다. 일일은 최근 1일, 주간은 3일 공고를 봅니다.
 - 렌더 다음에 알림 단계가 돕니다. repo secret `SLACK_WEBHOOK_URL`이 있으면 Slack으로 보내고, 실패해도 커밋은 막지 않습니다(못 보낸 건은 다음 실행에 다시 보냄).
 - API 단계가 실패해도 기존 데이터로 렌더·커밋은 계속하고, `data/run_status.json`에 결과를 남깁니다. 공고 수집(`collect`)이나 투찰업체 보강(`bidders`)이 실패하면 마지막 단계에서 실행을 실패로 표시합니다. 원인은 그 단계가 아니라 앞 단계 로그에 있습니다.
 
@@ -114,6 +133,7 @@ python -m g2b.collect alerts
   - 경쟁 강도: 투찰 업체 수 중앙값·상위 25%·단독 응찰 비율. 수백 곳이 몰리는 공고가 있어 평균은 쓰지 않고, 수의계약은 뺍니다
   - 표본이 5건 미만인 구분은 수치 대신 `표본 부족`
   - 경쟁이 약했던 사업: 최근 1년 유찰·단독 응찰 (수의계약·장비·감리·교육행사 제외, 재공고 차수 병합)
+- 사업 상세 공고 정보에 낙찰 방법, 기술:가격 평가 비율, 공동수급 방식, 업종·참가 자격·실적 제한, 이전 공고(재공고), 공고 첨부 파일 링크를 붙입니다. 공고 API 필드라 이 기능 이후 다시 수집된 공고부터 채워집니다
 - `plans.html` 발주 예정·재발주 후보 (`g2b/plans.py`)
   - 발주계획: 사업명 키워드로 찾고 공고와 같은 분류·제외 규칙을 씁니다. 발주 예정월이 이번 달 이후이고 연결된 공고(`bidNtceNoList`)가 없는 것만 보여 주며, 금액 0·1원은 비공개로 봅니다
   - 계약: 용역 계약명 키워드 검색은 조회 기간이 1개월을 넘으면 0건이라 월별로 나눠 부릅니다. AI 계약 대부분이 소액 수의계약이라 1억 원 이상만 저장합니다

@@ -158,6 +158,41 @@ def normalize_bid_item(item: dict[str, Any], rules: dict[str, Any] | None = None
         "biz": item.get("_biz"),
         "g2b_url": item.get("bidNtceDtlUrl")
         or g2b_notice_url(bid_no, str(bid_ord) if bid_ord is not None else None),
+        **bid_terms(item),
+    }
+
+
+def _yn(v: Any) -> bool | None:
+    return {"Y": True, "N": False}.get(str(v or "").strip().upper())
+
+
+def _rate(v: Any) -> float | None:
+    try:
+        return float(v) if v not in (None, "") else None
+    except ValueError:
+        return None
+
+
+def bid_terms(item: dict[str, Any]) -> dict[str, Any]:
+    """평가·참가 조건 and 규격서 links from a BidPublicInfoService item."""
+    files = []
+    for i in range(1, 11):
+        url, name = item.get(f"ntceSpecDocUrl{i}"), item.get(f"ntceSpecFileNm{i}")
+        if url:
+            files.append({"name": (name or f"첨부 {i}").strip(), "url": url})
+    return {
+        "award_method": item.get("sucsfbidMthdNm") or None,
+        "tech_rate": _rate(item.get("techAbltEvlRt")),
+        "price_rate": _rate(item.get("bidPrceEvlRt")),
+        "joint_method": item.get("cmmnSpldmdMethdNm") or None,
+        "industry_limit": _yn(item.get("indstrytyLmtYn")),
+        "participation_limit": _yn(item.get("bidPrtcptLmtYn")),
+        "record_limit": _yn(item.get("arsltCmptYn")),
+        "rebid": _yn(item.get("reNtceYn")),
+        "prev_bid_no": item.get("befBidBbancNo") or None,
+        "prespec_no": item.get("bfSpecRgstNo") or None,
+        "plan_no": item.get("orderPlanUntyNo") or None,
+        "notice_files": files,
     }
 
 
