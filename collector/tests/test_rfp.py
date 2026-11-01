@@ -185,3 +185,22 @@ def test_same_document_in_two_formats_is_read_once():
     s = _Session({"a": _Resp(200, content=doc), "b": _Resp(200, content=doc), "c": _Resp(200, content=doc)}, [])
     _, used = rfp.collect_text(files, s)
     assert [u["name"] for u in used] == ["제안요청서.hwpx", "공고서.hwpx"]
+
+
+def test_zip_reads_rfp_first_and_skips_forms():
+    buf = io.BytesIO()
+    with zipfile.ZipFile(buf, "w") as z:
+        z.writestr("1. 입찰공고문.hwpx", _hwpx(["공고문 본문입니다."] * 30))
+        z.writestr("9. 입찰참가 서약서.hwpx", _hwpx(["서약 내용"] * 30))
+        z.writestr("4. 제안요청서.hwpx", _hwpx(["제안요청 본문입니다."] * 30))
+    text = rfp.extract_text(buf.getvalue())
+    assert text.index("제안요청서.hwpx") < text.index("입찰공고문.hwpx")
+    assert "서약" not in text
+
+
+def test_queue_priority_uses_public_labels():
+    old_gen = {"scope": "생성형·Agent", "budget_eok": 12.0, "notice_date": "2026-10-20"}
+    new_other = {"scope": "AI SW 확대", "budget_eok": 12.0, "notice_date": "2026-10-30"}
+    tiny_gen = {"scope": "생성형·Agent", "budget_eok": 0.5, "notice_date": "2026-10-30"}
+    ranked = sorted([new_other, tiny_gen, old_gen], key=rfp._priority, reverse=True)
+    assert ranked == [old_gen, tiny_gen, new_other]

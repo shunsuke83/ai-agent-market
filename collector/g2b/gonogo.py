@@ -236,6 +236,41 @@ def slack_text(
     return "\n".join(lines)
 
 
+ON_DEMAND_SUMMARIES = 5
+
+
+def summarize_missing(
+    repo_root: Path,
+    picked: list[tuple[dict[str, Any], dict[str, Any]]],
+    summaries: dict[str, dict[str, Any]],
+    api_key: str,
+    limit: int = ON_DEMAND_SUMMARIES,
+) -> dict[str, dict[str, Any]]:
+    """Summaries for picked notices that have none, kept in memory for Slack only.
+
+    Not written to data/: which notices got summarized first would reveal the private profile.
+    """
+    from .rfp import OK, QuotaExceeded, prespecs_by_bid, summarize_notice
+
+    if not api_key:
+        return {}
+    todo = [n for n, _ in picked if (summaries.get(n["bid_no"]) or {}).get("status") != OK][:limit]
+    if not todo:
+        return {}
+    prespecs = prespecs_by_bid(repo_root)
+    out: dict[str, dict[str, Any]] = {}
+    for n in todo:
+        try:
+            entry = summarize_notice(n, prespecs.get(n["bid_no"]) or [], api_key)
+        except QuotaExceeded:
+            break
+        except Exception:  # noqa: BLE001 — Slack goes out without the summary line
+            continue
+        if entry and entry.get("status") == OK:
+            out[n["bid_no"]] = entry
+    return out
+
+
 def run_gonogo(
     repo_root: Path,
     *,
@@ -244,6 +279,7 @@ def run_gonogo(
     webhook: str | None = None,
     dry_run: bool = False,
     profile: dict[str, Any] | None = None,
+    gemini_key: str | None = None,
 ) -> dict[str, Any]:
     from .alerts import load_alert_config, post_slack
     from .plans import load_contracts
@@ -257,6 +293,7 @@ def run_gonogo(
     from .rfp import load_summaries
 
     now = now or datetime.now(KST)
+    gemini_key = os.environ.get("GEMINI_API_KEY", "") if gemini_key is None else gemini_key
     notices = load_notices(repo_root)
     contexts = ContextIndex(notices)
     incumbents = IncumbentIndex(load_contracts(repo_root), now.date())
@@ -277,14 +314,26 @@ def run_gonogo(
         picked = [(n, s) for n, s in scored if s["verdict"] != POLICY_NO_GO and s["score"] >= min_score]
         picked.sort(key=lambda r: (r[1]["verdict"] != POLICY_GO, -r[1]["score"]))
         picked = picked[: int(out.get("top_n", 10))]
+        fresh = summarize_missing(repo_root, picked, summaries, gemini_key)
+        if fresh:
+            summaries = {**summaries, **fresh}
+            rescored = [
+                (n, score_policy(n, profile, now, contexts.context(n), incumbents.find(n), summaries.get(n["bid_no"]), rules))
+                if n["bid_no"] in fresh else (n, s)
+                for n, s in picked
+            ]
+            picked = [(n, s) for n, s in rescored if s["verdict"] != POLICY_NO_GO and s["score"] >= min_score]
+            picked.sort(key=lambda r: (r[1]["verdict"] != POLICY_GO, -r[1]["score"]))
     else:
         scored = [(n, score_notice(n, profile, now, contexts.context(n), incumbents.find(n))) for n in pool]
         min_score = profile.get("min_score", profile.get("review_score", 50))
         picked = [(n, s) for n, s in scored if s["verdict"] != NO_GO and s["score"] >= min_score]
         picked.sort(key=lambda r: -r[1]["score"])
         picked = picked[: int(profile.get("top_n", 10))]
+        fresh = summarize_missing(repo_root, picked, summaries, gemini_key)
+        summaries = {**summaries, **fresh}
     # Counts only: Actions logs of a public repo are public.
-    summary: dict[str, Any] = {"candidates": len(pool), "picked": len(picked)}
+    summary: dict[str, Any] = {"candidates": len(pool), "picked": len(picked), "summarized": len(fresh)}
     if not picked:
         summary["slack"] = "nothing to send"
         return summary
