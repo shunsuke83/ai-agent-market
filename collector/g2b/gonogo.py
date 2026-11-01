@@ -252,24 +252,44 @@ def run_gonogo(
     profile = profile or load_profile()
     if not profile:
         return {"skipped": "COMPANY_PROFILE not set"}
+    from .gonogo_policy import GO as POLICY_GO, NO_GO as POLICY_NO_GO, is_policy_profile, score_policy, slack_text_policy
+    from .normalize import load_keywords
+    from .rfp import load_summaries
+
     now = now or datetime.now(KST)
     notices = load_notices(repo_root)
     contexts = ContextIndex(notices)
     incumbents = IncumbentIndex(load_contracts(repo_root), now.date())
+    summaries = load_summaries(repo_root)
     pool = candidates(notices, now, days)
-    scored = [(n, score_notice(n, profile, now, contexts.context(n), incumbents.find(n))) for n in pool]
-    min_score = profile.get("min_score", profile.get("review_score", 50))
-    picked = [(n, s) for n, s in scored if s["verdict"] != NO_GO and s["score"] >= min_score]
-    picked.sort(key=lambda r: -r[1]["score"])
-    picked = picked[: int(profile.get("top_n", 10))]
+    policy = is_policy_profile(profile)
+    if policy:
+        out = profile.get("output") or {}
+        min_score = out.get("min_score", 50)
+        rules = load_keywords()
+        scored = [
+            (n, score_policy(n, profile, now, contexts.context(n), incumbents.find(n), summaries.get(n["bid_no"]), rules))
+            for n in pool
+        ]
+        picked = [(n, s) for n, s in scored if s["verdict"] != POLICY_NO_GO and s["score"] >= min_score]
+        picked.sort(key=lambda r: (r[1]["verdict"] != POLICY_GO, -r[1]["score"]))
+        picked = picked[: int(out.get("top_n", 10))]
+    else:
+        scored = [(n, score_notice(n, profile, now, contexts.context(n), incumbents.find(n))) for n in pool]
+        min_score = profile.get("min_score", profile.get("review_score", 50))
+        picked = [(n, s) for n, s in scored if s["verdict"] != NO_GO and s["score"] >= min_score]
+        picked.sort(key=lambda r: -r[1]["score"])
+        picked = picked[: int(profile.get("top_n", 10))]
     # Counts only: Actions logs of a public repo are public.
     summary: dict[str, Any] = {"candidates": len(pool), "picked": len(picked)}
     if not picked:
         summary["slack"] = "nothing to send"
         return summary
-    from .rfp import load_summaries
-
-    text = slack_text(picked, now.date(), load_alert_config()["site_url"], len(pool), load_summaries(repo_root))
+    site_url = load_alert_config()["site_url"]
+    if policy:
+        text = slack_text_policy(picked, now.date(), site_url, len(pool), profile, summaries)
+    else:
+        text = slack_text(picked, now.date(), site_url, len(pool), summaries)
     if dry_run:
         print(text)
         summary["slack"] = "dry run"
