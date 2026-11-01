@@ -93,6 +93,8 @@ def test_parse_end_formats():
     assert parse_end("2026.11.01 ~ 2027.10.31", None) == "2027-10-31"
     assert parse_end("계약 후 180일 이내", "2026-10-02") == "2027-03-31"
     assert parse_end("착수일로부터 6개월", "2026-08-31") == "2027-02-28"
+    assert parse_end("20251111~20261110", None) == "2026-11-10"
+    assert parse_end("금차 90일, 총차 90일", "2026-10-01") == "2026-12-30"
     assert parse_end("계약 후 180일 이내", None) is None
     assert parse_end("", "2026-10-02") is None
 
@@ -113,6 +115,10 @@ def test_contract_normalizes():
     assert c["amount_eok"] == 65.05
     assert c["end_date"] == "2027-03-31"
     assert c["joint"] and len(c["firms"]) == 2
+
+
+def test_small_contract_dropped():
+    assert normalize_contract_item({**CONTRACT, "thtmCntrctAmt": "35000000"}) is None
 
 
 def test_contract_change_supersedes_original():

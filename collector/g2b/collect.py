@@ -326,7 +326,9 @@ def cmd_collect_contracts(args: argparse.Namespace) -> int:
         print(f"::warning::contract fetch failed (활용신청 확인 필요?): {e}")
         return 1
     rows = [r for r in (normalize_contract_item(x, rules) for x in raw) if r]
-    merged = merge_contracts(list(prev.get("contracts") or []), rows)
+    floor = rules["filters"].get("home_min_eok", 1.0)
+    kept = [c for c in prev.get("contracts") or [] if (c.get("amount_eok") or 0) >= floor]
+    merged = merge_contracts(kept, rows)
     _write_json(out, {"schema_version": 1, "generated_at": utc_now_iso(), "contracts": merged})
     print(f"Contracts {start} → {end}: raw={len(raw)} ai={len(rows)} stored={len(merged)}")
     return 0

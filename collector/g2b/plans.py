@@ -28,7 +28,7 @@ FIRM_DAYS = 365
 LIMIT_FIRMS = 30
 
 _BID_NO_RE = re.compile(r"^(R\d{2}[A-Z]{2}\d{8})\d{3}$")
-_DATE_RE = re.compile(r"(20\d{2})\s*[./\-년]\s*(\d{1,2})\s*[./\-월]\s*(\d{1,2})")
+_DATE_RE = re.compile(r"(20\d{2})\s*[./\-년]\s*(\d{1,2})\s*[./\-월]\s*(\d{1,2})|(?<!\d)(20\d{2})(\d{2})(\d{2})(?!\d)")
 _SPAN_RE = re.compile(r"(\d+)\s*(일|개월|월|년)")
 
 
@@ -119,7 +119,8 @@ def parse_end(text: str | None, signed: str | None) -> str | None:
     text = (text or "").strip()
     if not text:
         return None
-    for y, m, d in reversed(_DATE_RE.findall(text)):
+    for groups in reversed(_DATE_RE.findall(text)):
+        y, m, d = groups[:3] if groups[0] else groups[3:]
         try:
             return date(int(y), int(m), int(d)).isoformat()
         except ValueError:
@@ -156,6 +157,9 @@ def normalize_contract_item(item: dict[str, Any], rules: dict[str, Any] | None =
     signed = parse_api_dt(_first(item, "cntrctCnclsDate", "cntrctDate"))
     period = (item.get("cntrctPrd") or "").strip() or None
     amounts = [a for a in (_eok(item.get("totCntrctAmt")), _eok(item.get("thtmCntrctAmt"))) if a]
+    # Most AI-titled contracts are tiny 수의계약 (교과서 구독, 체험학습); keep the home page floor.
+    if not amounts or max(amounts) < rules["filters"].get("home_min_eok", 1.0):
+        return None
     record = {
         "contract_no": key,
         "title": title,
@@ -295,7 +299,7 @@ def build_plans_page(
         + stat(f"{sum(1 for p in upcoming if (p.get('order_ym') or '') < soon):,}건", "3개월 안 발주 예정")
         + stat(f"{round(sum(p.get('amount_eok') or 0 for p in upcoming)):,}억", "발주계획 금액 합계")
         + stat(f"{len(expiring):,}건", f"{EXPIRY_AHEAD_DAYS}일 안 계약 종료")
-        + stat(f"{len(recent):,}건", "최근 1년 AI 용역 계약")
+        + stat(f"{len(recent):,}건", "최근 1년 AI 용역 계약(1억+)")
         + stat(f"{round(100 * joint / len(recent)) if recent else 0}%", "공동수급 비율")
         + "</div>"
     )
@@ -373,12 +377,13 @@ def build_plans_page(
         "취소될 수 있고, 금액 0·1원처럼 비공개인 경우는 비워 둡니다. 장비 구매와 감리·교육·행사성 사업은 뺍니다.</p>"
         + plan_html
         + "<h2>계약 종료 예정 (재발주 후보)</h2>"
-        f'<p class="meta">최근 {EXPIRY_PAST_DAYS}일 안에 끝났거나 {EXPIRY_AHEAD_DAYS}일 안에 끝나는 AI 용역 계약입니다. '
+        f'<p class="meta">최근 {EXPIRY_PAST_DAYS}일 안에 끝났거나 {EXPIRY_AHEAD_DAYS}일 안에 끝나는 1억 원 이상 AI 용역 계약입니다. '
         "종료일은 총완수일이 있으면 그 날짜, 없으면 계약기간 원문(날짜, '계약 후 N일')으로 추정합니다. "
         "운영·유지보수는 해마다 다시 발주되는 경우가 많습니다.</p>"
         + exp_html
         + "<h2>최근 1년 AI 용역 계약 업체</h2>"
-        '<p class="meta">계약금액을 공동수급 지분율대로 나눠 더했습니다. 계약명 기준 자동 분류이고, 물품 계약은 포함하지 않습니다.</p>'
+        '<p class="meta">1억 원 이상 계약의 금액을 공동수급 지분율대로 나눠 더했습니다. '
+        "계약명 기준 자동 분류이고, 물품 계약은 포함하지 않습니다.</p>"
         + firm_html
     )
     return page("발주 예정 · 재발주 후보", body, scripts=("table-sort.js", "table-filter.js"))
