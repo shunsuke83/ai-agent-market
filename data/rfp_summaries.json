@@ -1,7 +1,82 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-01T12:42:39Z",
+  "generated_at": "2026-11-01T13:37:37Z",
   "summaries": {
+    "R26BK01771112": {
+      "bid_no": "R26BK01771112",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01771112&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01771112&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+      ],
+      "updated_at": "2026-11-01T13:35:16Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "공고서_국가_제한_개발_단독_수요기관평가.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01771112&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        }
+      ],
+      "fields": {
+        "sme_only": true
+      },
+      "chars": 18992,
+      "summary": {
+        "overview": "부산대학교 교육혁신본부의 AX(AI 전환)를 위해 AI 에이전트 플랫폼을 구축하는 사업입니다. 총 사업예산은 5억 4,100만 원(VAT 포함)이며 사업기간은 2027년 2월 19일까지입니다.",
+        "evaluation": "기술능력평가 90%와 입찰가격평가 10%를 합산하여 종합평가하며, 기술평가 배점한도의 85% 이상인 자를 협상적격자로 선정하여 고득점자순으로 협상을 진행합니다.",
+        "tasks": [
+          "AI 에이전트 플랫폼 구축",
+          "정보시스템개발서비스 수행"
+        ],
+        "tech": [
+          "AI 에이전트",
+          "정보시스템 개발"
+        ],
+        "requirements": [
+          "소프트웨어사업자(컴퓨터관련서비스사업, 1468) 등록 업체",
+          "직접생산확인증명서(정보시스템개발서비스, 8111159901) 소지자",
+          "중소기업·소상공인 확인서 소지자",
+          "대기업 및 중견기업 참여 불가(사업금액 20억원 미만)",
+          "상호출자제한기업집단 소속 기업 참여 불가"
+        ],
+        "cautions": [
+          "공동계약(공동이행방식 등) 불가(단독 입찰)",
+          "하도급 가능(사전 승인 절차 준수 필수)",
+          "제안서와 가격입찰서 중 하나라도 미제출 시 입찰 무효 처리",
+          "정보누출금지대상 사업으로 위반 시 부정당업자 제재 적용"
+        ]
+      },
+      "model": "gemini-flash-latest",
+      "status": "ok"
+    },
+    "R26BK01775322": {
+      "bid_no": "R26BK01775322",
+      "bid_ord": "000",
+      "source": "prespec",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00282370&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00282370&fileType=BFDTL&fileSeq=2"
+      ],
+      "updated_at": "2026-11-01T13:36:36Z",
+      "attempts": 1,
+      "files": [
+        {
+          "name": "2. (제안요청서) 스마트K팩토리 AI플랫폼 기반구축 용역.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00282370&fileType=BFDTL&fileSeq=2"
+        },
+        {
+          "name": "★긴급입찰사유서(스마트K팩토리 AI플랫폼 기반구축)_최종.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00282370&fileType=BFDTL&fileSeq=1"
+        }
+      ],
+      "fields": {
+        "period": "계약체결일로부터 8개월"
+      },
+      "chars": 40740,
+      "status": "error",
+      "error": "gemini HTTP 402"
+    },
     "R26BK01793314": {
       "bid_no": "R26BK01793314",
       "bid_ord": "000",
@@ -10,16 +85,12 @@
         "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01793314&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03",
         "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01793314&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
       ],
-      "updated_at": "2026-11-01T12:32:43Z",
-      "attempts": 1,
+      "updated_at": "2026-11-01T13:36:49Z",
+      "attempts": 2,
       "files": [
         {
           "name": "공고서_R26BK01793314(지방, 조평).hwpx",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01793314&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
-        },
-        {
-          "name": "공고서_R26BK01793314(지방, 조평).pdf",
-          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01793314&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
         }
       ],
       "fields": {
@@ -27,9 +98,70 @@
         "sme_only": true,
         "presentation": true
       },
-      "chars": 40209,
+      "chars": 21937,
       "status": "error",
-      "error": "HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=120)"
+      "error": "gemini HTTP 402"
+    },
+    "R26BK01795110": {
+      "bid_no": "R26BK01795110",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01795110&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01795110&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01795110&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
+      ],
+      "updated_at": "2026-11-01T13:37:19Z",
+      "attempts": 1,
+      "files": [
+        {
+          "name": "규격서.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01795110&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01"
+        },
+        {
+          "name": "입찰공고.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01795110&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        }
+      ],
+      "fields": {
+        "sme_only": true,
+        "subcontract_limit": true,
+        "presentation": true
+      },
+      "chars": 41991,
+      "status": "error",
+      "error": "gemini HTTP 402"
+    },
+    "R26BK01796464": {
+      "bid_no": "R26BK01796464",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01796464&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01796464&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01796464&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01796464&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
+      ],
+      "updated_at": "2026-11-01T13:37:28Z",
+      "attempts": 1,
+      "files": [
+        {
+          "name": "3. (최종)제안요청서_2026학년도 동의대학교 AI부트캠프 소프트웨어(AI Agent 개발 솔루션) 플랫폼 구축 및 운영지원.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01796464&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+        },
+        {
+          "name": "2. (최종)입찰공고문_2026학년도 동의대학교 AI부트캠프 소프트웨어(AI Agent 개발 솔루션) 플랫폼 구축 및 운영지원.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01796464&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        }
+      ],
+      "fields": {
+        "period": "계약일 ~ 2027. 2. 28",
+        "sme_only": true,
+        "presentation": true
+      },
+      "chars": 22408,
+      "status": "error",
+      "error": "gemini HTTP 402"
     },
     "R26BK01799636": {
       "bid_no": "R26BK01799636",
@@ -68,6 +200,29 @@
       "chars": 20988,
       "status": "error",
       "error": "HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=120)"
+    },
+    "R26BK01799826": {
+      "bid_no": "R26BK01799826",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01799826&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+      ],
+      "updated_at": "2026-11-01T13:32:09Z",
+      "attempts": 1,
+      "files": [
+        {
+          "name": "공고문.zip",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01799826&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        }
+      ],
+      "fields": {
+        "sme_only": true,
+        "subcontract_limit": true
+      },
+      "chars": 37219,
+      "status": "error",
+      "error": "model gemini-2.5-flash not found"
     },
     "R26BK01800069": {
       "bid_no": "R26BK01800069",
@@ -132,6 +287,42 @@
       },
       "model": "gemini-flash-latest",
       "status": "ok"
+    },
+    "R26BK01800536": {
+      "bid_no": "R26BK01800536",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01800536&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01800536&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01800536&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01800536&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01800536&bidPbancOrd=000&fileType=&fileSeq=5&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01800536&bidPbancOrd=000&fileType=&fileSeq=6&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01800536&bidPbancOrd=000&fileType=&fileSeq=7&prcmBsneSeCd=01"
+      ],
+      "updated_at": "2026-11-01T13:36:59Z",
+      "attempts": 1,
+      "files": [
+        {
+          "name": "2. 상세규격서.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01800536&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
+        },
+        {
+          "name": "1. 공고문(DGIST 제2026-177-1호).pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01800536&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        },
+        {
+          "name": "6. 공익·부패 신고제도 안내.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01800536&bidPbancOrd=000&fileType=&fileSeq=7&prcmBsneSeCd=01"
+        }
+      ],
+      "fields": {
+        "sme_only": true
+      },
+      "chars": 4900,
+      "status": "error",
+      "error": "gemini HTTP 402"
     },
     "R26BK01800626": {
       "bid_no": "R26BK01800626",
@@ -215,6 +406,36 @@
       "chars": 46143,
       "status": "error",
       "error": "HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=120)"
+    },
+    "R26BK01801316": {
+      "bid_no": "R26BK01801316",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01801316&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01801316&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01801316&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
+      ],
+      "updated_at": "2026-11-01T13:37:08Z",
+      "attempts": 1,
+      "files": [
+        {
+          "name": "물품규격적합확인서.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01801316&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01"
+        },
+        {
+          "name": "상세규격서_03_상세규격서_AI 워크스테이션.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01801316&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
+        },
+        {
+          "name": "공고문_로컬 LLM 환경 구축을 위한 AI 워크스테이션.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01801316&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        }
+      ],
+      "fields": {},
+      "chars": 6413,
+      "status": "error",
+      "error": "gemini HTTP 402"
     },
     "R26BK01801693": {
       "bid_no": "R26BK01801693",
