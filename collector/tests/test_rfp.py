@@ -167,9 +167,9 @@ def test_gemini_moves_to_next_model_on_timeout_or_5xx():
     import requests
 
     summary = {"overview": "o", "tasks": [], "tech": [], "requirements": [], "evaluation": "", "cautions": []}
-    s = _Session({}, [requests.Timeout("slow"), _Resp(503), _gemini_ok(summary)])
-    out, model = rfp.gemini_summary("t", "o", "x", "K", session=s, models=("a", "b", "c"))
-    assert model == "c" and out["overview"] == "o"
+    s = _Session({}, [requests.Timeout("slow"), _Resp(503), _Resp(402), _gemini_ok(summary)])
+    out, model = rfp.gemini_summary("t", "o", "x", "K", session=s, models=("a", "b", "c", "d"))
+    assert model == "d" and out["overview"] == "o"
     s = _Session({}, [_Resp(503)])
     try:
         rfp.gemini_summary("t", "o", "x", "K", session=s, models=("a",))
