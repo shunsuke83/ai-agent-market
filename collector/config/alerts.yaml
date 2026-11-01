@@ -1,0 +1,56 @@
+# 알림 규칙: 규칙마다 RSS 피드(feeds/<id>.xml)를 만들고, 새로 걸린 공고·사전규격을 Slack으로 보냅니다.
+#
+# match 조건은 모두 AND, 목록 안의 값은 OR 입니다. 비워 두면 그 조건은 보지 않습니다.
+#   kinds:     notice(입찰공고) / prespec(사전규격)
+#   scope:     생성형·Agent | AI SW 확대
+#   fields:    분야 (생성형·LLM, AI 에이전트, AI 보안, ...)
+#   nature:    사업 성격 (시스템 구축·고도화, ISP·전략, 운영·유지보수, ...)
+#   keywords:  사업명에 들어가야 하는 단어
+#   orgs:      수요기관명에 들어가야 하는 단어 (예: 행정안전부, 경찰청)
+#   min_eok / max_eok: 예산 범위(억 원). 사전규격은 배정예산 기준
+# 장비 구매·감리·PMO·교육·행사성 공고는 홈 화면과 같은 규칙으로 항상 뺍니다.
+
+site_url: https://shunsuke83.github.io/ai-agent-market/
+
+# 공고일·등록일이 이보다 오래된 건은 새로 수집돼도 Slack으로 보내지 않습니다.
+slack_max_age_days: 7
+# Slack 메시지 하나에 규칙별로 보여 줄 최대 건수
+slack_limit_per_rule: 15
+# 캘린더(feeds/deadlines.ics)에 넣을 앞으로의 기간
+calendar_days: 60
+
+rules:
+  - id: genai
+    name: 생성형·Agent 사업
+    match:
+      kinds: [notice, prespec]
+      scope: [생성형·Agent]
+      min_eok: 1
+
+  - id: band-build
+    name: 8~30억 구축 사업
+    match:
+      kinds: [notice, prespec]
+      nature: [시스템 구축·고도화]
+      min_eok: 8
+      max_eok: 30
+
+  - id: isp
+    name: ISP·전략 (후속 본사업 신호)
+    match:
+      kinds: [notice, prespec]
+      nature: [ISP·전략]
+      min_eok: 1
+
+  - id: large
+    name: 30억 이상 대형 AI 사업
+    match:
+      kinds: [notice, prespec]
+      min_eok: 30
+
+  # 관심 기관 예시 — 필요하면 주석을 풀고 기관명을 바꾸세요.
+  # - id: key-orgs
+  #   name: 관심 기관
+  #   match:
+  #     kinds: [notice, prespec]
+  #     orgs: [행정안전부, 경찰청]
