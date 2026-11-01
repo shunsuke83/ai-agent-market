@@ -109,7 +109,7 @@ def test_gates_from_rfp_summary():
     busan = gp.score_policy(_notice(), PROFILE, NOW, summary=_summary("부산광역시에 소재한 업체"))
     assert busan["verdict"] == gp.NO_GO
     sme = gp.score_policy(_notice(), PROFILE, NOW, summary=_summary("소프트웨어사업자", "중소기업 확인서 소지"))
-    assert ("자격", gp.UNKNOWN, "소프트웨어사업자, 중소기업 확인서") in sme["gates"]
+    assert ("자격", gp.UNKNOWN, "중소기업 확인서") in sme["gates"]
     assert sme["verdict"] == gp.REVIEW
     record = gp.judge_gates(_notice(), PROFILE, NOW, _summary("최근 3년 단일 실적 15억 이상"))
     assert record == [("실적 금액", gp.UNKNOWN, "요건 15억 > 나라장터 실적 9.8억")]

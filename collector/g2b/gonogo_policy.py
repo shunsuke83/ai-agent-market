@@ -171,7 +171,8 @@ def judge_gates(
         if found:
             statuses = [s for s, _ in found]
             status = FAIL if FAIL in statuses else UNKNOWN if UNKNOWN in statuses else PASS
-            out.append(("자격", status, ", ".join(label for _, label in found)))
+            shown = [label for s, label in found if s == status]
+            out.append(("자격", status, ", ".join(shown)))
         elif n.get("industry_limit"):
             out.append(("자격", UNKNOWN, "업종 제한 — 공고서 확인"))
 
