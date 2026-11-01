@@ -100,6 +100,44 @@ def _is_own_customer(org: str, profile: dict[str, Any]) -> bool:
     return any(c and (c in (org or "") or normalize_firm(c) in norm) for c in customers)
 
 
+def _squash(s: str) -> str:
+    return re.sub(r"\s+", "", s or "")
+
+
+def _qualification(
+    key: str, label: str, value: Any, text: str, now: datetime, company: dict[str, Any]
+) -> tuple[str, str]:
+    """Status of one qualification; direct_production_cert may be {세부품명: 유효기간 종료일}."""
+    if not isinstance(value, dict):
+        return (PASS if value else FAIL if value is False else UNKNOWN), label
+    flat, today = _squash(text), now.date().isoformat()
+    held = [item for item in value if _squash(item) in flat]
+    if held:
+        valid = [item for item in held if str(value[item] or "9999") >= today]
+        return (PASS, f"{label}({held[0]})") if valid else (FAIL, f"{label} 만료({held[0]})")
+    missing = [item for item in company.get("g2b_items_without_direct_production") or [] if _squash(item) in flat]
+    if missing:
+        return FAIL, f"{label} 없음({missing[0]})"
+    return UNKNOWN, f"{label} 품목 확인"
+
+
+_CODE_LINE = re.compile(r"업종|코드")
+_CODE = re.compile(r"(?<!\d)(?!19|20)(\d{4})(?!\d)")
+
+
+def _industry_codes(summary: dict[str, Any] | None) -> set[str]:
+    reqs = ((summary or {}).get("summary") or {}).get("requirements") or []
+    return {c for line in reqs if _CODE_LINE.search(line) for c in _CODE.findall(line)}
+
+
+def credit_warning(profile: dict[str, Any], today: Any) -> str:
+    credit = (profile.get("company") or {}).get("credit_rating") or {}
+    until = str(credit.get("valid_until") or "")
+    if until and until < today.isoformat():
+        return f"신용평가등급 확인서 유효기간 만료({until}) — 협상에 의한 계약 제출 전 갱신 필요"
+    return ""
+
+
 def judge_gates(
     n: dict[str, Any],
     profile: dict[str, Any],
@@ -121,12 +159,19 @@ def judge_gates(
             out.append(("지역", PASS if ok else FAIL, "·".join(sorted(found)) + " 소재 제한"))
 
     if "eligibility" in gates_cfg:
-        needs = [(key, label) for key, label, rx in QUALIFICATION_SIGNALS if rx.search(text)]
-        if needs:
-            values = [quals.get(key) for key, _ in needs]
-            labels = ", ".join(label for _, label in needs)
-            status = FAIL if any(v is False for v in values) else UNKNOWN if any(v is None for v in values) else PASS
-            out.append(("자격", status, labels))
+        codes = _industry_codes(summary)
+        own_codes = {str(c) for c in company.get("g2b_industry_codes") or []}
+        by_code = bool(codes and own_codes)
+        found = [_qualification(key, label, quals.get(key), text, now, company)
+                 for key, label, rx in QUALIFICATION_SIGNALS
+                 if rx.search(text) and not (by_code and key == "sw_business_registration")]
+        if by_code:
+            label = "업종 " + "·".join(sorted(codes))
+            found.append((PASS if codes & own_codes else FAIL, label))
+        if found:
+            statuses = [s for s, _ in found]
+            status = FAIL if FAIL in statuses else UNKNOWN if UNKNOWN in statuses else PASS
+            out.append(("자격", status, ", ".join(label for _, label in found)))
         elif n.get("industry_limit"):
             out.append(("자격", UNKNOWN, "업종 제한 — 공고서 확인"))
 
@@ -389,6 +434,9 @@ def slack_text_policy(
         overview = ((summaries.get(n.get("bid_no") or "") or {}).get("summary") or {}).get("overview")
         if overview:
             lines.append(f"    요약: {_esc(overview if len(overview) <= 140 else overview[:139] + '…')}")
+    warning = credit_warning(profile, today)
+    if warning:
+        lines.insert(1, f"_주의: {_esc(warning)}_")
     obs = (profile.get("track_record") or {}).get("observations") or []
     if obs:
         lines.append("_참고 관측: " + _esc(" / ".join(obs[:3])) + "_")
