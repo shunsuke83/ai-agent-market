@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-10-30T09:14:54Z",
+  "generated_at": "2026-11-01T06:21:34Z",
   "range": {
-    "since": "2026-10-16",
-    "until": "2026-10-30"
+    "since": "2026-10-18",
+    "until": "2026-11-01"
   },
   "prespecs": [
     {
@@ -226,7 +226,7 @@
       "order_org": "조달청 대구지방조달청",
       "registered_at": "2026-10-30 15:12",
       "registered_date": "2026-10-30",
-      "opinion_close_at": "2026-11-04 23:59",
+      "opinion_close_at": "2026-11-06 23:59",
       "asign_budget_eok": 86.9228,
       "scope": "AI SW 확대",
       "fields": [
@@ -962,7 +962,7 @@
       "order_org": "조달청 대구지방조달청",
       "registered_at": "2026-10-27 16:21",
       "registered_date": "2026-10-27",
-      "opinion_close_at": "2026-11-01 23:59",
+      "opinion_close_at": "2026-11-03 23:59",
       "asign_budget_eok": 5.2728,
       "scope": "AI SW 확대",
       "fields": [
