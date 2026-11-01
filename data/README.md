@@ -7,6 +7,7 @@
 | `firms.json` | `python -m g2b.collect enrich-firms` | 조달업체 기본정보 by 사업자번호, refreshed after 30 days |
 | `order_plans.json` | `python -m g2b.collect collect-plans` | AI 발주계획 for this month onward, replaced each run |
 | `contracts.json` | `python -m g2b.collect collect-contracts` | AI 용역 계약 of 1억+ (기간·종료일·공동수급 지분), merged by 계약번호 |
+| `rfp_summaries.json` | `python -m g2b.collect summarize-rfp` | Rule fields + Gemini summary of open notices' attachments (or linked 사전규격 규격서), by 공고번호 |
 | `alerts_state.json` | `python -m g2b.collect alerts` | Items already sent to Slack, pruned after 180 days |
 | `reports.json` | `python -m g2b.collect render reports` | Weekly / monthly report index read by `index.html` |
 | `run_status.json` | `python -m g2b.collect mark-run` | Per-stage last attempt, outcome and last success (`collect`, `prespecs`, `plans`, `contracts`, `awards`, `bidders`, `firms`) |

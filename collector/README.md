@@ -87,7 +87,21 @@ python -m g2b.collect alerts
 
 # 8) Go/No-Go: COMPANY_PROFILE(YAML)로 최근 공고 점수 → Slack에만 전송 (파일·로그에는 건수만)
 python -m g2b.collect gonogo --days 1 --dry-run
+
+# 9) 제안요청서 요약: 열린 공고 첨부(HWPX·HWP·PDF) → data/rfp_summaries.json (GEMINI_API_KEY)
+python -m g2b.collect summarize-rfp --limit 8
+# Gemini 없이 규칙 항목만: --no-llm
 ```
+
+### 제안요청서 요약 (`g2b/rfp.py`)
+
+마감 전 공고(최신 차수) 중 아직 요약이 없는 건을 공고일 최신순으로 실행당 `--limit`건 처리합니다. 공고 첨부가 없으면 연결된 사전규격 규격서를 씁니다. 서식·서약서 같은 파일은 건너뛰고 제안요청서·과업지시서·규격서·공고문 순으로 최대 3개, 합계 6만 자까지 읽습니다.
+
+- 규칙 추출: 사업 기간, 중소기업·대기업 참여 제한, 하도급 제한, 제안 발표 언급
+- Gemini(`gemini-flash-latest`, 없으면 `gemini-2.5-flash`, `GEMINI_MODEL`로 변경): 개요, 주요 과업, 요구 기술, 자격·요건, 평가, 유의 사항
+- 무료 등급 입력은 학습에 쓰일 수 있어 공개 첨부 텍스트만 보냅니다. 회사 프로필은 보내지 않습니다.
+- 결과는 공개입니다. 사업 상세 페이지의 "제안요청서 요약"과 Go/No-Go Slack 메시지의 한 줄 요약에 쓰입니다.
+- 첨부 URL이 바뀌면 다시 요약합니다. 실패는 3번까지 재시도하고, 429(할당량)면 그 실행은 멈춥니다. 키가 없으면 규칙 항목만 저장했다가 키가 생기면 요약합니다.
 
 ### Go/No-Go (`g2b/gonogo.py`)
 
@@ -116,6 +130,7 @@ python -m g2b.collect gonogo --days 1 --dry-run
 - 예약 실행은 GitHub 사정으로 몇 시간 늦게 시작할 수 있습니다. 새벽(KST)에 apis.data.go.kr 연결 타임아웃으로 실패한 적이 있어 낮 시간대·정각이 아닌 분에 둡니다.
 - 일일/주간 판정은 실행되는 시점의 KST 요일로 합니다. 예약 실행을 Re-run 해도 월요일이면 주간 모드로 돕니다.
 - 사전규격 다음에 발주계획·계약 수집이 매일 돕니다. 각각 별도 활용신청이 필요하고 실패해도 경고만 남깁니다.
+- 렌더 전에 제안요청서 요약이 실행당 8건 돕니다(secret `GEMINI_API_KEY`). 실패해도 경고만 남깁니다.
 - 알림 다음에 Go/No-Go가 돕니다. secret `COMPANY_PROFILE`이 없으면 건너뜁니다. 일일은 최근 1일, 주간은 3일 공고를 봅니다.
 - 렌더 다음에 알림 단계가 돕니다. repo secret `SLACK_WEBHOOK_URL`이 있으면 Slack으로 보내고, 실패해도 커밋은 막지 않습니다(못 보낸 건은 다음 실행에 다시 보냄).
 - API 단계가 실패해도 기존 데이터로 렌더·커밋은 계속하고, `data/run_status.json`에 결과를 남깁니다. 공고 수집(`collect`)이나 투찰업체 보강(`bidders`)이 실패하면 마지막 단계에서 실행을 실패로 표시합니다. 원인은 그 단계가 아니라 앞 단계 로그에 있습니다.

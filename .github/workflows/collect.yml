@@ -167,6 +167,14 @@ jobs:
         run: python -m g2b.collect sanitize-budgets
         working-directory: collector
 
+      # Only public attachment text goes to Gemini (free tier); the company profile never does.
+      - name: Summarize RFP attachments (Gemini)
+        continue-on-error: true
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python -m g2b.collect summarize-rfp --limit 8
+        working-directory: collector
+
       # last_success_at only advances on success, so pages rendered from old data
       # say so instead of showing today's date.
       - name: Record stage outcomes
@@ -216,6 +224,7 @@ jobs:
           if [ -f data/firms.json ]; then git add data/firms.json; fi
           if [ -f data/order_plans.json ]; then git add data/order_plans.json; fi
           if [ -f data/contracts.json ]; then git add data/contracts.json; fi
+          if [ -f data/rfp_summaries.json ]; then git add data/rfp_summaries.json; fi
           git add -A bids/
           if git diff --staged --quiet; then
             echo "No data changes."
