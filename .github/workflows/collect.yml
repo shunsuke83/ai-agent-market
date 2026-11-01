@@ -207,6 +207,7 @@ jobs:
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           COMPANY_PROFILE: ${{ secrets.COMPANY_PROFILE }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python -m g2b.collect gonogo --days "${{ steps.plan.outputs.weekly == 'true' && 3 || 1 }}"
         working-directory: collector
 

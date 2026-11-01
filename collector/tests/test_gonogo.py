@@ -97,3 +97,26 @@ def test_pipeline_bids_are_skipped(tmp_path):
     assert base["candidates"] == 1
     busy = {**PROFILE, "pipeline": [{"bid_no": NOTICE["bid_no"] + "-000", "status": "제안서 작성 중"}]}
     assert run_gonogo(tmp_path, days=3, now=NOW, webhook="", profile=busy)["candidates"] == 0
+
+
+def test_missing_summaries_are_made_for_slack_only(tmp_path, monkeypatch):
+    import json
+
+    from g2b import gonogo, rfp
+
+    (tmp_path / "data").mkdir()
+    (tmp_path / "data" / "notices.json").write_text(json.dumps({"notices": [NOTICE]}), encoding="utf-8")
+    calls = []
+
+    def fake(n, prespecs, key, session=None):
+        calls.append(n["bid_no"])
+        return {"bid_no": n["bid_no"], "status": "ok", "summary": {"overview": "온디맨드 개요"}, "fields": {}}
+
+    monkeypatch.setattr(rfp, "summarize_notice", fake)
+    printed = []
+    monkeypatch.setattr("builtins.print", lambda *a, **k: printed.append(" ".join(map(str, a))))
+    out = gonogo.run_gonogo(tmp_path, days=3, now=NOW, dry_run=True, profile=PROFILE, gemini_key="K")
+    assert calls == [NOTICE["bid_no"]] and out["summarized"] == 1
+    assert "요약: 온디맨드 개요" in printed[0]
+    assert not (tmp_path / "data" / "rfp_summaries.json").exists()
+    assert gonogo.run_gonogo(tmp_path, days=3, now=NOW, dry_run=True, profile=PROFILE, gemini_key="")["summarized"] == 0

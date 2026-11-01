@@ -32,10 +32,12 @@ GEMINI_TIMEOUT = 180
 MAX_DOWNLOAD = 25 * 1024 * 1024
 MAX_FILES = 3
 FILE_CHARS = 40_000
+ZIP_MEMBER_CHARS = 25_000
 TOTAL_CHARS = 60_000
 MIN_CHARS = 300
 MAX_ATTEMPTS = 3
 CALL_GAP_SEC = 7.0
+PRIORITY_MIN_EOK, PRIORITY_MAX_EOK = 3.0, 30.0
 PRIORITY = ("제안요청", "과업", "rfp", "규격", "공고")
 SKIP_NAMES = ("서식", "양식", "의견서", "서약", "확약", "청렴", "위임장")
 
@@ -74,11 +76,29 @@ def _zip_text(data: bytes, depth: int = 0) -> str:
             return _xml_text(z.read("word/document.xml").decode("utf-8", "ignore"), "</w:p>")
         if depth:
             return ""
+        members = []
+        for info in z.infolist()[:20]:
+            name = _zip_name(info)
+            base = name.rsplit("/", 1)[-1]
+            if base.lower().endswith((".hwp", ".hwpx", ".pdf", ".docx")) and not any(w in base for w in SKIP_NAMES):
+                members.append((_rank(base), base, info))
+        members.sort(key=lambda m: m[0])
         parts = []
-        for n in names[:10]:
-            if n.lower().endswith((".hwp", ".hwpx", ".pdf", ".docx")):
-                parts.append(extract_text(z.read(n), depth=1))
-        return "\n".join(p for p in parts if p)
+        for _, base, info in members[:MAX_FILES]:
+            text = extract_text(z.read(info), depth=1)
+            if text:
+                parts.append(f"--- {base} ---\n{text[:ZIP_MEMBER_CHARS]}")
+        return "\n".join(parts)
+
+
+def _zip_name(info: zipfile.ZipInfo) -> str:
+    """Korean zips often store cp949 names without the UTF-8 flag."""
+    if info.flag_bits & 0x800:
+        return info.filename
+    try:
+        return info.filename.encode("cp437").decode("cp949")
+    except (UnicodeEncodeError, UnicodeDecodeError):
+        return info.filename
 
 
 _HWP_CHAR_CONTROLS = {0, 10, 13, 24, 25, 26, 27, 28, 29, 30, 31}
@@ -403,8 +423,41 @@ def pending(
         source, files = document_files(n, prespecs_by_bid.get(n["bid_no"]) or [])
         if files and needs_work(summaries.get(n["bid_no"]), [f["url"] for f in files], has_key):
             out.append((n, source, files))
-    out.sort(key=lambda r: (r[0].get("notice_date") or "", r[0].get("budget_eok") or 0), reverse=True)
+    out.sort(key=lambda r: _priority(r[0]), reverse=True)
     return out
+
+
+def _priority(n: dict[str, Any]) -> tuple:
+    """Public classification only (never the company profile): 생성형·Agent, 3~30억, newest."""
+    budget = n.get("budget_eok")
+    return (
+        n.get("scope") == "생성형·Agent",
+        budget is not None and PRIORITY_MIN_EOK <= budget <= PRIORITY_MAX_EOK,
+        n.get("notice_date") or "",
+        budget or 0,
+    )
+
+
+def summarize_notice(
+    n: dict[str, Any],
+    prespecs: list[dict[str, Any]],
+    api_key: str,
+    session: requests.Session | None = None,
+) -> dict[str, Any] | None:
+    """One-off summary entry (same shape as the cache) without touching data/; None if no usable text."""
+    source, files = document_files(n, prespecs)
+    if not files:
+        return None
+    text, used = collect_text(files, session)
+    if not text:
+        return None
+    entry: dict[str, Any] = {"bid_no": n["bid_no"], "source": source, "files": used,
+                             "fields": extract_fields(text), "status": FIELDS_ONLY}
+    if api_key:
+        entry["summary"], entry["model"] = gemini_summary(n.get("title") or "", n.get("org") or "", text,
+                                                          api_key, session=session)
+        entry["status"] = OK
+    return entry
 
 
 def prespecs_by_bid(repo_root: Path) -> dict[str, list[dict[str, Any]]]:
