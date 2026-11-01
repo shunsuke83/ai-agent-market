@@ -43,6 +43,9 @@ STATIC_CARDS = (
     '<a class="card" href="pricing.html"><span class="k">개찰결과 · 매일 갱신</span>'
     "<span><b>투찰·경쟁 분석</b><span class=\"d\">낙찰 투찰률 분포, 업체별 투찰 습관, "
     "경쟁 강도, 유찰·단독 응찰 사업</span></span><span class=\"go\">열기 →</span></a>"
+    '<a class="card" href="plans.html"><span class="k">공고 전 · 매일 갱신</span>'
+    "<span><b>발주 예정 · 재발주 후보</b><span class=\"d\">공고 전 AI 발주계획, 곧 끝나는 AI 용역 계약, "
+    "공동수급 지분 반영 업체 실적</span></span><span class=\"go\">열기 →</span></a>"
     '<a class="card" href="alerts.html"><span class="k">RSS · 캘린더 · Slack</span>'
     "<span><b>알림 구독</b><span class=\"d\">조건별 새 공고·사전규격 RSS, 입찰·의견 마감 캘린더"
     "</span></span><span class=\"go\">열기 →</span></a>"

@@ -84,6 +84,32 @@ jobs:
         run: python -m g2b.collect collect-prespecs --days "${{ steps.plan.outputs.days }}"
         working-directory: collector
 
+      # 발주계획 (15129462)·계약정보 (15129427) each need their own 활용신청; warnings only.
+      - name: Collect AI order plans (발주계획)
+        id: plans
+        continue-on-error: true
+        env:
+          DATA_GO_KR_SERVICE_KEY: ${{ secrets.DATA_GO_KR_SERVICE_KEY }}
+          G2B_CONNECT_TIMEOUT: "15"
+          G2B_TIMEOUT: "90"
+          G2B_HTTP_RETRIES: "4"
+          G2B_SLEEP: "0.35"
+        run: python -m g2b.collect collect-plans
+        working-directory: collector
+
+      # First run (no data/contracts.json) backfills ~18 months, one call per keyword per month.
+      - name: Collect AI service contracts (계약정보)
+        id: contracts
+        continue-on-error: true
+        env:
+          DATA_GO_KR_SERVICE_KEY: ${{ secrets.DATA_GO_KR_SERVICE_KEY }}
+          G2B_CONNECT_TIMEOUT: "15"
+          G2B_TIMEOUT: "90"
+          G2B_HTTP_RETRIES: "4"
+          G2B_SLEEP: "0.35"
+        run: python -m g2b.collect collect-contracts --days "${{ steps.plan.outputs.days }}"
+        working-directory: collector
+
       - name: Note collect outcome
         if: steps.collect.outcome == 'failure'
         run: |
@@ -148,6 +174,8 @@ jobs:
           python -m g2b.collect mark-run
           --collect "${{ steps.collect.outcome }}"
           --prespecs "${{ steps.prespecs.outcome }}"
+          --plans "${{ steps.plans.outcome }}"
+          --contracts "${{ steps.contracts.outcome }}"
           --awards "${{ steps.awards.outcome }}"
           --bidders "${{ steps.bidders.outcome }}"
           --firms "${{ steps.firms.outcome }}"
@@ -172,11 +200,13 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/notices.json data/reports.json data/run_status.json \
             reports.json reports/ \
-            band.html awards.html index.html competitors.html prespecs.html pricing.html
+            band.html awards.html index.html competitors.html prespecs.html pricing.html plans.html
           if [ -f alerts.html ]; then git add alerts.html feeds/; fi
           if [ -f data/alerts_state.json ]; then git add data/alerts_state.json; fi
           if [ -f data/prespecs.json ]; then git add data/prespecs.json; fi
           if [ -f data/firms.json ]; then git add data/firms.json; fi
+          if [ -f data/order_plans.json ]; then git add data/order_plans.json; fi
+          if [ -f data/contracts.json ]; then git add data/contracts.json; fi
           git add -A bids/
           if git diff --staged --quiet; then
             echo "No data changes."

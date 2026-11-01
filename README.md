@@ -61,6 +61,7 @@
 | [`pricing.html`](pricing.html) | 투찰·경쟁 분석: 낙찰 투찰률 분포, 업체별 투찰 습관, 경쟁 강도, 유찰·단독 응찰 사업 | 자동 |
 | [`competitors.html`](competitors.html) | 국내 전문기업 실적(투찰·낙찰·금액)과 업체 프로필 | 실적 자동, 프로필 편집 |
 | [`prespecs.html`](prespecs.html) | AI 사업 사전규격과 의견 접수 상태 | 자동 |
+| [`plans.html`](plans.html) | 발주 예정·재발주 후보: 공고 전 AI 발주계획, 곧 끝나는 AI 용역 계약, 공동수급 지분 반영 업체 실적 | 자동 |
 | [`alerts.html`](alerts.html) | 알림 구독: 규칙별 RSS(`feeds/<규칙>.xml`), 입찰·사전규격 의견 마감 캘린더(`feeds/deadlines.ics`), Slack 안내 | 자동, 규칙 편집 |
 | [`bids/`](bids/) | AI 공고별 사업 상세 페이지 (비슷한 과거 사업의 투찰 수·낙찰 투찰률·단골 업체 포함) | 자동 |
 | [`reports/`](reports/) | 주간 브리프·월간 리포트 | 자동 |
