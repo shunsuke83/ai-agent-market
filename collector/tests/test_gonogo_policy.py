@@ -120,6 +120,30 @@ def test_gates_from_rfp_summary():
     ]
 
 
+def test_industry_codes_direct_production_and_credit():
+    company = {
+        **PROFILE["company"],
+        "g2b_industry_codes": ["1468", "1426"],
+        "g2b_items_without_direct_production": ["정보시스템개발서비스"],
+        "todo_qualifications": {"direct_production_cert": {"빅데이터분석서비스": "2027-03-09",
+                                                           "정보시스템유지관리서비스": "2026-01-31"}},
+        "credit_rating": {"valid_until": "2026-04-13"},
+    }
+    profile = {**PROFILE, "company": company}
+
+    def gate(*reqs):
+        return [g for g in gp.judge_gates(_notice(), profile, NOW, _summary(*reqs)) if g[0] == "자격"]
+
+    assert gate("업종코드 1468 또는 1426 등록 업체")[0][1] == gp.PASS
+    assert gate("학술연구용역(업종코드 1169) 등록, 2025년 기준")[0][1] == gp.FAIL
+    assert gate("직접생산확인증명서(빅데이터 분석 서비스) 소지")[0][1] == gp.PASS
+    assert gate("직접생산확인증명서(정보시스템유지관리서비스) 소지")[0][1] == gp.FAIL
+    assert gate("직접생산확인(정보시스템개발서비스) 필수")[0] == ("자격", gp.FAIL, "직접생산확인 없음(정보시스템개발서비스)")
+    assert gate("직접생산확인증명서 소지")[0][1] == gp.UNKNOWN
+    assert "갱신 필요" in gp.credit_warning(profile, NOW.date())
+    assert gp.credit_warning(PROFILE, NOW.date()) == ""
+
+
 def test_schedule_gate_when_configured():
     profile = {**PROFILE, "hard_gates": [{"id": "schedule", "min_business_days_to_deadline": 10}]}
     gates = gp.judge_gates(_notice(close_at="2026-11-06 10:00"), profile, NOW, None)
