@@ -75,6 +75,10 @@ python -m g2b.collect enrich-firms
 # 6) HTML 렌더 (band + awards + competitors + reports + prespecs + pricing + details + index)
 python -m g2b.collect render all
 # 일부만: python -m g2b.collect render competitors prespecs
+
+# 7) 알림: feeds/*.xml(RSS) + feeds/deadlines.ics + alerts.html, SLACK_WEBHOOK_URL이 있으면 Slack 전송
+python -m g2b.collect alerts
+# Slack 없이 파일만: --no-slack / 보낼 내용만 확인: --dry-run
 ```
 
 ## GitHub Actions
@@ -88,6 +92,7 @@ python -m g2b.collect render all
 
 - 예약 실행은 GitHub 사정으로 몇 시간 늦게 시작할 수 있습니다. 새벽(KST)에 apis.data.go.kr 연결 타임아웃으로 실패한 적이 있어 낮 시간대·정각이 아닌 분에 둡니다.
 - 일일/주간 판정은 실행되는 시점의 KST 요일로 합니다. 예약 실행을 Re-run 해도 월요일이면 주간 모드로 돕니다.
+- 렌더 다음에 알림 단계가 돕니다. repo secret `SLACK_WEBHOOK_URL`이 있으면 Slack으로 보내고, 실패해도 커밋은 막지 않습니다(못 보낸 건은 다음 실행에 다시 보냄).
 - API 단계가 실패해도 기존 데이터로 렌더·커밋은 계속하고, `data/run_status.json`에 결과를 남깁니다. 공고 수집(`collect`)이나 투찰업체 보강(`bidders`)이 실패하면 마지막 단계에서 실행을 실패로 표시합니다. 원인은 그 단계가 아니라 앞 단계 로그에 있습니다.
 
 공고 일정·금액 필드: `close_at`(입찰 마감)과 `open_at`/`open_date`(개찰)는 서로 채우지 않습니다. `budget_eok`는 배정예산 → 예산 → 추정가격 → 기초금액 순으로 고른 값이고, 어느 필드인지 `budget_kind`에 남기며 원래 값은 `asign_budget_eok`·`presmpt_eok`·`base_amount_eok`에 따로 둡니다. 기존 공고는 다시 수집될 때 채워집니다.
@@ -103,6 +108,10 @@ python -m g2b.collect render all
   - 경쟁 강도: 투찰 업체 수 중앙값·상위 25%·단독 응찰 비율. 수백 곳이 몰리는 공고가 있어 평균은 쓰지 않고, 수의계약은 뺍니다
   - 표본이 5건 미만인 구분은 수치 대신 `표본 부족`
   - 경쟁이 약했던 사업: 최근 1년 유찰·단독 응찰 (수의계약·장비·감리·교육행사 제외, 재공고 차수 병합)
+- `alerts.html` + `feeds/` 알림 (`g2b/alerts.py`, 규칙은 `config/alerts.yaml`)
+  - 규칙 조건(종류·범위·분야·성격·키워드·기관·예산)은 모두 AND. 장비·감리·교육행사와 취소공고는 뺍니다
+  - RSS는 규칙별 최근 50건, 캘린더는 60일 이내 입찰 마감·사전규격 의견 마감
+  - Slack은 공고·사전규격 등록일이 최근 7일 안이고 마감이 지나지 않은 건만, 규칙당 15건까지 보냅니다. 보낸 건은 `data/alerts_state.json`에 남겨 다시 보내지 않습니다
 - `bids/<공고번호>-<차수>.html` AI 공고별 사업 상세 (공개 데이터만). 같은 기관 개찰 이력이 3건 이상이면 그 기관, 아니면 같은 사업 성격·예산대 기준으로 "비슷한 과거 사업의 경쟁"(투찰 수, 낙찰 투찰률, 자주 투찰한 업체)을 붙입니다
 - `competitors.html` 한눈에 보기 KPI + 상세 실적 수치 (`competitors.yaml` 별칭 매칭)
   - 낙찰·금액: 동결 시드 ∪ notices 중 낙찰 확정 건, 공개 낙찰금액만 합산. 정정되면 줄어들 수 있음

@@ -61,6 +61,7 @@
 | [`pricing.html`](pricing.html) | 투찰·경쟁 분석: 낙찰 투찰률 분포, 업체별 투찰 습관, 경쟁 강도, 유찰·단독 응찰 사업 | 자동 |
 | [`competitors.html`](competitors.html) | 국내 전문기업 실적(투찰·낙찰·금액)과 업체 프로필 | 실적 자동, 프로필 편집 |
 | [`prespecs.html`](prespecs.html) | AI 사업 사전규격과 의견 접수 상태 | 자동 |
+| [`alerts.html`](alerts.html) | 알림 구독: 규칙별 RSS(`feeds/<규칙>.xml`), 입찰·사전규격 의견 마감 캘린더(`feeds/deadlines.ics`), Slack 안내 | 자동, 규칙 편집 |
 | [`bids/`](bids/) | AI 공고별 사업 상세 페이지 (비슷한 과거 사업의 투찰 수·낙찰 투찰률·단골 업체 포함) | 자동 |
 | [`reports/`](reports/) | 주간 브리프·월간 리포트 | 자동 |
 | [`deliverables.html`](deliverables.html) | 리포트 체계와 분류 기준 | 편집 |
@@ -75,6 +76,7 @@
 collector/                      수집기 (Python 패키지 g2b, 설정, 테스트, API 문서)
   config/keywords.yaml          AI 공고 분류 키워드 (범위·분야·사업 성격)
   config/competitors.yaml       경쟁사 목록과 별칭
+  config/alerts.yaml            알림 규칙 (RSS·캘린더·Slack)
   docs/                         Open API 정리, 키 재발급 절차
 data/                           수집 데이터(JSON)와 실행 상태, 동결 시드
 assets/                         공통 CSS, 표 정렬·필터 스크립트

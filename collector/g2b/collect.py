@@ -706,6 +706,14 @@ def cmd_render(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_alerts(args: argparse.Namespace) -> int:
+    from .alerts import run_alerts
+
+    summary = run_alerts(ROOT, webhook="" if args.no_slack else None, dry_run=args.dry_run)
+    print(json.dumps(summary, ensure_ascii=False, indent=2))
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(description="나라장터 AI Agent market collector")
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -846,6 +854,14 @@ def build_parser() -> argparse.ArgumentParser:
         help="What to render",
     )
     r.set_defaults(func=cmd_render)
+
+    al = sub.add_parser(
+        "alerts",
+        help="Write feeds/*.xml, feeds/deadlines.ics, alerts.html; post new matches to SLACK_WEBHOOK_URL",
+    )
+    al.add_argument("--no-slack", action="store_true", help="Write feeds only, never post")
+    al.add_argument("--dry-run", action="store_true", help="Print the Slack message instead of posting")
+    al.set_defaults(func=cmd_alerts)
 
     return p
 
