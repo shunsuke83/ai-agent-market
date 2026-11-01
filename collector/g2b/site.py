@@ -11,6 +11,7 @@ NAV_ITEMS = (
     ("index.html", "홈"),
     ("band.html", "8~30억 분석"),
     ("awards.html", "수주 현황"),
+    ("pricing.html", "투찰·경쟁"),
     ("prespecs.html", "사전규격"),
     ("competitors.html", "국내 전문기업"),
     ("reports/index.html", "리포트 목록"),

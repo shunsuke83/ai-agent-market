@@ -40,6 +40,9 @@ STATIC_CARDS = (
     '<a class="card" href="awards.html"><span class="k">누적 · 매일 갱신</span>'
     "<span><b>AI 사업 수주 현황</b><span class=\"d\">대형 사업 낙찰 결과, 수주 상위 업체, "
     "자주 투찰하는 업체</span></span><span class=\"go\">열기 →</span></a>"
+    '<a class="card" href="pricing.html"><span class="k">개찰결과 · 매일 갱신</span>'
+    "<span><b>투찰·경쟁 분석</b><span class=\"d\">낙찰 투찰률 분포, 업체별 투찰 습관, "
+    "경쟁 강도, 유찰·단독 응찰 사업</span></span><span class=\"go\">열기 →</span></a>"
     '<a class="card" href="prespecs.html"><span class="k">본공고 전 · 매일 갱신</span>'
     "<span><b>AI 사업 사전규격</b><span class=\"d\">의견 접수 중인 사전규격, 배정예산, "
     "규격서 원문, 연결된 본공고</span></span><span class=\"go\">열기 →</span></a>"
@@ -71,6 +74,13 @@ def _table(head: list[tuple[str, bool]], rows: list[str], empty: str) -> str:
 
 def _td(v: str, num: bool = False) -> str:
     return f'<td class="num">{v}</td>' if num else f"<td>{v}</td>"
+
+
+def _title_cell(n: dict[str, Any]) -> str:
+    """재공고 means the previous round drew too few bidders, so flag it as a weak-competition lead."""
+    if n.get("ntce_kind") != "재공고":
+        return title_link(n)
+    return title_link(n) + ' <span class="meta" title="이전 공고가 유찰돼 다시 낸 공고">재공고</span>'
 
 
 def _result(n: dict[str, Any]) -> str:
@@ -175,7 +185,7 @@ def build_home(
         "<tr>"
         + _td(html.escape(n["close_at"][5:]))
         + _td(html.escape(n.get("org") or ""))
-        + _td(title_link(n))
+        + _td(_title_cell(n))
         + _td(html.escape(n.get("scope") or ""))
         + _td(_fmt_budget(n.get("budget_eok")), num=True)
         + _td(html.escape(n.get("contract_method") or ""))
@@ -186,7 +196,7 @@ def build_home(
         "<tr>"
         + _td(html.escape(n.get("notice_date") or ""))
         + _td(html.escape(n.get("org") or ""))
-        + _td(title_link(n))
+        + _td(_title_cell(n))
         + _td(_fmt_budget(n.get("budget_eok")), num=True)
         + _td(html.escape((n.get("close_at") or "")[:10]))
         + "</tr>"
@@ -254,7 +264,7 @@ def build_home(
             f"최근 {OPENED_DAYS}일 개찰 결과가 없습니다.",
         )
         + (more(len(opened_rows), len(opened), "awards.html", "수주 현황") if opened else "")
-        + f'<p class="note">예산 {min_eok:g}억 미만, 장비 구매, 감리·PMO·교육·행사성 공고는 제외합니다. 사업명을 누르면 사업 상세(일정·금액·투찰 업체·관련 사전규격)로 이동합니다.</p>'
+        + f'<p class="note">예산 {min_eok:g}억 미만, 장비 구매, 감리·PMO·교육·행사성 공고는 제외합니다. 사업명을 누르면 사업 상세(일정·금액·투찰 업체·비슷한 사업의 경쟁·관련 사전규격)로 이동합니다. 재공고는 이전 공고가 유찰돼 다시 낸 공고입니다.</p>'
         + reports_html
         + STATIC_CARDS
         + keep_html
