@@ -1,6 +1,6 @@
 # AI Agent Market
 
-공공 AI·Agent 사업 시장 리서치 사이트입니다. 나라장터(조달청) Open API로 AI 관련 공고·사전규격·낙찰 결과를 매일 수집하고, 정적 HTML 페이지로 렌더해 GitHub Pages로 공개합니다.
+공공 AI·Agent 사업 시장 리서치 사이트입니다. 나라장터(조달청) Open API로 AI 관련 공고·사전규격·낙찰·발주계획·계약을 매일 수집하고, 정적 HTML 페이지로 렌더해 GitHub Pages로 공개합니다. 새 공고는 RSS·캘린더·Slack으로 알리고, 회사 프로필 기준 Go/No-Go 판정은 Slack으로만 보냅니다.
 
 - **사이트:** https://shunsuke83.github.io/ai-agent-market/
 - **원본:** [sungkyu-pm/ai-agent-market](https://github.com/sungkyu-pm/ai-agent-market) ([사이트](https://sungkyu-pm.github.io/ai-agent-market/))
@@ -12,7 +12,9 @@
 공공 AI 사업을 영업·기획하는 사람이 나라장터를 매일 뒤지지 않고도 시장 흐름과 기회를 한곳에서 보게 하는 것이 목표입니다. 사이트는 다음 질문에 답합니다.
 
 - **지금 입찰할 사업은?** 마감이 임박한 AI 공고, 새로 올라온 공고
-- **곧 나올 사업은?** 의견 접수 중인 사전규격, ISP·전략 사업 뒤에 따라올 후속 본사업 후보
+- **곧 나올 사업은?** 의견 접수 중인 사전규격, 공고 전 발주계획, 곧 끝나는 AI 용역 계약(재발주 후보), ISP·전략 사업 뒤에 따라올 후속 본사업 후보
+- **이 사업은 무엇을 요구하나?** 공고 첨부 문서를 읽어 만든 제안요청서 요약(과업·요구 기술·자격·평가·유의 사항), 평가 비율·참가 제한
+- **우리가 들어갈 만한가?** 회사 프로필의 하드 게이트·정책·가중치로 매긴 GO/REVIEW/NO-GO (Slack 전용, 사이트 비공개)
 - **누가 수주하나?** 공고별 낙찰자·투찰 업체 순위·2순위, 30억 이상 대형 낙찰
 - **얼마에 넣어야 하나?** 사업 성격·예산대·계약 방식별 낙찰 투찰률, 경쟁사별 투찰률 습관, 비슷한 사업의 경쟁 강도
 - **경쟁사는 얼마나 따내나?** 국내 전문기업별 투찰·낙찰 건수와 공개 낙찰금액, 자주 맞붙는 업체
@@ -30,7 +32,11 @@
 | 낙찰 확정 | 493건 (공개 낙찰금액 492건) |
 | 투찰 업체 순위 | 496건 |
 | AI 사전규격 | 265건 |
+| AI 발주계획 (공고 전) | 34건 |
+| AI 용역 계약 (1억 이상, 최근 약 18개월) | 1,670건 |
 | 조달업체 기본정보 | 43곳 |
+| 공고 첨부 링크 수집 | 402건 |
+| 제안요청서 요약 | 8건 처리 (요약 3건, 실행당 8건씩 늘어남) |
 | 사업 상세 페이지 | 1,534개 (`bids/`) |
 
 ## 분류 기준
@@ -50,6 +56,8 @@
 - **업체는 사업자번호로:** 사업자번호가 있는 투찰 기록은 사업자번호로만 매칭해, 이름이 같은 다른 업체가 섞이지 않게 합니다.
 - **편집값과 수집값을 분리:** 원본 사이트의 수작업 값은 동결 시드(`data/seed/`)로 보관하고 수집값이 항상 우선합니다. 편집 조사값은 수집 실적에 합치지 않고 별도로 표시합니다.
 - **날짜는 정직하게:** 사이트의 `데이터 기준`은 마지막으로 수집에 성공한 날짜입니다. 수집이 실패하면 기존 데이터를 보여 주면서 그 사실을 표시합니다.
+- **회사 정보는 비공개:** 회사 프로필은 repo secret `COMPANY_PROFILE`에만 두고, Go/No-Go 점수는 Slack으로만 보냅니다. 사이트·`data/`·Actions 로그(공개 저장소라 공개됨)에는 건수만 남습니다.
+- **AI 요약은 공개 문서만:** Gemini 무료 등급에는 공개된 공고 첨부 텍스트만 보내고 회사 프로필은 보내지 않습니다. 요약은 자동 생성이라 화면에 원문 확인 안내를 붙입니다.
 
 ## 사이트 구성
 
@@ -63,7 +71,7 @@
 | [`prespecs.html`](prespecs.html) | AI 사업 사전규격과 의견 접수 상태 | 자동 |
 | [`plans.html`](plans.html) | 발주 예정·재발주 후보: 공고 전 AI 발주계획, 곧 끝나는 AI 용역 계약, 공동수급 지분 반영 업체 실적 | 자동 |
 | [`alerts.html`](alerts.html) | 알림 구독: 규칙별 RSS(`feeds/<규칙>.xml`), 입찰·사전규격 의견 마감 캘린더(`feeds/deadlines.ics`), Slack 안내 | 자동, 규칙 편집 |
-| [`bids/`](bids/) | AI 공고별 사업 상세 페이지 (비슷한 과거 사업의 투찰 수·낙찰 투찰률·단골 업체 포함) | 자동 |
+| [`bids/`](bids/) | AI 공고별 사업 상세: 평가 비율·참가 제한·첨부 링크, 제안요청서 요약, 투찰 업체, 계약 정보, 비슷한 과거 사업의 경쟁 | 자동 |
 | [`reports/`](reports/) | 주간 브리프·월간 리포트 | 자동 |
 | [`deliverables.html`](deliverables.html) | 리포트 체계와 분류 기준 | 편집 |
 | [`research/`](research/) | 시장 1차 리서치, Gen Agent 업체 프로필·아키텍처 비교 | 편집 |
@@ -78,6 +86,7 @@ collector/                      수집기 (Python 패키지 g2b, 설정, 테스�
   config/keywords.yaml          AI 공고 분류 키워드 (범위·분야·사업 성격)
   config/competitors.yaml       경쟁사 목록과 별칭
   config/alerts.yaml            알림 규칙 (RSS·캘린더·Slack)
+  config/profile.example.yaml   Go/No-Go 회사 프로필 예시 (실제 값은 secret, 로컬은 profile.local.yaml·gitignore)
   docs/                         Open API 정리, 키 재발급 절차
 data/                           수집 데이터(JSON)와 실행 상태, 동결 시드
 assets/                         공통 CSS, 표 정렬·필터 스크립트
@@ -87,10 +96,12 @@ research/                       편집 리서치 페이지
 
 ## 데이터 흐름
 
-1. **수집:** 나라장터 Open API(입찰공고·낙찰·사전규격·사용자정보)에서 AI 관련 공고를 가져와 `data/notices.json`, `data/prespecs.json`, `data/firms.json`에 병합합니다.
+1. **수집:** 나라장터 Open API(입찰공고·낙찰·사전규격·발주계획·계약·사용자정보)에서 AI 관련 데이터를 가져와 `data/*.json`에 병합합니다.
 2. **분류:** `keywords.yaml` 기준으로 범위(생성형·Agent / AI SW 확대)·분야·사업 성격을 붙입니다.
 3. **보강:** 낙찰자·투찰 업체 순위·조달업체 기본정보를 붙입니다(주간 실행).
-4. **렌더·배포:** 위 사이트 페이지를 다시 만들어 커밋하면 GitHub Pages에 반영됩니다.
+4. **요약:** 마감 전 공고의 첨부(HWPX·HWP·PDF)에서 텍스트를 뽑아 규칙 항목과 Gemini 요약을 `data/rfp_summaries.json`에 쌓습니다(실행당 8건).
+5. **렌더·배포:** 사이트 페이지를 다시 만들어 커밋하면 GitHub Pages에 반영됩니다.
+6. **알림·판정:** 새 공고를 RSS·캘린더·Slack으로 알리고, 회사 프로필로 새 공고를 판정해 Slack에만 보냅니다.
 
 단계별 성공 여부는 `data/run_status.json`에 남습니다.
 
@@ -98,15 +109,21 @@ research/                       편집 리서치 페이지
 
 | 실행 | 언제 | 하는 일 |
 |------|------|---------|
-| 일일 | 매일 13:17 KST (월요일 제외) | 최근 3일 공고·사전규격 수집 → 렌더 → 커밋 |
-| 주간 | 월요일 13:17 KST, 그리고 수동 실행(Run workflow) | 14일 수집 + 낙찰·투찰업체·업체 정보 보강 |
+| 일일 | 매일 13:17 KST (월요일 제외) | 최근 3일 공고·사전규격, 발주계획·계약 수집 → 요약 → 렌더 → 알림·Go/No-Go(최근 1일) → 커밋 |
+| 주간 | 월요일 13:17 KST, 그리고 수동 실행(Run workflow) | 14일 수집 + 낙찰·투찰업체·업체 정보 보강, Go/No-Go는 최근 3일 |
 
 예약 실행은 GitHub 사정으로 늦게 시작할 수 있습니다. 실패했을 때 확인하는 방법은 [`collector/README.md`](collector/README.md#github-actions)를 보세요.
 
 ## 설정
 
-- repo secret `DATA_GO_KR_SERVICE_KEY`에 data.go.kr 인증키를 넣습니다. 입찰공고·낙찰·사전규격·사용자정보 서비스는 각각 활용신청이 필요합니다.
-- 키 재발급 절차: [`collector/docs/key-rotation.md`](collector/docs/key-rotation.md)
+| repo secret | 용도 | 없으면 |
+|-------------|------|--------|
+| `DATA_GO_KR_SERVICE_KEY` | data.go.kr 인증키. 입찰공고·낙찰·사전규격·발주계획·계약정보·사용자정보 서비스를 각각 활용신청해야 합니다 | 워크플로가 돌지 않음 |
+| `SLACK_WEBHOOK_URL` | 알림과 Go/No-Go를 보낼 Slack 채널 | RSS·캘린더만 만듦 |
+| `GEMINI_API_KEY` | 제안요청서 요약 ([Google AI Studio](https://aistudio.google.com/apikey) 무료 등급) | 규칙 항목만 저장 |
+| `COMPANY_PROFILE` | Go/No-Go 회사 프로필 YAML | Go/No-Go 건너뜀 |
+
+키 재발급 절차: [`collector/docs/key-rotation.md`](collector/docs/key-rotation.md)
 
 ## 문서
 

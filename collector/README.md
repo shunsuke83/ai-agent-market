@@ -11,6 +11,11 @@
 | **Competitor** | `name`, `type`, `bids`, `wins`, `award_amount_eok`, … | `competitors.html` (프로필은 편집, 실적은 집계) |
 | **Prespec** | `prespec_no`, `org`, `title`, `asign_budget_eok`, `registered_at`, `opinion_close_at`, `bid_nos[]`, `spec_files` | `prespecs.html`, `index.html` 의견 접수 중 사전규격 |
 | **Firm** | `bizno`, `corp_name`, `ceo`, `region`, `opened`, `employees`, `fetched_at` | `competitors.html` 업체 프로필·맞대결 업체명 |
+| **OrderPlan** | `plan_no`, `title`, `org`, `order_ym`, `amount_eok`, `contract_method`, `bid_nos[]` | `plans.html` 발주 예정 |
+| **Contract** | `contract_no`, `title`, `org`, `signed_date`, `end_date`, `amount_eok`, `firms[]`(지분·사업자번호), `bid_no` | `plans.html` 재발주 후보·업체 실적, 사업 상세 계약 블록, Go/No-Go 기존 수행사 |
+| **RfpSummary** | `bid_no`, `status`, `source`, `files[]`, `fields`(기간·제한), `summary`(개요·과업·기술·요건·평가·유의) | 사업 상세 "제안요청서 요약", Go/No-Go 게이트·한 줄 요약 |
+
+Notice의 평가·참가 조건 필드: `award_method`, `tech_rate`/`price_rate`, `joint_method`, `industry_limit`·`participation_limit`·`record_limit`, `rebid`, `prev_bid_no`, `prespec_no`, `plan_no`, `notice_files[]`.
 
 `scope` (범위): `생성형·Agent` | `AI SW 확대` — 사업명 키워드 (`config/keywords.yaml`, `deliverables.html` 분류 기준).
 
@@ -27,7 +32,7 @@
 ### 시드와 수집 상태
 
 - `data/seed/editorial-2026-10-28.json`: 자동 렌더 이전 수작업 HTML에서 추출한 **동결 시드**. 읽기 전용이며 렌더된 HTML에서 다시 만들지 않습니다(지난주 화면이 이번 주 입력이 되는 순환 방지). 실 수집값이 항상 우선하고, 집계 하한으로 쓰지 않습니다.
-- `data/run_status.json`: 단계별(`collect`·`prespecs`·`awards`·`bidders`·`firms`) 마지막 시도·결과·마지막 성공 시각과 이를 기록한 Actions `run_id`. 마지막 성공 시각은 성공했을 때만 갱신됩니다. `index.html` 스탬프는 렌더 날짜가 아니라 공고 수집의 마지막 성공일을 `데이터 기준`으로 표시하고, 최근 수집이 실패했으면 "기존 데이터 표시 중"을 덧붙입니다.
+- `data/run_status.json`: 단계별(`collect`·`prespecs`·`plans`·`contracts`·`awards`·`bidders`·`firms`) 마지막 시도·결과·마지막 성공 시각과 이를 기록한 Actions `run_id`. 마지막 성공 시각은 성공했을 때만 갱신됩니다. `index.html` 스탬프는 렌더 날짜가 아니라 공고 수집의 마지막 성공일을 `데이터 기준`으로 표시하고, 최근 수집이 실패했으면 "기존 데이터 표시 중"을 덧붙입니다.
 
 ## Open API
 
@@ -37,10 +42,18 @@
 | 낙찰정보서비스 | [data.go.kr/15129397](https://www.data.go.kr/data/15129397/openapi.do) | 개찰·낙찰 (`winner`/`bid_count`/`award_amount_eok`), 투찰업체 순위(OpengCompt) |
 | 사전규격정보서비스 | [data.go.kr/15129437](https://www.data.go.kr/data/15129437/openapi.do) | AI 사전규격 (`data/prespecs.json`) |
 | 사용자정보서비스 | [data.go.kr/15129466](https://www.data.go.kr/data/15129466/openapi.do) | 조달업체 기본정보 (`data/firms.json`) |
+| 발주계획현황서비스 | [data.go.kr/15129462](https://www.data.go.kr/data/15129462/openapi.do) | AI 발주계획 (`data/order_plans.json`) |
+| 계약정보서비스 | [data.go.kr/15129427](https://www.data.go.kr/data/15129427/openapi.do) | AI 용역 계약 (`data/contracts.json`) |
 
-서비스마다 data.go.kr 활용신청이 따로 필요합니다. 키 하나로 모두 호출하지만, 활용신청하지 않은 서비스는 실패합니다(사전규격·업체정보는 실패해도 경고만 남김).
+서비스마다 data.go.kr 활용신청이 따로 필요합니다. 키 하나로 모두 호출하지만, 활용신청하지 않은 서비스는 실패합니다(공고 수집 외에는 실패해도 경고만 남김). 공고·사전규격 첨부 파일(`g2b.go.kr .../downloadFile.do`)은 인증 없이 받아집니다.
 
-환경변수: `DATA_GO_KR_SERVICE_KEY` (또는 `SERVICE_KEY`).  
+| 환경변수 | 용도 |
+|----------|------|
+| `DATA_GO_KR_SERVICE_KEY` (또는 `SERVICE_KEY`) | data.go.kr 인증키 |
+| `SLACK_WEBHOOK_URL` | 알림·Go/No-Go Slack 전송 |
+| `GEMINI_API_KEY`, `GEMINI_MODEL`(선택) | 제안요청서 요약 |
+| `COMPANY_PROFILE` | Go/No-Go 회사 프로필 YAML (없으면 `config/profile.local.yaml`) |
+
 키 재발급: [`docs/key-rotation.md`](docs/key-rotation.md)
 
 ## 사용법
@@ -101,11 +114,19 @@ python -m g2b.collect summarize-rfp --limit 8
 - Gemini(`gemini-flash-latest`, 없으면 `gemini-2.5-flash`, `GEMINI_MODEL`로 변경): 개요, 주요 과업, 요구 기술, 자격·요건, 평가, 유의 사항
 - 무료 등급 입력은 학습에 쓰일 수 있어 공개 첨부 텍스트만 보냅니다. 회사 프로필은 보내지 않습니다.
 - 결과는 공개입니다. 사업 상세 페이지의 "제안요청서 요약"과 Go/No-Go Slack 메시지의 한 줄 요약에 쓰입니다.
-- 첨부 URL이 바뀌면 다시 요약합니다. 실패는 3번까지 재시도하고, 429(할당량)면 그 실행은 멈춥니다. 키가 없으면 규칙 항목만 저장했다가 키가 생기면 요약합니다.
+- 첨부 URL이 바뀌면 다시 요약합니다. 응답 지연(180초)·5xx면 다음 모델로 넘어가고, 그래도 실패하면 다음 실행에서 3번까지 재시도합니다. 429(할당량)면 그 실행은 멈춥니다. 키가 없으면 규칙 항목만 저장했다가 키가 생기면 요약합니다.
+- 같은 문서가 hwpx·pdf로 함께 올라오면 한 번만 읽습니다. 배포용·암호 HWP는 읽지 못합니다.
 
 ### Go/No-Go (`g2b/gonogo.py`)
 
-회사 프로필은 공개 저장소에 두지 않습니다. 형식은 `config/profile.example.yaml`이고, 실제 값은 repo secret `COMPANY_PROFILE`에 YAML 그대로 넣습니다. 로컬에서는 `config/profile.local.yaml`(gitignore)을 읽습니다.
+회사 프로필은 공개 저장소에 두지 않습니다. 실제 값은 repo secret `COMPANY_PROFILE`에 YAML 그대로 넣고, 로컬에서는 `config/profile.local.yaml`(gitignore)을 읽습니다. 프로필 형식은 두 가지입니다.
+
+- **단순형** (`config/profile.example.yaml`): 성격 가중치·키워드·예산 범위·경쟁사로 100점 만점
+- **정책형** (`company`·`capabilities`·`track_record`·`policy`·`hard_gates`·`scoring` 키): 하드 게이트 → 회피 정책 → 가중치 점수·근거 충족률. 현재 등록된 프로필이 이 형식입니다
+
+secret 갱신(PowerShell): `cmd /c "gh secret set COMPANY_PROFILE < collector\config\profile.local.yaml"` (PowerShell 파이프는 한글이 깨질 수 있음)
+
+단순형 배점:
 
 | 항목 | 배점 | 기준 |
 |------|------|------|
@@ -118,7 +139,11 @@ python -m g2b.collect summarize-rfp --limit 8
 
 프로필에 `company`·`scoring` 키가 있으면 정책형 판정(`g2b/gonogo_policy.py`)을 씁니다.
 
-- 하드 게이트를 점수보다 먼저 봅니다. 지역·자격·실적 금액·인증은 공고 제한 표시와 제안요청서 요약에서 신호를 찾습니다. 미충족이면 NO-GO, 프로필 값이 비어 있으면(null) 미확인으로 REVIEW입니다. 일정·동시 수행 게이트는 값이 있을 때만 봅니다.
+- 하드 게이트를 점수보다 먼저 봅니다. 지역·자격·실적 금액·인증은 공고 제한 표시와 제안요청서 요약에서 신호를 찾습니다. 미충족이면 NO-GO, 프로필 값이 비어 있으면(null) 미확인으로 REVIEW입니다.
+  - 자격: 요약에 나온 업종코드를 `company.g2b_industry_codes`와 대조(하나라도 맞으면 통과). 직접생산은 `direct_production_cert: {세부품명: 유효기간 종료일}`로 품목별 판정하고, `g2b_items_without_direct_production` 품목을 요구하면 미충족
+  - 실적 금액: 요약의 "실적 N억" 요건을 `largest_g2b_contract_eok`·`non_g2b_amounts_eok` 중 큰 값과 비교
+  - 일정: 마감까지 영업일 ≥ `min_business_days_to_deadline`. 동시 수행(`max_concurrent_builds`)은 현재 수행 건수가 없어 점수 항목에만 씁니다
+- `company.credit_rating.valid_until`이 지났으면 Slack 머리에 갱신 경고를 붙입니다.
 - `policy.avoid` 규칙(성격·제목 키워드)은 NO-GO입니다. 기존 고객 기관, 자사 제품명, 또는 성격으로만 걸렸고 제목에 고도화·구축이 있으면 REVIEW로 완화합니다. 사이트 제외 규칙(감리·PMO·교육·장비 구매)도 NO-GO입니다.
 - 점수는 `scoring.weights`로 계산하되 근거가 없는 항목은 빼고 비율로 환산하며, 뺀 비중만큼 근거 충족률이 내려갑니다. GO는 점수·충족률 기준을 넘고 미확인 게이트가 없으며 예산 구간 기본값이 GO인 경우에만 나옵니다.
 - Slack에는 판정 사유, 게이트 결과, 점수와 근거 충족률, 참고 관측을 보내고 수주 확률은 표기하지 않습니다.
@@ -138,10 +163,12 @@ python -m g2b.collect summarize-rfp --limit 8
 
 - 예약 실행은 GitHub 사정으로 몇 시간 늦게 시작할 수 있습니다. 새벽(KST)에 apis.data.go.kr 연결 타임아웃으로 실패한 적이 있어 낮 시간대·정각이 아닌 분에 둡니다.
 - 일일/주간 판정은 실행되는 시점의 KST 요일로 합니다. 예약 실행을 Re-run 해도 월요일이면 주간 모드로 돕니다.
-- 사전규격 다음에 발주계획·계약 수집이 매일 돕니다. 각각 별도 활용신청이 필요하고 실패해도 경고만 남깁니다.
-- 렌더 전에 제안요청서 요약이 실행당 8건 돕니다(secret `GEMINI_API_KEY`). 실패해도 경고만 남깁니다.
-- 알림 다음에 Go/No-Go가 돕니다. secret `COMPANY_PROFILE`이 없으면 건너뜁니다. 일일은 최근 1일, 주간은 3일 공고를 봅니다.
-- 렌더 다음에 알림 단계가 돕니다. repo secret `SLACK_WEBHOOK_URL`이 있으면 Slack으로 보내고, 실패해도 커밋은 막지 않습니다(못 보낸 건은 다음 실행에 다시 보냄).
+단계 순서: 공고 → 사전규격 → 발주계획 → 계약 → 재분류 → (주간) 낙찰·투찰업체·업체정보 보강 → 제안요청서 요약 → 렌더 → 알림 → Go/No-Go → 커밋.
+
+- 발주계획·계약 수집은 매일 돕니다. 각각 별도 활용신청이 필요하고 실패해도 경고만 남깁니다.
+- 제안요청서 요약은 실행당 8건 돕니다(secret `GEMINI_API_KEY`). 실패해도 경고만 남깁니다.
+- 알림은 secret `SLACK_WEBHOOK_URL`이 있으면 Slack으로 보내고, 실패해도 커밋은 막지 않습니다(못 보낸 건은 다음 실행에 다시 보냄).
+- Go/No-Go는 secret `COMPANY_PROFILE`이 없으면 건너뜁니다. 일일은 최근 1일, 주간은 3일 공고를 보고, 로그에는 건수만 찍습니다.
 - API 단계가 실패해도 기존 데이터로 렌더·커밋은 계속하고, `data/run_status.json`에 결과를 남깁니다. 공고 수집(`collect`)이나 투찰업체 보강(`bidders`)이 실패하면 마지막 단계에서 실행을 실패로 표시합니다. 원인은 그 단계가 아니라 앞 단계 로그에 있습니다.
 
 공고 일정·금액 필드: `close_at`(입찰 마감)과 `open_at`/`open_date`(개찰)는 서로 채우지 않습니다. `budget_eok`는 배정예산 → 예산 → 추정가격 → 기초금액 순으로 고른 값이고, 어느 필드인지 `budget_kind`에 남기며 원래 값은 `asign_budget_eok`·`presmpt_eok`·`base_amount_eok`에 따로 둡니다. 기존 공고는 다시 수집될 때 채워집니다.
@@ -196,3 +223,6 @@ python -m g2b.collect enrich-bidders --include-bootstrap --core-only --limit 400
 
 - 경쟁사 프로필 문단 (편집 콘텐츠)
 - 키 재발급 자체는 소유자가 data.go.kr + GitHub secret에서 수행 ([key-rotation.md](docs/key-rotation.md))
+- Go/No-Go의 공동수급 역할(주관사 여부)·동시 수행 여력 게이트: 공고 데이터와 현재 수행 현황이 없어 판정하지 않음
+- 지역 제한: 공고 API 필드가 아니라 제안요청서 요약의 "OO 소재" 문구로만 판단하므로 요약이 없는 공고는 보지 못함
+- 제안요청서 요약 백로그: 열린 공고 약 240건을 실행당 8건씩 처리 중 (Gemini 무료 등급 한도)
