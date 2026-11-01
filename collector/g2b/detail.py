@@ -153,6 +153,7 @@ def render_detail_html(
     *,
     prespecs: list[dict[str, Any]] | None = None,
     same_org: list[dict[str, Any]] | None = None,
+    competition_html: str = "",
     today: date | None = None,
 ) -> str:
     today = today or _today_kst()
@@ -189,6 +190,7 @@ def render_detail_html(
         "<h2>개찰·낙찰 결과</h2>"
         f'<div class="tbl"><table class="kv"><tbody>{_result_rows(n, status)}</tbody></table></div>'
         + _bidder_table(n.get("bidders") or [])
+        + competition_html
         + _prespec_table(prespecs or [])
         + _same_org_table(same_org or [], today)
     )
@@ -196,10 +198,12 @@ def render_detail_html(
 
 
 def render_detail_pages(repo_root: Path, today: date | None = None) -> dict[str, Any]:
+    from .pricing import ContextIndex, context_html, load_notices
     from .prespecs import load_prespecs
 
     today = today or _today_kst()
     notices = load_detail_notices(repo_root)
+    contexts = ContextIndex(load_notices(repo_root))
     by_bid: dict[str, list[dict[str, Any]]] = {}
     for p in load_prespecs(repo_root):
         for b in p.get("bid_nos") or []:
@@ -219,7 +223,13 @@ def render_detail_pages(repo_root: Path, today: date | None = None) -> dict[str,
         if not slug or slug in written:
             continue
         same = [r for r in by_org.get(n.get("org") or "", []) if detail_slug(r) != slug][:10]
-        text = render_detail_html(n, prespecs=by_bid.get(n["bid_no"]), same_org=same, today=today)
+        text = render_detail_html(
+            n,
+            prespecs=by_bid.get(n["bid_no"]),
+            same_org=same,
+            competition_html=context_html(contexts.context(n)),
+            today=today,
+        )
         path = out_dir / f"{slug}.html"
         if not path.exists() or path.read_text(encoding="utf-8") != text:
             path.write_text(text, encoding="utf-8")

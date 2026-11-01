@@ -45,6 +45,7 @@ NAV = (
     '<a href="../index.html">홈</a>'
     '<a href="../band.html">8~30억 분석</a>'
     '<a href="../awards.html">수주 현황</a>'
+    '<a href="../pricing.html">투찰·경쟁</a>'
     '<a href="../prespecs.html">사전규격</a>'
     '<a href="../competitors.html">국내 전문기업</a>'
     '<a href="../reports/index.html">리포트 목록</a>'

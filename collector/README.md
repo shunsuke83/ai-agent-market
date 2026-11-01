@@ -72,7 +72,7 @@ python -m g2b.collect collect-prespecs --days 14
 # 5) 조달업체 기본정보 (별도 활용신청 필요) → data/firms.json, 30일 지난 업체만 다시 조회
 python -m g2b.collect enrich-firms
 
-# 6) HTML 렌더 (band + awards + competitors + reports + prespecs + details + index)
+# 6) HTML 렌더 (band + awards + competitors + reports + prespecs + pricing + details + index)
 python -m g2b.collect render all
 # 일부만: python -m g2b.collect render competitors prespecs
 ```
@@ -98,7 +98,12 @@ python -m g2b.collect render all
 - `band.html` 공고별 결과 테이블 (+ 상단 공고 건수·예산 합계 스탯)
 - `awards.html` 30억+ 낙찰 · 수주 상위 · 연도별 · 개찰 확인 필요
 - `prespecs.html` AI 사전규격 목록 (`data/prespecs.json`), 본공고가 나온 건은 사업 상세로 연결
-- `bids/<공고번호>-<차수>.html` AI 공고별 사업 상세 (공개 데이터만)
+- `pricing.html` 투찰·경쟁 분석 (`g2b/pricing.py`)
+  - 낙찰 투찰률: 낙찰자의 예정가격 대비 투찰률. OpengCompt가 투찰률 대신 협상계약 가격평가 점수(`bidPrceEvlVal`, 약 8~20)를 주는 경우가 있어 50~110%만 씁니다
+  - 경쟁 강도: 투찰 업체 수 중앙값·상위 25%·단독 응찰 비율. 수백 곳이 몰리는 공고가 있어 평균은 쓰지 않고, 수의계약은 뺍니다
+  - 표본이 5건 미만인 구분은 수치 대신 `표본 부족`
+  - 경쟁이 약했던 사업: 최근 1년 유찰·단독 응찰 (수의계약·장비·감리·교육행사 제외, 재공고 차수 병합)
+- `bids/<공고번호>-<차수>.html` AI 공고별 사업 상세 (공개 데이터만). 같은 기관 개찰 이력이 3건 이상이면 그 기관, 아니면 같은 사업 성격·예산대 기준으로 "비슷한 과거 사업의 경쟁"(투찰 수, 낙찰 투찰률, 자주 투찰한 업체)을 붙입니다
 - `competitors.html` 한눈에 보기 KPI + 상세 실적 수치 (`competitors.yaml` 별칭 매칭)
   - 낙찰·금액: 동결 시드 ∪ notices 중 낙찰 확정 건, 공개 낙찰금액만 합산. 정정되면 줄어들 수 있음
   - 투찰: OpengCompt `bidders[]` 실측 (`max(live_bids, 낙찰)`)
