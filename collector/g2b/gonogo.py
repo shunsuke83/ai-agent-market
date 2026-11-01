@@ -262,6 +262,9 @@ def run_gonogo(
     incumbents = IncumbentIndex(load_contracts(repo_root), now.date())
     summaries = load_summaries(repo_root)
     pool = candidates(notices, now, days)
+    # Bids the company is already working on (profile.pipeline) are not re-scored.
+    pipeline = {str(p.get("bid_no") or "").split("-")[0] for p in profile.get("pipeline") or [] if isinstance(p, dict)}
+    pool = [n for n in pool if n.get("bid_no") not in pipeline]
     policy = is_policy_profile(profile)
     if policy:
         out = profile.get("output") or {}
