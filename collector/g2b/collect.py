@@ -282,6 +282,56 @@ def cmd_collect_prespecs(args: argparse.Namespace) -> int:
     return 0
 
 
+def _write_json(path: Path, payload: dict[str, Any]) -> None:
+    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
+def cmd_collect_plans(args: argparse.Namespace) -> int:
+    """발주계획 (15129462) for AI 사업명 → data/order_plans.json (full snapshot each run)."""
+    from .client import G2BClient, G2BError
+    from .plans import normalize_plan_item
+
+    today = date.today()
+    rules = load_keywords()
+    keywords = list(rules.get("search_keywords") or [])
+    order_end = today.replace(day=1) + timedelta(days=31 * args.months_ahead)
+    try:
+        raw = G2BClient().fetch_order_plans(
+            keywords, today.replace(day=1), order_end, today - timedelta(days=args.posted_days), today
+        )
+    except G2BError as e:
+        print(f"::warning::order plan fetch failed (활용신청 확인 필요?): {e}")
+        return 1
+    rows = {r["plan_no"]: r for r in (normalize_plan_item(x, rules) for x in raw) if r}
+    plans = sorted(rows.values(), key=lambda p: (p.get("order_ym") or "", p["plan_no"]))
+    _write_json(Path(args.out), {"schema_version": 1, "generated_at": utc_now_iso(), "plans": plans})
+    print(f"Order plans: raw={len(raw)} ai={len(plans)} → {args.out}")
+    return 0
+
+
+def cmd_collect_contracts(args: argparse.Namespace) -> int:
+    """용역 계약 (15129427) for AI 계약명 → data/contracts.json (merged by 계약번호)."""
+    from .client import G2BClient, G2BError
+    from .plans import merge_contracts, normalize_contract_item
+
+    out = Path(args.out)
+    prev = json.loads(out.read_text(encoding="utf-8")) if out.exists() else {}
+    end = date.today()
+    days = args.days if prev.get("contracts") else args.backfill_days
+    start = end - timedelta(days=days)
+    rules = load_keywords()
+    try:
+        raw = G2BClient().fetch_contracts(list(rules.get("search_keywords") or []), start, end)
+    except G2BError as e:
+        print(f"::warning::contract fetch failed (활용신청 확인 필요?): {e}")
+        return 1
+    rows = [r for r in (normalize_contract_item(x, rules) for x in raw) if r]
+    merged = merge_contracts(list(prev.get("contracts") or []), rows)
+    _write_json(out, {"schema_version": 1, "generated_at": utc_now_iso(), "contracts": merged})
+    print(f"Contracts {start} → {end}: raw={len(raw)} ai={len(rows)} stored={len(merged)}")
+    return 0
+
+
 def cmd_enrich_firms(args: argparse.Namespace) -> int:
     """조달업체 기본정보 (사용자정보 서비스) by 사업자번호 → data/firms.json."""
     from .client import G2BClient, G2BError
@@ -612,7 +662,7 @@ def cmd_migrate_results(args: argparse.Namespace) -> int:
     return 0
 
 
-STAGES = ("collect", "prespecs", "awards", "bidders", "firms")
+STAGES = ("collect", "prespecs", "plans", "contracts", "awards", "bidders", "firms")
 
 
 def cmd_mark_run(args: argparse.Namespace) -> int:
@@ -674,7 +724,7 @@ def cmd_render(args: argparse.Namespace) -> int:
 
     targets = args.target
     if "all" in targets:
-        targets = ["band", "awards", "index", "competitors", "reports", "prespecs", "pricing", "details"]
+        targets = ["band", "awards", "index", "competitors", "reports", "prespecs", "pricing", "plans", "details"]
     summary: dict[str, Any] = {}
     if "band" in targets:
         summary["band"] = render_band_page(ROOT)
@@ -692,6 +742,10 @@ def cmd_render(args: argparse.Namespace) -> int:
         from .pricing import render_pricing_page
 
         summary["pricing"] = render_pricing_page(ROOT)
+    if "plans" in targets:
+        from .plans import render_plans_page
+
+        summary["plans"] = render_plans_page(ROOT)
     if "details" in targets:
         from .detail import render_detail_pages
 
@@ -761,6 +815,18 @@ def build_parser() -> argparse.ArgumentParser:
     ps.add_argument("--until", help="YYYY-MM-DD (default: today)")
     ps.add_argument("--out", default=str(DATA / "prespecs.json"))
     ps.set_defaults(func=cmd_collect_prespecs)
+
+    pl = sub.add_parser("collect-plans", help="Fetch AI 발주계획 into data/order_plans.json")
+    pl.add_argument("--months-ahead", type=int, default=12, help="발주 예정월 범위 (이번 달부터)")
+    pl.add_argument("--posted-days", type=int, default=400, help="계획 게시일 범위")
+    pl.add_argument("--out", default=str(DATA / "order_plans.json"))
+    pl.set_defaults(func=cmd_collect_plans)
+
+    ct = sub.add_parser("collect-contracts", help="Fetch AI 용역 계약 into data/contracts.json")
+    ct.add_argument("--days", type=int, default=14, help="계약체결일 범위 (기존 파일이 있을 때)")
+    ct.add_argument("--backfill-days", type=int, default=550, help="파일이 없을 때 첫 수집 범위")
+    ct.add_argument("--out", default=str(DATA / "contracts.json"))
+    ct.set_defaults(func=cmd_collect_contracts)
 
     ef = sub.add_parser(
         "enrich-firms",
@@ -850,7 +916,7 @@ def build_parser() -> argparse.ArgumentParser:
     r.add_argument(
         "target",
         nargs="+",
-        choices=["band", "awards", "index", "competitors", "reports", "prespecs", "pricing", "details", "all"],
+        choices=["band", "awards", "index", "competitors", "reports", "prespecs", "pricing", "plans", "details", "all"],
         help="What to render",
     )
     r.set_defaults(func=cmd_render)

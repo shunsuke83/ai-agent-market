@@ -13,6 +13,7 @@ NAV_ITEMS = (
     ("awards.html", "수주 현황"),
     ("pricing.html", "투찰·경쟁"),
     ("prespecs.html", "사전규격"),
+    ("plans.html", "발주 예정"),
     ("competitors.html", "국내 전문기업"),
     ("reports/index.html", "리포트 목록"),
     ("deliverables.html", "산출물 안내"),

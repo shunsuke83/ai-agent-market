@@ -47,6 +47,7 @@ NAV = (
     '<a href="../awards.html">수주 현황</a>'
     '<a href="../pricing.html">투찰·경쟁</a>'
     '<a href="../prespecs.html">사전규격</a>'
+    '<a href="../plans.html">발주 예정</a>'
     '<a href="../competitors.html">국내 전문기업</a>'
     '<a href="../reports/index.html">리포트 목록</a>'
     '<a href="../deliverables.html">산출물 안내</a></nav>'

@@ -53,6 +53,14 @@ PRESPEC_OPS = {
     "servc": f"{PRESPEC_BASE}/getPublicPrcureThngInfoServc",
     "thng": f"{PRESPEC_BASE}/getPublicPrcureThngInfoThng",
 }
+# 발주계획 (15129462)·계약정보 (15129427) — 각각 별도 활용신청 필요.
+PLAN_BASE = "https://apis.data.go.kr/1230000/ao/OrderPlanSttusService"
+PLAN_PPS_OPS = {
+    "servc": f"{PLAN_BASE}/getOrderPlanSttusListServcPPSSrch",
+    "thng": f"{PLAN_BASE}/getOrderPlanSttusListThngPPSSrch",
+}
+# Only the 용역 search takes a 계약명 keyword (물품 searches by 품명).
+CONTRACT_PPS_SERVC = "https://apis.data.go.kr/1230000/ao/CntrctInfoService/getCntrctInfoListServcPPSSrch"
 OPENG_FAILING = f"{SCSBID_BASE}/getOpengResultListInfoFailing"
 OPENG_REBID = f"{SCSBID_BASE}/getOpengResultListInfoRebid"
 
@@ -274,6 +282,46 @@ class G2BClient:
                     item = dict(item)
                     item["_biz"] = biz
                     out.append(item)
+        return out
+
+    def fetch_order_plans(
+        self,
+        keywords: list[str],
+        order_start: date,
+        order_end: date,
+        posted_start: date,
+        posted_end: date,
+        biz_types: list[str] | None = None,
+    ) -> list[dict[str, Any]]:
+        """발주계획 by 사업명 keyword; no 1-month cap on either range. Dedupe by 통합번호."""
+        seen: dict[str, dict[str, Any]] = {}
+        for biz in biz_types or ["servc", "thng"]:
+            for kw in keywords:
+                params = {
+                    "orderBgnYm": order_start.strftime("%Y%m"),
+                    "orderEndYm": order_end.strftime("%Y%m"),
+                    "inqryBgnDt": _dt_param(posted_start),
+                    "inqryEndDt": _dt_param(posted_end, end=True),
+                    "bizNm": kw,
+                }
+                for item in self.iter_pages(PLAN_PPS_OPS[biz], params, page_size=500):
+                    row = dict(item)
+                    row["_biz"] = biz
+                    seen[str(row.get("orderPlanUntyNo") or len(seen))] = row
+        return list(seen.values())
+
+    def fetch_contracts(self, keywords: list[str], start: date, end: date) -> list[dict[str, Any]]:
+        """용역 계약 by 계약명 keyword and 계약체결일. Wider than 1 month returns 0 rows."""
+        out: list[dict[str, Any]] = []
+        for kw in keywords:
+            for bgn, edn in month_windows(start, end):
+                params = {
+                    "inqryDiv": "1",
+                    "inqryBgnDate": bgn.strftime("%Y%m%d"),
+                    "inqryEndDate": edn.strftime("%Y%m%d"),
+                    "cntrctNm": kw,
+                }
+                out.extend(dict(i) for i in self.iter_pages(CONTRACT_PPS_SERVC, params, page_size=500))
         return out
 
     def fetch_corp_basic(self, bizno: str) -> dict[str, Any] | None:
