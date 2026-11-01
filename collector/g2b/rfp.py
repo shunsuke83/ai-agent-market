@@ -27,8 +27,9 @@ from .render import KST
 
 SUMMARIES_REL = Path("data") / "rfp_summaries.json"
 GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
-GEMINI_MODELS = ("gemini-flash-latest", "gemini-2.5-flash")
-GEMINI_TIMEOUT = 180
+# gemini-flash-latest (3.8) timed out even on one-word prompts on the free tier (2026-11); 2.5 is retired.
+GEMINI_MODELS = ("gemini-3.5-flash", "gemini-flash-lite-latest")
+GEMINI_TIMEOUT = 150
 MAX_DOWNLOAD = 25 * 1024 * 1024
 MAX_FILES = 3
 FILE_CHARS = 40_000
@@ -362,7 +363,7 @@ def gemini_summary(
             continue
         if r.status_code == 429:
             raise QuotaExceeded(model)
-        if r.status_code >= 500:
+        if r.status_code >= 500 or r.status_code == 402:
             last = f"gemini {model} HTTP {r.status_code}"
             continue
         if r.status_code >= 400:
