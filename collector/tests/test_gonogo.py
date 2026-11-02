@@ -99,6 +99,25 @@ def test_pipeline_bids_are_skipped(tmp_path):
     assert run_gonogo(tmp_path, days=3, now=NOW, webhook="", profile=busy)["candidates"] == 0
 
 
+def test_explicit_bids_ignore_window_pipeline_and_score_floor(tmp_path, monkeypatch):
+    import json
+
+    from g2b.gonogo import pick_bids, run_gonogo
+
+    old = {**NOTICE, "notice_date": "2026-10-01", "title": "지능형 CCTV 구축"}
+    cancelled = {**old, "bid_ord": "001", "ntce_kind": "취소공고"}
+    assert pick_bids([old, cancelled], ["R26BK00000001-000"]) == [old]
+    (tmp_path / "data").mkdir()
+    (tmp_path / "data" / "notices.json").write_text(json.dumps({"notices": [old, cancelled]}), encoding="utf-8")
+    busy = {**PROFILE, "pipeline": [{"bid_no": NOTICE["bid_no"]}]}
+    assert run_gonogo(tmp_path, days=1, now=NOW, webhook="", profile=busy, gemini_key="")["candidates"] == 0
+    printed = []
+    monkeypatch.setattr("builtins.print", lambda *a, **k: printed.append(" ".join(map(str, a))))
+    out = run_gonogo(tmp_path, now=NOW, dry_run=True, profile=busy, gemini_key="", bids=[NOTICE["bid_no"]])
+    assert out["picked"] == 1
+    assert printed[0].startswith("*Go/No-Go 지정 공고 판정 1건*") and NO_GO in printed[0]
+
+
 def test_missing_summaries_are_made_for_slack_only(tmp_path, monkeypatch):
     import json
 

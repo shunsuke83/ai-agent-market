@@ -56,10 +56,20 @@ def test_extract_fields():
 
 
 def test_document_files_prefers_notice_then_prespec():
-    n = {"notice_files": [{"name": "공고서.hwp", "url": "u1"}]}
+    n = {"notice_files": [{"name": "공고서.hwp", "url": "u1"}, {"name": "제안요청서.hwp", "url": "u2"}]}
     assert rfp.document_files(n, [{"spec_files": ["p1"]}]) == ("notice", n["notice_files"])
     assert rfp.document_files({}, [{"spec_files": ["p1"]}]) == ("prespec", [{"name": "규격서 1", "url": "p1"}])
     assert rfp.document_files({}, []) == ("", [])
+
+
+def test_document_files_adds_prespec_rfp_when_notice_has_only_gonggo():
+    n = {"notice_files": [{"name": "공고서_국가.hwpx", "url": "u1"}], "prespec_no": "R26BD00278810"}
+    source, files = rfp.document_files(n, [{"spec_files": ["p1"]}])
+    assert source == "notice+prespec" and [f["url"] for f in files] == ["u1", "p1"]
+    source, files = rfp.document_files(n, [])
+    assert source == "notice+prespec" and len(files) == 1 + rfp.PRESPEC_GUESS_FILES
+    assert "bfSpecRegNo=R26BD00278810" in files[1]["url"] and files[1]["url"].endswith("fileSeq=1")
+    assert rfp.document_files({"notice_files": n["notice_files"]}, []) == ("notice", n["notice_files"])
 
 
 def test_pending_and_retry_rules():

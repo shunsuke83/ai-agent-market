@@ -1,0 +1,42 @@
+name: Go/No-Go for specific bids
+
+# Judges only the given 공고번호 against the secret company profile and posts the verdict to Slack.
+# Public repo: the bid numbers are masked in logs and nothing is committed.
+on:
+  workflow_dispatch:
+    inputs:
+      bids:
+        description: "공고번호 (comma/space separated, e.g. R26BK01791366)"
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  gonogo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Mask input
+        env:
+          BIDS: ${{ inputs.bids }}
+        run: |
+          for b in ${BIDS//,/ }; do echo "::add-mask::$b"; echo "::add-mask::${b%%-*}"; done
+
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: pip install -r collector/requirements.txt
+
+      - name: Go/No-Go (Slack only)
+        env:
+          BIDS: ${{ inputs.bids }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          COMPANY_PROFILE: ${{ secrets.COMPANY_PROFILE }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python -m g2b.collect gonogo --bid "$BIDS"
+        working-directory: collector

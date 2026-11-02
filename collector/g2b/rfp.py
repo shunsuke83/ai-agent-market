@@ -233,16 +233,39 @@ def _rank(name: str) -> int:
     return len(PRIORITY)
 
 
-def document_files(n: dict[str, Any], prespecs: list[dict[str, Any]]) -> tuple[str, list[dict[str, str]]]:
-    """('notice', 공고 첨부) or ('prespec', 사전규격 규격서) for one notice."""
-    files = [f for f in n.get("notice_files") or [] if f.get("url")]
-    if files:
-        return "notice", files
+PRESPEC_FILE_URL = (
+    "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do"
+    "?bfSpecRegNo={no}&fileType=BFDTL&fileSeq={seq}"
+)
+PRESPEC_GUESS_FILES = 3
+
+
+def _prespec_files(n: dict[str, Any], prespecs: list[dict[str, Any]]) -> list[dict[str, str]]:
     for p in prespecs:
         urls = p.get("spec_files") or []
         if urls:
-            return "prespec", [{"name": f"규격서 {i}", "url": u} for i, u in enumerate(urls, 1)]
-    return "", []
+            return [{"name": f"규격서 {i}", "url": u} for i, u in enumerate(urls, 1)]
+    # The 사전규격 may be outside the AI filter; its files still sit at a fixed URL (missing seq → 4xx, skipped).
+    no = n.get("prespec_no")
+    if no:
+        return [{"name": f"규격서 {s}", "url": PRESPEC_FILE_URL.format(no=no, seq=s)}
+                for s in range(1, PRESPEC_GUESS_FILES + 1)]
+    return []
+
+
+def document_files(n: dict[str, Any], prespecs: list[dict[str, Any]]) -> tuple[str, list[dict[str, str]]]:
+    """('notice', 공고 첨부) or ('prespec', 사전규격 규격서) for one notice.
+
+    When the notice only carries the 공고서 (no 제안요청서·과업지시서·규격서), the linked
+    사전규격 files are appended so the summary sees the RFP itself.
+    """
+    files = [f for f in n.get("notice_files") or [] if f.get("url")]
+    if files:
+        has_rfp = any(_rank(f.get("name") or "") < PRIORITY.index("공고") for f in files)
+        extra = [] if has_rfp else _prespec_files(n, prespecs)
+        return ("notice+prespec", files + extra) if extra else ("notice", files)
+    extra = _prespec_files(n, prespecs)
+    return ("prespec", extra) if extra else ("", [])
 
 
 def collect_text(files: list[dict[str, str]], session: requests.Session | None = None) -> tuple[str, list[dict[str, str]]]:
@@ -568,7 +591,9 @@ def summary_block(entry: dict[str, Any] | None) -> str:
         f'<a href="{html.escape(x["url"], quote=True)}" rel="noopener">{html.escape(x["name"])}</a>'
         for x in entry.get("files") or []
     )
-    source = "사전규격 규격서" if entry.get("source") == "prespec" else "공고 첨부"
+    source = {"prespec": "사전규격 규격서", "notice+prespec": "공고 첨부 + 사전규격 규격서"}.get(
+        entry.get("source") or "", "공고 첨부"
+    )
     how = "Gemini가 자동 요약" if entry.get("status") == OK else "규칙으로 추출"
     note = (
         f"{source}({files})를 {how}했습니다 · {html.escape((entry.get('updated_at') or '')[:10])}. "
