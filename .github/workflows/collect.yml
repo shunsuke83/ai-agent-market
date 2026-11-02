@@ -12,6 +12,10 @@ on:
         description: "How many days back to collect"
         required: false
         default: "14"
+      rfp_bids:
+        description: "RFP 요약을 먼저 만들 공고번호 (쉼표 구분, 선택)"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -172,7 +176,8 @@ jobs:
         continue-on-error: true
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: python -m g2b.collect summarize-rfp --limit 8
+          RFP_BIDS: ${{ github.event.inputs.rfp_bids }}
+        run: python -m g2b.collect summarize-rfp --limit 8 ${RFP_BIDS:+--bid "$RFP_BIDS"}
         working-directory: collector
 
       # last_success_at only advances on success, so pages rendered from old data

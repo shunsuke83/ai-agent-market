@@ -163,6 +163,11 @@ def test_run_summaries_writes_cache(tmp_path, monkeypatch):
     assert "제안요청서 요약" in html and "챗봇 구축" in html and "Gemini" in html
     again = rfp.run_summaries(tmp_path, now=now, api_key="KEY", session=s, gap_sec=0)
     assert again["pending"] == 0
+    s.gemini.append(_gemini_ok({**summary, "overview": "다시 요약"}))
+    forced = rfp.run_summaries(tmp_path, now=now, api_key="KEY", session=s, gap_sec=0, limit=0,
+                               bids=["R26BK1-000"])
+    assert forced["ok"] == 1
+    assert rfp.load_summaries(tmp_path)["R26BK1"]["summary"]["overview"] == "다시 요약"
 
 
 def test_summary_block_hidden_without_content():

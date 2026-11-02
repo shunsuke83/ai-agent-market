@@ -502,17 +502,24 @@ def run_summaries(
     api_key: str | None = None,
     session: requests.Session | None = None,
     gap_sec: float = CALL_GAP_SEC,
+    bids: list[str] | None = None,
 ) -> dict[str, Any]:
+    """bids: summarize these open 공고 first, on top of `limit` (re-summarize even if already done)."""
     from .pricing import load_notices
 
     now = now or datetime.now(KST)
     key = os.environ.get("GEMINI_API_KEY", "") if api_key is None else api_key
     s = session or requests.Session()
     summaries = load_summaries(repo_root)
+    wanted = {b.strip().split("-")[0] for b in bids or [] if b.strip()}
+    forced = {b: summaries.pop(b) for b in wanted if b in summaries}
     todo = pending(load_notices(repo_root), prespecs_by_bid(repo_root), summaries, now, bool(key))
+    summaries.update({b: e for b, e in forced.items() if b not in summaries})
+    first = [r for r in todo if r[0]["bid_no"] in wanted]
+    rest = [r for r in todo if r[0]["bid_no"] not in wanted]
     counts = {"pending": len(todo), OK: 0, NO_TEXT: 0, ERROR: 0, FIELDS_ONLY: 0}
     called = False
-    for n, source, files in todo[:limit]:
+    for n, source, files in first + rest[:limit]:
         prev = summaries.get(n["bid_no"]) or {}
         entry: dict[str, Any] = {
             "bid_no": n["bid_no"],

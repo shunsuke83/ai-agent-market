@@ -783,7 +783,8 @@ def cmd_gonogo(args: argparse.Namespace) -> int:
 def cmd_summarize_rfp(args: argparse.Namespace) -> int:
     from .rfp import run_summaries
 
-    summary = run_summaries(ROOT, limit=args.limit, api_key="" if args.no_llm else None)
+    bids = [b for raw in args.bid or [] for b in raw.replace(",", " ").split()]
+    summary = run_summaries(ROOT, limit=args.limit, api_key="" if args.no_llm else None, bids=bids or None)
     print(json.dumps(summary, ensure_ascii=False))
     return 0
 
@@ -966,6 +967,8 @@ def build_parser() -> argparse.ArgumentParser:
     )
     sr.add_argument("--limit", type=int, default=8, help="Notices per run (Gemini free tier)")
     sr.add_argument("--no-llm", action="store_true", help="Rule fields only, never call Gemini")
+    sr.add_argument("--bid", action="append",
+                    help="Summarize these open 공고번호 first, beyond --limit (repeat or comma-separate)")
     sr.set_defaults(func=cmd_summarize_rfp)
 
     return p
