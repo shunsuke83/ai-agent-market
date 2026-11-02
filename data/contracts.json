@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-02T06:07:54Z",
+  "generated_at": "2026-11-02T12:28:03Z",
   "contracts": [
     {
       "contract_no": "R26TA01353065",
@@ -60,6 +60,35 @@
       "bid_no": "R26BK01591510",
       "registered_at": "2026-11-02 14:55",
       "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02062061&ctrtChgOrd=01&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
+    {
+      "contract_no": "R26TA02378935",
+      "title": "2026년 AI 기반 엔드프로덕트 상용화 지원사업 우수사례 및 성과지표 발굴 용역",
+      "org": "정보통신산업진흥원",
+      "contract_org": "조달청 충북지방조달청",
+      "signed_date": "2026-11-02",
+      "period_text": "2026/12/15",
+      "end_date": "2026-12-15",
+      "amount_eok": 1.21,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "(주)인사이트코리아",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "1148618797"
+        }
+      ],
+      "bid_no": "R26BK01739045",
+      "registered_at": "2026-11-02 15:50",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02378935&ctrtChgOrd=00&prcmBsneSeCd=조070002&srchName=ctrtCrst&openUrl=Y",
       "scope": "AI SW 확대",
       "fields": [
         "AI 일반"
@@ -402,6 +431,35 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화"
+    },
+    {
+      "contract_no": "R26TA02346726",
+      "title": "AI 자율제조 조선소 기술개발 및 실증 사업 기획 연구",
+      "org": "한국산업기술기획평가원",
+      "contract_org": "한국산업기술기획평가원",
+      "signed_date": "2026-10-28",
+      "period_text": "금차 270일, 총차 270일",
+      "end_date": "2027-07-24",
+      "amount_eok": 1.4,
+      "long_term": "신규",
+      "method": "수의계약",
+      "joint": false,
+      "firms": [
+        {
+          "name": "에스엔아이인스티튜트 주식회사",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "2908101955"
+        }
+      ],
+      "bid_no": "R26BK01783245",
+      "registered_at": "2026-11-02 16:32",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02346726&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "ISP·전략"
     },
     {
       "contract_no": "R26TA02347014",
@@ -991,6 +1049,35 @@
       "nature": "시스템 구축·고도화"
     },
     {
+      "contract_no": "R26TA02348632",
+      "title": "대한민국농구협회 통합정보시스템 AI 에이전트 구축 용역",
+      "org": "사단법인 대한민국농구협회",
+      "contract_org": "사단법인 대한민국농구협회",
+      "signed_date": "2026-10-22",
+      "period_text": "금차 77일, 총차 77일",
+      "end_date": "2026-12-31",
+      "amount_eok": 1.94,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "진진시스템(주)",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "2068119635"
+        }
+      ],
+      "bid_no": null,
+      "registered_at": "2026-11-02 08:12",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02348632&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "생성형·Agent",
+      "fields": [
+        "AI 에이전트"
+      ],
+      "nature": "시스템 구축·고도화"
+    },
+    {
       "contract_no": "R26TA02002561",
       "title": "AI영재학교 교육과정 총론 개발 용역",
       "org": "광주과학기술원",
@@ -1249,7 +1336,7 @@
         }
       ],
       "bid_no": null,
-      "registered_at": "2026-10-21 10:46",
+      "registered_at": "2026-11-02 16:36",
       "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02326141&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
       "scope": "AI SW 확대",
       "fields": [
