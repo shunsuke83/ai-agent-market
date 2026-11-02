@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-02T01:19:29Z",
+  "generated_at": "2026-11-02T06:07:54Z",
   "contracts": [
     {
       "contract_no": "R26TA01353065",
@@ -30,6 +30,70 @@
         "AI 일반"
       ],
       "nature": null
+    },
+    {
+      "contract_no": "R26TA02062061",
+      "title": "AI EXPO 「MARS 2026」 운영 대행 용역",
+      "org": "화성산업진흥원",
+      "contract_org": "화성산업진흥원",
+      "signed_date": "2026-11-02",
+      "period_text": "금차 223일, 총차 223일",
+      "end_date": "2027-02-28",
+      "amount_eok": 6.5566,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 누리안이앤씨",
+          "role": "도급업체",
+          "share": 30.0,
+          "bizno": "2158694711"
+        },
+        {
+          "name": "(주)엑스포럼",
+          "role": "주계약업체",
+          "share": 70.0,
+          "bizno": "1208650341"
+        }
+      ],
+      "bid_no": "R26BK01591510",
+      "registered_at": "2026-11-02 14:55",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02062061&ctrtChgOrd=01&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
+    {
+      "contract_no": "R26TA01822385",
+      "title": "김포시 AI·데이터 플랫폼 구축 용역",
+      "org": "경기도 김포시",
+      "contract_org": "경기도 김포시",
+      "signed_date": "2026-11-01",
+      "period_text": "금차 180일, 총차 180일",
+      "end_date": "2026-11-30",
+      "amount_eok": 2.46,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 화이트스캔",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "6938600335"
+        }
+      ],
+      "bid_no": "R26BK01399174",
+      "registered_at": "2026-11-02 14:25",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA01822385&ctrtChgOrd=01&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화"
     },
     {
       "contract_no": "R26TA01389222",
@@ -12386,41 +12450,6 @@
       "nature": null
     },
     {
-      "contract_no": "R26TA02062061",
-      "title": "AI EXPO 「MARS 2026」 운영 대행 용역",
-      "org": "화성산업진흥원",
-      "contract_org": "화성산업진흥원",
-      "signed_date": "2026-07-20",
-      "period_text": "금차 223일, 총차 223일",
-      "end_date": "2027-02-28",
-      "amount_eok": 6.4,
-      "long_term": "신규",
-      "method": "제한경쟁",
-      "joint": false,
-      "firms": [
-        {
-          "name": "주식회사 누리안이앤씨",
-          "role": "도급업체",
-          "share": 30.0,
-          "bizno": "2158694711"
-        },
-        {
-          "name": "(주)엑스포럼",
-          "role": "주계약업체",
-          "share": 70.0,
-          "bizno": "1208650341"
-        }
-      ],
-      "bid_no": "R26BK01591510",
-      "registered_at": "2026-08-12 14:48",
-      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02062061&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
-      "scope": "AI SW 확대",
-      "fields": [
-        "AI 일반"
-      ],
-      "nature": null
-    },
-    {
       "contract_no": "R26TA02065717",
       "title": "생성형 모델기반 합성영상 제작 및 레이블링 수행 용역",
       "org": "국방과학연구소",
@@ -22366,35 +22395,6 @@
         "생성형·LLM"
       ],
       "nature": null
-    },
-    {
-      "contract_no": "R26TA01822385",
-      "title": "김포시 AI·데이터 플랫폼 구축 용역",
-      "org": "경기도 김포시",
-      "contract_org": "경기도 김포시",
-      "signed_date": "2026-05-06",
-      "period_text": "금차 180일, 총차 180일",
-      "end_date": "2026-11-01",
-      "amount_eok": 2.46,
-      "long_term": "신규",
-      "method": "제한경쟁",
-      "joint": false,
-      "firms": [
-        {
-          "name": "주식회사 화이트스캔",
-          "role": "주계약업체",
-          "share": 100.0,
-          "bizno": "6938600335"
-        }
-      ],
-      "bid_no": "R26BK01399174",
-      "registered_at": "2026-05-06 11:48",
-      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA01822385&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
-      "scope": "AI SW 확대",
-      "fields": [
-        "AI 일반"
-      ],
-      "nature": "시스템 구축·고도화"
     },
     {
       "contract_no": "R26TA01812984",

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-02T01:19:19Z",
+  "generated_at": "2026-11-02T06:07:48Z",
   "plans": [
     {
       "plan_no": "R26DD20515816",
@@ -591,6 +591,30 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화"
+    },
+    {
+      "plan_no": "R26DD20914100",
+      "title": "2027년 챗봇 ‘서울톡’ 시스템 유지관리 용역",
+      "org": "서울특별시",
+      "top_org": "서울특별시",
+      "org_kind": "지방자치단체",
+      "order_ym": "2026-11",
+      "amount_eok": 5.6227,
+      "contract_method": "제한경쟁",
+      "procurement": "자체조달",
+      "dept": "디지털정책과",
+      "tel": "02-2133-2996",
+      "posted_date": "2026-11-02",
+      "bid_nos": [],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20914100",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "생성형·Agent",
+      "fields": [
+        "생성형·LLM"
+      ],
+      "nature": "운영·유지보수"
     },
     {
       "plan_no": "R26DD20561940",
