@@ -1,12 +1,13 @@
 name: Go/No-Go for specific bids
 
 # Judges only the given 공고번호 against the secret company profile and posts the verdict to Slack.
-# Public repo: the bid numbers are masked in logs and nothing is committed.
+# Public repo: the input is read from the event file (never via env/expressions, which the log echoes
+# before masking), masked, and nothing is committed.
 on:
   workflow_dispatch:
     inputs:
       bids:
-        description: "공고번호 (comma/space separated, e.g. R26BK01791366)"
+        description: "공고번호 (comma/space separated, e.g. R26BK00000000)"
         required: true
 
 permissions:
@@ -18,9 +19,8 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: Mask input
-        env:
-          BIDS: ${{ inputs.bids }}
         run: |
+          BIDS="$(jq -r '.inputs.bids' "$GITHUB_EVENT_PATH")"
           for b in ${BIDS//,/ }; do echo "::add-mask::$b"; echo "::add-mask::${b%%-*}"; done
 
       - uses: actions/checkout@v5
@@ -34,9 +34,8 @@ jobs:
 
       - name: Go/No-Go (Slack only)
         env:
-          BIDS: ${{ inputs.bids }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           COMPANY_PROFILE: ${{ secrets.COMPANY_PROFILE }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: python -m g2b.collect gonogo --bid "$BIDS"
+        run: python -m g2b.collect gonogo --bid "$(jq -r '.inputs.bids' "$GITHUB_EVENT_PATH")"
         working-directory: collector
