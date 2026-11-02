@@ -773,7 +773,9 @@ def cmd_alerts(args: argparse.Namespace) -> int:
 def cmd_gonogo(args: argparse.Namespace) -> int:
     from .gonogo import run_gonogo
 
-    summary = run_gonogo(ROOT, days=args.days, webhook="" if args.no_slack else None, dry_run=args.dry_run)
+    bids = [b for raw in args.bid or [] for b in raw.replace(",", " ").split()]
+    summary = run_gonogo(ROOT, days=args.days, webhook="" if args.no_slack else None, dry_run=args.dry_run,
+                         bids=bids or None)
     print(json.dumps(summary, ensure_ascii=False))
     return 0
 
@@ -954,6 +956,8 @@ def build_parser() -> argparse.ArgumentParser:
     gn.add_argument("--days", type=int, default=1, help="공고일 기준 최근 N일")
     gn.add_argument("--no-slack", action="store_true")
     gn.add_argument("--dry-run", action="store_true", help="Print the Slack message instead of posting")
+    gn.add_argument("--bid", action="append",
+                    help="Judge these 공고번호 only (repeat or comma-separate; any date, NO-GO shown)")
     gn.set_defaults(func=cmd_gonogo)
 
     sr = sub.add_parser(

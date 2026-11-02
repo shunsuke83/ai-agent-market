@@ -206,6 +206,20 @@ def candidates(notices: list[dict[str, Any]], now: datetime, days: int) -> list[
     return list(latest.values())
 
 
+def pick_bids(notices: list[dict[str, Any]], bids: list[str]) -> list[dict[str, Any]]:
+    """Latest non-cancelled 차수 of each requested 공고번호 ('R26BK01791366' or '…-000'), any date."""
+    wanted = [b.strip().split("-")[0] for b in bids if b and b.strip()]
+    latest: dict[str, dict[str, Any]] = {}
+    for n in notices:
+        no = n.get("bid_no")
+        if no not in wanted or "취소" in (n.get("ntce_kind") or ""):
+            continue
+        prev = latest.get(no)
+        if prev is None or (n.get("bid_ord") or "") > (prev.get("bid_ord") or ""):
+            latest[no] = n
+    return [latest[b] for b in dict.fromkeys(wanted) if b in latest]
+
+
 def _esc(s: str) -> str:
     return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace("|", "¦")
 
@@ -280,7 +294,9 @@ def run_gonogo(
     dry_run: bool = False,
     profile: dict[str, Any] | None = None,
     gemini_key: str | None = None,
+    bids: list[str] | None = None,
 ) -> dict[str, Any]:
+    """bids: judge exactly these 공고 (any date, NO-GO included, pipeline not skipped)."""
     from .alerts import load_alert_config, post_slack
     from .plans import load_contracts
     from .pricing import ContextIndex, load_notices
@@ -298,22 +314,29 @@ def run_gonogo(
     contexts = ContextIndex(notices)
     incumbents = IncumbentIndex(load_contracts(repo_root), now.date())
     summaries = load_summaries(repo_root)
-    pool = candidates(notices, now, days)
-    # Bids the company is already working on (profile.pipeline) are not re-scored.
-    pipeline = {str(p.get("bid_no") or "").split("-")[0] for p in profile.get("pipeline") or [] if isinstance(p, dict)}
-    pool = [n for n in pool if n.get("bid_no") not in pipeline]
+    if bids:
+        pool = pick_bids(notices, bids)
+    else:
+        pool = candidates(notices, now, days)
+        # Bids the company is already working on (profile.pipeline) are not re-scored.
+        pipeline = {str(p.get("bid_no") or "").split("-")[0] for p in profile.get("pipeline") or [] if isinstance(p, dict)}
+        pool = [n for n in pool if n.get("bid_no") not in pipeline]
     policy = is_policy_profile(profile)
     if policy:
         out = profile.get("output") or {}
         min_score = out.get("min_score", 50)
         rules = load_keywords()
+
+        def keep(s: dict[str, Any]) -> bool:
+            return bool(bids) or (s["verdict"] != POLICY_NO_GO and s["score"] >= min_score)
+
         scored = [
             (n, score_policy(n, profile, now, contexts.context(n), incumbents.find(n), summaries.get(n["bid_no"]), rules))
             for n in pool
         ]
-        picked = [(n, s) for n, s in scored if s["verdict"] != POLICY_NO_GO and s["score"] >= min_score]
+        picked = [(n, s) for n, s in scored if keep(s)]
         picked.sort(key=lambda r: (r[1]["verdict"] != POLICY_GO, -r[1]["score"]))
-        picked = picked[: int(out.get("top_n", 10))]
+        picked = picked if bids else picked[: int(out.get("top_n", 10))]
         fresh = summarize_missing(repo_root, picked, summaries, gemini_key)
         if fresh:
             summaries = {**summaries, **fresh}
@@ -322,14 +345,14 @@ def run_gonogo(
                 if n["bid_no"] in fresh else (n, s)
                 for n, s in picked
             ]
-            picked = [(n, s) for n, s in rescored if s["verdict"] != POLICY_NO_GO and s["score"] >= min_score]
+            picked = [(n, s) for n, s in rescored if keep(s)]
             picked.sort(key=lambda r: (r[1]["verdict"] != POLICY_GO, -r[1]["score"]))
     else:
         scored = [(n, score_notice(n, profile, now, contexts.context(n), incumbents.find(n))) for n in pool]
         min_score = profile.get("min_score", profile.get("review_score", 50))
-        picked = [(n, s) for n, s in scored if s["verdict"] != NO_GO and s["score"] >= min_score]
+        picked = [(n, s) for n, s in scored if bids or (s["verdict"] != NO_GO and s["score"] >= min_score)]
         picked.sort(key=lambda r: -r[1]["score"])
-        picked = picked[: int(profile.get("top_n", 10))]
+        picked = picked if bids else picked[: int(profile.get("top_n", 10))]
         fresh = summarize_missing(repo_root, picked, summaries, gemini_key)
         summaries = {**summaries, **fresh}
     # Counts only: Actions logs of a public repo are public.
@@ -342,6 +365,9 @@ def run_gonogo(
         text = slack_text_policy(picked, now.date(), site_url, len(pool), profile, summaries)
     else:
         text = slack_text(picked, now.date(), site_url, len(pool), summaries)
+    if bids:
+        _, _, rest = text.partition("\n")
+        text = f"*Go/No-Go 지정 공고 판정 {len(picked)}건* ({now.date().isoformat()})\n{rest}"
     if dry_run:
         print(text)
         summary["slack"] = "dry run"
