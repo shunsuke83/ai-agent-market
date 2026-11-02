@@ -1,7 +1,36 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-01T13:52:13Z",
+  "generated_at": "2026-11-02T01:19:29Z",
   "contracts": [
+    {
+      "contract_no": "R26TA01353065",
+      "title": "2026 경기도서관 실험하는 AI 도서관 프로그램 운영",
+      "org": "경기도",
+      "contract_org": "경기도",
+      "signed_date": "2026-11-02",
+      "period_text": "금차 347일, 총차 347일",
+      "end_date": "2026-12-31",
+      "amount_eok": 2.5,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "(주)티엠디교육그룹",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "2118796577"
+        }
+      ],
+      "bid_no": "R25BK01226996",
+      "registered_at": "2026-11-02 09:47",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA01353065&ctrtChgOrd=01&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
     {
       "contract_no": "R26TA01389222",
       "title": "AI 기반 열수요 예측 시스템 구축 용역",
@@ -30809,35 +30838,6 @@
         "AX·전략"
       ],
       "nature": "ISP·전략"
-    },
-    {
-      "contract_no": "R26TA01353065",
-      "title": "2026 경기도서관 실험하는 AI 도서관 프로그램 운영",
-      "org": "경기도",
-      "contract_org": "경기도",
-      "signed_date": "2026-01-19",
-      "period_text": "금차 347일, 총차 347일",
-      "end_date": "2026-12-31",
-      "amount_eok": 2.5,
-      "long_term": "신규",
-      "method": "제한경쟁",
-      "joint": false,
-      "firms": [
-        {
-          "name": "(주)티엠디교육그룹",
-          "role": "주계약업체",
-          "share": 100.0,
-          "bizno": "2118796577"
-        }
-      ],
-      "bid_no": "R25BK01226996",
-      "registered_at": "2026-01-19 14:50",
-      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA01353065&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
-      "scope": "AI SW 확대",
-      "fields": [
-        "AI 일반"
-      ],
-      "nature": null
     },
     {
       "contract_no": "R26TA01352180",

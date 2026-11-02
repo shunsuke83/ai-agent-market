@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-01T13:51:59Z",
+  "generated_at": "2026-11-02T01:19:19Z",
   "plans": [
     {
       "plan_no": "R26DD20515816",
@@ -541,6 +541,56 @@
         "AI 일반"
       ],
       "nature": "연구·교육·행사"
+    },
+    {
+      "plan_no": "R26DD20913831",
+      "title": "2026년 AI+X 실전 문제해결 프로젝트 2기 운영 용역",
+      "org": "서울특별시 서울시립대학교 산학협력단",
+      "top_org": "서울특별시",
+      "org_kind": "기타기관",
+      "order_ym": "2026-11",
+      "amount_eok": 0.22,
+      "contract_method": "수의계약",
+      "procurement": "자체조달",
+      "dept": "경영지원팀",
+      "tel": "02-6490-6388",
+      "posted_date": "2026-11-02",
+      "bid_nos": [
+        "R26BK01802564"
+      ],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20913831",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
+    {
+      "plan_no": "R26DD20913974",
+      "title": "[긴급] 제조AX 공용 데이터수집 및 관제 모니터링 솔루션  구축 용역",
+      "org": "호서대학교 산학협력단",
+      "top_org": "교육부",
+      "org_kind": "기타기관",
+      "order_ym": "2026-11",
+      "amount_eok": 2.0,
+      "contract_method": "제한경쟁",
+      "procurement": "자체조달",
+      "dept": "구매팀",
+      "tel": "041-540-5117",
+      "posted_date": "2026-11-02",
+      "bid_nos": [],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20913974",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화"
     },
     {
       "plan_no": "R26DD20561940",
