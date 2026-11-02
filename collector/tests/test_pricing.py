@@ -119,6 +119,14 @@ def test_context_prefers_same_org_then_falls_back_to_kind():
     assert "비슷한 과거 사업의 경쟁" in context_html(same)
 
 
+def test_context_ignores_hardware_purchases():
+    sw = [_n(i, org="다른청") for i in range(5)]
+    hw = [_n(30 + i, org="다른청", biz="thng", title="AI학습분석실 구축 서버",
+             bidders=[{"name": "신한약국", "bizno": "999"}]) for i in range(3)]
+    ctx = ContextIndex(sw + hw).context(_n(99, org="처음청"))
+    assert ctx["n"] == 5 and all(name != "신한약국" for name, _ in ctx["regulars"])
+
+
 def test_detail_page_includes_competition_block():
     ctx = ContextIndex([_n(i) for i in range(5)]).context(_n(99))
     out = render_detail_html(_n(99), competition_html=context_html(ctx), today=TODAY)

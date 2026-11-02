@@ -221,10 +221,16 @@ class ContextIndex:
     """Past opened notices by 기관 and by (사업 성격, 예산대) for the 사업 상세 경쟁 맥락."""
 
     def __init__(self, notices: list[dict[str, Any]]):
+        from .normalize import prespec_excluded
+
+        rules = load_keywords()
         self.by_org: dict[str, list[dict[str, Any]]] = defaultdict(list)
         self.by_kind: dict[tuple[str, str], list[dict[str, Any]]] = defaultdict(list)
         for n in notices:
             if not competitive(n) or not (bid_count(n) or n.get("status") == "유찰"):
+                continue
+            # 장비 구매 bidders are general resellers (약국·상사), not SW competitors.
+            if prespec_excluded(n, rules):
                 continue
             if n.get("org"):
                 self.by_org[n["org"]].append(n)
