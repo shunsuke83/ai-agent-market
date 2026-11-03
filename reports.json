@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-03T15:56:50.278499+09:00",
+  "generated_at": "2026-11-03T21:00:51.113460+09:00",
   "weekly": [
     {
       "year": 2026,
@@ -27,9 +27,9 @@
       "month": 11,
       "file": "monthly-2026-11.html",
       "slug": "monthly-2026-11",
-      "core_count": 22,
-      "budget_sum": 173.3,
-      "large_count": 3,
+      "core_count": 26,
+      "budget_sum": 406.5,
+      "large_count": 5,
       "isp_count": 0,
       "in_progress": true,
       "start": "2026-11-01",

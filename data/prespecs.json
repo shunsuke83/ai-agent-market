@@ -1,11 +1,199 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-03T06:48:57Z",
+  "generated_at": "2026-11-03T11:57:13Z",
   "range": {
-    "since": "2026-11-02",
+    "since": "2026-10-31",
     "until": "2026-11-03"
   },
   "prespecs": [
+    {
+      "prespec_no": "R26BD00294551",
+      "title": "지능형 포렌식센터 구축을 위한 침해사고 분석 장비 도입",
+      "org": "한국인터넷진흥원",
+      "order_org": "한국인터넷진흥원",
+      "registered_at": "2026-11-03 19:14",
+      "registered_date": "2026-11-03",
+      "opinion_close_at": "2026-11-06 23:59",
+      "asign_budget_eok": 4.2013,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294551&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294551&fileType=BFDTL&fileSeq=2"
+      ],
+      "biz": "thng",
+      "biz_div": "물품",
+      "sw_biz": true
+    },
+    {
+      "prespec_no": "R26BD00294546",
+      "title": "물리-AI 하이브리드 기반 단위 공정 시뮬레이션 모델 개발 연구용역",
+      "org": "한국수자원공사",
+      "order_org": "한국수자원공사",
+      "registered_at": "2026-11-03 19:11",
+      "registered_date": "2026-11-03",
+      "opinion_close_at": "2026-11-08 17:00",
+      "asign_budget_eok": 0.9,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "연구·교육·행사",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294546&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294546&fileType=BFDTL&fileSeq=2"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00294498",
+      "title": "AI 기반 생육지원 데이터센터 구축 ISMP 수립",
+      "org": "농림수산식품교육문화정보원",
+      "order_org": "농림수산식품교육문화정보원",
+      "registered_at": "2026-11-03 18:18",
+      "registered_date": "2026-11-03",
+      "opinion_close_at": "2026-11-08 23:59",
+      "asign_budget_eok": 9.8,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AX·전략"
+      ],
+      "nature": "ISP·전략",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294498&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294498&fileType=BFDTL&fileSeq=2",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294498&fileType=BFDTL&fileSeq=3"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
+    {
+      "prespec_no": "R26BD00294500",
+      "title": "지능형 포렌식센터 구축을 위한 스토리지 구매",
+      "org": "한국인터넷진흥원",
+      "order_org": "한국인터넷진흥원",
+      "registered_at": "2026-11-03 18:07",
+      "registered_date": "2026-11-03",
+      "opinion_close_at": "2026-11-06 23:59",
+      "asign_budget_eok": 9.59,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294500&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294500&fileType=BFDTL&fileSeq=2"
+      ],
+      "biz": "thng",
+      "biz_div": "물품",
+      "sw_biz": true
+    },
+    {
+      "prespec_no": "R26BD00294490",
+      "title": "’27~’28년 농업 AX 데이터 구축 및  스마트팜코리아 플랫폼 운영",
+      "org": "농림수산식품교육문화정보원",
+      "order_org": "농림수산식품교육문화정보원",
+      "registered_at": "2026-11-03 17:58",
+      "registered_date": "2026-11-03",
+      "opinion_close_at": "2026-11-08 23:59",
+      "asign_budget_eok": 46.0,
+      "scope": "AI SW 확대",
+      "fields": [
+        "데이터·예측"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294490&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294490&fileType=BFDTL&fileSeq=2",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294490&fileType=BFDTL&fileSeq=3"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
+    {
+      "prespec_no": "R26BD00294478",
+      "title": "AI 기반 완전자율형 스마트양식 제어 플랫폼 개발",
+      "org": "전북특별자치도",
+      "order_org": "전북특별자치도",
+      "registered_at": "2026-11-03 17:49",
+      "registered_date": "2026-11-03",
+      "opinion_close_at": "2026-11-06 23:59",
+      "asign_budget_eok": 2.875,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294478&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294478&fileType=BFDTL&fileSeq=2"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
+    {
+      "prespec_no": "R26BD00294421",
+      "title": "[K-Health 국민의료 AI서비스]골다공증 특화 Foundation Model 기반 임상,환자지원 플랫폼 개발",
+      "org": "조선대학교병원",
+      "order_org": "조선대학교병원",
+      "registered_at": "2026-11-03 17:06",
+      "registered_date": "2026-11-03",
+      "opinion_close_at": "2026-11-08 23:59",
+      "asign_budget_eok": 0.0,
+      "scope": "AI SW 확대",
+      "fields": [
+        "의료·바이오 AI"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294421&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294421&fileType=BFDTL&fileSeq=2",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294421&fileType=BFDTL&fileSeq=3",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294421&fileType=BFDTL&fileSeq=4"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
+    {
+      "prespec_no": "R26BD00293926",
+      "title": "충청남도교육청인공지능직업교육센터 진로탐색 온라인 서비스 구축",
+      "org": "충청남도교육청",
+      "order_org": "충청남도교육청",
+      "registered_at": "2026-11-03 16:07",
+      "registered_date": "2026-11-03",
+      "opinion_close_at": "2026-11-07 16:00",
+      "asign_budget_eok": 1.5,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "연구·교육·행사",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00293926&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00293926&fileType=BFDTL&fileSeq=2"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
     {
       "prespec_no": "R26BD00294290",
       "title": "인공지능 기반 열처리 조건 패터닝 플랫폼 개발",

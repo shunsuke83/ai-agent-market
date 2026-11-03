@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-03T06:49:15Z",
+  "generated_at": "2026-11-03T11:57:37Z",
   "contracts": [
     {
       "contract_no": "R26TA01950012",
@@ -269,6 +269,35 @@
         "AI 일반"
       ],
       "nature": null
+    },
+    {
+      "contract_no": "R26TA02347937",
+      "title": "2026년 공공의료 AI 플랫폼 네트워크 구축 사업",
+      "org": "재단법인한국보건의료정보원",
+      "contract_org": "조달청 서울지방조달청",
+      "signed_date": "2026-11-02",
+      "period_text": "계약 후 12개월",
+      "end_date": "2027-11-02",
+      "amount_eok": 3.5,
+      "long_term": "신규",
+      "method": "일반경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 케이티",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "1028142945"
+        }
+      ],
+      "bid_no": "R26BK01668764",
+      "registered_at": "2026-11-03 17:05",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02347937&ctrtChgOrd=00&prcmBsneSeCd=조070002&srchName=ctrtCrst&openUrl=Y",
+      "scope": "생성형·Agent",
+      "fields": [
+        "의료·바이오 AI"
+      ],
+      "nature": "시스템 구축·고도화"
     },
     {
       "contract_no": "R26TA01822385",
