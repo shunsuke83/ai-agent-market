@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-02T12:27:47Z",
+  "generated_at": "2026-11-03T04:25:32Z",
   "plans": [
     {
       "plan_no": "R26DD20515816",
@@ -437,7 +437,9 @@
       "dept": "총무처",
       "tel": "062-970-0025",
       "posted_date": "2026-10-28",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01805601"
+      ],
       "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20910196",
       "biz": "thng",
       "biz_div": "물품",
@@ -745,6 +747,54 @@
       "nature": "연구·교육·행사"
     },
     {
+      "plan_no": "R26DD20915650",
+      "title": "AI·SW 교육 지원을 위한 GPU 탑재 노트북 구매",
+      "org": "창원대학교 산학협력단",
+      "top_org": "교육부",
+      "org_kind": "기타기관",
+      "order_ym": "2026-11",
+      "amount_eok": 1.34,
+      "contract_method": "제한경쟁",
+      "procurement": "중앙조달",
+      "dept": "산학기획과",
+      "tel": "055-213-4148",
+      "posted_date": "2026-11-03",
+      "bid_nos": [],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20915650",
+      "biz": "thng",
+      "biz_div": "물품",
+      "product": "노트북컴퓨터",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 인프라"
+      ],
+      "nature": "인프라"
+    },
+    {
+      "plan_no": "R26DD20915796",
+      "title": "2027년도 직업훈련 AI 심사시스템(집체·원격) 클라우드 서비스 임차[laaS] 및 운영·관리 용역",
+      "org": "한국기술교육대학교 직업능력심사평가원",
+      "top_org": "한국기술교육대학교",
+      "org_kind": "기타공공기관",
+      "order_ym": "2026-11",
+      "amount_eok": 9.078,
+      "contract_method": "일반경쟁",
+      "procurement": "중앙조달",
+      "dept": "기획운영팀",
+      "tel": "16445113",
+      "posted_date": "2026-11-03",
+      "bid_nos": [],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20915796",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
+    {
       "plan_no": "R26DD20561940",
       "title": "AI 챗봇 유지보수 용역 계약",
       "org": "서울시 종로구시설관리공단",
@@ -963,6 +1013,30 @@
         "AI 일반"
       ],
       "nature": "운영·유지보수"
+    },
+    {
+      "plan_no": "R26DD20915851",
+      "title": "청년도약부트캠프 AI 활용 웹/앱 개발(고급) 과정 실무·교양 운영 용역",
+      "org": "강원대학교 산학협력단",
+      "top_org": "강원대학교 산학협력단",
+      "org_kind": "기타기관",
+      "order_ym": "2026-12",
+      "amount_eok": 0.7,
+      "contract_method": "제한경쟁",
+      "procurement": "자체조달",
+      "dept": "산학연구지원부",
+      "tel": "033-250-8939",
+      "posted_date": "2026-11-03",
+      "bid_nos": [],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20915851",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "연구·교육·행사"
     },
     {
       "plan_no": "R26DD20883591",

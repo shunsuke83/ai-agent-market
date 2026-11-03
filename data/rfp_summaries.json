@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-02T12:34:54Z",
+  "generated_at": "2026-11-03T04:33:12Z",
   "summaries": {
     "R26BK01769546": {
       "bid_no": "R26BK01769546",
@@ -699,6 +699,70 @@
       "model": "gemini-3.5-flash",
       "status": "ok"
     },
+    "R26BK01795417": {
+      "bid_no": "R26BK01795417",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01795417&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01795417&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01795417&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01795417&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
+      ],
+      "updated_at": "2026-11-03T04:32:44Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "(제안요청서)「2026 AI·디지털 기반 교수학습 역량강화 글로벌 직무연수(본연수)」(최종).hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01795417&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+        },
+        {
+          "name": "(과업설명서) 2026 AI·디지털 기반 교수학습 역량강화 글로벌 직무연수(본연수).hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01795417&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        },
+        {
+          "name": "(입찰공고문)2026년 AI디지털 기반 교수학습 역량강화 글로벌 직무연수(본연수) 위탁 용역.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01795417&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+        }
+      ],
+      "fields": {
+        "period": "내에 용역 수행을 완료하지 못하였을 경우에는 그 계약만료일로부터 지체 일수 매 1일에 대하여 계약 금액의 1",
+        "subcontract_limit": true
+      },
+      "chars": 60191,
+      "summary": {
+        "overview": "본 사업은 서울특별시교육청 소속 교원 및 인솔자 150명을 대상으로 미국 샌프란시스코 및 실리콘밸리 지역에서 진행되는 AI·디지털 기반 교육혁신 글로벌 직무연수 위탁 용역입니다. 계약상대자는 사전-현지-사후 연계 교육과정 구성, 현지 기관·학교·기업 섭외, 항공·숙박·교통·식사 체경비 수배, 전문 인력 배치 및 안전관리 등 연수 운영 전반을 수행합니다. 연수는 총 2개 단(단별 75명, 3개 반 구성)으로 나뉘어 2027년 1월 중 각각 5박 7일 일정으로 실시됩니다.",
+        "evaluation": "기술능력평가(90점: 정량 20점, 정성 70점)와 가격평가(10점)를 합산해 70점 이상인 자 중 고득점순으로 협상을 진행하는 협상에 의한 계약 방식입니다.",
+        "tasks": [
+          "AI·디지털 교육 관련 학교·기관·기업 방문 및 참관 섭외",
+          "현지 전문가 특강 및 교육 관계자 간담회·워크숍 운영",
+          "왕복 항공권, 4성급 호텔 숙박, 전용 차량 및 식사 수배·운영",
+          "반별 전문 인솔자·가이드·통역사 및 간호인력 배치",
+          "국외 여행자 보험 가입, 사전답사 실시 및 비상 안전관리",
+          "사전 안내 교육 실시, 연수 안내 책자 및 결과물 제작"
+        ],
+        "tech": [
+          "AI·디지털 교육",
+          "에듀테크",
+          "무선 송수신기"
+        ],
+        "requirements": [
+          "관광진흥법에 따른 종합여행업(1261) 또는 국내외여행업(1262) 등록 업체",
+          "지방계약법상 결격사유 및 부정당업자 제재, 조세포탈 이력이 없는 자",
+          "최근 3년 이내 단일건 기초금액 3억 원 이상 국외연수 수행 완료 실적",
+          "경력 3년 이상 국외여행인솔자(T/C) 자격 보유 가이드 및 전문 통역사 배치",
+          "응급상황 대비 간호사 자격증 소지 인력 1명 추가 배치"
+        ],
+        "cautions": [
+          "공동수급(공동계약) 및 포괄적 재하도급이 금지됩니다.",
+          "제안서 접수는 지정 장소 직접 방문 접수만 가능합니다(우편, 팩스, 이메일 불가).",
+          "연수 인원 변동 시 단가 기준 가감 정산하며, 긴급 재난·감염병 발생 시 연수가 취소될 수 있습니다.",
+          "위탁 업무 수행 목적 외 개인정보 처리, 제3자 제공 및 재위탁이 엄격히 금지됩니다."
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
+    },
     "R26BK01795488": {
       "bid_no": "R26BK01795488",
       "bid_ord": "000",
@@ -889,6 +953,69 @@
       "model": "gemini-3.5-flash",
       "status": "ok"
     },
+    "R26BK01796910": {
+      "bid_no": "R26BK01796910",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01796910&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01796910&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01796910&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+      ],
+      "updated_at": "2026-11-03T04:32:23Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "붙임2. 제안요청서_명지녹산 AX실증산단 에코마린 소부장 특화 클라우드 인프라 구축 및 운영·유지관리.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01796910&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+        },
+        {
+          "name": "붙임1. 입찰공고문(협상)_명지녹산 AX실증산단 에코마린 소부장 특화 클라우드 인프라 구축 및 운영·유지관리.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01796910&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        }
+      ],
+      "fields": {
+        "period": "계약체결일로부터 ~ 2028.12.31",
+        "subcontract_limit": true,
+        "presentation": true
+      },
+      "chars": 37822,
+      "summary": {
+        "overview": "부산 명지·녹산 산단 내 기업의 AI 도입 지원 및 AX(AI Transformation) 활성화를 위한 특화 클라우드 인프라 구축 및 운영·유지관리 사업입니다. 민간 클라우드(IaaS) 인프라 구축과 부산테크노파크 보유 GPU 자원의 하이브리드 네트워크 연계, sLLM 기술 지원 및 24시간 365일 운영 관리를 포함합니다.",
+        "evaluation": "기술능력평가 90점(정량 20점, 정성 70점)과 입찰가격평가 10점을 합산하여 평가하며, 기술평가 원점수 85% 이상인 적격자 대상 차등점수제를 적용해 고득점순으로 협상합니다.",
+        "tasks": [
+          "하이브리드 클라우드 네트워크 설계 및 인프라 구축",
+          "24x365 클라우드 인프라 운영 관리 및 장애 대응(MSP)",
+          "설치형 sLLM 모델 라이선스 확보 및 아키텍처링 기술 지원",
+          "백업·복구 체계 수립 및 정기 모의훈련",
+          "정보보안 관리 및 CSAP 보안인증 준수 지원",
+          "지역업체 협력 및 기술지원 방안 수립"
+        ],
+        "tech": [
+          "IaaS",
+          "GPU (A100)",
+          "IPSec VPN",
+          "Kubernetes",
+          "sLLM",
+          "VectorDB"
+        ],
+        "requirements": [
+          "소프트웨어사업자(컴퓨터관련서비스사업, 업종코드 1468) 등록업체",
+          "최근 3년 이내 단일 건 3억원 이상 클라우드 구축/운영 실적 보유",
+          "CSAP 등 정보보안 인증을 획득한 민간 클라우드(CSP) 서비스 활용",
+          "사업관리자(PM)는 공고일 이전부터 재직 중인 자",
+          "부정당업자 제재 및 결격사유가 없는 사업자"
+        ],
+        "cautions": [
+          "공동수급(공동계약) 및 하도급 불가",
+          "사업책임자(PM)가 제안서 발표회에 직접 참여하여 발표 필요",
+          "제안서와 가격입찰서를 동시 제출하지 않을 경우 입찰 무효 처리",
+          "누출금지 대상정보 유출 시 부정당업자로 지정되어 입찰 참가자격 제한"
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
+    },
     "R26BK01797064": {
       "bid_no": "R26BK01797064",
       "bid_ord": "000",
@@ -954,6 +1081,126 @@
       "model": "gemini-3.5-flash",
       "status": "ok"
     },
+    "R26BK01797166": {
+      "bid_no": "R26BK01797166",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01797166&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01797166&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01797166&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+      ],
+      "updated_at": "2026-11-03T04:29:53Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "제안요청서(과업지시서 포함)_해양환경공단 KOEM AI 구축.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01797166&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+        },
+        {
+          "name": "입찰공고서_해양환경공단 KOEM AI 구축.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01797166&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        }
+      ],
+      "fields": {
+        "period": "착수일로부터 8개월",
+        "subcontract_limit": true,
+        "presentation": true
+      },
+      "chars": 54790,
+      "summary": {
+        "overview": "해양환경공단은 전사적 AI 활용 한계를 극복하고 데이터 기반 강화를 위해 온프레미스 AI 플랫폼(LLMOps)과 인프라 자원을 구축하는 사업입니다. 공단 내부 데이터 및 외부 법령·검색엔진을 연계하여 문서 초안 작성, 주요 규정 질의응답, 위험성 평가 지원, 해양방사능 데이터 검증 등 특화 Agentic AI 서비스를 구현합니다. 차세대 시스템 확장성을 고려한 GPU 인프라 확보와 완결성 높은 데이터 체계 및 AI 보안 가드레일을 함께 수립합니다.",
+        "evaluation": "기술능력평가 90점(정량 16점, 정성 84점)과 가격평가 10점을 합산하여 평가하며, 기술능력평가 배점한도의 85% 이상인 자 중 최고득점순으로 협상을 실시합니다.",
+        "tasks": [
+          "온프레미스 AI플랫폼(LLMOps) 도입 및 구축",
+          "공단 특화 AI 응용서비스 및 Agentic AI 개발",
+          "Advanced RAG 구축 및 데이터 정규화·고도화",
+          "GPU 학습·추론 서버 및 UPS 등 인프라 도입",
+          "내부 정보시스템 및 외부 검색엔진 연계",
+          "AI 가드레일 수립 및 개발·데이터 보안 체계 적용"
+        ],
+        "tech": [
+          "LLM",
+          "VLM",
+          "LLMOps",
+          "Advanced RAG",
+          "Agentic AI",
+          "GPU 서버"
+        ],
+        "requirements": [
+          "대기업 및 중견기업 참여가 제한되는 중·소기업자",
+          "소프트웨어사업자(컴퓨터관련서비스사업 또는 패키지소프트웨어개발) 등록 업체",
+          "정보통신공사업자 등록 업체",
+          "직접생산확인증명서(정보시스템개발서비스 또는 패키지소프트웨어개발및도입서비스) 소지자",
+          "국가계약법상 입찰참가자격 결격사유 및 휴·폐업·부도 상태가 아닌 자"
+        ],
+        "cautions": [
+          "제안서 블라인드 평가 대상으로 제안발표 시 회사명 등 식별정보 언급 시 감점 처리됩니다.",
+          "사업 금액의 10% 초과 하도급 시 하도급 대신 공동수급체(분담이행방식, 3개사 이하)를 구성해야 하며 사전승인이 필수입니다.",
+          "생성형 AI 활용 보안 가이드라인 및 국정원 정보보안지침 등 관련 보안 규정을 준수해야 합니다.",
+          "도입 장비 사전 실사를 수행해야 하며 제안 제품 단종 방지 및 라이선스 소유권 증명이 필요합니다."
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
+    },
+    "R26BK01798027": {
+      "bid_no": "R26BK01798027",
+      "bid_ord": "000",
+      "source": "notice+prespec",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01798027&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01798027&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00286679&fileType=BFDTL&fileSeq=1"
+      ],
+      "updated_at": "2026-11-03T04:32:01Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "3. 제안요청서(2027년 거제시 지능형교통시스템(ITS) 유지관리 용역)(261010).hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00286679&fileType=BFDTL&fileSeq=1"
+        }
+      ],
+      "fields": {
+        "period": "2027. 1. 1. ~ 2027. 12. 31"
+      },
+      "chars": 40063,
+      "summary": {
+        "overview": "본 사업은 거제시 교통정보센터의 센터 시스템, 상용·응용 S/W 및 현장 시설장비의 안정적인 운영과 유지관리를 목적으로 합니다. 전문 유지관리업체를 선정하여 24시간 365일 무중단 서비스를 제공하고 교통정보 정확도 및 시스템 기능을 지속적으로 개선합니다. 사업기간은 2027년 1월 1일부터 12월 31일까지이며 사업 예산은 3억 6,200만 원(부가가치세 포함)입니다.",
+        "evaluation": "기술능력평가 90%(정량 20점, 정성 70점)와 가격평가 10%를 합산하여 고득점순으로 우선협상대상자를 선정하는 협상에 의한 계약 체결 방식입니다.",
+        "tasks": [
+          "센터 시스템 및 상용·응용 S/W 유지관리 및 기능개선",
+          "ITS 현장장비(CCTV, VMS, DSRC-RSE, VDS, 스마트교차로 등) 점검 및 보수",
+          "자가통신망 및 연계 통신장비 상태 관리",
+          "교통정보센터 홈페이지 및 모바일 웹 운영·개선",
+          "교통정보 수집·제공 데이터 신뢰성 분석 및 정확도 향상",
+          "24시간 장애 대응 및 비상연락체계 운영"
+        ],
+        "tech": [
+          "ITS (지능형교통시스템)",
+          "교통관제/감응신호/스마트교차로 S/W",
+          "서버·네트워크 및 보안장비 (VPN, 방화벽 등)",
+          "자가통신망 (광선로, OTDR)",
+          "CCTV 및 영상제어 시스템",
+          "웹/모바일 서비스 및 DB"
+        ],
+        "requirements": [
+          "정보통신공사업(0036) 및 소프트웨어사업자(컴퓨터관련서비스사업, 1486) 등록업체",
+          "직접생산증명서[정보시스템유지관리서비스(8111189901)] 소지업체",
+          "대기업 및 중견기업 참여 불가 (사업금액 20억 미만)",
+          "계약 후 10일 이내 기술지원업체와의 기술지원확약서 제출 필수",
+          "유지관리 전문인력 4명 이상 배치 (상주 2명 포함, 총괄책임자는 고급기술자 이상)"
+        ],
+        "cautions": [
+          "공동수급(공동이행방식)은 허용되나 분담이행 및 하도급은 불허",
+          "장애 복구 시간 미준수 및 온라인 유지율 기준(95%) 미달 시 용역비 감액 산정",
+          "개인정보보호법 및 주요 정보통신기반시설 보호지침 등 보안 특약 준수",
+          "상주 인력 임의 교체 불가하며 교체 시 2주 이상 사전 인수인계 및 발주처 승인 필요"
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
+    },
     "R26BK01799286": {
       "bid_no": "R26BK01799286",
       "bid_ord": "000",
@@ -1007,6 +1254,63 @@
           "공동계약은 불허함",
           "인덕대학교와 인덕대학교 산학협력단 2개 회계 주체로 계약, 보증증권 제출, 세금계산서 발행을 분리하여 처리해야 함",
           "교육환경 개선공사 지연 시 발주기관과 협의하여 설치일정 조정 및 분할 납품, 개별 검수·정산 가능함"
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
+    },
+    "R26BK01799448": {
+      "bid_no": "R26BK01799448",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01799448&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01799448&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01"
+      ],
+      "updated_at": "2026-11-03T04:31:38Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "3. 물품구매규격서.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01799448&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01"
+        },
+        {
+          "name": "2. 입찰공고문.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01799448&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        }
+      ],
+      "fields": {},
+      "chars": 13595,
+      "summary": {
+        "overview": "대림대학교 치위생과의 AI DX 기반 에듀테크 교육환경 개선을 위해 구강방사선실습 테이블, 시뮬레이터, 구내방사선 촬영장치 등 기자재를 현장 납품 및 설치하는 사업입니다. 물품 납품과 함께 영상 송출 소프트웨어 설치, 방사선 검사, 사용자 교육 및 A/S 지원을 포함합니다.",
+        "evaluation": "예정가격 이하로서 낙찰하한율(82.495%) 이상 최저가 입찰자 순으로 조달청 물품구매 적격심사를 진행하여 종합평점이 85점 이상인 자를 낙찰자로 결정합니다.",
+        "tasks": [
+          "구강방사선실습 시스템 테이블 및 스툴 납품·설치",
+          "구강방사선촬영 시뮬레이터 및 SW 납품",
+          "구내방사선 촬영장치 납품·설치 및 방사선 검사",
+          "3D 프린터 및 필름 뷰어 등 기자재 납품",
+          "사용자 교육 진행 및 A/S 지원"
+        ],
+        "tech": [
+          "NDI 프로토콜 기반 영상 송출 시스템",
+          "LMS 시스템",
+          "CT 이미지 기반 의료 영상처리 알고리즘",
+          "LCD 3D 프린팅 및 CAD/CAM 연동",
+          "CMOS 이미지 센서",
+          "IR 터치스크린"
+        ],
+        "requirements": [
+          "의료기기 제조업(5309), 수입업(5310) 또는 판매업(5312) 등록 업체",
+          "대림대학교 규격설명회(2026.11.06) 참석 업체",
+          "대학 제시 규격 동등 이상의 물품 납품 및 설치 가능 업체",
+          "제조사(공급사) 물품공급확약서 및 기술지원확약서 제출 가능 업체",
+          "국가계약법 시행령 제12조에 따른 입찰참가자격을 갖춘 업체"
+        ],
+        "cautions": [
+          "규격설명회 미참석 시 입찰 참가가 불가능합니다.",
+          "공동계약(공동수급) 및 분할납품이 불가합니다.",
+          "원 제조사가 아닐 경우 계약 체결 시 물품공급 및 기술지원확약서 미제출 시 계약불이행 처분을 받을 수 있습니다.",
+          "납품기한은 2027년 1월 30일까지이며 대학 지정장소 현장 납품 및 설치 조건입니다."
         ]
       },
       "model": "gemini-3.5-flash",
@@ -1611,6 +1915,70 @@
       "status": "error",
       "error": "HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=120)"
     },
+    "R26BK01801988": {
+      "bid_no": "R26BK01801988",
+      "bid_ord": "000",
+      "source": "notice+prespec",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01801988&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00286854&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00286854&fileType=BFDTL&fileSeq=2",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00286854&fileType=BFDTL&fileSeq=3"
+      ],
+      "updated_at": "2026-11-03T04:30:31Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "AI운영환경 구축사업 과업지시서.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00286854&fileType=BFDTL&fileSeq=1"
+        },
+        {
+          "name": "제2026-205호 양산부산대학교병원 AI 운영환경 구축 사업.zip",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01801988&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        }
+      ],
+      "fields": {
+        "period": "계약일로부터 365일 (단계별 구축 로드맵에 따름)",
+        "sme_only": true,
+        "subcontract_limit": true
+      },
+      "chars": 60079,
+      "summary": {
+        "overview": "양산부산대학교병원의 의료 업무 경감과 근거 기반 업무 환경 조성을 위해 AI 업무지원 플랫폼 도입 및 내부 AI 추론용 GPU 인프라를 구축하는 사업입니다. 진료기록 DB 연계, 핵심 AI 서비스 5종 구현, 보안 솔루션 적용 및 내부망 기반 구축 업무를 계약일로부터 365일간 수행합니다.",
+        "evaluation": "제출된 규격입찰서 및 관련 증빙서류에 대해 병원 정보전산팀의 규격 검토 및 적합 여부 판정 후 지정된 입찰 절차에 따라 진행됩니다.",
+        "tasks": [
+          "AI 업무지원 플랫폼 도입 및 설정",
+          "진료기록 DB 및 승인 문서 연계",
+          "핵심 AI 서비스 5종 구현",
+          "AI 추론용 GPU 서버 및 인프라 구축",
+          "보안 솔루션 적용 및 로그 연계",
+          "운영·유지보수 및 교육 지원"
+        ],
+        "tech": [
+          "NVIDIA H200 GPU 서버",
+          "ABLESTACK V4.0 ENT",
+          "AI 업무지원 플랫폼",
+          "ETL 솔루션",
+          "보안 솔루션 (AI 행위 분석)",
+          "에이전트 오케스트레이션"
+        ],
+        "requirements": [
+          "AI 관련 특허(등록 또는 출원) 1건 이상 보유 기업",
+          "가상화/인프라 자격증 보유자 포함 전문인력 2명 이상 보유",
+          "AI용 GPU 서버 납품 실적 1건 이상 보유 기업",
+          "AI SW 개발 납품 실적 5천만원 이상 보유 기업 (HW 매출 제외)",
+          "중소 소프트웨어사업자 (대기업 및 중견기업 입찰 참여 제한)"
+        ],
+        "cautions": [
+          "전체 구축인력의 병원 내 상주 근무 필수 (원격 작업 불가)",
+          "사전 승인 없는 하도급 및 재하도급 불허",
+          "모든 자료 및 AI 처리는 병원 내부망 운영 원칙 (외부 반출 금지)",
+          "장애 발생 시 2시간 이내 현장 도착 및 4시간 이내 복구 (원격 대응 불가)"
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
+    },
     "R26BK01802150": {
       "bid_no": "R26BK01802150",
       "bid_ord": "000",
@@ -1764,6 +2132,73 @@
           "2026년 12월 28일까지 납품·설치·기본 설정 및 검수 완료 필요",
           "기술지원 및 A/S 발생 시 최대 24시간 내 대응 필요",
           "설치 및 기술지원 과정에서 취득한 정보 및 데이터에 대한 보안 준수"
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
+    },
+    "R26BK01802992": {
+      "bid_no": "R26BK01802992",
+      "bid_ord": "000",
+      "source": "notice+prespec",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01802992&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01802992&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01802992&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00290294&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00290294&fileType=BFDTL&fileSeq=2",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00290294&fileType=BFDTL&fileSeq=3"
+      ],
+      "updated_at": "2026-11-03T04:31:16Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "사전규격공개.zip",
+          "url": "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00290294&fileType=BFDTL&fileSeq=1"
+        },
+        {
+          "name": "공고서_R26BK01802992(국가,규가,제조,고시이상).hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01802992&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        },
+        {
+          "name": "사양서 등.zip",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01802992&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
+        }
+      ],
+      "fields": {
+        "sme_only": true
+      },
+      "chars": 60087,
+      "summary": {
+        "overview": "본 사업은 중소벤처기업부 부산기계공업고등학교 스마트팩토리과에 NCS기반 교육프로그램 및 국가기술검정 실습이 가능한 피지컬AI 로봇시스템을 구축하는 사업입니다. 협동로봇, PLC, AI 비전, AMR, 데이터 수집·모니터링 플랫폼, 디지털 트윈 및 생성형 AI 어시스턴트 등의 실습 기자재를 도입하여 스마트 공장 제조 실무 교육 환경을 조성하는 것을 목적으로 합니다.",
+        "evaluation": "규격·가격 동시입찰 방식으로 진행되며, 기술(규격) 제안서 평가에서 85점 이상을 받은 적격업체 중 예정가격 이하 최저가 입찰자를 낙찰자로 선정합니다.",
+        "tasks": [
+          "피지컬AI 협동로봇 및 제조 AI 공정모듈 구축",
+          "스마트 로봇제조 공정설비 및 AMR 이송·협동로봇 납품",
+          "AI 계측관제 모니터링 시스템 및 서버 PC 설치",
+          "Physical AI Platform 및 AI안전통합시스템 구축",
+          "3D/ROS 2 디지털 트윈 및 생성형 AI 어시스턴트 적용",
+          "시운전, 교보재 제공 및 기술전수교육 실시"
+        ],
+        "tech": [
+          "협동로봇 / AMR",
+          "PLC (MELSEC MC Protocol)",
+          "ROS 2 (Jazzy) / Unity (WebGL)",
+          "YOLO / OpenCV / TensorFlow",
+          "InfluxDB 3 / OPC UA",
+          "생성형 AI (LangChain / LangGraph)"
+        ],
+        "requirements": [
+          "나라장터에 공정제어실험장치(6010629901) 제조 물품 입찰참가 등록을 필한 자",
+          "공정제어실험장치(6010629901) 직접생산확인증명서 소지업체",
+          "중소기업·소상공인 확인서를 소지한 중소기업자 또는 소상공인",
+          "기술(규격) 제안서 평가 점수 100점 만점 기준 85점 이상 획득 업체"
+        ],
+        "cautions": [
+          "공동계약(공동수급)은 허용되지 않음",
+          "납품기한은 계약일로부터 60일 이내이며 현장설치도 조건임",
+          "가격입찰서와 기술제안서를 모두 제출해야 하며 미제출 시 입찰 무효 처리됨",
+          "무상 하자보수 보증기간은 검수 완료일로부터 2년이며 하자 발생 시 24시간 이내 즉시 조치 필요"
         ]
       },
       "model": "gemini-3.5-flash",
@@ -2220,6 +2655,135 @@
         ]
       },
       "model": "gemini-flash-lite-latest",
+      "status": "ok"
+    },
+    "R26BK01805572": {
+      "bid_no": "R26BK01805572",
+      "bid_ord": "000",
+      "source": "notice+prespec",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01805572&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01805572&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00287993&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00287993&fileType=BFDTL&fileSeq=2",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00287993&fileType=BFDTL&fileSeq=3"
+      ],
+      "updated_at": "2026-11-03T04:30:54Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "학생의 실질적 AI 역량 강화를 위한 주권 AI 구축 사업 제안요청서.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00287993&fileType=BFDTL&fileSeq=1"
+        },
+        {
+          "name": "1. 공고서_국가_제한_개발_단독_수요기관평가.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01805572&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        }
+      ],
+      "fields": {
+        "period": "계약체결일 ~ 2027. 2. 19.(금)",
+        "sme_only": true
+      },
+      "chars": 59053,
+      "summary": {
+        "overview": "본 사업은 부산대학교 교내에 통제 가능한 주권 AI 언어모델 및 온프레미스 인프라를 구축하여 민감 정보 유출 없이 학생의 AI 역량을 에이전트 설계 및 검증 수준으로 제고하기 위해 추진됩니다. 온프레미스 서버 3식 구축과 GPU 클라우드 임차, 주권 AI 언어모델 라이선스 확보 및 학생 AI 에이전트 설계 플레이그라운드와 레퍼런스 에이전트 5종 구축 등을 수행합니다.",
+        "evaluation": "기술능력평가 90%와 입찰가격평가 10%를 합산하여 종합평가점수 고득점자순으로 협상을 진행하는 협상에 의한 계약 방식입니다.",
+        "tasks": [
+          "온프레미스 서버 3식 구매 및 설치",
+          "주권 AI 언어모델 라이선스 확보 및 GPU 클라우드 임차",
+          "학생 AI 에이전트 설계 플레이그라운드 개발",
+          "교내 지식 기반 구성 및 RAG 연동",
+          "레퍼런스 에이전트 5종 구축",
+          "사용량 관리 모니터링 대시보드 및 관리자 페이지 개발"
+        ],
+        "tech": [
+          "주권 AI 언어모델(LLM)",
+          "RAG(검색 증강 생성)",
+          "MCP(Model Context Protocol)",
+          "LLM 추론 및 RAG GPU 서버",
+          "CSAP 인증 GPU 클라우드",
+          "통합인증(SSO)"
+        ],
+        "requirements": [
+          "소프트웨어사업자(컴퓨터관련서비스사업, 1468) 등록 업체",
+          "직접생산확인증명서(정보시스템개발서비스, 8111159901) 소지 업체",
+          "중소기업 또는 소상공인 확인서 소지 업체 (대기업 및 중견기업 참여 불가)",
+          "계약체결일부터 2027년 2월 19일까지 사업 수행 가능 업체"
+        ],
+        "cautions": [
+          "공동수급(공동계약) 불가",
+          "하도급 가능 (관련 법령 및 사전 승인 절차 준수 필수)",
+          "개인정보 및 비공개 문서는 교외 반출이 불가하며 교내 온프레미스 서버에서만 처리 강제",
+          "고정된 사업 종료일(2027.02.19)에 맞춘 주차별 일정 및 위험 관리 필요"
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
+    },
+    "R26BK01805601": {
+      "bid_no": "R26BK01805601",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01805601&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01805601&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01805601&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01805601&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01"
+      ],
+      "updated_at": "2026-11-03T04:30:15Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "1-2. 남부대학교 구매 규격서(수정).pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01805601&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
+        },
+        {
+          "name": "1-1 공고문)생성형 AI 라이센스 구입-챗GPT 비지니스(수정2).pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01805601&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        },
+        {
+          "name": "1-4 입찰 서류.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01805601&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01"
+        }
+      ],
+      "fields": {
+        "sme_only": true
+      },
+      "chars": 14232,
+      "summary": {
+        "overview": "본 사업은 남부대학교 구성원 1,000명을 대상으로 AI 활용 지원 및 향후 ChatGPT Edu 도입·운영 기준안 수립을 위한 시범 운영 목적으로 추진됩니다. 계약 범위는 OpenAI ChatGPT Business 정식 이용권(3개월) 공급, 초기 운영 및 사용자 등록 지원, 관리자 교육, 온라인 문의 창구 운영 및 Edu 연계 보고서 제출 등을 포함합니다.",
+        "evaluation": "예산금액 이하의 최저가 낙찰 방식으로 진행됩니다.",
+        "tasks": [
+          "ChatGPT Business 이용권 공급 (1,000좌석, 3개월)",
+          "사용자 초대·등록 및 초기 운영 지원",
+          "대학 지정 관리자 대상 오프라인 교육 1회(60분) 실시",
+          "온라인 문의 지원 사이트 구축 및 지정 문의 창구 운영",
+          "ChatGPT Edu 연계 지원 계획 제시 및 Edu 크레딧 운영 기준안 제출",
+          "시범 운영 활용 현황 보고서 및 인계 자료 작성"
+        ],
+        "tech": [
+          "ChatGPT Business",
+          "OpenAI API",
+          "범용·추론 AI 모델",
+          "다중요소인증(MFA)",
+          "웹/모바일/데스크톱 앱 지원",
+          "온라인 문의 지원 사이트"
+        ],
+        "requirements": [
+          "소프트웨어사업자(패키지소프트웨어 개발·공급사업 업종코드 1426 또는 컴퓨터관련서비스사업 업종코드 1468) 등록 업체",
+          "OpenAI 공식 계약/파트너십 또는 정품 도입 경로 증빙자료(파트너 입증 서한, 리셀러/GSI 자격 문서 등) 제출 가능 업체",
+          "중·소기업·소상공인 확인서를 소지한 중·소기업 또는 소상공인",
+          "입찰공고일 현재 국세·지방세 체납 및 부정당업자 제재가 없는 사업자",
+          "나라장터(G2B) 비정형전자문서 방식으로 참가 자격 서류 제출 완료 업체"
+        ],
+        "cautions": [
+          "입찰보증금은 입찰금액의 10% 이상에 해당하는 이행보증보험증권으로 조달청 나라장터에 전자로 제출해야 합니다.",
+          "입찰참가 서류는 2026년 11월 10일 17:00까지 나라장터 비정형전자문서를 통해 하나의 PDF(압축) 파일로 제출해야 합니다.",
+          "계정 재판매·임대, 제3자 명의 계정 제공 등 비정상적인 공급 방식은 허용되지 않으며 남부대학교 직접 관리자 권한을 제공해야 합니다.",
+          "낙찰자는 낙찰 후 5일 이내에 계약을 체결하고 2026년 11월 30일까지 납품(라이선스 발급)을 완료해야 합니다."
+        ]
+      },
+      "model": "gemini-3.5-flash",
       "status": "ok"
     }
   }

@@ -1,7 +1,66 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-02T12:28:03Z",
+  "generated_at": "2026-11-03T04:25:38Z",
   "contracts": [
+    {
+      "contract_no": "R26TA01950012",
+      "title": "생성형 AI기반 지능형 CCTV 관제 고도화",
+      "org": "서울특별시",
+      "contract_org": "서울특별시",
+      "signed_date": "2026-11-03",
+      "period_text": "금차 153일, 총차 153일",
+      "end_date": "2026-12-15",
+      "amount_eok": 4.6091,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 인텔리빅스",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "1148199927"
+        }
+      ],
+      "bid_no": "R26BK01513039",
+      "registered_at": "2026-11-03 10:06",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA01950012&ctrtChgOrd=01&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "생성형·Agent",
+      "fields": [
+        "생성형·LLM",
+        "비전·영상"
+      ],
+      "nature": "시스템 구축·고도화"
+    },
+    {
+      "contract_no": "R26TA02374324",
+      "title": "한동대학교 AI기반 학생지원 통합시스템 구축 개발 용역",
+      "org": "한동대학교",
+      "contract_org": "한동대학교",
+      "signed_date": "2026-11-03",
+      "period_text": "금차 0일, 총차 0일",
+      "end_date": "2027-02-28",
+      "amount_eok": 5.5,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "(주)싸이웍스",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "5048126777"
+        }
+      ],
+      "bid_no": "R26BK01704565",
+      "registered_at": "2026-11-03 10:56",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02374324&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화"
+    },
     {
       "contract_no": "R26TA01353065",
       "title": "2026 경기도서관 실험하는 AI 도서관 프로그램 운영",
@@ -94,6 +153,64 @@
         "AI 일반"
       ],
       "nature": null
+    },
+    {
+      "contract_no": "R26TA02287910",
+      "title": "한국로봇산업진흥원 지능형로봇 보급 및 확산사업 홍보관 기획·운영 용역",
+      "org": "한국로봇산업진흥원",
+      "contract_org": "한국로봇산업진흥원",
+      "signed_date": "2026-11-02",
+      "period_text": "금차 67일, 총차 67일",
+      "end_date": "2026-12-11",
+      "amount_eok": 6.4784,
+      "long_term": "신규",
+      "method": "일반경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 더 웰컴",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "2208775519"
+        }
+      ],
+      "bid_no": "R26BK01707809",
+      "registered_at": "2026-11-03 13:21",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02287910&ctrtChgOrd=01&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
+    {
+      "contract_no": "R26TA01706246",
+      "title": "AI가속기센터 민관산학연 협력모델 ISP용역",
+      "org": "경상북도 포항시",
+      "contract_org": "경상북도 포항시",
+      "signed_date": "2026-11-02",
+      "period_text": "금차 210일, 총차 210일",
+      "end_date": "2026-12-28",
+      "amount_eok": 1.9,
+      "long_term": "신규",
+      "method": "일반경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "전략컨설팅집현 주식회사",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "2168141056"
+        }
+      ],
+      "bid_no": null,
+      "registered_at": "2026-11-03 11:36",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA01706246&ctrtChgOrd=01&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AX·전략"
+      ],
+      "nature": "ISP·전략"
     },
     {
       "contract_no": "R26TA01822385",
@@ -2915,35 +3032,6 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화"
-    },
-    {
-      "contract_no": "R26TA02287910",
-      "title": "한국로봇산업진흥원 지능형로봇 보급 및 확산사업 홍보관 기획·운영 용역",
-      "org": "한국로봇산업진흥원",
-      "contract_org": "한국로봇산업진흥원",
-      "signed_date": "2026-10-06",
-      "period_text": "금차 67일, 총차 67일",
-      "end_date": "2026-12-11",
-      "amount_eok": 5.984,
-      "long_term": "신규",
-      "method": "일반경쟁",
-      "joint": false,
-      "firms": [
-        {
-          "name": "주식회사 더 웰컴",
-          "role": "주계약업체",
-          "share": 100.0,
-          "bizno": "2208775519"
-        }
-      ],
-      "bid_no": "R26BK01707809",
-      "registered_at": "2026-10-08 14:00",
-      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02287910&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
-      "scope": "AI SW 확대",
-      "fields": [
-        "AI 일반"
-      ],
-      "nature": null
     },
     {
       "contract_no": "R26TA01495622",
@@ -18113,36 +18201,6 @@
       "nature": "시스템 구축·고도화"
     },
     {
-      "contract_no": "R26TA01950012",
-      "title": "생성형 AI기반 지능형 CCTV 관제 고도화",
-      "org": "서울특별시",
-      "contract_org": "서울특별시",
-      "signed_date": "2026-06-10",
-      "period_text": "금차 153일, 총차 153일",
-      "end_date": "2026-11-09",
-      "amount_eok": 4.6091,
-      "long_term": "신규",
-      "method": "제한경쟁",
-      "joint": false,
-      "firms": [
-        {
-          "name": "주식회사 인텔리빅스",
-          "role": "주계약업체",
-          "share": 100.0,
-          "bizno": "1148199927"
-        }
-      ],
-      "bid_no": "R26BK01513039",
-      "registered_at": "2026-06-11 17:54",
-      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA01950012&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
-      "scope": "생성형·Agent",
-      "fields": [
-        "생성형·LLM",
-        "비전·영상"
-      ],
-      "nature": "시스템 구축·고도화"
-    },
-    {
       "contract_no": "R26TA01944325",
       "title": "국가AI연구거점 중장기 발전전략 수립연구(재)",
       "org": "한국과학기술원",
@@ -25595,35 +25653,6 @@
         "AI 일반"
       ],
       "nature": null
-    },
-    {
-      "contract_no": "R26TA01706246",
-      "title": "AI가속기센터 민관산학연 협력모델 ISP용역",
-      "org": "경상북도 포항시",
-      "contract_org": "경상북도 포항시",
-      "signed_date": "2026-04-06",
-      "period_text": "금차 210일, 총차 210일",
-      "end_date": "2026-11-04",
-      "amount_eok": 1.9,
-      "long_term": "신규",
-      "method": "일반경쟁",
-      "joint": false,
-      "firms": [
-        {
-          "name": "전략컨설팅집현 주식회사",
-          "role": "주계약업체",
-          "share": 100.0,
-          "bizno": "2168141056"
-        }
-      ],
-      "bid_no": null,
-      "registered_at": "2026-04-07 17:01",
-      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA01706246&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
-      "scope": "AI SW 확대",
-      "fields": [
-        "AX·전략"
-      ],
-      "nature": "ISP·전략"
     },
     {
       "contract_no": "R26TA01690396",
