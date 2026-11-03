@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-03T04:25:32Z",
+  "generated_at": "2026-11-03T06:49:09Z",
   "plans": [
     {
       "plan_no": "R26DD20515816",
@@ -793,6 +793,128 @@
         "AI 일반"
       ],
       "nature": null
+    },
+    {
+      "plan_no": "R26DD20916016",
+      "title": "김천시 드론기반 AI도시안전관리 구축 용역(협상에 의한 계약)",
+      "org": "경상북도 김천시",
+      "top_org": "경상북도",
+      "org_kind": "지방자치단체",
+      "order_ym": "2026-11",
+      "amount_eok": 7.803,
+      "contract_method": "제한경쟁",
+      "procurement": "자체조달",
+      "dept": "미래혁신전략과",
+      "tel": "054-420-6871",
+      "posted_date": "2026-11-03",
+      "bid_nos": [
+        "R26BK01806689"
+      ],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20916016",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화"
+    },
+    {
+      "plan_no": "R26DD20916038",
+      "title": "AI 기반 대학 수업품질 분석 및 교수역량 코칭 기술 검증 연구",
+      "org": "한국기술교육대학교",
+      "top_org": "교육부",
+      "org_kind": "기타공공기관",
+      "order_ym": "2026-11",
+      "amount_eok": 0.3,
+      "contract_method": "제한경쟁",
+      "procurement": "자체조달",
+      "dept": "데이터성과센터",
+      "tel": "041-580-4706",
+      "posted_date": "2026-11-03",
+      "bid_nos": [],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20916038",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
+    {
+      "plan_no": "R26DD20916126",
+      "title": "제조주권 확보를 위한 피지컬 AI 생태계 구축방안",
+      "org": "과학기술정보통신부",
+      "top_org": "과학기술정보통신부",
+      "org_kind": "국가기관",
+      "order_ym": "2026-11",
+      "amount_eok": 0.8,
+      "contract_method": "제한경쟁",
+      "procurement": "자체조달",
+      "dept": "운영지원과",
+      "tel": "044-202-4132",
+      "posted_date": "2026-11-03",
+      "bid_nos": [],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20916126",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화"
+    },
+    {
+      "plan_no": "R26DD20916130",
+      "title": "2026년 소나무재선충병 예찰 AI 영상분석(드론·항공·위성영상 통합분석)",
+      "org": "한국산림재난안전기술공단",
+      "top_org": "정부산하기관및위원회",
+      "org_kind": "기타공공기관",
+      "order_ym": "2026-11",
+      "amount_eok": 3.1,
+      "contract_method": "제한경쟁",
+      "procurement": "자체조달",
+      "dept": "운영지원실",
+      "tel": "043-530-0022",
+      "posted_date": "2026-11-03",
+      "bid_nos": [],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20916130",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "비전·영상"
+      ],
+      "nature": null
+    },
+    {
+      "plan_no": "R26DD20916153",
+      "title": "개인정보 원본 AI 학습 기술지원 서버 시스템 구축 용역",
+      "org": "재단법인 대구디지털혁신진흥원",
+      "top_org": "대구광역시",
+      "org_kind": "기타기관",
+      "order_ym": "2026-11",
+      "amount_eok": 7.5686,
+      "contract_method": "일반경쟁",
+      "procurement": "자체조달",
+      "dept": "구매관재팀",
+      "tel": "053-655-5607",
+      "posted_date": "2026-11-03",
+      "bid_nos": [],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20916153",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화"
     },
     {
       "plan_no": "R26DD20561940",

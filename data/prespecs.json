@@ -1,11 +1,166 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-03T04:25:20Z",
+  "generated_at": "2026-11-03T06:48:57Z",
   "range": {
     "since": "2026-11-02",
     "until": "2026-11-03"
   },
   "prespecs": [
+    {
+      "prespec_no": "R26BD00294290",
+      "title": "인공지능 기반 열처리 조건 패터닝 플랫폼 개발",
+      "org": "한국생산기술연구원",
+      "order_org": "한국생산기술연구원",
+      "registered_at": "2026-11-03 15:39",
+      "registered_date": "2026-11-03",
+      "opinion_close_at": "2026-11-08 23:59",
+      "asign_budget_eok": 0.66,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294290&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00294284",
+      "title": "해양경찰KICS 수사지원 AI 모델 개발을 위한 정보화전략계획(ISP) 수립 용역",
+      "org": "해양경찰청",
+      "order_org": "조달청 인천지방조달청",
+      "registered_at": "2026-11-03 15:35",
+      "registered_date": "2026-11-03",
+      "opinion_close_at": "2026-11-08 23:59",
+      "asign_budget_eok": 3.0158,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AX·전략"
+      ],
+      "nature": "ISP·전략",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294284&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
+    {
+      "prespec_no": "R26BD00294195",
+      "title": "2026년 소나무재선충병 예찰 AI 영상분석(드론·항공·위성영상 통합분석)",
+      "org": "한국산림재난안전기술공단",
+      "order_org": "한국산림재난안전기술공단",
+      "registered_at": "2026-11-03 14:44",
+      "registered_date": "2026-11-03",
+      "opinion_close_at": "2026-11-09 11:00",
+      "asign_budget_eok": 3.1,
+      "scope": "AI SW 확대",
+      "fields": [
+        "비전·영상"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294195&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00294201",
+      "title": "제조주권 확보를 위한 피지컬 AI 생태계 구축방안",
+      "org": "과학기술정보통신부",
+      "order_org": "과학기술정보통신부",
+      "registered_at": "2026-11-03 14:43",
+      "registered_date": "2026-11-03",
+      "opinion_close_at": "2026-11-06 23:59",
+      "asign_budget_eok": 0.8,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294201&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294201&fileType=BFDTL&fileSeq=2"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00294200",
+      "title": "개인정보 원본 AI 학습 기술지원 서버 시스템 구축 용역",
+      "org": "재단법인 대구디지털혁신진흥원",
+      "order_org": "재단법인 대구디지털혁신진흥원",
+      "registered_at": "2026-11-03 14:42",
+      "registered_date": "2026-11-03",
+      "opinion_close_at": "2026-11-08 23:59",
+      "asign_budget_eok": 7.5686,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294200&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00294185",
+      "title": "온라인 AX 수준진단 솔루션 개발 용역",
+      "org": "(재)구미전자정보기술원",
+      "order_org": "조달청 대구지방조달청",
+      "registered_at": "2026-11-03 14:24",
+      "registered_date": "2026-11-03",
+      "opinion_close_at": "2026-11-08 23:59",
+      "asign_budget_eok": 2.0183,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294185&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
+    {
+      "prespec_no": "R26BD00294140",
+      "title": "AI 기반 대학 수업품질 분석 및 교수역량 코칭 기술 검증 연구",
+      "org": "한국기술교육대학교",
+      "order_org": "한국기술교육대학교",
+      "registered_at": "2026-11-03 14:00",
+      "registered_date": "2026-11-03",
+      "opinion_close_at": "2026-11-08 23:59",
+      "asign_budget_eok": 0.3,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294140&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
     {
       "prespec_no": "R26BD00294100",
       "title": "한국전기공사협회 AI기반 차세대 혁신시스템 정보화전략계획 수립용역",

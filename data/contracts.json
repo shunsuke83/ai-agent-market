@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-03T04:25:38Z",
+  "generated_at": "2026-11-03T06:49:15Z",
   "contracts": [
     {
       "contract_no": "R26TA01950012",
@@ -55,6 +55,35 @@
       "bid_no": "R26BK01704565",
       "registered_at": "2026-11-03 10:56",
       "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02374324&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화"
+    },
+    {
+      "contract_no": "R26TA02376899",
+      "title": "AI 기반 품질검증 지원 시스템 고도화",
+      "org": "(재)공간정보품질관리원",
+      "contract_org": "(재)공간정보품질관리원",
+      "signed_date": "2026-11-03",
+      "period_text": "금차 300일, 총차 300일",
+      "end_date": "2027-08-31",
+      "amount_eok": 1.83,
+      "long_term": "신규",
+      "method": "수의계약",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 이노팸",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "2048651274"
+        }
+      ],
+      "bid_no": null,
+      "registered_at": "2026-11-03 14:36",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02376899&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
       "scope": "AI SW 확대",
       "fields": [
         "AI 일반"
@@ -211,6 +240,35 @@
         "AX·전략"
       ],
       "nature": "ISP·전략"
+    },
+    {
+      "contract_no": "R26TA02358288",
+      "title": "AI 응용제품 신속상용화 지원사업 성과 홍보 및 확산",
+      "org": "국토교통과학기술진흥원",
+      "contract_org": "조달청 인천지방조달청",
+      "signed_date": "2026-11-02",
+      "period_text": "2027/12/10",
+      "end_date": "2027-12-10",
+      "amount_eok": 4.45,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 유니원커뮤니케이션즈",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "5398103047"
+        }
+      ],
+      "bid_no": "R26BK01736686",
+      "registered_at": "2026-11-03 14:22",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02358288&ctrtChgOrd=00&prcmBsneSeCd=조070002&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
     },
     {
       "contract_no": "R26TA01822385",
