@@ -1,7 +1,129 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-03T11:57:37Z",
+  "generated_at": "2026-11-04T12:09:56Z",
   "contracts": [
+    {
+      "contract_no": "R26TA02022939",
+      "title": "광주비엔날레 AI라키비움 시스템 구축 용역",
+      "org": "재단법인 광주비엔날레",
+      "contract_org": "재단법인 광주비엔날레",
+      "signed_date": "2026-11-04",
+      "period_text": "금차 182일, 총차 182일",
+      "end_date": "2026-12-31",
+      "amount_eok": 22.44,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "(주)크루메이트",
+          "role": "주계약업체",
+          "share": 60.0,
+          "bizno": "2158675524"
+        },
+        {
+          "name": "주식회사 아키브소프트",
+          "role": "도급업체",
+          "share": 40.0,
+          "bizno": "8628600042"
+        }
+      ],
+      "bid_no": "R26BK01537257",
+      "registered_at": "2026-11-04 13:53",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02022939&ctrtChgOrd=01&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화"
+    },
+    {
+      "contract_no": "R26TA02382077",
+      "title": "2026년 AI 청년창업기업 동반성장 바우처 사업  클라우드형 GPU서비스 임차",
+      "org": "(주)하마랩",
+      "contract_org": "(주)하마랩",
+      "signed_date": "2026-11-04",
+      "period_text": "금차 59일, 총차 59일",
+      "end_date": "2026-12-31",
+      "amount_eok": 1.5529,
+      "long_term": "신규",
+      "method": "일반경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 터틀날리지",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "1108141781"
+        }
+      ],
+      "bid_no": "R26BK01768184",
+      "registered_at": "2026-11-04 15:00",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02382077&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 인프라"
+      ],
+      "nature": "인프라"
+    },
+    {
+      "contract_no": "R26TA02390523",
+      "title": "2026년 AI 평가시스템 문항 출제위원 역량강화 연수용역(수의시담)",
+      "org": "전북특별자치도교육청",
+      "contract_org": "전북특별자치도교육청",
+      "signed_date": "2026-11-04",
+      "period_text": "금차 58일, 총차 58일",
+      "end_date": "2026-12-31",
+      "amount_eok": 1.8713,
+      "long_term": "신규",
+      "method": "수의계약",
+      "joint": false,
+      "firms": [
+        {
+          "name": "이비에스미디어주식회사",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "2208838559"
+        }
+      ],
+      "bid_no": "R26BK01805469",
+      "registered_at": "2026-11-04 19:49",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02390523&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "연구·교육·행사"
+    },
+    {
+      "contract_no": "R26TA02379192",
+      "title": "ESG 컨트러버셜 이슈 지능형 모니터링 제공기관 선정",
+      "org": "국민연금공단",
+      "contract_org": "국민연금공단",
+      "signed_date": "2026-11-04",
+      "period_text": "금차 365일, 총차 731일",
+      "end_date": "2028-12-31",
+      "amount_eok": 1.54,
+      "long_term": "장기",
+      "method": "일반경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 한국이에스지연구소",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "8668802352"
+        }
+      ],
+      "bid_no": "R26BK01741719",
+      "registered_at": "2026-11-04 13:04",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02379192&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
     {
       "contract_no": "R26TA01950012",
       "title": "생성형 AI기반 지능형 CCTV 관제 고도화",
@@ -14571,41 +14693,6 @@
         "AI 일반"
       ],
       "nature": null
-    },
-    {
-      "contract_no": "R26TA02022939",
-      "title": "광주비엔날레 AI라키비움 시스템 구축 용역",
-      "org": "재단법인 광주비엔날레",
-      "contract_org": "재단법인 광주비엔날레",
-      "signed_date": "2026-07-02",
-      "period_text": "금차 182일, 총차 182일",
-      "end_date": "2026-12-31",
-      "amount_eok": 22.44,
-      "long_term": "신규",
-      "method": "제한경쟁",
-      "joint": false,
-      "firms": [
-        {
-          "name": "(주)크루메이트",
-          "role": "주계약업체",
-          "share": 60.0,
-          "bizno": "2158675524"
-        },
-        {
-          "name": "주식회사 아키브소프트",
-          "role": "도급업체",
-          "share": 40.0,
-          "bizno": "8628600042"
-        }
-      ],
-      "bid_no": "R26BK01537257",
-      "registered_at": "2026-09-08 11:23",
-      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02022939&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
-      "scope": "AI SW 확대",
-      "fields": [
-        "AI 일반"
-      ],
-      "nature": "시스템 구축·고도화"
     },
     {
       "contract_no": "R26TA01999621",

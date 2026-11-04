@@ -1,11 +1,255 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-03T11:57:13Z",
+  "generated_at": "2026-11-04T12:09:38Z",
   "range": {
-    "since": "2026-10-31",
-    "until": "2026-11-03"
+    "since": "2026-11-01",
+    "until": "2026-11-04"
   },
   "prespecs": [
+    {
+      "prespec_no": "R26BD00295155",
+      "title": "교수학습개발센터 [대학혁신지원사업] AI 기반 교수학습지원시스템(LMS) 신규 구축",
+      "org": "계명대학교",
+      "order_org": "계명대학교",
+      "registered_at": "2026-11-04 18:17",
+      "registered_date": "2026-11-04",
+      "opinion_close_at": "2026-11-07 23:59",
+      "asign_budget_eok": 13.11,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00295155&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "thng",
+      "biz_div": "물품",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00295141",
+      "title": "2027년 서울로봇인공지능과학관 시설관리 용역",
+      "org": "서울특별시 서울시립과학관",
+      "order_org": "서울특별시 서울시립과학관",
+      "registered_at": "2026-11-04 18:08",
+      "registered_date": "2026-11-04",
+      "opinion_close_at": "2026-11-09 18:00",
+      "asign_budget_eok": 4.9716,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00295141&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00295141&fileType=BFDTL&fileSeq=2"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00295118",
+      "title": "2027년 서울로봇인공지능과학관 청사 경비용역",
+      "org": "서울특별시 서울시립과학관",
+      "order_org": "서울특별시 서울시립과학관",
+      "registered_at": "2026-11-04 17:37",
+      "registered_date": "2026-11-04",
+      "opinion_close_at": "2026-11-09 18:00",
+      "asign_budget_eok": 2.0656,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00295118&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00295118&fileType=BFDTL&fileSeq=2"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00295066",
+      "title": "김천대학교 대학혁신지원사업 AI기반 교육 서비스 앱 개발 고도화 지원 용역",
+      "org": "김천대학교",
+      "order_org": "김천대학교",
+      "registered_at": "2026-11-04 17:04",
+      "registered_date": "2026-11-04",
+      "opinion_close_at": "2026-11-09 23:59",
+      "asign_budget_eok": 1.6219,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "연구·교육·행사",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00295066&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00295066&fileType=BFDTL&fileSeq=2",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00295066&fileType=BFDTL&fileSeq=3"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00295059",
+      "title": "2026년 공공의료 AI 고속도로 보안 강화 사업",
+      "org": "재단법인한국보건의료정보원",
+      "order_org": "조달청 서울지방조달청",
+      "registered_at": "2026-11-04 16:55",
+      "registered_date": "2026-11-04",
+      "opinion_close_at": "2026-11-09 23:59",
+      "asign_budget_eok": 1.4641,
+      "scope": "AI SW 확대",
+      "fields": [
+        "의료·바이오 AI"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00295059&fileType=BFDTL&fileSeq=3"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
+    {
+      "prespec_no": "R26BD00295054",
+      "title": "2027년 경남인공지능혁신본부 시설물 관리용역",
+      "org": "재단법인 경남테크노파크",
+      "order_org": "재단법인 경남테크노파크",
+      "registered_at": "2026-11-04 16:51",
+      "registered_date": "2026-11-04",
+      "opinion_close_at": "2026-11-09 23:59",
+      "asign_budget_eok": 4.3514,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00295054&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00295037",
+      "title": "2026학년도 AI 기반 차세대 학습경험플랫폼(LXP) 구축",
+      "org": "덕성여자대학교",
+      "order_org": "덕성여자대학교",
+      "registered_at": "2026-11-04 16:40",
+      "registered_date": "2026-11-04",
+      "opinion_close_at": "2026-11-09 23:59",
+      "asign_budget_eok": 2.2,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00295037&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
+    {
+      "prespec_no": "R26BD00294958",
+      "title": "2027년 AI내편중구 기능개선 및 유지관리 용역-긴급",
+      "org": "서울특별시 중구",
+      "order_org": "서울특별시 중구",
+      "registered_at": "2026-11-04 15:24",
+      "registered_date": "2026-11-04",
+      "opinion_close_at": "2026-11-08 23:59",
+      "asign_budget_eok": 1.2679,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "운영·유지보수",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294958&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
+    {
+      "prespec_no": "R26BD00294763",
+      "title": "AI 수요예측 기반 결품·과잉재고 분석 및 의사결정 지원 시스템 구축 및 현장 실증(POC) 용역",
+      "org": "경남대학교 산학협력단",
+      "order_org": "경남대학교 산학협력단",
+      "registered_at": "2026-11-04 11:32",
+      "registered_date": "2026-11-04",
+      "opinion_close_at": "2026-11-09 11:00",
+      "asign_budget_eok": 0.5,
+      "scope": "AI SW 확대",
+      "fields": [
+        "데이터·예측"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294763&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
+    {
+      "prespec_no": "R26BD00294749",
+      "title": "연암공과대학교 2026학년도 AI기반 차세대 통합출결관리시스템 고도화 용역",
+      "org": "연암공과대학교산학협력단",
+      "order_org": "연암공과대학교산학협력단",
+      "registered_at": "2026-11-04 11:11",
+      "registered_date": "2026-11-04",
+      "opinion_close_at": "2026-11-09 23:59",
+      "asign_budget_eok": 0.7,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294749&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00294735",
+      "title": "AI 기반 터널화재 선제대응 시스템 물품 구매",
+      "org": "주식회사 이스온",
+      "order_org": "주식회사 이스온",
+      "registered_at": "2026-11-04 10:54",
+      "registered_date": "2026-11-04",
+      "opinion_close_at": "2026-11-09 00:00",
+      "asign_budget_eok": 4.9434,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "인프라",
+      "bid_nos": [],
+      "spec_files": [],
+      "biz": "thng",
+      "biz_div": "물품",
+      "sw_biz": false
+    },
     {
       "prespec_no": "R26BD00294551",
       "title": "지능형 포렌식센터 구축을 위한 침해사고 분석 장비 도입",
