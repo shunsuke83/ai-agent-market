@@ -1,7 +1,36 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-04T12:09:56Z",
+  "generated_at": "2026-11-05T12:23:45Z",
   "contracts": [
+    {
+      "contract_no": "R26TA02392062",
+      "title": "AI 통합관제 데이터 연계 및 중계 환경 구축 용역",
+      "org": "해양경찰청",
+      "contract_org": "조달청 인천지방조달청",
+      "signed_date": "2026-11-05",
+      "period_text": "계약 후 70일 이내",
+      "end_date": "2027-01-14",
+      "amount_eok": 1.967,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 엑셈",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "1078827157"
+        }
+      ],
+      "bid_no": "R26BK01764817",
+      "registered_at": "2026-11-05 17:12",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02392062&ctrtChgOrd=00&prcmBsneSeCd=조070002&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화"
+    },
     {
       "contract_no": "R26TA02022939",
       "title": "광주비엔날레 AI라키비움 시스템 구축 용역",
@@ -206,6 +235,35 @@
       "bid_no": null,
       "registered_at": "2026-11-03 14:36",
       "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02376899&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화"
+    },
+    {
+      "contract_no": "R26TA02386832",
+      "title": "엣지 AI 캐리어보드 개발 및 생산 용역",
+      "org": "주식회사 티아이랩",
+      "contract_org": "주식회사 티아이랩",
+      "signed_date": "2026-11-03",
+      "period_text": "금차 84일, 총차 84일",
+      "end_date": "2027-01-31",
+      "amount_eok": 1.3585,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "제피로스일렉트로닉주식회사",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "5328803254"
+        }
+      ],
+      "bid_no": "R26BK01773679",
+      "registered_at": "2026-11-05 16:06",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02386832&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
       "scope": "AI SW 확대",
       "fields": [
         "AI 일반"
