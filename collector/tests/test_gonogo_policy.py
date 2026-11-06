@@ -136,6 +136,13 @@ def test_industry_codes_direct_production_and_credit():
 
     assert gate("업종코드 1468 또는 1426 등록 업체")[0][1] == gp.PASS
     assert gate("학술연구용역(업종코드 1169) 등록, 2025년 기준")[0][1] == gp.FAIL
+    assert gate("소프트웨어사업자(업종코드 1468) 등록", "정보통신공사업자 등록 업체")[0] == ("자격", gp.FAIL, "업종 0036")
+    assert gate("정보통신공사업(0036) 및 소프트웨어사업자(1468) 등록업체")[0] == ("자격", gp.FAIL, "업종 0036")
+    assert gate("정보통신공사업(0036) 또는 소프트웨어사업자(1468) 등록업체")[0][1] == gp.PASS
+    assert gate("정보통신공사업법에 따른 시공 기준 등록 준수") == []
+    profile["company"] = {**company, "g2b_registrable_codes": ["0036"]}
+    assert gate("정보통신공사업(0036) 및 소프트웨어사업자(1468) 등록업체")[0] == (
+        "자격", gp.UNKNOWN, "업종 0036 — 면허 보유, 나라장터 업종 등록 필요")
     assert gate("직접생산확인증명서(빅데이터 분석 서비스) 소지")[0][1] == gp.PASS
     assert gate("직접생산확인증명서(정보시스템유지관리서비스) 소지")[0][1] == gp.FAIL
     assert gate("직접생산확인(정보시스템개발서비스) 필수")[0] == ("자격", gp.FAIL, "직접생산확인 없음(정보시스템개발서비스)")

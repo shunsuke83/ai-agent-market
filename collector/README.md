@@ -140,7 +140,7 @@ secret 갱신(PowerShell): `cmd /c "gh secret set COMPANY_PROFILE < collector\co
 프로필에 `company`·`scoring` 키가 있으면 정책형 판정(`g2b/gonogo_policy.py`)을 씁니다.
 
 - 하드 게이트를 점수보다 먼저 봅니다. 지역·자격·실적 금액·인증은 공고 제한 표시와 제안요청서 요약에서 신호를 찾습니다. 미충족이면 NO-GO, 프로필 값이 비어 있으면(null) 미확인으로 REVIEW입니다.
-  - 자격: 요약에 나온 업종코드를 `company.g2b_industry_codes`와 대조(하나라도 맞으면 통과). 직접생산은 `direct_production_cert: {세부품명: 유효기간 종료일}`로 품목별 판정하고, `g2b_items_without_direct_production` 품목을 요구하면 미충족
+  - 자격: 요약의 요건 줄마다 업종코드(코드 없이 정보통신공사업·학술연구용역·행사대행업 이름만 있어도)를 `company.g2b_industry_codes`와 대조. 한 줄 안의 "또는"은 하나, "및"은 전부, 줄끼리는 모두 충족해야 통과. 면허는 있고 나라장터 업종만 미등록인 코드(`g2b_registrable_codes`)는 미충족 대신 미확인(등록 필요). 직접생산은 `direct_production_cert: {세부품명: 유효기간 종료일}`로 품목별 판정하고, `g2b_items_without_direct_production` 품목을 요구하면 미충족
   - 실적 금액: 요약의 "실적 N억" 요건을 `largest_g2b_contract_eok`·`non_g2b_amounts_eok` 중 큰 값과 비교
   - 일정: 마감까지 영업일 ≥ `min_business_days_to_deadline`. 동시 수행(`max_concurrent_builds`)은 현재 수행 건수가 없어 점수 항목에만 씁니다
 - `company.credit_rating.valid_until`이 지났으면 Slack 머리에 갱신 경고를 붙입니다.

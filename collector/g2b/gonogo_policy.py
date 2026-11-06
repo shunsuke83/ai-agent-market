@@ -123,11 +123,27 @@ def _qualification(
 
 _CODE_LINE = re.compile(r"업종|코드")
 _CODE = re.compile(r"(?<!\d)(?!19|20)(\d{4})(?!\d)")
+_REGISTERED_LINE = re.compile(r"업종|코드|등록|면허")
+# Licensed industries that summaries often name without the code.
+INDUSTRY_NAMES = (
+    ("0036", re.compile(r"정보통신\s*공사업(?!\s*법)")),
+    ("1169", re.compile(r"학술\s*[·ㆍ.]?\s*연구\s*용역")),
+    ("9901", re.compile(r"행사\s*대행업")),
+)
 
 
-def _industry_codes(summary: dict[str, Any] | None) -> set[str]:
+def _industry_codes(summary: dict[str, Any] | None) -> list[tuple[set[str], bool]]:
+    """[(codes, all_required)] per requirement line; '또는' → any, '및' → all."""
     reqs = ((summary or {}).get("summary") or {}).get("requirements") or []
-    return {c for line in reqs if _CODE_LINE.search(line) for c in _CODE.findall(line)}
+    out = []
+    for line in reqs:
+        codes = set(_CODE.findall(line)) if _CODE_LINE.search(line) else set()
+        named = {code for code, rx in INDUSTRY_NAMES if rx.search(line)} if _REGISTERED_LINE.search(line) else set()
+        if named:
+            codes |= named | set(_CODE.findall(line))
+        if codes:
+            out.append((codes, "또는" not in line and bool(re.search(r"\s및\s|\)\s*및", line))))
+    return out
 
 
 def credit_warning(profile: dict[str, Any], today: Any) -> str:
@@ -159,15 +175,24 @@ def judge_gates(
             out.append(("지역", PASS if ok else FAIL, "·".join(sorted(found)) + " 소재 제한"))
 
     if "eligibility" in gates_cfg:
-        codes = _industry_codes(summary)
+        groups = _industry_codes(summary)
         own_codes = {str(c) for c in company.get("g2b_industry_codes") or []}
-        by_code = bool(codes and own_codes)
+        groups = groups if own_codes else []
+        sw_by_code = any(codes & {"1468", "1426"} for codes, _ in groups)
         found = [_qualification(key, label, quals.get(key), text, now, company)
                  for key, label, rx in QUALIFICATION_SIGNALS
-                 if rx.search(text) and not (by_code and key == "sw_business_registration")]
-        if by_code:
-            label = "업종 " + "·".join(sorted(codes))
-            found.append((PASS if codes & own_codes else FAIL, label))
+                 if rx.search(text) and not (sw_by_code and key == "sw_business_registration")]
+        licensed = {str(c) for c in company.get("g2b_registrable_codes") or []}
+        for codes, all_required in groups:
+            ok = codes <= own_codes if all_required else bool(codes & own_codes)
+            if ok:
+                found.append((PASS, "업종 " + "·".join(sorted(codes))))
+                continue
+            missing = codes - own_codes
+            registrable = (missing <= licensed) if all_required else bool(missing & licensed)
+            shown = sorted(missing & licensed) if registrable else sorted(missing)
+            label = "업종 " + "·".join(shown) + (" — 면허 보유, 나라장터 업종 등록 필요" if registrable else "")
+            found.append((UNKNOWN if registrable else FAIL, label))
         if found:
             statuses = [s for s, _ in found]
             status = FAIL if FAIL in statuses else UNKNOWN if UNKNOWN in statuses else PASS
