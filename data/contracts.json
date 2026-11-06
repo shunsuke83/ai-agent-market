@@ -1,7 +1,36 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-05T12:23:45Z",
+  "generated_at": "2026-11-06T12:08:08Z",
   "contracts": [
+    {
+      "contract_no": "R26TA02382452",
+      "title": "AI의료 기술 개발 고도화 관련 임상연구정보검색시스템(CDW) 구축 계약",
+      "org": "원광대학교 광주한방병원, 원광병원",
+      "contract_org": "원광대학교 광주한방병원, 원광병원",
+      "signed_date": "2026-11-06",
+      "period_text": "금차 55일, 총차 1518일",
+      "end_date": "2030-12-31",
+      "amount_eok": 10.705,
+      "long_term": "장기",
+      "method": "수의계약",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 미소정보기술",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "2208725270"
+        }
+      ],
+      "bid_no": "R26BK01751619",
+      "registered_at": "2026-11-06 10:38",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02382452&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "의료·바이오 AI"
+      ],
+      "nature": "시스템 구축·고도화"
+    },
     {
       "contract_no": "R26TA02392062",
       "title": "AI 통합관제 데이터 연계 및 중계 환경 구축 용역",
@@ -30,6 +59,35 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화"
+    },
+    {
+      "contract_no": "R26TA02395194",
+      "title": "AI PoC를 위한 GPU서버 구매 및 환경 구축",
+      "org": "한국장학재단",
+      "contract_org": "한국장학재단",
+      "signed_date": "2026-11-05",
+      "period_text": "금차 120일, 총차 120일",
+      "end_date": "2027-03-04",
+      "amount_eok": 1.892,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 비엔아이엔씨",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "3628100659"
+        }
+      ],
+      "bid_no": "R26BK01747593",
+      "registered_at": "2026-11-06 13:38",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02395194&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 인프라"
+      ],
+      "nature": "인프라"
     },
     {
       "contract_no": "R26TA02022939",
@@ -262,7 +320,7 @@
         }
       ],
       "bid_no": "R26BK01773679",
-      "registered_at": "2026-11-05 16:06",
+      "registered_at": "2026-11-06 16:18",
       "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02386832&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
       "scope": "AI SW 확대",
       "fields": [

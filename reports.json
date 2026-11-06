@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-05T21:27:24.399912+09:00",
+  "generated_at": "2026-11-06T21:11:51.949690+09:00",
   "weekly": [
     {
       "year": 2026,
@@ -9,7 +9,7 @@
       "slug": "weekly-2026-W44",
       "core_count": 83,
       "budget_sum": 251.4,
-      "awards_count": 54,
+      "awards_count": 55,
       "other_count": 142,
       "start": "2026-10-26",
       "end": "2026-11-01"
@@ -27,13 +27,13 @@
       "month": 11,
       "file": "monthly-2026-11.html",
       "slug": "monthly-2026-11",
-      "core_count": 63,
-      "budget_sum": 538.0,
+      "core_count": 73,
+      "budget_sum": 554.9,
       "large_count": 7,
-      "isp_count": 3,
+      "isp_count": 4,
       "in_progress": true,
       "start": "2026-11-01",
-      "end": "2026-11-05"
+      "end": "2026-11-06"
     },
     {
       "year": 2026,

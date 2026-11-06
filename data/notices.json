@@ -1,12 +1,1362 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-05T12:24:02Z",
+  "generated_at": "2026-11-06T12:08:27Z",
   "mode": "g2b_api",
   "range": {
-    "since": "2026-11-02",
-    "until": "2026-11-05"
+    "since": "2026-11-03",
+    "until": "2026-11-06"
   },
   "notices": [
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01815896",
+      "bid_ord": "000",
+      "notice_date": "2026-11-06",
+      "open_date": "2026-11-17",
+      "open_at": "2026-11-17 15:00",
+      "close_at": null,
+      "close_date": null,
+      "org": "계명대학교 산학협력단",
+      "title": "2026년 첨단산업 인재양성 부트캠프(AI분야)「제1회 글로벌 AI 프론티어 프로그램」국제선 항공권 구입",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "연구·교육·행사",
+      "budget_eok": 0.325,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 0.325,
+      "presmpt_eok": 0.2955,
+      "base_amount_eok": null,
+      "contract_method": "일반경쟁",
+      "ntce_kind": "등록공고",
+      "biz": "servc",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01815896&bidPbancOrd=000",
+      "award_method": "2단계경쟁입찰-가격입찰서제출자 중 예가 내 최저가 투찰자",
+      "tech_rate": null,
+      "price_rate": null,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": false,
+      "participation_limit": false,
+      "record_limit": false,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": null,
+      "plan_no": "R26DD20921396",
+      "notice_files": [
+        {
+          "name": "0. 입찰공고문.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01815896&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        },
+        {
+          "name": "2. 제안요청서.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01815896&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01815732",
+      "bid_ord": "000",
+      "notice_date": "2026-11-06",
+      "open_date": "2026-11-12",
+      "open_at": "2026-11-12 13:00",
+      "close_at": null,
+      "close_date": null,
+      "org": "분당서울대학교병원",
+      "title": "AI기반 의료영상 전송 장치 소프트웨어(재공고)",
+      "scope": "AI SW 확대",
+      "fields": [
+        "의료·바이오 AI",
+        "비전·영상"
+      ],
+      "nature": null,
+      "budget_eok": null,
+      "budget_kind": null,
+      "asign_budget_eok": 0.0,
+      "presmpt_eok": 0.0,
+      "base_amount_eok": null,
+      "contract_method": "제한경쟁",
+      "ntce_kind": "재공고",
+      "biz": "thng",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01815732&bidPbancOrd=000",
+      "award_method": "규격가격동시입찰-제안적격자 중 예가 내 최저가 투찰자",
+      "tech_rate": null,
+      "price_rate": null,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": null,
+      "participation_limit": null,
+      "record_limit": null,
+      "rebid": true,
+      "prev_bid_no": "R26BK01797427",
+      "prespec_no": "R26BD00288880",
+      "plan_no": "R26DD20904319",
+      "notice_files": [
+        {
+          "name": "입찰공고(2026-0735).zip",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01815732&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01815601",
+      "bid_ord": "000",
+      "notice_date": "2026-11-06",
+      "open_date": "2026-11-17",
+      "open_at": "2026-11-17 16:00",
+      "close_at": null,
+      "close_date": null,
+      "org": "연암대학교 산학협력단",
+      "title": "연암대학교 AID 전환 중점 전문대학 지원사업 성과관리 체계 구축 및 운영업체 선정",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "budget_eok": 1.1,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 1.1,
+      "presmpt_eok": 1.0,
+      "base_amount_eok": null,
+      "contract_method": "제한경쟁",
+      "ntce_kind": "재공고",
+      "biz": "servc",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01815601&bidPbancOrd=000",
+      "award_method": "협상에의한계약-협상에 의한 낙찰자 결정",
+      "tech_rate": 80.0,
+      "price_rate": 20.0,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": false,
+      "participation_limit": false,
+      "record_limit": false,
+      "rebid": true,
+      "prev_bid_no": "R26BK01785402",
+      "prespec_no": "R26BD00288675",
+      "plan_no": "R26DD20903836",
+      "notice_files": [
+        {
+          "name": "2. [공고문]연암대학교 AID 전환 중점 전문대학 지원사업 성과관리 체계 구축 및 운영업체 선정 입찰.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01815601&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        },
+        {
+          "name": "3. [제안요청서]AID 전환 중점 전문대학 지원사업 성과관리 체계 구축 및 운영업체 선정 입찰.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01815601&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01815561",
+      "bid_ord": "000",
+      "notice_date": "2026-11-06",
+      "open_date": "2026-11-17",
+      "open_at": "2026-11-17 14:00",
+      "close_at": null,
+      "close_date": null,
+      "org": "사단법인 금융보안원",
+      "title": "AWS Bedrock 및 AI통합 포털 구축",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "budget_eok": null,
+      "budget_kind": null,
+      "asign_budget_eok": 0.0,
+      "presmpt_eok": 0.0,
+      "base_amount_eok": null,
+      "contract_method": "일반경쟁",
+      "ntce_kind": "등록공고",
+      "biz": "servc",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01815561&bidPbancOrd=000",
+      "award_method": "협상에의한계약-협상에 의한 낙찰자 결정",
+      "tech_rate": 80.0,
+      "price_rate": 20.0,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": false,
+      "participation_limit": false,
+      "record_limit": false,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": "R26BD00296340",
+      "plan_no": "R26DD20921176",
+      "notice_files": [
+        {
+          "name": "AWS Bedrock 및 AI통합 포털 구축 관련 입찰공고.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01815561&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        },
+        {
+          "name": "AWS Bedrock 및 AI통합 포털 구축 관련 입찰공고.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01815561&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+        },
+        {
+          "name": "AWS Bedrock 및 AI통합 포털 구축 관련 제안요청서.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01815561&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01815532",
+      "bid_ord": "000",
+      "notice_date": "2026-11-06",
+      "open_date": "2026-11-26",
+      "open_at": "2026-11-26 14:00",
+      "close_at": null,
+      "close_date": null,
+      "org": "사단법인 금융보안원",
+      "title": "고성능 AI서버 구축",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "budget_eok": null,
+      "budget_kind": null,
+      "asign_budget_eok": 0.0,
+      "presmpt_eok": 0.0,
+      "base_amount_eok": null,
+      "contract_method": "일반경쟁",
+      "ntce_kind": "등록공고",
+      "biz": "thng",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01815532&bidPbancOrd=000",
+      "award_method": "2단계경쟁입찰-가격입찰서제출자 중 예가 내 최저가 투찰자",
+      "tech_rate": null,
+      "price_rate": null,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": null,
+      "participation_limit": null,
+      "record_limit": null,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": "R26BD00296330",
+      "plan_no": "R26DD20921155",
+      "notice_files": [
+        {
+          "name": "고성능 AI서버 구축 관련 입찰공고.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01815532&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        },
+        {
+          "name": "고성능 AI서버 구축 관련 입찰공고.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01815532&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01"
+        },
+        {
+          "name": "고성능 AI서버 구축 관련 제안요청서.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01815532&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01815091",
+      "bid_ord": "000",
+      "notice_date": "2026-11-06",
+      "open_date": "2026-11-27",
+      "open_at": "2026-11-27 11:00",
+      "close_at": "2026-11-27 10:00",
+      "close_date": "2026-11-27",
+      "org": "한국생명공학연구원",
+      "title": "국가생명공학정책연구센터 통합시스템 AX 전략수립(ISP·ISMP)",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AX·전략"
+      ],
+      "nature": "ISP·전략",
+      "budget_eok": 1.5145,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 1.5145,
+      "presmpt_eok": 1.3636,
+      "base_amount_eok": null,
+      "contract_method": "제한경쟁",
+      "ntce_kind": "등록공고",
+      "biz": "servc",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01815091&bidPbancOrd=000",
+      "award_method": "협상에의한계약-협상에 의한 낙찰자 결정(SW사업)",
+      "tech_rate": 90.0,
+      "price_rate": 10.0,
+      "joint_method": "(전자)공동이행",
+      "industry_limit": true,
+      "participation_limit": false,
+      "record_limit": false,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": "R26BD00293013",
+      "plan_no": "R26DD20912386",
+      "notice_files": [
+        {
+          "name": "공고_전략_공동_수평.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01815091&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        },
+        {
+          "name": "공고_전략_공동_수평.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01815091&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01815064",
+      "bid_ord": "000",
+      "notice_date": "2026-11-06",
+      "open_date": "2026-11-16",
+      "open_at": "2026-11-16 11:00",
+      "close_at": "2026-11-16 10:00",
+      "close_date": "2026-11-16",
+      "org": "서울대학교 대학 첨단융합학부",
+      "title": "서울대학교 첨단융합학부 차세대지능형반도체전공 메모리모듈카드 구매",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "budget_eok": 0.8118,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 0.8118,
+      "presmpt_eok": 0.738,
+      "base_amount_eok": null,
+      "contract_method": "제한경쟁",
+      "ntce_kind": "등록공고",
+      "biz": "thng",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01815064&bidPbancOrd=000",
+      "award_method": "규격가격동시입찰-제안적격자 중 예가 내 최저가 투찰자",
+      "tech_rate": null,
+      "price_rate": null,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": null,
+      "participation_limit": null,
+      "record_limit": null,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": null,
+      "plan_no": "R26DD20920905",
+      "notice_files": [
+        {
+          "name": "제안요청서_메모리모듈카드(서버용).hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01815064&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
+        },
+        {
+          "name": "규격서_메모리모듈카드(서버용).hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01815064&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01"
+        },
+        {
+          "name": "입찰공고문_메모리모듈카드(서버용)_중소기업.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01815064&bidPbancOrd=000&fileType=&fileSeq=5&prcmBsneSeCd=01"
+        },
+        {
+          "name": "입찰공고문_메모리모듈카드(서버용)_중소기업.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01815064&bidPbancOrd=000&fileType=&fileSeq=6&prcmBsneSeCd=01"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01815005",
+      "bid_ord": "000",
+      "notice_date": "2026-11-06",
+      "open_date": "2026-11-19",
+      "open_at": "2026-11-19 10:30",
+      "close_at": null,
+      "close_date": null,
+      "org": "한국생산성본부",
+      "title": "지역 제조기업 산업 AI 수요–공급 매칭모델 고도화 연구 용역",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "연구·교육·행사",
+      "budget_eok": 0.7,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 0.7,
+      "presmpt_eok": 0.6364,
+      "base_amount_eok": null,
+      "contract_method": "일반경쟁",
+      "ntce_kind": "등록공고",
+      "biz": "servc",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01815005&bidPbancOrd=000",
+      "award_method": "협상에의한계약-협상에 의한 낙찰자 결정",
+      "tech_rate": 90.0,
+      "price_rate": 10.0,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": false,
+      "participation_limit": false,
+      "record_limit": false,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": null,
+      "plan_no": "R26DD20920831",
+      "notice_files": [
+        {
+          "name": "공고파일.zip",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01815005&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01814935",
+      "bid_ord": "000",
+      "notice_date": "2026-11-06",
+      "open_date": "2026-11-09",
+      "open_at": "2026-11-09 13:00",
+      "close_at": "2026-11-09 12:00",
+      "close_date": "2026-11-09",
+      "org": "연세대학교 미래캠퍼스",
+      "title": "[앵커사업] 드론 이착륙 안전 확보를 위한  AI 인체감지 자동 경고방송 시스템 개발 용역",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "budget_eok": 0.1,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 0.1,
+      "presmpt_eok": 0.0909,
+      "base_amount_eok": null,
+      "contract_method": "수의계약",
+      "ntce_kind": "등록공고",
+      "biz": "servc",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01814935&bidPbancOrd=000",
+      "award_method": "수의시담-수의시담",
+      "tech_rate": null,
+      "price_rate": null,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": false,
+      "participation_limit": false,
+      "record_limit": false,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": null,
+      "plan_no": "R26DD20920793",
+      "notice_files": [
+        {
+          "name": "용역 수의(소액)계약 전자시담 안내 공고서.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01814935&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        },
+        {
+          "name": "용역 수의(소액)계약 전자시담 안내 공고서.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01814935&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+        },
+        {
+          "name": "붙임1. 수의계약 배제사유 해당없음 각서(서식).hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01814935&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+        },
+        {
+          "name": "붙임2. 과업지시서.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01814935&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
+        },
+        {
+          "name": "붙임3. (계약예규) 용역계약일반조건(기획재정부계약예규).pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01814935&bidPbancOrd=000&fileType=&fileSeq=5&prcmBsneSeCd=03"
+        },
+        {
+          "name": "붙임4. 협력체 등록방법 안내문(낙찰업체 해당,전자세금계산서 역발행, 우리은행 계좌 필).pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01814935&bidPbancOrd=000&fileType=&fileSeq=6&prcmBsneSeCd=03"
+        },
+        {
+          "name": "붙임5. 서약서(서식).hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01814935&bidPbancOrd=000&fileType=&fileSeq=7&prcmBsneSeCd=03"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01814923",
+      "bid_ord": "000",
+      "notice_date": "2026-11-06",
+      "open_date": "2026-11-09",
+      "open_at": "2026-11-09 13:00",
+      "close_at": "2026-11-09 12:00",
+      "close_date": "2026-11-09",
+      "org": "대림대학교 산학협력단",
+      "title": "[대림대학교] 2026년 전문대학 혁신지원사업 3주기 2차년도 AI DX 기반 에듀테크 교육환경 개선 3차 기계기구 구입_휴머노이드",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "연구·교육·행사",
+      "budget_eok": 0.968,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 0.968,
+      "presmpt_eok": 0.88,
+      "base_amount_eok": null,
+      "contract_method": "수의계약",
+      "ntce_kind": "등록공고",
+      "biz": "thng",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01814923&bidPbancOrd=000",
+      "award_method": "수의시담-수의시담",
+      "tech_rate": null,
+      "price_rate": null,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": null,
+      "participation_limit": null,
+      "record_limit": null,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": "R26BD00274765",
+      "plan_no": "R26DD20871548",
+      "notice_files": [
+        {
+          "name": "2. 물품구매규격서.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01814923&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01814902",
+      "bid_ord": "000",
+      "notice_date": "2026-11-06",
+      "open_date": "2026-11-20",
+      "open_at": "2026-11-20 11:00",
+      "close_at": "2026-11-20 10:00",
+      "close_date": "2026-11-20",
+      "org": "한국생산기술연구원",
+      "title": "지역 뿌리기업 AI 활용 역량 강화 교육과정 개발 및 운영 용역",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "연구·교육·행사",
+      "budget_eok": 0.25,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 0.25,
+      "presmpt_eok": 0.2273,
+      "base_amount_eok": null,
+      "contract_method": "제한경쟁",
+      "ntce_kind": "등록공고",
+      "biz": "servc",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01814902&bidPbancOrd=000",
+      "award_method": "협상에의한계약-협상에 의한 낙찰자 결정",
+      "tech_rate": 80.0,
+      "price_rate": 20.0,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": true,
+      "participation_limit": false,
+      "record_limit": false,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": "R26BD00292529",
+      "plan_no": "R26DD20920685",
+      "notice_files": [
+        {
+          "name": "공고서.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01814902&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        },
+        {
+          "name": "과업지시서.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01814902&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01814821",
+      "bid_ord": "000",
+      "notice_date": "2026-11-06",
+      "open_date": "2026-11-16",
+      "open_at": "2026-11-16 15:30",
+      "close_at": null,
+      "close_date": null,
+      "org": "인제대학교 산학협력단",
+      "title": "GPU AI 연산 서버 및 AI 데이터 저장 서버 구매",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 인프라"
+      ],
+      "nature": "인프라",
+      "budget_eok": 2.499,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 2.499,
+      "presmpt_eok": 2.2718,
+      "base_amount_eok": null,
+      "contract_method": "일반경쟁",
+      "ntce_kind": "등록공고",
+      "biz": "thng",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01814821&bidPbancOrd=000",
+      "award_method": "규격가격동시입찰-제안적격자 중 예가 내 최저가 투찰자",
+      "tech_rate": null,
+      "price_rate": null,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": null,
+      "participation_limit": null,
+      "record_limit": null,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": "R26BD00292003",
+      "plan_no": "R26DD20911239",
+      "notice_files": [
+        {
+          "name": "[입찰공고]GPU AI 연산 서버 및 AI 데이터 저장 서버 구매.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01814821&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        },
+        {
+          "name": "[입찰공고]GPU AI 연산 서버 및 AI 데이터 저장 서버 구매.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01814821&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01"
+        },
+        {
+          "name": "[규격서]GPU AI 연산 서버 및 AI 데이터 저장 서버 구매.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01814821&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
+        },
+        {
+          "name": "[규격검토확인서]GPU AI 연산 서버 및 AI 데이터 저장 서버 구매.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01814821&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01"
+        },
+        {
+          "name": "입찰참가시 제출서류 서식-산단.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01814821&bidPbancOrd=000&fileType=&fileSeq=5&prcmBsneSeCd=01"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01814472",
+      "bid_ord": "000",
+      "notice_date": "2026-11-06",
+      "open_date": "2026-11-17",
+      "open_at": "2026-11-17 13:00",
+      "close_at": "2026-11-17 12:00",
+      "close_date": "2026-11-17",
+      "org": "기후에너지환경부 국립야생동물질병관리원",
+      "title": "`26년 AI 진단용 백색 발육란 단가계약",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "budget_eok": 0.4493,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 0.4493,
+      "presmpt_eok": 0.4493,
+      "base_amount_eok": null,
+      "contract_method": "제한경쟁",
+      "ntce_kind": "재공고",
+      "biz": "thng",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01814472&bidPbancOrd=000",
+      "award_method": "적격심사제-추정가격이 고시금액 미만인 물품 제조 또는 구매입찰",
+      "tech_rate": null,
+      "price_rate": null,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": null,
+      "participation_limit": null,
+      "record_limit": null,
+      "rebid": true,
+      "prev_bid_no": "R26BK01795221",
+      "prespec_no": "R26BD00288857",
+      "plan_no": "R26DD20904275",
+      "notice_files": [
+        {
+          "name": "규격서.xlsx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01814472&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
+        },
+        {
+          "name": "1. 입찰재공고문_`26년 AI 진단용 백색 발육란 단가계약.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01814472&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01"
+        },
+        {
+          "name": "1. 입찰재공고문_`26년 AI 진단용 백색 발육란 단가계약.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01814472&bidPbancOrd=000&fileType=&fileSeq=5&prcmBsneSeCd=01"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01814369",
+      "bid_ord": "000",
+      "notice_date": "2026-11-06",
+      "open_date": "2026-11-12",
+      "open_at": "2026-11-12 15:00",
+      "close_at": null,
+      "close_date": null,
+      "org": "세종대학교 산학협력단",
+      "title": "[세종산단20260031-1호] 세종대학교 AI로봇학과 연산용 GPU 1종 구매",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 인프라"
+      ],
+      "nature": "인프라",
+      "budget_eok": 0.2695,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 0.2695,
+      "presmpt_eok": 0.245,
+      "base_amount_eok": null,
+      "contract_method": "제한경쟁",
+      "ntce_kind": "재공고",
+      "biz": "thng",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01814369&bidPbancOrd=000",
+      "award_method": "최저가낙찰제-최저가낙찰자",
+      "tech_rate": null,
+      "price_rate": null,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": null,
+      "participation_limit": null,
+      "record_limit": null,
+      "rebid": true,
+      "prev_bid_no": "R26BK01774769",
+      "prespec_no": "R26BD00285758",
+      "plan_no": "R26DD20897596",
+      "notice_files": [
+        {
+          "name": "붙임 1. 입찰(재)공고문(세종산단20260031-1호).hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01814369&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        },
+        {
+          "name": "붙임 1. 입찰(재)공고문(세종산단20260031-1호).pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01814369&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01"
+        },
+        {
+          "name": "붙임 2. 물품규격서(세종산단20260031-1호).pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01814369&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01814333",
+      "bid_ord": "000",
+      "notice_date": "2026-11-06",
+      "open_date": "2026-11-11",
+      "open_at": "2026-11-11 11:00",
+      "close_at": "2026-11-11 10:00",
+      "close_date": "2026-11-11",
+      "org": "경북대학교 AIx바이오혁신연구거점사업단",
+      "title": "인공지능 기반 바이오 연구용 고성능 GPU",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 인프라",
+        "의료·바이오 AI"
+      ],
+      "nature": "인프라",
+      "budget_eok": 0.297,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 0.297,
+      "presmpt_eok": 0.27,
+      "base_amount_eok": null,
+      "contract_method": "수의계약",
+      "ntce_kind": "등록공고",
+      "biz": "thng",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01814333&bidPbancOrd=000",
+      "award_method": "수의시담-수의시담",
+      "tech_rate": null,
+      "price_rate": null,
+      "joint_method": "(전자)공동이행 또는 분담이행",
+      "industry_limit": null,
+      "participation_limit": null,
+      "record_limit": null,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": "R26BD00287508",
+      "plan_no": null,
+      "notice_files": [
+        {
+          "name": "구매 규격서_GPU.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01814333&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        },
+        {
+          "name": "긴급입찰요청사유서.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01814333&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01814333",
+      "bid_ord": "001",
+      "notice_date": "2026-11-06",
+      "open_date": "2026-11-11",
+      "open_at": "2026-11-11 11:00",
+      "close_at": "2026-11-11 10:00",
+      "close_date": "2026-11-11",
+      "org": "경북대학교 AIx바이오혁신연구거점사업단",
+      "title": "인공지능 기반 바이오 연구용 고성능 GPU",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 인프라",
+        "의료·바이오 AI"
+      ],
+      "nature": "인프라",
+      "budget_eok": 0.297,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 0.297,
+      "presmpt_eok": 0.27,
+      "base_amount_eok": null,
+      "contract_method": "수의계약",
+      "ntce_kind": "변경공고",
+      "biz": "thng",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01814333&bidPbancOrd=001",
+      "award_method": "수의시담-수의시담",
+      "tech_rate": null,
+      "price_rate": null,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": null,
+      "participation_limit": null,
+      "record_limit": null,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": "R26BD00287508",
+      "plan_no": null,
+      "notice_files": [
+        {
+          "name": "구매 규격서_GPU.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01814333&bidPbancOrd=001&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        },
+        {
+          "name": "긴급입찰요청사유서.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01814333&bidPbancOrd=001&fileType=&fileSeq=2&prcmBsneSeCd=01"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01814306",
+      "bid_ord": "000",
+      "notice_date": "2026-11-06",
+      "open_date": "2026-12-15",
+      "open_at": "2026-12-15 11:00",
+      "close_at": "2026-12-09 11:00",
+      "close_date": "2026-12-09",
+      "org": "육군군수사령부",
+      "title": "AI기반 해안경계작전체계(지작사) 2차 선행연구 용역",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "연구·교육·행사",
+      "budget_eok": 0.9102,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 0.9102,
+      "presmpt_eok": 0.8275,
+      "base_amount_eok": null,
+      "contract_method": "제한경쟁",
+      "ntce_kind": "등록공고",
+      "biz": "servc",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01814306&bidPbancOrd=000",
+      "award_method": "협상에의한계약-협상에 의한 낙찰자 결정",
+      "tech_rate": 80.0,
+      "price_rate": 20.0,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": true,
+      "participation_limit": false,
+      "record_limit": false,
+      "rebid": true,
+      "prev_bid_no": "R26BK01799525",
+      "prespec_no": "R26BD00288937",
+      "plan_no": "R26DD20912043",
+      "notice_files": [
+        {
+          "name": "공고문 자료(취소 후 신규공고).zip",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01814306&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01814151",
+      "bid_ord": "000",
+      "notice_date": "2026-11-06",
+      "open_date": "2026-11-12",
+      "open_at": "2026-11-12 14:00",
+      "close_at": "2026-11-12 11:00",
+      "close_date": "2026-11-12",
+      "org": "전주비전대학 산학협력단",
+      "title": "재공고_(AID)AI 데이터센터 GPU 서버(RTX PRO 5000 72G) 5개 구매",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 인프라"
+      ],
+      "nature": "인프라",
+      "budget_eok": 0.7475,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 0.7475,
+      "presmpt_eok": 0.6795,
+      "base_amount_eok": null,
+      "contract_method": "일반경쟁",
+      "ntce_kind": "재공고",
+      "biz": "thng",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01814151&bidPbancOrd=000",
+      "award_method": "규격가격동시입찰-제안적격자 중 예가 내 최저가 투찰자",
+      "tech_rate": null,
+      "price_rate": null,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": null,
+      "participation_limit": null,
+      "record_limit": null,
+      "rebid": true,
+      "prev_bid_no": "R26BK01797151",
+      "prespec_no": "R26BD00284378",
+      "plan_no": "R26DD20901667",
+      "notice_files": [
+        {
+          "name": "(재공고2)1. 입찰공고문_(AID)AI 데이터센터 GPU 서버(RTX PRO 5000 72G) 5개 구매.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01814151&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        },
+        {
+          "name": "(재공고2)1. 입찰공고문_(AID)AI 데이터센터 GPU 서버(RTX PRO 5000 72G) 5개 구매.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01814151&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01"
+        },
+        {
+          "name": "2. 물품 총괄표 및 사양서_ AI 데이터센터 GPU 서버(RTX PRO 5000 72G)5개.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01814151&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01814118",
+      "bid_ord": "000",
+      "notice_date": "2026-11-06",
+      "open_date": "2026-11-18",
+      "open_at": "2026-11-18 11:00",
+      "close_at": "2026-11-18 10:00",
+      "close_date": "2026-11-18",
+      "org": "호서대학교 산학협력단",
+      "title": "[긴급] 제조AX 공용 데이터수집 및 관제 모니터링 솔루션  구축 용역",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "budget_eok": 2.0,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 2.0,
+      "presmpt_eok": 1.8182,
+      "base_amount_eok": null,
+      "contract_method": "제한경쟁",
+      "ntce_kind": "등록공고",
+      "biz": "servc",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01814118&bidPbancOrd=000",
+      "award_method": "협상에의한계약-협상에 의한 낙찰자 결정",
+      "tech_rate": 80.0,
+      "price_rate": 20.0,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": false,
+      "participation_limit": false,
+      "record_limit": false,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": "R26BD00293296",
+      "plan_no": "R26DD20913974",
+      "notice_files": [
+        {
+          "name": "01 공고_제조AX 공용 데이터수집 및 관제 모니터링 솔루션 구축 용역.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01814118&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        },
+        {
+          "name": "02 과업지시서_제조AX 공용 데이터수집 및 관제 모니터링 솔루션 구축 용역.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01814118&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+        },
+        {
+          "name": "03 각종양식_제조AX 공용 데이터수집 및 관제 모니터링 솔루션 구축 용역.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01814118&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01814071",
+      "bid_ord": "000",
+      "notice_date": "2026-11-06",
+      "open_date": "2026-11-17",
+      "open_at": "2026-11-17 15:00",
+      "close_at": null,
+      "close_date": null,
+      "org": "(재)원주의료기기산업진흥원",
+      "title": "AI 시제품 개발·제작 지원 플랫폼 구축 용역",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "budget_eok": 4.6,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 4.6,
+      "presmpt_eok": 4.1818,
+      "base_amount_eok": null,
+      "contract_method": "제한경쟁",
+      "ntce_kind": "등록공고",
+      "biz": "servc",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01814071&bidPbancOrd=000",
+      "award_method": "협상에의한계약-협상에 의한 낙찰자 결정(SW사업)",
+      "tech_rate": 90.0,
+      "price_rate": 10.0,
+      "joint_method": "(전자)공동이행",
+      "industry_limit": true,
+      "participation_limit": false,
+      "record_limit": false,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": "R26BD00292172",
+      "plan_no": "R26DD20911596",
+      "notice_files": [
+        {
+          "name": "붙임2. 입찰공고문(안).hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01814071&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        },
+        {
+          "name": "붙임3. 제안요청서.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01814071&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+        },
+        {
+          "name": "붙임2. 입찰공고문(안).pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01814071&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01813416",
+      "bid_ord": "000",
+      "notice_date": "2026-11-06",
+      "open_date": "2026-11-17",
+      "open_at": "2026-11-17 12:00",
+      "close_at": "2026-11-17 11:00",
+      "close_date": "2026-11-17",
+      "org": "서울특별시교육청",
+      "title": "전국 학생 AI 꿈키움 겨울 캠프 운영 위탁 용역",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "연구·교육·행사",
+      "budget_eok": 1.69,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 1.69,
+      "presmpt_eok": 1.5364,
+      "base_amount_eok": null,
+      "contract_method": "제한경쟁",
+      "ntce_kind": "등록공고",
+      "biz": "servc",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01813416&bidPbancOrd=000",
+      "award_method": "협상에의한계약-협상에 의한 낙찰자 결정",
+      "tech_rate": 90.0,
+      "price_rate": 10.0,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": true,
+      "participation_limit": false,
+      "record_limit": false,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": "R26BD00293622",
+      "plan_no": "R26DD20914752",
+      "notice_files": [
+        {
+          "name": "입찰공고문.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01813416&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        },
+        {
+          "name": "입찰공고문.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01813416&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+        },
+        {
+          "name": "제안요청서(교육부 서울교육청 공동 주최 「전국 학생 AI 꿈키움 겨울 캠프」 운영 계획).hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01813416&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01813286",
+      "bid_ord": "001",
+      "notice_date": "2026-11-06",
+      "open_date": "2026-11-16",
+      "open_at": "2026-11-16 11:00",
+      "close_at": "2026-11-16 10:00",
+      "close_date": "2026-11-16",
+      "org": "충청남도 서산시",
+      "title": "서산시 AI 보이스봇 기반 민원응대 시스템 구축 사업",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "budget_eok": 0.91,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 0.91,
+      "presmpt_eok": 0.8273,
+      "base_amount_eok": null,
+      "contract_method": "일반경쟁",
+      "ntce_kind": "취소공고",
+      "biz": "servc",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01813286&bidPbancOrd=001",
+      "award_method": "협상에의한계약-협상에 의한 낙찰자 결정",
+      "tech_rate": 90.0,
+      "price_rate": 10.0,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": true,
+      "participation_limit": false,
+      "record_limit": false,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": "R26BD00293046",
+      "plan_no": "R26DD20919768",
+      "notice_files": []
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01812444",
+      "bid_ord": "000",
+      "notice_date": "2026-11-06",
+      "open_date": "2026-11-19",
+      "open_at": "2026-11-19 15:00",
+      "close_at": null,
+      "close_date": null,
+      "org": "가천대학교 산학협력단",
+      "title": "가정내 데이터 기반 근감소증 및 건강위험 예측 AI 모델 개발 용역",
+      "scope": "AI SW 확대",
+      "fields": [
+        "데이터·예측"
+      ],
+      "nature": "시스템 구축·고도화",
+      "budget_eok": 0.24,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 0.24,
+      "presmpt_eok": 0.2182,
+      "base_amount_eok": null,
+      "contract_method": "일반경쟁",
+      "ntce_kind": "등록공고",
+      "biz": "servc",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01812444&bidPbancOrd=000",
+      "award_method": "최저가낙찰제-최저가낙찰자",
+      "tech_rate": null,
+      "price_rate": null,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": false,
+      "participation_limit": true,
+      "record_limit": false,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": null,
+      "plan_no": "R26DD20919311",
+      "notice_files": [
+        {
+          "name": "1. 입찰공고문_용역.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01812444&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        },
+        {
+          "name": "2. 과업지시서_감소증예측A모델개발.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01812444&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+        },
+        {
+          "name": "1. 입찰공고문_용역.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01812444&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01812428",
+      "bid_ord": "000",
+      "notice_date": "2026-11-06",
+      "open_date": "2026-11-06",
+      "open_at": "2026-11-06 17:00",
+      "close_at": "2026-11-06 16:00",
+      "close_date": "2026-11-06",
+      "org": "경기도 포천시",
+      "title": "포천시 업무지원 생성형 AI 플랫폼(웍스AI) 구입",
+      "scope": "생성형·Agent",
+      "fields": [
+        "생성형·LLM"
+      ],
+      "nature": null,
+      "budget_eok": 0.45,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 0.45,
+      "presmpt_eok": 0.4091,
+      "base_amount_eok": null,
+      "contract_method": "수의계약",
+      "ntce_kind": "등록공고",
+      "biz": "thng",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01812428&bidPbancOrd=000",
+      "award_method": "수의시담-수의시담",
+      "tech_rate": null,
+      "price_rate": null,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": null,
+      "participation_limit": null,
+      "record_limit": null,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": null,
+      "plan_no": null,
+      "notice_files": [
+        {
+          "name": "공고문(웍스AI).pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01812428&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        }
+      ],
+      "winner": "에이아이쓰리",
+      "bid_count": 1,
+      "award_amount_eok": 0.396,
+      "win_rate_pct": 88.0,
+      "status": "낙찰",
+      "award_to_budget_pct": 88.0
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01806808",
+      "bid_ord": "000",
+      "notice_date": "2026-11-06",
+      "open_date": "2026-11-20",
+      "open_at": "2026-11-20 11:00",
+      "close_at": "2026-11-20 10:00",
+      "close_date": "2026-11-20",
+      "org": "경기도 광주시",
+      "title": "2027년 광주시 지능형교통체계 통합유지관리 용역",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "운영·유지보수",
+      "budget_eok": 6.46,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 6.46,
+      "presmpt_eok": 5.8209,
+      "base_amount_eok": null,
+      "contract_method": "제한경쟁",
+      "ntce_kind": "등록공고",
+      "biz": "servc",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01806808&bidPbancOrd=000",
+      "award_method": "협상에의한계약-협상에 의한 낙찰자 결정(SW사업)",
+      "tech_rate": 90.0,
+      "price_rate": 10.0,
+      "joint_method": "(전자)공동이행",
+      "industry_limit": true,
+      "participation_limit": false,
+      "record_limit": false,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": "R26BD00289586",
+      "plan_no": null,
+      "notice_files": [
+        {
+          "name": "입찰공고서(지방_협상_1468+0036_공동_온발)v.1.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01806808&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        },
+        {
+          "name": "입찰공고서(지방_협상_1468+0036_공동_온발)v.1.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01806808&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01802172",
+      "bid_ord": "001",
+      "notice_date": "2026-11-06",
+      "open_date": "2026-11-10",
+      "open_at": "2026-11-10 14:00",
+      "close_at": null,
+      "close_date": null,
+      "org": "계명대학교 산학협력단",
+      "title": "2026년 첨단산업 인재양성 부트캠프(AI분야)「제1회 글로벌 AI 프론티어 프로그램; Change the Ground」국제선 항공권 구입",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "연구·교육·행사",
+      "budget_eok": 0.325,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 0.325,
+      "presmpt_eok": 0.2955,
+      "base_amount_eok": null,
+      "contract_method": "일반경쟁",
+      "ntce_kind": "취소공고",
+      "biz": "servc",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01802172&bidPbancOrd=001",
+      "award_method": "2단계경쟁입찰-가격입찰서제출자 중 예가 내 최저가 투찰자",
+      "tech_rate": null,
+      "price_rate": null,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": false,
+      "participation_limit": false,
+      "record_limit": false,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": null,
+      "plan_no": "R26DD20913590",
+      "notice_files": []
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01799525",
+      "bid_ord": "001",
+      "notice_date": "2026-11-06",
+      "open_date": "2026-12-15",
+      "open_at": "2026-12-15 11:00",
+      "close_at": "2026-12-09 11:00",
+      "close_date": "2026-12-09",
+      "org": "육군군수사령부",
+      "title": "AI기반 해안경계작전체계(지작사) 2차 선행연구 용역",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "연구·교육·행사",
+      "budget_eok": 0.9102,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 0.9102,
+      "presmpt_eok": 0.8275,
+      "base_amount_eok": null,
+      "contract_method": "제한경쟁",
+      "ntce_kind": "취소공고",
+      "biz": "servc",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01799525&bidPbancOrd=001",
+      "award_method": "협상에의한계약-협상에 의한 낙찰자 결정",
+      "tech_rate": 80.0,
+      "price_rate": 20.0,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": true,
+      "participation_limit": false,
+      "record_limit": false,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": "R26BD00288937",
+      "plan_no": "R26DD20912043",
+      "notice_files": [
+        {
+          "name": "취소공고계획.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01799525&bidPbancOrd=001&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01783209",
+      "bid_ord": "001",
+      "notice_date": "2026-11-06",
+      "open_date": "2026-10-29",
+      "open_at": "2026-10-29 15:00",
+      "close_at": "2026-10-29 10:00",
+      "close_date": "2026-10-29",
+      "org": "중앙대학교 산학협력단",
+      "title": "GPU 기반 고성능 인공지능 연구용 워크스테이션 구매",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 인프라"
+      ],
+      "nature": "인프라",
+      "budget_eok": 0.4872,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 0.4872,
+      "presmpt_eok": 0.4429,
+      "base_amount_eok": null,
+      "contract_method": "일반경쟁",
+      "ntce_kind": "취소공고",
+      "biz": "thng",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01783209&bidPbancOrd=001",
+      "award_method": "규격가격동시입찰-제안적격자 중 예가 내 최저가 투찰자",
+      "tech_rate": null,
+      "price_rate": null,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": null,
+      "participation_limit": null,
+      "record_limit": null,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": "R26BD00285667",
+      "plan_no": "R26DD20897334",
+      "notice_files": []
+    },
     {
       "source": "g2b_api",
       "bid_no": "R26BK01813923",
@@ -320,8 +1670,8 @@
       "bid_ord": "000",
       "notice_date": "2026-11-05",
       "open_date": "2026-11-06",
-      "open_at": "2026-11-06 13:00",
-      "close_at": "2026-11-06 12:00",
+      "open_at": "2026-11-06 14:10",
+      "close_at": "2026-11-06 13:10",
       "close_date": "2026-11-06",
       "org": "대림대학교 산학협력단",
       "title": "[대림대학교] 2026년 전문대학 혁신지원사업 3주기 2차 년도 AI DX 기반 에듀테크 교육환경 개선 4차 기계기구 구입_성인전문심폐소생술 시뮬레이터",
@@ -728,8 +2078,8 @@
       "bid_ord": "000",
       "notice_date": "2026-11-05",
       "open_date": "2026-11-06",
-      "open_at": "2026-11-06 13:00",
-      "close_at": "2026-11-06 12:00",
+      "open_at": "2026-11-06 14:10",
+      "close_at": "2026-11-06 13:10",
       "close_date": "2026-11-06",
       "org": "한국지능정보사회진흥원",
       "title": "경상북도 지방소멸 위기 극복을 위한 주민케어 AI 서비스 개인정보 영향평가",
@@ -763,7 +2113,13 @@
           "name": "제안요청서(재공고)_공공AI지원사업_개인정보영향평가.hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01813343&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "winner": "대진정보통신",
+      "bid_count": 1,
+      "award_amount_eok": 0.688,
+      "win_rate_pct": 99.908,
+      "status": "낙찰",
+      "award_to_budget_pct": 98.2
     },
     {
       "source": "g2b_api",
@@ -5550,7 +6906,13 @@
           "name": "제안요청서(재공고)_지방세 AI 상담 서비스 개인정보 영향평가.hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01806973&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "winner": "지티시큐",
+      "bid_count": 1,
+      "award_amount_eok": 0.682,
+      "win_rate_pct": 99.556,
+      "status": "낙찰",
+      "award_to_budget_pct": 97.4
     },
     {
       "source": "g2b_api",
@@ -9740,7 +11102,13 @@
           "name": "2. 과업지시서_sw개발.hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01797577&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "winner": "한국스카다",
+      "bid_count": 26,
+      "award_amount_eok": 0.4445,
+      "win_rate_pct": 88.249,
+      "status": "낙찰",
+      "award_to_budget_pct": 88.9
     },
     {
       "source": "g2b_api",
@@ -11423,7 +12791,13 @@
           "name": "내자 2026-243 인공지능 연구·교육용 GPU 서버 - 용도설명서 및 상세규격서.hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01800123&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "winner": "케이에이치 커머스",
+      "bid_count": 57,
+      "award_amount_eok": 0.2637,
+      "win_rate_pct": 88.007,
+      "status": "낙찰",
+      "award_to_budget_pct": 88.5
     },
     {
       "source": "g2b_api",
@@ -11975,7 +13349,13 @@
           "name": "붙임2. (통합)공고안(혁신 및 AI융합).pdf",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01799286&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "winner": "엘피스기술",
+      "bid_count": 3,
+      "award_amount_eok": 3.6449,
+      "win_rate_pct": 90.574,
+      "status": "낙찰",
+      "award_to_budget_pct": 90.2
     },
     {
       "source": "g2b_api",
@@ -16851,7 +18231,13 @@
           "name": "입찰공고 — 컴퓨트 모듈(CM5).pdf",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01793217&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "winner": "해리엔터프라이즈",
+      "bid_count": 87,
+      "award_amount_eok": 0.2382,
+      "win_rate_pct": 86.276,
+      "status": "낙찰",
+      "award_to_budget_pct": 86.6
     },
     {
       "source": "g2b_api",
@@ -25028,7 +26414,13 @@
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01772777&bidPbancOrd=000&fileType=&fileSeq=5&prcmBsneSeCd=03"
         }
       ],
-      "award_lookup_at": "2026-11-03"
+      "award_lookup_at": "2026-11-03",
+      "winner": "에스케이쉴더스",
+      "bid_count": 22,
+      "award_amount_eok": 2.8924,
+      "win_rate_pct": 96.24,
+      "status": "낙찰",
+      "award_to_budget_pct": 96.5
     },
     {
       "source": "g2b_api",
@@ -26174,8 +27566,8 @@
       ],
       "bid_count": 10,
       "second": "행복마을연구소",
-      "winner": null,
-      "status": "1순위",
+      "winner": "지인연구소",
+      "status": "낙찰",
       "first_rank": "지인연구소",
       "open_at": "2026-10-29 15:00",
       "close_at": "2026-10-29 14:00",
@@ -26203,7 +27595,10 @@
           "name": "붙임2. 과업지시서.hwpx",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01783335&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "award_amount_eok": 0.2606,
+      "win_rate_pct": 88.573,
+      "award_to_budget_pct": 86.9
     },
     {
       "source": "g2b_api",
@@ -40660,7 +42055,12 @@
       "ntce_kind": "등록공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01769691&bidPbancOrd=000",
-      "award_lookup_at": "2026-11-01"
+      "award_lookup_at": "2026-11-01",
+      "winner": "링크21",
+      "bid_count": 2,
+      "award_amount_eok": 0.448,
+      "status": "낙찰",
+      "award_to_budget_pct": 74.2
     },
     {
       "source": "g2b_api",
@@ -91251,20 +92651,20 @@
     }
   ],
   "stats": {
-    "raw": 206,
-    "classified": 189,
-    "stored": 1704,
+    "raw": 174,
+    "classified": 162,
+    "stored": 1732,
     "band": 477,
-    "with_winner": 555,
+    "with_winner": 565,
     "awards": {
-      "fetched": 2441,
-      "updated": 16
+      "fetched": 2425,
+      "updated": 10
     },
     "scope": {
-      "생성형·Agent": 185,
-      "AI SW 확대": 1519
+      "생성형·Agent": 186,
+      "AI SW 확대": 1546
     },
     "budget_sanitized": 0
   },
-  "reclassified_at": "2026-11-05T12:24:02Z"
+  "reclassified_at": "2026-11-06T12:08:27Z"
 }
