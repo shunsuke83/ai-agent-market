@@ -1,12 +1,165 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-06T12:08:27Z",
+  "generated_at": "2026-11-07T11:05:36Z",
   "mode": "g2b_api",
   "range": {
-    "since": "2026-11-03",
-    "until": "2026-11-06"
+    "since": "2026-11-04",
+    "until": "2026-11-07"
   },
   "notices": [
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01816115",
+      "bid_ord": "000",
+      "notice_date": "2026-11-07",
+      "open_date": "2026-11-13",
+      "open_at": "2026-11-13 10:00",
+      "close_at": null,
+      "close_date": null,
+      "org": "광운대학교 산학협력단",
+      "title": "노트북컴퓨터(AI연산용노트북 ASUS ROG Strix G18 G815LR-TT302)",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "budget_eok": 2.0325,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 2.0325,
+      "presmpt_eok": 1.8477,
+      "base_amount_eok": null,
+      "contract_method": "일반경쟁",
+      "ntce_kind": "재공고",
+      "biz": "thng",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01816115&bidPbancOrd=000",
+      "award_method": "최저가낙찰제-최저가낙찰자",
+      "tech_rate": null,
+      "price_rate": null,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": null,
+      "participation_limit": null,
+      "record_limit": null,
+      "rebid": true,
+      "prev_bid_no": "R26BK01788941",
+      "prespec_no": null,
+      "plan_no": "R26DD20906064",
+      "notice_files": [
+        {
+          "name": "1. 입찰공고문-재공고.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816115&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01815758",
+      "bid_ord": "000",
+      "notice_date": "2026-11-07",
+      "open_date": "2026-11-18",
+      "open_at": "2026-11-18 11:00",
+      "close_at": "2026-11-18 10:00",
+      "close_date": "2026-11-18",
+      "org": "한국마사회",
+      "title": "EMR 내 AI 기반 진료리포트 생성시스템 구축",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "budget_eok": 0.29,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 0.29,
+      "presmpt_eok": 0.2636,
+      "base_amount_eok": null,
+      "contract_method": "제한경쟁",
+      "ntce_kind": "재공고",
+      "biz": "servc",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01815758&bidPbancOrd=000",
+      "award_method": "협상에의한계약-협상에 의한 낙찰자 결정(SW사업)",
+      "tech_rate": 90.0,
+      "price_rate": 10.0,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": true,
+      "participation_limit": false,
+      "record_limit": false,
+      "rebid": true,
+      "prev_bid_no": "R26BK01789619",
+      "prespec_no": "R26BD00285408",
+      "plan_no": "R26DD20896773",
+      "notice_files": [
+        {
+          "name": "입찰공고문.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01815758&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        },
+        {
+          "name": "제안요청서.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01815758&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+        },
+        {
+          "name": "청렴계약이행서약서.xls",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01815758&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01815431",
+      "bid_ord": "000",
+      "notice_date": "2026-11-07",
+      "open_date": "2026-11-11",
+      "open_at": "2026-11-11 13:00",
+      "close_at": "2026-11-11 12:00",
+      "close_date": "2026-11-11",
+      "org": "각 수요기관",
+      "title": "상용SW 제3자단가(WeeAI v.1.6.0_(주)씨디에스)",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "budget_eok": 11.0,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 11.0,
+      "presmpt_eok": 10.0,
+      "base_amount_eok": null,
+      "contract_method": "수의계약",
+      "ntce_kind": "등록공고",
+      "biz": "thng",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01815431&bidPbancOrd=000",
+      "award_method": "수의시담-수의시담(상용SW-3자단가)",
+      "tech_rate": null,
+      "price_rate": null,
+      "joint_method": "()공동수급불허",
+      "industry_limit": null,
+      "participation_limit": null,
+      "record_limit": null,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": null,
+      "plan_no": null,
+      "notice_files": [
+        {
+          "name": "1. 상용소프트웨어 제3자단가계약 추가특수조건 전문(개정전문, 2026.1.1. 시행).hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01815431&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        },
+        {
+          "name": "2-1. (개정전문) 물품구매(제조)계약 특수조건.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01815431&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01"
+        },
+        {
+          "name": "3-1. (계약예규) 물품구매(제조)계약일반조건.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01815431&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
+        },
+        {
+          "name": "4-1. 수의계약사유서(기본)_중소기업，제조인경우(GS).hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01815431&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01"
+        },
+        {
+          "name": "1-2 (공통양식)기본상품_규격서_CDS(수정).pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01815431&bidPbancOrd=000&fileType=&fileSeq=5&prcmBsneSeCd=01"
+        }
+      ]
+    },
     {
       "source": "g2b_api",
       "bid_no": "R26BK01815896",
@@ -92651,20 +92804,20 @@
     }
   ],
   "stats": {
-    "raw": 174,
-    "classified": 162,
-    "stored": 1732,
-    "band": 477,
+    "raw": 131,
+    "classified": 124,
+    "stored": 1735,
+    "band": 478,
     "with_winner": 565,
     "awards": {
-      "fetched": 2425,
-      "updated": 10
+      "fetched": 1832,
+      "updated": 0
     },
     "scope": {
       "생성형·Agent": 186,
-      "AI SW 확대": 1546
+      "AI SW 확대": 1549
     },
     "budget_sanitized": 0
   },
-  "reclassified_at": "2026-11-06T12:08:27Z"
+  "reclassified_at": "2026-11-07T11:05:36Z"
 }

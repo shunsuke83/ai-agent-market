@@ -1,11 +1,33 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-06T12:07:50Z",
+  "generated_at": "2026-11-07T11:05:08Z",
   "range": {
-    "since": "2026-11-03",
-    "until": "2026-11-06"
+    "since": "2026-11-04",
+    "until": "2026-11-07"
   },
   "prespecs": [
+    {
+      "prespec_no": "R26BD00296252",
+      "title": "AI 실시간 경정 경주수면 수초 탐지시스템 구축 용역(긴급)",
+      "org": "서울올림픽기념국민체육진흥공단 경륜경정총괄본부",
+      "order_org": "서울올림픽기념국민체육진흥공단 경륜경정총괄본부",
+      "registered_at": "2026-11-07 09:42",
+      "registered_date": "2026-11-07",
+      "opinion_close_at": "2026-11-10 23:59",
+      "asign_budget_eok": 1.74,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00296252&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
     {
       "prespec_no": "R26BD00296427",
       "title": "AX 디바이스 AI 모델 검증 플랫폼 구축 용역",
