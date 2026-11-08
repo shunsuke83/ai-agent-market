@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-07T11:05:36Z",
+  "generated_at": "2026-11-08T11:18:48Z",
   "mode": "g2b_api",
   "range": {
-    "since": "2026-11-04",
-    "until": "2026-11-07"
+    "since": "2026-11-05",
+    "until": "2026-11-08"
   },
   "notices": [
     {
@@ -92804,13 +92804,13 @@
     }
   ],
   "stats": {
-    "raw": 131,
-    "classified": 124,
+    "raw": 87,
+    "classified": 83,
     "stored": 1735,
     "band": 478,
     "with_winner": 565,
     "awards": {
-      "fetched": 1832,
+      "fetched": 1255,
       "updated": 0
     },
     "scope": {
@@ -92819,5 +92819,5 @@
     },
     "budget_sanitized": 0
   },
-  "reclassified_at": "2026-11-07T11:05:36Z"
+  "reclassified_at": "2026-11-08T11:18:48Z"
 }
