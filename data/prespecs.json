@@ -1,11 +1,34 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-09T05:54:15Z",
+  "generated_at": "2026-11-09T06:10:17Z",
   "range": {
     "since": "2026-10-26",
     "until": "2026-11-09"
   },
   "prespecs": [
+    {
+      "prespec_no": "R26BD00296978",
+      "title": "지능형 포렌식센터 구축을 위한 스토리지 구매",
+      "org": "한국인터넷진흥원",
+      "order_org": "한국인터넷진흥원",
+      "registered_at": "2026-11-09 15:06",
+      "registered_date": "2026-11-09",
+      "opinion_close_at": "2026-11-12 23:59",
+      "asign_budget_eok": 9.59,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00296978&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00296978&fileType=BFDTL&fileSeq=2"
+      ],
+      "biz": "thng",
+      "biz_div": "물품",
+      "sw_biz": true
+    },
     {
       "prespec_no": "R26BD00296902",
       "title": "동국대학교 반도체 현장 특화 SLLM 개발 용역",
