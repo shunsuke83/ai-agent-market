@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-09T05:26:00Z",
+  "generated_at": "2026-11-09T05:54:15Z",
   "range": {
     "since": "2026-10-26",
     "until": "2026-11-09"
@@ -1375,7 +1375,9 @@
         "AI 일반"
       ],
       "nature": "연구·교육·행사",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01817856"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00293286&fileType=BFDTL&fileSeq=1",
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00293286&fileType=BFDTL&fileSeq=2"

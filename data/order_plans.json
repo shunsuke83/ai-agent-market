@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-09T05:26:13Z",
+  "generated_at": "2026-11-09T05:54:28Z",
   "plans": [
     {
       "plan_no": "R26DD20515816",
@@ -351,6 +351,30 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화"
+    },
+    {
+      "plan_no": "R26DD20908778",
+      "title": "AI 융합형 수산물 품질안전관리 시스템 구축 ISP",
+      "org": "해양수산부 국립수산물품질관리원",
+      "top_org": "해양수산부",
+      "org_kind": "국가기관",
+      "order_ym": "2026-11",
+      "amount_eok": 1.8,
+      "contract_method": "제한경쟁",
+      "procurement": "자체조달",
+      "dept": "품질관리과",
+      "tel": "051-400-5796",
+      "posted_date": "2026-10-27",
+      "bid_nos": [],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20908778",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AX·전략"
+      ],
+      "nature": "ISP·전략"
     },
     {
       "plan_no": "R26DD20909085",
@@ -2073,6 +2097,32 @@
         "생성형·LLM"
       ],
       "nature": "시스템 구축·고도화"
+    },
+    {
+      "plan_no": "R26DD20922420",
+      "title": "2026년 AI-MED module design(AIMD) 온라인 교육과정 개발",
+      "org": "순천향대학교",
+      "top_org": "교육부",
+      "org_kind": "교육기관",
+      "order_ym": "2026-11",
+      "amount_eok": 0.5,
+      "contract_method": "일반경쟁",
+      "procurement": "자체조달",
+      "dept": "AI의료융합기술실증팀",
+      "tel": "041-570-2665",
+      "posted_date": "2026-11-09",
+      "bid_nos": [
+        "R26BK01817856"
+      ],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20922420",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "연구·교육·행사"
     },
     {
       "plan_no": "R26DD20561940",

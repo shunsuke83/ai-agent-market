@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-09T05:30:57Z",
+  "generated_at": "2026-11-09T05:58:50Z",
   "firms": {
     "2298137316": {
       "bizno": "2298137316",
@@ -13,7 +13,7 @@
       "mnfct_div": "제조",
       "hq_div": "본사",
       "homepage": "http://www.konantech.com",
-      "fetched_at": "2026-10-30T09:18:57Z"
+      "fetched_at": "2026-11-09T05:58:27Z"
     },
     "2118698485": {
       "bizno": "2118698485",
@@ -26,7 +26,7 @@
       "mnfct_div": "제조",
       "hq_div": "본사",
       "homepage": "www.wisenut.com",
-      "fetched_at": "2026-10-30T09:18:58Z"
+      "fetched_at": "2026-11-09T05:58:28Z"
     },
     "3318101353": {
       "bizno": "3318101353",
@@ -39,7 +39,7 @@
       "mnfct_div": "제조",
       "hq_div": "본사",
       "homepage": "https://mindlogic.ai",
-      "fetched_at": "2026-10-30T09:18:58Z"
+      "fetched_at": "2026-11-09T05:58:28Z"
     },
     "6968600654": {
       "bizno": "6968600654",
@@ -52,7 +52,7 @@
       "mnfct_div": "제조",
       "hq_div": "본사",
       "homepage": "https://personaai.co.kr/",
-      "fetched_at": "2026-10-30T09:18:59Z"
+      "fetched_at": "2026-11-09T05:58:29Z"
     },
     "6308702251": {
       "bizno": "6308702251",
@@ -65,7 +65,7 @@
       "mnfct_div": "제조",
       "hq_div": "본사",
       "homepage": "www.claion.co.kr",
-      "fetched_at": "2026-10-30T09:18:59Z"
+      "fetched_at": "2026-11-09T05:58:29Z"
     },
     "1028113061": {
       "bizno": "1028113061",
@@ -78,7 +78,7 @@
       "mnfct_div": "제조",
       "hq_div": "본사",
       "homepage": "www.saltlux.com",
-      "fetched_at": "2026-10-30T09:19:00Z"
+      "fetched_at": "2026-11-09T05:58:30Z"
     },
     "4638700328": {
       "bizno": "4638700328",
@@ -91,7 +91,7 @@
       "mnfct_div": "제조",
       "hq_div": "본사",
       "homepage": "",
-      "fetched_at": "2026-10-30T09:19:00Z"
+      "fetched_at": "2026-11-09T05:58:30Z"
     },
     "1708702633": {
       "bizno": "1708702633",
@@ -104,7 +104,7 @@
       "mnfct_div": "공급",
       "hq_div": "본사",
       "homepage": "https://www.imaginationgroup.co.kr/",
-      "fetched_at": "2026-10-30T09:19:01Z"
+      "fetched_at": "2026-11-09T05:58:31Z"
     },
     "7248101517": {
       "bizno": "7248101517",
@@ -117,7 +117,7 @@
       "mnfct_div": "제조",
       "hq_div": "본사",
       "homepage": "www.publicai.co.kr",
-      "fetched_at": "2026-10-30T09:19:01Z"
+      "fetched_at": "2026-11-09T05:58:31Z"
     },
     "2298103214": {
       "bizno": "2298103214",
@@ -130,7 +130,7 @@
       "mnfct_div": "제조",
       "hq_div": "본사",
       "homepage": "www.estsoft.com",
-      "fetched_at": "2026-10-30T09:19:02Z"
+      "fetched_at": "2026-11-09T05:58:32Z"
     },
     "1078785562": {
       "bizno": "1078785562",
@@ -143,7 +143,7 @@
       "mnfct_div": "공급",
       "hq_div": "본사",
       "homepage": "http://li-st.com",
-      "fetched_at": "2026-10-30T09:19:02Z"
+      "fetched_at": "2026-11-09T05:58:33Z"
     },
     "1658602221": {
       "bizno": "1658602221",
@@ -156,7 +156,7 @@
       "mnfct_div": "제조",
       "hq_div": "본사",
       "homepage": "",
-      "fetched_at": "2026-10-30T09:19:03Z"
+      "fetched_at": "2026-11-09T05:58:33Z"
     },
     "5628800151": {
       "bizno": "5628800151",
@@ -169,7 +169,7 @@
       "mnfct_div": "제조",
       "hq_div": "본사",
       "homepage": "www.42maru.ai",
-      "fetched_at": "2026-10-30T09:19:03Z"
+      "fetched_at": "2026-11-09T05:58:34Z"
     },
     "5868802378": {
       "bizno": "5868802378",
@@ -182,7 +182,7 @@
       "mnfct_div": "공급",
       "hq_div": "본사",
       "homepage": "",
-      "fetched_at": "2026-10-30T09:19:04Z"
+      "fetched_at": "2026-11-09T05:58:34Z"
     },
     "4508800071": {
       "bizno": "4508800071",
@@ -195,7 +195,7 @@
       "mnfct_div": "공급",
       "hq_div": "본사",
       "homepage": "www.mqnic.com",
-      "fetched_at": "2026-10-30T09:19:04Z"
+      "fetched_at": "2026-11-09T05:58:35Z"
     },
     "5028172988": {
       "bizno": "5028172988",
@@ -208,7 +208,7 @@
       "mnfct_div": "제조",
       "hq_div": "본사",
       "homepage": "www.theimc.co.kr",
-      "fetched_at": "2026-10-30T09:19:05Z"
+      "fetched_at": "2026-11-09T05:58:35Z"
     },
     "3148173245": {
       "bizno": "3148173245",
@@ -221,7 +221,7 @@
       "mnfct_div": "제조",
       "hq_div": "본사",
       "homepage": "www.gridone.co.kr",
-      "fetched_at": "2026-10-30T09:19:05Z"
+      "fetched_at": "2026-11-09T05:58:36Z"
     },
     "1208608334": {
       "bizno": "1208608334",
@@ -234,7 +234,7 @@
       "mnfct_div": "제조",
       "hq_div": "본사",
       "homepage": "vaiv.kr",
-      "fetched_at": "2026-10-30T09:19:06Z"
+      "fetched_at": "2026-11-09T05:58:36Z"
     },
     "7338101035": {
       "bizno": "7338101035",
@@ -247,7 +247,7 @@
       "mnfct_div": "제조",
       "hq_div": "본사",
       "homepage": "",
-      "fetched_at": "2026-10-30T09:19:07Z"
+      "fetched_at": "2026-11-09T05:58:37Z"
     },
     "7898700079": {
       "bizno": "7898700079",
@@ -260,7 +260,7 @@
       "mnfct_div": "공급",
       "hq_div": "본사",
       "homepage": "https://www.agilesoda.ai",
-      "fetched_at": "2026-10-30T09:19:07Z"
+      "fetched_at": "2026-11-09T05:58:37Z"
     },
     "2298801044": {
       "bizno": "2298801044",
@@ -273,7 +273,7 @@
       "mnfct_div": "제조",
       "hq_div": "본사",
       "homepage": "www.timely.kr",
-      "fetched_at": "2026-10-30T09:19:08Z"
+      "fetched_at": "2026-11-09T05:58:38Z"
     },
     "2458602885": {
       "bizno": "2458602885",
@@ -286,7 +286,7 @@
       "mnfct_div": "제조",
       "hq_div": "본사",
       "homepage": "https://www.sionic.ai/ko",
-      "fetched_at": "2026-10-30T09:19:08Z"
+      "fetched_at": "2026-11-09T05:58:38Z"
     },
     "2148664984": {
       "bizno": "2148664984",
@@ -299,7 +299,7 @@
       "mnfct_div": "제조",
       "hq_div": "본사",
       "homepage": "http://www.synapsoft.co.kr",
-      "fetched_at": "2026-10-30T09:19:09Z"
+      "fetched_at": "2026-11-09T05:58:39Z"
     },
     "7638101040": {
       "bizno": "7638101040",
@@ -308,11 +308,20 @@
       "region": "서울특별시 강남구",
       "opened": "2017-11-29",
       "employees": 60,
-      "biz_div": "물품,일반용역,용역",
+      "biz_div": "물품,일반용역,용역,공사",
       "mnfct_div": "제조",
       "hq_div": "본사",
       "homepage": "",
-      "fetched_at": "2026-10-30T09:19:09Z"
+      "fetched_at": "2026-11-09T05:58:40Z",
+      "changes": [
+        {
+          "date": "2026-11-09",
+          "field": "biz_div",
+          "label": "업무구분",
+          "from": "물품,일반용역,용역",
+          "to": "물품,일반용역,용역,공사"
+        }
+      ]
     },
     "1198196788": {
       "bizno": "1198196788",
@@ -325,7 +334,7 @@
       "mnfct_div": "제조",
       "hq_div": "본사",
       "homepage": "http://www.uplusit.com",
-      "fetched_at": "2026-10-30T09:19:10Z"
+      "fetched_at": "2026-11-09T05:58:40Z"
     },
     "1138643065": {
       "bizno": "1138643065",
@@ -338,7 +347,7 @@
       "mnfct_div": "제조",
       "hq_div": "본사",
       "homepage": "www.ccmedia.co.kr",
-      "fetched_at": "2026-10-30T09:19:10Z"
+      "fetched_at": "2026-11-09T05:58:41Z"
     },
     "2158711279": {
       "bizno": "2158711279",
@@ -351,7 +360,7 @@
       "mnfct_div": "제조",
       "hq_div": "본사",
       "homepage": "www.mtdata.co.kr",
-      "fetched_at": "2026-10-30T09:19:11Z"
+      "fetched_at": "2026-11-09T05:58:41Z"
     },
     "1338145679": {
       "bizno": "1338145679",
@@ -364,7 +373,7 @@
       "mnfct_div": "제조",
       "hq_div": "본사",
       "homepage": "https://cubig.ai/ ",
-      "fetched_at": "2026-10-30T09:19:11Z"
+      "fetched_at": "2026-11-09T05:58:42Z"
     },
     "7028600866": {
       "bizno": "7028600866",
@@ -377,7 +386,7 @@
       "mnfct_div": "공급",
       "hq_div": "본사",
       "homepage": "",
-      "fetched_at": "2026-10-30T09:19:12Z"
+      "fetched_at": "2026-11-09T05:58:42Z"
     },
     "2288105280": {
       "bizno": "2288105280",
@@ -390,7 +399,7 @@
       "mnfct_div": "제조",
       "hq_div": "본사",
       "homepage": "",
-      "fetched_at": "2026-10-30T09:19:12Z"
+      "fetched_at": "2026-11-09T05:58:43Z"
     },
     "4968602770": {
       "bizno": "4968602770",
@@ -403,7 +412,7 @@
       "mnfct_div": "공급",
       "hq_div": "본사",
       "homepage": "",
-      "fetched_at": "2026-10-30T09:19:13Z"
+      "fetched_at": "2026-11-09T05:58:43Z"
     },
     "1148706890": {
       "bizno": "1148706890",
@@ -416,7 +425,7 @@
       "mnfct_div": "공급",
       "hq_div": "본사",
       "homepage": "www.limesolution.co.kr",
-      "fetched_at": "2026-10-30T09:19:13Z"
+      "fetched_at": "2026-11-09T05:58:44Z"
     },
     "1078734272": {
       "bizno": "1078734272",
@@ -429,7 +438,7 @@
       "mnfct_div": "공급",
       "hq_div": "본사",
       "homepage": "www.sbctech.net",
-      "fetched_at": "2026-10-30T09:19:14Z"
+      "fetched_at": "2026-11-09T05:58:44Z"
     },
     "8128801619": {
       "bizno": "8128801619",
@@ -442,7 +451,7 @@
       "mnfct_div": "제조",
       "hq_div": "본사",
       "homepage": "exotech.kr",
-      "fetched_at": "2026-10-30T09:19:14Z"
+      "fetched_at": "2026-11-09T05:58:45Z"
     },
     "2208181227": {
       "bizno": "2208181227",
@@ -455,7 +464,7 @@
       "mnfct_div": "제조",
       "hq_div": "본사",
       "homepage": "www.mobigen.com",
-      "fetched_at": "2026-10-30T09:19:15Z"
+      "fetched_at": "2026-11-09T05:58:45Z"
     },
     "2208868581": {
       "bizno": "2208868581",
@@ -468,7 +477,7 @@
       "mnfct_div": "제조",
       "hq_div": "본사",
       "homepage": "",
-      "fetched_at": "2026-10-30T09:19:15Z"
+      "fetched_at": "2026-11-09T05:58:46Z"
     },
     "1138611016": {
       "bizno": "1138611016",
@@ -481,7 +490,7 @@
       "mnfct_div": "제조",
       "hq_div": "본사",
       "homepage": "www.t3q.co.kr",
-      "fetched_at": "2026-10-30T09:19:16Z"
+      "fetched_at": "2026-11-09T05:58:46Z"
     },
     "1168135346": {
       "bizno": "1168135346",
@@ -494,7 +503,7 @@
       "mnfct_div": "제조",
       "hq_div": "본사",
       "homepage": "www.penta.co.kr",
-      "fetched_at": "2026-10-30T09:19:16Z"
+      "fetched_at": "2026-11-09T05:58:47Z"
     },
     "1058608825": {
       "bizno": "1058608825",
@@ -507,7 +516,7 @@
       "mnfct_div": "제조",
       "hq_div": "본사",
       "homepage": "http://www.diquest.com",
-      "fetched_at": "2026-10-30T09:19:17Z"
+      "fetched_at": "2026-11-09T05:58:48Z"
     },
     "1138622298": {
       "bizno": "1138622298",
@@ -520,7 +529,7 @@
       "mnfct_div": "공급",
       "hq_div": "본사",
       "homepage": "",
-      "fetched_at": "2026-10-30T09:19:17Z"
+      "fetched_at": "2026-11-09T05:58:48Z"
     },
     "1168170775": {
       "bizno": "1168170775",
@@ -533,7 +542,7 @@
       "mnfct_div": "제조",
       "hq_div": "본사",
       "homepage": "http://www.solideos.com",
-      "fetched_at": "2026-10-30T09:19:18Z"
+      "fetched_at": "2026-11-09T05:58:49Z"
     },
     "5138141016": {
       "bizno": "5138141016",
@@ -546,7 +555,7 @@
       "mnfct_div": "제조",
       "hq_div": "본사",
       "homepage": "http://www.yhdatabase.com",
-      "fetched_at": "2026-10-30T09:19:18Z"
+      "fetched_at": "2026-11-09T05:58:49Z"
     },
     "6048142515": {
       "bizno": "6048142515",
@@ -559,7 +568,7 @@
       "mnfct_div": "공급",
       "hq_div": "본사",
       "homepage": "",
-      "fetched_at": "2026-10-30T09:19:19Z"
+      "fetched_at": "2026-11-09T05:58:50Z"
     }
   }
 }
