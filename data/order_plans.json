@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-09T06:10:32Z",
+  "generated_at": "2026-11-09T08:07:18Z",
   "plans": [
     {
       "plan_no": "R26DD20515816",
@@ -1021,7 +1021,9 @@
       "dept": "자치행정국 회계과",
       "tel": "063-280-3163",
       "posted_date": "2026-11-03",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01818185"
+      ],
       "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20916652",
       "biz": "servc",
       "biz_div": "일반용역",
@@ -2123,6 +2125,54 @@
         "AI 일반"
       ],
       "nature": "연구·교육·행사"
+    },
+    {
+      "plan_no": "R26DD20922888",
+      "title": "2027~2028년 AI 민원상담시스템 유지관리",
+      "org": "서울특별시",
+      "top_org": "서울특별시",
+      "org_kind": "지방자치단체",
+      "order_ym": "2026-11",
+      "amount_eok": 7.364,
+      "contract_method": "제한경쟁",
+      "procurement": "자체조달",
+      "dept": "서울아리수본부 전산정보과",
+      "tel": "02-120-0000",
+      "posted_date": "2026-11-09",
+      "bid_nos": [],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20922888",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "운영·유지보수"
+    },
+    {
+      "plan_no": "R26DD20922924",
+      "title": "AI 기반 RPA 및 OCR 솔루션 라이선스 구매",
+      "org": "한국산업인력공단",
+      "top_org": "한국산업인력공단",
+      "org_kind": "준정부기관",
+      "order_ym": "2026-11",
+      "amount_eok": 1.4784,
+      "contract_method": "제한경쟁",
+      "procurement": "자체조달",
+      "dept": "국가자격디지털혁신팀",
+      "tel": "052-714-8314",
+      "posted_date": "2026-11-09",
+      "bid_nos": [],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20922924",
+      "biz": "thng",
+      "biz_div": "물품",
+      "product": "융복합특수산업소프트웨어",
+      "scope": "AI SW 확대",
+      "fields": [
+        "음성·언어·문서"
+      ],
+      "nature": "구독·라이선스"
     },
     {
       "plan_no": "R26DD20561940",
