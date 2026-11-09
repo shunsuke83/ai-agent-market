@@ -110,6 +110,8 @@ def normalize_corp_item(item: dict[str, Any]) -> dict[str, Any]:
         "mnfct_div": item.get("mnfctDivNm"),
         "hq_div": item.get("hdoffceDivNm"),
         "homepage": item.get("hmpgAdrs"),
+        "g2b_registered_at": parse_api_dt(item.get("rgstDt")),
+        "g2b_changed_at": parse_api_dt(item.get("chgDt")),
     }
 
 
@@ -127,25 +129,47 @@ EMPLOYEE_MIN_RATIO = 0.2
 
 
 def firm_changes(old: dict[str, Any] | None, new: dict[str, Any], day: str) -> list[dict[str, Any]]:
-    """Registration fields that differ from the last fetch. A blank new value is an API gap, not a change."""
+    """Registration fields that differ from the last fetch. A blank new value is an API gap, not a change.
+
+    `date` is when we noticed; `changed_at` is 나라장터 chgDt when it moved since the last fetch.
+    """
     if not old:
         return []
+    moved = new.get("g2b_changed_at")
+    changed_at = moved if moved and moved != old.get("g2b_changed_at") else None
     out = []
     for key, label in TRACKED_FIELDS:
         before, after = old.get(key), new.get(key)
         if after and before and str(before).strip() != str(after).strip():
-            out.append({"date": day, "field": key, "label": label, "from": before, "to": after})
+            out.append({"date": day, "changed_at": changed_at, "field": key, "label": label,
+                        "from": before, "to": after})
     before, after = old.get("employees"), new.get("employees")
     if isinstance(before, int) and isinstance(after, int):
         delta = after - before
         if abs(delta) >= max(EMPLOYEE_MIN_DELTA, EMPLOYEE_MIN_RATIO * before):
-            out.append({"date": day, "field": "employees", "label": "종업원 수", "from": before, "to": after})
+            out.append({"date": day, "changed_at": changed_at, "field": "employees", "label": "종업원 수",
+                        "from": before, "to": after})
     return out
+
+
+def _backfill_changed_at(old: dict[str, Any] | None, new: dict[str, Any], history: list[dict[str, Any]]) -> None:
+    """Records saved before chgDt was kept: date the newest noticed changes with the first chgDt seen."""
+    moved = new.get("g2b_changed_at")
+    if not old or "g2b_changed_at" in old or not moved or not history:
+        return
+    newest = history[0].get("date")
+    for c in history:
+        if c.get("date") != newest:
+            break
+        if not c.get("changed_at") and moved <= str(newest):
+            c["changed_at"] = moved
 
 
 def merge_firm_record(old: dict[str, Any] | None, new: dict[str, Any], day: str) -> dict[str, Any]:
     """New fetch + accumulated change history (newest first, capped)."""
-    changes = firm_changes(old, new, day) + list((old or {}).get("changes") or [])
+    history = [dict(c) for c in (old or {}).get("changes") or []]
+    _backfill_changed_at(old, new, history)
+    changes = firm_changes(old, new, day) + history
     record = {k: v for k, v in new.items() if k != "changes"}
     for key, _ in TRACKED_FIELDS:
         if not record.get(key) and (old or {}).get(key):

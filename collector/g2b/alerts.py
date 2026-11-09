@@ -298,7 +298,8 @@ def firm_change_text(items: list[dict[str, Any]], site_url: str, limit: int) -> 
     for i in items[:limit]:
         name = _slack_escape(str(i["name"])).replace("|", "¦")
         change = _slack_escape(f"{i['label']}: {i['from']} → {i['to']}")
-        lines.append(f"• <{site_url}bidders.html#{i['bizno']}|{name}> — {change} ({i['date']} 확인)")
+        when = f"나라장터 변경 {i['changed_at']}" if i.get("changed_at") else f"{i['date']} 확인"
+        lines.append(f"• <{site_url}bidders.html#{i['bizno']}|{name}> — {change} ({when})")
     if len(items) > limit:
         lines.append(f"    …외 {len(items) - limit}건")
     return "\n".join(lines)
