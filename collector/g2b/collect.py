@@ -524,6 +524,7 @@ def cmd_enrich_bidders(args: argparse.Namespace) -> int:
     empty = 0
     skipped = 0
     consecutive_429 = 0
+    logged_keys = False
     # Mutate in place by key so we can checkpoint mid-run
     by_live = {_notice_key(n): n for n in notices if n.get("bid_no")}
     # Preserve notices without bid_no
@@ -577,6 +578,9 @@ def cmd_enrich_bidders(args: argparse.Namespace) -> int:
             continue
         consecutive_429 = 0
         fetched += 1
+        if rows and not logged_keys:
+            print(f"Bidder item keys: {sorted(rows[0])}")
+            logged_keys = True
         if not rows:
             empty += 1
             marked = dict(n)

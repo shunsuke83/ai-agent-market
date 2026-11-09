@@ -19,6 +19,7 @@ from .render import (
     _today_kst,
     infer_status,
 )
+from .pricing import RATE_MAX, RATE_MIN
 from .seed import load_seed
 from .site import DETAIL_DIR, detail_slug, page
 
@@ -77,28 +78,59 @@ def _result_rows(n: dict[str, Any], status: str) -> str:
     )
 
 
-def _bidder_table(bidders: list[Any]) -> str:
-    rows = []
-    for b in bidders:
-        if not isinstance(b, dict):
-            continue
-        rate = b.get("rate_pct")
-        rows.append(
-            "<tr>"
-            f'<td class="num">{html.escape(str(b.get("rank") or ""))}</td>'
-            f"<td>{html.escape(b.get('name') or '')}</td>"
-            f'<td class="num">{_fmt_budget(b.get("amount_eok"))}</td>'
-            f'<td class="num">{f"{float(rate):.3f}%" if rate not in (None, "") else ""}</td>'
-            "</tr>"
-        )
-    if not rows:
+def _rate_or_score(b: dict[str, Any]) -> tuple[float | None, float | None]:
+    """OpengCompt rate_pct is 투찰률 (예정가격 대비) or, for 협상계약, the 가격평가 점수."""
+    try:
+        v = float(b.get("rate_pct"))
+    except (TypeError, ValueError):
+        return None, None
+    return (v, None) if RATE_MIN <= v <= RATE_MAX else (None, v) if 0 <= v < RATE_MIN else (None, None)
+
+
+def _bidder_table(n: dict[str, Any]) -> str:
+    bidders = [b for b in n.get("bidders") or [] if isinstance(b, dict)]
+    if not bidders:
         return ""
+    split = [_rate_or_score(b) for b in bidders]
+    has_rate = any(r is not None for r, _ in split)
+    has_score = any(s is not None for _, s in split)
+    price_pts = n.get("price_rate")
+    rows = []
+    for b, (rate, score) in zip(bidders, split):
+        cells = [
+            f'<td class="num">{html.escape(str(b.get("rank") or ""))}</td>',
+            f"<td>{html.escape(b.get('name') or '')}</td>",
+            f'<td class="num">{_fmt_budget(b.get("amount_eok"))}</td>',
+        ]
+        if has_rate:
+            cells.append(f'<td class="num">{f"{rate:.3f}%" if rate is not None else ""}</td>')
+        if has_score:
+            cells.append(f'<td class="num">{f"{score:.3f}" if score is not None else ""}</td>')
+        rows.append("<tr>" + "".join(cells) + "</tr>")
+    heads = ['<th class="num">순위</th>', "<th>업체</th>", '<th class="num">투찰금액(억)</th>']
+    if has_rate:
+        heads.append('<th class="num">투찰률</th>')
+    if has_score:
+        pts = f" ({price_pts:g}점 만점)" if price_pts else ""
+        heads.append(f'<th class="num">가격점수{pts}</th>')
+    notes = ["나라장터 개찰결과 기준."]
+    if has_rate:
+        notes.append("투찰률은 예정가격 대비입니다.")
+    if has_score:
+        weights = (
+            f"기술평가 {n['tech_rate']:g}점과 가격평가 {price_pts:g}점"
+            if n.get("tech_rate") is not None and price_pts is not None
+            else "기술평가 점수와 가격평가 점수"
+        )
+        notes.append(
+            f"협상에 의한 계약은 {weights}을 합친 종합점수로 순위를 정합니다. "
+            "이 사이트가 받는 개찰결과에는 가격점수만 있어 기술점수·종합점수는 표시하지 못합니다."
+        )
     return (
         "<h2>투찰 업체</h2>"
-        '<div class="tbl"><table class="notices"><thead><tr><th class="num">순위</th><th>업체</th>'
-        '<th class="num">투찰금액(억)</th><th class="num">투찰률</th></tr></thead>'
+        f'<div class="tbl"><table class="notices bidder-list"><thead><tr>{"".join(heads)}</tr></thead>'
         f"<tbody>{''.join(rows)}</tbody></table></div>"
-        '<p class="note">나라장터 개찰결과 기준. 투찰률은 예정가격 대비입니다.</p>'
+        f'<p class="note">{" ".join(notes)}</p>'
     )
 
 
@@ -217,7 +249,7 @@ def render_detail_html(
         + summary_html
         + "<h2>개찰·낙찰 결과</h2>"
         f'<div class="tbl"><table class="kv"><tbody>{_result_rows(n, status)}</tbody></table></div>'
-        + _bidder_table(n.get("bidders") or [])
+        + _bidder_table(n)
         + contract_html
         + competition_html
         + _prespec_table(prespecs or [])
