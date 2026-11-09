@@ -65,6 +65,188 @@
     }
   }
 
+  var WATCH_KEY = "aam-watch";
+
+  function loadWatch() {
+    try {
+      return JSON.parse(window.localStorage.getItem(WATCH_KEY) || "{}") || {};
+    } catch (e) {
+      return {};
+    }
+  }
+
+  function saveWatch(w) {
+    try {
+      window.localStorage.setItem(WATCH_KEY, JSON.stringify(w));
+    } catch (e) {}
+  }
+
+  function rowKey(row) {
+    var a = row.querySelector('a[href*="bids/"]') || row.querySelector("a[href]");
+    if (a) return a.getAttribute("href").replace(/^(\.\.\/)+/, "");
+    return text(row).slice(0, 120);
+  }
+
+  function csvCell(v) {
+    return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v;
+  }
+
+  function button(label, cls) {
+    var b = document.createElement("button");
+    b.type = "button";
+    b.className = cls || "tbl-act";
+    b.textContent = label;
+    return b;
+  }
+
+  /**
+   * Row checkboxes with CSV export, side-by-side compare and a 관심 list.
+   * 관심 is kept in this browser's localStorage only; nothing is sent anywhere.
+   */
+  function addSelection(table, wrap, rows, matchedRows, refresh) {
+    var heads = Array.prototype.map.call(table.tHead.rows[0].cells, label);
+    var watch = loadWatch();
+    var bar = document.createElement("div");
+    bar.className = "tbl-tools tbl-select";
+    var info = document.createElement("span");
+    info.className = "tbl-count";
+    var csvBtn = button("CSV 내보내기");
+    var cmpBtn = button("비교");
+    var addBtn = button("관심 등록");
+    var delBtn = button("관심 해제");
+    var noneBtn = button("선택 해제");
+    var only = document.createElement("label");
+    only.className = "tbl-only";
+    var onlyBox = document.createElement("input");
+    onlyBox.type = "checkbox";
+    only.appendChild(onlyBox);
+    only.appendChild(document.createTextNode(" 관심만 보기"));
+    [info, csvBtn, cmpBtn, addBtn, delBtn, noneBtn, only].forEach(function (el) {
+      bar.appendChild(el);
+    });
+    wrap.parentNode.insertBefore(bar, wrap);
+    var panel = document.createElement("div");
+    panel.className = "tbl-compare";
+    panel.hidden = true;
+    wrap.parentNode.insertBefore(panel, wrap);
+
+    // The name column is the widest and never hidden on narrow screens.
+    var pickCol = Math.max(
+      0,
+      heads.findIndex(function (h) {
+        return /(사업|사전규격|계약|공고)명$/.test(h);
+      })
+    );
+    rows.forEach(function (row) {
+      var box = document.createElement("input");
+      box.type = "checkbox";
+      box.className = "row-pick";
+      box.setAttribute("aria-label", "이 행 선택");
+      box.addEventListener("change", update);
+      var cell = row.cells[pickCol] || row.cells[0];
+      cell.insertBefore(box, cell.firstChild);
+      row.classList.toggle("watched", !!watch[rowKey(row)]);
+    });
+
+    function picked() {
+      return Array.prototype.filter.call(table.tBodies[0].rows, function (r) {
+        return r.querySelector(".row-pick").checked;
+      });
+    }
+
+    function update() {
+      var n = picked().length;
+      var w = rows.filter(function (r) {
+        return r.classList.contains("watched");
+      }).length;
+      info.textContent =
+        (n ? "선택 " + n + "건" : "행을 선택하거나 검색 결과 전체를 내보내세요") +
+        " · 관심 " + w + "건 (이 브라우저에만 저장)";
+      cmpBtn.disabled = n < 2 || n > 5;
+      cmpBtn.title = "2~5건을 고르면 나란히 비교합니다";
+      addBtn.disabled = delBtn.disabled = noneBtn.disabled = !n;
+      csvBtn.textContent = n ? "CSV 내보내기 (선택 " + n + "건)" : "CSV 내보내기 (검색 결과 전체)";
+    }
+
+    function cells(row) {
+      return Array.prototype.map.call(row.cells, text);
+    }
+
+    csvBtn.addEventListener("click", function () {
+      var list = picked();
+      if (!list.length) list = matchedRows();
+      var lines = [heads.map(csvCell).join(",")].concat(
+        list.map(function (r) {
+          return cells(r).map(csvCell).join(",");
+        })
+      );
+      var blob = new Blob(["\ufeff" + lines.join("\r\n")], { type: "text/csv;charset=utf-8" });
+      var a = document.createElement("a");
+      var page = (window.location.pathname.split("/").pop() || "index").replace(/\.html$/, "");
+      a.href = URL.createObjectURL(blob);
+      a.download = page + "-" + new Date().toISOString().slice(0, 10) + ".csv";
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(function () {
+        URL.revokeObjectURL(a.href);
+        a.remove();
+      }, 0);
+    });
+
+    cmpBtn.addEventListener("click", function () {
+      var list = picked();
+      var html = '<div class="tbl"><table class="kv compare"><tbody>';
+      heads.forEach(function (h, i) {
+        html += "<tr><th>" + h.replace(/[<&]/g, "") + "</th>";
+        list.forEach(function (r) {
+          html += "<td>" + (r.cells[i] ? r.cells[i].innerHTML.replace(/<input[^>]*>/, "") : "") + "</td>";
+        });
+        html += "</tr>";
+      });
+      html += "</tbody></table></div>";
+      panel.innerHTML = '<p class="meta">선택한 ' + list.length + "건 비교</p>" + html;
+      var close = button("비교 닫기");
+      close.addEventListener("click", function () {
+        panel.hidden = true;
+      });
+      panel.appendChild(close);
+      panel.hidden = false;
+      panel.scrollIntoView({ block: "nearest" });
+    });
+
+    function setWatch(on) {
+      picked().forEach(function (r) {
+        var k = rowKey(r);
+        if (on) watch[k] = { t: text(r.cells[headerIndex(table, "사업명")] || r.cells[0]).slice(0, 80), d: new Date().toISOString().slice(0, 10) };
+        else delete watch[k];
+        r.classList.toggle("watched", on);
+      });
+      saveWatch(watch);
+      update();
+      refresh();
+    }
+
+    addBtn.addEventListener("click", function () {
+      setWatch(true);
+    });
+    delBtn.addEventListener("click", function () {
+      setWatch(false);
+    });
+    noneBtn.addEventListener("click", function () {
+      rows.forEach(function (r) {
+        r.querySelector(".row-pick").checked = false;
+      });
+      update();
+    });
+    onlyBox.addEventListener("change", refresh);
+    update();
+    return {
+      watchOnly: function () {
+        return onlyBox.checked;
+      },
+    };
+  }
+
   function enhance(table, syncUrl) {
     var tbody = table.tBodies[0];
     if (!table.tHead || !tbody) return;
@@ -111,8 +293,12 @@
     wrap.parentNode.insertBefore(more, wrap.nextSibling);
 
     var limit = PAGE;
+    var picks = addSelection(table, wrap, rows, function () {
+      return Array.prototype.filter.call(tbody.rows, matches);
+    }, reset);
 
     function matches(row) {
+      if (picks.watchOnly() && !row.classList.contains("watched")) return false;
       if (statusSel && statusSel.value && text(row.cells[statusCol]) !== statusSel.value) return false;
       if (scopeSel && scopeSel.value && text(row.cells[scopeCol]) !== scopeSel.value) return false;
       var needle = q.value.trim().toLocaleLowerCase("ko");
@@ -190,7 +376,12 @@
         budgetCol >= 0
           ? " · 예산 합계 " + Math.round(budget).toLocaleString("ko-KR") + "억"
           : "";
-      var filtered = !!(q.value || (statusSel && statusSel.value) || (scopeSel && scopeSel.value));
+      var filtered = !!(
+        q.value ||
+        (statusSel && statusSel.value) ||
+        (scopeSel && scopeSel.value) ||
+        picks.watchOnly()
+      );
       var blank = blankCount();
       count.textContent =
         (filtered ? "검색 결과 " : "전체 ") +
