@@ -8,7 +8,7 @@ import json
 from pathlib import Path
 from typing import Any
 
-from .firms import firm_profile_text, load_firms, winner_bizno
+from .firms import firm_profile_text, load_firms, public_change_text, winner_bizno
 from .pricing import load_notices
 from .render import _today_kst, infer_status, load_run_status, stamp_text
 from .site import detail_href, page, stat
@@ -63,6 +63,9 @@ def build_bidder_index(
         if info.get("corp_name"):
             firm[0] = info["corp_name"]
         firm[1] = firm_profile_text(info)
+        changes = [[c.get("date") or "", public_change_text(c)] for c in info.get("changes") or []]
+        if changes:
+            firm.append(changes)
     return {"notices": rows, "firms": out}
 
 

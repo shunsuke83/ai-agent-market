@@ -338,7 +338,7 @@ def cmd_enrich_firms(args: argparse.Namespace) -> int:
     """조달업체 기본정보 (사용자정보 서비스) by 사업자번호 → data/firms.json."""
     from .client import G2BClient, G2BError
     from .competitors import firm_targets
-    from .firms import normalize_corp_item
+    from .firms import merge_firm_record, normalize_corp_item
 
     out = Path(args.out)
     prev = json.loads(out.read_text(encoding="utf-8")) if out.exists() else {}
@@ -351,7 +351,7 @@ def cmd_enrich_firms(args: argparse.Namespace) -> int:
     except G2BError as e:
         print(f"::warning::firm lookup skipped: {e}")
         return 1
-    fetched = missing = failed = 0
+    fetched = missing = failed = changed = 0
     logged = False
     for bizno in targets:
         try:
@@ -369,11 +369,15 @@ def cmd_enrich_firms(args: argparse.Namespace) -> int:
         if not logged:
             print(f"Corp item keys: {sorted(item)}")
             logged = True
-        firms[bizno] = {**normalize_corp_item(item), "bizno": bizno, "fetched_at": utc_now_iso()}
+        now_iso = utc_now_iso()
+        old = firms.get(bizno)
+        new = {**normalize_corp_item(item), "bizno": bizno, "fetched_at": now_iso}
+        firms[bizno] = merge_firm_record(old, new, now_iso[:10])
+        changed += len(firms[bizno].get("changes") or []) - len((old or {}).get("changes") or [])
         fetched += 1
     payload = {"schema_version": 1, "generated_at": utc_now_iso(), "firms": firms}
     out.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Wrote {out}: fetched={fetched} missing={missing} failed={failed} total={len(firms)}")
+    print(f"Wrote {out}: fetched={fetched} changes={changed} missing={missing} failed={failed} total={len(firms)}")
     return 1 if targets and failed == len(targets) else 0
 
 
@@ -858,7 +862,7 @@ def build_parser() -> argparse.ArgumentParser:
         help="조달업체 기본정보 for competitors + top outside rivals into data/firms.json",
     )
     ef.add_argument("--out", default=str(DATA / "firms.json"))
-    ef.add_argument("--max-age-days", type=int, default=30)
+    ef.add_argument("--max-age-days", type=int, default=6, help="Re-fetch older records; weekly runs catch changes")
     ef.set_defaults(func=cmd_enrich_firms)
 
     e = sub.add_parser(
