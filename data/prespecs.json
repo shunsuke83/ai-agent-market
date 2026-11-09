@@ -1,11 +1,33 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-09T04:43:38Z",
+  "generated_at": "2026-11-09T05:26:00Z",
   "range": {
     "since": "2026-10-26",
     "until": "2026-11-09"
   },
   "prespecs": [
+    {
+      "prespec_no": "R26BD00296902",
+      "title": "동국대학교 반도체 현장 특화 SLLM 개발 용역",
+      "org": "동국대학교 산학협력단",
+      "order_org": "동국대학교 산학협력단",
+      "registered_at": "2026-11-09 14:07",
+      "registered_date": "2026-11-09",
+      "opinion_close_at": "2026-11-12 15:00",
+      "asign_budget_eok": 0.29,
+      "scope": "생성형·Agent",
+      "fields": [
+        "생성형·LLM"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00296902&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
     {
       "prespec_no": "R26BD00296725",
       "title": "인문사회 통합성과확산센터 성과 DB 이관 및 AI 기반 성과분석·추적조사 PoC 용역사업",
