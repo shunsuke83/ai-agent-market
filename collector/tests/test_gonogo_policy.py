@@ -151,6 +151,28 @@ def test_industry_codes_direct_production_and_credit():
     assert gp.credit_warning(PROFILE, NOW.date()) == ""
 
 
+def test_credit_grade_gate():
+    company = {**PROFILE["company"], "credit_rating": {"grade": "B+", "valid_until": "2027-06-01"}}
+    profile = {**PROFILE, "company": company, "hard_gates": [{"id": "credit", "review_below": "BB-"}]}
+
+    def gate(*reqs, **kw):
+        return [g for g in gp.judge_gates(_notice(**kw), profile, NOW, _summary(*reqs)) if g[0] == "신용등급"]
+
+    assert gp.grade_rank("BBB0") == gp.grade_rank("BBB") < gp.grade_rank("BBB-") < gp.grade_rank("BB+")
+    assert gp.grade_rank("B+") < gp.grade_rank("B") and gp.grade_rank("x") is None
+    assert gate("신용평가등급 B 이상인 업체") == [("신용등급", gp.PASS, "요건 B 이상, 보유 B+")]
+    assert gate("회사채 신용평가등급이 BB- 이상인 자")[0] == ("신용등급", gp.FAIL, "요건 BB- 이상, 보유 B+")
+    assert gate("신용평가등급 B 이상", "기업신용평가등급 BBB0 이상")[0][1] == gp.FAIL
+    assert gate("적격심사(경영상태 30점, 입찰가격 70점)")[0] == (
+        "신용등급", gp.UNKNOWN, "경영상태(신용등급) 평가 — 보유 B+, 감점 가능성 확인")
+    assert gate("소프트웨어사업자") == []
+    assert gate("신용평가등급 B 이상", close_at="2027-06-10 10:00")[0] == (
+        "신용등급", gp.UNKNOWN, "신용평가 확인서 2027-06-01 만료 — 마감 전 갱신 필요")
+    profile["hard_gates"] = [{"id": "credit"}]
+    assert gate("적격심사(경영상태 30점)") == []
+    assert gp.score_policy(_notice(), profile, NOW, summary=_summary("신용평가등급 BB- 이상"))["verdict"] == gp.NO_GO
+
+
 def test_schedule_gate_when_configured():
     profile = {**PROFILE, "hard_gates": [{"id": "schedule", "min_business_days_to_deadline": 10}]}
     gates = gp.judge_gates(_notice(close_at="2026-11-06 10:00"), profile, NOW, None)
