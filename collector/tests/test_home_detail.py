@@ -46,6 +46,28 @@ def test_home_lists_only_open_real_opportunities():
     assert '<div class="v">2건</div><div class="l">입찰 접수 중인 AI 공고</div>' in out
 
 
+def test_home_dday_badge_and_competition_column():
+    past = [
+        _n(bid_no=f"P{i}", notice_date="2026-06-01", close_at="2026-06-10 10:00", open_date="2026-06-10",
+           status="낙찰", winner="가나다", bid_count=4 + i,
+           bidders=[{"rank": 1, "name": "가나다", "rate_pct": 88.0 + i}, {"rank": 2, "name": f"업체{i}"}])
+        for i in range(5)
+    ]
+    notices = past + [_n(), _n(bid_no="LATE", close_at="2026-11-05 10:00", org="다른청", nature="ISP·전략")]
+    out = build_home(notices, [], {}, now=NOW)
+    closing = out.split("<h2>마감 임박")[1].split("<h2>")[0]
+    assert "<th>경쟁·낙찰 범위</th>" in closing
+    assert '<span class="dday urgent">D-4 임박</span>' not in closing
+    assert '<span class="dday">D-4</span>' in closing
+    assert '<span class="dday">D-6</span>' in closing
+    assert "6곳" in closing and "(5건 중앙값)" in closing and "89.0~91.0%" in closing
+    assert "비교 표본 부족" in closing
+    soon = build_home([_n(close_at="2026-11-02 10:00")], [], {}, now=NOW)
+    assert '<span class="dday urgent">D-3 임박</span>' in soon
+    today = build_home([_n(close_at="2026-10-30 18:00")], [], {}, now=NOW)
+    assert '<span class="dday urgent">D-day 임박</span>' in today
+
+
 def test_detail_shows_first_rank_and_unknown_amount():
     pending = render_detail_html(
         _n(status="1순위", first_rank="가나다", bidders=[{"rank": 1, "name": "가나다", "amount_eok": 11.0, "rate_pct": 88.1}]),

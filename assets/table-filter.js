@@ -154,6 +154,19 @@
       );
     }
 
+    // Rows with an empty filtered cell (미확인) can never match a value, so say how many dropped out.
+    function blankCount() {
+      var n = 0;
+      for (var i = 0; i < rows.length; i++) {
+        if (
+          (statusSel && statusSel.value && !text(rows[i].cells[statusCol])) ||
+          (scopeSel && scopeSel.value && !text(rows[i].cells[scopeCol]))
+        )
+          n++;
+      }
+      return n;
+    }
+
     function apply() {
       var shown = 0;
       var matched = 0;
@@ -178,12 +191,14 @@
           ? " · 예산 합계 " + Math.round(budget).toLocaleString("ko-KR") + "억"
           : "";
       var filtered = !!(q.value || (statusSel && statusSel.value) || (scopeSel && scopeSel.value));
+      var blank = blankCount();
       count.textContent =
         (filtered ? "검색 결과 " : "전체 ") +
         matched +
         "건" +
         budgetTxt +
-        (shown < matched ? " · " + shown + "건 표시" : "");
+        (shown < matched ? " · " + shown + "건 표시" : "") +
+        (blank ? " · 값이 비어 있는(미확인) " + blank + "건은 조건에서 빠짐" : "");
       var rest = matched - shown;
       more.hidden = rest <= 0;
       more.textContent = "더 보기 (남은 " + rest + "건)";
