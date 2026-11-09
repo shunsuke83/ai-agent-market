@@ -33,5 +33,28 @@ def test_public_text_hides_ceo_names_and_slack_shows_them():
         [{"bid_no": "R1", "open_date": "2026-11-01", "bidders": [{"rank": 1, "name": "에이", "bizno": "1111111111"}]}],
         firms,
     )
-    assert idx["firms"]["1111111111"][3][0] == ["2026-11-16", "대표자 변경"]
+    assert idx["firms"]["1111111111"][3][0] == ["2026-11-16", "대표자 변경", False]
     assert "김대표" not in str(idx)
+
+
+def test_g2b_change_date_kept_and_backfilled():
+    old = {"corp_name": "에이", "biz_div": "용역", "g2b_changed_at": "2026-09-01"}
+    new = {"corp_name": "에이", "biz_div": "용역,공사", "g2b_changed_at": "2026-11-03"}
+    assert firm_changes(old, new, "2026-11-09")[0]["changed_at"] == "2026-11-03"
+    same = {**new, "g2b_changed_at": "2026-09-01"}
+    assert firm_changes(old, same, "2026-11-09")[0]["changed_at"] is None
+
+    legacy = {"corp_name": "에이", "biz_div": "용역,공사",
+              "changes": [{"date": "2026-11-09", "field": "biz_div", "label": "업무구분", "from": "용역", "to": "용역,공사"},
+                          {"date": "2026-10-01", "field": "hq_div", "label": "본사 구분", "from": "지사", "to": "본사"}]}
+    merged = merge_firm_record(legacy, {**new, "biz_div": "용역,공사"}, "2026-11-10")
+    assert [c.get("changed_at") for c in merged["changes"]] == ["2026-11-03", None]
+    assert "changed_at" not in legacy["changes"][0]
+
+    items = firm_change_items({"1": {"corp_name": "에이", "changes": merged["changes"]}}, {}, "2026-11-01")
+    assert "(나라장터 변경 2026-11-03)" in firm_change_text(items, "https://x/", 15)
+    idx = build_bidder_index(
+        [{"bid_no": "R1", "open_date": "2026-11-01", "bidders": [{"rank": 1, "name": "에이", "bizno": "1"}]}],
+        {"1": merged},
+    )
+    assert idx["firms"]["1"][3][0] == ["2026-11-03", "업무구분 용역 → 용역,공사", True]

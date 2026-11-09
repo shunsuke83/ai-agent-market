@@ -63,7 +63,10 @@ def build_bidder_index(
         if info.get("corp_name"):
             firm[0] = info["corp_name"]
         firm[1] = firm_profile_text(info)
-        changes = [[c.get("date") or "", public_change_text(c)] for c in info.get("changes") or []]
+        changes = [
+            [c.get("changed_at") or c.get("date") or "", public_change_text(c), bool(c.get("changed_at"))]
+            for c in info.get("changes") or []
+        ]
         if changes:
             firm.append(changes)
     return {"notices": rows, "firms": out}

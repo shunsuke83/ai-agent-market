@@ -344,7 +344,10 @@ def cmd_enrich_firms(args: argparse.Namespace) -> int:
     prev = json.loads(out.read_text(encoding="utf-8")) if out.exists() else {}
     firms: dict[str, dict[str, Any]] = dict(prev.get("firms") or {})
     cutoff = (datetime.now(timezone.utc) - timedelta(days=args.max_age_days)).isoformat()
-    targets = [b for b in firm_targets(ROOT) if (firms.get(b) or {}).get("fetched_at", "") < cutoff]
+    targets = [
+        b for b in firm_targets(ROOT)
+        if (firms.get(b) or {}).get("fetched_at", "") < cutoff or "g2b_changed_at" not in (firms.get(b) or {})
+    ]
     print(f"Firm lookups: {len(targets)} due (cached {len(firms)})")
     try:
         client = G2BClient()
