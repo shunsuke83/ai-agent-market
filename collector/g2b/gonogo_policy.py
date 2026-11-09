@@ -146,6 +146,52 @@ def _industry_codes(summary: dict[str, Any] | None) -> list[tuple[set[str], bool
     return out
 
 
+_GRADE_BASES = ("AAA", "AA", "A", "BBB", "BB", "B", "CCC", "CC", "C", "D")
+_GRADE = r"(?<![A-Za-z])(AAA|AA|A|BBB|BB|B|CCC|CC|C|D)\s*([+\-0]?)(?![A-Za-z+\-])"
+_CREDIT_MIN_RE = re.compile(r"(?:신용|회사채|기업어음)[^.\n]{0,40}?" + _GRADE + r"\s*(?:등급\s*)?이상")
+_CREDIT_SCORED_RE = re.compile(r"경영\s*상태|신용\s*(?:평가)?\s*등급")
+
+
+def grade_rank(grade: str | None) -> int | None:
+    """Lower is better: AAA=0 … D. 'BBB0' equals 'BBB'."""
+    m = re.fullmatch(r"\s*" + _GRADE + r"\s*", str(grade or "").upper())
+    if not m:
+        return None
+    return _GRADE_BASES.index(m.group(1)) * 3 + {"+": 0, "-": 2}.get(m.group(2), 1)
+
+
+def _credit_gate(
+    n: dict[str, Any], text: str, credit: dict[str, Any], cfg: dict[str, Any]
+) -> tuple[str, str] | None:
+    """Notice minimum grade vs ours; scored 경영상태 below review_below → REVIEW; certificate expiry."""
+    ours = str(credit.get("grade") or "")
+    rank = grade_rank(ours)
+    found: list[tuple[str, str]] = []
+    mins = [(m.group(1) + m.group(2), grade_rank(m.group(1) + m.group(2))) for m in _CREDIT_MIN_RE.finditer(text)]
+    if mins:
+        need, need_rank = min(mins, key=lambda g: g[1])
+        if rank is None:
+            found.append((UNKNOWN, f"요건 {need} 이상 — 보유 등급 미입력"))
+        else:
+            found.append((PASS if rank <= need_rank else FAIL, f"요건 {need} 이상, 보유 {ours}"))
+    elif _CREDIT_SCORED_RE.search(text):
+        floor = grade_rank(cfg.get("review_below"))
+        if rank is None:
+            found.append((UNKNOWN, "경영상태(신용등급) 평가 — 보유 등급 미입력"))
+        elif floor is not None and rank > floor:
+            found.append((UNKNOWN, f"경영상태(신용등급) 평가 — 보유 {ours}, 감점 가능성 확인"))
+    if found:
+        until = str(credit.get("valid_until") or "")
+        close = str(n.get("close_at") or "")[:10]
+        if until and close and until < close:
+            found.append((UNKNOWN, f"신용평가 확인서 {until} 만료 — 마감 전 갱신 필요"))
+    if not found:
+        return None
+    statuses = [s for s, _ in found]
+    status = FAIL if FAIL in statuses else UNKNOWN if UNKNOWN in statuses else PASS
+    return status, ", ".join(label for s, label in found if s == status)
+
+
 def credit_warning(profile: dict[str, Any], today: Any) -> str:
     credit = (profile.get("company") or {}).get("credit_rating") or {}
     until = str(credit.get("valid_until") or "")
@@ -230,6 +276,11 @@ def judge_gates(
             else:
                 v = quals.get(key)
                 out.append(("인증", PASS if v else FAIL if v is False else UNKNOWN, label))
+
+    if "credit" in gates_cfg:
+        credit = _credit_gate(n, text, company.get("credit_rating") or {}, gates_cfg["credit"])
+        if credit:
+            out.append(("신용등급", *credit))
 
     if "schedule" in gates_cfg:
         need = gates_cfg["schedule"].get("min_business_days_to_deadline")
