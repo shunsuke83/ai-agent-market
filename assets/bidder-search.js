@@ -114,6 +114,9 @@
     var head = ["사업자번호 " + fmtBizno(bz)];
     if (firm[1]) head.push(firm[1]);
     var rv = rivals(bz, bids);
+    var changes = (firm[3] || []).map(function (c) {
+      return esc(c[0]) + " " + esc(c[1]);
+    });
     var rows = bids.map(function (b) {
       var n = data.notices[b[0]];
       var title = n[4] ? '<a href="' + esc(n[4]) + '">' + esc(n[2]) + "</a>" : esc(n[2]);
@@ -128,6 +131,7 @@
     box.innerHTML =
       "<h2>" + esc(firm[0] || fmtBizno(bz)) + "</h2>" +
       '<p class="meta">' + esc(head.join(" · ")) + "</p>" +
+      (changes.length ? '<p class="meta">나라장터 등록정보 변경(확인일): ' + changes.join(" / ") + "</p>" : "") +
       '<div class="stats">' +
       '<div class="stat"><div class="v">' + bids.length + '건</div><div class="l">투찰</div></div>' +
       '<div class="stat"><div class="v">' + wins + '건</div><div class="l">낙찰 확정</div></div>' +

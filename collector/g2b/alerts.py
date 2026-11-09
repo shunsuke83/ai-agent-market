@@ -16,6 +16,7 @@ import yaml
 
 from .classify import ROOT as COLLECTOR_ROOT
 from .classify import load_keywords
+from .firms import load_firms
 from .normalize import prespec_excluded
 from .render import KST, _fmt_budget, _g2b_href
 from .site import detail_href, page
@@ -280,6 +281,29 @@ def slack_text(groups: list[tuple[dict[str, Any], list[dict[str, Any]]]], today:
     return "\n".join(lines)
 
 
+def firm_change_items(firms: dict[str, dict[str, Any]], sent: dict[str, str], since: str) -> list[dict[str, Any]]:
+    """Unsent 조달업체 등록정보 changes recorded since `since`, newest first."""
+    out = []
+    for bizno, firm in firms.items():
+        for c in firm.get("changes") or []:
+            key = f"firm:{bizno}:{c.get('date')}:{c.get('field')}"
+            if key not in sent and str(c.get("date") or "") >= since:
+                out.append({"key": key, "bizno": bizno, "name": firm.get("corp_name") or bizno, **c})
+    out.sort(key=lambda i: (i["date"], i["name"]), reverse=True)
+    return out
+
+
+def firm_change_text(items: list[dict[str, Any]], site_url: str, limit: int) -> str:
+    lines = [f"*경쟁사 조달업체 등록정보 변경 {len(items)}건*"]
+    for i in items[:limit]:
+        name = _slack_escape(str(i["name"])).replace("|", "¦")
+        change = _slack_escape(f"{i['label']}: {i['from']} → {i['to']}")
+        lines.append(f"• <{site_url}bidders.html#{i['bizno']}|{name}> — {change} ({i['date']} 확인)")
+    if len(items) > limit:
+        lines.append(f"    …외 {len(items) - limit}건")
+    return "\n".join(lines)
+
+
 def post_slack(webhook: str, text: str) -> None:
     import requests
 
@@ -376,12 +400,17 @@ def run_alerts(
     state = load_state(repo_root)
     since = (today - timedelta(days=int(config.get("slack_max_age_days", 7)))).isoformat()
     groups = new_by_rule(items, rules, state.get("sent", {}), since, now.strftime("%Y-%m-%d %H:%M"))
+    changes = firm_change_items(load_firms(repo_root), state.get("sent", {}), since)
     new_count = sum(len(g) for _, g in groups)
-    summary: dict[str, Any] = {"rules": counts, "new": new_count, "slack": "skipped"}
-    if not groups:
+    summary: dict[str, Any] = {"rules": counts, "new": new_count, "firm_changes": len(changes), "slack": "skipped"}
+    if not groups and not changes:
         summary["slack"] = "nothing new"
         return summary
-    text = slack_text(groups, today, int(config.get("slack_limit_per_rule", 15)), site_url)
+    limit = int(config.get("slack_limit_per_rule", 15))
+    parts = [slack_text(groups, today, limit, site_url)] if groups else []
+    if changes:
+        parts.append(firm_change_text(changes, site_url, limit))
+    text = "\n\n".join(parts)
     if dry_run:
         print(text)
         summary["slack"] = "dry run"
@@ -392,9 +421,8 @@ def run_alerts(
         return summary
     post_slack(webhook, text)
     sent = state.setdefault("sent", {})
-    for _, got in groups:
-        for i in got:
-            sent[i["key"]] = today.isoformat()
+    for i in [i for _, got in groups for i in got] + changes:
+        sent[i["key"]] = today.isoformat()
     save_state(repo_root, state, today)
     summary["slack"] = "sent"
     return summary

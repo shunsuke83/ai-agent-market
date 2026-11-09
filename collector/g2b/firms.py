@@ -113,6 +113,57 @@ def normalize_corp_item(item: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+TRACKED_FIELDS = (
+    ("corp_name", "상호"),
+    ("ceo", "대표자"),
+    ("region", "소재지"),
+    ("biz_div", "업무구분"),
+    ("mnfct_div", "제조 구분"),
+    ("hq_div", "본사 구분"),
+)
+CHANGES_KEPT = 20
+EMPLOYEE_MIN_DELTA = 10
+EMPLOYEE_MIN_RATIO = 0.2
+
+
+def firm_changes(old: dict[str, Any] | None, new: dict[str, Any], day: str) -> list[dict[str, Any]]:
+    """Registration fields that differ from the last fetch. A blank new value is an API gap, not a change."""
+    if not old:
+        return []
+    out = []
+    for key, label in TRACKED_FIELDS:
+        before, after = old.get(key), new.get(key)
+        if after and before and str(before).strip() != str(after).strip():
+            out.append({"date": day, "field": key, "label": label, "from": before, "to": after})
+    before, after = old.get("employees"), new.get("employees")
+    if isinstance(before, int) and isinstance(after, int):
+        delta = after - before
+        if abs(delta) >= max(EMPLOYEE_MIN_DELTA, EMPLOYEE_MIN_RATIO * before):
+            out.append({"date": day, "field": "employees", "label": "종업원 수", "from": before, "to": after})
+    return out
+
+
+def merge_firm_record(old: dict[str, Any] | None, new: dict[str, Any], day: str) -> dict[str, Any]:
+    """New fetch + accumulated change history (newest first, capped)."""
+    changes = firm_changes(old, new, day) + list((old or {}).get("changes") or [])
+    record = {k: v for k, v in new.items() if k != "changes"}
+    for key, _ in TRACKED_FIELDS:
+        if not record.get(key) and (old or {}).get(key):
+            record[key] = old[key]
+    if changes:
+        record["changes"] = changes[:CHANGES_KEPT]
+    return record
+
+
+def public_change_text(c: dict[str, Any]) -> str:
+    """Change line for public pages; 대표자 names stay out."""
+    if c.get("field") == "ceo":
+        return "대표자 변경"
+    if c.get("field") == "employees":
+        return f"종업원 {c['from']:,}명 → {c['to']:,}명"
+    return f"{c.get('label')} {c.get('from')} → {c.get('to')}"
+
+
 _PROVINCE_SUFFIX = ("특별자치도", "특별자치시", "특별시", "광역시", "도")
 _PROVINCE_SHORT = {"충청북도": "충북", "충청남도": "충남", "전라북도": "전북", "전라남도": "전남",
                    "경상북도": "경북", "경상남도": "경남", "전북특별자치도": "전북"}
