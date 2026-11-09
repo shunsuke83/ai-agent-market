@@ -1,11 +1,33 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-09T04:01:53Z",
+  "generated_at": "2026-11-09T04:43:38Z",
   "range": {
     "since": "2026-10-26",
     "until": "2026-11-09"
   },
   "prespecs": [
+    {
+      "prespec_no": "R26BD00296725",
+      "title": "인문사회 통합성과확산센터 성과 DB 이관 및 AI 기반 성과분석·추적조사 PoC 용역사업",
+      "org": "한국연구재단",
+      "order_org": "한국연구재단",
+      "registered_at": "2026-11-09 13:10",
+      "registered_date": "2026-11-09",
+      "opinion_close_at": "2026-11-14 23:59",
+      "asign_budget_eok": 1.5,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00296725&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
     {
       "prespec_no": "R26BD00296780",
       "title": "제주미래고등학교 AI소프트웨어과 정보화기기 구매",
@@ -1004,7 +1026,9 @@
         "AX·전략"
       ],
       "nature": "ISP·전략",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01816820"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294100&fileType=BFDTL&fileSeq=1"
       ],
