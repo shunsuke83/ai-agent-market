@@ -223,7 +223,8 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/notices.json data/reports.json data/run_status.json \
             reports.json reports/ \
-            band.html awards.html index.html competitors.html prespecs.html pricing.html plans.html
+            band.html awards.html index.html competitors.html prespecs.html pricing.html plans.html \
+            bidders.html data/bidders.json deliverables.html
           if [ -f alerts.html ]; then git add alerts.html feeds/; fi
           if [ -f data/alerts_state.json ]; then git add data/alerts_state.json; fi
           if [ -f data/prespecs.json ]; then git add data/prespecs.json; fi

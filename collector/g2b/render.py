@@ -7,11 +7,10 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
-from .assets import stamp_asset_versions
 from .normalize import band_excluded, in_band, merge_by_bid, sort_notices
 from .classify import classify_nature, load_keywords
 from .seed import load_seed
-from .site import detail_href
+from .site import detail_href, stamp_shell
 
 KST = timezone(timedelta(hours=9))
 
@@ -726,7 +725,7 @@ def render_band_page(repo_root: Path) -> dict[str, Any]:
         f"이 구간 영업의 선행 지표로 볼 수 있습니다. {shown_txt}</p>",
     )
 
-    text = stamp_asset_versions(text)
+    text = stamp_shell(text)
     path.write_text(text, encoding="utf-8")
     return {
         "path": str(path),
@@ -745,12 +744,12 @@ def render_index_stamp(repo_root: Path, home: bool = True) -> dict[str, Any]:
     stamp = stamp_text(load_run_status(repo_root))
     if home:
         text = update_stamp(path.read_text(encoding="utf-8"), stamp)
-        path.write_text(stamp_asset_versions(text), encoding="utf-8")
+        path.write_text(stamp_shell(text), encoding="utf-8")
     # Hand-edited pages that no renderer owns still need fresh asset versions.
     for extra in ("deliverables.html",):
         p = repo_root / extra
         if p.exists():
-            p.write_text(stamp_asset_versions(p.read_text(encoding="utf-8")), encoding="utf-8")
+            p.write_text(stamp_shell(p.read_text(encoding="utf-8")), encoding="utf-8")
     return {"path": str(path), "stamp": stamp}
 
 
@@ -1277,7 +1276,7 @@ def render_awards_page(repo_root: Path) -> dict[str, Any]:
     # Stats: recompute from award pool + merged notices when we have winners
     text = update_awards_stats(text, repo_root, pool)
 
-    text = stamp_asset_versions(text)
+    text = stamp_shell(text)
     path.write_text(text, encoding="utf-8")
     return {
         "path": str(path),

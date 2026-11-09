@@ -146,6 +146,11 @@ def competition_rows(
     return rows
 
 
+def _firm_cell(r: dict[str, Any]) -> str:
+    name = html.escape(r["name"])
+    return f'<a href="bidders.html#{r["bizno"]}">{name}</a>' if r.get("bizno") else name
+
+
 def firm_habits(notices: list[dict[str, Any]], min_bids: int = FIRM_MIN_BIDS) -> list[dict[str, Any]]:
     """Per firm (사업자번호, else name): bids, median 투찰률, wins, median 낙찰 투찰률."""
     acc: dict[str, dict[str, Any]] = {}
@@ -175,13 +180,14 @@ def firm_habits(notices: list[dict[str, Any]], min_bids: int = FIRM_MIN_BIDS) ->
     rows = [
         {
             "name": a["name"],
+            "bizno": "" if k.startswith("name:") else k,
             "bids": a["bids"],
             "wins": a["wins"],
             "rate_n": len(a["rates"]),
             "median_rate": statistics.median(a["rates"]) if len(a["rates"]) >= MIN_SAMPLE else None,
             "median_win_rate": statistics.median(a["win_rates"]) if a["win_rates"] else None,
         }
-        for a in acc.values()
+        for k, a in acc.items()
         if a["bids"] >= min_bids
     ]
     rows.sort(key=lambda r: (-r["bids"], -r["wins"], r["name"]))
@@ -384,7 +390,7 @@ def build_pricing(notices: list[dict[str, Any]], run_status: dict[str, Any], tod
 
     firm_rows = "".join(
         "<tr>"
-        f"<td>{html.escape(r['name'])}</td>"
+        f"<td>{_firm_cell(r)}</td>"
         f'<td class="num">{r["bids"]}</td>'
         f'<td class="num">{r["wins"]}</td>'
         f'<td class="num">{_pct(100.0 * r["wins"] / r["bids"], 0)}</td>'
@@ -433,7 +439,8 @@ def build_pricing(notices: list[dict[str, Any]], run_status: dict[str, Any], tod
         '<th class="num">낙찰</th><th class="num">낙찰 비율</th><th class="num">투찰률 중앙값</th>'
         '<th class="num">낙찰 시 투찰률</th></tr></thead>'
         f"<tbody>{firm_rows}</tbody></table></div>"
-        f'<p class="note">사업자번호 기준으로 묶었습니다. 상위 {LIMIT}곳만 표시합니다.</p>'
+        f'<p class="note">사업자번호 기준으로 묶었습니다. 상위 {LIMIT}곳만 표시합니다. '
+        '업체명을 누르면 <a href="bidders.html">입찰이력 검색</a>에서 공고별 이력을 볼 수 있습니다.</p>'
         + "<h2>경쟁이 약했던 사업 (최근 1년)</h2>"
         '<p class="meta">유찰됐거나 1곳만 투찰한 사업입니다. 수의계약, 장비 구매, 감리·PMO·교육·행사성 공고는 빼고 '
         "재공고 차수는 최신 1건만 둡니다. 같은 기관이 비슷한 사업을 다시 낼 때 진입 기회가 될 수 있습니다.</p>"
