@@ -123,8 +123,10 @@
       return "<tr><td>" + esc(n[0]) + "</td><td>" + esc(n[1]) + "</td><td>" + title + "</td>" +
         '<td class="num">' + num(n[3], 1) + "</td>" +
         '<td class="num">' + (b[1] == null ? "" : b[1] + "/" + byNotice[b[0]].length) + "</td>" +
-        (isRate(b[2]) ? '<td class="num">' + num(b[2], 2) + "</td>"
-          : '<td class="num" title="협상계약 가격점수 등 투찰률이 아닌 값">-</td>') +
+        (isRate(b[2]) ? '<td class="num">' + num(b[2], 2) + "%</td>"
+          : b[2] != null && b[2] >= 0 && b[2] < 50
+            ? '<td class="num" title="협상계약 가격평가 점수">' + num(b[2], 2) + "점</td>"
+            : '<td class="num"></td>') +
         '<td class="num">' + num(b[3], 2) + "</td>" +
         "<td>" + result(n, bz, b[1]) + "</td></tr>";
     });
@@ -141,11 +143,11 @@
       "</div>" +
       (rv.length ? '<p class="meta rivals">자주 맞붙은 업체(개찰 순위 기준): ' + rv.join(", ") + "</p>" : "") +
       '<div class="tbl"><table class="notices bidder-history"><thead><tr><th>개찰일</th><th>수요기관</th>' +
-      '<th>사업명</th><th class="num">예산(억)</th><th class="num">순위</th><th class="num">투찰률(%)</th>' +
+      '<th>사업명</th><th class="num">예산(억)</th><th class="num">순위</th><th class="num">투찰률·가격점수</th>' +
       '<th class="num">투찰금액(억)</th><th>결과</th></tr></thead><tbody>' + rows.join("") +
       "</tbody></table></div>" +
-      '<p class="note">순위 옆 숫자는 그 공고의 투찰 업체 수입니다. 투찰률은 예정가격 대비 값(50~110%)만 보여 주고, ' +
-      "협상계약의 가격점수처럼 이 범위 밖의 값은 '-'로 둡니다.</p>";
+      '<p class="note">순위 옆 숫자는 그 공고의 투찰 업체 수입니다. \'%\'는 예정가격 대비 투찰률이고, ' +
+      "'점'은 협상계약의 가격평가 점수입니다. 투찰률 중앙값에는 투찰률만 씁니다.</p>";
   }
 
   function showList(matches, q) {
