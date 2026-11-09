@@ -737,7 +737,7 @@ def cmd_render(args: argparse.Namespace) -> int:
 
     targets = args.target
     if "all" in targets:
-        targets = ["band", "awards", "index", "competitors", "reports", "prespecs", "pricing", "bidders", "plans", "details"]
+        targets = ["band", "awards", "index", "competitors", "reports", "prespecs", "pricing", "bidders", "agencies", "plans", "details"]
     summary: dict[str, Any] = {}
     if "band" in targets:
         summary["band"] = render_band_page(ROOT)
@@ -759,6 +759,10 @@ def cmd_render(args: argparse.Namespace) -> int:
         from .bidders import render_bidders_page
 
         summary["bidders"] = render_bidders_page(ROOT)
+    if "agencies" in targets:
+        from .agencies import render_agencies_page
+
+        summary["agencies"] = render_agencies_page(ROOT)
     if "plans" in targets:
         from .plans import render_plans_page
 
@@ -952,7 +956,7 @@ def build_parser() -> argparse.ArgumentParser:
     r.add_argument(
         "target",
         nargs="+",
-        choices=["band", "awards", "index", "competitors", "reports", "prespecs", "pricing", "bidders", "plans", "details", "all"],
+        choices=["band", "awards", "index", "competitors", "reports", "prespecs", "pricing", "bidders", "agencies", "plans", "details", "all"],
         help="What to render",
     )
     r.set_defaults(func=cmd_render)

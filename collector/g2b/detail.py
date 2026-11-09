@@ -7,6 +7,7 @@ import json
 from datetime import date
 from pathlib import Path
 from typing import Any
+from urllib.parse import quote
 
 from .normalize import merge_by_bid
 from .render import (
@@ -160,6 +161,13 @@ def _prespec_table(prespecs: list[dict[str, Any]]) -> str:
     )
 
 
+def _org_link(org: str) -> str:
+    if not org:
+        return ""
+    href = "../agencies.html#org=" + quote(org, safe="")
+    return f'<a href="{html.escape(href)}" title="이 기관의 AI 사업 공고 모두 보기">{html.escape(org)}</a>'
+
+
 def _same_org_table(rows: list[dict[str, Any]], today: date) -> str:
     if not rows:
         return ""
@@ -225,7 +233,7 @@ def render_detail_html(
     g2b = _g2b_href(n)
     info = (
         _kv("공고번호", html.escape(detail_slug(n) or ""))
-        + _kv("수요기관", html.escape(n.get("org") or ""))
+        + _kv("수요기관", _org_link(n.get("org") or ""))
         + _kv("구분", html.escape(BIZ_LABEL.get(n.get("biz") or "", "")))
         + _kv("분류", html.escape(labels))
         + _kv("공고일", html.escape(n.get("notice_date") or ""))
