@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-09T08:25:50Z",
+  "generated_at": "2026-11-09T12:55:29Z",
   "plans": [
     {
       "plan_no": "R26DD20515816",
@@ -895,7 +895,9 @@
       "dept": "운영지원실",
       "tel": "043-530-0022",
       "posted_date": "2026-11-03",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01819331"
+      ],
       "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20916130",
       "biz": "servc",
       "biz_div": "일반용역",
@@ -1047,7 +1049,9 @@
       "dept": "디지털혁신본부스마트농업실",
       "tel": "044-861-8749",
       "posted_date": "2026-11-03",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01819132"
+      ],
       "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20916666",
       "biz": "servc",
       "biz_div": "일반용역",
@@ -1071,7 +1075,9 @@
       "dept": "디지털혁신본부 스마트농업실",
       "tel": "044-861-8744",
       "posted_date": "2026-11-03",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01819046"
+      ],
       "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20916679",
       "biz": "servc",
       "biz_div": "일반용역",
@@ -1640,7 +1646,8 @@
       "tel": "041-660-2462",
       "posted_date": "2026-11-05",
       "bid_nos": [
-        "R26BK01813286"
+        "R26BK01813286",
+        "R26BK01819095"
       ],
       "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20919768",
       "biz": "servc",
@@ -2139,7 +2146,10 @@
       "dept": "서울아리수본부 전산정보과",
       "tel": "02-120-0000",
       "posted_date": "2026-11-09",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01818791",
+        "R26BK01819139"
+      ],
       "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20922888",
       "biz": "servc",
       "biz_div": "일반용역",
@@ -2173,6 +2183,30 @@
         "음성·언어·문서"
       ],
       "nature": "구독·라이선스"
+    },
+    {
+      "plan_no": "R26DD20922998",
+      "title": "AI인프라 및 서버 도입사업",
+      "org": "한국광해광업공단",
+      "top_org": "한국광해광업공단",
+      "org_kind": "공기업",
+      "order_ym": "2026-11",
+      "amount_eok": 50.19,
+      "contract_method": "일반경쟁",
+      "procurement": "자체조달",
+      "dept": "상생협력팀",
+      "tel": "033-736-5167",
+      "posted_date": "2026-11-09",
+      "bid_nos": [],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20922998",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화"
     },
     {
       "plan_no": "R26DD20561940",
@@ -2433,7 +2467,9 @@
       "dept": "디지털정책과",
       "tel": "02-3396-4703",
       "posted_date": "2026-11-04",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01819085"
+      ],
       "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20917845",
       "biz": "servc",
       "biz_div": "일반용역",

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-09T08:25:38Z",
+  "generated_at": "2026-11-09T12:55:16Z",
   "range": {
     "since": "2026-10-26",
     "until": "2026-11-09"
@@ -724,7 +724,9 @@
         "AI 일반"
       ],
       "nature": "운영·유지보수",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01819085"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294958&fileType=BFDTL&fileSeq=1"
       ],
@@ -860,7 +862,9 @@
         "AX·전략"
       ],
       "nature": "ISP·전략",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01819046"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294498&fileType=BFDTL&fileSeq=1",
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294498&fileType=BFDTL&fileSeq=2",
@@ -907,7 +911,9 @@
         "데이터·예측"
       ],
       "nature": "시스템 구축·고도화",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01819132"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294490&fileType=BFDTL&fileSeq=1",
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294490&fileType=BFDTL&fileSeq=2",
@@ -1050,7 +1056,9 @@
         "비전·영상"
       ],
       "nature": null,
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01819331"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294195&fileType=BFDTL&fileSeq=1"
       ],
@@ -1670,7 +1678,8 @@
       ],
       "nature": "시스템 구축·고도화",
       "bid_nos": [
-        "R26BK01813286"
+        "R26BK01813286",
+        "R26BK01819095"
       ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00293046&fileType=BFDTL&fileSeq=1",

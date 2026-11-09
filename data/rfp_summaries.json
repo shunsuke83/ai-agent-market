@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-09T08:32:27Z",
+  "generated_at": "2026-11-09T13:02:19Z",
   "summaries": {
     "R26BK01745687": {
       "bid_no": "R26BK01745687",
@@ -5997,6 +5997,71 @@
       "model": "gemini-3.5-flash",
       "status": "ok"
     },
+    "R26BK01811263": {
+      "bid_no": "R26BK01811263",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01811263&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01811263&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01811263&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01811263&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01"
+      ],
+      "updated_at": "2026-11-09T13:01:37Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "3.물품규격서(최종).pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01811263&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01"
+        },
+        {
+          "name": "1.입찰공고문(전자입찰).hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01811263&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        },
+        {
+          "name": "2.일반조건 및 특수조건.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01811263&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
+        }
+      ],
+      "fields": {
+        "period": "착수일로부터 90일이내",
+        "sme_only": true
+      },
+      "chars": 19851,
+      "summary": {
+        "overview": "본 사업은 조선대학교병원의 「K-Health 국민의료 AI서비스 및 산업생태계 조성」 사업에 필요한 대용량 임상·의료영상 데이터 저장 및 마이그레이션 기반을 구축하기 위해 추진됩니다. 파운데이션 모델 학습·운영용 고성능 데이터 스토리지 시스템 1식을 구매 및 설치하고 운영 환경을 설정합니다. 설치 후 정상 가동 확인, 기술 지원 및 36개월간의 무상 유지보수를 수행합니다.",
+        "evaluation": "예정가격 이하 제한적 최저가격(낙찰하한율 89.995%) 투찰자 순으로 조달청 일반물품 적격심사(통과점수 88점 이상)를 진행하여 낙찰자를 결정합니다.",
+        "tasks": [
+          "데이터 스토리지 시스템 1식 구매 및 설치",
+          "스토리지 시스템 구성 및 운영환경 설정",
+          "스토리지 정상가동 확인 및 기술지원",
+          "기존 시스템 호환성 및 연계성 확보",
+          "무상 유지보수 및 월 1회 정기점검 수행"
+        ],
+        "tech": [
+          "Unified 스토리지 (SAN/NAS)",
+          "RAID-6 (Usable 94TB 이상)",
+          "10/25GbE Ethernet 인터페이스",
+          "FC/iSCSI/CIFS/NFS/S3/NDMP 프로토콜",
+          "SSD / SATA / SAS / NL-SAS",
+          "Snapshot 및 WORM 복구 S/W"
+        ],
+        "requirements": [
+          "소프트웨어사업자(컴퓨터관련서비스사업, 업종코드 1468) 등록 업체",
+          "중·소기업자 또는 소상공인 확인서 소지 업체 (대기업 및 중견기업 참여 불가)",
+          "제조사의 공급자증명원 및 기술지원확약서(Certification) 제출 가능 업체",
+          "조선대학교병원 상대로 소송 이력이 없으며 부정당업자 제재를 받지 않은 업체"
+        ],
+        "cautions": [
+          "공동수급 불허",
+          "계약일로부터 90일 이내 납품 및 설치 완료 필수",
+          "최종 검수일로부터 36개월간 무상 유지보수 및 전담기술자 월 1회 정기점검 이행",
+          "보안위규 처리기준 및 누출금지 대상정보 준수 (위반 시 위약금 부과 및 부정당업자 제재)"
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
+    },
     "R26BK01811303": {
       "bid_no": "R26BK01811303",
       "bid_ord": "000",
@@ -6819,6 +6884,70 @@
           "주요 부품을 개별 구매해 구성한 조립/베어본 제품 납품 불가",
           "가격입찰서와 제안서를 모두 제출해야 하며 마감 마감 시한 준수 필요",
           "하자보증기간 3년 동안 분기별 방문점검 필수 이행 및 장애 발생 시 2근무일 이내 대응 필요"
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
+    },
+    "R26BK01813286": {
+      "bid_no": "R26BK01813286",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01813286&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01813286&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01813286&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01813286&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
+      ],
+      "updated_at": "2026-11-09T13:02:01Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "(제안요청서)서산시 AI 보이스봇 기반 민원응대 시스템 구축.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01813286&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+        },
+        {
+          "name": "공고문(서산시 AI 보이스봇 기반 민원응대 시스템 구축 사업).hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01813286&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        }
+      ],
+      "fields": {
+        "period": "계약일로부터 4개월",
+        "sme_only": true,
+        "presentation": true
+      },
+      "chars": 44909,
+      "summary": {
+        "overview": "본 사업은 생성형 AI 기술을 활용한 24시간 무중단 보이스봇 기반 민원응대 시스템을 구축하여 야간·공휴일 민원 응대 공백을 해소하고 시민의 정보 접근성을 제고하기 위해 추진됩니다. 비정형 행정 데이터의 자동화 파이프라인 구축, RAG 기반 출처 검증형 응답 생성, 관리자 대시보드 개발 및 CSAP 인증 클라우드 기반 인프라 구성을 포함합니다.",
+        "evaluation": "기술능력평가 90%(정량 20%·정성 70%)와 가격평가 10%를 합산하여 평가하고 차등점수제를 적용하여 협상에 의해 낙찰자를 결정합니다.",
+        "tasks": [
+          "생성형 AI 보이스봇 서비스 도입",
+          "RAG 지식베이스 구축 및 관리 시스템 개발",
+          "관리자 대시보드 및 통계·리포팅 개발",
+          "통화 녹취·대화록 및 AI 자동 요약 구축",
+          "야간·공휴일 자력 응대 및 호 이관 구현",
+          "클라우드(IaaS) 기반 운영환경 구성"
+        ],
+        "tech": [
+          "생성형 AI",
+          "RAG",
+          "Speech-to-Speech (S2S)",
+          "벡터 DB",
+          "전화망(SIP/PSTN)",
+          "클라우드(IaaS)"
+        ],
+        "requirements": [
+          "소프트웨어사업자(컴퓨터관련 서비스사업, 업종코드 1468) 등록 업체",
+          "직접생산확인증명서(정보시스템개발서비스) 및 중·소기업·소상공인확인서 소지 업체",
+          "대기업 및 상호출자제한기업집단 참여 불가",
+          "입찰공고일 기준 6개월 이상 연속 재직한 인력을 사업에 투입",
+          "SW 품질 인증 미보유 시 사전테스트 응답 정확도 85% 이상 제출"
+        ],
+        "cautions": [
+          "품질보증 및 사업관리를 위해 공동수급 및 하도급은 불허됨",
+          "과업 기간 중 2개월간의 클라우드 서비스(IaaS) 이용료는 계약 상대자가 부담함",
+          "외부 AI 모델 사용 시 민원인 음성 및 대화 내용의 학습·성능 개선 활용 금지",
+          "사업 완료 전 전화 음성을 통한 탈옥공격 등 AI 레드티밍 수행 및 결과 제출 필수"
         ]
       },
       "model": "gemini-3.5-flash",
@@ -8260,6 +8389,71 @@
       "model": "gemini-3.5-flash",
       "status": "ok"
     },
+    "R26BK01817008": {
+      "bid_no": "R26BK01817008",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01817008&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01817008&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01817008&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01817008&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01817008&bidPbancOrd=000&fileType=&fileSeq=5&prcmBsneSeCd=01"
+      ],
+      "updated_at": "2026-11-09T13:01:07Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "(공고)제안요청서.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01817008&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
+        },
+        {
+          "name": "공고서(2026 ACC×GMAP AI 미디어아트 기획전).hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01817008&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        }
+      ],
+      "fields": {
+        "period": "계약체결일부터 2027년 8월 15일(일)까지",
+        "sme_only": true,
+        "subcontract_limit": true,
+        "presentation": true
+      },
+      "chars": 55332,
+      "summary": {
+        "overview": "본 사업은 '2026 ACC×GMAP AI 미디어아트 기획전'의 성공적인 개최를 위해 설계도서에 따라 전시 콘텐츠 구현 구성품을 제작 및 조립·설치하여 전시 공간을 조성하는 사업입니다. 전시 기간 동안 제작품의 유지보수를 지원하며, 전시 종료 후에는 구성품 해체, 반출, 폐기물 처리 및 전시장 원상복구를 수행하게 됩니다.",
+        "evaluation": "제한경쟁 규격·가격 동시입찰 방식으로, 규격평가(정량 20점+정성 80점) 85점 이상 적격자 중 예정가격 이하 최저가 투찰자를 낙찰자로 결정합니다.",
+        "tasks": [
+          "전시 콘텐츠 구성품 제작 및 납품",
+          "전시 구성품 현장 반입·조립·거치 및 설치",
+          "전시 조명 설치 및 램프 조사각 조정",
+          "전시 기간 중 제작품 유지보수",
+          "전시 종료 후 구성품 해체 및 반출",
+          "폐기물 처리 및 전시장 원상복구"
+        ],
+        "tech": [
+          "AI 기술 기반 미디어아트",
+          "빅데이터 및 알고리즘 연출",
+          "레일 조명",
+          "조도 조절 장치",
+          "조립식 모듈 벽체"
+        ],
+        "requirements": [
+          "실물모형및전시물(세부품명번호 6010989901) 제조물품으로 입찰참가 등록한 자",
+          "실물모형및전시물 직접생산확인증명서를 소지한 자",
+          "실내건축공사업(업종코드 4990) 등록 업체",
+          "중·소기업·소상공인확인서를 소지한 중소기업 또는 소상공인",
+          "사업총괄책임자(PM)의 제안서 직접 발표"
+        ],
+        "cautions": [
+          "제3자 일괄 하도급은 전면 금지되며 위반 시 계약 해지 및 사업비가 반납됩니다.",
+          "공동수급은 대표사 포함 5개사 이내로 공동이행 또는 분담이행 방식이 가능합니다.",
+          "전시장 내 소음·분진 관리, 바닥/벽면 보양 및 신설 구조물 방염 처리를 철저히 시행해야 합니다.",
+          "차량 진입 및 폐기물 운반은 발주기관과 사전 협의된 지정 시간(오후 6시 이후~익일 오전 10시 전)을 준수해야 합니다."
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
+    },
     "R26BK01817137": {
       "bid_no": "R26BK01817137",
       "bid_ord": "000",
@@ -9514,6 +9708,68 @@
       "model": "gemini-3.5-flash",
       "status": "ok"
     },
+    "R26BK01818791": {
+      "bid_no": "R26BK01818791",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01818791&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01818791&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01818791&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+      ],
+      "updated_at": "2026-11-09T12:59:36Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "2.(제안요청서)2027~2028년 제안요청서_AI민원상담시스템 유지관리 용역.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01818791&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        },
+        {
+          "name": "10.공고문(2027~2028년 AI 민원상담시스템 유지관리).hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01818791&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+        }
+      ],
+      "fields": {
+        "period": "2027.01.01.~2028.12.31. (2년, 장기계속계약)",
+        "subcontract_limit": true
+      },
+      "chars": 46212,
+      "summary": {
+        "overview": "본 사업은 서울아리수본부의 AI 민원상담시스템(챗봇, 상담도우미, 민원통계분석) 및 디지털ARS 시스템의 안정적인 서비스 운용과 관리 강화를 목적으로 합니다. 2년간 하드웨어 및 상용 소프트웨어 대상 정기·예방 점검, 장애 조치, 유지관리 등의 업무를 수행합니다. 또한 챗봇 질의답변 보강, STT 성능개선 튜닝, 디지털ARS 기능 추가 및 연계 시스템 관리를 지원합니다.",
+        "evaluation": "기술능력평가(90점)와 입찰가격평가(10점)를 합산하여 기술평가 배점한도의 85% 이상인 적격자 중 고득점순으로 협상을 진행합니다.",
+        "tasks": [
+          "AI 민원상담 및 디지털ARS 시스템 유지관리",
+          "챗봇 질의답변 보강 및 대화 모델 추가",
+          "상담도우미 STT 성능개선 튜닝",
+          "민원통계분석 및 디지털ARS 기능 개선",
+          "정기·수시·예방 점검 및 장애 복구 지원",
+          "연계 시스템 간 기능 유지 및 데이터 품질 관리"
+        ],
+        "tech": [
+          "STT 솔루션",
+          "AI 대화엔진",
+          "Redhat/CentOS Linux",
+          "NVIDIA Quadro GPU",
+          "WebtoB / JEUS",
+          "VMware vSphere"
+        ],
+        "requirements": [
+          "소프트웨어사업자(컴퓨터관련서비스사업) 등록 업체",
+          "직접생산확인증명서 보유(정보시스템개발서비스 또는 정보인프라구축서비스)",
+          "중소기업 참여 사업(대기업 및 중견기업 참가/하도급/인력파견 불가)",
+          "상호출자제한기업집단에 속하지 아니한 업체",
+          "공동수급 허용(공동이행방식, 5개사 이내, 구성원 최소 지분율 5% 이상)"
+        ],
+        "cautions": [
+          "회계연도 시작 전 계약으로 예산 확정 결과에 따라 계약 효력미발생 또는 계약금액 조정이 발생할 수 있음",
+          "계약 체결 시 주요 상용 SW/HW 제조사(공급사)의 기술지원확약서를 제출해야 함",
+          "하도급은 전체 금액의 50% 이하 및 사전 승인이 필수이며 재하도급은 원칙적 불허",
+          "G2B 나라장터 투찰 금액과 발주부서에 직접 제출하는 가격제안서 금액이 불일치할 경우 입찰 무효 처리됨"
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
+    },
     "R26BK01818914": {
       "bid_no": "R26BK01818914",
       "bid_ord": "000",
@@ -9573,6 +9829,252 @@
           "납품기한은 계약일로부터 2026년 12월 14일 이내",
           "검수 완료일로부터 3년간 하자보증 및 1~2 영업일 이내 장애 대응 필요",
           "기술제안서 및 실적 증빙서류 미제출 시 평가상 불이익을 받을 수 있음"
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
+    },
+    "R26BK01819046": {
+      "bid_no": "R26BK01819046",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01819046&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01819046&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01819046&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+      ],
+      "updated_at": "2026-11-09T13:00:44Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "2. 제안요청서.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01819046&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+        },
+        {
+          "name": "1. 입찰공고문.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01819046&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        }
+      ],
+      "fields": {
+        "period": "계약일 ~ 2028. 12. 31.(24개월, 장기계속계약)",
+        "big_firm_limit": true,
+        "presentation": true
+      },
+      "chars": 52272,
+      "summary": {
+        "overview": "본 사업은 스마트농업 데이터의 전주기 수집·품질관리 및 개방을 통해 농식품 분야 AI 활용 기반을 강화하고 민간 주도의 스마트농업 생태계를 구축하는 사업입니다. 2027년부터 2028년까지 24개월간 총 46억 원 규모로 추진되며, AX 데이터셋 구축 및 스마트팜코리아 플랫폼 운영을 수행합니다. AI Agent 기반 활용체계 전환 및 민간 클라우드 이전 준비 등을 종합적으로 수행하게 됩니다.",
+        "evaluation": "기술능력평가(90%)와 가격평가(10%)를 합산하여 고득점자 순으로 협상하는 협상에 의한 계약 방식으로, 기술평가 배점한도의 85% 이상인 자를 협상적격자로 선정합니다.",
+        "tasks": [
+          "지역거점 우수농가 및 빅데이터센터 데이터 수집·연계",
+          "농업 AX 데이터셋 구축·라벨링·평가 및 개방",
+          "데이터 품질·표준 관리 및 수집·보정 이력 관리",
+          "AI Agent 기반 연계체계 마련 및 코파일럿 시범 구현",
+          "스마트팜코리아 플랫폼 운영·유지관리 및 보안 강화",
+          "민간 클라우드 전환 준비 및 이행계획 수립"
+        ],
+        "tech": [
+          "AI Agent",
+          "MCP",
+          "클라우드",
+          "OpenAPI",
+          "PostgreSQL",
+          "Oracle"
+        ],
+        "requirements": [
+          "소프트웨어사업자(컴퓨터관련서비스사업, 업종코드 1468) 등록 업체",
+          "대기업 참여 제한(중소 소프트웨어사업자의 사업 참여 지원에 관한 지침 준수)",
+          "국가계약법 제27조에 따른 부정당업자 제재를 받지 아니한 자",
+          "조세포탈 등으로 유죄판결이 확정된 날부터 2년이 지나지 아니한 자",
+          "공동수급(공동이행방식) 가능 (5인 이하, 구성원별 최소지분율 10% 이상)"
+        ],
+        "cautions": [
+          "하도급은 사전 승인이 필요하며 제안서 제출 시 별도 하도급 계획을 제출해 승인받아야 함",
+          "정성제안서 및 제안요약서 작성 시 표지 및 본문에 회사명, 직인 표기 엄격 금지",
+          "24개월 장기계속계약으로 2차년도 계약 연장 및 예산은 국회 심의 및 1차년도 평가 결과에 따라 변경될 수 있음",
+          "제안인력은 공동수급체 구성원의 자사인력을 원칙으로 함"
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
+    },
+    "R26BK01819132": {
+      "bid_no": "R26BK01819132",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01819132&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01819132&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01819132&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+      ],
+      "updated_at": "2026-11-09T13:00:20Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "2. 제안요청서.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01819132&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+        },
+        {
+          "name": "1. 입찰공고문.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01819132&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        }
+      ],
+      "fields": {
+        "period": "계약일 ~ 2028. 12. 31.(24개월, 장기계속계약)",
+        "big_firm_limit": true,
+        "presentation": true
+      },
+      "chars": 52272,
+      "summary": {
+        "overview": "본 사업은 스마트농업 데이터의 전주기 수집·품질관리 및 AI 학습·분석을 위한 농업 AX 데이터셋을 구축하고 개방하여 농업 분야 AI 활용 기반을 강화하는 것을 목적으로 합니다. 클라우드 및 AI Agent 기반 스마트팜코리아 플랫폼 활용체계 전환, 업무·데이터 구조 재설계(BPR), 서비스 고도화 및 플랫폼 유지관리를 추진합니다. 사업기간은 2027년부터 2028년까지 24개월이며, 총 사업예산은 46억 원(VAT 포함) 규모입니다.",
+        "evaluation": "기술능력평가 90%와 가격평가 10%를 합산하는 협상에 의한 계약 체결 방식으로, 기술평가 배점한도의 85% 이상인 자를 협상적격자로 선정합니다.",
+        "tasks": [
+          "지역거점 우수농가 및 노지 단지 데이터 수집·지원",
+          "데이터 품질·표준 관리 및 보정 이력 관리",
+          "농업 AX 데이터셋 발굴·구축 및 개방",
+          "AI Agent 기반 플랫폼 연계체계 마련 및 BPR",
+          "민간 클라우드 전환 대응 및 이행 준비",
+          "스마트팜코리아 플랫폼 운영·유지관리 및 보안 강화"
+        ],
+        "tech": [
+          "AI Agent",
+          "MCP",
+          "AI 코파일럿",
+          "민간 클라우드",
+          "PostgreSQL",
+          "OpenAPI"
+        ],
+        "requirements": [
+          "소프트웨어사업자(컴퓨터관련서비스사업, 업종코드 1468) 등록업체",
+          "대기업 참여 제한(중소 SW사업자 참여 지원 지침 적용 및 상호출자제한기업집단 제외)",
+          "국가계약법상 부정당업자 제재 및 조세포탈 등에 해당하지 아니한 업체",
+          "제안인력은 공동수급체 구성원의 자사인력 원칙"
+        ],
+        "cautions": [
+          "공동이행방식의 공동수급(5인 이하, 최소지분율 10% 이상)이 가능하며 중복 결성은 불가합니다.",
+          "발주처 승인 없는 하도급은 불허하며 위반 시 계약 해지 및 부정당업자 제재 조치를 받을 수 있습니다.",
+          "정성제안서 및 제안요약서 표지·본문에 업체명 및 직인 표기를 일체 금지합니다.",
+          "국회 예산 심의 및 1차년도 연간 종합평가 결과에 따라 2차년도 사업 예산과 계약 연장 여부가 변경될 수 있습니다."
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
+    },
+    "R26BK01819139": {
+      "bid_no": "R26BK01819139",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01819139&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01819139&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01819139&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+      ],
+      "updated_at": "2026-11-09T12:59:18Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "2.(제안요청서)2027~2028년 제안요청서_AI민원상담시스템 유지관리 용역.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01819139&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        },
+        {
+          "name": "10.공고문(2027~2028년 AI 민원상담시스템 유지관리).hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01819139&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+        }
+      ],
+      "fields": {
+        "period": "2027.01.01.~2028.12.31. (2년, 장기계속계약)",
+        "subcontract_limit": true
+      },
+      "chars": 46212,
+      "summary": {
+        "overview": "본 사업은 서울특별시 서울아리수본부의 AI 민원상담시스템(챗봇, 상담도우미, 민원통계분석 등) 및 디지털ARS 시스템의 안정적 서비스 제공과 사용 편의 향상을 위해 추진됩니다. 2027년부터 2028년까지 2년간 하드웨어 및 상용 소프트웨어의 운영관리, 장애 조치, 챗봇 대화모델 보강, STT 성능개선 튜닝 등의 유지관리를 수행합니다.",
+        "evaluation": "기술능력평가 90점(정량 20점, 정성 70점)과 가격평가 10점을 합산하여 고득점 순으로 협상을 진행하는 협상에 의한 계약방식입니다.",
+        "tasks": [
+          "HW 및 상용SW 유지관리 및 장애 조치",
+          "챗봇 질의답변 보강 및 대화 모델 추가",
+          "상담도우미 STT 성능개선 튜닝",
+          "민원통계분석 시스템 유지관리 및 기능개선",
+          "디지털ARS 시스템 유지관리 및 기능 추가",
+          "연계시스템 모니터링 및 데이터 품질관리"
+        ],
+        "tech": [
+          "STT",
+          "AI대화엔진",
+          "디지털ARS",
+          "Linux",
+          "VMware",
+          "WEB/WAS"
+        ],
+        "requirements": [
+          "소프트웨어사업자(컴퓨터관련서비스사업) 등록업체",
+          "직접생산확인증명서(정보시스템개발서비스 또는 정보인프라구축서비스) 보유",
+          "중소기업확인서를 소지한 중소기업자(대기업 및 중견기업 참여 불가)",
+          "주사업자 소속 중급 이상 기술자의 PM 지정",
+          "상주/지원 기술인력 1명 포함 전담 조직 구성"
+        ],
+        "cautions": [
+          "회계연도 시작 전 계약 사업으로 예산 확정 결과에 따라 계약금액 조정 또는 계약 효력 상실 가능",
+          "공동수급(공동이행방식, 5개사 이내, 구성원별 최소 지분율 5% 이상) 허용",
+          "하도급 허용(사업금액 50% 초과 금지 및 사전 승인 필수)",
+          "나라장터 전자입찰 금액과 서면 제출 가격제안서 금액 불일치 시 입찰 무효"
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
+    },
+    "R26BK01819331": {
+      "bid_no": "R26BK01819331",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01819331&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01819331&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01819331&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+      ],
+      "updated_at": "2026-11-09T13:00:00Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "붙임. 제안요청서(2026년 소나무재선충병 예찰 AI 영상분석)(수정).hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01819331&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        },
+        {
+          "name": "붙임. 공고문(긴급).hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01819331&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+        }
+      ],
+      "fields": {
+        "presentation": true
+      },
+      "chars": 29588,
+      "summary": {
+        "overview": "본 사업은 드론·항공(헬기)·위성 3종 영상자료의 통합분석 체계를 구축하여 소나무재선충병 예찰 사각지대를 해소하고 방제 의사결정을 지원하는 것을 목적으로 합니다. 드론 정사영상(100,000ha)과 수리온 헬기 항공영상(100,000ha)을 활용한 AI 고사목 자동탐지 및 위성영상(50,000ha) 기반의 침활 구분·피해 추이 분석을 수행합니다. 사업 결과를 바탕으로 3종 영상 통합 좌표 인덱스를 구축하고 현장 활용을 위한 주제도를 제작합니다.",
+        "evaluation": "기술능력평가 90%와 입찰가격평가 10%를 합산하는 협상에 의한 계약 방식으로, 기술평가 배점한도의 85% 이상인 협상적격자 중 고득점순으로 협상을 실시합니다.",
+        "tasks": [
+          "드론 정사영상 AI 고사목 자동탐지 및 좌표 추출",
+          "수리온 헬기 항공영상 품질·기하 보정 및 AI 분석",
+          "겨울철 위성영상 기반 침엽수·활엽수 구분 마스크 제작",
+          "시계열 위성영상 기반 대면적 피해 추이 분석",
+          "3종 영상 통합 좌표 인덱스 구축 및 주제도 제작"
+        ],
+        "tech": [
+          "AI 영상 분석",
+          "객체 탐지(Object Detection)",
+          "변화 탐지(Change Detection)",
+          "GSD/기하/방사 보정",
+          "GIS 공간정보 처리(EPSG:5186)"
+        ],
+        "requirements": [
+          "학술연구용역(업종코드: 1169) 등록업체",
+          "소프트웨어사업자(컴퓨터관련서비스사업, 업종코드: 1468) 등록업체",
+          "입찰등록마감일 현재 부정당업자로 지정되지 않은 업체",
+          "사업 참여인력은 자사 인력(적법한 파견근로자 포함)으로 구성",
+          "제안서 발표는 사업관리자(PM)가 직접 수행"
+        ],
+        "cautions": [
+          "공동수급(공동이행 및 분담이행) 가능(5개사 이하, 공동이행 시 최소지분율 10% 이상)",
+          "가격입찰서와 제안서 중 어느 하나라도 미제출 시 입찰 무효 처리됨",
+          "제안서는 PDF 형식으로 나라장터를 통해 전자 제출(총 용량 300MB 이내)",
+          "공단 정보보안규정 준수, 참여자 보안각서 제출 및 취득 자료의 외부 유출 금지"
         ]
       },
       "model": "gemini-3.5-flash",
