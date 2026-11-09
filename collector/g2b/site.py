@@ -14,6 +14,7 @@ NAV_ITEMS = (
     ("awards.html", "수주 현황"),
     ("pricing.html", "투찰·경쟁"),
     ("bidders.html", "입찰이력 검색"),
+    ("agencies.html", "발주기관 검색"),
     ("prespecs.html", "사전규격"),
     ("plans.html", "발주 예정"),
     ("competitors.html", "국내 전문기업"),

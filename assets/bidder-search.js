@@ -120,7 +120,8 @@
     var rows = bids.map(function (b) {
       var n = data.notices[b[0]];
       var title = n[4] ? '<a href="' + esc(n[4]) + '">' + esc(n[2]) + "</a>" : esc(n[2]);
-      return "<tr><td>" + esc(n[0]) + "</td><td>" + esc(n[1]) + "</td><td>" + title + "</td>" +
+      var org = n[1] ? '<a href="agencies.html#org=' + encodeURIComponent(n[1]) + '">' + esc(n[1]) + "</a>" : "";
+      return "<tr><td>" + esc(n[0]) + "</td><td>" + org + "</td><td>" + title + "</td>" +
         '<td class="num">' + num(n[3], 1) + "</td>" +
         '<td class="num">' + (b[1] == null ? "" : b[1] + "/" + byNotice[b[0]].length) + "</td>" +
         (isRate(b[2]) ? '<td class="num">' + num(b[2], 2) + "%</td>"

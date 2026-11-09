@@ -86,6 +86,8 @@ table.prespecs th:nth-child(9),table.prespecs td:nth-child(9){display:none}
 .bidder-search input:focus{outline:2px solid var(--accent);outline-offset:1px}
 table.bidder-list th:nth-child(1),table.bidder-list td:nth-child(1){width:4.5em}
 table.bidder-list th:nth-child(n+3){width:9.5em}
+table.agency-history th:nth-child(1){width:92px}table.agency-history th:nth-child(3),table.agency-history th:nth-child(6){width:7em}
+table.agency-history th:nth-child(4){width:7em}table.agency-history th:nth-child(5){width:11em}table.agency-history th:nth-child(7){width:4.5em}
 table.bidder-history th:nth-child(1){width:92px}table.bidder-history td:nth-child(1){white-space:nowrap}
 table.bidder-history th:nth-child(2){width:120px}table.bidder-history th:nth-child(4),table.bidder-history th:nth-child(5){width:64px}
 table.bidder-history th:nth-child(6){width:78px}table.bidder-history th:nth-child(7){width:96px}table.bidder-history th:nth-child(8){width:120px}
