@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-08T11:18:39Z",
+  "generated_at": "2026-11-09T04:02:31Z",
   "contracts": [
     {
       "contract_no": "R26TA02382452",
@@ -327,6 +327,41 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화"
+    },
+    {
+      "contract_no": "R26TA02391656",
+      "title": "2026년 AI동행 데모데이 기획·운영 및 성과 확산",
+      "org": "한국과학창의재단",
+      "contract_org": "한국과학창의재단",
+      "signed_date": "2026-11-03",
+      "period_text": "금차 52일, 총차 52일",
+      "end_date": "2026-12-24",
+      "amount_eok": 1.999,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 디자인이에스",
+          "role": "도급업체",
+          "share": 20.0,
+          "bizno": "6658600704"
+        },
+        {
+          "name": "주식회사 아이베리컴",
+          "role": "주계약업체",
+          "share": 80.0,
+          "bizno": "6188137156"
+        }
+      ],
+      "bid_no": "R26BK01757066",
+      "registered_at": "2026-11-08 15:16",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02391656&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
     },
     {
       "contract_no": "R26TA01353065",
@@ -660,6 +695,64 @@
       "nature": "시스템 구축·고도화"
     },
     {
+      "contract_no": "R26TA02382222",
+      "title": "연암공과대학교 AI Agent 성과관리 및 회계/구매 시스템 구축",
+      "org": "연암공과대학교산학협력단",
+      "contract_org": "연암공과대학교산학협력단",
+      "signed_date": "2026-10-30",
+      "period_text": "금차 109일, 총차 109일",
+      "end_date": "2027-02-15",
+      "amount_eok": 3.45,
+      "long_term": "신규",
+      "method": "일반경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 넥스트클라우드",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "3138703049"
+        }
+      ],
+      "bid_no": "R26BK01726242",
+      "registered_at": "2026-11-04 17:08",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02382222&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "생성형·Agent",
+      "fields": [
+        "AI 에이전트"
+      ],
+      "nature": "시스템 구축·고도화"
+    },
+    {
+      "contract_no": "R26TA02382176",
+      "title": "AI Connect copilot 비교과 프로그램 운영을 위한 용역업체 선정",
+      "org": "경희대학교 산학협력단 서울캠퍼스산학협력단",
+      "contract_org": "경희대학교 산학협력단 서울캠퍼스산학협력단",
+      "signed_date": "2026-10-30",
+      "period_text": "금차 70일, 총차 70일",
+      "end_date": "2026-12-30",
+      "amount_eok": 1.0938,
+      "long_term": "신규",
+      "method": "수의계약",
+      "joint": false,
+      "firms": [
+        {
+          "name": "(주)알파코",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "1078672100"
+        }
+      ],
+      "bid_no": null,
+      "registered_at": "2026-11-04 14:00",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02382176&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
+    {
       "contract_no": "R26TA02371960",
       "title": "KNU 통합 AI 포털시스템 1단계 구축 사업",
       "org": "강원대학교",
@@ -834,6 +927,35 @@
       "nature": "시스템 구축·고도화"
     },
     {
+      "contract_no": "R26TA02372735",
+      "title": "연암공과대학교 AI Professor 시스템 개발 용역",
+      "org": "연암공과대학교산학협력단",
+      "contract_org": "연암공과대학교산학협력단",
+      "signed_date": "2026-10-29",
+      "period_text": "금차 110일, 총차 110일",
+      "end_date": "2027-02-15",
+      "amount_eok": 1.45,
+      "long_term": "신규",
+      "method": "일반경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 넥스트클라우드",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "3138703049"
+        }
+      ],
+      "bid_no": "R26BK01762995",
+      "registered_at": "2026-11-04 17:38",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02372735&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화"
+    },
+    {
       "contract_no": "R26TA02361702",
       "title": "사법부 AI 기반 형사재판 및 양형지원을 위한 지능형 플랫폼 구축",
       "org": "대법원",
@@ -902,6 +1024,35 @@
         "AI 일반"
       ],
       "nature": "ISP·전략"
+    },
+    {
+      "contract_no": "R26TA02364213",
+      "title": "취업역량강화 AI역량검사 및 취업지원플랫폼 운영 용역",
+      "org": "국방전직교육원",
+      "contract_org": "국방전직교육원",
+      "signed_date": "2026-10-28",
+      "period_text": "금차 67일, 총차 67일",
+      "end_date": "2026-12-31",
+      "amount_eok": 1.11,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "(주)마이다스인",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "8178701669"
+        }
+      ],
+      "bid_no": "R26BK01737533",
+      "registered_at": "2026-11-03 10:00",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02364213&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
     },
     {
       "contract_no": "R26TA02347014",
@@ -1175,6 +1326,71 @@
         "AI 일반"
       ],
       "nature": null
+    },
+    {
+      "contract_no": "R26TA02342733",
+      "title": "AI 기반 학교 현장 지원 플랫폼 통합·구축 및 운영",
+      "org": "한국과학창의재단",
+      "contract_org": "한국과학창의재단",
+      "signed_date": "2026-10-26",
+      "period_text": "금차 248일, 총차 248일",
+      "end_date": "2027-06-30",
+      "amount_eok": 25.6,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사유니에스아이엔씨",
+          "role": "주계약업체",
+          "share": 64.48,
+          "bizno": "3168126938"
+        },
+        {
+          "name": "주식회사 유니바(UNIVA Corp.)",
+          "role": "도급업체",
+          "share": 35.52,
+          "bizno": "8148801920"
+        }
+      ],
+      "bid_no": "R26BK01704259",
+      "registered_at": "2026-11-09 11:36",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02342733&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화"
+    },
+    {
+      "contract_no": "R26TA02399747",
+      "title": "sLLM 기반 제조기업 AI 전환 체계 구축 컨설팅 용역",
+      "org": "한국생산성본부",
+      "contract_org": "한국생산성본부",
+      "signed_date": "2026-10-26",
+      "period_text": "금차 67일, 총차 67일",
+      "end_date": "2026-12-31",
+      "amount_eok": 2.0,
+      "long_term": "신규",
+      "method": "일반경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 리엔",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "1468101416"
+        }
+      ],
+      "bid_no": "R26BK01700335",
+      "registered_at": "2026-11-06 10:12",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02399747&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "생성형·Agent",
+      "fields": [
+        "생성형·LLM",
+        "AX·전략"
+      ],
+      "nature": "ISP·전략"
     },
     {
       "contract_no": "R26TA02334525",

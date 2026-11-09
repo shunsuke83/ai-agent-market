@@ -1,12 +1,864 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-08T11:18:48Z",
+  "generated_at": "2026-11-09T04:07:28Z",
   "mode": "g2b_api",
   "range": {
-    "since": "2026-11-05",
-    "until": "2026-11-08"
+    "since": "2026-10-26",
+    "until": "2026-11-09"
   },
   "notices": [
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01817137",
+      "bid_ord": "000",
+      "notice_date": "2026-11-09",
+      "open_date": "2026-11-30",
+      "open_at": "2026-11-30 14:00",
+      "close_at": "2026-11-26 15:00",
+      "close_date": "2026-11-26",
+      "org": "전남과학대학교",
+      "title": "학교기업지원사업 교과외 현장실습프로그램(AI 스마트팜 및 원예치유) (제주) 위탁용역",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "연구·교육·행사",
+      "budget_eok": 0.55,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 0.55,
+      "presmpt_eok": 0.5,
+      "base_amount_eok": null,
+      "contract_method": "제한경쟁",
+      "ntce_kind": "등록공고",
+      "biz": "servc",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01817137&bidPbancOrd=000",
+      "award_method": "협상에의한계약-협상에 의한 낙찰자 결정",
+      "tech_rate": 80.0,
+      "price_rate": 20.0,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": false,
+      "participation_limit": false,
+      "record_limit": false,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": "R26BD00293801",
+      "plan_no": "R26DD20915167",
+      "notice_files": [
+        {
+          "name": "공고문-학교기업지원사업 교과외 현장실습프로그램(AI 스마트팜 및 원예치유)(제주) 위탁용역.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01817137&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        },
+        {
+          "name": "공고문PDF-학교기업지원사업 교과외 현장실습프로그램(AI 스마트팜 및 원예치유)(제주) 위탁용역.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01817137&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+        },
+        {
+          "name": "붙임2-양식-별첨.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01817137&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+        },
+        {
+          "name": "제안요청서-학교기업지원사업 교과외 현장실습프로그램(AI 스마트팜 및 원예치유)(제주) 위탁용역.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01817137&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
+        },
+        {
+          "name": "정산서 안내-2.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01817137&bidPbancOrd=000&fileType=&fileSeq=5&prcmBsneSeCd=03"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01816681",
+      "bid_ord": "000",
+      "notice_date": "2026-11-09",
+      "open_date": "2026-11-17",
+      "open_at": "2026-11-17 13:00",
+      "close_at": "2026-11-17 12:00",
+      "close_date": "2026-11-17",
+      "org": "한국생산기술연구원",
+      "title": "OHT 픽업용 AI 모션제어 시스템",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "budget_eok": 0.429,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 0.429,
+      "presmpt_eok": 0.39,
+      "base_amount_eok": null,
+      "contract_method": "제한경쟁",
+      "ntce_kind": "등록공고",
+      "biz": "thng",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01816681&bidPbancOrd=000",
+      "award_method": "규격가격동시입찰-제안적격자 중 예가 내 최저가 투찰자",
+      "tech_rate": null,
+      "price_rate": null,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": null,
+      "participation_limit": null,
+      "record_limit": null,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": "R26BD00293495",
+      "plan_no": "P81202600BFF-00",
+      "notice_files": [
+        {
+          "name": "2. 입찰공고문(규격가격)_OHT 픽업용 AI 모션제어 시스템.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816681&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        },
+        {
+          "name": "1. 물품기준서_OHT 픽업용 AI 모션제어 시스템-v1.0.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816681&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01"
+        },
+        {
+          "name": "2. 입찰공고문(규격가격)_OHT 픽업용 AI 모션제어 시스템.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816681&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01816671",
+      "bid_ord": "000",
+      "notice_date": "2026-11-09",
+      "open_date": "2026-11-13",
+      "open_at": "2026-11-13 11:00",
+      "close_at": "2026-11-13 10:00",
+      "close_date": "2026-11-13",
+      "org": "순천향대학교 산학협력단",
+      "title": "[순천향대학교 산학협력단] AI·AX분야 교육용 완제품 노트북 구매",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "연구·교육·행사",
+      "budget_eok": 0.99,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 0.99,
+      "presmpt_eok": 0.9,
+      "base_amount_eok": null,
+      "contract_method": "수의계약",
+      "ntce_kind": "등록공고",
+      "biz": "thng",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01816671&bidPbancOrd=000",
+      "award_method": "소액수의견적-소액수의견적(2인 이상 견적 제출)",
+      "tech_rate": null,
+      "price_rate": null,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": null,
+      "participation_limit": null,
+      "record_limit": null,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": null,
+      "plan_no": null,
+      "notice_files": [
+        {
+          "name": "[입찰공고서] 순천향대학교 산학협력단 노트북 구매.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816671&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        },
+        {
+          "name": "[입찰규격서] 순천향대학교 산학협력단 노트북 완제품.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816671&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01"
+        },
+        {
+          "name": "스펙검토 확인서(2026-C85).hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816671&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
+        },
+        {
+          "name": "[입찰공고서] 순천향대학교 산학협력단 노트북 구매.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816671&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01816671",
+      "bid_ord": "001",
+      "notice_date": "2026-11-09",
+      "open_date": "2026-11-13",
+      "open_at": "2026-11-13 11:00",
+      "close_at": "2026-11-13 10:00",
+      "close_date": "2026-11-13",
+      "org": "순천향대학교 산학협력단",
+      "title": "[순천향대학교 산학협력단] AI·AX분야 교육용 완제품 노트북 구매",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "연구·교육·행사",
+      "budget_eok": 0.99,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 0.99,
+      "presmpt_eok": 0.9,
+      "base_amount_eok": null,
+      "contract_method": "수의계약",
+      "ntce_kind": "변경공고",
+      "biz": "thng",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01816671&bidPbancOrd=001",
+      "award_method": "소액수의견적-소액수의견적(2인 이상 견적 제출)",
+      "tech_rate": null,
+      "price_rate": null,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": null,
+      "participation_limit": null,
+      "record_limit": null,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": null,
+      "plan_no": null,
+      "notice_files": [
+        {
+          "name": "[입찰공고서] 순천향대학교 산학협력단 노트북 구매.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816671&bidPbancOrd=001&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        },
+        {
+          "name": "[입찰규격서] 순천향대학교 산학협력단 노트북 완제품.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816671&bidPbancOrd=001&fileType=&fileSeq=2&prcmBsneSeCd=01"
+        },
+        {
+          "name": "스펙검토 확인서(2026-C85).hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816671&bidPbancOrd=001&fileType=&fileSeq=3&prcmBsneSeCd=01"
+        },
+        {
+          "name": "[입찰공고서] 순천향대학교 산학협력단 노트북 구매.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816671&bidPbancOrd=001&fileType=&fileSeq=4&prcmBsneSeCd=01"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01816605",
+      "bid_ord": "000",
+      "notice_date": "2026-11-09",
+      "open_date": "2026-12-04",
+      "open_at": "2026-12-04 12:00",
+      "close_at": "2026-11-20 11:00",
+      "close_date": "2026-11-20",
+      "org": "강원대학교 산학협력단",
+      "title": "청년도약부트캠프 AI 활용 웹/앱 개발(고급) 과정 실무·교양 운영 용역",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "연구·교육·행사",
+      "budget_eok": 0.7,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 0.7,
+      "presmpt_eok": 0.6364,
+      "base_amount_eok": null,
+      "contract_method": "제한경쟁",
+      "ntce_kind": "등록공고",
+      "biz": "servc",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01816605&bidPbancOrd=000",
+      "award_method": "협상에의한계약-협상에 의한 낙찰자 결정",
+      "tech_rate": 90.0,
+      "price_rate": 10.0,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": true,
+      "participation_limit": false,
+      "record_limit": false,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": "R26BD00294066",
+      "plan_no": "R26DD20915851",
+      "notice_files": [
+        {
+          "name": "공고서_청년도약부트캠프 AI 활용 웹앱 개발(고급) 과정 실무·교양 운영 용역.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816605&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        },
+        {
+          "name": "공고서_청년도약부트캠프 AI 활용 웹앱 개발(고급) 과정 실무·교양 운영 용역.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816605&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01816600",
+      "bid_ord": "000",
+      "notice_date": "2026-11-09",
+      "open_date": "2026-11-23",
+      "open_at": "2026-11-23 11:00",
+      "close_at": "2026-11-23 10:00",
+      "close_date": "2026-11-23",
+      "org": "과학기술정보통신부",
+      "title": "제조주권 확보를 위한 피지컬 AI 생태계 구축방안",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "budget_eok": 0.8,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 0.8,
+      "presmpt_eok": 0.7273,
+      "base_amount_eok": null,
+      "contract_method": "제한경쟁",
+      "ntce_kind": "등록공고",
+      "biz": "servc",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01816600&bidPbancOrd=000",
+      "award_method": "협상에의한계약-협상에 의한 낙찰자 결정",
+      "tech_rate": 90.0,
+      "price_rate": 10.0,
+      "joint_method": "(전자)공동이행",
+      "industry_limit": true,
+      "participation_limit": false,
+      "record_limit": false,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": "R26BD00294201",
+      "plan_no": "R26DD20916126",
+      "notice_files": [
+        {
+          "name": "1. 제안요청서_피지컬 AI 생태계 구축방안.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816600&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        },
+        {
+          "name": "2. 과업지시서_피지컬 AI 생태계 구축방안.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816600&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+        },
+        {
+          "name": "공고문(피지컬 AI 생태계 구축방안).hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816600&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+        },
+        {
+          "name": "공고문(피지컬 AI 생태계 구축방안).pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816600&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01816580",
+      "bid_ord": "000",
+      "notice_date": "2026-11-09",
+      "open_date": "2026-11-20",
+      "open_at": "2026-11-20 13:00",
+      "close_at": "2026-11-20 12:00",
+      "close_date": "2026-11-20",
+      "org": "한국생산기술연구원",
+      "title": "인공지능 기반 열처리 조건 패터닝 플랫폼 개발",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "budget_eok": 0.66,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 0.66,
+      "presmpt_eok": 0.6,
+      "base_amount_eok": null,
+      "contract_method": "제한경쟁",
+      "ntce_kind": "등록공고",
+      "biz": "servc",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01816580&bidPbancOrd=000",
+      "award_method": "협상에의한계약-협상에 의한 낙찰자 결정",
+      "tech_rate": 80.0,
+      "price_rate": 20.0,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": false,
+      "participation_limit": false,
+      "record_limit": false,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": "R26BD00294290",
+      "plan_no": "P81202600C27-00",
+      "notice_files": [
+        {
+          "name": "과업지시서.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816580&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        },
+        {
+          "name": "입찰공고문(협상)_인공지능 기반 열처리 조건 패터닝 플랫폼 개발.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816580&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+        },
+        {
+          "name": "입찰공고문(협상)_인공지능 기반 열처리 조건 패터닝 플랫폼 개발.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816580&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01816525",
+      "bid_ord": "000",
+      "notice_date": "2026-11-09",
+      "open_date": "2026-11-20",
+      "open_at": "2026-11-20 11:00",
+      "close_at": "2026-11-20 10:00",
+      "close_date": "2026-11-20",
+      "org": "산업통상부",
+      "title": "제조 AI 활용 활성화를 위한 디지털통상 활용방안 연구",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AX·전략"
+      ],
+      "nature": null,
+      "budget_eok": 0.31,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 0.31,
+      "presmpt_eok": 0.2818,
+      "base_amount_eok": null,
+      "contract_method": "제한경쟁",
+      "ntce_kind": "등록공고",
+      "biz": "servc",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01816525&bidPbancOrd=000",
+      "award_method": "협상에의한계약-협상에 의한 낙찰자 결정",
+      "tech_rate": 90.0,
+      "price_rate": 10.0,
+      "joint_method": "(전자)공동이행",
+      "industry_limit": false,
+      "participation_limit": false,
+      "record_limit": false,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": "R26BD00293935",
+      "plan_no": "R26DD20921854",
+      "notice_files": [
+        {
+          "name": "1. 공고문_제조 AI 활용 활성화를 위한 디지털통상 활용방안 연구.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816525&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        },
+        {
+          "name": "2. 제안요청서_제조 AI 활용 활성화를 위한 디지털통상 활용방안 연구.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816525&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+        },
+        {
+          "name": "전자입찰참가 서식.zip",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816525&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+        },
+        {
+          "name": "1. 공고문_제조 AI 활용 활성화를 위한 디지털통상 활용방안 연구.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816525&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01816498",
+      "bid_ord": "000",
+      "notice_date": "2026-11-09",
+      "open_date": "2026-11-17",
+      "open_at": "2026-11-17 11:00",
+      "close_at": "2026-11-17 10:00",
+      "close_date": "2026-11-17",
+      "org": "경기도 성남시",
+      "title": "AI 기반 도로관리 플랫폼 구축사업 감리 용역",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "budget_eok": 0.63,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 0.63,
+      "presmpt_eok": 0.5727,
+      "base_amount_eok": null,
+      "contract_method": "제한경쟁",
+      "ntce_kind": "등록공고",
+      "biz": "servc",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01816498&bidPbancOrd=000",
+      "award_method": "적격심사제-관리규정외 수기심사(총점입력)",
+      "tech_rate": null,
+      "price_rate": null,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": true,
+      "participation_limit": false,
+      "record_limit": false,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": "R26BD00293412",
+      "plan_no": "R26DD20914283",
+      "notice_files": [
+        {
+          "name": "261109 입찰공고(AI 기반 도로관리 플랫폼 구축사업 감리 용역).hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816498&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        },
+        {
+          "name": "261109 입찰공고(AI 기반 도로관리 플랫폼 구축사업 감리 용역).pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816498&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+        },
+        {
+          "name": "과업지시서.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816498&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+        },
+        {
+          "name": "설계내역서(기초금액 산정 등 공개).xlsx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816498&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01816493",
+      "bid_ord": "000",
+      "notice_date": "2026-11-09",
+      "open_date": "2026-11-16",
+      "open_at": "2026-11-16 11:00",
+      "close_at": null,
+      "close_date": null,
+      "org": "안동과학대학교 산학협력단",
+      "title": "2026년 앵커(인센티브) AI·DX 융합 교육과정 인프라 구축 기자재 구입 입찰(긴급)",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "연구·교육·행사",
+      "budget_eok": 0.5777,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 0.5777,
+      "presmpt_eok": 0.5777,
+      "base_amount_eok": null,
+      "contract_method": "제한경쟁",
+      "ntce_kind": "등록공고",
+      "biz": "thng",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01816493&bidPbancOrd=000",
+      "award_method": "최저가낙찰제-최저가낙찰자",
+      "tech_rate": null,
+      "price_rate": null,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": null,
+      "participation_limit": null,
+      "record_limit": null,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": "R26BD00293906",
+      "plan_no": "R26DD20915481",
+      "notice_files": [
+        {
+          "name": "물품규격서_공고번호 2026-017호(2026. 11. 9.) 1부.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816493&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        },
+        {
+          "name": "입찰공고문_공고번호 2026-017호(2026. 11. 9.) 1부.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816493&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01"
+        },
+        {
+          "name": "입찰관련서류_공고번호 2026-017호(2026. 11. 9.) 1부.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816493&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
+        },
+        {
+          "name": "입찰유의서_공고번호 2026-017호(2026. 11. 9.) 1부.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816493&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01"
+        },
+        {
+          "name": "입찰공고문_공고번호 2026-017호(2026. 11. 9.) 1부.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816493&bidPbancOrd=000&fileType=&fileSeq=5&prcmBsneSeCd=01"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01816467",
+      "bid_ord": "000",
+      "notice_date": "2026-11-09",
+      "open_date": "2026-11-25",
+      "open_at": "2026-11-25 14:00",
+      "close_at": "2026-11-20 17:00",
+      "close_date": "2026-11-20",
+      "org": "경남대학교 산학협력단",
+      "title": "AI 수요예측 기반 결품·과잉재고 분석 및 의사결정 지원 시스템 구축 및 현장 실증(POC) 용역",
+      "scope": "AI SW 확대",
+      "fields": [
+        "데이터·예측"
+      ],
+      "nature": "시스템 구축·고도화",
+      "budget_eok": 0.5,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 0.5,
+      "presmpt_eok": 0.4545,
+      "base_amount_eok": null,
+      "contract_method": "제한경쟁",
+      "ntce_kind": "등록공고",
+      "biz": "servc",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01816467&bidPbancOrd=000",
+      "award_method": "협상에의한계약-협상에 의한 낙찰자 결정(SW사업)",
+      "tech_rate": 80.0,
+      "price_rate": 20.0,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": true,
+      "participation_limit": false,
+      "record_limit": false,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": "R26BD00294763",
+      "plan_no": "R26DD20917358",
+      "notice_files": [
+        {
+          "name": "(공고 제2026-011호) AI 수요예측 기반 결품·과잉재고 분석 및 의사결정 지원 시스템 구축 및 현장 실증(PoC) 용역.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816467&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        },
+        {
+          "name": "(공고 제2026-011호) AI 수요예측 기반 결품·과잉재고 분석 및 의사결정 지원 시스템 구축 및 현장 실증(PoC) 용역.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816467&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+        },
+        {
+          "name": "제안요청서_AI 수요예측 기반 결품·과잉재고 분석 및 의사결정 지원 시스템 구축 및 현장 실증(PoC) 용역.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816467&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01816406",
+      "bid_ord": "000",
+      "notice_date": "2026-11-09",
+      "open_date": "2026-11-17",
+      "open_at": "2026-11-17 17:00",
+      "close_at": null,
+      "close_date": null,
+      "org": "포항공과대학교 산학협력단",
+      "title": "[53038]산업용 소재 AI 파운데이션 모델 학습용 서버",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "budget_eok": 7.0,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 7.0,
+      "presmpt_eok": 6.3636,
+      "base_amount_eok": null,
+      "contract_method": "일반경쟁",
+      "ntce_kind": "등록공고",
+      "biz": "thng",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01816406&bidPbancOrd=000",
+      "award_method": "최저가낙찰제-최저가낙찰자",
+      "tech_rate": null,
+      "price_rate": null,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": null,
+      "participation_limit": null,
+      "record_limit": null,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": "R26BD00293341",
+      "plan_no": "R26DD20914080",
+      "notice_files": [
+        {
+          "name": "나라장터 입찰 공고문 POSTECH 입찰공고 제26A1421호.docx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816406&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        },
+        {
+          "name": "포항공대_표준사양서_소재AI_최종본_1026.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816406&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01816390",
+      "bid_ord": "000",
+      "notice_date": "2026-11-09",
+      "open_date": "2026-11-17",
+      "open_at": "2026-11-17 15:30",
+      "close_at": null,
+      "close_date": null,
+      "org": "대구가톨릭대학교 산학협력단",
+      "title": "AX로보틱스부트캠프사업단 다관절 로봇 실습장비 구입",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "연구·교육·행사",
+      "budget_eok": 0.533,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 0.533,
+      "presmpt_eok": 0.4845,
+      "base_amount_eok": null,
+      "contract_method": "일반경쟁",
+      "ntce_kind": "등록공고",
+      "biz": "thng",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01816390&bidPbancOrd=000",
+      "award_method": "최저가낙찰제-최저가낙찰자",
+      "tech_rate": null,
+      "price_rate": null,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": null,
+      "participation_limit": null,
+      "record_limit": null,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": "R26BD00293233",
+      "plan_no": "R26DD20921802",
+      "notice_files": [
+        {
+          "name": "26A0008_입찰공고서.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816390&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        },
+        {
+          "name": "규격설명서.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816390&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01"
+        },
+        {
+          "name": "26A0008_입찰관련서식.zip",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816390&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01816374",
+      "bid_ord": "000",
+      "notice_date": "2026-11-09",
+      "open_date": "2026-12-02",
+      "open_at": "2026-12-02 17:00",
+      "close_at": null,
+      "close_date": null,
+      "org": "재단법인 대구디지털혁신진흥원",
+      "title": "개인정보 원본 AI 학습 기술지원 서버 시스템 구축 용역",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "budget_eok": 7.5686,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 7.5686,
+      "presmpt_eok": 6.8806,
+      "base_amount_eok": null,
+      "contract_method": "일반경쟁",
+      "ntce_kind": "등록공고",
+      "biz": "servc",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01816374&bidPbancOrd=000",
+      "award_method": "협상에의한계약-협상에 의한 낙찰자 결정(SW사업)",
+      "tech_rate": 90.0,
+      "price_rate": 10.0,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": true,
+      "participation_limit": false,
+      "record_limit": false,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": "R26BD00294200",
+      "plan_no": "R26DD20916153",
+      "notice_files": [
+        {
+          "name": "붙임1. 공고서(개인정보 원본 AI 학습 기술지원 서버 시스템 구축 용역).hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816374&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        },
+        {
+          "name": "붙임2. 제안요청서(개인정보 원본 AI 학습 기술지원 서버 시스템 구축 용역).hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816374&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+        },
+        {
+          "name": "붙임1. 공고서(개인정보 원본 AI 학습 기술지원 서버 시스템 구축 용역).pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01816374&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01812547",
+      "bid_ord": "001",
+      "notice_date": "2026-11-09",
+      "open_date": "2026-11-16",
+      "open_at": "2026-11-16 14:00",
+      "close_at": null,
+      "close_date": null,
+      "org": "광주과학기술원",
+      "title": "성병 3종 고감도 자가진단용 Deep-LFA 플랫폼 및 AI 비전 판독 기술 IP-R&D 고도화 전략 수립 용역",
+      "scope": "AI SW 확대",
+      "fields": [
+        "비전·영상"
+      ],
+      "nature": "ISP·전략",
+      "budget_eok": 0.165,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 0.165,
+      "presmpt_eok": 0.15,
+      "base_amount_eok": null,
+      "contract_method": "제한경쟁",
+      "ntce_kind": "변경공고",
+      "biz": "servc",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01812547&bidPbancOrd=001",
+      "award_method": "협상에의한계약-협상에 의한 낙찰자 결정",
+      "tech_rate": 90.0,
+      "price_rate": 10.0,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": true,
+      "participation_limit": false,
+      "record_limit": false,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": "R26BD00293155",
+      "plan_no": "R26DD20913565",
+      "notice_files": [
+        {
+          "name": "용역 2026-061호 - 성병 3종 고감도 자가진단용 ~ 용역 - (협상)입찰공고문.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01812547&bidPbancOrd=001&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        },
+        {
+          "name": "용역 2026-061호 - 성병 3종 고감도 자가진단용 ~ 용역- (협상)입찰공고문.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01812547&bidPbancOrd=001&fileType=&fileSeq=2&prcmBsneSeCd=03"
+        },
+        {
+          "name": "용역 2026-061호 - 성병 3종 고감도 자가진단용 ~ 용역 - (협상)입찰공고문 - 제안요청서.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01812547&bidPbancOrd=001&fileType=&fileSeq=3&prcmBsneSeCd=03"
+        },
+        {
+          "name": "용역 2026-061호 - 성병 3종 고감도 자가진단용 ~ 용역 - 과업지시서.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01812547&bidPbancOrd=001&fileType=&fileSeq=4&prcmBsneSeCd=03"
+        }
+      ]
+    },
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01806663",
+      "bid_ord": "000",
+      "notice_date": "2026-11-09",
+      "open_date": "2026-11-20",
+      "open_at": "2026-11-20 12:00",
+      "close_at": "2026-11-20 11:00",
+      "close_date": "2026-11-20",
+      "org": "질병관리청 국립보건연구원",
+      "title": "[정보화] 2027년 헬스케어 인공지능 분석시스템 유지관리 및 운영 지원",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "운영·유지보수",
+      "budget_eok": 0.6,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 0.6,
+      "presmpt_eok": 0.5455,
+      "base_amount_eok": null,
+      "contract_method": "제한경쟁",
+      "ntce_kind": "재공고",
+      "biz": "servc",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01806663&bidPbancOrd=000",
+      "award_method": "협상에의한계약-협상에 의한 낙찰자 결정(SW사업)",
+      "tech_rate": 90.0,
+      "price_rate": 10.0,
+      "joint_method": "(전자)공동이행",
+      "industry_limit": true,
+      "participation_limit": false,
+      "record_limit": false,
+      "rebid": true,
+      "prev_bid_no": "R26BK01780223",
+      "prespec_no": "R26BD00283118",
+      "plan_no": "R26DD20900883",
+      "notice_files": [
+        {
+          "name": "1. (제안요청서)2027년 헬스케어 인공지능 분석시스템 유지관리 및 운영 지원.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01806663&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+        },
+        {
+          "name": "가격입찰서,_입찰보증금지급각서(서식).hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01806663&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+        },
+        {
+          "name": "공고문_재공고_[정보화] 2027년 헬스케어 인공지능 분석시스템 유지관리 및 운영 지원.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01806663&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
+        },
+        {
+          "name": "공고문_재공고_[정보화] 2027년 헬스케어 인공지능 분석시스템 유지관리 및 운영 지원.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01806663&bidPbancOrd=000&fileType=&fileSeq=5&prcmBsneSeCd=03"
+        }
+      ]
+    },
     {
       "source": "g2b_api",
       "bid_no": "R26BK01816115",
@@ -551,8 +1403,8 @@
       "bid_ord": "000",
       "notice_date": "2026-11-06",
       "open_date": "2026-11-09",
-      "open_at": "2026-11-09 13:00",
-      "close_at": "2026-11-09 12:00",
+      "open_at": "2026-11-09 16:20",
+      "close_at": "2026-11-09 15:20",
       "close_date": "2026-11-09",
       "org": "연세대학교 미래캠퍼스",
       "title": "[앵커사업] 드론 이착륙 안전 확보를 위한  AI 인체감지 자동 경고방송 시스템 개발 용역",
@@ -610,7 +1462,8 @@
           "name": "붙임5. 서약서(서식).hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01814935&bidPbancOrd=000&fileType=&fileSeq=7&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "bidders_empty": true
     },
     {
       "source": "g2b_api",
@@ -618,8 +1471,8 @@
       "bid_ord": "000",
       "notice_date": "2026-11-06",
       "open_date": "2026-11-09",
-      "open_at": "2026-11-09 13:00",
-      "close_at": "2026-11-09 12:00",
+      "open_at": "2026-11-09 16:20",
+      "close_at": "2026-11-09 15:20",
       "close_date": "2026-11-09",
       "org": "대림대학교 산학협력단",
       "title": "[대림대학교] 2026년 전문대학 혁신지원사업 3주기 2차년도 AI DX 기반 에듀테크 교육환경 개선 3차 기계기구 구입_휴머노이드",
@@ -653,7 +1506,8 @@
           "name": "2. 물품구매규격서.pdf",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01814923&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -1858,7 +2712,14 @@
           "name": "2. 물품 구매 규격서.pdf",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01813557&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09",
+      "winner": "래어달메디컬코리아（유）",
+      "bid_count": 1,
+      "award_amount_eok": 1.29,
+      "win_rate_pct": 99.23,
+      "status": "낙찰",
+      "award_to_budget_pct": 99.2
     },
     {
       "source": "g2b_api",
@@ -6598,7 +7459,18 @@
       "award_amount_eok": 0.8316,
       "win_rate_pct": 99.0,
       "status": "낙찰",
-      "award_to_budget_pct": 99.0
+      "award_to_budget_pct": 99.0,
+      "bidders": [
+        {
+          "rank": 1,
+          "name": "노아벤처스",
+          "amount_eok": 0.8316,
+          "rate_pct": 99.0,
+          "bizno": "6208802187",
+          "ceo": "이규민"
+        }
+      ],
+      "first_rank": "노아벤처스"
     },
     {
       "source": "g2b_api",
@@ -6765,7 +7637,7 @@
       "bid_ord": "000",
       "notice_date": "2026-11-03",
       "open_date": "2026-11-09",
-      "open_at": "2026-11-09 11:00",
+      "open_at": "2026-11-09 13:20",
       "close_at": "2026-11-09 10:00",
       "close_date": "2026-11-09",
       "org": "대구과학대학 산학협력단",
@@ -6804,7 +7676,8 @@
           "name": "제안요청서(혁신AI원격콘텐츠_재공고).pdf",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01807375&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -6918,7 +7791,7 @@
       "bid_ord": "000",
       "notice_date": "2026-11-03",
       "open_date": "2026-11-09",
-      "open_at": "2026-11-09 11:00",
+      "open_at": "2026-11-09 13:20",
       "close_at": "2026-11-09 10:00",
       "close_date": "2026-11-09",
       "org": "울산대학교",
@@ -7833,7 +8706,8 @@
           "name": "6.수의계약 체결 제한 여부 확인서.hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01804974&bidPbancOrd=000&fileType=&fileSeq=9&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "bidders_empty": true
     },
     {
       "source": "g2b_api",
@@ -8143,7 +9017,7 @@
       "bid_ord": "000",
       "notice_date": "2026-11-03",
       "open_date": "2026-11-09",
-      "open_at": "2026-11-09 11:00",
+      "open_at": "2026-11-09 13:20",
       "close_at": "2026-11-09 10:00",
       "close_date": "2026-11-09",
       "org": "전남광주통합특별시교육청 전남광주통합특별시교육청AI교육원",
@@ -8526,7 +9400,7 @@
       "bid_ord": "000",
       "notice_date": "2026-11-02",
       "open_date": "2026-11-09",
-      "open_at": "2026-11-09 11:00",
+      "open_at": "2026-11-09 13:20",
       "close_at": "2026-11-09 10:00",
       "close_date": "2026-11-09",
       "org": "주식회사 김캐디",
@@ -8581,7 +9455,8 @@
           "name": "4.입찰보증금 지급각서_2026.docx",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01805382&bidPbancOrd=000&fileType=&fileSeq=6&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "bidders_empty": true
     },
     {
       "source": "g2b_api",
@@ -8683,7 +9558,40 @@
           "name": "1. 2026년 한국인공지능소프트웨어산업협회 강의장 훈련장비 구축 용역_공고문.pdf",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01805071&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "winner": "엠에스파워시스템",
+      "bid_count": 3,
+      "award_amount_eok": 1.518,
+      "status": "낙찰",
+      "award_to_budget_pct": 89.9,
+      "bidders": [
+        {
+          "rank": 1,
+          "name": "와이엠아이",
+          "amount_eok": 1.4738,
+          "rate_pct": null,
+          "bizno": "2428800387",
+          "ceo": "심욱보"
+        },
+        {
+          "rank": 2,
+          "name": "엠에스파워시스템",
+          "amount_eok": 1.518,
+          "rate_pct": null,
+          "bizno": "6138700113",
+          "ceo": "장명수"
+        },
+        {
+          "rank": 3,
+          "name": "원퓨트",
+          "amount_eok": 1.545,
+          "rate_pct": null,
+          "bizno": "8998601927",
+          "ceo": "방명일"
+        }
+      ],
+      "second": "엠에스파워시스템",
+      "first_rank": "와이엠아이"
     },
     {
       "source": "g2b_api",
@@ -9115,8 +10023,8 @@
       "bid_ord": "000",
       "notice_date": "2026-11-02",
       "open_date": "2026-11-09",
-      "open_at": "2026-11-09 13:00",
-      "close_at": "2026-11-09 12:00",
+      "open_at": "2026-11-09 16:20",
+      "close_at": "2026-11-09 15:20",
       "close_date": "2026-11-09",
       "org": "대구경북과학기술원",
       "title": "지능형 휴머노이드 로봇 구매(재공고)",
@@ -9174,7 +10082,8 @@
           "name": "6. 공익·부패 신고제도 안내.hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01804613&bidPbancOrd=000&fileType=&fileSeq=7&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -9290,8 +10199,8 @@
       "bid_ord": "000",
       "notice_date": "2026-11-02",
       "open_date": "2026-11-09",
-      "open_at": "2026-11-09 13:00",
-      "close_at": "2026-11-09 12:00",
+      "open_at": "2026-11-09 16:20",
+      "close_at": "2026-11-09 15:20",
       "close_date": "2026-11-09",
       "org": "대구경북과학기술원",
       "title": "DGIST Agentic AI 플랫폼 고도화 및 운영환경 구축(재공고)",
@@ -9349,7 +10258,9 @@
           "name": "6. 공익·부패 신고제도 안내.hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01804555&bidPbancOrd=000&fileType=&fileSeq=7&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09",
+      "bidders_empty": true
     },
     {
       "source": "g2b_api",
@@ -9639,7 +10550,8 @@
           "name": "물품규격서(재공고 입찰용).zip",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01803981&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -10259,7 +11171,9 @@
           "name": "감바랩스_GPU서버_구매입찰재공고문.docx",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01803314&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09",
+      "bidders_empty": true
     },
     {
       "source": "g2b_api",
@@ -10377,7 +11291,7 @@
       "bid_ord": "000",
       "notice_date": "2026-11-02",
       "open_date": "2026-11-09",
-      "open_at": "2026-11-09 11:00",
+      "open_at": "2026-11-09 13:20",
       "close_at": "2026-11-09 10:00",
       "close_date": "2026-11-09",
       "org": "동아보건대학교",
@@ -10538,7 +11452,7 @@
       "bid_ord": "000",
       "notice_date": "2026-11-02",
       "open_date": "2026-11-09",
-      "open_at": "2026-11-09 11:00",
+      "open_at": "2026-11-09 13:20",
       "close_at": "2026-11-09 10:00",
       "close_date": "2026-11-09",
       "org": "재단법인 전주정보문화산업진흥원",
@@ -10589,7 +11503,9 @@
           "name": "붙임4_긴급입찰사유서.hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01802847&bidPbancOrd=000&fileType=&fileSeq=5&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09",
+      "bidders_empty": true
     },
     {
       "source": "g2b_api",
@@ -10597,7 +11513,7 @@
       "bid_ord": "000",
       "notice_date": "2026-11-02",
       "open_date": "2026-11-09",
-      "open_at": "2026-11-09 11:00",
+      "open_at": "2026-11-09 13:20",
       "close_at": "2026-11-09 10:00",
       "close_date": "2026-11-09",
       "org": "부경대학교",
@@ -10644,7 +11560,8 @@
           "name": "긴급입찰 사유서.pdf",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01802748&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -10858,8 +11775,8 @@
       "bid_ord": "000",
       "notice_date": "2026-11-02",
       "open_date": "2026-11-06",
-      "open_at": "2026-11-06 11:00",
-      "close_at": "2026-11-06 10:00",
+      "open_at": "2026-11-06 14:10",
+      "close_at": "2026-11-06 13:10",
       "close_date": "2026-11-06",
       "org": "재단법인 부산정보산업진흥원",
       "title": "부산AI실증지원센터 2차 모바일 장비 구매",
@@ -10960,8 +11877,8 @@
       "bid_ord": "000",
       "notice_date": "2026-11-02",
       "open_date": "2026-11-06",
-      "open_at": "2026-11-06 11:00",
-      "close_at": "2026-11-06 10:00",
+      "open_at": "2026-11-06 14:10",
+      "close_at": "2026-11-06 13:10",
       "close_date": "2026-11-06",
       "org": "한경국립대학교 안성캠퍼스 산학협력단",
       "title": "인공지능연구소 고성능 그래픽 처리 장치 구매",
@@ -11212,8 +12129,8 @@
       "bid_ord": "000",
       "notice_date": "2026-11-02",
       "open_date": "2026-11-06",
-      "open_at": "2026-11-06 11:00",
-      "close_at": "2026-11-06 10:00",
+      "open_at": "2026-11-06 14:10",
+      "close_at": "2026-11-06 13:10",
       "close_date": "2026-11-06",
       "org": "재단법인전남테크노파크",
       "title": "여수국가산업단지 AX실증산단구축사업 수준진단체계 키오스크 SW개발 및 기업지원 연계 플랫폼 개발용역",
@@ -11261,7 +12178,219 @@
       "award_amount_eok": 0.4445,
       "win_rate_pct": 88.249,
       "status": "낙찰",
-      "award_to_budget_pct": 88.9
+      "award_to_budget_pct": 88.9,
+      "bidders": [
+        {
+          "rank": 1,
+          "name": "한국스카다",
+          "amount_eok": 0.4445,
+          "rate_pct": 88.249,
+          "bizno": "1078151662",
+          "ceo": "이상옥"
+        },
+        {
+          "rank": 2,
+          "name": "지미디어시스",
+          "amount_eok": 0.445,
+          "rate_pct": 88.349,
+          "bizno": "6178630306",
+          "ceo": "박성훈"
+        },
+        {
+          "rank": 3,
+          "name": "눈소프트",
+          "amount_eok": 0.4466,
+          "rate_pct": 88.658,
+          "bizno": "3128141392",
+          "ceo": "김영민"
+        },
+        {
+          "rank": 4,
+          "name": "에이치입찰연구소",
+          "amount_eok": 0.4493,
+          "rate_pct": 89.201,
+          "bizno": "6038703563",
+          "ceo": "이온유"
+        },
+        {
+          "rank": 5,
+          "name": "클로버랩스",
+          "amount_eok": 0.4502,
+          "rate_pct": 89.391,
+          "bizno": "1333600139",
+          "ceo": "박상훈"
+        },
+        {
+          "rank": null,
+          "name": "힉스",
+          "amount_eok": 0.437,
+          "rate_pct": 86.767,
+          "bizno": "1388185768",
+          "ceo": "손원상"
+        },
+        {
+          "rank": null,
+          "name": "와이드브레인",
+          "amount_eok": 0.4378,
+          "rate_pct": 86.92,
+          "bizno": "7798700937",
+          "ceo": "정혜원"
+        },
+        {
+          "rank": null,
+          "name": "이앤이",
+          "amount_eok": 0.4378,
+          "rate_pct": 86.926,
+          "bizno": "8998802352",
+          "ceo": "이재영"
+        },
+        {
+          "rank": null,
+          "name": "소사이어티",
+          "amount_eok": 0.4382,
+          "rate_pct": 86.997,
+          "bizno": "1698702308",
+          "ceo": "고명곤"
+        },
+        {
+          "rank": null,
+          "name": "모듀스",
+          "amount_eok": 0.4386,
+          "rate_pct": 87.075,
+          "bizno": "4188157552",
+          "ceo": "신진욱"
+        },
+        {
+          "rank": null,
+          "name": "티키타카크리에이티브",
+          "amount_eok": 0.4386,
+          "rate_pct": 87.081,
+          "bizno": "8388803642",
+          "ceo": "김현선"
+        },
+        {
+          "rank": null,
+          "name": "제이솔루션",
+          "amount_eok": 0.4388,
+          "rate_pct": 87.114,
+          "bizno": "5558600969",
+          "ceo": "권세기"
+        },
+        {
+          "rank": null,
+          "name": "Tonc",
+          "amount_eok": 0.4389,
+          "rate_pct": 87.138,
+          "bizno": "5021385427",
+          "ceo": "이병일"
+        },
+        {
+          "rank": null,
+          "name": "로동",
+          "amount_eok": 0.439,
+          "rate_pct": 87.152,
+          "bizno": "4878802557",
+          "ceo": "조이준"
+        },
+        {
+          "rank": null,
+          "name": "다움테크",
+          "amount_eok": 0.439,
+          "rate_pct": 87.157,
+          "bizno": "7128603569",
+          "ceo": "차서윤"
+        },
+        {
+          "rank": null,
+          "name": "정파사",
+          "amount_eok": 0.4391,
+          "rate_pct": 87.178,
+          "bizno": "7998600201",
+          "ceo": "김현일"
+        },
+        {
+          "rank": null,
+          "name": "포컴",
+          "amount_eok": 0.4391,
+          "rate_pct": 87.184,
+          "bizno": "2308102966",
+          "ceo": "김종철"
+        },
+        {
+          "rank": null,
+          "name": "소프트캣",
+          "amount_eok": 0.4392,
+          "rate_pct": 87.204,
+          "bizno": "2925600756",
+          "ceo": "박찬엽"
+        },
+        {
+          "rank": null,
+          "name": "호연소프트",
+          "amount_eok": 0.4392,
+          "rate_pct": 87.207,
+          "bizno": "1058800318",
+          "ceo": "임완중"
+        },
+        {
+          "rank": null,
+          "name": "바램인터렉티브",
+          "amount_eok": 0.44,
+          "rate_pct": 87.356,
+          "bizno": "6098606687",
+          "ceo": "박진한"
+        },
+        {
+          "rank": null,
+          "name": "에이치지네트웍스 (HGNetworks)",
+          "amount_eok": 0.44,
+          "rate_pct": 87.359,
+          "bizno": "5191402867",
+          "ceo": "조한기"
+        },
+        {
+          "rank": null,
+          "name": "심플코어",
+          "amount_eok": 0.4407,
+          "rate_pct": 87.505,
+          "bizno": "5458803226",
+          "ceo": "곽태환"
+        },
+        {
+          "rank": null,
+          "name": "하늘컴퍼니",
+          "amount_eok": 0.442,
+          "rate_pct": 87.745,
+          "bizno": "1098653467",
+          "ceo": "김현영"
+        },
+        {
+          "rank": null,
+          "name": "모던프로그래머 유한책임회사",
+          "amount_eok": 0.4421,
+          "rate_pct": 87.778,
+          "bizno": "6118129107",
+          "ceo": "박혜경"
+        },
+        {
+          "rank": null,
+          "name": "에이티에스인",
+          "amount_eok": 0.4423,
+          "rate_pct": 87.82,
+          "bizno": "2558802912",
+          "ceo": "이휘철"
+        },
+        {
+          "rank": null,
+          "name": "헤브론스타",
+          "amount_eok": 0.443,
+          "rate_pct": 87.952,
+          "bizno": "2208791988",
+          "ceo": "김형진"
+        }
+      ],
+      "second": "지미디어시스",
+      "first_rank": "한국스카다"
     },
     {
       "source": "g2b_api",
@@ -11320,7 +12449,8 @@
           "name": "5. 긴급입찰사유서.hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01794064&bidPbancOrd=000&fileType=&fileSeq=5&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -11366,8 +12496,8 @@
       "bid_ord": "000",
       "notice_date": "2026-11-02",
       "open_date": "2026-11-06",
-      "open_at": "2026-11-06 11:00",
-      "close_at": "2026-11-06 10:00",
+      "open_at": "2026-11-06 14:10",
+      "close_at": "2026-11-06 13:10",
       "close_date": "2026-11-06",
       "org": "인천광역시교육청 인천과학고등학교",
       "title": "LLM 추론시스템 서버 구매 및 설치 수의계약 안내 공고",
@@ -11409,7 +12539,8 @@
           "name": "공고문_LLM추론시스템서버구매및설치수의계약안내공고_인천과학고.pdf",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01786466&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -11743,7 +12874,8 @@
           "name": "상세규격서_03_상세규격서_AI 워크스테이션.hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01801316&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "bidders_empty": true
     },
     {
       "source": "g2b_api",
@@ -11857,7 +12989,7 @@
       "ntce_kind": "등록공고",
       "biz": "thng",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01801014&bidPbancOrd=000",
-      "open_at": "2026-11-09 12:00",
+      "open_at": "2026-11-09 13:20",
       "close_at": "2026-11-09 10:00",
       "close_date": "2026-11-09",
       "budget_kind": "배정예산",
@@ -11892,7 +13024,8 @@
           "name": "제안요청서_공기질검출센서세트_20261030.pdf",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01801014&bidPbancOrd=000&fileType=&fileSeq=6&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "bidders_empty": true
     },
     {
       "source": "g2b_api",
@@ -11950,7 +13083,8 @@
           "name": "06-(게시용)-입찰 참가자 유의사항.hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01800935&bidPbancOrd=000&fileType=&fileSeq=6&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "bidders_empty": true
     },
     {
       "source": "g2b_api",
@@ -12272,7 +13406,7 @@
       "bid_ord": "000",
       "notice_date": "2026-10-30",
       "open_date": "2026-11-09",
-      "open_at": "2026-11-09 11:00",
+      "open_at": "2026-11-09 13:20",
       "close_at": "2026-11-09 10:00",
       "close_date": "2026-11-09",
       "org": "한국과학기술정보연구원",
@@ -12334,7 +13468,8 @@
           "name": "6. 조달청 물품구매적격심사 세부기준.pdf",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01799636&bidPbancOrd=000&fileType=&fileSeq=9&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -12396,7 +13531,45 @@
           "name": "26-SS276 02. 수의계약 안내서(중기간경쟁).pdf",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01798953&bidPbancOrd=000&fileType=&fileSeq=8&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "bidders": [
+        {
+          "rank": 1,
+          "name": "아토즈씨앤텍（ATOZ Sci & Tech）",
+          "amount_eok": 0.1921,
+          "rate_pct": 90.354,
+          "bizno": "3142558175",
+          "ceo": "김미연"
+        },
+        {
+          "rank": 2,
+          "name": "아이와이시스템",
+          "amount_eok": 0.1955,
+          "rate_pct": 91.935,
+          "bizno": "3148614163",
+          "ceo": "박인용"
+        },
+        {
+          "rank": 3,
+          "name": "제이퍼블리코",
+          "amount_eok": 0.2095,
+          "rate_pct": 98.519,
+          "bizno": "8235600263",
+          "ceo": "정정희"
+        },
+        {
+          "rank": null,
+          "name": "한솔티에스",
+          "amount_eok": null,
+          "rate_pct": null,
+          "bizno": "3148626790",
+          "ceo": "김동환"
+        }
+      ],
+      "bid_count": 4,
+      "second": "아이와이시스템",
+      "first_rank": "아토즈씨앤텍（ATOZ Sci & Tech）",
+      "status": "1순위"
     },
     {
       "source": "g2b_api",
@@ -12879,8 +14052,8 @@
       "ntce_kind": "등록공고",
       "biz": "thng",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01800126&bidPbancOrd=000",
-      "open_at": "2026-11-06 13:00",
-      "close_at": "2026-11-06 12:00",
+      "open_at": "2026-11-06 14:10",
+      "close_at": "2026-11-06 13:10",
       "close_date": "2026-11-06",
       "budget_kind": "배정예산",
       "asign_budget_eok": 3.996,
@@ -12901,7 +14074,9 @@
           "name": "입찰공고(2026-266) 지능형 포렌식센터 구축을 위한 소프트웨어 라이선스 구매.pdf",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01800126&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09",
+      "bidders_empty": true
     },
     {
       "source": "g2b_api",
@@ -12922,8 +14097,8 @@
       "ntce_kind": "등록공고",
       "biz": "thng",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01800123&bidPbancOrd=000",
-      "open_at": "2026-11-06 11:00",
-      "close_at": "2026-11-06 10:00",
+      "open_at": "2026-11-06 14:10",
+      "close_at": "2026-11-06 13:10",
       "close_date": "2026-11-06",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.298,
@@ -13060,7 +14235,8 @@
           "name": "제안요청서.hwpx",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01799972&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -13158,7 +14334,7 @@
       "ntce_kind": "등록공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01799692&bidPbancOrd=000",
-      "open_at": "2026-11-09 11:00",
+      "open_at": "2026-11-09 13:20",
       "close_at": "2026-11-09 10:00",
       "close_date": "2026-11-09",
       "budget_kind": "배정예산",
@@ -13182,7 +14358,9 @@
           "name": "과업지시서.hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01799692&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09",
+      "bidders_empty": true
     },
     {
       "source": "g2b_api",
@@ -13203,8 +14381,8 @@
       "ntce_kind": "등록공고",
       "biz": "thng",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01799618&bidPbancOrd=000",
-      "open_at": "2026-11-06 11:00",
-      "close_at": "2026-11-06 10:00",
+      "open_at": "2026-11-06 14:10",
+      "close_at": "2026-11-06 13:10",
       "close_date": "2026-11-06",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.52,
@@ -13326,7 +14504,8 @@
           "name": "공고문(제주형 일방통행 및 AI 공유주차 운영모델 수립 용역)_협상.pdf",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01799451&bidPbancOrd=000&fileType=&fileSeq=5&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -13457,7 +14636,8 @@
           "name": "[붙임3] 서식.hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01799318&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -13478,8 +14658,8 @@
       "ntce_kind": "재공고",
       "biz": "thng",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01799286&bidPbancOrd=000",
-      "open_at": "2026-11-06 13:00",
-      "close_at": "2026-11-06 12:00",
+      "open_at": "2026-11-06 14:10",
+      "close_at": "2026-11-06 13:10",
       "close_date": "2026-11-06",
       "budget_kind": "배정예산",
       "asign_budget_eok": 4.04,
@@ -13553,7 +14733,8 @@
           "name": "입찰공고문(재공고).pdf",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01799138&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -13667,8 +14848,8 @@
       "ntce_kind": "재공고",
       "biz": "thng",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01798858&bidPbancOrd=000",
-      "open_at": "2026-11-06 11:00",
-      "close_at": "2026-11-06 10:00",
+      "open_at": "2026-11-06 14:10",
+      "close_at": "2026-11-06 13:10",
       "close_date": "2026-11-06",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.8,
@@ -13695,7 +14876,8 @@
           "name": "입찰공고문.hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01798858&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -14117,8 +15299,8 @@
       "ntce_kind": "등록공고",
       "biz": "thng",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01798097&bidPbancOrd=000",
-      "open_at": "2026-11-06 13:00",
-      "close_at": "2026-11-06 10:00",
+      "open_at": "2026-11-06 14:10",
+      "close_at": "2026-11-06 13:10",
       "close_date": "2026-11-06",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.999,
@@ -14144,7 +15326,8 @@
           "name": "1-3. 제출서류 양식.hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01798097&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -14165,7 +15348,7 @@
       "ntce_kind": "등록공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01798089&bidPbancOrd=000",
-      "open_at": "2026-11-09 11:30",
+      "open_at": "2026-11-09 13:20",
       "close_at": "2026-11-09 10:30",
       "close_date": "2026-11-09",
       "budget_kind": "배정예산",
@@ -14197,7 +15380,9 @@
           "name": "입찰공고문_PLC 데이터 수집환경 구축 용역.hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01798089&bidPbancOrd=000&fileType=&fileSeq=6&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09",
+      "bidders_empty": true
     },
     {
       "source": "g2b_api",
@@ -14382,7 +15567,7 @@
       "bid_no": "R26BK01797775",
       "bid_ord": "000",
       "notice_date": "2026-10-29",
-      "open_date": "2026-11-17",
+      "open_date": "2026-11-09",
       "org": "대한무역투자진흥공사",
       "title": "2027 미국 라스베가스 소비재전자 전시회(CES) AI 혁신 포럼 행사대행",
       "scope": "AI SW 확대",
@@ -14396,7 +15581,7 @@
       "ntce_kind": "등록공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01797775&bidPbancOrd=000",
-      "open_at": "2026-11-17 09:00",
+      "open_at": "2026-11-09 10:27",
       "close_at": "2026-11-09 10:00",
       "close_date": "2026-11-09",
       "budget_kind": "배정예산",
@@ -14428,7 +15613,8 @@
           "name": "안전보건수준평가 안내(적격수급업체 선정 지침 발췌).hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01797775&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -14449,8 +15635,8 @@
       "ntce_kind": "등록공고",
       "biz": "thng",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01797581&bidPbancOrd=000",
-      "open_at": "2026-11-06 14:00",
-      "close_at": "2026-11-06 12:00",
+      "open_at": "2026-11-06 14:10",
+      "close_at": "2026-11-06 13:10",
       "close_date": "2026-11-06",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.75,
@@ -14484,7 +15670,8 @@
           "name": "6. 개인정보 수집 및 이용 제공 동의서.hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01797581&bidPbancOrd=000&fileType=&fileSeq=6&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -14715,7 +15902,13 @@
           "name": "구입내역서.xlsx",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01794716&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "winner": "드림팩토리",
+      "bid_count": 22,
+      "award_amount_eok": 0.8201,
+      "win_rate_pct": 88.419,
+      "status": "낙찰",
+      "award_to_budget_pct": 87.3
     },
     {
       "source": "g2b_api",
@@ -15275,7 +16468,7 @@
       "ntce_kind": "재공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01796910&bidPbancOrd=000",
-      "open_at": "2026-11-09 11:00",
+      "open_at": "2026-11-09 13:20",
       "close_at": "2026-11-09 10:00",
       "close_date": "2026-11-09",
       "budget_kind": "배정예산",
@@ -15304,7 +16497,9 @@
           "name": "붙임2. 제안요청서_명지녹산 AX실증산단 에코마린 소부장 특화 클라우드 인프라 구축 및 운영·유지관리.hwpx",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01796910&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09",
+      "bidders_empty": true
     },
     {
       "source": "g2b_api",
@@ -15453,7 +16648,2795 @@
       "award_amount_eok": 0.2652,
       "win_rate_pct": 88.001,
       "status": "낙찰",
-      "award_to_budget_pct": 88.4
+      "award_to_budget_pct": 88.4,
+      "bidders": [
+        {
+          "rank": 1,
+          "name": "참조은",
+          "amount_eok": 0.2652,
+          "rate_pct": 88.001,
+          "bizno": "2972900115",
+          "ceo": "신만기"
+        },
+        {
+          "rank": 2,
+          "name": "순양종합관리",
+          "amount_eok": 0.2652,
+          "rate_pct": 88.002,
+          "bizno": "6820603306",
+          "ceo": "박경민"
+        },
+        {
+          "rank": 3,
+          "name": "이로운네트웍스",
+          "amount_eok": 0.2653,
+          "rate_pct": 88.007,
+          "bizno": "4023667943",
+          "ceo": "오현석"
+        },
+        {
+          "rank": 4,
+          "name": "링커솔루션",
+          "amount_eok": 0.2653,
+          "rate_pct": 88.013,
+          "bizno": "3572202395",
+          "ceo": "유지은"
+        },
+        {
+          "rank": 5,
+          "name": "케이온",
+          "amount_eok": 0.2653,
+          "rate_pct": 88.02,
+          "bizno": "3312301504",
+          "ceo": "박치언"
+        },
+        {
+          "rank": 6,
+          "name": "에스시지",
+          "amount_eok": 0.2653,
+          "rate_pct": 88.025,
+          "bizno": "4098617793",
+          "ceo": "김형옥"
+        },
+        {
+          "rank": 7,
+          "name": "이케이글로벌",
+          "amount_eok": 0.2653,
+          "rate_pct": 88.027,
+          "bizno": "1138702168",
+          "ceo": "김은경"
+        },
+        {
+          "rank": 8,
+          "name": "대원경영연구소",
+          "amount_eok": 0.2653,
+          "rate_pct": 88.03,
+          "bizno": "2918700266",
+          "ceo": "박유림"
+        },
+        {
+          "rank": 9,
+          "name": "남해안권 발전연구소",
+          "amount_eok": 0.2653,
+          "rate_pct": 88.034,
+          "bizno": "4341701855",
+          "ceo": "김희순"
+        },
+        {
+          "rank": 10,
+          "name": "위더스HR컨설팅",
+          "amount_eok": 0.2654,
+          "rate_pct": 88.042,
+          "bizno": "1270884714",
+          "ceo": "남명희"
+        },
+        {
+          "rank": 11,
+          "name": "크린산업개발",
+          "amount_eok": 0.2654,
+          "rate_pct": 88.046,
+          "bizno": "3148659762",
+          "ceo": "김운식"
+        },
+        {
+          "rank": 12,
+          "name": "노브식스",
+          "amount_eok": 0.2654,
+          "rate_pct": 88.057,
+          "bizno": "4662700584",
+          "ceo": "이기석"
+        },
+        {
+          "rank": 13,
+          "name": "컨텐츠랩son",
+          "amount_eok": 0.2654,
+          "rate_pct": 88.063,
+          "bizno": "7660204041",
+          "ceo": "손종영"
+        },
+        {
+          "rank": 14,
+          "name": "아이버",
+          "amount_eok": 0.2655,
+          "rate_pct": 88.072,
+          "bizno": "1328803812",
+          "ceo": "안지환"
+        },
+        {
+          "rank": 15,
+          "name": "꿈이있는일터",
+          "amount_eok": 0.2655,
+          "rate_pct": 88.073,
+          "bizno": "1348668817",
+          "ceo": "우영희"
+        },
+        {
+          "rank": 16,
+          "name": "한결티에스씨",
+          "amount_eok": 0.2655,
+          "rate_pct": 88.076,
+          "bizno": "7662001693",
+          "ceo": "정연택"
+        },
+        {
+          "rank": 17,
+          "name": "청담이엔지",
+          "amount_eok": 0.2655,
+          "rate_pct": 88.094,
+          "bizno": "3018626023",
+          "ceo": "이경기"
+        },
+        {
+          "rank": 18,
+          "name": "에이치알투어(HR TOUR)",
+          "amount_eok": 0.2655,
+          "rate_pct": 88.095,
+          "bizno": "8151701511",
+          "ceo": "김우식"
+        },
+        {
+          "rank": 19,
+          "name": "태경환경",
+          "amount_eok": 0.2656,
+          "rate_pct": 88.103,
+          "bizno": "3064614768",
+          "ceo": "서영경"
+        },
+        {
+          "rank": 20,
+          "name": "트루피플",
+          "amount_eok": 0.2656,
+          "rate_pct": 88.113,
+          "bizno": "6538602029",
+          "ceo": "황혜림"
+        },
+        {
+          "rank": 21,
+          "name": "올커니",
+          "amount_eok": 0.2656,
+          "rate_pct": 88.114,
+          "bizno": "3454200728",
+          "ceo": "김은재"
+        },
+        {
+          "rank": 22,
+          "name": "에셀컨설팅",
+          "amount_eok": 0.2656,
+          "rate_pct": 88.114,
+          "bizno": "4418103018",
+          "ceo": "최현정"
+        },
+        {
+          "rank": 23,
+          "name": "세종리서치",
+          "amount_eok": 0.2656,
+          "rate_pct": 88.121,
+          "bizno": "5028622450",
+          "ceo": "남동희"
+        },
+        {
+          "rank": 24,
+          "name": "지투엠파트너스",
+          "amount_eok": 0.2656,
+          "rate_pct": 88.122,
+          "bizno": "3448801493",
+          "ceo": "오성민"
+        },
+        {
+          "rank": 25,
+          "name": "디엠시스",
+          "amount_eok": 0.2656,
+          "rate_pct": 88.125,
+          "bizno": "5905700924",
+          "ceo": "이정수"
+        },
+        {
+          "rank": 26,
+          "name": "해리엔터프라이즈",
+          "amount_eok": 0.2657,
+          "rate_pct": 88.137,
+          "bizno": "6990302508",
+          "ceo": "신창훈"
+        },
+        {
+          "rank": 27,
+          "name": "오리종합관리",
+          "amount_eok": 0.2657,
+          "rate_pct": 88.143,
+          "bizno": "6082820731",
+          "ceo": "박재석"
+        },
+        {
+          "rank": 28,
+          "name": "유한회사 대산이엔지",
+          "amount_eok": 0.2657,
+          "rate_pct": 88.144,
+          "bizno": "3888603575",
+          "ceo": "황일심"
+        },
+        {
+          "rank": 29,
+          "name": "에볼필름",
+          "amount_eok": 0.2657,
+          "rate_pct": 88.151,
+          "bizno": "1307200517",
+          "ceo": "함은지"
+        },
+        {
+          "rank": 30,
+          "name": "디디인터내셔널",
+          "amount_eok": 0.2657,
+          "rate_pct": 88.164,
+          "bizno": "6214500642",
+          "ceo": "황윤섭"
+        },
+        {
+          "rank": 31,
+          "name": "서민갑부",
+          "amount_eok": 0.2658,
+          "rate_pct": 88.169,
+          "bizno": "5298802846",
+          "ceo": "강동원"
+        },
+        {
+          "rank": 32,
+          "name": "헤브론스타",
+          "amount_eok": 0.2658,
+          "rate_pct": 88.184,
+          "bizno": "2208791988",
+          "ceo": "김형진"
+        },
+        {
+          "rank": 33,
+          "name": "지방정책기획연구원",
+          "amount_eok": 0.2658,
+          "rate_pct": 88.186,
+          "bizno": "7998703146",
+          "ceo": "김연성"
+        },
+        {
+          "rank": 34,
+          "name": "파인하랑",
+          "amount_eok": 0.2658,
+          "rate_pct": 88.187,
+          "bizno": "3552802009",
+          "ceo": "이주연"
+        },
+        {
+          "rank": 35,
+          "name": "대경인재개발원",
+          "amount_eok": 0.2658,
+          "rate_pct": 88.193,
+          "bizno": "5028180533",
+          "ceo": "서은주"
+        },
+        {
+          "rank": 36,
+          "name": "온소닛",
+          "amount_eok": 0.2659,
+          "rate_pct": 88.202,
+          "bizno": "7830203620",
+          "ceo": "이영배"
+        },
+        {
+          "rank": 37,
+          "name": "지원엔지니어링",
+          "amount_eok": 0.2659,
+          "rate_pct": 88.21,
+          "bizno": "8518800269",
+          "ceo": "서태원"
+        },
+        {
+          "rank": 38,
+          "name": "인오서비스",
+          "amount_eok": 0.2659,
+          "rate_pct": 88.214,
+          "bizno": "2643101096",
+          "ceo": "김안"
+        },
+        {
+          "rank": 39,
+          "name": "정현시스템",
+          "amount_eok": 0.2659,
+          "rate_pct": 88.226,
+          "bizno": "3592501506",
+          "ceo": "박현숙"
+        },
+        {
+          "rank": 40,
+          "name": "이도지역발전연구원",
+          "amount_eok": 0.2661,
+          "rate_pct": 88.276,
+          "bizno": "3774900966",
+          "ceo": "이상학"
+        },
+        {
+          "rank": 41,
+          "name": "구르미상사",
+          "amount_eok": 0.2661,
+          "rate_pct": 88.288,
+          "bizno": "6881800479",
+          "ceo": "이동욱"
+        },
+        {
+          "rank": 42,
+          "name": "문선종합관리",
+          "amount_eok": 0.2661,
+          "rate_pct": 88.296,
+          "bizno": "3394101064",
+          "ceo": "이문선"
+        },
+        {
+          "rank": 43,
+          "name": "세이버",
+          "amount_eok": 0.2662,
+          "rate_pct": 88.305,
+          "bizno": "7568103808",
+          "ceo": "김정숙"
+        },
+        {
+          "rank": 44,
+          "name": "케이에스유통",
+          "amount_eok": 0.2662,
+          "rate_pct": 88.308,
+          "bizno": "4960100168",
+          "ceo": "경금순"
+        },
+        {
+          "rank": 45,
+          "name": "정옥티에스",
+          "amount_eok": 0.2662,
+          "rate_pct": 88.308,
+          "bizno": "3950902568",
+          "ceo": "염점옥"
+        },
+        {
+          "rank": 46,
+          "name": "(재)한국산업경제정책연구원",
+          "amount_eok": 0.2662,
+          "rate_pct": 88.317,
+          "bizno": "5028217662",
+          "ceo": "이영만"
+        },
+        {
+          "rank": 47,
+          "name": "제이투산업",
+          "amount_eok": 0.2662,
+          "rate_pct": 88.326,
+          "bizno": "7900100527",
+          "ceo": "최진이"
+        },
+        {
+          "rank": 48,
+          "name": "씨에스넷",
+          "amount_eok": 0.2663,
+          "rate_pct": 88.337,
+          "bizno": "2041788853",
+          "ceo": "조연우"
+        },
+        {
+          "rank": 49,
+          "name": "지속가능경제정책연구소(SEPI)",
+          "amount_eok": 0.2663,
+          "rate_pct": 88.353,
+          "bizno": "1377400472",
+          "ceo": "이서준"
+        },
+        {
+          "rank": 50,
+          "name": "제로솔루션(안산점)",
+          "amount_eok": 0.2664,
+          "rate_pct": 88.372,
+          "bizno": "5820802597",
+          "ceo": "이순석"
+        },
+        {
+          "rank": 51,
+          "name": "유림상사",
+          "amount_eok": 0.2664,
+          "rate_pct": 88.393,
+          "bizno": "2142801112",
+          "ceo": "고상범"
+        },
+        {
+          "rank": 52,
+          "name": "(사)한국행정발전연구원",
+          "amount_eok": 0.2664,
+          "rate_pct": 88.394,
+          "bizno": "4088211482",
+          "ceo": "나희진"
+        },
+        {
+          "rank": 53,
+          "name": "마니트",
+          "amount_eok": 0.2664,
+          "rate_pct": 88.395,
+          "bizno": "5372902103",
+          "ceo": "조현석"
+        },
+        {
+          "rank": 54,
+          "name": "유니스제이",
+          "amount_eok": 0.2665,
+          "rate_pct": 88.405,
+          "bizno": "7780101773",
+          "ceo": "정혜진"
+        },
+        {
+          "rank": 55,
+          "name": "메가플랜",
+          "amount_eok": 0.2665,
+          "rate_pct": 88.407,
+          "bizno": "5288802668",
+          "ceo": "이지영"
+        },
+        {
+          "rank": 56,
+          "name": "티에스피씨",
+          "amount_eok": 0.2665,
+          "rate_pct": 88.416,
+          "bizno": "7598702571",
+          "ceo": "박태상"
+        },
+        {
+          "rank": 57,
+          "name": "지역문화관광연구소(유)",
+          "amount_eok": 0.2665,
+          "rate_pct": 88.423,
+          "bizno": "5868800972",
+          "ceo": "이채연"
+        },
+        {
+          "rank": 58,
+          "name": "라이핏사이언스",
+          "amount_eok": 0.2665,
+          "rate_pct": 88.432,
+          "bizno": "6291400619",
+          "ceo": "신종걸"
+        },
+        {
+          "rank": 59,
+          "name": "제이제이 커머스",
+          "amount_eok": 0.2666,
+          "rate_pct": 88.445,
+          "bizno": "2524500956",
+          "ceo": "조수련"
+        },
+        {
+          "rank": 60,
+          "name": "유한회사 은성이엔지",
+          "amount_eok": 0.2666,
+          "rate_pct": 88.459,
+          "bizno": "6778803329",
+          "ceo": "송은하"
+        },
+        {
+          "rank": 61,
+          "name": "인스나인",
+          "amount_eok": 0.2666,
+          "rate_pct": 88.463,
+          "bizno": "4108118588",
+          "ceo": "박환성"
+        },
+        {
+          "rank": 62,
+          "name": "선호하우징",
+          "amount_eok": 0.2667,
+          "rate_pct": 88.479,
+          "bizno": "4744500385",
+          "ceo": "윤미선"
+        },
+        {
+          "rank": 63,
+          "name": "한국산업행정연구원",
+          "amount_eok": 0.2668,
+          "rate_pct": 88.507,
+          "bizno": "1333700892",
+          "ceo": "박수현"
+        },
+        {
+          "rank": 64,
+          "name": "우리피플즈",
+          "amount_eok": 0.2668,
+          "rate_pct": 88.52,
+          "bizno": "3678101314",
+          "ceo": "조영훈"
+        },
+        {
+          "rank": 65,
+          "name": "성지종합관리",
+          "amount_eok": 0.2668,
+          "rate_pct": 88.532,
+          "bizno": "3971003119",
+          "ceo": "박지환"
+        },
+        {
+          "rank": 66,
+          "name": "정책과평가",
+          "amount_eok": 0.2671,
+          "rate_pct": 88.622,
+          "bizno": "1058771039",
+          "ceo": "정제련"
+        },
+        {
+          "rank": 67,
+          "name": "미래월드",
+          "amount_eok": 0.2672,
+          "rate_pct": 88.643,
+          "bizno": "8598101754",
+          "ceo": "장준형"
+        },
+        {
+          "rank": 68,
+          "name": "광주기술정보원",
+          "amount_eok": 0.2673,
+          "rate_pct": 88.673,
+          "bizno": "4088194623",
+          "ceo": "문찬주"
+        },
+        {
+          "rank": 69,
+          "name": "꿈다락",
+          "amount_eok": 0.2673,
+          "rate_pct": 88.677,
+          "bizno": "8128703527",
+          "ceo": "안혜진"
+        },
+        {
+          "rank": 70,
+          "name": "유담컨설팅",
+          "amount_eok": 0.2673,
+          "rate_pct": 88.698,
+          "bizno": "6998102544",
+          "ceo": "소창호"
+        },
+        {
+          "rank": 71,
+          "name": "케이피엠경영연구원",
+          "amount_eok": 0.2675,
+          "rate_pct": 88.734,
+          "bizno": "1078806109",
+          "ceo": "박소연"
+        },
+        {
+          "rank": 72,
+          "name": "씨앤엘",
+          "amount_eok": 0.2678,
+          "rate_pct": 88.862,
+          "bizno": "8446200301",
+          "ceo": "조명희"
+        },
+        {
+          "rank": 73,
+          "name": "제이와이 시스템",
+          "amount_eok": 0.268,
+          "rate_pct": 88.902,
+          "bizno": "2901702161",
+          "ceo": "신유연"
+        },
+        {
+          "rank": 74,
+          "name": "미래아이시티기술사정보",
+          "amount_eok": 0.268,
+          "rate_pct": 88.909,
+          "bizno": "6648803584",
+          "ceo": "임재선"
+        },
+        {
+          "rank": 75,
+          "name": "리서치코리아",
+          "amount_eok": 0.2684,
+          "rate_pct": 89.053,
+          "bizno": "5028130066",
+          "ceo": "조미옥"
+        },
+        {
+          "rank": 76,
+          "name": "지유커머스",
+          "amount_eok": 0.2685,
+          "rate_pct": 89.085,
+          "bizno": "7547400656",
+          "ceo": "김동혁"
+        },
+        {
+          "rank": 77,
+          "name": "제이에스컴퍼니",
+          "amount_eok": 0.2686,
+          "rate_pct": 89.117,
+          "bizno": "6082962081",
+          "ceo": "정선영"
+        },
+        {
+          "rank": 78,
+          "name": "스마트이노베이션",
+          "amount_eok": 0.2688,
+          "rate_pct": 89.175,
+          "bizno": "6808703099",
+          "ceo": "하아름"
+        },
+        {
+          "rank": 79,
+          "name": "백제기업",
+          "amount_eok": 0.27,
+          "rate_pct": 89.564,
+          "bizno": "1801201064",
+          "ceo": "백진영"
+        },
+        {
+          "rank": 80,
+          "name": "이비컴퍼니",
+          "amount_eok": 0.2715,
+          "rate_pct": 90.081,
+          "bizno": "2541801426",
+          "ceo": "홍은복"
+        },
+        {
+          "rank": 81,
+          "name": "소사이어티",
+          "amount_eok": 0.2719,
+          "rate_pct": 90.197,
+          "bizno": "1698702308",
+          "ceo": "고명곤"
+        },
+        {
+          "rank": 82,
+          "name": "에이제이코리아",
+          "amount_eok": 0.2727,
+          "rate_pct": 90.464,
+          "bizno": "7821901573",
+          "ceo": "안진"
+        },
+        {
+          "rank": 83,
+          "name": "디에스코퍼레이션",
+          "amount_eok": 0.3,
+          "rate_pct": 99.531,
+          "bizno": "4347400446",
+          "ceo": "김혜림"
+        },
+        {
+          "rank": null,
+          "name": "가치누리",
+          "amount_eok": 0.2593,
+          "rate_pct": 86.043,
+          "bizno": "5164700892",
+          "ceo": "장예나"
+        },
+        {
+          "rank": null,
+          "name": "나다움컨설팅",
+          "amount_eok": 0.2599,
+          "rate_pct": 86.213,
+          "bizno": "4500403705",
+          "ceo": "임지영"
+        },
+        {
+          "rank": null,
+          "name": "사단법인 한국전략기획평가원",
+          "amount_eok": 0.2601,
+          "rate_pct": 86.299,
+          "bizno": "1128207490",
+          "ceo": "천상은"
+        },
+        {
+          "rank": null,
+          "name": "나웅테크",
+          "amount_eok": 0.2602,
+          "rate_pct": 86.313,
+          "bizno": "3138133269",
+          "ceo": "나학균"
+        },
+        {
+          "rank": null,
+          "name": "나정",
+          "amount_eok": 0.2602,
+          "rate_pct": 86.326,
+          "bizno": "4488603784",
+          "ceo": "하나영"
+        },
+        {
+          "rank": null,
+          "name": "행복마을연구소",
+          "amount_eok": 0.2602,
+          "rate_pct": 86.341,
+          "bizno": "4130966176",
+          "ceo": "하수옥"
+        },
+        {
+          "rank": null,
+          "name": "한국법제경영연구원",
+          "amount_eok": 0.2603,
+          "rate_pct": 86.376,
+          "bizno": "5458102548",
+          "ceo": "박선영"
+        },
+        {
+          "rank": null,
+          "name": "한국공공정책연구원",
+          "amount_eok": 0.2608,
+          "rate_pct": 86.53,
+          "bizno": "6182564851",
+          "ceo": "박세호"
+        },
+        {
+          "rank": null,
+          "name": "지밸류파트너스",
+          "amount_eok": 0.2608,
+          "rate_pct": 86.533,
+          "bizno": "7640203779",
+          "ceo": "김종현"
+        },
+        {
+          "rank": null,
+          "name": "정석종합관리",
+          "amount_eok": 0.2609,
+          "rate_pct": 86.569,
+          "bizno": "2922301359",
+          "ceo": "권순옥"
+        },
+        {
+          "rank": null,
+          "name": "세종자치정책연구원",
+          "amount_eok": 0.261,
+          "rate_pct": 86.58,
+          "bizno": "2498603251",
+          "ceo": "이강호"
+        },
+        {
+          "rank": null,
+          "name": "루나픽스",
+          "amount_eok": 0.2611,
+          "rate_pct": 86.619,
+          "bizno": "1082692347",
+          "ceo": "박진선"
+        },
+        {
+          "rank": null,
+          "name": "제이에스제이종합관리",
+          "amount_eok": 0.2613,
+          "rate_pct": 86.675,
+          "bizno": "4806300555",
+          "ceo": "정성준"
+        },
+        {
+          "rank": null,
+          "name": "사회정책연구소",
+          "amount_eok": 0.2613,
+          "rate_pct": 86.696,
+          "bizno": "1121311552",
+          "ceo": "이용현"
+        },
+        {
+          "rank": null,
+          "name": "윤스 리테일",
+          "amount_eok": 0.2613,
+          "rate_pct": 86.706,
+          "bizno": "3416600265",
+          "ceo": "김민호"
+        },
+        {
+          "rank": null,
+          "name": "대성안전개발",
+          "amount_eok": 0.2613,
+          "rate_pct": 86.708,
+          "bizno": "4038104830",
+          "ceo": "최공진"
+        },
+        {
+          "rank": null,
+          "name": "Image Factory Production (이프프로덕션)",
+          "amount_eok": 0.2614,
+          "rate_pct": 86.717,
+          "bizno": "6151900920",
+          "ceo": "김덕열"
+        },
+        {
+          "rank": null,
+          "name": "이진",
+          "amount_eok": 0.2614,
+          "rate_pct": 86.72,
+          "bizno": "7708603250",
+          "ceo": "김나영"
+        },
+        {
+          "rank": null,
+          "name": "한국경제경영연구원",
+          "amount_eok": 0.2616,
+          "rate_pct": 86.78,
+          "bizno": "1128147684",
+          "ceo": "황창연"
+        },
+        {
+          "rank": null,
+          "name": "수에이치에스(HS)컴퍼니",
+          "amount_eok": 0.2616,
+          "rate_pct": 86.79,
+          "bizno": "1494300675",
+          "ceo": "김광자"
+        },
+        {
+          "rank": null,
+          "name": "지역미래정책연구소",
+          "amount_eok": 0.2617,
+          "rate_pct": 86.81,
+          "bizno": "1503201509",
+          "ceo": "서하나"
+        },
+        {
+          "rank": null,
+          "name": "유니스트",
+          "amount_eok": 0.2617,
+          "rate_pct": 86.816,
+          "bizno": "2193034533",
+          "ceo": "안하나"
+        },
+        {
+          "rank": null,
+          "name": "티디에듀케이션",
+          "amount_eok": 0.2617,
+          "rate_pct": 86.816,
+          "bizno": "4808103333",
+          "ceo": "안재규"
+        },
+        {
+          "rank": null,
+          "name": "천지(天地)",
+          "amount_eok": 0.2617,
+          "rate_pct": 86.828,
+          "bizno": "2231072616",
+          "ceo": "박정윤"
+        },
+        {
+          "rank": null,
+          "name": "런런컨설팅",
+          "amount_eok": 0.2617,
+          "rate_pct": 86.834,
+          "bizno": "8043201547",
+          "ceo": "정평호"
+        },
+        {
+          "rank": null,
+          "name": "청소박사 그린",
+          "amount_eok": 0.2617,
+          "rate_pct": 86.838,
+          "bizno": "1212484604",
+          "ceo": "김종균"
+        },
+        {
+          "rank": null,
+          "name": "제이와이솔리드",
+          "amount_eok": 0.2618,
+          "rate_pct": 86.854,
+          "bizno": "1701403074",
+          "ceo": "박정훈"
+        },
+        {
+          "rank": null,
+          "name": "둥지종합관리",
+          "amount_eok": 0.2618,
+          "rate_pct": 86.865,
+          "bizno": "7512701176",
+          "ceo": "김정선"
+        },
+        {
+          "rank": null,
+          "name": "케이페키",
+          "amount_eok": 0.2618,
+          "rate_pct": 86.866,
+          "bizno": "1272459670",
+          "ceo": "김정희"
+        },
+        {
+          "rank": null,
+          "name": "신화건설",
+          "amount_eok": 0.2619,
+          "rate_pct": 86.883,
+          "bizno": "1308675053",
+          "ceo": "정선숙"
+        },
+        {
+          "rank": null,
+          "name": "태산환경",
+          "amount_eok": 0.2619,
+          "rate_pct": 86.885,
+          "bizno": "7261102810",
+          "ceo": "김성태"
+        },
+        {
+          "rank": null,
+          "name": "에스시지제이비",
+          "amount_eok": 0.2619,
+          "rate_pct": 86.886,
+          "bizno": "1298693615",
+          "ceo": "김수정"
+        },
+        {
+          "rank": null,
+          "name": "수비솔루션",
+          "amount_eok": 0.2619,
+          "rate_pct": 86.887,
+          "bizno": "6238603293",
+          "ceo": "최수연"
+        },
+        {
+          "rank": null,
+          "name": "창성시스템",
+          "amount_eok": 0.2619,
+          "rate_pct": 86.895,
+          "bizno": "1528801875",
+          "ceo": "조일수"
+        },
+        {
+          "rank": null,
+          "name": "한반도 경제연구원",
+          "amount_eok": 0.2619,
+          "rate_pct": 86.895,
+          "bizno": "4102771752",
+          "ceo": "김동오"
+        },
+        {
+          "rank": null,
+          "name": "한국공공번영연구소(천안)",
+          "amount_eok": 0.262,
+          "rate_pct": 86.913,
+          "bizno": "6621702274",
+          "ceo": "서민규"
+        },
+        {
+          "rank": null,
+          "name": "행복충전플래너",
+          "amount_eok": 0.262,
+          "rate_pct": 86.922,
+          "bizno": "2310302544",
+          "ceo": "임숙영"
+        },
+        {
+          "rank": null,
+          "name": "혜은미래",
+          "amount_eok": 0.262,
+          "rate_pct": 86.931,
+          "bizno": "1022796060",
+          "ceo": "나성진"
+        },
+        {
+          "rank": null,
+          "name": "청솔크린",
+          "amount_eok": 0.2621,
+          "rate_pct": 86.941,
+          "bizno": "3738802020",
+          "ceo": "김기태"
+        },
+        {
+          "rank": null,
+          "name": "우석종합관리",
+          "amount_eok": 0.2621,
+          "rate_pct": 86.942,
+          "bizno": "5421102134",
+          "ceo": "강규석"
+        },
+        {
+          "rank": null,
+          "name": "정석솔루션",
+          "amount_eok": 0.2621,
+          "rate_pct": 86.946,
+          "bizno": "2563901373",
+          "ceo": "방소정"
+        },
+        {
+          "rank": null,
+          "name": "길상25",
+          "amount_eok": 0.2621,
+          "rate_pct": 86.95,
+          "bizno": "3315400775",
+          "ceo": "이수빈"
+        },
+        {
+          "rank": null,
+          "name": "진테크",
+          "amount_eok": 0.2621,
+          "rate_pct": 86.961,
+          "bizno": "8271101768",
+          "ceo": "박성진"
+        },
+        {
+          "rank": null,
+          "name": "도도C&C",
+          "amount_eok": 0.2621,
+          "rate_pct": 86.969,
+          "bizno": "4182101603",
+          "ceo": "이미숙"
+        },
+        {
+          "rank": null,
+          "name": "조은",
+          "amount_eok": 0.2621,
+          "rate_pct": 86.973,
+          "bizno": "1850701162",
+          "ceo": "박규리"
+        },
+        {
+          "rank": null,
+          "name": "라움시스템",
+          "amount_eok": 0.2622,
+          "rate_pct": 86.978,
+          "bizno": "2032795840",
+          "ceo": "이태복"
+        },
+        {
+          "rank": null,
+          "name": "새김",
+          "amount_eok": 0.2622,
+          "rate_pct": 86.983,
+          "bizno": "6088614035",
+          "ceo": "안종준"
+        },
+        {
+          "rank": null,
+          "name": "림림2",
+          "amount_eok": 0.2622,
+          "rate_pct": 86.988,
+          "bizno": "5480503445",
+          "ceo": "서혜림"
+        },
+        {
+          "rank": null,
+          "name": "부림",
+          "amount_eok": 0.2622,
+          "rate_pct": 87.006,
+          "bizno": "3448700236",
+          "ceo": "김미란"
+        },
+        {
+          "rank": null,
+          "name": "한빛다온",
+          "amount_eok": 0.2623,
+          "rate_pct": 87.015,
+          "bizno": "2513401145",
+          "ceo": "김화숙"
+        },
+        {
+          "rank": null,
+          "name": "빛나게이루리",
+          "amount_eok": 0.2623,
+          "rate_pct": 87.016,
+          "bizno": "7330402727",
+          "ceo": "심미연"
+        },
+        {
+          "rank": null,
+          "name": "신원화성",
+          "amount_eok": 0.2623,
+          "rate_pct": 87.023,
+          "bizno": "6272600047",
+          "ceo": "신관식"
+        },
+        {
+          "rank": null,
+          "name": "세종BYC",
+          "amount_eok": 0.2623,
+          "rate_pct": 87.035,
+          "bizno": "6560401436",
+          "ceo": "조효숙"
+        },
+        {
+          "rank": null,
+          "name": "신영",
+          "amount_eok": 0.2624,
+          "rate_pct": 87.044,
+          "bizno": "2693501255",
+          "ceo": "이지영"
+        },
+        {
+          "rank": null,
+          "name": "에이치앤컴퍼니",
+          "amount_eok": 0.2624,
+          "rate_pct": 87.061,
+          "bizno": "4012172115",
+          "ceo": "이향란"
+        },
+        {
+          "rank": null,
+          "name": "원주박",
+          "amount_eok": 0.2624,
+          "rate_pct": 87.063,
+          "bizno": "2514301225",
+          "ceo": "박주원"
+        },
+        {
+          "rank": null,
+          "name": "탑플랜트",
+          "amount_eok": 0.2624,
+          "rate_pct": 87.069,
+          "bizno": "4112754232",
+          "ceo": "최용식"
+        },
+        {
+          "rank": null,
+          "name": "유노이아 인천",
+          "amount_eok": 0.2624,
+          "rate_pct": 87.072,
+          "bizno": "7633001510",
+          "ceo": "김효경"
+        },
+        {
+          "rank": null,
+          "name": "신성씨엔에스",
+          "amount_eok": 0.2625,
+          "rate_pct": 87.083,
+          "bizno": "4188153158",
+          "ceo": "서미숙"
+        },
+        {
+          "rank": null,
+          "name": "은성",
+          "amount_eok": 0.2625,
+          "rate_pct": 87.091,
+          "bizno": "6031871482",
+          "ceo": "석종근"
+        },
+        {
+          "rank": null,
+          "name": "지엔씨홀딩스",
+          "amount_eok": 0.2625,
+          "rate_pct": 87.094,
+          "bizno": "6805500747",
+          "ceo": "김미자"
+        },
+        {
+          "rank": null,
+          "name": "제일종합관리",
+          "amount_eok": 0.2625,
+          "rate_pct": 87.099,
+          "bizno": "7631203038",
+          "ceo": "박형하"
+        },
+        {
+          "rank": null,
+          "name": "인성신",
+          "amount_eok": 0.2625,
+          "rate_pct": 87.1,
+          "bizno": "1727400553",
+          "ceo": "인성신"
+        },
+        {
+          "rank": null,
+          "name": "하다랩",
+          "amount_eok": 0.2625,
+          "rate_pct": 87.105,
+          "bizno": "7898800324",
+          "ceo": "한지아"
+        },
+        {
+          "rank": null,
+          "name": "빛가람경제연구원",
+          "amount_eok": 0.2626,
+          "rate_pct": 87.114,
+          "bizno": "1598702617",
+          "ceo": "박승구"
+        },
+        {
+          "rank": null,
+          "name": "제주포장용기",
+          "amount_eok": 0.2626,
+          "rate_pct": 87.119,
+          "bizno": "1497700419",
+          "ceo": "강선원"
+        },
+        {
+          "rank": null,
+          "name": "카시온",
+          "amount_eok": 0.2626,
+          "rate_pct": 87.121,
+          "bizno": "2188126328",
+          "ceo": "윤순정"
+        },
+        {
+          "rank": null,
+          "name": "주리기획",
+          "amount_eok": 0.2626,
+          "rate_pct": 87.128,
+          "bizno": "1371292178",
+          "ceo": "정래복"
+        },
+        {
+          "rank": null,
+          "name": "조에스",
+          "amount_eok": 0.2626,
+          "rate_pct": 87.13,
+          "bizno": "5720402331",
+          "ceo": "장석임"
+        },
+        {
+          "rank": null,
+          "name": "엔알디베스트",
+          "amount_eok": 0.2626,
+          "rate_pct": 87.137,
+          "bizno": "6805100846",
+          "ceo": "김동환"
+        },
+        {
+          "rank": null,
+          "name": "비엠지",
+          "amount_eok": 0.2626,
+          "rate_pct": 87.138,
+          "bizno": "3558600753",
+          "ceo": "고왕용"
+        },
+        {
+          "rank": null,
+          "name": "에코아이엔티(ECHO INT)",
+          "amount_eok": 0.2627,
+          "rate_pct": 87.155,
+          "bizno": "1453500396",
+          "ceo": "이효정"
+        },
+        {
+          "rank": null,
+          "name": "에이원씨에프",
+          "amount_eok": 0.2627,
+          "rate_pct": 87.156,
+          "bizno": "1058766972",
+          "ceo": "김준성"
+        },
+        {
+          "rank": null,
+          "name": "도향",
+          "amount_eok": 0.2627,
+          "rate_pct": 87.158,
+          "bizno": "6208703137",
+          "ceo": "송효순"
+        },
+        {
+          "rank": null,
+          "name": "소르트",
+          "amount_eok": 0.2627,
+          "rate_pct": 87.16,
+          "bizno": "1148671185",
+          "ceo": "박혁준"
+        },
+        {
+          "rank": null,
+          "name": "인남",
+          "amount_eok": 0.2627,
+          "rate_pct": 87.166,
+          "bizno": "8828802432",
+          "ceo": "송인남"
+        },
+        {
+          "rank": null,
+          "name": "소담",
+          "amount_eok": 0.2627,
+          "rate_pct": 87.172,
+          "bizno": "6790900997",
+          "ceo": "허혜진"
+        },
+        {
+          "rank": null,
+          "name": "휴먼플래너",
+          "amount_eok": 0.2628,
+          "rate_pct": 87.175,
+          "bizno": "4428801439",
+          "ceo": "주진영"
+        },
+        {
+          "rank": null,
+          "name": "세종솔루션",
+          "amount_eok": 0.2628,
+          "rate_pct": 87.18,
+          "bizno": "3118703140",
+          "ceo": "황용호"
+        },
+        {
+          "rank": null,
+          "name": "세요디자인컴퍼니",
+          "amount_eok": 0.2628,
+          "rate_pct": 87.183,
+          "bizno": "2036674688",
+          "ceo": "김세영"
+        },
+        {
+          "rank": null,
+          "name": "하이브레인",
+          "amount_eok": 0.2628,
+          "rate_pct": 87.199,
+          "bizno": "2553201876",
+          "ceo": "이승배"
+        },
+        {
+          "rank": null,
+          "name": "시그넥스",
+          "amount_eok": 0.2628,
+          "rate_pct": 87.205,
+          "bizno": "7473401670",
+          "ceo": "정희진"
+        },
+        {
+          "rank": null,
+          "name": "크린산업",
+          "amount_eok": 0.2629,
+          "rate_pct": 87.227,
+          "bizno": "4728702994",
+          "ceo": "진병호"
+        },
+        {
+          "rank": null,
+          "name": "지니스",
+          "amount_eok": 0.2629,
+          "rate_pct": 87.23,
+          "bizno": "4698802603",
+          "ceo": "김명련"
+        },
+        {
+          "rank": null,
+          "name": "영광산업",
+          "amount_eok": 0.2629,
+          "rate_pct": 87.237,
+          "bizno": "2563400457",
+          "ceo": "박광영"
+        },
+        {
+          "rank": null,
+          "name": "성민종합관리",
+          "amount_eok": 0.263,
+          "rate_pct": 87.248,
+          "bizno": "2640901775",
+          "ceo": "송민경"
+        },
+        {
+          "rank": null,
+          "name": "이룸경영연구소",
+          "amount_eok": 0.263,
+          "rate_pct": 87.255,
+          "bizno": "1358173939",
+          "ceo": "정상천"
+        },
+        {
+          "rank": null,
+          "name": "지역사회발전연구소",
+          "amount_eok": 0.263,
+          "rate_pct": 87.258,
+          "bizno": "3194301332",
+          "ceo": "변상운"
+        },
+        {
+          "rank": null,
+          "name": "한국정보경영평가",
+          "amount_eok": 0.263,
+          "rate_pct": 87.262,
+          "bizno": "2208800164",
+          "ceo": "윤병호"
+        },
+        {
+          "rank": null,
+          "name": "대홍관리",
+          "amount_eok": 0.2631,
+          "rate_pct": 87.277,
+          "bizno": "5408100088",
+          "ceo": "김금자"
+        },
+        {
+          "rank": null,
+          "name": "디원파트너스",
+          "amount_eok": 0.2631,
+          "rate_pct": 87.28,
+          "bizno": "7010303867",
+          "ceo": "신동일"
+        },
+        {
+          "rank": null,
+          "name": "제이스텔라",
+          "amount_eok": 0.2631,
+          "rate_pct": 87.28,
+          "bizno": "7342102407",
+          "ceo": "이은정"
+        },
+        {
+          "rank": null,
+          "name": "윤픽",
+          "amount_eok": 0.2631,
+          "rate_pct": 87.286,
+          "bizno": "5268103736",
+          "ceo": "윤정옥"
+        },
+        {
+          "rank": null,
+          "name": "지역사회행복연구소",
+          "amount_eok": 0.2631,
+          "rate_pct": 87.288,
+          "bizno": "3760102746",
+          "ceo": "송호빈"
+        },
+        {
+          "rank": null,
+          "name": "진영설비",
+          "amount_eok": 0.2631,
+          "rate_pct": 87.299,
+          "bizno": "2221371503",
+          "ceo": "김진환"
+        },
+        {
+          "rank": null,
+          "name": "지그인더스트리",
+          "amount_eok": 0.2632,
+          "rate_pct": 87.309,
+          "bizno": "6753700815",
+          "ceo": "신종현"
+        },
+        {
+          "rank": null,
+          "name": "쿠데타엔터테인먼트",
+          "amount_eok": 0.2632,
+          "rate_pct": 87.31,
+          "bizno": "1051832777",
+          "ceo": "박용대"
+        },
+        {
+          "rank": null,
+          "name": "(유)아성개발",
+          "amount_eok": 0.2632,
+          "rate_pct": 87.315,
+          "bizno": "1698101874",
+          "ceo": "최영식"
+        },
+        {
+          "rank": null,
+          "name": "크린산업",
+          "amount_eok": 0.2632,
+          "rate_pct": 87.321,
+          "bizno": "8626000362",
+          "ceo": "김소연"
+        },
+        {
+          "rank": null,
+          "name": "마따니아",
+          "amount_eok": 0.2632,
+          "rate_pct": 87.321,
+          "bizno": "1820502213",
+          "ceo": "김나정"
+        },
+        {
+          "rank": null,
+          "name": "씨와이플러스",
+          "amount_eok": 0.2632,
+          "rate_pct": 87.323,
+          "bizno": "4016800431",
+          "ceo": "이채연"
+        },
+        {
+          "rank": null,
+          "name": "에이쓰리",
+          "amount_eok": 0.2632,
+          "rate_pct": 87.33,
+          "bizno": "4148109873",
+          "ceo": "이신호"
+        },
+        {
+          "rank": null,
+          "name": "현대티에스씨",
+          "amount_eok": 0.2632,
+          "rate_pct": 87.33,
+          "bizno": "2050524581",
+          "ceo": "황진이"
+        },
+        {
+          "rank": null,
+          "name": "에이치엠드림",
+          "amount_eok": 0.2632,
+          "rate_pct": 87.332,
+          "bizno": "6665500983",
+          "ceo": "구희모"
+        },
+        {
+          "rank": null,
+          "name": "마브",
+          "amount_eok": 0.2633,
+          "rate_pct": 87.339,
+          "bizno": "2718700336",
+          "ceo": "이지연"
+        },
+        {
+          "rank": null,
+          "name": "정민시스템하남",
+          "amount_eok": 0.2633,
+          "rate_pct": 87.34,
+          "bizno": "5110993695",
+          "ceo": "노혜린"
+        },
+        {
+          "rank": null,
+          "name": "삼일이엔지",
+          "amount_eok": 0.2633,
+          "rate_pct": 87.343,
+          "bizno": "1238144237",
+          "ceo": "박찬"
+        },
+        {
+          "rank": null,
+          "name": "비즈니스그룹",
+          "amount_eok": 0.2633,
+          "rate_pct": 87.351,
+          "bizno": "6168197202",
+          "ceo": "변영실"
+        },
+        {
+          "rank": null,
+          "name": "크린시티",
+          "amount_eok": 0.2633,
+          "rate_pct": 87.355,
+          "bizno": "5650901722",
+          "ceo": "최현옥"
+        },
+        {
+          "rank": null,
+          "name": "지방자치정책연구원",
+          "amount_eok": 0.2633,
+          "rate_pct": 87.359,
+          "bizno": "5208101967",
+          "ceo": "김은숙"
+        },
+        {
+          "rank": null,
+          "name": "어울림연구소",
+          "amount_eok": 0.2633,
+          "rate_pct": 87.365,
+          "bizno": "4793401646",
+          "ceo": "황인숙"
+        },
+        {
+          "rank": null,
+          "name": "크린월드",
+          "amount_eok": 0.2633,
+          "rate_pct": 87.366,
+          "bizno": "3142044486",
+          "ceo": "김영숙"
+        },
+        {
+          "rank": null,
+          "name": "제이알에스티오",
+          "amount_eok": 0.2633,
+          "rate_pct": 87.367,
+          "bizno": "1801702369",
+          "ceo": "최우정"
+        },
+        {
+          "rank": null,
+          "name": "키데아랩",
+          "amount_eok": 0.2634,
+          "rate_pct": 87.377,
+          "bizno": "5411701167",
+          "ceo": "강동은"
+        },
+        {
+          "rank": null,
+          "name": "밸류그램컴퍼니",
+          "amount_eok": 0.2634,
+          "rate_pct": 87.378,
+          "bizno": "5358102916",
+          "ceo": "이준근"
+        },
+        {
+          "rank": null,
+          "name": "사단법인 정보사회개발연구원",
+          "amount_eok": 0.2634,
+          "rate_pct": 87.391,
+          "bizno": "1248213957",
+          "ceo": "박현호"
+        },
+        {
+          "rank": null,
+          "name": "엘비벤처스",
+          "amount_eok": 0.2634,
+          "rate_pct": 87.395,
+          "bizno": "5122501941",
+          "ceo": "이미랑"
+        },
+        {
+          "rank": null,
+          "name": "태기실업",
+          "amount_eok": 0.2634,
+          "rate_pct": 87.399,
+          "bizno": "4903700776",
+          "ceo": "김진태"
+        },
+        {
+          "rank": null,
+          "name": "가이아PK",
+          "amount_eok": 0.2635,
+          "rate_pct": 87.41,
+          "bizno": "5151108908",
+          "ceo": "김길현"
+        },
+        {
+          "rank": null,
+          "name": "파트너스토리",
+          "amount_eok": 0.2635,
+          "rate_pct": 87.41,
+          "bizno": "6335600786",
+          "ceo": "김용인"
+        },
+        {
+          "rank": null,
+          "name": "넥서스리스치",
+          "amount_eok": 0.2635,
+          "rate_pct": 87.418,
+          "bizno": "3910103007",
+          "ceo": "송용철"
+        },
+        {
+          "rank": null,
+          "name": "사단법인 한국혁신연구원",
+          "amount_eok": 0.2635,
+          "rate_pct": 87.42,
+          "bizno": "5958200028",
+          "ceo": "위현복"
+        },
+        {
+          "rank": null,
+          "name": "파트너전자입찰시스템",
+          "amount_eok": 0.2635,
+          "rate_pct": 87.421,
+          "bizno": "8448602440",
+          "ceo": "이병은"
+        },
+        {
+          "rank": null,
+          "name": "팍스플래닛",
+          "amount_eok": 0.2635,
+          "rate_pct": 87.433,
+          "bizno": "1460902535",
+          "ceo": "이유경"
+        },
+        {
+          "rank": null,
+          "name": "호연소프트",
+          "amount_eok": 0.2636,
+          "rate_pct": 87.438,
+          "bizno": "1058800318",
+          "ceo": "임완중"
+        },
+        {
+          "rank": null,
+          "name": "풀블라썸(Full Blossom)",
+          "amount_eok": 0.2636,
+          "rate_pct": 87.444,
+          "bizno": "5634000211",
+          "ceo": "박양신"
+        },
+        {
+          "rank": null,
+          "name": "지방자치발전연구원",
+          "amount_eok": 0.2636,
+          "rate_pct": 87.456,
+          "bizno": "2728802620",
+          "ceo": "이동호"
+        },
+        {
+          "rank": null,
+          "name": "오픽",
+          "amount_eok": 0.2636,
+          "rate_pct": 87.462,
+          "bizno": "1628703820",
+          "ceo": "오선미"
+        },
+        {
+          "rank": null,
+          "name": "글로리어스",
+          "amount_eok": 0.2637,
+          "rate_pct": 87.472,
+          "bizno": "1472901920",
+          "ceo": "이대용"
+        },
+        {
+          "rank": null,
+          "name": "오름앤코",
+          "amount_eok": 0.2637,
+          "rate_pct": 87.477,
+          "bizno": "8844501198",
+          "ceo": "박수영"
+        },
+        {
+          "rank": null,
+          "name": "전남지방행정발전연구원",
+          "amount_eok": 0.2637,
+          "rate_pct": 87.477,
+          "bizno": "4278600612",
+          "ceo": "공경희"
+        },
+        {
+          "rank": null,
+          "name": "효산경영연구소",
+          "amount_eok": 0.2637,
+          "rate_pct": 87.477,
+          "bizno": "2208629740",
+          "ceo": "김정희"
+        },
+        {
+          "rank": null,
+          "name": "태림솔루션",
+          "amount_eok": 0.2637,
+          "rate_pct": 87.478,
+          "bizno": "3472801858",
+          "ceo": "이지혜"
+        },
+        {
+          "rank": null,
+          "name": "로컬앤커뮤니티",
+          "amount_eok": 0.2637,
+          "rate_pct": 87.482,
+          "bizno": "8408102953",
+          "ceo": "전재홍"
+        },
+        {
+          "rank": null,
+          "name": "도연컴퍼니",
+          "amount_eok": 0.2637,
+          "rate_pct": 87.483,
+          "bizno": "2775101028",
+          "ceo": "김인숙"
+        },
+        {
+          "rank": null,
+          "name": "디엠글로벌",
+          "amount_eok": 0.2637,
+          "rate_pct": 87.484,
+          "bizno": "4945700247",
+          "ceo": "이화선"
+        },
+        {
+          "rank": null,
+          "name": "고든커머스",
+          "amount_eok": 0.2637,
+          "rate_pct": 87.488,
+          "bizno": "2688602821",
+          "ceo": "최재욱"
+        },
+        {
+          "rank": null,
+          "name": "원터치",
+          "amount_eok": 0.2637,
+          "rate_pct": 87.494,
+          "bizno": "7480902379",
+          "ceo": "김왕곤"
+        },
+        {
+          "rank": null,
+          "name": "윤슬컴퍼니",
+          "amount_eok": 0.2637,
+          "rate_pct": 87.496,
+          "bizno": "4073701467",
+          "ceo": "김세원"
+        },
+        {
+          "rank": null,
+          "name": "모빌",
+          "amount_eok": 0.2637,
+          "rate_pct": 87.5,
+          "bizno": "8962901774",
+          "ceo": "박준태"
+        },
+        {
+          "rank": null,
+          "name": "든든",
+          "amount_eok": 0.2638,
+          "rate_pct": 87.504,
+          "bizno": "5538104116",
+          "ceo": "오정민"
+        },
+        {
+          "rank": null,
+          "name": "네이처라이프",
+          "amount_eok": 0.2638,
+          "rate_pct": 87.51,
+          "bizno": "6238100476",
+          "ceo": "최병춘"
+        },
+        {
+          "rank": null,
+          "name": "쓰리지엠",
+          "amount_eok": 0.2638,
+          "rate_pct": 87.519,
+          "bizno": "3392000809",
+          "ceo": "김성은"
+        },
+        {
+          "rank": null,
+          "name": "삼성바이오헬스케어",
+          "amount_eok": 0.2638,
+          "rate_pct": 87.522,
+          "bizno": "5248602395",
+          "ceo": "최혜인"
+        },
+        {
+          "rank": null,
+          "name": "씨드코스메틱",
+          "amount_eok": 0.2638,
+          "rate_pct": 87.533,
+          "bizno": "7508803473",
+          "ceo": "이예원"
+        },
+        {
+          "rank": null,
+          "name": "한서유통",
+          "amount_eok": 0.2638,
+          "rate_pct": 87.534,
+          "bizno": "2300300451",
+          "ceo": "한경미"
+        },
+        {
+          "rank": null,
+          "name": "해성인더스",
+          "amount_eok": 0.2638,
+          "rate_pct": 87.537,
+          "bizno": "3813700905",
+          "ceo": "마해성"
+        },
+        {
+          "rank": null,
+          "name": "온그루",
+          "amount_eok": 0.2639,
+          "rate_pct": 87.538,
+          "bizno": "8068104344",
+          "ceo": "박기담"
+        },
+        {
+          "rank": null,
+          "name": "청담",
+          "amount_eok": 0.2639,
+          "rate_pct": 87.544,
+          "bizno": "6928100512",
+          "ceo": "이종혁"
+        },
+        {
+          "rank": null,
+          "name": "다을상사",
+          "amount_eok": 0.2639,
+          "rate_pct": 87.551,
+          "bizno": "6910401685",
+          "ceo": "정상훈"
+        },
+        {
+          "rank": null,
+          "name": "희현코퍼레이션",
+          "amount_eok": 0.2639,
+          "rate_pct": 87.553,
+          "bizno": "7415500585",
+          "ceo": "허미희"
+        },
+        {
+          "rank": null,
+          "name": "대산종합관리",
+          "amount_eok": 0.2639,
+          "rate_pct": 87.554,
+          "bizno": "5990202706",
+          "ceo": "안광옥"
+        },
+        {
+          "rank": null,
+          "name": "공공미래전략연구소",
+          "amount_eok": 0.2639,
+          "rate_pct": 87.564,
+          "bizno": "4972701933",
+          "ceo": "최용선"
+        },
+        {
+          "rank": null,
+          "name": "태송종합건설",
+          "amount_eok": 0.2639,
+          "rate_pct": 87.566,
+          "bizno": "7118600822",
+          "ceo": "이보라"
+        },
+        {
+          "rank": null,
+          "name": "씨엠에이치컴퍼니",
+          "amount_eok": 0.264,
+          "rate_pct": 87.571,
+          "bizno": "6558603698",
+          "ceo": "조미화"
+        },
+        {
+          "rank": null,
+          "name": "코니코어시스템",
+          "amount_eok": 0.264,
+          "rate_pct": 87.571,
+          "bizno": "4410202765",
+          "ceo": "이혜영"
+        },
+        {
+          "rank": null,
+          "name": "에프엠(FM)종합 솔루션",
+          "amount_eok": 0.264,
+          "rate_pct": 87.588,
+          "bizno": "2460303467",
+          "ceo": "정진후"
+        },
+        {
+          "rank": null,
+          "name": "다온",
+          "amount_eok": 0.264,
+          "rate_pct": 87.589,
+          "bizno": "8268103621",
+          "ceo": "김명희"
+        },
+        {
+          "rank": null,
+          "name": "사단법인 중부지역발전연구원",
+          "amount_eok": 0.264,
+          "rate_pct": 87.59,
+          "bizno": "4478200068",
+          "ceo": "허성구"
+        },
+        {
+          "rank": null,
+          "name": "신동연구소",
+          "amount_eok": 0.264,
+          "rate_pct": 87.591,
+          "bizno": "6168703633",
+          "ceo": "신동화"
+        },
+        {
+          "rank": null,
+          "name": "비에스에스",
+          "amount_eok": 0.264,
+          "rate_pct": 87.593,
+          "bizno": "2141211981",
+          "ceo": "한수윤"
+        },
+        {
+          "rank": null,
+          "name": "서비스뱅크그룹",
+          "amount_eok": 0.264,
+          "rate_pct": 87.593,
+          "bizno": "7528101545",
+          "ceo": "김하성"
+        },
+        {
+          "rank": null,
+          "name": "강원 클린마스터",
+          "amount_eok": 0.264,
+          "rate_pct": 87.599,
+          "bizno": "8532401850",
+          "ceo": "한은호"
+        },
+        {
+          "rank": null,
+          "name": "퍼포먼스웨이컨설팅",
+          "amount_eok": 0.2641,
+          "rate_pct": 87.604,
+          "bizno": "2208713793",
+          "ceo": "오우식"
+        },
+        {
+          "rank": null,
+          "name": "금광개발",
+          "amount_eok": 0.2641,
+          "rate_pct": 87.611,
+          "bizno": "8370203140",
+          "ceo": "김경진"
+        },
+        {
+          "rank": null,
+          "name": "루아프라임",
+          "amount_eok": 0.2641,
+          "rate_pct": 87.614,
+          "bizno": "3883501352",
+          "ceo": "김진아"
+        },
+        {
+          "rank": null,
+          "name": "비피엔",
+          "amount_eok": 0.2641,
+          "rate_pct": 87.615,
+          "bizno": "7511001877",
+          "ceo": "백수진"
+        },
+        {
+          "rank": null,
+          "name": "푸른에스씨",
+          "amount_eok": 0.2641,
+          "rate_pct": 87.616,
+          "bizno": "3376400281",
+          "ceo": "조미연"
+        },
+        {
+          "rank": null,
+          "name": "에스엔컴퍼니",
+          "amount_eok": 0.2641,
+          "rate_pct": 87.623,
+          "bizno": "6706200447",
+          "ceo": "권순남"
+        },
+        {
+          "rank": null,
+          "name": "영주산업",
+          "amount_eok": 0.2641,
+          "rate_pct": 87.631,
+          "bizno": "8310902161",
+          "ceo": "박영자"
+        },
+        {
+          "rank": null,
+          "name": "대호상사",
+          "amount_eok": 0.2641,
+          "rate_pct": 87.633,
+          "bizno": "5880401337",
+          "ceo": "신정숙"
+        },
+        {
+          "rank": null,
+          "name": "지역사회연구소",
+          "amount_eok": 0.2641,
+          "rate_pct": 87.636,
+          "bizno": "7915600869",
+          "ceo": "박원훈"
+        },
+        {
+          "rank": null,
+          "name": "댄싱스토어",
+          "amount_eok": 0.2642,
+          "rate_pct": 87.644,
+          "bizno": "7566500586",
+          "ceo": "이현수"
+        },
+        {
+          "rank": null,
+          "name": "제이엔링크",
+          "amount_eok": 0.2642,
+          "rate_pct": 87.648,
+          "bizno": "1162702071",
+          "ceo": "양진혁"
+        },
+        {
+          "rank": null,
+          "name": "정일티에스",
+          "amount_eok": 0.2642,
+          "rate_pct": 87.652,
+          "bizno": "2567500445",
+          "ceo": "정일녀"
+        },
+        {
+          "rank": null,
+          "name": "동신비티엠",
+          "amount_eok": 0.2642,
+          "rate_pct": 87.655,
+          "bizno": "3058624309",
+          "ceo": "남형신"
+        },
+        {
+          "rank": null,
+          "name": "인트라 클리닉 컨설팅 (Intra Clinic Consulting)",
+          "amount_eok": 0.2643,
+          "rate_pct": 87.671,
+          "bizno": "6473700770",
+          "ceo": "김나래"
+        },
+        {
+          "rank": null,
+          "name": "창의지식정보연구소",
+          "amount_eok": 0.2643,
+          "rate_pct": 87.674,
+          "bizno": "1212708868",
+          "ceo": "김영아"
+        },
+        {
+          "rank": null,
+          "name": "디자인크레파스",
+          "amount_eok": 0.2643,
+          "rate_pct": 87.677,
+          "bizno": "2010969283",
+          "ceo": "장미옥"
+        },
+        {
+          "rank": null,
+          "name": "새움기획",
+          "amount_eok": 0.2643,
+          "rate_pct": 87.678,
+          "bizno": "2110167651",
+          "ceo": "방혜숙"
+        },
+        {
+          "rank": null,
+          "name": "안민행정연구원",
+          "amount_eok": 0.2643,
+          "rate_pct": 87.68,
+          "bizno": "7308803163",
+          "ceo": "이상우"
+        },
+        {
+          "rank": null,
+          "name": "메가허가에이아이",
+          "amount_eok": 0.2643,
+          "rate_pct": 87.686,
+          "bizno": "2888803584",
+          "ceo": "김선우"
+        },
+        {
+          "rank": null,
+          "name": "에스알퍼포먼스",
+          "amount_eok": 0.2643,
+          "rate_pct": 87.688,
+          "bizno": "6561802048",
+          "ceo": "황용기"
+        },
+        {
+          "rank": null,
+          "name": "린도",
+          "amount_eok": 0.2643,
+          "rate_pct": 87.688,
+          "bizno": "5734700181",
+          "ceo": "김현수"
+        },
+        {
+          "rank": null,
+          "name": "창의지식개발원",
+          "amount_eok": 0.2643,
+          "rate_pct": 87.693,
+          "bizno": "1068705129",
+          "ceo": "김나경"
+        },
+        {
+          "rank": null,
+          "name": "혜승기술연구소",
+          "amount_eok": 0.2643,
+          "rate_pct": 87.693,
+          "bizno": "2638602559",
+          "ceo": "서혜승"
+        },
+        {
+          "rank": null,
+          "name": "말꼼",
+          "amount_eok": 0.2643,
+          "rate_pct": 87.7,
+          "bizno": "4811801580",
+          "ceo": "김상수"
+        },
+        {
+          "rank": null,
+          "name": "쌔미쌔미",
+          "amount_eok": 0.2643,
+          "rate_pct": 87.7,
+          "bizno": "1313376914",
+          "ceo": "최진옥"
+        },
+        {
+          "rank": null,
+          "name": "하이플랜",
+          "amount_eok": 0.2643,
+          "rate_pct": 87.701,
+          "bizno": "6898802833",
+          "ceo": "이정아"
+        },
+        {
+          "rank": null,
+          "name": "미라클",
+          "amount_eok": 0.2643,
+          "rate_pct": 87.701,
+          "bizno": "3063262657",
+          "ceo": "김지숙"
+        },
+        {
+          "rank": null,
+          "name": "더 밝은 세상",
+          "amount_eok": 0.2643,
+          "rate_pct": 87.703,
+          "bizno": "2405500893",
+          "ceo": "이주연"
+        },
+        {
+          "rank": null,
+          "name": "햇임이상사",
+          "amount_eok": 0.2644,
+          "rate_pct": 87.709,
+          "bizno": "4360401661",
+          "ceo": "윤지영"
+        },
+        {
+          "rank": null,
+          "name": "엘스페이스",
+          "amount_eok": 0.2644,
+          "rate_pct": 87.71,
+          "bizno": "1215304634",
+          "ceo": "김정숙"
+        },
+        {
+          "rank": null,
+          "name": "머하시남실업",
+          "amount_eok": 0.2644,
+          "rate_pct": 87.711,
+          "bizno": "2091834188",
+          "ceo": "김희수"
+        },
+        {
+          "rank": null,
+          "name": "에스티인",
+          "amount_eok": 0.2644,
+          "rate_pct": 87.714,
+          "bizno": "1348613200",
+          "ceo": "장미리"
+        },
+        {
+          "rank": null,
+          "name": "랜드뷰환경계획연구소",
+          "amount_eok": 0.2644,
+          "rate_pct": 87.716,
+          "bizno": "4161829279",
+          "ceo": "정인호"
+        },
+        {
+          "rank": null,
+          "name": "두리",
+          "amount_eok": 0.2644,
+          "rate_pct": 87.718,
+          "bizno": "1968103724",
+          "ceo": "이윤둘"
+        },
+        {
+          "rank": null,
+          "name": "한성컴퍼니",
+          "amount_eok": 0.2644,
+          "rate_pct": 87.718,
+          "bizno": "7558702389",
+          "ceo": "심동섭"
+        },
+        {
+          "rank": null,
+          "name": "선린종합관리",
+          "amount_eok": 0.2644,
+          "rate_pct": 87.724,
+          "bizno": "8281902223",
+          "ceo": "박인재"
+        },
+        {
+          "rank": null,
+          "name": "에이앤씨(AnC)문화예술연구원",
+          "amount_eok": 0.2644,
+          "rate_pct": 87.725,
+          "bizno": "4563501219",
+          "ceo": "김희승"
+        },
+        {
+          "rank": null,
+          "name": "윈앤윈",
+          "amount_eok": 0.2644,
+          "rate_pct": 87.726,
+          "bizno": "7450100736",
+          "ceo": "강석범"
+        },
+        {
+          "rank": null,
+          "name": "무진",
+          "amount_eok": 0.2644,
+          "rate_pct": 87.733,
+          "bizno": "1372701536",
+          "ceo": "김미라"
+        },
+        {
+          "rank": null,
+          "name": "우리티에스씨",
+          "amount_eok": 0.2645,
+          "rate_pct": 87.737,
+          "bizno": "4122878122",
+          "ceo": "정민옥"
+        },
+        {
+          "rank": null,
+          "name": "블루페이퍼",
+          "amount_eok": 0.2645,
+          "rate_pct": 87.744,
+          "bizno": "1021467129",
+          "ceo": "황태선"
+        },
+        {
+          "rank": null,
+          "name": "한국정책능력진흥원",
+          "amount_eok": 0.2645,
+          "rate_pct": 87.744,
+          "bizno": "1088129654",
+          "ceo": "박세진"
+        },
+        {
+          "rank": null,
+          "name": "윤홀딩스",
+          "amount_eok": 0.2645,
+          "rate_pct": 87.75,
+          "bizno": "2258703650",
+          "ceo": "김종권"
+        },
+        {
+          "rank": null,
+          "name": "어벤트로피(Urbentropy)",
+          "amount_eok": 0.2645,
+          "rate_pct": 87.753,
+          "bizno": "7088603779",
+          "ceo": "우성"
+        },
+        {
+          "rank": null,
+          "name": "한국경영경제연구원",
+          "amount_eok": 0.2645,
+          "rate_pct": 87.753,
+          "bizno": "3818102245",
+          "ceo": "양애순"
+        },
+        {
+          "rank": null,
+          "name": "비팩토리",
+          "amount_eok": 0.2645,
+          "rate_pct": 87.755,
+          "bizno": "2151923553",
+          "ceo": "윤영배"
+        },
+        {
+          "rank": null,
+          "name": "유한회사 현성테크",
+          "amount_eok": 0.2645,
+          "rate_pct": 87.763,
+          "bizno": "7988102711",
+          "ceo": "이정현"
+        },
+        {
+          "rank": null,
+          "name": "티에스와이",
+          "amount_eok": 0.2645,
+          "rate_pct": 87.765,
+          "bizno": "3354600205",
+          "ceo": "서선숙"
+        },
+        {
+          "rank": null,
+          "name": "삼일인쇄기획",
+          "amount_eok": 0.2645,
+          "rate_pct": 87.766,
+          "bizno": "3874301015",
+          "ceo": "정민숙"
+        },
+        {
+          "rank": null,
+          "name": "세현",
+          "amount_eok": 0.2646,
+          "rate_pct": 87.777,
+          "bizno": "6762200380",
+          "ceo": "이정상"
+        },
+        {
+          "rank": null,
+          "name": "경희인사이트",
+          "amount_eok": 0.2646,
+          "rate_pct": 87.778,
+          "bizno": "3728703558",
+          "ceo": "김경태"
+        },
+        {
+          "rank": null,
+          "name": "HS공압기계",
+          "amount_eok": 0.2646,
+          "rate_pct": 87.78,
+          "bizno": "1400827486",
+          "ceo": "박희성"
+        },
+        {
+          "rank": null,
+          "name": "엠지산업",
+          "amount_eok": 0.2646,
+          "rate_pct": 87.781,
+          "bizno": "6504500373",
+          "ceo": "조명지"
+        },
+        {
+          "rank": null,
+          "name": "신동아경남연구소",
+          "amount_eok": 0.2646,
+          "rate_pct": 87.781,
+          "bizno": "3268102587",
+          "ceo": "도경민"
+        },
+        {
+          "rank": null,
+          "name": "시소커뮤니케이션",
+          "amount_eok": 0.2646,
+          "rate_pct": 87.782,
+          "bizno": "4544300562",
+          "ceo": "정진이"
+        },
+        {
+          "rank": null,
+          "name": "로켓티어",
+          "amount_eok": 0.2646,
+          "rate_pct": 87.786,
+          "bizno": "3354700823",
+          "ceo": "김정수"
+        },
+        {
+          "rank": null,
+          "name": "신진ENG",
+          "amount_eok": 0.2646,
+          "rate_pct": 87.789,
+          "bizno": "2960301052",
+          "ceo": "정정희"
+        },
+        {
+          "rank": null,
+          "name": "이앤이",
+          "amount_eok": 0.2646,
+          "rate_pct": 87.794,
+          "bizno": "8998802352",
+          "ceo": "이재영"
+        },
+        {
+          "rank": null,
+          "name": "정민시스템",
+          "amount_eok": 0.2646,
+          "rate_pct": 87.797,
+          "bizno": "7014900704",
+          "ceo": "이민영"
+        },
+        {
+          "rank": null,
+          "name": "에스에이치홀딩스",
+          "amount_eok": 0.2646,
+          "rate_pct": 87.798,
+          "bizno": "6343001395",
+          "ceo": "유상미"
+        },
+        {
+          "rank": null,
+          "name": "원포인트 듀오",
+          "amount_eok": 0.2647,
+          "rate_pct": 87.803,
+          "bizno": "2068693703",
+          "ceo": "이인환"
+        },
+        {
+          "rank": null,
+          "name": "연구소정",
+          "amount_eok": 0.2647,
+          "rate_pct": 87.809,
+          "bizno": "4988802936",
+          "ceo": "허혜정"
+        },
+        {
+          "rank": null,
+          "name": "애쉬트리",
+          "amount_eok": 0.2647,
+          "rate_pct": 87.811,
+          "bizno": "5107200557",
+          "ceo": "권미진"
+        },
+        {
+          "rank": null,
+          "name": "이노더스",
+          "amount_eok": 0.2647,
+          "rate_pct": 87.811,
+          "bizno": "3148649982",
+          "ceo": "전용하"
+        },
+        {
+          "rank": null,
+          "name": "에필(EFIL)",
+          "amount_eok": 0.2647,
+          "rate_pct": 87.822,
+          "bizno": "5460303765",
+          "ceo": "차상례"
+        },
+        {
+          "rank": null,
+          "name": "사단법인 한국소방산업협회",
+          "amount_eok": 0.2647,
+          "rate_pct": 87.829,
+          "bizno": "4988200218",
+          "ceo": "박종원"
+        },
+        {
+          "rank": null,
+          "name": "엔와이즈컨설팅",
+          "amount_eok": 0.2647,
+          "rate_pct": 87.833,
+          "bizno": "5960601744",
+          "ceo": "진준형"
+        },
+        {
+          "rank": null,
+          "name": "예스티엠",
+          "amount_eok": 0.2648,
+          "rate_pct": 87.844,
+          "bizno": "1058713193",
+          "ceo": "송미애"
+        },
+        {
+          "rank": null,
+          "name": "한국정책평가연구원",
+          "amount_eok": 0.2648,
+          "rate_pct": 87.847,
+          "bizno": "1078673185",
+          "ceo": "박여울"
+        },
+        {
+          "rank": null,
+          "name": "블루스카이",
+          "amount_eok": 0.2648,
+          "rate_pct": 87.85,
+          "bizno": "5308101983",
+          "ceo": "임재분"
+        },
+        {
+          "rank": null,
+          "name": "올포아스",
+          "amount_eok": 0.2648,
+          "rate_pct": 87.855,
+          "bizno": "5254801169",
+          "ceo": "이성순"
+        },
+        {
+          "rank": null,
+          "name": "에스에이리테일",
+          "amount_eok": 0.2648,
+          "rate_pct": 87.857,
+          "bizno": "1313535805",
+          "ceo": "정내희"
+        },
+        {
+          "rank": null,
+          "name": "한원종합관리",
+          "amount_eok": 0.2648,
+          "rate_pct": 87.862,
+          "bizno": "1654800842",
+          "ceo": "원태경"
+        },
+        {
+          "rank": null,
+          "name": "우리비엠씨",
+          "amount_eok": 0.2648,
+          "rate_pct": 87.866,
+          "bizno": "1258605142",
+          "ceo": "정연순"
+        },
+        {
+          "rank": null,
+          "name": "윤경월드",
+          "amount_eok": 0.2649,
+          "rate_pct": 87.877,
+          "bizno": "4885700922",
+          "ceo": "김미옥"
+        },
+        {
+          "rank": null,
+          "name": "엘에스글로벌",
+          "amount_eok": 0.2649,
+          "rate_pct": 87.879,
+          "bizno": "8046500473",
+          "ceo": "심사랑"
+        },
+        {
+          "rank": null,
+          "name": "이즈원",
+          "amount_eok": 0.2649,
+          "rate_pct": 87.881,
+          "bizno": "4463801324",
+          "ceo": "심영희"
+        },
+        {
+          "rank": null,
+          "name": "도담연구소",
+          "amount_eok": 0.2649,
+          "rate_pct": 87.886,
+          "bizno": "2638602791",
+          "ceo": "김원호"
+        },
+        {
+          "rank": null,
+          "name": "은하상사",
+          "amount_eok": 0.2649,
+          "rate_pct": 87.889,
+          "bizno": "2751102006",
+          "ceo": "정영이"
+        },
+        {
+          "rank": null,
+          "name": "금관컴퍼니",
+          "amount_eok": 0.2649,
+          "rate_pct": 87.894,
+          "bizno": "7448702486",
+          "ceo": "김재윤"
+        },
+        {
+          "rank": null,
+          "name": "유엔글로벌",
+          "amount_eok": 0.2649,
+          "rate_pct": 87.898,
+          "bizno": "3883001492",
+          "ceo": "박현숙"
+        },
+        {
+          "rank": null,
+          "name": "이노매드",
+          "amount_eok": 0.2649,
+          "rate_pct": 87.9,
+          "bizno": "1051825335",
+          "ceo": "강덕중"
+        },
+        {
+          "rank": null,
+          "name": "울림플러스",
+          "amount_eok": 0.2649,
+          "rate_pct": 87.9,
+          "bizno": "2477800516",
+          "ceo": "송채경"
+        },
+        {
+          "rank": null,
+          "name": "종일기업",
+          "amount_eok": 0.265,
+          "rate_pct": 87.911,
+          "bizno": "7300402956",
+          "ceo": "김종일"
+        },
+        {
+          "rank": null,
+          "name": "삼성종합관리",
+          "amount_eok": 0.265,
+          "rate_pct": 87.922,
+          "bizno": "1218607662",
+          "ceo": "박동섭"
+        },
+        {
+          "rank": null,
+          "name": "매머드부산",
+          "amount_eok": 0.265,
+          "rate_pct": 87.922,
+          "bizno": "7520303429",
+          "ceo": "신은재"
+        },
+        {
+          "rank": null,
+          "name": "더원",
+          "amount_eok": 0.265,
+          "rate_pct": 87.925,
+          "bizno": "2738702776",
+          "ceo": "정영무"
+        },
+        {
+          "rank": null,
+          "name": "케이아이연구소",
+          "amount_eok": 0.265,
+          "rate_pct": 87.927,
+          "bizno": "3858702967",
+          "ceo": "변선주"
+        },
+        {
+          "rank": null,
+          "name": "어바옷",
+          "amount_eok": 0.265,
+          "rate_pct": 87.933,
+          "bizno": "3818801721",
+          "ceo": "지승현"
+        },
+        {
+          "rank": null,
+          "name": "더블제이컴퍼니",
+          "amount_eok": 0.2651,
+          "rate_pct": 87.943,
+          "bizno": "6034491338",
+          "ceo": "김진아"
+        },
+        {
+          "rank": null,
+          "name": "나우",
+          "amount_eok": 0.2651,
+          "rate_pct": 87.947,
+          "bizno": "1141655921",
+          "ceo": "임재성"
+        },
+        {
+          "rank": null,
+          "name": "거성산업",
+          "amount_eok": 0.2651,
+          "rate_pct": 87.949,
+          "bizno": "8062001161",
+          "ceo": "최규직"
+        },
+        {
+          "rank": null,
+          "name": "제이와이컴퍼니",
+          "amount_eok": 0.2651,
+          "rate_pct": 87.955,
+          "bizno": "7651001615",
+          "ceo": "임지섭"
+        },
+        {
+          "rank": null,
+          "name": "태즈먼",
+          "amount_eok": 0.2651,
+          "rate_pct": 87.955,
+          "bizno": "5568102780",
+          "ceo": "김재홍"
+        },
+        {
+          "rank": null,
+          "name": "피엠지커뮤니케이션",
+          "amount_eok": 0.2651,
+          "rate_pct": 87.967,
+          "bizno": "1088182377",
+          "ceo": "박성식"
+        },
+        {
+          "rank": null,
+          "name": "비에스상사",
+          "amount_eok": 0.2652,
+          "rate_pct": 87.969,
+          "bizno": "2013162559",
+          "ceo": "공영자"
+        },
+        {
+          "rank": null,
+          "name": "이에스솔루션",
+          "amount_eok": 0.2652,
+          "rate_pct": 87.971,
+          "bizno": "3551601540",
+          "ceo": "이은심"
+        },
+        {
+          "rank": null,
+          "name": "피플링크",
+          "amount_eok": 0.2652,
+          "rate_pct": 87.978,
+          "bizno": "8028703307",
+          "ceo": "이경은"
+        },
+        {
+          "rank": null,
+          "name": "비씨피",
+          "amount_eok": 0.2652,
+          "rate_pct": 87.981,
+          "bizno": "1198704373",
+          "ceo": "진민정"
+        },
+        {
+          "rank": null,
+          "name": "투피에스(TWOPS)",
+          "amount_eok": 0.2652,
+          "rate_pct": 87.986,
+          "bizno": "2922701449",
+          "ceo": "김동호"
+        },
+        {
+          "rank": null,
+          "name": "홈앤라이프",
+          "amount_eok": 0.2652,
+          "rate_pct": 87.989,
+          "bizno": "1058789387",
+          "ceo": "오옥선"
+        },
+        {
+          "rank": null,
+          "name": "아이그로우",
+          "amount_eok": 0.2652,
+          "rate_pct": 87.998,
+          "bizno": "2128189664",
+          "ceo": "신동필"
+        }
+      ],
+      "second": "순양종합관리",
+      "first_rank": "참조은"
     },
     {
       "source": "g2b_api",
@@ -15504,7 +19487,8 @@
           "name": "동의대학교_산학협력단_입찰참가_첨부양식(용역).hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01796586&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -15705,7 +19689,8 @@
           "name": "동의대학교_산학협력단_입찰참가_첨부양식(용역).hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01796464&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -15815,7 +19800,7 @@
       "ntce_kind": "재공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01796307&bidPbancOrd=000",
-      "open_at": "2026-11-09 11:00",
+      "open_at": "2026-11-09 13:20",
       "close_at": "2026-11-09 10:00",
       "close_date": "2026-11-09",
       "budget_kind": "배정예산",
@@ -15864,7 +19849,8 @@
           "name": "(서식)청렴계약이행서약서.hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01796307&bidPbancOrd=000&fileType=&fileSeq=8&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -15973,7 +19959,7 @@
       "ntce_kind": "등록공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01796084&bidPbancOrd=000",
-      "open_at": "2026-11-09 11:00",
+      "open_at": "2026-11-09 13:20",
       "close_at": "2026-11-09 10:00",
       "close_date": "2026-11-09",
       "budget_kind": "배정예산",
@@ -16001,7 +19987,8 @@
           "name": "AI-OCR 기반 기술지원신청서 자동접수 보조 시스템 구축 제안요청서.hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01796084&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "bidders_empty": true
     },
     {
       "source": "g2b_api",
@@ -16046,7 +20033,8 @@
           "name": "고성능 GPU 증설 사업(제안요청서).hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01796079&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -16307,7 +20295,9 @@
           "name": "제안요청서_아날로그_IO인버터_인터페이스세트_20261028.pdf",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01795936&bidPbancOrd=000&fileType=&fileSeq=6&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09",
+      "bidders_empty": true
     },
     {
       "source": "g2b_api",
@@ -16351,7 +20341,8 @@
           "name": "물품규격서_PONG-2026-03.pdf",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01795789&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -16450,8 +20441,8 @@
       "ntce_kind": "등록공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01795746&bidPbancOrd=000",
-      "open_at": "2026-11-09 12:00",
-      "close_at": "2026-11-09 11:00",
+      "open_at": "2026-11-09 16:20",
+      "close_at": "2026-11-09 15:20",
       "close_date": "2026-11-09",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.513,
@@ -16650,8 +20641,8 @@
       "ntce_kind": "등록공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01795488&bidPbancOrd=000",
-      "open_at": "2026-11-09 12:00",
-      "close_at": "2026-11-09 11:00",
+      "open_at": "2026-11-09 16:20",
+      "close_at": "2026-11-09 15:20",
       "close_date": "2026-11-09",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.3,
@@ -16752,8 +20743,8 @@
       "ntce_kind": "등록공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01795373&bidPbancOrd=000",
-      "open_at": "2026-11-09 15:00",
-      "close_at": "2026-11-09 14:00",
+      "open_at": "2026-11-09 16:20",
+      "close_at": "2026-11-09 15:20",
       "close_date": "2026-11-09",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.8,
@@ -16780,7 +20771,9 @@
           "name": "2. 제안요청서_2026년 AI 사이버공격 대응 플랫폼 구축(1단계) 감리.hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01795373&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09",
+      "bidders_empty": true
     },
     {
       "source": "g2b_api",
@@ -16845,8 +20838,8 @@
       "ntce_kind": "재공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01795212&bidPbancOrd=000",
-      "open_at": "2026-11-09 12:00",
-      "close_at": "2026-11-09 11:00",
+      "open_at": "2026-11-09 16:20",
+      "close_at": "2026-11-09 15:20",
       "close_date": "2026-11-09",
       "budget_kind": "배정예산",
       "asign_budget_eok": 1.54,
@@ -16869,7 +20862,8 @@
           "name": "정부광고 AI 솔루션 구축을 위한 기초연구 용역_제안요청서.hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01795212&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -17019,7 +21013,8 @@
           "name": "입찰공고.hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01795110&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -17139,7 +21134,8 @@
           "name": "한남대학교산학협력단_물품구매제안요청서(제2026-18호).pdf",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01794386&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -17564,7 +21560,8 @@
           "name": "[공고문] NHN와플랫 AI 스마트홈 돌봄앱 AI 서빙용 GPU 서버 구매 및 설치.pdf",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01794772&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -17759,7 +21756,8 @@
           "name": "[제출 서식] NHN AI 스마트홈 AI 학습·서빙용 GPU 서버 구매 및 설치.docx",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01794488&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -17803,7 +21801,8 @@
           "name": "공고서.pdf",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01794484&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -18078,7 +22077,8 @@
           "name": "[한국공학대학교 산학협력단 입찰공고] AX·DX 머신러닝을 위한 GPU서버.zip",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01793874&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -18128,7 +22128,8 @@
           "name": "3. 입찰참가서류_양식.hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01793806&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "bidders_empty": true
     },
     {
       "source": "g2b_api",
@@ -18223,7 +22224,8 @@
           "name": "3. 입찰참가서류_양식.hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01793629&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "bidders_empty": true
     },
     {
       "source": "g2b_api",
@@ -18255,7 +22257,8 @@
       "participation_limit": false,
       "record_limit": false,
       "rebid": false,
-      "plan_no": "R26DD20908680"
+      "plan_no": "R26DD20908680",
+      "bidders_empty": true
     },
     {
       "source": "g2b_api",
@@ -18276,8 +22279,8 @@
       "ntce_kind": "재공고",
       "biz": "thng",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01793517&bidPbancOrd=000",
-      "open_at": "2026-11-09 12:00",
-      "close_at": "2026-11-09 11:00",
+      "open_at": "2026-11-09 16:20",
+      "close_at": "2026-11-09 15:20",
       "close_date": "2026-11-09",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.592,
@@ -18704,7 +22707,8 @@
           "name": "제안공모 지침서(AI 디자인 파크 건립사업 설계용역 제안공모).hwpx",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01793035&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=05"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -18841,7 +22845,29 @@
           "name": "물품 사양서.hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01792987&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09",
+      "bidders": [
+        {
+          "rank": 1,
+          "name": "아이지",
+          "amount_eok": 6.998,
+          "rate_pct": 99.716,
+          "bizno": "2158723455",
+          "ceo": "김창일"
+        },
+        {
+          "rank": null,
+          "name": "온하이텍",
+          "amount_eok": 7.0837,
+          "rate_pct": 100.937,
+          "bizno": "8358701478",
+          "ceo": "심석"
+        }
+      ],
+      "bid_count": 2,
+      "first_rank": "아이지",
+      "status": "1순위"
     },
     {
       "source": "g2b_api",
@@ -18885,7 +22911,8 @@
           "name": "2 구매규격서.docx",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01792968&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -18932,7 +22959,9 @@
           "name": "(재공고용)[지역주도형 AI대전환]_AI 관제시스템 구축_제안요청서_(주)케이와이.pdf",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01792965&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09",
+      "bidders_empty": true
     },
     {
       "source": "g2b_api",
@@ -19001,8 +23030,8 @@
       "ntce_kind": "등록공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01792917&bidPbancOrd=000",
-      "open_at": "2026-11-09 14:00",
-      "close_at": "2026-11-09 11:00",
+      "open_at": "2026-11-09 16:20",
+      "close_at": "2026-11-09 15:20",
       "close_date": "2026-11-09",
       "budget_kind": "배정예산",
       "asign_budget_eok": 2.95,
@@ -19045,7 +23074,8 @@
           "name": "긴급입찰사유서.pdf",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01792917&bidPbancOrd=000&fileType=&fileSeq=7&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -19092,7 +23122,8 @@
           "name": "(재공고용)[지역주도형 AI대전환]_AI기반 예지.진단시스템 구축_제안요청서_(주)케이와이.pdf",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01792914&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "bidders_empty": true
     },
     {
       "source": "g2b_api",
@@ -19163,7 +23194,7 @@
       "ntce_kind": "등록공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01792858&bidPbancOrd=000",
-      "open_at": "2026-11-09 11:00",
+      "open_at": "2026-11-09 13:20",
       "close_at": "2026-11-09 10:00",
       "close_date": "2026-11-09",
       "budget_kind": "배정예산",
@@ -19189,7 +23220,8 @@
           "name": "TIMELY AI 도입·구축 공내역서.hwpx",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01792858&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=05"
         }
-      ]
+      ],
+      "bidders_empty": true
     },
     {
       "source": "g2b_api",
@@ -19343,7 +23375,7 @@
       "ntce_kind": "등록공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01792637&bidPbancOrd=000",
-      "open_at": "2026-11-09 11:00",
+      "open_at": "2026-11-09 13:20",
       "close_at": "2026-11-09 10:00",
       "close_date": "2026-11-09",
       "budget_kind": "배정예산",
@@ -19389,7 +23421,7 @@
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01792625&bidPbancOrd=000",
       "open_at": "2026-11-11 15:00",
-      "close_at": "2026-11-09 14:00",
+      "close_at": "2026-11-09 15:20",
       "close_date": "2026-11-09",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.3,
@@ -19483,7 +23515,7 @@
       "ntce_kind": "등록공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01792380&bidPbancOrd=000",
-      "open_at": "2026-11-09 11:00",
+      "open_at": "2026-11-09 13:20",
       "close_at": "2026-11-09 10:00",
       "close_date": "2026-11-09",
       "budget_kind": "배정예산",
@@ -19515,7 +23547,8 @@
           "name": "3. (긴급입찰 사유서) 2026년 2차 코디세이 AI 네이티브 교육 운영 지원 용역.hwpx",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01792380&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -20103,8 +24136,8 @@
       "ntce_kind": "등록공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01792409&bidPbancOrd=000",
-      "open_at": "2026-11-06 11:00",
-      "close_at": "2026-11-06 10:00",
+      "open_at": "2026-11-06 14:10",
+      "close_at": "2026-11-06 13:10",
       "close_date": "2026-11-06",
       "budget_kind": "배정예산",
       "asign_budget_eok": 1.637,
@@ -20131,7 +24164,8 @@
           "name": "(과업지시서 및 제안요청서) 교육 AX 대전환 웰컴투 NEW 경기교육 행사 용역(수정).hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01792409&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -20186,7 +24220,8 @@
           "name": "HN_261026_입찰공고문_.docx",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01792140&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "bidders_empty": true
     },
     {
       "source": "g2b_api",
@@ -20207,8 +24242,8 @@
       "ntce_kind": "재공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01792118&bidPbancOrd=000",
-      "open_at": "2026-11-06 11:00",
-      "close_at": "2026-11-06 10:00",
+      "open_at": "2026-11-06 14:10",
+      "close_at": "2026-11-06 13:10",
       "close_date": "2026-11-06",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.242,
@@ -20320,7 +24355,8 @@
           "name": "3. 안전특별과업지시서(잠수)_2026년 동해 남부 바다숲 조성 용역 성과 AI 활용 수중검측.zip",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01792058&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=05"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -20341,8 +24377,8 @@
       "ntce_kind": "등록공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01792006&bidPbancOrd=000",
-      "open_at": "2026-11-06 11:00",
-      "close_at": "2026-11-06 10:00",
+      "open_at": "2026-11-06 14:10",
+      "close_at": "2026-11-06 13:10",
       "close_date": "2026-11-06",
       "budget_kind": "배정예산",
       "asign_budget_eok": 1.4137,
@@ -20365,7 +24401,8 @@
           "name": "공고서_국가(KTL)_AX기술지원_제한_국내_20억미만_자체평가_공동이행.pdf",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01792006&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -20386,8 +24423,8 @@
       "ntce_kind": "등록공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01791974&bidPbancOrd=000",
-      "open_at": "2026-11-06 11:00",
-      "close_at": "2026-11-06 10:00",
+      "open_at": "2026-11-06 14:10",
+      "close_at": "2026-11-06 13:10",
       "close_date": "2026-11-06",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.7,
@@ -20414,7 +24451,9 @@
           "name": "2. 제안요청서_경기과학기술대학교 AI&Bigdata 게임 개발 프로그램 운영 용역.hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01791974&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09",
+      "bidders_empty": true
     },
     {
       "source": "g2b_api",
@@ -20543,7 +24582,7 @@
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01791826&bidPbancOrd=000",
       "open_at": "2026-11-09 14:00",
-      "close_at": "2026-11-06 10:00",
+      "close_at": "2026-11-06 13:10",
       "close_date": "2026-11-06",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.35,
@@ -20746,7 +24785,8 @@
           "name": "[제안요청서]세지농협 멜론 AI선별·포장라인 제작설치.hwpx",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01791632&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -20767,8 +24807,8 @@
       "ntce_kind": "등록공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01791366&bidPbancOrd=000",
-      "open_at": "2026-11-06 11:00",
-      "close_at": "2026-11-06 10:00",
+      "open_at": "2026-11-06 14:10",
+      "close_at": "2026-11-06 13:10",
       "close_date": "2026-11-06",
       "budget_kind": "배정예산",
       "asign_budget_eok": 7.8203,
@@ -20791,7 +24831,9 @@
           "name": "공고서_국가(2.한국남동발전)_정보시스템개발서비스_제한_20억미만_공동이행_자체평가_하도급.pdf",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01791366&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09",
+      "bidders_empty": true
     },
     {
       "source": "g2b_api",
@@ -21072,7 +25114,8 @@
           "name": "3. 규격검토확인서 및 규격비교표.hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01790774&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -21140,7 +25183,7 @@
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01790702&bidPbancOrd=000",
       "open_at": "2026-11-06 15:00",
-      "close_at": "2026-11-06 11:00",
+      "close_at": "2026-11-06 13:10",
       "close_date": "2026-11-06",
       "budget_kind": "배정예산",
       "asign_budget_eok": 1.0,
@@ -21175,7 +25218,8 @@
           "name": "라. 청렴계약이행서약서.hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01790702&bidPbancOrd=000&fileType=&fileSeq=5&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -21367,7 +25411,8 @@
           "name": "2.제안요청서.hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01790310&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -21388,8 +25433,8 @@
       "ntce_kind": "변경공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01790310&bidPbancOrd=001",
-      "open_at": "2026-11-06 11:00",
-      "close_at": "2026-11-06 10:00",
+      "open_at": "2026-11-06 14:10",
+      "close_at": "2026-11-06 13:10",
       "close_date": "2026-11-06",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.993,
@@ -21416,7 +25461,8 @@
           "name": "2.제안요청서.hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01790310&bidPbancOrd=001&fileType=&fileSeq=4&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -21528,8 +25574,8 @@
       "ntce_kind": "재공고",
       "biz": "thng",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01790006&bidPbancOrd=000",
-      "open_at": "2026-11-06 11:00",
-      "close_at": "2026-11-06 10:00",
+      "open_at": "2026-11-06 14:10",
+      "close_at": "2026-11-06 13:10",
       "close_date": "2026-11-06",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.4732,
@@ -21556,7 +25602,8 @@
           "name": "제안요청서_그래픽처리장치.hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01790006&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "bidders_empty": true
     },
     {
       "source": "g2b_api",
@@ -21601,7 +25648,8 @@
           "name": "(공고) AI 디지털노동위원회 구축 2차 감리_중앙노동위원회.pdf",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01789988&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "bidders_empty": true
     },
     {
       "source": "g2b_api",
@@ -21622,8 +25670,8 @@
       "ntce_kind": "변경공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01789988&bidPbancOrd=001",
-      "open_at": "2026-11-06 11:00",
-      "close_at": "2026-11-06 10:00",
+      "open_at": "2026-11-06 14:10",
+      "close_at": "2026-11-06 13:10",
       "close_date": "2026-11-06",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.47,
@@ -21646,7 +25694,8 @@
           "name": "(변경 공고문) AI 디지털노동위원회 구축 2차 감리_중앙노동위원회.pdf",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01789988&bidPbancOrd=001&fileType=&fileSeq=2&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "bidders_empty": true
     },
     {
       "source": "g2b_api",
@@ -21695,7 +25744,8 @@
           "name": "공고서_소상공인 AI+ 페스타 행사 기획·운영 대행 용역_제안요청서_v3.hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01789933&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -21742,7 +25792,9 @@
           "name": "[입찰공고문]_ISTANS 인공지능 챗봇 구축 사업.pdf",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01789807&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09",
+      "bidders_empty": true
     },
     {
       "source": "g2b_api",
@@ -21977,8 +26029,8 @@
       "ntce_kind": "등록공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01787371&bidPbancOrd=000",
-      "open_at": "2026-11-06 11:00",
-      "close_at": "2026-11-06 10:00",
+      "open_at": "2026-11-06 14:10",
+      "close_at": "2026-11-06 13:10",
       "close_date": "2026-11-06",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.45,
@@ -22005,7 +26057,8 @@
           "name": "1.입찰공고문.pdf",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01787371&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "bidders_empty": true
     },
     {
       "source": "g2b_api",
@@ -22112,7 +26165,7 @@
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01781927&bidPbancOrd=000",
       "open_at": "2026-11-10 10:00",
-      "close_at": "2026-11-06 10:00",
+      "close_at": "2026-11-06 13:10",
       "close_date": "2026-11-06",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.44,
@@ -22327,7 +26380,8 @@
           "name": "입찰공고문.pdf",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01789619&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "bidders_empty": true
     },
     {
       "source": "g2b_api",
@@ -22725,7 +26779,8 @@
           "name": "4. [참고] 직원 사칭 허위구매 사기 주의 안내.JPG",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01789216&bidPbancOrd=000&fileType=&fileSeq=5&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -22976,7 +27031,8 @@
           "name": "1.입찰공고문_261023.pdf",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01789020&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -23408,7 +27464,942 @@
           "name": "붙임 1. 과업지시서(조달청 의견반영).hwpx",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01788550&bidPbancOrd=000&fileType=&fileSeq=5&prcmBsneSeCd=05"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09",
+      "bidders": [
+        {
+          "rank": 1,
+          "name": "건축사사무소 예림",
+          "amount_eok": 1.1732,
+          "rate_pct": 88.113,
+          "bizno": "4020282352",
+          "ceo": "정창석"
+        },
+        {
+          "rank": 2,
+          "name": "건원건축사사무소",
+          "amount_eok": 1.1735,
+          "rate_pct": 88.134,
+          "bizno": "4020358145",
+          "ceo": "김종용"
+        },
+        {
+          "rank": 3,
+          "name": "제이플랜건축사사무소",
+          "amount_eok": 1.1746,
+          "rate_pct": 88.221,
+          "bizno": "4452501656",
+          "ceo": "전용재"
+        },
+        {
+          "rank": 4,
+          "name": "훈건축사사무소",
+          "amount_eok": 1.1748,
+          "rate_pct": 88.232,
+          "bizno": "4031508622",
+          "ceo": "소정훈"
+        },
+        {
+          "rank": 5,
+          "name": "그린건축사사무소",
+          "amount_eok": 1.175,
+          "rate_pct": 88.252,
+          "bizno": "4021583574",
+          "ceo": "진헌용"
+        },
+        {
+          "rank": 6,
+          "name": "건축사사무소나실건축",
+          "amount_eok": 1.1754,
+          "rate_pct": 88.279,
+          "bizno": "4020284592",
+          "ceo": "나승준"
+        },
+        {
+          "rank": 7,
+          "name": "건축사사무소 채움",
+          "amount_eok": 1.1755,
+          "rate_pct": 88.284,
+          "bizno": "6350901754",
+          "ceo": "김상근"
+        },
+        {
+          "rank": 8,
+          "name": "건축사사무소태솔",
+          "amount_eok": 1.1756,
+          "rate_pct": 88.295,
+          "bizno": "4022033267",
+          "ceo": "박상찬"
+        },
+        {
+          "rank": 9,
+          "name": "두손모아건축사사무소",
+          "amount_eok": 1.1764,
+          "rate_pct": 88.355,
+          "bizno": "4011174230",
+          "ceo": "이동욱"
+        },
+        {
+          "rank": 10,
+          "name": "건축사사무소 초가건축",
+          "amount_eok": 1.1765,
+          "rate_pct": 88.363,
+          "bizno": "4020736737",
+          "ceo": "조기순"
+        },
+        {
+          "rank": 11,
+          "name": "라일건축사사무소",
+          "amount_eok": 1.1766,
+          "rate_pct": 88.37,
+          "bizno": "4022158076",
+          "ceo": "임애라"
+        },
+        {
+          "rank": 12,
+          "name": "유한회사 건축사사무소한울",
+          "amount_eok": 1.1774,
+          "rate_pct": 88.432,
+          "bizno": "4028175521",
+          "ceo": "황상묵"
+        },
+        {
+          "rank": 13,
+          "name": "디엠씨앤에이건축사사무소",
+          "amount_eok": 1.1777,
+          "rate_pct": 88.45,
+          "bizno": "1498100468",
+          "ceo": "오경택"
+        },
+        {
+          "rank": 14,
+          "name": "초록건축사사무소",
+          "amount_eok": 1.1778,
+          "rate_pct": 88.458,
+          "bizno": "4070655538",
+          "ceo": "신봉현"
+        },
+        {
+          "rank": 15,
+          "name": "건축사사무소 건우설계",
+          "amount_eok": 1.1781,
+          "rate_pct": 88.478,
+          "bizno": "4020284762",
+          "ceo": "주영민"
+        },
+        {
+          "rank": 16,
+          "name": "종합건축사사무소세림",
+          "amount_eok": 1.1781,
+          "rate_pct": 88.479,
+          "bizno": "4028114640",
+          "ceo": "이동철"
+        },
+        {
+          "rank": 17,
+          "name": "동방건축사사무소",
+          "amount_eok": 1.1785,
+          "rate_pct": 88.511,
+          "bizno": "4070275050",
+          "ceo": "김동범"
+        },
+        {
+          "rank": 18,
+          "name": "금강 건축사사무소",
+          "amount_eok": 1.1786,
+          "rate_pct": 88.519,
+          "bizno": "4021882237",
+          "ceo": "김용운"
+        },
+        {
+          "rank": 19,
+          "name": "바우 건축사사무소",
+          "amount_eok": 1.1787,
+          "rate_pct": 88.527,
+          "bizno": "4021429573",
+          "ceo": "박광성"
+        },
+        {
+          "rank": 20,
+          "name": "고도 건축사사무소",
+          "amount_eok": 1.1789,
+          "rate_pct": 88.543,
+          "bizno": "2450602786",
+          "ceo": "이창현"
+        },
+        {
+          "rank": 21,
+          "name": "장건축사사무소",
+          "amount_eok": 1.179,
+          "rate_pct": 88.547,
+          "bizno": "4021735080",
+          "ceo": "장성호"
+        },
+        {
+          "rank": 22,
+          "name": "건축사사무소서진건축",
+          "amount_eok": 1.179,
+          "rate_pct": 88.55,
+          "bizno": "4020286421",
+          "ceo": "서영상"
+        },
+        {
+          "rank": 23,
+          "name": "유한회사 티피이엔지건축사사무소",
+          "amount_eok": 1.179,
+          "rate_pct": 88.551,
+          "bizno": "5588802354",
+          "ceo": "성현주"
+        },
+        {
+          "rank": 24,
+          "name": "삼아CM건축사사무소",
+          "amount_eok": 1.1791,
+          "rate_pct": 88.554,
+          "bizno": "4021053003",
+          "ceo": "김영완"
+        },
+        {
+          "rank": 25,
+          "name": "명건축사사무소",
+          "amount_eok": 1.1791,
+          "rate_pct": 88.555,
+          "bizno": "4010243278",
+          "ceo": "송명욱"
+        },
+        {
+          "rank": 26,
+          "name": "종합건축사사무소제 3건축",
+          "amount_eok": 1.1791,
+          "rate_pct": 88.557,
+          "bizno": "4020283569",
+          "ceo": "전병갑"
+        },
+        {
+          "rank": 27,
+          "name": "다온 건축사사무소",
+          "amount_eok": 1.1793,
+          "rate_pct": 88.568,
+          "bizno": "3333001250",
+          "ceo": "김선임"
+        },
+        {
+          "rank": 28,
+          "name": "디에스건축사사무소",
+          "amount_eok": 1.1794,
+          "rate_pct": 88.576,
+          "bizno": "7112900644",
+          "ceo": "송미영"
+        },
+        {
+          "rank": 29,
+          "name": "쉐키나 건축사사무소",
+          "amount_eok": 1.1796,
+          "rate_pct": 88.594,
+          "bizno": "5821400208",
+          "ceo": "임준순"
+        },
+        {
+          "rank": 30,
+          "name": "아키엔건축사사무소",
+          "amount_eok": 1.18,
+          "rate_pct": 88.621,
+          "bizno": "4070354557",
+          "ceo": "노현희"
+        },
+        {
+          "rank": 31,
+          "name": "에이젠엔지니어링건축사사무소",
+          "amount_eok": 1.1801,
+          "rate_pct": 88.632,
+          "bizno": "3288602875",
+          "ceo": "안호원"
+        },
+        {
+          "rank": 32,
+          "name": "건축법인 녹 엔지니어링 건축사사무소",
+          "amount_eok": 1.1802,
+          "rate_pct": 88.638,
+          "bizno": "4038173088",
+          "ceo": "빙인섭"
+        },
+        {
+          "rank": 33,
+          "name": "디엔에스건축사사무소",
+          "amount_eok": 1.1804,
+          "rate_pct": 88.653,
+          "bizno": "5348702292",
+          "ceo": "이두필"
+        },
+        {
+          "rank": 34,
+          "name": "사유디자인건축사사무소",
+          "amount_eok": 1.1808,
+          "rate_pct": 88.685,
+          "bizno": "6072815953",
+          "ceo": "이원우"
+        },
+        {
+          "rank": 35,
+          "name": "신한종합건축사사무소",
+          "amount_eok": 1.181,
+          "rate_pct": 88.697,
+          "bizno": "4078124371",
+          "ceo": "김수진"
+        },
+        {
+          "rank": 36,
+          "name": "건축사사무소 파인애플",
+          "amount_eok": 1.1812,
+          "rate_pct": 88.715,
+          "bizno": "1120929244",
+          "ceo": "조찬희"
+        },
+        {
+          "rank": 37,
+          "name": "유한회사 건축사사무소 에이치건축",
+          "amount_eok": 1.1814,
+          "rate_pct": 88.73,
+          "bizno": "4028601723",
+          "ceo": "김종태"
+        },
+        {
+          "rank": 38,
+          "name": "건축사사무소 뿌리",
+          "amount_eok": 1.1815,
+          "rate_pct": 88.738,
+          "bizno": "4020926650",
+          "ceo": "유기호"
+        },
+        {
+          "rank": 39,
+          "name": "환경그룹건축사사무소청",
+          "amount_eok": 1.1815,
+          "rate_pct": 88.738,
+          "bizno": "4031477947",
+          "ceo": "배철용"
+        },
+        {
+          "rank": 40,
+          "name": "건축사사무소 지음",
+          "amount_eok": 1.1819,
+          "rate_pct": 88.768,
+          "bizno": "4362001749",
+          "ceo": "김진숙"
+        },
+        {
+          "rank": 41,
+          "name": "광남건축사사무소",
+          "amount_eok": 1.1823,
+          "rate_pct": 88.793,
+          "bizno": "4070274196",
+          "ceo": "설재희"
+        },
+        {
+          "rank": 42,
+          "name": "예 건축사사무소",
+          "amount_eok": 1.1823,
+          "rate_pct": 88.794,
+          "bizno": "4021244911",
+          "ceo": "장영기"
+        },
+        {
+          "rank": 43,
+          "name": "미도건축사사무소",
+          "amount_eok": 1.1823,
+          "rate_pct": 88.8,
+          "bizno": "1390349656",
+          "ceo": "정종성"
+        },
+        {
+          "rank": 44,
+          "name": "건축사사무소 아이든",
+          "amount_eok": 1.1825,
+          "rate_pct": 88.813,
+          "bizno": "4011137365",
+          "ceo": "한성호"
+        },
+        {
+          "rank": 45,
+          "name": "인터아키건축사사무소",
+          "amount_eok": 1.1826,
+          "rate_pct": 88.821,
+          "bizno": "4388702956",
+          "ceo": "정성일"
+        },
+        {
+          "rank": 46,
+          "name": "건축사사무소수",
+          "amount_eok": 1.183,
+          "rate_pct": 88.845,
+          "bizno": "6705300770",
+          "ceo": "김동수"
+        },
+        {
+          "rank": 47,
+          "name": "해누리건축사사무소",
+          "amount_eok": 1.183,
+          "rate_pct": 88.849,
+          "bizno": "8458601920",
+          "ceo": "이정상"
+        },
+        {
+          "rank": 48,
+          "name": "바다건축사사무소",
+          "amount_eok": 1.1831,
+          "rate_pct": 88.857,
+          "bizno": "4040638355",
+          "ceo": "신태용"
+        },
+        {
+          "rank": 49,
+          "name": "백송건축사사무소",
+          "amount_eok": 1.1835,
+          "rate_pct": 88.887,
+          "bizno": "8132500151",
+          "ceo": "송숙희"
+        },
+        {
+          "rank": 50,
+          "name": "아이아트건축사사무소",
+          "amount_eok": 1.1835,
+          "rate_pct": 88.887,
+          "bizno": "4020356017",
+          "ceo": "김유천"
+        },
+        {
+          "rank": 51,
+          "name": "상상디자인건축사사무소",
+          "amount_eok": 1.1836,
+          "rate_pct": 88.893,
+          "bizno": "4022129057",
+          "ceo": "이재현"
+        },
+        {
+          "rank": 52,
+          "name": "윤건축사사무소",
+          "amount_eok": 1.1837,
+          "rate_pct": 88.9,
+          "bizno": "4021469221",
+          "ceo": "윤창식"
+        },
+        {
+          "rank": 53,
+          "name": "리더건축사사무소",
+          "amount_eok": 1.1837,
+          "rate_pct": 88.901,
+          "bizno": "4021237856",
+          "ceo": "김용민"
+        },
+        {
+          "rank": 54,
+          "name": "참하늘 건축사사무소",
+          "amount_eok": 1.1838,
+          "rate_pct": 88.909,
+          "bizno": "4030678238",
+          "ceo": "반진호"
+        },
+        {
+          "rank": 55,
+          "name": "재다 건축사사무소",
+          "amount_eok": 1.184,
+          "rate_pct": 88.924,
+          "bizno": "1533900885",
+          "ceo": "강경남"
+        },
+        {
+          "rank": 56,
+          "name": "플러스건축사사무소",
+          "amount_eok": 1.1841,
+          "rate_pct": 88.929,
+          "bizno": "4022378834",
+          "ceo": "이미양"
+        },
+        {
+          "rank": 57,
+          "name": "건축사사무소 희",
+          "amount_eok": 1.1842,
+          "rate_pct": 88.942,
+          "bizno": "4022292862",
+          "ceo": "김진희"
+        },
+        {
+          "rank": 58,
+          "name": "건축사사무소소리",
+          "amount_eok": 1.1847,
+          "rate_pct": 88.976,
+          "bizno": "4022486914",
+          "ceo": "정남경"
+        },
+        {
+          "rank": 59,
+          "name": "건축사사무소 디엠",
+          "amount_eok": 1.1848,
+          "rate_pct": 88.983,
+          "bizno": "5324600524",
+          "ceo": "문창선"
+        },
+        {
+          "rank": 60,
+          "name": "해오름 건축사사무소",
+          "amount_eok": 1.1849,
+          "rate_pct": 88.994,
+          "bizno": "1400356220",
+          "ceo": "노동호"
+        },
+        {
+          "rank": 61,
+          "name": "린건축사사무소",
+          "amount_eok": 1.1853,
+          "rate_pct": 89.023,
+          "bizno": "4031279408",
+          "ceo": "김대운"
+        },
+        {
+          "rank": 62,
+          "name": "유한회사건축사사무소태백",
+          "amount_eok": 1.1854,
+          "rate_pct": 89.028,
+          "bizno": "3398101658",
+          "ceo": "박정길"
+        },
+        {
+          "rank": 63,
+          "name": "방 건축사사무소",
+          "amount_eok": 1.1858,
+          "rate_pct": 89.057,
+          "bizno": "4010732631",
+          "ceo": "허방"
+        },
+        {
+          "rank": 64,
+          "name": "꿈꾸는건축사사무소",
+          "amount_eok": 1.1858,
+          "rate_pct": 89.059,
+          "bizno": "4022262994",
+          "ceo": "권세란"
+        },
+        {
+          "rank": 65,
+          "name": "건축사사무소JCN",
+          "amount_eok": 1.1858,
+          "rate_pct": 89.06,
+          "bizno": "1463800158",
+          "ceo": "조은석"
+        },
+        {
+          "rank": 66,
+          "name": "대승엔지니어링건축사사무소",
+          "amount_eok": 1.1858,
+          "rate_pct": 89.061,
+          "bizno": "1021791936",
+          "ceo": "박주성"
+        },
+        {
+          "rank": 67,
+          "name": "건축사사무소 국도",
+          "amount_eok": 1.1859,
+          "rate_pct": 89.064,
+          "bizno": "4010775722",
+          "ceo": "이영창"
+        },
+        {
+          "rank": 68,
+          "name": "건축사사무소 건",
+          "amount_eok": 1.1859,
+          "rate_pct": 89.067,
+          "bizno": "7272301345",
+          "ceo": "김대성"
+        },
+        {
+          "rank": 69,
+          "name": "한솔건축사사무소",
+          "amount_eok": 1.1861,
+          "rate_pct": 89.08,
+          "bizno": "4040628968",
+          "ceo": "김상수"
+        },
+        {
+          "rank": 70,
+          "name": "건축사사무소 오른",
+          "amount_eok": 1.1863,
+          "rate_pct": 89.098,
+          "bizno": "6104600732",
+          "ceo": "김아름"
+        },
+        {
+          "rank": 71,
+          "name": "하늘건축사사무소",
+          "amount_eok": 1.1867,
+          "rate_pct": 89.128,
+          "bizno": "4022155730",
+          "ceo": "홍영식"
+        },
+        {
+          "rank": 72,
+          "name": "건축사사무소세움",
+          "amount_eok": 1.1867,
+          "rate_pct": 89.13,
+          "bizno": "4230700221",
+          "ceo": "나경천"
+        },
+        {
+          "rank": 73,
+          "name": "예다음건축사사무소",
+          "amount_eok": 1.1871,
+          "rate_pct": 89.153,
+          "bizno": "4010743292",
+          "ceo": "박창균"
+        },
+        {
+          "rank": 74,
+          "name": "진영 건축사사무소",
+          "amount_eok": 1.1871,
+          "rate_pct": 89.158,
+          "bizno": "4020462495",
+          "ceo": "이현근"
+        },
+        {
+          "rank": 75,
+          "name": "유한회사 제이엠디종합건축사사무소",
+          "amount_eok": 1.1871,
+          "rate_pct": 89.159,
+          "bizno": "1428187519",
+          "ceo": "박훈"
+        },
+        {
+          "rank": 76,
+          "name": "제이어스건축사사무소",
+          "amount_eok": 1.1872,
+          "rate_pct": 89.164,
+          "bizno": "5672800166",
+          "ceo": "박형철"
+        },
+        {
+          "rank": 77,
+          "name": "온건축사사무소",
+          "amount_eok": 1.1873,
+          "rate_pct": 89.169,
+          "bizno": "4031597130",
+          "ceo": "문명길"
+        },
+        {
+          "rank": 78,
+          "name": "건축사사무소휴먼",
+          "amount_eok": 1.1874,
+          "rate_pct": 89.183,
+          "bizno": "4070548194",
+          "ceo": "윤순복"
+        },
+        {
+          "rank": 79,
+          "name": "건축사사무소 한별",
+          "amount_eok": 1.1876,
+          "rate_pct": 89.197,
+          "bizno": "5090231377",
+          "ceo": "김나연"
+        },
+        {
+          "rank": 80,
+          "name": "건축사사무소 이건",
+          "amount_eok": 1.1877,
+          "rate_pct": 89.2,
+          "bizno": "4020938156",
+          "ceo": "이응록"
+        },
+        {
+          "rank": 81,
+          "name": "소담건축사사무소",
+          "amount_eok": 1.1878,
+          "rate_pct": 89.209,
+          "bizno": "4011176465",
+          "ceo": "김영민"
+        },
+        {
+          "rank": 82,
+          "name": "예손건축사사무소",
+          "amount_eok": 1.1879,
+          "rate_pct": 89.218,
+          "bizno": "4021249347",
+          "ceo": "유성환"
+        },
+        {
+          "rank": 83,
+          "name": "행복한건축사사무소",
+          "amount_eok": 1.1885,
+          "rate_pct": 89.258,
+          "bizno": "4040939132",
+          "ceo": "반은희"
+        },
+        {
+          "rank": 84,
+          "name": "美 건축사사무소",
+          "amount_eok": 1.1888,
+          "rate_pct": 89.288,
+          "bizno": "4031462783",
+          "ceo": "윤미순"
+        },
+        {
+          "rank": 85,
+          "name": "건축사사무소 에이앤엑스",
+          "amount_eok": 1.1891,
+          "rate_pct": 89.306,
+          "bizno": "4028125400",
+          "ceo": "이동욱"
+        },
+        {
+          "rank": 86,
+          "name": "삼보 건축사사무소",
+          "amount_eok": 1.1892,
+          "rate_pct": 89.315,
+          "bizno": "2760201013",
+          "ceo": "최태훈"
+        },
+        {
+          "rank": 87,
+          "name": "김용 건축사사무소",
+          "amount_eok": 1.1895,
+          "rate_pct": 89.34,
+          "bizno": "4020893434",
+          "ceo": "김용"
+        },
+        {
+          "rank": 88,
+          "name": "유한회사수림건축사사무소",
+          "amount_eok": 1.1897,
+          "rate_pct": 89.35,
+          "bizno": "4978100386",
+          "ceo": "서문용진"
+        },
+        {
+          "rank": 89,
+          "name": "그리다 종합건축사사무소",
+          "amount_eok": 1.1902,
+          "rate_pct": 89.388,
+          "bizno": "5505300840",
+          "ceo": "정완수"
+        },
+        {
+          "rank": 90,
+          "name": "라인종합건축사사무소",
+          "amount_eok": 1.1903,
+          "rate_pct": 89.399,
+          "bizno": "4028131028",
+          "ceo": "김남중"
+        },
+        {
+          "rank": 91,
+          "name": "건축사사무소 가인",
+          "amount_eok": 1.1904,
+          "rate_pct": 89.402,
+          "bizno": "4021737598",
+          "ceo": "이용섭"
+        },
+        {
+          "rank": 92,
+          "name": "건축사사무소 보라",
+          "amount_eok": 1.1906,
+          "rate_pct": 89.416,
+          "bizno": "8540902427",
+          "ceo": "이마음"
+        },
+        {
+          "rank": 93,
+          "name": "휘경건축사사무소",
+          "amount_eok": 1.1919,
+          "rate_pct": 89.517,
+          "bizno": "4110772436",
+          "ceo": "손율희"
+        },
+        {
+          "rank": 94,
+          "name": "아이에스 건축사 사무소",
+          "amount_eok": 1.1926,
+          "rate_pct": 89.567,
+          "bizno": "4021966554",
+          "ceo": "서봉욱"
+        },
+        {
+          "rank": 95,
+          "name": "율그룹건축사사무소",
+          "amount_eok": 1.193,
+          "rate_pct": 89.597,
+          "bizno": "4028119233",
+          "ceo": "김희순"
+        },
+        {
+          "rank": 96,
+          "name": "우연건축사사무소",
+          "amount_eok": 1.193,
+          "rate_pct": 89.599,
+          "bizno": "4621601474",
+          "ceo": "이일우"
+        },
+        {
+          "rank": 97,
+          "name": "건축사사무소 엘",
+          "amount_eok": 1.1934,
+          "rate_pct": 89.631,
+          "bizno": "7340701488",
+          "ceo": "홍성규"
+        },
+        {
+          "rank": 98,
+          "name": "온유건축사사무소",
+          "amount_eok": 1.1947,
+          "rate_pct": 89.726,
+          "bizno": "2742401284",
+          "ceo": "최영철"
+        },
+        {
+          "rank": 99,
+          "name": "시작 건축사사무소",
+          "amount_eok": 1.1948,
+          "rate_pct": 89.733,
+          "bizno": "8407200496",
+          "ceo": "양은희"
+        },
+        {
+          "rank": 100,
+          "name": "MS건축사사무소",
+          "amount_eok": 1.1958,
+          "rate_pct": 89.807,
+          "bizno": "4180733550",
+          "ceo": "최미선"
+        },
+        {
+          "rank": 101,
+          "name": "남북건축사사무소",
+          "amount_eok": 1.1958,
+          "rate_pct": 89.812,
+          "bizno": "4020374257",
+          "ceo": "정범수"
+        },
+        {
+          "rank": 102,
+          "name": "대광 건축사사무소",
+          "amount_eok": 1.1965,
+          "rate_pct": 89.863,
+          "bizno": "4021232017",
+          "ceo": "국중훈"
+        },
+        {
+          "rank": 103,
+          "name": "제이엔디건축사사무소",
+          "amount_eok": 1.1972,
+          "rate_pct": 89.914,
+          "bizno": "3943300922",
+          "ceo": "이종진"
+        },
+        {
+          "rank": 104,
+          "name": "유한회사 금만건축사사무소이엔지",
+          "amount_eok": 1.1972,
+          "rate_pct": 89.918,
+          "bizno": "7808803547",
+          "ceo": "류충렬"
+        },
+        {
+          "rank": 105,
+          "name": "이룸건축사사무소",
+          "amount_eok": 1.1983,
+          "rate_pct": 89.994,
+          "bizno": "4180383464",
+          "ceo": "송은정"
+        },
+        {
+          "rank": 106,
+          "name": "건축사사무소지오",
+          "amount_eok": 1.203,
+          "rate_pct": 90.351,
+          "bizno": "2031295171",
+          "ceo": "고대철"
+        },
+        {
+          "rank": 107,
+          "name": "금성건축사사무소",
+          "amount_eok": 1.2039,
+          "rate_pct": 90.421,
+          "bizno": "4020738962",
+          "ceo": "이규태"
+        },
+        {
+          "rank": 108,
+          "name": "건축사사무소 태호건축",
+          "amount_eok": 1.2084,
+          "rate_pct": 90.756,
+          "bizno": "4021539326",
+          "ceo": "소태호"
+        },
+        {
+          "rank": 109,
+          "name": "건축사사무소 세원건축",
+          "amount_eok": 1.2119,
+          "rate_pct": 91.021,
+          "bizno": "4021085446",
+          "ceo": "이영철"
+        },
+        {
+          "rank": 110,
+          "name": "가문건축사사무소",
+          "amount_eok": 1.2126,
+          "rate_pct": 91.071,
+          "bizno": "4020285946",
+          "ceo": "오한주"
+        },
+        {
+          "rank": 111,
+          "name": "미. 듦 건축사 사무소",
+          "amount_eok": 1.2166,
+          "rate_pct": 91.374,
+          "bizno": "4020867542",
+          "ceo": "최만규"
+        },
+        {
+          "rank": 112,
+          "name": "건축사사무소백연",
+          "amount_eok": 1.2287,
+          "rate_pct": 92.279,
+          "bizno": "4022340191",
+          "ceo": "백우현"
+        },
+        {
+          "rank": 113,
+          "name": "건축사사무소 디엔",
+          "amount_eok": 1.2294,
+          "rate_pct": 92.334,
+          "bizno": "8857800069",
+          "ceo": "유희완"
+        },
+        {
+          "rank": null,
+          "name": "준건축사사무소",
+          "amount_eok": 0.81,
+          "rate_pct": 60.835,
+          "bizno": "4020442276",
+          "ceo": "이준호"
+        },
+        {
+          "rank": null,
+          "name": "두리건축사사무소",
+          "amount_eok": 1.1028,
+          "rate_pct": 82.824,
+          "bizno": "6778800036",
+          "ceo": "김정수"
+        },
+        {
+          "rank": null,
+          "name": "유한회사 건축사사무소청연",
+          "amount_eok": 1.166,
+          "rate_pct": 87.568,
+          "bizno": "6528600902",
+          "ceo": "이효준"
+        }
+      ],
+      "bid_count": 116,
+      "second": "건원건축사사무소",
+      "first_rank": "건축사사무소 예림",
+      "status": "1순위"
     },
     {
       "source": "g2b_api",
@@ -23502,7 +28493,9 @@
           "name": "[붙임] 청렴계약이행각서.hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01788346&bidPbancOrd=000&fileType=&fileSeq=5&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09",
+      "bidders_empty": true
     },
     {
       "source": "g2b_api",
@@ -23827,7 +28820,8 @@
           "name": "4. 입찰참가등록서식.hwpx",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01787984&bidPbancOrd=000&fileType=&fileSeq=5&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -24052,7 +29046,8 @@
           "name": "제안요청서(2026년 AT랩 인공지능기반 차세대 인재양성용 기자재 구입).pdf",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01787870&bidPbancOrd=000&fileType=&fileSeq=10&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -24273,7 +29268,8 @@
           "name": "규격서 등.zip",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01787848&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -25412,7 +30408,13 @@
         }
       ],
       "award_lookup_at": "2026-11-02",
-      "bidders_empty": true
+      "bidders_empty": true,
+      "winner": "유니아시스",
+      "bid_count": 11,
+      "award_amount_eok": 0.3841,
+      "win_rate_pct": 95.599,
+      "status": "낙찰",
+      "award_to_budget_pct": 96.0
     },
     {
       "source": "g2b_api",
@@ -25516,7 +30518,8 @@
           "name": "10.입찰참가신청서.hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01785770&bidPbancOrd=000&fileType=&fileSeq=6&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -26376,7 +31379,9 @@
           "name": "R26BK01783881-00 입찰공고문(국가_수평_SW_1468_직생_공동).pdf",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01783881&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09",
+      "bidders_empty": true
     },
     {
       "source": "g2b_api",
@@ -27994,7 +32999,8 @@
           "name": "[주식회사 루미너스] 태풍_VFX용역_제안요청서.hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01783102&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -28370,7 +33376,8 @@
       "nature": "연구·교육·행사",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -30777,7 +35784,8 @@
           "name": "규격서 등.Zip",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01779858&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -34316,7 +39324,9 @@
           "name": "제안요청서(261019).hwpx",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01778389&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=05"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09",
+      "bidders_empty": true
     },
     {
       "source": "g2b_api",
@@ -36333,7 +41343,9 @@
           "name": "공고서_수요기관평가_차등점수.pdf",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01773484&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "award_lookup_at": "2026-11-09",
+      "bidders_empty": true
     },
     {
       "source": "g2b_api",
@@ -37801,7 +42813,9 @@
       "close_at": "2026-11-06 10:00",
       "close_date": "2026-11-06",
       "budget_kind": "배정예산",
-      "asign_budget_eok": 9.1
+      "asign_budget_eok": 9.1,
+      "award_lookup_at": "2026-11-09",
+      "bidders_empty": true
     },
     {
       "source": "g2b_api",
@@ -37944,7 +42958,166 @@
       "close_at": "2026-11-04 10:00",
       "close_date": "2026-11-04",
       "budget_kind": "배정예산",
-      "asign_budget_eok": 1.9922
+      "asign_budget_eok": 1.9922,
+      "award_lookup_at": "2026-11-09",
+      "bidders": [
+        {
+          "rank": 1,
+          "name": "건영종합건축사사무소",
+          "amount_eok": 1.7447,
+          "rate_pct": 88.769,
+          "bizno": "3648700453",
+          "ceo": "이정호"
+        },
+        {
+          "rank": 2,
+          "name": "김국태종합건축사사무소",
+          "amount_eok": 1.7472,
+          "rate_pct": 88.896,
+          "bizno": "5060426563",
+          "ceo": "김국태"
+        },
+        {
+          "rank": 3,
+          "name": "무공 건축사사무소",
+          "amount_eok": 1.7473,
+          "rate_pct": 88.903,
+          "bizno": "5150811121",
+          "ceo": "남용호"
+        },
+        {
+          "rank": 4,
+          "name": "건축사사무소 마당",
+          "amount_eok": 1.749,
+          "rate_pct": 88.989,
+          "bizno": "5150483253",
+          "ceo": "서준호"
+        },
+        {
+          "rank": 5,
+          "name": "안건축사사무소",
+          "amount_eok": 1.7495,
+          "rate_pct": 89.014,
+          "bizno": "2638800609",
+          "ceo": "안기진"
+        },
+        {
+          "rank": 6,
+          "name": "동현건축사사무소",
+          "amount_eok": 1.7501,
+          "rate_pct": 89.045,
+          "bizno": "5150235397",
+          "ceo": "김규환"
+        },
+        {
+          "rank": 7,
+          "name": "건축사사무소 다정CM",
+          "amount_eok": 1.7522,
+          "rate_pct": 89.152,
+          "bizno": "5150425684",
+          "ceo": "정  동국"
+        },
+        {
+          "rank": 8,
+          "name": "탑이엔씨건축사사무소",
+          "amount_eok": 1.754,
+          "rate_pct": 89.24,
+          "bizno": "5028610478",
+          "ceo": "이영욱"
+        },
+        {
+          "rank": 9,
+          "name": "정원건축사사무소",
+          "amount_eok": 1.755,
+          "rate_pct": 89.294,
+          "bizno": "5068166343",
+          "ceo": "강순희"
+        },
+        {
+          "rank": 10,
+          "name": "건축사사무소도솔",
+          "amount_eok": 1.7597,
+          "rate_pct": 89.53,
+          "bizno": "5130385447",
+          "ceo": "김창호"
+        },
+        {
+          "rank": 11,
+          "name": "우리건축사사무소",
+          "amount_eok": 1.7732,
+          "rate_pct": 90.218,
+          "bizno": "5050365829",
+          "ceo": "김태조"
+        },
+        {
+          "rank": null,
+          "name": "건축사사무소엘지",
+          "amount_eok": 1.7336,
+          "rate_pct": 88.202,
+          "bizno": "5021143160",
+          "ceo": "김성돈"
+        },
+        {
+          "rank": null,
+          "name": "종합건축사사무소구일",
+          "amount_eok": 1.7339,
+          "rate_pct": 88.218,
+          "bizno": "2828701198",
+          "ceo": "김정겸"
+        },
+        {
+          "rank": null,
+          "name": "티엠종합건축사사무소",
+          "amount_eok": 1.736,
+          "rate_pct": 88.326,
+          "bizno": "1504800684",
+          "ceo": "최요명"
+        },
+        {
+          "rank": null,
+          "name": "라움건축사사무소",
+          "amount_eok": 1.7366,
+          "rate_pct": 88.356,
+          "bizno": "8628701733",
+          "ceo": "김진태"
+        },
+        {
+          "rank": null,
+          "name": "건축사사무소반석",
+          "amount_eok": 1.7407,
+          "rate_pct": 88.566,
+          "bizno": "5138121738",
+          "ceo": "김영도"
+        },
+        {
+          "rank": null,
+          "name": "문화건축사사무소",
+          "amount_eok": 1.7422,
+          "rate_pct": 88.639,
+          "bizno": "5150227451",
+          "ceo": "김지훈"
+        },
+        {
+          "rank": null,
+          "name": "두성엔지니어링건축사사무소",
+          "amount_eok": 1.7434,
+          "rate_pct": 88.701,
+          "bizno": "6328703993",
+          "ceo": "권혁주"
+        },
+        {
+          "rank": null,
+          "name": "천우건축사사무소",
+          "amount_eok": 1.7435,
+          "rate_pct": 88.707,
+          "bizno": "5130385700",
+          "ceo": "김경태"
+        }
+      ],
+      "bid_count": 19,
+      "second": "김국태종합건축사사무소",
+      "first_rank": "건영종합건축사사무소",
+      "status": "1순위"
     },
     {
       "source": "g2b_api",
@@ -39866,7 +45039,8 @@
       "close_at": "2026-11-05 12:00",
       "close_date": "2026-11-05",
       "budget_kind": "배정예산",
-      "asign_budget_eok": 1.3
+      "asign_budget_eok": 1.3,
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -39946,7 +45120,8 @@
       "close_at": "2026-11-05 10:00",
       "close_date": "2026-11-05",
       "budget_kind": "배정예산",
-      "asign_budget_eok": 4.7
+      "asign_budget_eok": 4.7,
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -40762,7 +45937,8 @@
       "close_at": "2026-10-30 11:00",
       "close_date": "2026-10-30",
       "budget_kind": "배정예산",
-      "asign_budget_eok": 7.5
+      "asign_budget_eok": 7.5,
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -45073,7 +50249,13 @@
       "close_date": "2026-10-26",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.433,
-      "award_lookup_at": "2026-11-01"
+      "award_lookup_at": "2026-11-01",
+      "winner": "쎈텐 학생복 양산점",
+      "bid_count": 3,
+      "award_amount_eok": 0.0023,
+      "win_rate_pct": 66.172,
+      "status": "낙찰",
+      "award_to_budget_pct": 0.5
     },
     {
       "source": "g2b_api",
@@ -45320,7 +50502,8 @@
       "close_at": "2026-11-03 10:00",
       "close_date": "2026-11-03",
       "budget_kind": "배정예산",
-      "asign_budget_eok": 0.99
+      "asign_budget_eok": 0.99,
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -50211,7 +55394,8 @@
       "close_at": "2026-11-05 12:00",
       "close_date": "2026-11-05",
       "budget_kind": "배정예산",
-      "asign_budget_eok": 0.968
+      "asign_budget_eok": 0.968,
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -71196,7 +76380,9 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01747372&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01747372&bidPbancOrd=000",
+      "award_lookup_at": "2026-11-09",
+      "bidders_empty": true
     },
     {
       "source": "g2b_api",
@@ -71470,7 +76656,8 @@
       "contract_method": "일반경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01745687&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01745687&bidPbancOrd=000",
+      "award_lookup_at": "2026-11-09"
     },
     {
       "source": "g2b_api",
@@ -73326,7 +78513,9 @@
       "contract_method": "제한경쟁",
       "ntce_kind": "등록공고",
       "biz": "servc",
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01736492&bidPbancOrd=000"
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01736492&bidPbancOrd=000",
+      "award_lookup_at": "2026-11-09",
+      "bidders_empty": true
     },
     {
       "source": "g2b_api",
@@ -92804,20 +97993,39 @@
     }
   ],
   "stats": {
-    "raw": 87,
-    "classified": 83,
-    "stored": 1735,
+    "raw": 495,
+    "classified": 461,
+    "stored": 1751,
     "band": 478,
-    "with_winner": 565,
+    "with_winner": 570,
     "awards": {
-      "fetched": 1255,
-      "updated": 0
+      "fetched": 6536,
+      "updated": 4
     },
     "scope": {
       "생성형·Agent": 186,
-      "AI SW 확대": 1549
+      "AI SW 확대": 1565
+    },
+    "awards_enrich": {
+      "range": {
+        "since": "2026-10-10",
+        "until": "2026-11-09"
+      },
+      "fetched": 13375,
+      "updated": 1,
+      "lookups": 80,
+      "lookup_api_errors": 0
+    },
+    "with_bidders": 505,
+    "bidders_enrich": {
+      "targets": 46,
+      "fetched": 46,
+      "updated": 8,
+      "empty": 38,
+      "skipped": 0,
+      "bootstrap_upserts": 0
     },
     "budget_sanitized": 0
   },
-  "reclassified_at": "2026-11-08T11:18:48Z"
+  "reclassified_at": "2026-11-09T04:02:41Z"
 }

@@ -1,11 +1,56 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-08T11:18:22Z",
+  "generated_at": "2026-11-09T04:01:53Z",
   "range": {
-    "since": "2026-11-05",
-    "until": "2026-11-08"
+    "since": "2026-10-26",
+    "until": "2026-11-09"
   },
   "prespecs": [
+    {
+      "prespec_no": "R26BD00296780",
+      "title": "제주미래고등학교 AI소프트웨어과 정보화기기 구매",
+      "org": "제주특별자치도교육청",
+      "order_org": "제주특별자치도교육청",
+      "registered_at": "2026-11-09 11:27",
+      "registered_date": "2026-11-09",
+      "opinion_close_at": "2026-11-14 23:59",
+      "asign_budget_eok": 1.7976,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00296780&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00296780&fileType=BFDTL&fileSeq=2"
+      ],
+      "biz": "thng",
+      "biz_div": "물품",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00296656",
+      "title": "2026년도 동계 인구문제 해결을 위한 BRIDGE Agent 글로벌 프로젝트 운영 용역",
+      "org": "성균관대학교 자연과학캠퍼스 부총장 산학협력단",
+      "order_org": "성균관대학교 자연과학캠퍼스 부총장 산학협력단",
+      "registered_at": "2026-11-09 09:12",
+      "registered_date": "2026-11-09",
+      "opinion_close_at": "2026-11-14 23:59",
+      "asign_budget_eok": 0.97,
+      "scope": "생성형·Agent",
+      "fields": [
+        "AI 에이전트"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00296656&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
     {
       "prespec_no": "R26BD00296252",
       "title": "AI 실시간 경정 경주수면 수초 탐지시스템 구축 용역(긴급)",
@@ -542,7 +587,9 @@
         "데이터·예측"
       ],
       "nature": "시스템 구축·고도화",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01816467"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294763&fileType=BFDTL&fileSeq=1"
       ],
@@ -796,7 +843,9 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01816580"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294290&fileType=BFDTL&fileSeq=1"
       ],
@@ -862,7 +911,9 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01816600"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294201&fileType=BFDTL&fileSeq=1",
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294201&fileType=BFDTL&fileSeq=2"
@@ -885,7 +936,9 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01816374"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294200&fileType=BFDTL&fileSeq=1"
       ],
@@ -973,7 +1026,9 @@
         "AI 일반"
       ],
       "nature": "연구·교육·행사",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01816605"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00294066&fileType=BFDTL&fileSeq=1"
       ],
@@ -1063,7 +1118,9 @@
         "AX·전략"
       ],
       "nature": null,
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01816525"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00293935&fileType=BFDTL&fileSeq=1"
       ],
@@ -1176,7 +1233,9 @@
         "AI 일반"
       ],
       "nature": null,
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01816681"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00293495&fileType=BFDTL&fileSeq=1"
       ],
@@ -1222,7 +1281,9 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01814118"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00293296&fileType=BFDTL&fileSeq=1",
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00293296&fileType=BFDTL&fileSeq=2",
@@ -1336,7 +1397,9 @@
         "비전·영상"
       ],
       "nature": "ISP·전략",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01812547"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00293155&fileType=BFDTL&fileSeq=1",
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00293155&fileType=BFDTL&fileSeq=2"
@@ -1359,7 +1422,9 @@
         "의료·바이오 AI"
       ],
       "nature": "시스템 구축·고도화",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01811555"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00293083&fileType=BFDTL&fileSeq=1",
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00293083&fileType=BFDTL&fileSeq=2",
@@ -1384,7 +1449,9 @@
         "비전·영상"
       ],
       "nature": null,
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01811468"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00293080&fileType=BFDTL&fileSeq=1",
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00293080&fileType=BFDTL&fileSeq=2",
@@ -1433,7 +1500,9 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01813286"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00293046&fileType=BFDTL&fileSeq=1",
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00293046&fileType=BFDTL&fileSeq=2"
@@ -1478,7 +1547,9 @@
         "AX·전략"
       ],
       "nature": "ISP·전략",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01815091"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00293013&fileType=BFDTL&fileSeq=1"
       ],
@@ -1500,7 +1571,9 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01813497"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00292968&fileType=BFDTL&fileSeq=1",
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00292968&fileType=BFDTL&fileSeq=2",
@@ -1549,7 +1622,9 @@
         "AI 일반"
       ],
       "nature": null,
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01811404"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00292935&fileType=BFDTL&fileSeq=1"
       ],
@@ -1571,7 +1646,9 @@
         "AI 일반"
       ],
       "nature": "연구·교육·행사",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01809407"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00292871&fileType=BFDTL&fileSeq=1"
       ],
@@ -1593,7 +1670,9 @@
         "AI 일반"
       ],
       "nature": "운영·유지보수",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01812534"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00292833&fileType=BFDTL&fileSeq=1"
       ],
@@ -1615,7 +1694,9 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01806689"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00292807&fileType=BFDTL&fileSeq=1",
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00292807&fileType=BFDTL&fileSeq=2"
@@ -1638,7 +1719,9 @@
         "AI 일반"
       ],
       "nature": "운영·유지보수",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01813017"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00292261&fileType=BFDTL&fileSeq=1",
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00292261&fileType=BFDTL&fileSeq=2"
@@ -1661,7 +1744,9 @@
         "AI 일반"
       ],
       "nature": "연구·교육·행사",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01814902"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00292529&fileType=BFDTL&fileSeq=1"
       ],
@@ -1683,7 +1768,9 @@
         "생성형·LLM"
       ],
       "nature": null,
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01808565"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00292234&fileType=BFDTL&fileSeq=1"
       ],
@@ -1705,7 +1792,9 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01814071"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00292172&fileType=BFDTL&fileSeq=1"
       ],
@@ -1727,7 +1816,9 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01808969"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00292114&fileType=BFDTL&fileSeq=1",
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00292114&fileType=BFDTL&fileSeq=2"
@@ -1750,7 +1841,9 @@
         "AI 일반"
       ],
       "nature": "운영·유지보수",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01808590"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00292056&fileType=BFDTL&fileSeq=1"
       ],
@@ -1772,7 +1865,9 @@
         "AI 일반"
       ],
       "nature": null,
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01809199"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00292053&fileType=BFDTL&fileSeq=1",
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00292053&fileType=BFDTL&fileSeq=2",
@@ -1971,7 +2066,9 @@
         "생성형·LLM"
       ],
       "nature": "구독·라이선스",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01805601"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00291598&fileType=BFDTL&fileSeq=1"
       ],
@@ -2041,7 +2138,9 @@
         "AI 일반"
       ],
       "nature": null,
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01811014"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00291442&fileType=BFDTL&fileSeq=1"
       ],
@@ -2063,7 +2162,9 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01811303"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00291214&fileType=BFDTL&fileSeq=1",
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00291214&fileType=BFDTL&fileSeq=2"
@@ -2086,7 +2187,9 @@
         "AX·전략"
       ],
       "nature": "ISP·전략",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01809534"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00291384&fileType=BFDTL&fileSeq=1",
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00291384&fileType=BFDTL&fileSeq=2"
@@ -2109,7 +2212,9 @@
         "AI 일반"
       ],
       "nature": "운영·유지보수",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01809733"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00291323&fileType=BFDTL&fileSeq=1"
       ],
@@ -2131,7 +2236,9 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01802862"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00291271&fileType=BFDTL&fileSeq=1"
       ],
@@ -2341,7 +2448,9 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01807367"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00291069&fileType=BFDTL&fileSeq=1"
       ],
@@ -2434,7 +2543,9 @@
         "AI 일반"
       ],
       "nature": "운영·유지보수",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01795064"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00291018&fileType=BFDTL&fileSeq=2",
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00291018&fileType=BFDTL&fileSeq=3",
@@ -2557,7 +2668,9 @@
         "생성형·LLM"
       ],
       "nature": "시스템 구축·고도화",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01802380"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00290189&fileType=BFDTL&fileSeq=1",
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00290189&fileType=BFDTL&fileSeq=2",
@@ -2604,7 +2717,9 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01806913"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00290104&fileType=BFDTL&fileSeq=1"
       ],
@@ -2626,7 +2741,9 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01805618"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00290066&fileType=BFDTL&fileSeq=1"
       ],
