@@ -11,7 +11,7 @@ from typing import Any
 
 import yaml
 
-from .assets import stamp_asset_versions
+from .site import stamp_shell
 from .firms import bidder_stats, firm_profile_text, fmt_bizno, load_firms
 from .normalize import merge_by_bid
 from .render import _award_amount, _fmt_budget, infer_status
@@ -565,7 +565,7 @@ def render_outside_section(
         trs.append(
             "<tr>"
             f"<td>{html.escape(_firm_name(s.bizno, stats, firms))}</td>"
-            f"<td>{fmt_bizno(s.bizno)}</td>"
+            f'<td><a href="bidders.html#{s.bizno}">{fmt_bizno(s.bizno)}</a></td>'
             f"<td>{html.escape(firm_profile_text(firms.get(s.bizno)) or '-')}</td>"
             f'<td class="num">{len(s.bids)}</td>'
             f'<td class="num">{len(s.wins)}</td>'
@@ -614,7 +614,7 @@ def render_competitors_page(repo_root: Path) -> dict[str, Any]:
     outside = outside_rivals(stats, bizno_index)
     text = replace_outside_section(text, render_outside_section(outside, stats, firms))
 
-    text = stamp_asset_versions(text)
+    text = stamp_shell(text)
     path.write_text(text, encoding="utf-8")
 
     matched = sum(1 for r in rows if r["live_wins"] > 0)

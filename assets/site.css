@@ -82,6 +82,11 @@ table.prespecs th:nth-child(9),table.prespecs td:nth-child(9){display:none}
 .tbl-tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 10px}
 .tbl-tools input,.tbl-tools select,.tbl-more,.tbl-clear{font:inherit;font-size:13px;color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:6px 10px}
 .tbl-tools input{flex:1 1 220px;min-width:0}
+.bidder-search{margin:18px 0 12px}.bidder-search input{width:100%;max-width:520px;font:inherit;font-size:15px;color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:9px 12px}
+.bidder-search input:focus{outline:2px solid var(--accent);outline-offset:1px}
+table.bidder-history th:nth-child(1){width:92px}table.bidder-history td:nth-child(1){white-space:nowrap}
+table.bidder-history th:nth-child(2){width:120px}table.bidder-history th:nth-child(4),table.bidder-history th:nth-child(5){width:64px}
+table.bidder-history th:nth-child(6){width:78px}table.bidder-history th:nth-child(7){width:96px}table.bidder-history th:nth-child(8){width:120px}
 .tbl-tools input:focus,.tbl-tools select:focus,.tbl-more:focus-visible,.tbl-clear:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
 .tbl-count{font-size:13px;color:var(--muted)}
 .dday{display:inline-block;margin-left:6px;padding:0 6px;border-radius:4px;font-family:var(--f-mono);font-size:12px;color:var(--accent);background:var(--accent-soft);white-space:nowrap}

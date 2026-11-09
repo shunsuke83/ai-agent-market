@@ -20,6 +20,7 @@ from .render import (
     title_link,
 )
 from .assets import ASSET_VER
+from .site import nav
 
 # 핵심 AI 사업 성격 (주간 「신규」·월간 「AI 사업」). 교육·장비·미분류는 기타.
 CORE_NATURES = frozenset(
@@ -40,18 +41,7 @@ NATURE_LABELS = {
 
 _RANK_SUFFIX_RE = re.compile(r"\s*\([12]순위\)\s*$")
 
-NAV = (
-    '<nav class="top"><b>공공 AI Agent 시장 리서치</b>'
-    '<a href="../index.html">홈</a>'
-    '<a href="../band.html">8~30억 분석</a>'
-    '<a href="../awards.html">수주 현황</a>'
-    '<a href="../pricing.html">투찰·경쟁</a>'
-    '<a href="../prespecs.html">사전규격</a>'
-    '<a href="../plans.html">발주 예정</a>'
-    '<a href="../competitors.html">국내 전문기업</a>'
-    '<a href="../reports/index.html">리포트 목록</a>'
-    '<a href="../deliverables.html">산출물 안내</a></nav>'
-)
+NAV = nav("../")
 
 FOOTER = (
     "<footer>데이터 출처: 조달청 나라장터 입찰공고·낙찰정보(공공데이터포털 Open API), "

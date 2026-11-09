@@ -3,15 +3,17 @@
 from __future__ import annotations
 
 import html
+import re
 from typing import Any
 
-from .assets import ASSET_VER
+from .assets import ASSET_VER, stamp_asset_versions
 
 NAV_ITEMS = (
     ("index.html", "홈"),
     ("band.html", "8~30억 분석"),
     ("awards.html", "수주 현황"),
     ("pricing.html", "투찰·경쟁"),
+    ("bidders.html", "입찰이력 검색"),
     ("prespecs.html", "사전규격"),
     ("plans.html", "발주 예정"),
     ("competitors.html", "국내 전문기업"),
@@ -44,6 +46,14 @@ def detail_href(n: dict[str, Any], prefix: str = "") -> str:
 def nav(prefix: str = "") -> str:
     links = "".join(f'<a href="{prefix}{href}">{label}</a>' for href, label in NAV_ITEMS)
     return f'<nav class="top"><b>공공 AI Agent 시장 리서치</b>{links}</nav>'
+
+
+_NAV_RE = re.compile(r'<nav class="top">.*?</nav>', re.S)
+
+
+def stamp_shell(html_text: str, prefix: str = "") -> str:
+    """Hand-edited templates: fresh asset versions and the shared nav."""
+    return _NAV_RE.sub(lambda _: nav(prefix), stamp_asset_versions(html_text), count=1)
 
 
 def page(
