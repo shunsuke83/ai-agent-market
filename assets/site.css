@@ -87,6 +87,15 @@ table.prespecs th:nth-child(9),table.prespecs td:nth-child(9){display:none}
 .dday{display:inline-block;margin-left:6px;padding:0 6px;border-radius:4px;font-family:var(--f-mono);font-size:12px;color:var(--accent);background:var(--accent-soft);white-space:nowrap}
 .dday.urgent{color:var(--stamp);background:var(--stamp-soft);font-weight:700}
 table.home-list .dday{display:table;margin:3px 0 0}
+.tbl-select{margin-top:-4px}
+.tbl-act{font:inherit;font-size:13px;padding:4px 10px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--fg);cursor:pointer}
+.tbl-act:hover:not(:disabled){border-color:var(--accent);color:var(--accent)}.tbl-act:disabled{opacity:.45;cursor:default}
+.tbl-only{font-size:13px;color:var(--muted);white-space:nowrap;cursor:pointer}
+.row-pick{margin:0;cursor:pointer}
+tr.watched td:first-child{box-shadow:inset 3px 0 0 var(--stamp)}
+td:has(>.row-pick){padding-left:28px;position:relative}.row-pick{position:absolute;left:8px;top:50%;transform:translateY(-50%)}
+tr.watched td{background:var(--stamp-soft)}
+.tbl-compare{margin:8px 0 12px}.tbl-compare table.compare th{width:8em}.tbl-compare .tbl-act{margin-top:8px}
 table.home-list th:last-child{width:10em}
 .tbl-more{display:block;width:100%;margin-top:8px;cursor:pointer;color:var(--accent)}
 .tbl-more:hover,.tbl-clear:hover{border-color:var(--accent)}
