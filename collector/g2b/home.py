@@ -5,13 +5,14 @@ from __future__ import annotations
 import html
 import json
 import re
-from datetime import datetime, timedelta
+from datetime import date, datetime, timedelta
 from pathlib import Path
 from typing import Any
 
 from .classify import load_keywords
 from .normalize import prespec_excluded
 from .prespecs import STATUS_OPEN, load_prespecs, prespec_status
+from .pricing import ContextIndex
 from .render import (
     KST,
     _fmt_budget,
@@ -87,6 +88,39 @@ def _title_cell(n: dict[str, Any]) -> str:
     if n.get("ntce_kind") != "재공고":
         return title_link(n)
     return title_link(n) + ' <span class="meta" title="이전 공고가 유찰돼 다시 낸 공고">재공고</span>'
+
+
+URGENT_DAYS = 3
+
+
+def _dday(close_at: str | None, today: date) -> str:
+    """D-day badge; ≤ URGENT_DAYS is marked by the word 임박 as well as color."""
+    try:
+        days = (date.fromisoformat((close_at or "")[:10]) - today).days
+    except ValueError:
+        return ""
+    if days < 0:
+        return ""
+    label = "D-day" if days == 0 else f"D-{days}"
+    if days <= URGENT_DAYS:
+        return f' <span class="dday urgent">{label} 임박</span>'
+    return f' <span class="dday">{label}</span>'
+
+
+def _competition(ctx: dict[str, Any] | None) -> str:
+    """Median bidders and 낙찰 투찰률 IQR of similar past 사업, always with the sample size."""
+    if not ctx:
+        return '<span class="meta">비교 표본 부족</span>'
+    parts = []
+    if ctx["median_bids"] is not None:
+        parts.append(f'{ctx["median_bids"]:g}곳 <span class="meta">({ctx["n"]}건 중앙값)</span>')
+    if ctx["rates"]:
+        lo, _, hi = ctx["rates"]
+        parts.append(f'{lo:.1f}~{hi:.1f}% <span class="meta">({ctx["rate_n"]}건)</span>')
+    else:
+        parts.append(f'<span class="meta">투찰률 표본 {ctx["rate_n"]}건 부족</span>')
+    title = html.escape(ctx["basis"])
+    return f'<span title="{title}">' + "<br>".join(parts) + "</span>"
 
 
 def _result(n: dict[str, Any]) -> str:
@@ -187,14 +221,16 @@ def build_home(
         + "</div>"
     )
 
+    contexts = ContextIndex(notices)
     closing_rows = [
         "<tr>"
-        + _td(html.escape(n["close_at"][5:]))
+        + _td(html.escape(n["close_at"][5:]) + _dday(n["close_at"], today))
         + _td(html.escape(n.get("org") or ""))
         + _td(_title_cell(n))
         + _td(html.escape(n.get("scope") or ""))
         + _td(_fmt_budget(n.get("budget_eok")), num=True)
         + _td(html.escape(n.get("contract_method") or ""))
+        + _td(_competition(contexts.context(n)))
         + "</tr>"
         for n in closing[: LIMIT * 2]
     ]
@@ -204,7 +240,11 @@ def build_home(
         + _td(html.escape(n.get("org") or ""))
         + _td(_title_cell(n))
         + _td(_fmt_budget(n.get("budget_eok")), num=True)
-        + _td(html.escape((n.get("close_at") or "")[:10]))
+        + _td(
+            html.escape((n.get("close_at") or "")[:10])
+            + (_dday(n.get("close_at"), today) if (n.get("close_at") or "") >= now_s else "")
+        )
+        + _td(_competition(contexts.context(n)))
         + "</tr>"
         for n in new[:LIMIT]
     ]
@@ -242,7 +282,7 @@ def build_home(
         + f"<h2>마감 임박 ({DEADLINE_DAYS}일 이내)</h2>"
         + _table(
             [("입찰 마감", False), ("수요기관", False), ("사업명", False), ("범위", False),
-             ("예산(억)", True), ("계약 방식", False)],
+             ("예산(억)", True), ("계약 방식", False), ("경쟁·낙찰 범위", False)],
             closing_rows,
             f"{DEADLINE_DAYS}일 안에 마감되는 AI 공고가 없습니다.",
         )
@@ -250,7 +290,7 @@ def build_home(
         + f"<h2>새 공고 (최근 {NEW_DAYS}일, 예산순)</h2>"
         + _table(
             [("공고일", False), ("수요기관", False), ("사업명", False), ("예산(억)", True),
-             ("입찰 마감", False)],
+             ("입찰 마감", False), ("경쟁·낙찰 범위", False)],
             new_rows,
             f"최근 {NEW_DAYS}일 새 AI 공고가 없습니다.",
         )
@@ -270,7 +310,10 @@ def build_home(
             f"최근 {OPENED_DAYS}일 개찰 결과가 없습니다.",
         )
         + (more(len(opened_rows), len(opened), "awards.html", "수주 현황") if opened else "")
-        + f'<p class="note">예산 {min_eok:g}억 미만, 장비 구매, 감리·PMO·교육·행사성 공고는 제외합니다. 사업명을 누르면 사업 상세(일정·금액·투찰 업체·비슷한 사업의 경쟁·관련 사전규격)로 이동합니다. 재공고는 이전 공고가 유찰돼 다시 낸 공고입니다.</p>'
+        + f'<p class="note">예산 {min_eok:g}억 미만, 장비 구매, 감리·PMO·교육·행사성 공고는 제외합니다. 사업명을 누르면 사업 상세(일정·금액·투찰 업체·비슷한 사업의 경쟁·관련 사전규격)로 이동합니다. 재공고는 이전 공고가 유찰돼 다시 낸 공고입니다. '
+        f"마감 {URGENT_DAYS}일 이내는 '임박'으로 표시합니다. "
+        "경쟁·낙찰 범위는 같은 기관(없으면 같은 사업 성격·예산대)의 개찰된 과거 사업에서 투찰 업체 수 중앙값과 "
+        "낙찰자의 예정가격 대비 투찰률 사분위(25~75%)이며, 괄호 안은 표본 수입니다. 표본이 적으면 계산하지 않습니다.</p>"
         + reports_html
         + STATIC_CARDS
         + keep_html
