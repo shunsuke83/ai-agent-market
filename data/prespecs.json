@@ -1,11 +1,272 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-09T12:55:16Z",
+  "generated_at": "2026-11-10T12:40:10Z",
   "range": {
-    "since": "2026-10-26",
-    "until": "2026-11-09"
+    "since": "2026-11-07",
+    "until": "2026-11-10"
   },
   "prespecs": [
+    {
+      "prespec_no": "R26BD00298051",
+      "title": "수도시설 지능형 영상 안전관리 인프라 성능검증 용역",
+      "org": "한국수자원공사",
+      "order_org": "한국수자원공사",
+      "registered_at": "2026-11-10 19:57",
+      "registered_date": "2026-11-10",
+      "opinion_close_at": "2026-11-15 20:00",
+      "asign_budget_eok": 2.2429,
+      "scope": "AI SW 확대",
+      "fields": [
+        "비전·영상"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00298051&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "기술용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00298047",
+      "title": "실차 주행 데이터 기반 전장부품 신뢰성 평가 AI 모델 개발 용역",
+      "org": "광주과학기술원",
+      "order_org": "광주과학기술원",
+      "registered_at": "2026-11-10 19:51",
+      "registered_date": "2026-11-10",
+      "opinion_close_at": "2026-11-15 23:59",
+      "asign_budget_eok": 0.45,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00298047&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00298047&fileType=BFDTL&fileSeq=2"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00298036",
+      "title": "2027년 지능형 산림항공 운항안전시스템 운영 및 유지관리",
+      "org": "산림청 산림항공본부",
+      "order_org": "조달청",
+      "registered_at": "2026-11-10 19:41",
+      "registered_date": "2026-11-10",
+      "opinion_close_at": "2026-11-17 23:59",
+      "asign_budget_eok": 2.8067,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "운영·유지보수",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00298036&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
+    {
+      "prespec_no": "R26BD00297940",
+      "title": "AI 기반 건식증착시스템",
+      "org": "한국기초과학지원연구원",
+      "order_org": "한국기초과학지원연구원",
+      "registered_at": "2026-11-10 17:41",
+      "registered_date": "2026-11-10",
+      "opinion_close_at": "2026-11-15 23:59",
+      "asign_budget_eok": 2.9,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00297940&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "thng",
+      "biz_div": "물품",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00297931",
+      "title": "[긴급]2027년 강릉시 지능형교통체계(ITS) 운영 및 유지관리용역",
+      "org": "강원특별자치도 강릉시",
+      "order_org": "강원특별자치도 강릉시",
+      "registered_at": "2026-11-10 17:35",
+      "registered_date": "2026-11-10",
+      "opinion_close_at": "2026-11-13 23:59",
+      "asign_budget_eok": 16.0,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "운영·유지보수",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00297931&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "기술용역",
+      "sw_biz": true
+    },
+    {
+      "prespec_no": "R26BD00297886",
+      "title": "선제적 수입식품 안전관리를 위한 지능형 스크리닝 체계 구축 기획연구",
+      "org": "식품의약품안전처",
+      "order_org": "식품의약품안전처",
+      "registered_at": "2026-11-10 16:50",
+      "registered_date": "2026-11-10",
+      "opinion_close_at": "2026-11-15 23:59",
+      "asign_budget_eok": 0.5,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AX·전략"
+      ],
+      "nature": "ISP·전략",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00297886&fileType=BFDTL&fileSeq=2"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00297785",
+      "title": "관제통신 AI 모니터링 시스템 구축사업",
+      "org": "인천국제공항공사",
+      "order_org": "인천국제공항공사",
+      "registered_at": "2026-11-10 15:30",
+      "registered_date": "2026-11-10",
+      "opinion_close_at": "2026-11-15 23:59",
+      "asign_budget_eok": 9.35,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00297785&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00297696",
+      "title": "AI 기반 보안관제센터 운영 사업(27~29년) 용역",
+      "org": "한국예탁결제원",
+      "order_org": "조달청 부산지방조달청",
+      "registered_at": "2026-11-10 14:29",
+      "registered_date": "2026-11-10",
+      "opinion_close_at": "2026-11-15 23:59",
+      "asign_budget_eok": 81.008,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00297696&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
+    {
+      "prespec_no": "R26BD00297672",
+      "title": "2026년 충남 지역주도형 AI대전환 사업- 제조 온톨로지 공정최적화 구축",
+      "org": "(주)지에스티",
+      "order_org": "(주)지에스티",
+      "registered_at": "2026-11-10 14:16",
+      "registered_date": "2026-11-10",
+      "opinion_close_at": "2026-11-13 14:30",
+      "asign_budget_eok": 1.65,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
+    {
+      "prespec_no": "R26BD00297670",
+      "title": "2026년 충남 지역주도형 AI대전환 사업 - 대시보드 구축 용역",
+      "org": "(주)지에스티",
+      "order_org": "(주)지에스티",
+      "registered_at": "2026-11-10 14:14",
+      "registered_date": "2026-11-10",
+      "opinion_close_at": "2026-11-13 14:30",
+      "asign_budget_eok": 0.77,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
+    {
+      "prespec_no": "R26BD00297409",
+      "title": "소상공인 AI 서비스 구축 용역(2차)",
+      "org": "소상공인시장진흥공단",
+      "order_org": "조달청",
+      "registered_at": "2026-11-10 09:04",
+      "registered_date": "2026-11-10",
+      "opinion_close_at": "2026-11-15 23:59",
+      "asign_budget_eok": 16.2552,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00297409&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
+    {
+      "prespec_no": "R26BD00297404",
+      "title": "클라우드 네이티브 AI 기반 국가상수도 통합 정보시스템 구축 ISP 수립 용역",
+      "org": "한국수자원공사",
+      "order_org": "한국수자원공사",
+      "registered_at": "2026-11-10 09:00",
+      "registered_date": "2026-11-10",
+      "opinion_close_at": "2026-11-15 13:00",
+      "asign_budget_eok": 1.485,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AX·전략"
+      ],
+      "nature": "ISP·전략",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00297404&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "기술용역",
+      "sw_biz": true
+    },
     {
       "prespec_no": "R26BD00297162",
       "title": "AI 기반 RPA 및 OCR 솔루션 라이선스 구매",

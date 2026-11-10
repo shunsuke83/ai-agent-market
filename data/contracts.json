@@ -1,7 +1,36 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-09T12:55:45Z",
+  "generated_at": "2026-11-10T12:40:31Z",
   "contracts": [
+    {
+      "contract_no": "R26TA02410576",
+      "title": "강원대학교병원 차세대정보산업실 암환자 낙상 AI 모니터링 시스템 구매",
+      "org": "강원대학교병원",
+      "contract_org": "강원대학교병원",
+      "signed_date": "2026-11-10",
+      "period_text": "금차 60일, 총차 60일",
+      "end_date": "2027-01-09",
+      "amount_eok": 2.9451,
+      "long_term": "신규",
+      "method": "수의계약",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 지오멕스소프트",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "2218133219"
+        }
+      ],
+      "bid_no": null,
+      "registered_at": "2026-11-10 16:50",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02410576&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
     {
       "contract_no": "R26TA02397215",
       "title": "지능형 생활안정지원시스템 구축 사업",
