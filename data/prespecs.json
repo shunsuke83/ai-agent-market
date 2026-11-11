@@ -1,11 +1,309 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-10T12:40:10Z",
+  "generated_at": "2026-11-11T11:53:39Z",
   "range": {
-    "since": "2026-11-07",
-    "until": "2026-11-10"
+    "since": "2026-11-08",
+    "until": "2026-11-11"
   },
   "prespecs": [
+    {
+      "prespec_no": "R26BD00298504",
+      "title": "(긴급)(협상)2027년 용인시 지능형교통체계(ITS) 유지관리 용역",
+      "org": "경기도 용인시",
+      "order_org": "경기도 용인시",
+      "registered_at": "2026-11-11 18:50",
+      "registered_date": "2026-11-11",
+      "opinion_close_at": "2026-11-14 23:59",
+      "asign_budget_eok": 12.3826,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "운영·유지보수",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00298504&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00298504&fileType=BFDTL&fileSeq=2"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
+    {
+      "prespec_no": "R26BD00298776",
+      "title": "방과후학교 AI 강사 역량 강화 원격연수 콘텐츠 개발",
+      "org": "한국과학창의재단",
+      "order_org": "한국과학창의재단",
+      "registered_at": "2026-11-11 18:48",
+      "registered_date": "2026-11-11",
+      "opinion_close_at": "2026-11-16 23:59",
+      "asign_budget_eok": 2.0,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "연구·교육·행사",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00298776&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00298776&fileType=BFDTL&fileSeq=2"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
+    {
+      "prespec_no": "R26BD00298774",
+      "title": "방과후 AI 강사 인증·관리 기능 개발",
+      "org": "한국과학창의재단",
+      "order_org": "한국과학창의재단",
+      "registered_at": "2026-11-11 18:40",
+      "registered_date": "2026-11-11",
+      "opinion_close_at": "2026-11-14 23:59",
+      "asign_budget_eok": 4.99,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00298774&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00298774&fileType=BFDTL&fileSeq=2"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
+    {
+      "prespec_no": "R26BD00298752",
+      "title": "(긴급)AI기반 드론활용 산불감시 시스템 구축사업",
+      "org": "서울특별시 강동구",
+      "order_org": "서울특별시 강동구",
+      "registered_at": "2026-11-11 18:06",
+      "registered_date": "2026-11-11",
+      "opinion_close_at": "2026-11-14 23:59",
+      "asign_budget_eok": 4.3505,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00298752&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00298752&fileType=BFDTL&fileSeq=2"
+      ],
+      "biz": "thng",
+      "biz_div": "물품",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00298627",
+      "title": "AI SoC 실장시스템 사전 규격 공개",
+      "org": "한국전자정보통신산업진흥회",
+      "order_org": "한국전자정보통신산업진흥회",
+      "registered_at": "2026-11-11 16:28",
+      "registered_date": "2026-11-11",
+      "opinion_close_at": "2026-11-16 23:59",
+      "asign_budget_eok": 4.4,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00298627&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "thng",
+      "biz_div": "물품",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00298542",
+      "title": "동국대학교 공통교양 AI리터러시 영역 계열별 기초 교과목 신규개발 용역",
+      "org": "동국대학교",
+      "order_org": "동국대학교",
+      "registered_at": "2026-11-11 15:44",
+      "registered_date": "2026-11-11",
+      "opinion_close_at": "2026-11-16 23:59",
+      "asign_budget_eok": 0.72,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00298542&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00298542&fileType=BFDTL&fileSeq=2",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00298542&fileType=BFDTL&fileSeq=3"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
+    {
+      "prespec_no": "R26BD00298534",
+      "title": "2026 앵커(ANCHOR) 사업단 AI.반도체 해외 기업탐방 프로그램 운영",
+      "org": "서울과학기술대학교 산학협력단",
+      "order_org": "서울과학기술대학교 산학협력단",
+      "registered_at": "2026-11-11 15:39",
+      "registered_date": "2026-11-11",
+      "opinion_close_at": "2026-11-17 18:00",
+      "asign_budget_eok": 0.7425,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00298534&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00298478",
+      "title": "지능형 항만수요예측시스템(i-PortCast) 진단 및 활성화 방안 수립 연구",
+      "org": "한국해양수산개발원",
+      "order_org": "한국해양수산개발원",
+      "registered_at": "2026-11-11 15:00",
+      "registered_date": "2026-11-11",
+      "opinion_close_at": "2026-11-16 23:59",
+      "asign_budget_eok": 0.9,
+      "scope": "AI SW 확대",
+      "fields": [
+        "데이터·예측"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00298478&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00298478&fileType=BFDTL&fileSeq=2",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00298478&fileType=BFDTL&fileSeq=3"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00298417",
+      "title": "2026학년도 동계 소버린 Agentic AI 개발실무 교육프로그램 용역",
+      "org": "경북대학교 AI부트캠프사업단",
+      "order_org": "경북대학교 AI부트캠프사업단",
+      "registered_at": "2026-11-11 14:19",
+      "registered_date": "2026-11-11",
+      "opinion_close_at": "2026-11-16 23:59",
+      "asign_budget_eok": 0.5786,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "연구·교육·행사",
+      "bid_nos": [],
+      "spec_files": [],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00298305",
+      "title": "[대학혁신] 인천대학교 AI 전환(AX) 전략 및 실행체계 수립 컨설팅 용역",
+      "org": "인천대학교",
+      "order_org": "인천대학교",
+      "registered_at": "2026-11-11 11:28",
+      "registered_date": "2026-11-11",
+      "opinion_close_at": "2026-11-16 23:59",
+      "asign_budget_eok": 2.0,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AX·전략"
+      ],
+      "nature": "ISP·전략",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00298305&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00298244",
+      "title": "AX 자율주행 공동조사 차량 구축 용역",
+      "org": "주식회사 아이리스테크놀로지",
+      "order_org": "주식회사 아이리스테크놀로지",
+      "registered_at": "2026-11-11 10:39",
+      "registered_date": "2026-11-11",
+      "opinion_close_at": "2026-11-15 23:59",
+      "asign_budget_eok": 5.55,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00298244&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00298244&fileType=BFDTL&fileSeq=2",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00298244&fileType=BFDTL&fileSeq=3",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00298244&fileType=BFDTL&fileSeq=4"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00298211",
+      "title": "학령전기 아동-조부모를 위한 AI 기반 건강생활습관 중재 앱(Kids LIGHT) 개발",
+      "org": "중앙대학교 산학협력단",
+      "order_org": "중앙대학교 산학협력단",
+      "registered_at": "2026-11-11 10:03",
+      "registered_date": "2026-11-11",
+      "opinion_close_at": "2026-11-16 23:59",
+      "asign_budget_eok": 0.88,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00298211&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00298197",
+      "title": "2027년 인천광역시 지능형교통시스템(ITS) 유지.관리",
+      "org": "인천스마트시티 주식회사",
+      "order_org": "조달청 인천지방조달청",
+      "registered_at": "2026-11-11 09:50",
+      "registered_date": "2026-11-11",
+      "opinion_close_at": "2026-11-16 23:59",
+      "asign_budget_eok": 21.9953,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00298197&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00298197&fileType=BFDTL&fileSeq=2",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00298197&fileType=BFDTL&fileSeq=3",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00298197&fileType=BFDTL&fileSeq=4"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
     {
       "prespec_no": "R26BD00298051",
       "title": "수도시설 지능형 영상 안전관리 인프라 성능검증 용역",
