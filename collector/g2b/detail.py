@@ -119,12 +119,12 @@ def _bidder_table(n: dict[str, Any]) -> str:
         notes.append("투찰률은 예정가격 대비입니다.")
     if has_score:
         weights = (
-            f"기술평가 {n['tech_rate']:g}점과 가격평가 {price_pts:g}점"
+            f"기술평가 {n['tech_rate']:g}점과 가격평가 {price_pts:g}점을"
             if n.get("tech_rate") is not None and price_pts is not None
-            else "기술평가 점수와 가격평가 점수"
+            else "기술평가 점수와 가격평가 점수를"
         )
         notes.append(
-            f"협상에 의한 계약은 {weights}을 합친 종합점수로 순위를 정합니다. "
+            f"협상에 의한 계약은 {weights} 합친 종합점수로 순위를 정합니다. "
             "이 사이트가 받는 개찰결과에는 가격점수만 있어 기술점수·종합점수는 표시하지 못합니다."
         )
     return (

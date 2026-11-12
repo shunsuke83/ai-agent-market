@@ -25,5 +25,17 @@ def _content_version() -> str:
 ASSET_VER = _content_version()
 
 
+FONT_LINKS = (
+    '<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>'
+    '<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/'
+    'dist/web/variable/pretendardvariable-dynamic-subset.min.css">'
+)
+_OLD_FONT_RE = re.compile(
+    r'<link rel="preconnect" href="https://fonts\.googleapis\.com">\s*'
+    r'<link rel="stylesheet" href="https://fonts\.googleapis\.com/css2\?[^"]*">'
+)
+
+
 def stamp_asset_versions(html_text: str) -> str:
+    html_text = _OLD_FONT_RE.sub(lambda _: FONT_LINKS, html_text)
     return _ASSET_REF_RE.sub(rf"\g<1>?v={ASSET_VER}", html_text)

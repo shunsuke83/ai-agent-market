@@ -6,7 +6,7 @@ import html
 import re
 from typing import Any
 
-from .assets import ASSET_VER, stamp_asset_versions
+from .assets import ASSET_VER, FONT_LINKS, stamp_asset_versions
 
 NAV_ITEMS = (
     ("index.html", "홈"),
@@ -69,9 +69,7 @@ def page(
         '<!doctype html><html lang="ko"><head><meta charset="utf-8">'
         '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'
         f"<title>{html.escape(title)}</title>"
-        '<link rel="preconnect" href="https://fonts.googleapis.com">'
-        '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?'
-        'family=IBM+Plex+Sans+KR:wght@400;600;700&family=IBM+Plex+Mono:wght@500&display=swap">'
+        + FONT_LINKS +
         '<meta http-equiv="Cache-Control" content="no-cache">'
         f'<link rel="stylesheet" href="{prefix}assets/site.css?v={ASSET_VER}"></head><body>'
         '<div class="wrap">'

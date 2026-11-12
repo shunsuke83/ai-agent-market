@@ -19,7 +19,7 @@ from .render import (
     _today_kst,
     title_link,
 )
-from .assets import ASSET_VER
+from .assets import ASSET_VER, FONT_LINKS
 from .site import nav
 
 # 핵심 AI 사업 성격 (주간 「신규」·월간 「AI 사업」). 교육·장비·미분류는 기타.
@@ -53,9 +53,7 @@ HEAD_TMPL = (
     "<!doctype html><html lang=\"ko\"><head><meta charset=\"utf-8\">"
     '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'
     "<title>{title}</title>"
-    '<link rel="preconnect" href="https://fonts.googleapis.com">'
-    '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?'
-    "family=IBM+Plex+Sans+KR:wght@400;600;700&family=IBM+Plex+Mono:wght@500&display=swap\">"
+    + FONT_LINKS +
     '<meta http-equiv="Cache-Control" content="no-cache">'
     f'<link rel="stylesheet" href="../assets/site.css?v={ASSET_VER}"></head><body>'
     '<div class="wrap">'
