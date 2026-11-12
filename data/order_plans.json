@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-11T11:53:50Z",
+  "generated_at": "2026-11-12T06:06:33Z",
   "plans": [
     {
       "plan_no": "R26DD20515816",
@@ -1107,7 +1107,9 @@
       "dept": "사이버조사과",
       "tel": "02-3294-8548",
       "posted_date": "2026-11-03",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01823946"
+      ],
       "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20916830",
       "biz": "servc",
       "biz_div": "일반용역",
@@ -1886,7 +1888,9 @@
       "dept": "경영기획본부",
       "tel": "02-317-6119",
       "posted_date": "2026-11-06",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01815779"
+      ],
       "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20921292",
       "biz": "servc",
       "biz_div": "일반용역",
@@ -2687,6 +2691,254 @@
       "nature": "연구·교육·행사"
     },
     {
+      "plan_no": "R26DD20927090",
+      "title": "2026년 부산수학문화관  AI․디지털 전시 콘텐츠 개발․제작 및 설치",
+      "org": "부산광역시교육청 부산광역시교육청창의융합교육원",
+      "top_org": "부산광역시교육청",
+      "org_kind": "교육기관",
+      "order_ym": "2026-11",
+      "amount_eok": 2.21,
+      "contract_method": "일반경쟁",
+      "procurement": "자체조달",
+      "dept": "부산수학문화관 운영팀",
+      "tel": "051-715-9160",
+      "posted_date": "2026-11-12",
+      "bid_nos": [],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20927090",
+      "biz": "servc",
+      "biz_div": "기술용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "연구·교육·행사"
+    },
+    {
+      "plan_no": "R26DD20927282",
+      "title": "연암대학교 AID전환 중점 전문대학 지원사업 AI 온라인 학습지원 서비스 체계 확장·고도화 구축 및 운영업체 선정",
+      "org": "연암대학교 산학협력단",
+      "top_org": null,
+      "org_kind": "기타기관",
+      "order_ym": "2026-11",
+      "amount_eok": 1.6089,
+      "contract_method": "제한경쟁",
+      "procurement": "자체조달",
+      "dept": "총무팀",
+      "tel": "041-580-1117",
+      "posted_date": "2026-11-12",
+      "bid_nos": [
+        "R26BK01826217"
+      ],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20927282",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화"
+    },
+    {
+      "plan_no": "R26DD20927503",
+      "title": "AX-ECO LCA 플랫폼 GS1 표준 연계 설계·기획 연구용역",
+      "org": "주식회사 레플러스",
+      "top_org": "주식회사 레플러스",
+      "org_kind": "기타기관",
+      "order_ym": "2026-11",
+      "amount_eok": 0.3,
+      "contract_method": "제한경쟁",
+      "procurement": "자체조달",
+      "dept": "분산에너지사업팀",
+      "tel": "031-5175-3004",
+      "posted_date": "2026-11-12",
+      "bid_nos": [],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20927503",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "ISP·전략"
+    },
+    {
+      "plan_no": "R26DD20927525",
+      "title": "﻿「디지털 제품 여권(DPP) 설계 (DPP 기술 개발)」 용역 (광주첨단 스마트그린 AX실증산단 구축사업)",
+      "org": "주식회사 레플러스",
+      "top_org": "주식회사 레플러스",
+      "org_kind": "기타기관",
+      "order_ym": "2026-11",
+      "amount_eok": 0.6,
+      "contract_method": "제한경쟁",
+      "procurement": "자체조달",
+      "dept": "분산에너지사업팀",
+      "tel": "031-5175-3004",
+      "posted_date": "2026-11-12",
+      "bid_nos": [],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20927525",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화"
+    },
+    {
+      "plan_no": "R26DD20927544",
+      "title": "한림대학교 글로컬 사업 관련 AI 교수 시스템 구축 용역 업체 선정",
+      "org": "한림대학교",
+      "top_org": "교육부",
+      "org_kind": "교육기관",
+      "order_ym": "2026-11",
+      "amount_eok": 2.0,
+      "contract_method": "일반경쟁",
+      "procurement": "자체조달",
+      "dept": "구매관재팀",
+      "tel": "033-248-1171",
+      "posted_date": "2026-11-12",
+      "bid_nos": [
+        "R26BK01826708"
+      ],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20927544",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화"
+    },
+    {
+      "plan_no": "R26DD20927586",
+      "title": "한림대학교 글로컬 사업 관련 전공 특화 H-LLM 기반 AI 교육서비스 연계 적용 구축 용역 업체 선정",
+      "org": "한림대학교",
+      "top_org": "교육부",
+      "org_kind": "교육기관",
+      "order_ym": "2026-11",
+      "amount_eok": 2.3,
+      "contract_method": "일반경쟁",
+      "procurement": "자체조달",
+      "dept": "구매관재팀",
+      "tel": "033-248-1171",
+      "posted_date": "2026-11-12",
+      "bid_nos": [
+        "R26BK01826759"
+      ],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20927586",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "생성형·Agent",
+      "fields": [
+        "생성형·LLM"
+      ],
+      "nature": "연구·교육·행사"
+    },
+    {
+      "plan_no": "R26DD20927612",
+      "title": "26년 지능형 드론 전장가시화체계 실증",
+      "org": "국방부 국군재정관리단",
+      "top_org": "국방부",
+      "org_kind": "국가기관",
+      "order_ym": "2026-11",
+      "amount_eok": 10.0,
+      "contract_method": "일반경쟁",
+      "procurement": "자체조달",
+      "dept": "특수계약TF",
+      "tel": "02-3146-6714",
+      "posted_date": "2026-11-12",
+      "bid_nos": [],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20927612",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
+    {
+      "plan_no": "R26DD20927657",
+      "title": "한림대학교 글로컬 사업 관련 AI 네이티브 대학 학습관리플랫폼 구축 용역 업체 선정",
+      "org": "한림대학교",
+      "top_org": "교육부",
+      "org_kind": "교육기관",
+      "order_ym": "2026-11",
+      "amount_eok": 5.0,
+      "contract_method": "일반경쟁",
+      "procurement": "자체조달",
+      "dept": "구매관재팀",
+      "tel": "033-248-1171",
+      "posted_date": "2026-11-12",
+      "bid_nos": [
+        "R26BK01826851"
+      ],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20927657",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화"
+    },
+    {
+      "plan_no": "R26DD20927661",
+      "title": "2026년 OTT특화 콘텐츠 제작지원(IP확보형) VFX/AI 용역",
+      "org": "(주)아이엠티브이",
+      "top_org": "(주)아이엠티브이",
+      "org_kind": "기타기관",
+      "order_ym": "2026-11",
+      "amount_eok": 1.1,
+      "contract_method": "제한경쟁",
+      "procurement": "자체조달",
+      "dept": "경영지원",
+      "tel": "02-780-0350",
+      "posted_date": "2026-11-12",
+      "bid_nos": [],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20927661",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
+    {
+      "plan_no": "R26DD20927683",
+      "title": "피지컬 AI를 위한 환경인식 및 SLAM 기술 검증 지원",
+      "org": "국방과학연구소",
+      "top_org": "국방과학연구소",
+      "org_kind": "기타공공기관",
+      "order_ym": "2026-11",
+      "amount_eok": 33.0,
+      "contract_method": "제한경쟁",
+      "procurement": "자체조달",
+      "dept": "내자팀",
+      "tel": "042-821-2000",
+      "posted_date": "2026-11-12",
+      "bid_nos": [],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20927683",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
+    {
       "plan_no": "R26DD20561940",
       "title": "AI 챗봇 유지보수 용역 계약",
       "org": "서울시 종로구시설관리공단",
@@ -3022,7 +3274,8 @@
       "tel": "***********",
       "posted_date": "2026-10-19",
       "bid_nos": [
-        "R26BK01793068"
+        "R26BK01793068",
+        "R26BK01825779"
       ],
       "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20899837",
       "biz": "servc",
