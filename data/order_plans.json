@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-12T06:22:38Z",
+  "generated_at": "2026-11-12T06:36:10Z",
   "plans": [
     {
       "plan_no": "R26DD20515816",
@@ -1712,7 +1712,9 @@
       "dept": "경영지원팀",
       "tel": "041-580-4826",
       "posted_date": "2026-11-06",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01827109"
+      ],
       "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20920530",
       "biz": "servc",
       "biz_div": "일반용역",
@@ -2937,6 +2939,54 @@
         "AI 일반"
       ],
       "nature": null
+    },
+    {
+      "plan_no": "R26DD20927821",
+      "title": "[성장엔진 브랜드 단과대 및 AI 거점대학 패키지] 첨단융합학부 Physical AI용 전지·반도체 소재의 신뢰성 분석 시스템 구매",
+      "org": "부산대학교",
+      "top_org": "교육부",
+      "org_kind": "교육기관",
+      "order_ym": "2026-11",
+      "amount_eok": 8.0,
+      "contract_method": "일반경쟁",
+      "procurement": "중앙조달",
+      "dept": "부산대학교 첨단융합학부",
+      "tel": "051-510-7176",
+      "posted_date": "2026-11-12",
+      "bid_nos": [],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20927821",
+      "biz": "thng",
+      "biz_div": "물품",
+      "product": "열차별분석기",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
+    {
+      "plan_no": "R26DD20927828",
+      "title": "데이터 기반 AI 생육의사결정 플랫폼 구축",
+      "org": "제주대학교 산학협력단",
+      "top_org": "교육부",
+      "org_kind": "기타기관",
+      "order_ym": "2026-11",
+      "amount_eok": 0.3,
+      "contract_method": "제한경쟁",
+      "procurement": "자체조달",
+      "dept": "산학관리팀",
+      "tel": "064-754-3972",
+      "posted_date": "2026-11-12",
+      "bid_nos": [],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20927828",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화"
     },
     {
       "plan_no": "R26DD20561940",
