@@ -1,7 +1,48 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-12T06:36:22Z",
+  "generated_at": "2026-11-12T12:44:35Z",
   "contracts": [
+    {
+      "contract_no": "R26TA01936816",
+      "title": "국립아시아문화전당 AI 기반 아카이브 ISMP 수립",
+      "org": "문화체육관광부 국립아시아문화전당",
+      "contract_org": "조달청 광주지방조달청",
+      "signed_date": "2026-11-12",
+      "period_text": "20261211",
+      "end_date": "2026-12-11",
+      "amount_eok": 2.399,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": true,
+      "firms": [
+        {
+          "name": "주식회사 아던트",
+          "role": "도급업체",
+          "share": 25.662,
+          "bizno": "2118768974"
+        },
+        {
+          "name": "에스큐아이소프트(주)",
+          "role": "주계약업체",
+          "share": 46.461,
+          "bizno": "1078174307"
+        },
+        {
+          "name": "주식회사 문화유산기술연구소",
+          "role": "도급업체",
+          "share": 27.877,
+          "bizno": "3148643839"
+        }
+      ],
+      "bid_no": "R26BK01475149",
+      "registered_at": "2026-11-12 08:55",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA01936816&ctrtChgOrd=01&prcmBsneSeCd=조070002&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AX·전략"
+      ],
+      "nature": "ISP·전략"
+    },
     {
       "contract_no": "R26TA02052751",
       "title": "AI-OCR 기반 e-보고서 검수 자동화 사업",
@@ -18898,47 +18939,6 @@
       "bid_no": "R26BK01554593",
       "registered_at": "2026-06-09 14:10",
       "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA01940364&ctrtChgOrd=00&prcmBsneSeCd=조070002&srchName=ctrtCrst&openUrl=Y",
-      "scope": "AI SW 확대",
-      "fields": [
-        "AX·전략"
-      ],
-      "nature": "ISP·전략"
-    },
-    {
-      "contract_no": "R26TA01936816",
-      "title": "국립아시아문화전당 AI 기반 아카이브 ISMP 수립",
-      "org": "문화체육관광부 국립아시아문화전당",
-      "contract_org": "조달청 광주지방조달청",
-      "signed_date": "2026-06-09",
-      "period_text": "계약 후 153일 이내",
-      "end_date": "2026-11-09",
-      "amount_eok": 2.399,
-      "long_term": "신규",
-      "method": "제한경쟁",
-      "joint": true,
-      "firms": [
-        {
-          "name": "주식회사 아던트",
-          "role": "주계약업체",
-          "share": 60.0,
-          "bizno": "2118768974"
-        },
-        {
-          "name": "에스큐아이소프트(주)",
-          "role": "도급업체",
-          "share": 25.0,
-          "bizno": "1078174307"
-        },
-        {
-          "name": "주식회사 문화유산기술연구소",
-          "role": "도급업체",
-          "share": 15.0,
-          "bizno": "3148643839"
-        }
-      ],
-      "bid_no": "R26BK01475149",
-      "registered_at": "2026-06-11 15:49",
-      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA01936816&ctrtChgOrd=00&prcmBsneSeCd=조070002&srchName=ctrtCrst&openUrl=Y",
       "scope": "AI SW 확대",
       "fields": [
         "AX·전략"

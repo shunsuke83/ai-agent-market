@@ -1,11 +1,147 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-12T06:35:57Z",
+  "generated_at": "2026-11-12T12:44:15Z",
   "range": {
-    "since": "2026-10-29",
+    "since": "2026-11-09",
     "until": "2026-11-12"
   },
   "prespecs": [
+    {
+      "prespec_no": "R26BD00299583",
+      "title": "(긴급)2027년 공공의료정보망·정책망 AI 기능 개선 및 운영·유지관리 사업 용역",
+      "org": "국립중앙의료원",
+      "order_org": "국립중앙의료원",
+      "registered_at": "2026-11-12 19:37",
+      "registered_date": "2026-11-12",
+      "opinion_close_at": "2026-11-15 23:59",
+      "asign_budget_eok": 3.8799,
+      "scope": "AI SW 확대",
+      "fields": [
+        "의료·바이오 AI"
+      ],
+      "nature": "운영·유지보수",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00299583&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00299583&fileType=BFDTL&fileSeq=2"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00299469",
+      "title": "선박용 AI 상황인식 어라운드뷰 시스템",
+      "org": "한국해양과학기술원 부설 선박해양플랜트연구소",
+      "order_org": "한국해양과학기술원 부설 선박해양플랜트연구소",
+      "registered_at": "2026-11-12 17:33",
+      "registered_date": "2026-11-12",
+      "opinion_close_at": "2026-11-17 23:59",
+      "asign_budget_eok": 0.935,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00299469&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00299469&fileType=BFDTL&fileSeq=2"
+      ],
+      "biz": "thng",
+      "biz_div": "물품",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00299460",
+      "title": "연암공과대학교「앵커사업 평생교육 성과분석 및 성인학습자 X+AI 교육체계 구축 연구」 용역",
+      "org": "연암공과대학교산학협력단",
+      "order_org": "연암공과대학교산학협력단",
+      "registered_at": "2026-11-12 17:27",
+      "registered_date": "2026-11-12",
+      "opinion_close_at": "2026-11-16 23:59",
+      "asign_budget_eok": 0.55,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "연구·교육·행사",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00299460&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00299445",
+      "title": "[김천대학교 대학혁신지원사업] AI기반 교육서비스 앱 개발 고도화 지원 용역",
+      "org": "김천대학교",
+      "order_org": "김천대학교",
+      "registered_at": "2026-11-12 17:15",
+      "registered_date": "2026-11-12",
+      "opinion_close_at": "2026-11-17 23:59",
+      "asign_budget_eok": 1.6219,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "연구·교육·행사",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00299445&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00299445&fileType=BFDTL&fileSeq=2",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00299445&fileType=BFDTL&fileSeq=3"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00299444",
+      "title": "AI 기반 지능형 병원정보시스템 구축을 위한 고성능 CPU 서버 도입",
+      "org": "전북대학교병원",
+      "order_org": "전북대학교병원",
+      "registered_at": "2026-11-12 17:15",
+      "registered_date": "2026-11-12",
+      "opinion_close_at": "2026-11-17 23:59",
+      "asign_budget_eok": 0.0,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00299444&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "thng",
+      "biz_div": "물품",
+      "sw_biz": true
+    },
+    {
+      "prespec_no": "R26BD00299426",
+      "title": "2026년 수원시 중소기업 AX 지원 사업",
+      "org": "성균관대학교 자연과학캠퍼스 부총장 산학협력단",
+      "order_org": "성균관대학교 자연과학캠퍼스 부총장 산학협력단",
+      "registered_at": "2026-11-12 17:01",
+      "registered_date": "2026-11-12",
+      "opinion_close_at": "2026-11-17 23:59",
+      "asign_budget_eok": 0.3,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00299426&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
     {
       "prespec_no": "R26BD00299277",
       "title": "데이터 기반 AI 생육의사결정 플랫폼 구축",
@@ -1035,7 +1171,9 @@
         "생성형·LLM"
       ],
       "nature": "시스템 구축·고도화",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01825456"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00296902&fileType=BFDTL&fileSeq=1"
       ],

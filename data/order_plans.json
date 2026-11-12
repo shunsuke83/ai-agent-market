@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-12T06:36:10Z",
+  "generated_at": "2026-11-12T12:44:27Z",
   "plans": [
     {
       "plan_no": "R26DD20515816",
@@ -2116,7 +2116,9 @@
       "dept": "구매관재팀",
       "tel": "02-2260-3873",
       "posted_date": "2026-11-09",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01825456"
+      ],
       "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20922348",
       "biz": "servc",
       "biz_div": "일반용역",
@@ -2855,7 +2857,9 @@
       "dept": "특수계약TF",
       "tel": "02-3146-6714",
       "posted_date": "2026-11-12",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01826810"
+      ],
       "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20927612",
       "biz": "servc",
       "biz_div": "일반용역",
@@ -2987,6 +2991,54 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화"
+    },
+    {
+      "plan_no": "R26DD20928100",
+      "title": "[김천대학교 대학혁신지원사업] AI기반 교육서비스 앱 개발 고도화 지원 용역",
+      "org": "김천대학교",
+      "top_org": "김천대학교",
+      "org_kind": "교육기관",
+      "order_ym": "2026-11",
+      "amount_eok": 1.6219,
+      "contract_method": "일반경쟁",
+      "procurement": "자체조달",
+      "dept": "사무국 총무팀",
+      "tel": "054-420-4000",
+      "posted_date": "2026-11-12",
+      "bid_nos": [],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20928100",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "연구·교육·행사"
+    },
+    {
+      "plan_no": "R26DD20928139",
+      "title": "연암공과대학교「앵커사업 평생교육 성과분석 및 성인학습자 X+AI 교육체계 구축 연구」 용역",
+      "org": "연암공과대학교산학협력단",
+      "top_org": "연암공과대학교산학협력단",
+      "org_kind": "기타기관",
+      "order_ym": "2026-11",
+      "amount_eok": 0.55,
+      "contract_method": "일반경쟁",
+      "procurement": "자체조달",
+      "dept": "사무처",
+      "tel": "055-751-2026",
+      "posted_date": "2026-11-12",
+      "bid_nos": [],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20928139",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "연구·교육·행사"
     },
     {
       "plan_no": "R26DD20561940",
@@ -3273,7 +3325,9 @@
       "dept": "산학연구지원부",
       "tel": "033-250-8939",
       "posted_date": "2026-11-05",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01828005"
+      ],
       "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20919878",
       "biz": "servc",
       "biz_div": "일반용역",
@@ -3360,6 +3414,30 @@
       "scope": "AI SW 확대",
       "fields": [
         "AI 일반"
+      ],
+      "nature": "운영·유지보수"
+    },
+    {
+      "plan_no": "R26DD20928359",
+      "title": "(긴급)2027년 공공의료정보망·정책망 AI 기능 개선 및 운영·유지관리 사업 용역",
+      "org": "국립중앙의료원",
+      "top_org": "국립중앙의료원",
+      "org_kind": "기타공공기관",
+      "order_ym": "2027-01",
+      "amount_eok": 3.8799,
+      "contract_method": "제한경쟁",
+      "procurement": "자체조달",
+      "dept": "총무팀",
+      "tel": "02-2276-2043",
+      "posted_date": "2026-11-12",
+      "bid_nos": [],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20928359",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "의료·바이오 AI"
       ],
       "nature": "운영·유지보수"
     }
