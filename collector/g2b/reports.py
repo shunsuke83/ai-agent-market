@@ -815,6 +815,43 @@ def render_reports_index(
     return _page("리포트 목록", body, with_sort=False)
 
 
+def _weekly_summary(agg: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "core_count": len(agg["core"]),
+        "budget_sum": agg["budget_sum"],
+        "awards_count": len(agg["awards"]),
+        "other_count": agg["other_count"],
+        "start": agg["start"].isoformat(),
+        "end": agg["end"].isoformat(),
+    }
+
+
+def _monthly_summary(agg: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "core_count": len(agg["core"]),
+        "budget_sum": agg["budget_sum"],
+        "large_count": agg["large_count"],
+        "isp_count": agg["isp_count"],
+        "in_progress": agg["in_progress"],
+        "start": agg["start"].isoformat(),
+        "end": agg["end"].isoformat(),
+    }
+
+
+def _load_report_meta(repo_root: Path) -> dict[str, dict[str, Any]]:
+    path = repo_root / "data" / "reports.json"
+    try:
+        raw = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+    return {
+        m["slug"]: m
+        for kind in ("weekly", "monthly")
+        for m in raw.get(kind) or []
+        if isinstance(m, dict) and m.get("slug")
+    }
+
+
 def render_reports(
     repo_root: Path,
     *,
@@ -841,8 +878,10 @@ def render_reports(
     weekly_path.write_text(render_weekly_html(w_agg), encoding="utf-8")
     monthly_path.write_text(render_monthly_html(m_agg), encoding="utf-8")
 
-    # Merge with any other already-rendered report files for the index
+    # Merge with any other already-rendered report files for the index. Past reports keep the
+    # summary saved when they were rendered; ones saved without it are re-aggregated once.
     existing = _discover_existing_reports(reports_dir)
+    prev = _load_report_meta(repo_root)
     weekly_meta: list[dict[str, Any]] = []
     for item in existing["weekly"]:
         meta = {
@@ -851,17 +890,13 @@ def render_reports(
             "file": item["file"],
             "slug": item["slug"],
         }
+        old = prev.get(item["slug"]) or {}
         if item["slug"] == w_agg["slug"]:
-            meta.update(
-                {
-                    "core_count": len(w_agg["core"]),
-                    "budget_sum": w_agg["budget_sum"],
-                    "awards_count": len(w_agg["awards"]),
-                    "other_count": w_agg["other_count"],
-                    "start": w_agg["start"].isoformat(),
-                    "end": w_agg["end"].isoformat(),
-                }
-            )
+            meta.update(_weekly_summary(w_agg))
+        elif "core_count" in old:
+            meta.update({k: v for k, v in old.items() if k not in meta})
+        else:
+            meta.update(_weekly_summary(aggregate_weekly(notices, item["year"], item["week"], today=today)))
         weekly_meta.append(meta)
 
     monthly_meta: list[dict[str, Any]] = []
@@ -872,18 +907,13 @@ def render_reports(
             "file": item["file"],
             "slug": item["slug"],
         }
+        old = prev.get(item["slug"]) or {}
         if item["slug"] == m_agg["slug"]:
-            meta.update(
-                {
-                    "core_count": len(m_agg["core"]),
-                    "budget_sum": m_agg["budget_sum"],
-                    "large_count": m_agg["large_count"],
-                    "isp_count": m_agg["isp_count"],
-                    "in_progress": m_agg["in_progress"],
-                    "start": m_agg["start"].isoformat(),
-                    "end": m_agg["end"].isoformat(),
-                }
-            )
+            meta.update(_monthly_summary(m_agg))
+        elif "core_count" in old and not old.get("in_progress"):
+            meta.update({k: v for k, v in old.items() if k not in meta})
+        else:
+            meta.update(_monthly_summary(aggregate_monthly(notices, item["year"], item["month"], today=today)))
         monthly_meta.append(meta)
 
     index_path = reports_dir / "index.html"
