@@ -8,18 +8,34 @@ from typing import Any
 
 from .assets import ASSET_VER, FONT_LINKS, stamp_asset_versions
 
-NAV_ITEMS = (
-    ("index.html", "홈"),
-    ("band.html", "8~30억 분석"),
-    ("awards.html", "수주 현황"),
-    ("pricing.html", "투찰·경쟁"),
-    ("bidders.html", "입찰이력 검색"),
-    ("agencies.html", "발주기관 검색"),
-    ("prespecs.html", "사전규격"),
-    ("plans.html", "발주 예정"),
-    ("competitors.html", "국내 전문기업"),
-    ("reports/index.html", "리포트 목록"),
-    ("deliverables.html", "산출물 안내"),
+NAV_GROUPS = (
+    ("", (("index.html", "홈"),)),
+    ("시장 분석", (
+        ("band.html", "8~30억 분석"),
+        ("awards.html", "수주 현황"),
+        ("pricing.html", "투찰·경쟁"),
+        ("plans.html", "발주 예정"),
+        ("prespecs.html", "사전규격"),
+    )),
+    ("검색", (
+        ("bidders.html", "입찰이력 검색"),
+        ("agencies.html", "발주기관 검색"),
+    )),
+    ("기업·리포트", (
+        ("competitors.html", "국내 전문기업"),
+        ("reports/index.html", "리포트 목록"),
+        ("deliverables.html", "산출물 안내"),
+    )),
+)
+NAV_ITEMS = tuple(item for _, items in NAV_GROUPS for item in items)
+
+# Marks the current page's link; report pages map to 리포트 목록. No `</nav>` inside (stamp_shell regex).
+_NAV_ACTIVE_JS = (
+    "<script>(function(){var n=document.currentScript.parentNode,p=location.pathname;"
+    "if(/\\/$/.test(p))p+='index.html';var hit=null;"
+    "n.querySelectorAll('.nav-group a').forEach(function(a){var h=new URL(a.href).pathname;"
+    "if(h===p||(!hit&&/\\/reports\\//.test(p)&&/reports\\/index\\.html$/.test(h)))hit=a;});"
+    "if(hit)hit.setAttribute('aria-current','page');})();</script>"
 )
 
 FOOTER = (
@@ -45,11 +61,21 @@ def detail_href(n: dict[str, Any], prefix: str = "") -> str:
 
 
 def nav(prefix: str = "") -> str:
-    links = "".join(f'<a href="{prefix}{href}">{label}</a>' for href, label in NAV_ITEMS)
-    return f'<nav class="top"><b>공공 AI Agent 시장 리서치</b>{links}</nav>'
+    groups = "".join(
+        '<div class="nav-group">'
+        + (f'<span class="nav-label">{label}</span>' if label else "")
+        + "".join(f'<a href="{prefix}{href}">{text}</a>' for href, text in items)
+        + "</div>"
+        for label, items in NAV_GROUPS
+    )
+    return (
+        f'<nav class="top" aria-label="사이트 메뉴"><a class="brand" href="{prefix}index.html">'
+        "공공 AI Agent 시장 리서치</a>"
+        f"{groups}{_NAV_ACTIVE_JS}</nav>"
+    )
 
 
-_NAV_RE = re.compile(r'<nav class="top">.*?</nav>', re.S)
+_NAV_RE = re.compile(r'<nav class="top"[^>]*>.*?</nav>', re.S)
 
 
 def stamp_shell(html_text: str, prefix: str = "") -> str:
