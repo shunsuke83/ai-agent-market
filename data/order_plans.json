@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-12T12:44:27Z",
+  "generated_at": "2026-11-13T04:58:48Z",
   "plans": [
     {
       "plan_no": "R26DD20515816",
@@ -2439,7 +2439,9 @@
       "dept": "총무팀",
       "tel": "062-230-8083",
       "posted_date": "2026-11-11",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01823446"
+      ],
       "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20925597",
       "biz": "servc",
       "biz_div": "일반용역",
@@ -2757,7 +2759,9 @@
       "dept": "분산에너지사업팀",
       "tel": "031-5175-3004",
       "posted_date": "2026-11-12",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01827120"
+      ],
       "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20927503",
       "biz": "servc",
       "biz_div": "일반용역",
@@ -2781,7 +2785,9 @@
       "dept": "분산에너지사업팀",
       "tel": "031-5175-3004",
       "posted_date": "2026-11-12",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01826952"
+      ],
       "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20927525",
       "biz": "servc",
       "biz_div": "일반용역",
@@ -2945,30 +2951,6 @@
       "nature": null
     },
     {
-      "plan_no": "R26DD20927821",
-      "title": "[성장엔진 브랜드 단과대 및 AI 거점대학 패키지] 첨단융합학부 Physical AI용 전지·반도체 소재의 신뢰성 분석 시스템 구매",
-      "org": "부산대학교",
-      "top_org": "교육부",
-      "org_kind": "교육기관",
-      "order_ym": "2026-11",
-      "amount_eok": 8.0,
-      "contract_method": "일반경쟁",
-      "procurement": "중앙조달",
-      "dept": "부산대학교 첨단융합학부",
-      "tel": "051-510-7176",
-      "posted_date": "2026-11-12",
-      "bid_nos": [],
-      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20927821",
-      "biz": "thng",
-      "biz_div": "물품",
-      "product": "열차별분석기",
-      "scope": "AI SW 확대",
-      "fields": [
-        "AI 일반"
-      ],
-      "nature": null
-    },
-    {
       "plan_no": "R26DD20927828",
       "title": "데이터 기반 AI 생육의사결정 플랫폼 구축",
       "org": "제주대학교 산학협력단",
@@ -3039,6 +3021,126 @@
         "AI 일반"
       ],
       "nature": "연구·교육·행사"
+    },
+    {
+      "plan_no": "R26DD20928458",
+      "title": "2027년 진주시 지능형교통정보시스템 유지관리 용역",
+      "org": "경상남도 진주시",
+      "top_org": "경상남도",
+      "org_kind": "지방자치단체",
+      "order_ym": "2026-11",
+      "amount_eok": 3.6898,
+      "contract_method": "제한경쟁",
+      "procurement": "자체조달",
+      "dept": "스마트도시과",
+      "tel": "055-749-3635",
+      "posted_date": "2026-11-12",
+      "bid_nos": [],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20928458",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "운영·유지보수"
+    },
+    {
+      "plan_no": "R26DD20928656",
+      "title": "[성장엔진 브랜드 단과대학 및 AI 거점대학 패키지] 첨단융합학부 Physical AI용 전지·반도체 소재의 신뢰성 분석 시스템 구매",
+      "org": "부산대학교",
+      "top_org": "교육부",
+      "org_kind": "교육기관",
+      "order_ym": "2026-11",
+      "amount_eok": 8.0,
+      "contract_method": "일반경쟁",
+      "procurement": "중앙조달",
+      "dept": "연구처",
+      "tel": "051-510-3173",
+      "posted_date": "2026-11-13",
+      "bid_nos": [],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20928656",
+      "biz": "thng",
+      "biz_div": "물품",
+      "product": "열차별분석기",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
+    {
+      "plan_no": "R26DD20928756",
+      "title": "지능형 AX 고도화 사업 개인정보 영향평가 용역",
+      "org": "국민건강보험공단",
+      "top_org": "국민건강보험공단",
+      "org_kind": "준정부기관",
+      "order_ym": "2026-11",
+      "amount_eok": 0.99,
+      "contract_method": "제한경쟁",
+      "procurement": "자체조달",
+      "dept": "안전경영실 계약부",
+      "tel": "033-736-1648",
+      "posted_date": "2026-11-13",
+      "bid_nos": [],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20928756",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화"
+    },
+    {
+      "plan_no": "R26DD20928863",
+      "title": "선제적 수입식품 안전관리를 위한 지능형 스크리닝 체계 구축 기획연구",
+      "org": "식품의약품안전처",
+      "top_org": "식품의약품안전처",
+      "org_kind": "국가기관",
+      "order_ym": "2026-11",
+      "amount_eok": 0.5,
+      "contract_method": "제한경쟁",
+      "procurement": "자체조달",
+      "dept": "수입검사관리과",
+      "tel": "043-719-2212",
+      "posted_date": "2026-11-13",
+      "bid_nos": [],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20928863",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AX·전략"
+      ],
+      "nature": "ISP·전략"
+    },
+    {
+      "plan_no": "R26DD20929153",
+      "title": "2026년 첨단제작 집중지원 영화 〈바위〉 AI 활용 제작 용역 입찰공고",
+      "org": "주식회사 영화적순간",
+      "top_org": "주식회사 영화적순간",
+      "org_kind": "기타기관",
+      "order_ym": "2026-11",
+      "amount_eok": 0.616,
+      "contract_method": "제한경쟁",
+      "procurement": "자체조달",
+      "dept": "영화제작팀",
+      "tel": "***********",
+      "posted_date": "2026-11-13",
+      "bid_nos": [],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20929153",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
     },
     {
       "plan_no": "R26DD20561940",

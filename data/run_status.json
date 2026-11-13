@@ -1,40 +1,40 @@
 {
   "stages": {
     "collect": {
-      "last_attempt_at": "2026-11-12T12:47:05Z",
+      "last_attempt_at": "2026-11-13T05:05:21Z",
       "last_outcome": "success",
-      "last_success_at": "2026-11-12T12:47:05Z"
+      "last_success_at": "2026-11-13T05:05:21Z"
     },
     "awards": {
-      "last_attempt_at": "2026-11-12T06:41:20Z",
+      "last_attempt_at": "2026-11-13T05:05:21Z",
       "last_outcome": "success",
-      "last_success_at": "2026-11-12T06:41:20Z"
+      "last_success_at": "2026-11-13T05:05:21Z"
     },
     "bidders": {
-      "last_attempt_at": "2026-11-12T06:41:20Z",
+      "last_attempt_at": "2026-11-13T05:05:21Z",
       "last_outcome": "success",
-      "last_success_at": "2026-11-12T06:41:20Z"
+      "last_success_at": "2026-11-13T05:05:21Z"
     },
     "prespecs": {
-      "last_attempt_at": "2026-11-12T12:47:05Z",
+      "last_attempt_at": "2026-11-13T05:05:21Z",
       "last_outcome": "success",
-      "last_success_at": "2026-11-12T12:47:05Z"
+      "last_success_at": "2026-11-13T05:05:21Z"
     },
     "firms": {
-      "last_attempt_at": "2026-11-12T06:41:20Z",
+      "last_attempt_at": "2026-11-13T05:05:21Z",
       "last_outcome": "success",
-      "last_success_at": "2026-11-12T06:41:20Z"
+      "last_success_at": "2026-11-13T05:05:21Z"
     },
     "plans": {
-      "last_attempt_at": "2026-11-12T12:47:05Z",
+      "last_attempt_at": "2026-11-13T05:05:21Z",
       "last_outcome": "success",
-      "last_success_at": "2026-11-12T12:47:05Z"
+      "last_success_at": "2026-11-13T05:05:21Z"
     },
     "contracts": {
-      "last_attempt_at": "2026-11-12T12:47:05Z",
+      "last_attempt_at": "2026-11-13T05:05:21Z",
       "last_outcome": "success",
-      "last_success_at": "2026-11-12T12:47:05Z"
+      "last_success_at": "2026-11-13T05:05:21Z"
     }
   },
-  "run_id": "43220507167"
+  "run_id": "43368821556"
 }
