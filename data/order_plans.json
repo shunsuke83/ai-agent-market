@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-13T04:58:48Z",
+  "generated_at": "2026-11-13T12:14:23Z",
   "plans": [
     {
       "plan_no": "R26DD20515816",
@@ -3011,7 +3011,9 @@
       "dept": "사무처",
       "tel": "055-751-2026",
       "posted_date": "2026-11-12",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01830257"
+      ],
       "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20928139",
       "biz": "servc",
       "biz_div": "일반용역",
@@ -3141,6 +3143,252 @@
         "AI 일반"
       ],
       "nature": null
+    },
+    {
+      "plan_no": "R26DD20929416",
+      "title": "2027년 AI 무역지원센터 운영 용역",
+      "org": "대한무역투자진흥공사",
+      "top_org": "대한무역투자진흥공사",
+      "org_kind": "준정부기관",
+      "order_ym": "2026-11",
+      "amount_eok": 12.155,
+      "contract_method": "일반경쟁",
+      "procurement": "자체조달",
+      "dept": "AI마케팅팀",
+      "tel": "02-3460-3454",
+      "posted_date": "2026-11-13",
+      "bid_nos": [],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20929416",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
+    {
+      "plan_no": "R26DD20929501",
+      "title": "[성장엔진 브랜드 단과대학 및 AI 거점대학 패키지] 기계공학부 수소 품질관리 분석 시스템(GC-MS 기반) 구매",
+      "org": "부산대학교",
+      "top_org": "교육부",
+      "org_kind": "교육기관",
+      "order_ym": "2026-11",
+      "amount_eok": 1.5663,
+      "contract_method": "제한경쟁",
+      "procurement": "중앙조달",
+      "dept": "연구처",
+      "tel": "051-510-3173",
+      "posted_date": "2026-11-13",
+      "bid_nos": [],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20929501",
+      "biz": "thng",
+      "biz_div": "물품",
+      "product": "질량분석기",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
+    {
+      "plan_no": "R26DD20929552",
+      "title": "(26G056-H)군 의료지원 AI로봇 적용 실증 용역",
+      "org": "국방부 국군재정관리단",
+      "top_org": "국방부",
+      "org_kind": "국가기관",
+      "order_ym": "2026-11",
+      "amount_eok": 2.96,
+      "contract_method": "일반경쟁",
+      "procurement": "자체조달",
+      "dept": "제1물자계약과",
+      "tel": "02-3146-6615",
+      "posted_date": "2026-11-13",
+      "bid_nos": [
+        "R26BK01829923"
+      ],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20929552",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "의료·바이오 AI"
+      ],
+      "nature": null
+    },
+    {
+      "plan_no": "R26DD20929610",
+      "title": "(26G057-H)AI 기반 문진, 진료보조체계 개발 실증",
+      "org": "국방부 국군재정관리단",
+      "top_org": "국방부",
+      "org_kind": "국가기관",
+      "order_ym": "2026-11",
+      "amount_eok": 4.53,
+      "contract_method": "일반경쟁",
+      "procurement": "자체조달",
+      "dept": "제1물자계약과",
+      "tel": "02-3146-6615",
+      "posted_date": "2026-11-13",
+      "bid_nos": [
+        "R26BK01829962"
+      ],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20929610",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화"
+    },
+    {
+      "plan_no": "R26DD20929681",
+      "title": "2027년 서울로봇인공지능과학관 전시 운영 및 콘텐츠 기획·개발 용역",
+      "org": "서울시립과학관",
+      "top_org": "서울특별시",
+      "org_kind": "지방자치단체",
+      "order_ym": "2026-11",
+      "amount_eok": 11.2225,
+      "contract_method": "일반경쟁",
+      "procurement": "자체조달",
+      "dept": "서울로봇인공지능과학관",
+      "tel": "02-920-4313",
+      "posted_date": "2026-11-13",
+      "bid_nos": [
+        "R26BK01830056"
+      ],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20929681",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "연구·교육·행사"
+    },
+    {
+      "plan_no": "R26DD20929744",
+      "title": "피지컬AI 기반 건설로보틱스 활성화 방안 연구",
+      "org": "국토교통부",
+      "top_org": "국토교통부",
+      "org_kind": "국가기관",
+      "order_ym": "2026-11",
+      "amount_eok": 0.6,
+      "contract_method": "제한경쟁",
+      "procurement": "자체조달",
+      "dept": "건설산업과",
+      "tel": "044-201-3546",
+      "posted_date": "2026-11-13",
+      "bid_nos": [],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20929744",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
+    {
+      "plan_no": "R26DD20929890",
+      "title": "2027년 지능형교통체계(ITS) 통합유지관리 용역",
+      "org": "대구광역시",
+      "top_org": "대구광역시",
+      "org_kind": "지방자치단체",
+      "order_ym": "2026-11",
+      "amount_eok": 9.5054,
+      "contract_method": "제한경쟁",
+      "procurement": "자체조달",
+      "dept": "교통정보운영과",
+      "tel": "053-803-6717",
+      "posted_date": "2026-11-13",
+      "bid_nos": [],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20929890",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "운영·유지보수"
+    },
+    {
+      "plan_no": "R26DD20929973",
+      "title": "AI 데이터 기반 R&D 정보 분석·매칭 및 산학연협력 체계 구축을 위한「개방형 산학연 공유플랫폼 OCEAN+」기능 개발",
+      "org": "한국해양대학교 산학협력단",
+      "top_org": "교육부",
+      "org_kind": "기타기관",
+      "order_ym": "2026-11",
+      "amount_eok": 1.04,
+      "contract_method": "제한경쟁",
+      "procurement": "자체조달",
+      "dept": "산학협력단",
+      "tel": "051-410-5218",
+      "posted_date": "2026-11-13",
+      "bid_nos": [],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20929973",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화"
+    },
+    {
+      "plan_no": "R26DD20929996",
+      "title": "2026년 공공 AI서비스 성과관리 용역",
+      "org": "한국지능정보사회진흥원",
+      "top_org": "한국지능정보사회진흥원",
+      "org_kind": "준정부기관",
+      "order_ym": "2026-11",
+      "amount_eok": 1.9882,
+      "contract_method": "제한경쟁",
+      "procurement": "중앙조달",
+      "dept": "AI정부사업팀",
+      "tel": "053-230-1620",
+      "posted_date": "2026-11-13",
+      "bid_nos": [],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20929996",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
+    {
+      "plan_no": "R26DD20930069",
+      "title": "2027년 교통정보센터 지능형교통시스템(ITS) 유지보수 용역",
+      "org": "전남광주통합특별시 광주청사",
+      "top_org": "전남광주통합특별시",
+      "org_kind": "지방자치단체",
+      "order_ym": "2026-11",
+      "amount_eok": 11.07,
+      "contract_method": "제한경쟁",
+      "procurement": "자체조달",
+      "dept": "교통운영과",
+      "tel": "062-613-4701",
+      "posted_date": "2026-11-13",
+      "bid_nos": [],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20930069",
+      "biz": "servc",
+      "biz_div": "기술용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "운영·유지보수"
     },
     {
       "plan_no": "R26DD20561940",
@@ -3439,6 +3687,56 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화"
+    },
+    {
+      "plan_no": "R26DD20929757",
+      "title": "교수학습개발센터 [대학혁신지원사업] AI 기반 교수학습지원시스템(LMS) 신규 구축",
+      "org": "계명대학교",
+      "top_org": "교육부",
+      "org_kind": "교육기관",
+      "order_ym": "2026-12",
+      "amount_eok": 13.11,
+      "contract_method": "제한경쟁",
+      "procurement": "자체조달",
+      "dept": "교수학습개발센터 행정팀",
+      "tel": "053-580-6493",
+      "posted_date": "2026-11-13",
+      "bid_nos": [],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20929757",
+      "biz": "thng",
+      "biz_div": "물품",
+      "product": "교수학습지원시스템(LMS)",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화"
+    },
+    {
+      "plan_no": "R26DD20929768",
+      "title": "[대학혁신] 대구대학교 2026학년도 차세대 통합 교육 플랫폼(AI LXP) 구축 사업",
+      "org": "대구대학교",
+      "top_org": "교육부",
+      "org_kind": "교육기관",
+      "order_ym": "2026-12",
+      "amount_eok": 7.15,
+      "contract_method": "제한경쟁",
+      "procurement": "자체조달",
+      "dept": "총무팀",
+      "tel": "053-850-5342",
+      "posted_date": "2026-11-13",
+      "bid_nos": [
+        "R26BK01830187"
+      ],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20929768",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "연구·교육·행사"
     },
     {
       "plan_no": "R26DD20883591",

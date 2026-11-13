@@ -1,7 +1,65 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-13T04:58:59Z",
+  "generated_at": "2026-11-13T12:14:31Z",
   "contracts": [
+    {
+      "contract_no": "R26TA01599260",
+      "title": "2026년 천안AI꿈키움터 체험프로그램 참가 전세버스 임차용역",
+      "org": "충청남도교육청 충청남도천안교육지원청",
+      "contract_org": "충청남도교육청 충청남도천안교육지원청",
+      "signed_date": "2026-11-13",
+      "period_text": "금차 278일, 총차 278일",
+      "end_date": "2026-12-18",
+      "amount_eok": 1.3982,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "(주)오케이관광",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "3128179637"
+        }
+      ],
+      "bid_no": "R26BK01364418",
+      "registered_at": "2026-11-13 10:39",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA01599260&ctrtChgOrd=01&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
+    {
+      "contract_no": "R26TA02422678",
+      "title": "2027년 주간 AI ICT 정보서비스 제공 및 주간기술동향지 작성을 위한 정보조사 연구",
+      "org": "한국연구재단 정보통신기획평가원",
+      "contract_org": "조달청 대전지방조달청",
+      "signed_date": "2026-11-13",
+      "period_text": "2027/12/17",
+      "end_date": "2027-12-17",
+      "amount_eok": 2.2,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "이씨이십일알앤씨주식회사",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "4638101311"
+        }
+      ],
+      "bid_no": "R26BK01772590",
+      "registered_at": "2026-11-13 11:15",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02422678&ctrtChgOrd=00&prcmBsneSeCd=조070002&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
     {
       "contract_no": "R26TA01936816",
       "title": "국립아시아문화전당 AI 기반 아카이브 ISMP 수립",
@@ -42,6 +100,122 @@
         "AX·전략"
       ],
       "nature": "ISP·전략"
+    },
+    {
+      "contract_no": "R26TA02150084",
+      "title": "외국인 근로자 대상 한국어 말하기 자동채점(AI기반)시스템 도입 용역",
+      "org": "울산대학교",
+      "contract_org": "울산대학교",
+      "signed_date": "2026-11-12",
+      "period_text": "금차 73일, 총차 73일",
+      "end_date": "2026-12-04",
+      "amount_eok": 4.0137,
+      "long_term": "신규",
+      "method": "일반경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 에듀템",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "2958700424"
+        }
+      ],
+      "bid_no": "R26BK01518514",
+      "registered_at": "2026-11-13 13:10",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02150084&ctrtChgOrd=02&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화"
+    },
+    {
+      "contract_no": "R26TA01986235",
+      "title": "2026년 경기도 AI 글로벌 챌린지-글로벌 오픈이노베이션 프로그램 운영 용역",
+      "org": "(재)경기도경제과학진흥원",
+      "contract_org": "(재)경기도경제과학진흥원",
+      "signed_date": "2026-11-12",
+      "period_text": "금차 179일, 총차 179일",
+      "end_date": "2027-03-08",
+      "amount_eok": 3.393,
+      "long_term": "신규",
+      "method": "일반경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 그래비티벤처스",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "1708802251"
+        }
+      ],
+      "bid_no": "R26BK01498222",
+      "registered_at": "2026-11-13 11:05",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA01986235&ctrtChgOrd=01&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
+    {
+      "contract_no": "R25TA01232585",
+      "title": "2026년 지능형교통시스템 유지보수(단가계약)",
+      "org": "경기도 남양주시",
+      "contract_org": "경기도 남양주시",
+      "signed_date": "2026-11-12",
+      "period_text": "금차 365일, 총차 365일",
+      "end_date": "2026-12-31",
+      "amount_eok": 2.19,
+      "long_term": "장기",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "뉴테크원",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "2204500435"
+        }
+      ],
+      "bid_no": "R25BK01201396",
+      "registered_at": "2026-11-13 14:28",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R25TA01232585&ctrtChgOrd=01&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "운영·유지보수"
+    },
+    {
+      "contract_no": "R26TA02409309",
+      "title": "2026년 초·중등 AI 활용 교과 수업모형·지도안 영상 및 교사 안내용 콘텐츠 개발·보급 위탁 용역",
+      "org": "한국교원대학교 산학협력단",
+      "contract_org": "조달청 충북지방조달청",
+      "signed_date": "2026-11-12",
+      "period_text": "2027/02/19",
+      "end_date": "2027-02-19",
+      "amount_eok": 1.9,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 상록에스",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "2158197498"
+        }
+      ],
+      "bid_no": "R26BK01758659",
+      "registered_at": "2026-11-13 09:47",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02409309&ctrtChgOrd=00&prcmBsneSeCd=조070002&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "비전·영상"
+      ],
+      "nature": "연구·교육·행사"
     },
     {
       "contract_no": "R26TA02052751",
@@ -129,6 +303,35 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화"
+    },
+    {
+      "contract_no": "R26TA02419020",
+      "title": "인천대학교 AI 기반 교육지원시스템 4단계 구축 용역 계약",
+      "org": "인천대학교",
+      "contract_org": "인천대학교",
+      "signed_date": "2026-11-11",
+      "period_text": "금차 96일, 총차 96일",
+      "end_date": "2027-02-26",
+      "amount_eok": 4.04,
+      "long_term": "신규",
+      "method": "수의계약",
+      "joint": false,
+      "firms": [
+        {
+          "name": "(주)유비온",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "1198134860"
+        }
+      ],
+      "bid_no": null,
+      "registered_at": "2026-11-13 11:25",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02419020&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "연구·교육·행사"
     },
     {
       "contract_no": "R26TA02410576",
@@ -825,35 +1028,6 @@
       "scope": "AI SW 확대",
       "fields": [
         "데이터·예측"
-      ],
-      "nature": "시스템 구축·고도화"
-    },
-    {
-      "contract_no": "R26TA02150084",
-      "title": "외국인 근로자 대상 한국어 말하기 자동채점(AI기반)시스템 도입 용역",
-      "org": "울산대학교",
-      "contract_org": "울산대학교",
-      "signed_date": "2026-10-30",
-      "period_text": "금차 73일, 총차 73일",
-      "end_date": "2026-11-13",
-      "amount_eok": 4.0137,
-      "long_term": "신규",
-      "method": "일반경쟁",
-      "joint": false,
-      "firms": [
-        {
-          "name": "주식회사 에듀템",
-          "role": "주계약업체",
-          "share": 100.0,
-          "bizno": "2958700424"
-        }
-      ],
-      "bid_no": "R26BK01518514",
-      "registered_at": "2026-10-30 18:14",
-      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02150084&ctrtChgOrd=01&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
-      "scope": "AI SW 확대",
-      "fields": [
-        "AI 일반"
       ],
       "nature": "시스템 구축·고도화"
     },
@@ -18036,35 +18210,6 @@
       "nature": null
     },
     {
-      "contract_no": "R26TA01986235",
-      "title": "2026년 경기도 AI 글로벌 챌린지-글로벌 오픈이노베이션 프로그램 운영 용역",
-      "org": "(재)경기도경제과학진흥원",
-      "contract_org": "(재)경기도경제과학진흥원",
-      "signed_date": "2026-06-16",
-      "period_text": "금차 179일, 총차 179일",
-      "end_date": "2026-12-11",
-      "amount_eok": 3.393,
-      "long_term": "신규",
-      "method": "일반경쟁",
-      "joint": false,
-      "firms": [
-        {
-          "name": "주식회사 그래비티벤처스",
-          "role": "주계약업체",
-          "share": 100.0,
-          "bizno": "1708802251"
-        }
-      ],
-      "bid_no": "R26BK01498222",
-      "registered_at": "2026-06-26 08:57",
-      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA01986235&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
-      "scope": "AI SW 확대",
-      "fields": [
-        "AI 일반"
-      ],
-      "nature": null
-    },
-    {
       "contract_no": "R26TA01961858",
       "title": "설명가능성(XAI) 기반 고위험사업장 예측 고도화 및 산재예방 AI 구축 연구 용역",
       "org": "한국산업안전보건공단",
@@ -28564,35 +28709,6 @@
       "nature": "시스템 구축·고도화"
     },
     {
-      "contract_no": "R26TA01599260",
-      "title": "2026년 천안AI꿈키움터 체험프로그램 참가 전세버스 임차용역",
-      "org": "충청남도교육청 충청남도천안교육지원청",
-      "contract_org": "충청남도교육청 충청남도천안교육지원청",
-      "signed_date": "2026-03-11",
-      "period_text": "금차 278일, 총차 278일",
-      "end_date": "2026-12-18",
-      "amount_eok": 1.4382,
-      "long_term": "신규",
-      "method": "제한경쟁",
-      "joint": false,
-      "firms": [
-        {
-          "name": "(주)오케이관광",
-          "role": "주계약업체",
-          "share": 100.0,
-          "bizno": "3128179637"
-        }
-      ],
-      "bid_no": "R26BK01364418",
-      "registered_at": "2026-03-12 09:02",
-      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA01599260&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
-      "scope": "AI SW 확대",
-      "fields": [
-        "AI 일반"
-      ],
-      "nature": null
-    },
-    {
       "contract_no": "R26TA01593114",
       "title": "제조 AI 24 플랫폼 구축 정보화전략계획(ISP) 수립",
       "org": "중소기업기술정보진흥원",
@@ -35543,35 +35659,6 @@
         "AI 일반"
       ],
       "nature": null
-    },
-    {
-      "contract_no": "R25TA01232585",
-      "title": "2026년 지능형교통시스템 유지보수(단가계약)",
-      "org": "경기도 남양주시",
-      "contract_org": "경기도 남양주시",
-      "signed_date": "2025-12-22",
-      "period_text": "금차 365일, 총차 365일",
-      "end_date": "2026-12-31",
-      "amount_eok": 2.0,
-      "long_term": "장기",
-      "method": "제한경쟁",
-      "joint": false,
-      "firms": [
-        {
-          "name": "뉴테크원",
-          "role": "주계약업체",
-          "share": 100.0,
-          "bizno": "2204500435"
-        }
-      ],
-      "bid_no": "R25BK01201396",
-      "registered_at": "2025-12-22 10:38",
-      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R25TA01232585&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
-      "scope": "AI SW 확대",
-      "fields": [
-        "AI 일반"
-      ],
-      "nature": "운영·유지보수"
     },
     {
       "contract_no": "R25TA01224787",

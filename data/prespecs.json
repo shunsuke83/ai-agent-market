@@ -1,11 +1,195 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-13T04:58:34Z",
+  "generated_at": "2026-11-13T12:14:10Z",
   "range": {
-    "since": "2026-10-30",
+    "since": "2026-11-10",
     "until": "2026-11-13"
   },
   "prespecs": [
+    {
+      "prespec_no": "R26BD00300370",
+      "title": "AI 데이터 기반 R&D 정보 분석·매칭 및 산학연협력 체계 구축을 위한「개방형 산학연 공유플랫폼 OCEAN+」기능 개발",
+      "org": "한국해양대학교 산학협력단",
+      "order_org": "한국해양대학교 산학협력단",
+      "registered_at": "2026-11-13 18:44",
+      "registered_date": "2026-11-13",
+      "opinion_close_at": "2026-11-18 23:59",
+      "asign_budget_eok": 1.04,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00300370&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00300370&fileType=BFDTL&fileSeq=2",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00300370&fileType=BFDTL&fileSeq=3"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00300344",
+      "title": "IBK하남데이터센터 H/W 2차 유지관리(BLUEMAX) 2027 연장",
+      "org": "중소기업은행",
+      "order_org": "(주)아이비케이시스템",
+      "registered_at": "2026-11-13 17:31",
+      "registered_date": "2026-11-13",
+      "opinion_close_at": "2026-11-18 23:59",
+      "asign_budget_eok": 2.0112,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 인프라"
+      ],
+      "nature": "운영·유지보수",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00300344&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00300344&fileType=BFDTL&fileSeq=2",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00300344&fileType=BFDTL&fileSeq=3",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00300344&fileType=BFDTL&fileSeq=4"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
+    {
+      "prespec_no": "R26BD00300333",
+      "title": "(긴급)2027년 지능형교통체계(ITS) 통합유지관리 용역",
+      "org": "대구광역시",
+      "order_org": "대구광역시",
+      "registered_at": "2026-11-13 17:22",
+      "registered_date": "2026-11-13",
+      "opinion_close_at": "2026-11-17 23:59",
+      "asign_budget_eok": 9.5054,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "운영·유지보수",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00300333&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
+    {
+      "prespec_no": "R26BD00300244",
+      "title": "교수학습개발센터 [대학혁신지원사업] AI 기반 교수학습지원시스템(LMS) 신규 구축",
+      "org": "계명대학교",
+      "order_org": "계명대학교",
+      "registered_at": "2026-11-13 16:33",
+      "registered_date": "2026-11-13",
+      "opinion_close_at": "2026-11-16 23:59",
+      "asign_budget_eok": 13.11,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00300244&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "thng",
+      "biz_div": "물품",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00300234",
+      "title": "피지컬AI 기반 건설로보틱스 활성화 방안 연구",
+      "org": "국토교통부",
+      "order_org": "국토교통부",
+      "registered_at": "2026-11-13 16:27",
+      "registered_date": "2026-11-13",
+      "opinion_close_at": "2026-11-18 23:59",
+      "asign_budget_eok": 0.6,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00300234&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00300214",
+      "title": "2027년 AI 무역지원센터 운영 용역",
+      "org": "대한무역투자진흥공사",
+      "order_org": "대한무역투자진흥공사",
+      "registered_at": "2026-11-13 16:15",
+      "registered_date": "2026-11-13",
+      "opinion_close_at": "2026-11-18 23:59",
+      "asign_budget_eok": 12.155,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00300214&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00300214&fileType=BFDTL&fileSeq=2"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00300161",
+      "title": "AI-K컬처 로컬라이징 모델 구축 및 문화균형발전 방안 연구",
+      "org": "서울특별시 의회사무처",
+      "order_org": "서울특별시 의회사무처",
+      "registered_at": "2026-11-13 15:51",
+      "registered_date": "2026-11-13",
+      "opinion_close_at": "2026-11-18 23:59",
+      "asign_budget_eok": 0.6,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00300161&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00300161&fileType=BFDTL&fileSeq=2",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00300161&fileType=BFDTL&fileSeq=3"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00300134",
+      "title": "AI 융합형 수산물 품질안전관리 시스템 구축 ISP",
+      "org": "해양수산부 국립수산물품질관리원",
+      "order_org": "해양수산부 국립수산물품질관리원",
+      "registered_at": "2026-11-13 15:35",
+      "registered_date": "2026-11-13",
+      "opinion_close_at": "2026-11-18 23:59",
+      "asign_budget_eok": 1.8,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AX·전략"
+      ],
+      "nature": "ISP·전략",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00300134&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
     {
       "prespec_no": "R26BD00299915",
       "title": "2026년 첨단제작 집중지원 영화 〈바위〉 AI 활용 제작 용역 입찰공고",
@@ -177,7 +361,9 @@
         "AI 일반"
       ],
       "nature": "연구·교육·행사",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01830257"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00299460&fileType=BFDTL&fileSeq=1"
       ],
@@ -559,7 +745,7 @@
       "order_org": "부산광역시교육청 부산광역시교육청창의융합교육원",
       "registered_at": "2026-11-12 10:36",
       "registered_date": "2026-11-12",
-      "opinion_close_at": "2026-11-18 23:59",
+      "opinion_close_at": "2026-11-17 10:00",
       "asign_budget_eok": 2.21,
       "scope": "AI SW 확대",
       "fields": [
