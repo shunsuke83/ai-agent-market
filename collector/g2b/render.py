@@ -7,7 +7,7 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
-from .normalize import band_excluded, in_band, merge_by_bid, sort_notices
+from .normalize import band_excluded, collapse_rounds, in_band, merge_by_bid, read_notices, sort_notices
 from .classify import classify_nature, load_keywords
 from .seed import load_seed
 from .site import detail_href, stamp_shell
@@ -216,11 +216,11 @@ def load_merged_band(
     incoming: list[dict[str, Any]] = []
     if notices_path.exists():
         raw = json.loads(notices_path.read_text(encoding="utf-8"))
-        for n in raw.get("notices") or raw.get("band_notices") or []:
+        for n in collapse_rounds(list(raw.get("notices") or raw.get("band_notices") or [])):
             if in_band(n, rules):
                 incoming.append(n)
 
-    merged = sort_notices(merge_by_bid(existing, incoming))
+    merged = sort_notices(collapse_rounds(merge_by_bid(existing, incoming)))
     today = _today_kst()
     kept: list[dict[str, Any]] = []
     for n in merged:
@@ -562,9 +562,8 @@ def load_followup_candidates(
     notices_path = repo_root / "data" / "notices.json"
     if not notices_path.exists():
         return [], 0
-    raw = json.loads(notices_path.read_text(encoding="utf-8"))
     rows: list[dict[str, Any]] = []
-    for n in raw.get("notices") or []:
+    for n in read_notices(notices_path):
         nature = n.get("nature") or classify_nature(n.get("title") or "", rules)
         if nature != "ISP·전략":
             continue
@@ -823,8 +822,7 @@ def load_large_awards(repo_root: Path) -> list[dict[str, Any]]:
 
     incoming: list[dict[str, Any]] = []
     if notices_path.exists():
-        raw = json.loads(notices_path.read_text(encoding="utf-8"))
-        for n in raw.get("notices") or []:
+        for n in read_notices(notices_path):
             n, _ = sanitize_notice_money_fields(n)
             b = coerce_stored_eok(n.get("budget_eok"))
             if b is None:
@@ -852,7 +850,7 @@ def load_large_awards(repo_root: Path) -> list[dict[str, Any]]:
                 }
             )
 
-    merged = merge_by_bid(existing, incoming)
+    merged = collapse_rounds(merge_by_bid(existing, incoming))
     # Drop rows whose budget is still missing or below threshold after coerce
     kept: list[dict[str, Any]] = []
     for r in merged:
@@ -888,7 +886,7 @@ def load_award_pool(repo_root: Path) -> list[dict[str, Any]]:
     notices_path = repo_root / "data" / "notices.json"
     if notices_path.exists():
         raw = json.loads(notices_path.read_text(encoding="utf-8"))
-        rows = merge_by_bid(rows, list(raw.get("notices") or []))
+        rows = collapse_rounds(merge_by_bid(rows, list(raw.get("notices") or [])))
 
     for n in rows:
         if not n.get("winner"):
@@ -1040,7 +1038,7 @@ def load_needs_confirm(
         raw = json.loads(notices_path.read_text(encoding="utf-8"))
         rows = list(raw.get("notices") or [])
     band = load_merged_band(repo_root)
-    merged = merge_by_bid(band, rows)
+    merged = collapse_rounds(merge_by_bid(band, rows))
     live: list[dict[str, Any]] = []
     for n in merged:
         st = infer_status(n, today)
@@ -1233,10 +1231,7 @@ def render_awards_page(repo_root: Path) -> dict[str, Any]:
     # 자주 투찰: OpengCompt bidder lists. Prefer 구축·고도화 ≥3; ease threshold
     # while bidder coverage is still growing.
     notices_path = repo_root / "data" / "notices.json"
-    bidder_notices: list[dict[str, Any]] = []
-    if notices_path.exists():
-        raw_n = json.loads(notices_path.read_text(encoding="utf-8"))
-        bidder_notices = list(raw_n.get("notices") or [])
+    bidder_notices = read_notices(notices_path)
     frequent = aggregate_frequent_bidders(
         bidder_notices, min_bids=3, limit=20, build_only=True, rules=rules
     )
@@ -1304,7 +1299,7 @@ def update_awards_stats(
     all_rows = list(band)
     if notices_path.exists():
         raw = json.loads(notices_path.read_text(encoding="utf-8"))
-        all_rows = merge_by_bid(all_rows, list(raw.get("notices") or []))
+        all_rows = collapse_rounds(merge_by_bid(all_rows, list(raw.get("notices") or [])))
 
     opened = 0
     with_winner = 0

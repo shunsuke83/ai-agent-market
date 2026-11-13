@@ -449,11 +449,10 @@ def build_pricing(notices: list[dict[str, Any]], run_status: dict[str, Any], tod
     return page("투찰·경쟁 분석", body)
 
 
-def load_notices(repo_root: Path) -> list[dict[str, Any]]:
-    path = repo_root / "data" / "notices.json"
-    if not path.exists():
-        return []
-    return list(json.loads(path.read_text(encoding="utf-8")).get("notices") or [])
+def load_notices(repo_root: Path, *, collapse: bool = True) -> list[dict[str, Any]]:
+    from .normalize import read_notices
+
+    return read_notices(repo_root / "data" / "notices.json", collapse=collapse)
 
 
 def render_pricing_page(repo_root: Path, today: date | None = None) -> dict[str, Any]:

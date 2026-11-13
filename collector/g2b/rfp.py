@@ -513,7 +513,7 @@ def run_summaries(
     summaries = load_summaries(repo_root)
     wanted = {b.strip().split("-")[0] for b in bids or [] if b.strip()}
     forced = {b: summaries.pop(b) for b in wanted if b in summaries}
-    todo = pending(load_notices(repo_root), prespecs_by_bid(repo_root), summaries, now, bool(key))
+    todo = pending(load_notices(repo_root, collapse=False), prespecs_by_bid(repo_root), summaries, now, bool(key))
     summaries.update({b: e for b, e in forced.items() if b not in summaries})
     first = [r for r in todo if r[0]["bid_no"] in wanted]
     rest = [r for r in todo if r[0]["bid_no"] not in wanted]

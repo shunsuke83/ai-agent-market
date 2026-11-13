@@ -9,7 +9,7 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import quote
 
-from .normalize import merge_by_bid
+from .normalize import collapse_rounds, merge_by_bid
 from .render import (
     AMOUNT_UNKNOWN,
     _award_amount,
@@ -40,7 +40,7 @@ def load_detail_notices(repo_root: Path) -> list[dict[str, Any]]:
     incoming = []
     if path.exists():
         incoming = [n for n in json.loads(path.read_text(encoding="utf-8")).get("notices") or [] if n.get("bid_no")]
-    return merge_by_bid(existing, incoming)
+    return collapse_rounds(merge_by_bid(existing, incoming))
 
 
 def _kv(label: str, value: str) -> str:

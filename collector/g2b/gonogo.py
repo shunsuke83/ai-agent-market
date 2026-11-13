@@ -310,7 +310,7 @@ def run_gonogo(
 
     now = now or datetime.now(KST)
     gemini_key = os.environ.get("GEMINI_API_KEY", "") if gemini_key is None else gemini_key
-    notices = load_notices(repo_root)
+    notices = load_notices(repo_root, collapse=False)
     contexts = ContextIndex(notices)
     incumbents = IncumbentIndex(load_contracts(repo_root), now.date())
     summaries = load_summaries(repo_root)

@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import html
-import json
 import re
 from collections import Counter
 from pathlib import Path
@@ -87,13 +86,12 @@ def load_win_pool(repo_root: Path) -> list[dict[str, Any]]:
     boot = load_seed(repo_root)
     rows: list[dict[str, Any]] = list(boot.get("band_notices") or [])
     rows += list(boot.get("large_awards") or [])
-    notices_path = repo_root / "data" / "notices.json"
-    if notices_path.exists():
-        raw = json.loads(notices_path.read_text(encoding="utf-8"))
-        rows += list(raw.get("notices") or [])
+    from .normalize import collapse_rounds, read_notices
+
+    rows += read_notices(repo_root / "data" / "notices.json")
     return [
         n
-        for n in merge_by_bid([], rows)
+        for n in collapse_rounds(merge_by_bid([], rows))
         if n.get("winner") and infer_status(n) == "낙찰"
     ]
 
@@ -110,11 +108,9 @@ def load_seed_overview(repo_root: Path) -> dict[str, dict[str, Any]]:
 
 
 def load_all_notices(repo_root: Path) -> list[dict[str, Any]]:
-    path = repo_root / "data" / "notices.json"
-    if not path.exists():
-        return []
-    raw = json.loads(path.read_text(encoding="utf-8"))
-    return list(raw.get("notices") or [])
+    from .normalize import read_notices
+
+    return read_notices(repo_root / "data" / "notices.json")
 
 
 def build_bizno_index(competitors: list[dict[str, Any]]) -> dict[str, str]:

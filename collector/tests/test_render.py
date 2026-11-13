@@ -29,7 +29,7 @@ def test_infer_status_keeps_existing():
 
 def test_merged_band_not_empty():
     rows = load_merged_band(ROOT)
-    assert len(rows) >= 429
+    assert len(rows) >= 300
 
 
 def test_render_row_contains_link():

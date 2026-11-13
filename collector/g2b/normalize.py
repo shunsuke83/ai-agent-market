@@ -1,7 +1,9 @@
 from __future__ import annotations
 
+import json
 import re
-from datetime import datetime
+from datetime import date, datetime
+from pathlib import Path
 from typing import Any
 
 from .classify import _has_any, classify_title, load_keywords
@@ -304,6 +306,86 @@ def merge_by_bid(existing: list[dict[str, Any]], incoming: list[dict[str, Any]])
                 merged[k] = v
         by_key[key] = merged
     return list(by_key.values())
+
+
+def _ord(row: dict[str, Any]) -> int:
+    try:
+        return int(str(row.get("bid_ord") or "0"))
+    except ValueError:
+        return 0
+
+
+def is_cancelled(row: dict[str, Any]) -> bool:
+    return "취소" in (row.get("ntce_kind") or "")
+
+
+def collapse_rounds(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """One row per 공고번호 for display: the latest 차수, with blanks (낙찰·투찰 결과 등) filled
+    from earlier 차수. A 공고 whose latest 차수 is a 취소공고 is dropped, and so is a 공고 without
+    a winner that a later 재공고 (prev_bid_no) replaced.
+
+    notices.json keeps every 차수 because award/bidder enrichment is keyed by 공고번호-차수.
+    """
+    groups: dict[str, list[dict[str, Any]]] = {}
+    out: list[dict[str, Any]] = []
+    for row in rows:
+        if row.get("bid_no"):
+            groups.setdefault(str(row["bid_no"]), []).append(row)
+        else:
+            out.append(row)
+    for rounds in groups.values():
+        rounds.sort(key=_ord, reverse=True)
+        if is_cancelled(rounds[0]):
+            continue
+        merged = dict(rounds[0])
+        for older in rounds[1:]:
+            for k, v in older.items():
+                if merged.get(k) in (None, "", [], {}) and v not in (None, "", [], {}):
+                    merged[k] = v
+        out.append(merged)
+    replaced = {str(r["prev_bid_no"]) for r in out if r.get("prev_bid_no") and r.get("bid_no")}
+    out = [r for r in out if not (str(r.get("bid_no") or "") in replaced and not r.get("winner"))]
+    return _drop_reissued(out)
+
+
+REISSUE_DAYS = 120
+
+
+def _notice_day(row: dict[str, Any]) -> date | None:
+    try:
+        return date.fromisoformat(str(row.get("notice_date") or "")[:10])
+    except ValueError:
+        return None
+
+
+def _drop_reissued(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """재공고 often gets a new 공고번호 without prev_bid_no. Drop an earlier 공고 with the same
+    title·기관 and no winner when a newer one was posted within REISSUE_DAYS."""
+    newest: dict[tuple[str, str], date] = {}
+    for r in rows:
+        day = _notice_day(r)
+        if r.get("bid_no") and day:
+            k = (" ".join(str(r.get("title") or "").split()), str(r.get("org") or ""))
+            if k[0] and (k not in newest or day > newest[k]):
+                newest[k] = day
+    out = []
+    for r in rows:
+        day = _notice_day(r)
+        k = (" ".join(str(r.get("title") or "").split()), str(r.get("org") or ""))
+        latest = newest.get(k)
+        if day and latest and day < latest and (latest - day).days <= REISSUE_DAYS and not r.get("winner"):
+            continue
+        out.append(r)
+    return out
+
+
+def read_notices(path: Path, *, collapse: bool = True) -> list[dict[str, Any]]:
+    """notices.json rows; collapsed for rendering (see collapse_rounds) unless collapse=False."""
+    if not path.exists():
+        return []
+    raw = json.loads(path.read_text(encoding="utf-8"))
+    rows = list(raw if isinstance(raw, list) else raw.get("notices") or [])
+    return collapse_rounds(rows) if collapse else rows
 
 
 def sort_notices(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
