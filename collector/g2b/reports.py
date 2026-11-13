@@ -135,13 +135,9 @@ def is_core(notice: dict[str, Any]) -> bool:
 
 
 def load_notices(repo_root: Path) -> list[dict[str, Any]]:
-    path = repo_root / "data" / "notices.json"
-    if not path.exists():
-        return []
-    raw = json.loads(path.read_text(encoding="utf-8"))
-    if isinstance(raw, list):
-        return raw
-    return list(raw.get("notices") or [])
+    from .normalize import read_notices
+
+    return read_notices(repo_root / "data" / "notices.json")
 
 
 def iso_week_bounds(year: int, week: int) -> tuple[date, date]:

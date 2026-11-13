@@ -326,12 +326,9 @@ def render_home(repo_root: Path, now: datetime | None = None) -> dict[str, Any]:
     path = repo_root / "index.html"
     old = path.read_text(encoding="utf-8") if path.exists() else ""
     m = _KEEP_BLOCK_RE.search(old)
-    notices_path = repo_root / "data" / "notices.json"
-    notices = (
-        json.loads(notices_path.read_text(encoding="utf-8")).get("notices") or []
-        if notices_path.exists()
-        else []
-    )
+    from .normalize import read_notices
+
+    notices = read_notices(repo_root / "data" / "notices.json")
     text = build_home(
         notices,
         load_prespecs(repo_root),
