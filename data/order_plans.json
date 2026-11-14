@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-13T12:14:23Z",
+  "generated_at": "2026-11-14T11:29:22Z",
   "plans": [
     {
       "plan_no": "R26DD20515816",
@@ -3389,6 +3389,32 @@
         "AI 일반"
       ],
       "nature": "운영·유지보수"
+    },
+    {
+      "plan_no": "R26DD20930084",
+      "title": "로보틱 햅틱 케인 LLM 시스템 구축 지원",
+      "org": "광주과학기술원",
+      "top_org": "과학기술정보통신부",
+      "org_kind": "기타기관",
+      "order_ym": "2026-11",
+      "amount_eok": 0.15,
+      "contract_method": "제한경쟁",
+      "procurement": "자체조달",
+      "dept": "계약팀",
+      "tel": "062-715-2133",
+      "posted_date": "2026-11-13",
+      "bid_nos": [
+        "R26BK01830636"
+      ],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20930084",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "생성형·Agent",
+      "fields": [
+        "생성형·LLM"
+      ],
+      "nature": "시스템 구축·고도화"
     },
     {
       "plan_no": "R26DD20561940",

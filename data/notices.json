@@ -1,12 +1,63 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-13T12:14:51Z",
+  "generated_at": "2026-11-14T11:29:49Z",
   "mode": "g2b_api",
   "range": {
-    "since": "2026-11-10",
-    "until": "2026-11-13"
+    "since": "2026-11-11",
+    "until": "2026-11-14"
   },
   "notices": [
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01830636",
+      "bid_ord": "000",
+      "notice_date": "2026-11-13",
+      "open_date": "2026-11-23",
+      "open_at": "2026-11-23 11:00",
+      "close_at": "2026-11-23 10:00",
+      "close_date": "2026-11-23",
+      "org": "광주과학기술원",
+      "title": "로보틱 햅틱 케인 LLM 시스템 구축 지원",
+      "scope": "생성형·Agent",
+      "fields": [
+        "생성형·LLM"
+      ],
+      "nature": "시스템 구축·고도화",
+      "budget_eok": 0.15,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 0.15,
+      "presmpt_eok": 0.1364,
+      "base_amount_eok": null,
+      "contract_method": "제한경쟁",
+      "ntce_kind": "등록공고",
+      "biz": "servc",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01830636&bidPbancOrd=000",
+      "award_method": "제한적최저가(낙찰하한율)-제한적최저가(낙찰하한율)",
+      "tech_rate": null,
+      "price_rate": null,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": true,
+      "participation_limit": false,
+      "record_limit": false,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": null,
+      "plan_no": "R26DD20930084",
+      "notice_files": [
+        {
+          "name": "로보틱 햅틱 케인 LLM 시스템 구축 지원 - 입찰공고문.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01830636&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        },
+        {
+          "name": "로보틱 햅틱 케인 LLM 시스템 구축 지원 - 입찰공고문.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01830636&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+        },
+        {
+          "name": "로보틱 햅틱 케인 LLM 시스템 구축 지원 - 과업지시서.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01830636&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+        }
+      ]
+    },
     {
       "source": "g2b_api",
       "bid_no": "R26BK01830561",
@@ -109601,20 +109652,20 @@
     }
   ],
   "stats": {
-    "raw": 177,
-    "classified": 166,
-    "stored": 1954,
+    "raw": 134,
+    "classified": 124,
+    "stored": 1955,
     "band": 490,
     "with_winner": 648,
     "awards": {
-      "fetched": 2513,
-      "updated": 10
+      "fetched": 1898,
+      "updated": 0
     },
     "scope": {
-      "생성형·Agent": 198,
+      "생성형·Agent": 199,
       "AI SW 확대": 1756
     },
     "budget_sanitized": 0
   },
-  "reclassified_at": "2026-11-13T12:14:51Z"
+  "reclassified_at": "2026-11-14T11:29:49Z"
 }
