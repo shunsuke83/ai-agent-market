@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-14T11:32:44Z",
+  "generated_at": "2026-11-15T12:01:13Z",
   "summaries": {
     "R26BK01745687": {
       "bid_no": "R26BK01745687",
@@ -10908,6 +10908,71 @@
       "model": "gemini-3.5-flash",
       "status": "ok"
     },
+    "R26BK01820788": {
+      "bid_no": "R26BK01820788",
+      "bid_ord": "000",
+      "source": "notice+prespec",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01820788&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01820788&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01820788&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01820788&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00297437&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00297437&fileType=BFDTL&fileSeq=2",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00297437&fileType=BFDTL&fileSeq=3"
+      ],
+      "updated_at": "2026-11-15T11:59:53Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "덕산고등학교 AI융합교실 교육용 키트 구입 수의계약 견적제출 안내공고.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01820788&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        },
+        {
+          "name": "물품구매 품목별 세부사양서(덕산고 AI융합교실 교육용키트).hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01820788&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01"
+        }
+      ],
+      "fields": {
+        "sme_only": true
+      },
+      "chars": 17222,
+      "summary": {
+        "overview": "본 사업은 덕산고등학교 AI 융합교실의 교육과정 운영에 필요한 인공지능 및 로봇 제어 실습용 교육 키트를 구입하기 위한 소액수의계약 입찰입니다. 계약상대자는 핑퐁로봇, 마이크로비트, AI 로봇팔 도프봇 등 지정된 교육용 기자재를 계약체결일로부터 20일 이내에 지정 장소로 납품하고 검수를 받아야 합니다.",
+        "evaluation": "예정가격 이하로서 예정가격 대비 견적가격을 88% 이상으로 제출한 자 중 최저가격을 제출한 순서대로 수의계약 배제사유에 해당하지 않는 업체를 계약상대자로 결정합니다.",
+        "tasks": [
+          "핑퐁로봇 AI 스쿨팩 및 AI 카메라 납품",
+          "뱀부랩 사이버브릭 키트 납품",
+          "마이크로비트 키트 및 마퀸 RC카 납품",
+          "AI 로봇팔 도프봇 납품",
+          "아두이노 올인원 키트 및 유니맷 에듀세트 납품",
+          "제품 수량·작동 검수 및 설치·사용법 안내"
+        ],
+        "tech": [
+          "핑퐁로봇 AI 스쿨팩",
+          "마이크로비트 V2.21",
+          "DOFBOT (Jetson Nano/라즈베리파이 5)",
+          "아두이노 UNO R3",
+          "뱀부랩 사이버브릭",
+          "3D프린터 PLA 필라멘트"
+        ],
+        "requirements": [
+          "법인등기부상 본점 소재지(개인사업자는 사업장 소재지)가 경기도인 업체",
+          "소기업 또는 소상공인확인서를 소지한 업체",
+          "해당 물품을 제조 또는 판매(도·소매)하며 사양서에 따라 납품 가능한 업체",
+          "나라장터 입찰참가자격 및 전자입찰 이용자 등록을 마친 업체",
+          "지방계약법 등 관련 법령에 의한 결격사유 및 수의계약 배제사유가 없는 업체"
+        ],
+        "cautions": [
+          "계약체결일로부터 20일 이내에 덕산고등학교 AI 융합교실로 납품 완료 필요",
+          "공동도급 및 지점(지사) 투찰 불가",
+          "도급받은 계약의 일부 또는 전부 양도 금지 (하도급 및 채권양도 금지)",
+          "학교 제시 물품 규격과 동등 이상 납품 필수 및 사전 미확인으로 인한 책임은 참가자에 있음"
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
+    },
     "R26BK01821113": {
       "bid_no": "R26BK01821113",
       "bid_ord": "000",
@@ -13785,6 +13850,188 @@
       "model": "gemini-3.5-flash",
       "status": "ok"
     },
+    "R26BK01828948": {
+      "bid_no": "R26BK01828948",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01828948&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01828948&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01828948&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
+      ],
+      "updated_at": "2026-11-15T11:59:12Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "규격서_AI 및 IoT 응용실험장비.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01828948&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        },
+        {
+          "name": "소액수의 견적공고_AI 및 IoT 실험장비.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01828948&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01"
+        }
+      ],
+      "fields": {},
+      "chars": 12648,
+      "summary": {
+        "overview": "국립경국대학교 기술교육전공의 운영기반 구축을 위해 AI 및 IoT 응용실습장비 20세트를 구매하는 사업입니다. 메인 모듈, 센서 및 액추에이터 모듈, 전용 운영체제(tOS-Lite), AI 학습 컨텐츠 등으로 구성된 장비를 계약 후 30일 이내 지정 장소에 납품하여야 합니다. 납품과 함께 사용자 교육을 실시하고 1년간의 무상 수리를 제공해야 합니다.",
+        "evaluation": "예정가격의 88% 이상으로 견적서를 제출한 자 중 최저가격 제출자를 계약상대자로 결정합니다.",
+        "tasks": [
+          "AI 및 IoT 응용실습장비 20세트 납품",
+          "tOS-Lite 전용 운영체제 및 모듈 라이브러리 제공",
+          "Visual Studio Code 기반 원격 개발환경 지원",
+          "IoT 제어 및 인공지능 학습 컨텐츠 제공",
+          "실습장비 사용자 교육 실시"
+        ],
+        "tech": [
+          "ARM Cortex-A72",
+          "tOS-Lite",
+          "PyTorch",
+          "ONNX runtime",
+          "OpenCV",
+          "MQTT"
+        ],
+        "requirements": [
+          "나라장터에 교육훈련장비(6010999901)를 제조물품으로 등록한 자",
+          "교육훈련장비(6010999901) 직접생산확인증명서 소지자",
+          "중소기업확인서를 소지한 중소기업자",
+          "국가계약법 시행령 제12조 및 시행규칙 제14조 자격 요건 충족자"
+        ],
+        "cautions": [
+          "공동계약 및 분할납품 불가",
+          "입찰 전 기술교육전공 담당자에게 규격 관련 사전 문의 및 확인 필요",
+          "품질 및 성능 면에서 동등 이상의 물품 납품 가능하며 1년간 무상 하자보수 적용",
+          "면세사업자도 부가가치세를 포함하여 투찰하여야 함"
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
+    },
+    "R26BK01829080": {
+      "bid_no": "R26BK01829080",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01829080&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01829080&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01829080&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01829080&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01"
+      ],
+      "updated_at": "2026-11-15T11:59:29Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "입찰규격서(2026년 AI 기반 자동 취약점 진단 솔루션).hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01829080&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
+        },
+        {
+          "name": "규격검토확인서_2026년 AI 기반 자동 취약점 진단 솔루션(재공고).hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01829080&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01"
+        },
+        {
+          "name": "공고문_2026년 AI 기반 자동 취약점 진단 솔루션(재공고).hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01829080&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        }
+      ],
+      "fields": {
+        "sme_only": true
+      },
+      "chars": 13909,
+      "summary": {
+        "overview": "강원대학교 데이터보안·활용 혁신융합대학사업단의 보안 교육 및 실습 환경 구축을 위해 AI 기반 자동 취약점 진단 솔루션을 도입하는 사업입니다. 취약점 진단 전용 LLM 기반 SW 라이선스 제공과 함께 현장 설치, 운영자·사용자 교육, 1년간의 하자보수를 포함합니다.",
+        "evaluation": "규격 심사(적격/부적격) 통과 업체 중 예정가격 이하 최저가격 입찰자를 낙찰자로 결정합니다.",
+        "tasks": [
+          "정보자산 자동 탐색 및 인벤토리 구성",
+          "보안 검증 스크립트 생성 및 취약성 검증",
+          "증적 자동 저장 및 PDF 보고서 생성",
+          "통합 위협정보 및 컴플라이언스 DB 제공",
+          "솔루션 설치·구성 및 사용자·운영자 교육",
+          "1년간 무상 하자보수 및 기술지원"
+        ],
+        "tech": [
+          "취약점 진단 전용 LLM",
+          "Linux OS",
+          "NVIDIA RTX PRO 6000 GPU",
+          "통합 위협정보 DB",
+          "컴플라이언스 DB",
+          "파이썬 및 셸 스크립트"
+        ],
+        "requirements": [
+          "나라장터 세부품명번호(4323269801) 등록 업체",
+          "소기업 또는 소상공인확인서 소지 업체",
+          "사전 규격검토확인서 적합 판정 및 메일 제출 완료 업체",
+          "제조사 공급확약서 및 기술지원확약서 제출 (비제조사 입찰 시)",
+          "개찰 당일 즉시 계약 체결을 위한 물품식별번호 보유 업체"
+        ],
+        "cautions": [
+          "공동계약(공동수급) 불가",
+          "입찰마감 마감시한 전까지 규격검토확인서 및 관련서류 이메일 사전 제출 필수",
+          "낙찰 당일 즉시 납품 가능 여부 미확인 시 계약 자격 상실 및 차순위 업체 계약 진행",
+          "설치·지원 시 보안서약서 제출 및 발주기관 사전 승인 하에 원격지원 수행"
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
+    },
+    "R26BK01829098": {
+      "bid_no": "R26BK01829098",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01829098&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01829098&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01829098&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01829098&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01"
+      ],
+      "updated_at": "2026-11-15T12:00:25Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "22.구매규격서(17대).pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01829098&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01"
+        },
+        {
+          "name": "22.구매규격서(3대).pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01829098&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
+        },
+        {
+          "name": "17.(재)입찰공고문.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01829098&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        }
+      ],
+      "fields": {},
+      "chars": 13779,
+      "summary": {
+        "overview": "본 사업은 비SW학과 학생을 포함한 다양한 전공 학생들의 AX 융합교육 및 AI·SW 실습을 위해 실습용 노트북 총 20대를 구입·배치하는 사업입니다. 전공별 교육과정에 필요한 실습환경을 사전에 구성하여 학생들의 AI·SW 활용 역량을 강화하는 것을 목적으로 합니다.",
+        "evaluation": "일반(총액)경쟁 및 적격심사에 의한 최저가낙찰제(낙찰하한율 86.245%)로 평가되어 종합평점 85점 이상인 자를 낙찰자로 결정합니다.",
+        "tasks": [
+          "노트북 규격 충족 제품 납품 및 지정장소 설치 (총 20대)",
+          "예산 재원별 서류 분리 작성 및 정산 처리"
+        ],
+        "tech": [
+          "Windows 11 Home",
+          "AMD Ryzen AI 5 435",
+          "AMD Radeon Graphics",
+          "16GB LPDDR5x",
+          "SSD 1TB NVMe",
+          "Wi-Fi 7"
+        ],
+        "requirements": [
+          "국가종합전자조달시스템(G2B) 입찰참가자격 등록 업체",
+          "입찰보증금(입찰금액의 5% 이상) 보증증권 제출",
+          "부정당업자, 조세포탈자, 청산/법정관리 진행 중인 사업자 참가 불가",
+          "입찰등록 필수 서류 6종 제출 (입찰참가신청서, 국세/지방세 완납증명서, 서약서 등)"
+        ],
+        "cautions": [
+          "단일 계약이나 내부 정산을 위해 거래명세서, 검수, 세금계산서 등 관련 서류를 예산 재원별로 구분하여 진행해야 함",
+          "적격심사 대상 통보일로부터 5일 이내 서류 제출 및 낙찰 통지 후 10일 이내 계약 체결 필수",
+          "안전·보건 관계 법령 및 대학 표준 작업 안전지침 준수와 관련 서약서 제출 필요",
+          "하자담보책임기간은 납품완료일로부터 1년임"
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
+    },
     "R26BK01829100": {
       "bid_no": "R26BK01829100",
       "bid_ord": "000",
@@ -14318,6 +14565,185 @@
       "model": "gemini-3.5-flash",
       "status": "ok"
     },
+    "R26BK01830257": {
+      "bid_no": "R26BK01830257",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01830257&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01830257&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01830257&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+      ],
+      "updated_at": "2026-11-15T11:58:51Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "붙임2. 과업지시서_「연암공과대학교 앵커사업 평생교육 성과분석 및 성인학습자 X+AI교육체계 구축 연구」 용역 .hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01830257&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+        },
+        {
+          "name": "붙임1. 공고문_「연암공과대학교 앵커사업 평생교육 성과분석 및 성인학습자 X+AI교육체계 구축 연구」 용역.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01830257&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        }
+      ],
+      "fields": {
+        "period": "계약일로부터 3개월 (2027. 2. 이내)",
+        "presentation": true
+      },
+      "chars": 18385,
+      "summary": {
+        "overview": "본 사업은 연암공과대학교 앵커사업 평생교육 프로그램의 요구 및 운영 성과를 분석하여 성과평가 대응 근거를 확보하고 성과관리 체계를 고도화하기 위한 연구 용역입니다. 지역 기업 및 재직자의 디지털 전환 수준을 반영하여 성인학습자 대상 X+AI 교육과정을 설계하고, 학습자 관리 시스템 요건 정의 등 평생교육 운영 기반을 구축하는 것을 목적으로 합니다.",
+        "evaluation": "기술능력평가 80점(객관적 10점, 주관적 70점)과 제안가격평가 20점을 합산하여 기술평가 배점한도의 85% 이상인 적격자 중 고득점순으로 협상에 의한 계약을 체결합니다.",
+        "tasks": [
+          "성인학습자 요구 및 운영성과 분석",
+          "프로그램 개선 및 성과환류·추적관리 체계 고도화",
+          "성인학습자 X+AI 학위·비학위 교육과정 설계",
+          "기업 연계형 운영 모델 제시",
+          "학습자 관리 시스템 요건 정의",
+          "학점은행제 연계 및 학사제도 정비 방안 도출"
+        ],
+        "tech": [
+          "AI",
+          "DX(디지털 전환)",
+          "학습자 관리 시스템",
+          "학습자 DB",
+          "실습 장비"
+        ],
+        "requirements": [
+          "국가를 당사자로 하는 계약에 관한 법률 시행령 제12조 요건 충족자",
+          "대학의 업체 선정방법 및 평가기준에 100% 동의하는 업체",
+          "최근 3년 이내 대학교육 및 평생교육 분석·연구 용역 수행 실적 보유 업체",
+          "관련 분야에 학식과 경험이 풍부한 전문 연구진으로 구성된 업체"
+        ],
+        "cautions": [
+          "공동수급 및 하도급 투찰 불가",
+          "입찰 금액의 5/100 이상에 해당하는 입찰이행보증보험증권 제출 필요",
+          "가격입찰은 나라장터 전자제출, 제안서(7부)는 대학 사무처에 직접 또는 우편 제출",
+          "제안서 발표 평가 미참여 시 제출된 서류로만 서면 평가 진행"
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
+    },
+    "R26BK01830301": {
+      "bid_no": "R26BK01830301",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01830301&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01830301&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01830301&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01830301&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
+      ],
+      "updated_at": "2026-11-15T12:00:56Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "1. 제안요청서.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01830301&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+        },
+        {
+          "name": "0. 공고문_리빙랩.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01830301&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        },
+        {
+          "name": "2. 긴급입찰공고사유서.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01830301&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
+        }
+      ],
+      "fields": {
+        "period": "계약 체결일로부터 2027년 2월 12일까지",
+        "sme_only": true,
+        "presentation": true
+      },
+      "chars": 20214,
+      "summary": {
+        "overview": "본 사업은 천안시의 AI기본사회 실현 방향을 모색하고 지역사회 혁신 기반을 조성하기 위해 전국 대학(원)생 대상 아이디어 경진대회 및 리빙랩을 운영하는 용역입니다. 참가자 모집 및 홍보부터 아이디어 심사, 인사이트 교육, 리빙랩 멘토링, 최종 발표평가·시상식 및 성과 영상 제작 등 행사 제반 업무 전반을 수행합니다.",
+        "evaluation": "기술능력평가 80점과 입찰가격평가 20점을 합산하여 평가하며, 기술능력평가 배점 한도의 85%(68점) 이상인 협상적격자 중 종합점수 고득점 순으로 협상을 실시하는 협상에 의한 계약(서류평가) 방식입니다.",
+        "tasks": [
+          "행 종합 기획 및 세부 운영계획 수립",
+          "참가자 모집 및 온·오프라인 홍보물 제작·배포",
+          "아이디어 서류심사 및 리빙랩 참여 8개 팀 선정",
+          "전문가 인사이트 교육 및 멘토링 리빙랩(2회) 운영",
+          "최종 발표평가 및 시상식 운영",
+          "사업 성과 관리, 결과보고서 작성 및 성과 영상 제작"
+        ],
+        "tech": [],
+        "requirements": [
+          "국가를 당사자로 하는 계약에 관한 법률 시행령 제12조 자격을 갖춘 자",
+          "입찰공고일 현재 부정당업자 입찰참가자격 제한 기간 중에 있지 아니한 자",
+          "소기업 또는 소상공인 확인서를 보유한 자",
+          "소프트웨어사업자(1468), 기타자유업종(9999), 또는 기타자유업(행사대행업 9901)으로 나라장터에 입찰참가자격을 등록한 자"
+        ],
+        "cautions": [
+          "공동계약(공동수급)은 불가능합니다.",
+          "별도의 제안서 발표평가는 없으며 제출된 제안서 및 증빙자료를 통한 서류평가로 진행됩니다.",
+          "제안서 및 관련 제출 서류는 e-발주시스템을 통해 온라인으로 전자 제출해야 합니다.",
+          "행사 참가자와 운영인력에 대한 안전관리계획 수립 및 개인정보 보호 지침을 준수해야 합니다."
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
+    },
+    "R26BK01830374": {
+      "bid_no": "R26BK01830374",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01830374&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01830374&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01830374&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
+      ],
+      "updated_at": "2026-11-15T12:00:41Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "붙임2-1. 구입내역 및 제품규격서_마이크로덕.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01830374&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
+        },
+        {
+          "name": "붙임1-1. 전자입찰공문_[앵커] AI학과지원팀 AI 공용장비(마이크로덕 28개 등) 구매.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01830374&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        }
+      ],
+      "fields": {},
+      "chars": 3638,
+      "summary": {
+        "overview": "본 사업은 명지전문대학 앵커 AI학과지원팀의 연구 및 교육 실습을 위해 AI 공용장비인 마이크로덕(Microduck) 세트를 구매하는 건입니다. Pollen Robotics사의 소형 이족보행 AI 로봇 본체, 개발 팩, 액세서리 팩 총 28세트를 수입 및 수급하여 지정장소에 납품하고 정상 작동 테스트를 완료해야 합니다.",
+        "evaluation": "예정가격 이하 최저가격 투찰자를 낙찰자로 선정하는 일반경쟁입찰 방식입니다.",
+        "tasks": [
+          "마이크로덕 AI 로봇 본체 28대 납품",
+          "개발 팩 28세트 납품",
+          "액세서리 팩 28세트 납품",
+          "전기 및 전파 요건면제확인 절차 수행",
+          "지정장소 반입 및 검수",
+          "정상 작동 테스트 수행"
+        ],
+        "tech": [
+          "마이크로덕(Microduck) AI 로봇",
+          "Python SDK",
+          "MuJoCo 시뮬레이션",
+          "강화학습(Reinforcement Learning)",
+          "LiDAR 센서 및 6축 IMU",
+          "Wi-Fi 및 Bluetooth"
+        ],
+        "requirements": [
+          "국가계약법 시행령 제12조 및 시행규칙 제14조 자격 구비 업체",
+          "국가계약법 시행령 제76조에 따른 부정당업자 제한을 받지 않는 업체",
+          "국세 및 지방세 체납 사실이 없는 업체",
+          "입찰금액의 10% 이상 입찰보증보험증권 제출",
+          "계약 시 제조사 정품 공급 및 기술지원 확약서 제출 가능 업체"
+        ],
+        "cautions": [
+          "공동수급 불가",
+          "시험·연구 목적의 KC인증 면제(전기 및 전파 요건면제확인) 절차 및 부대 비용은 낙찰자 부담",
+          "투찰 금액은 부가가치세, 관세, 운송·납품비 등 일체의 경비를 포함한 총액 투찰",
+          "제조사 정품 및 신품만 납품 가능하며 단종·중고·리퍼비시 및 비정품 납품 불가"
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
+    },
     "R26BK01830636": {
       "bid_no": "R26BK01830636",
       "bid_ord": "000",
@@ -14369,6 +14795,73 @@
           "계약 체결 시 객관적인 자격 요건 증빙서류 미제출 시 낙찰 자격 박탈",
           "결과물 제공일로부터 최대 24개월간 결과 오류 및 하자에 대한 보증 의무",
           "계약일로부터 4주 이내 완수 필요"
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
+    },
+    "R26BK01830846": {
+      "bid_no": "R26BK01830846",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01830846&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01830846&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01830846&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01830846&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01830846&bidPbancOrd=000&fileType=&fileSeq=5&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01830846&bidPbancOrd=000&fileType=&fileSeq=6&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01830846&bidPbancOrd=000&fileType=&fileSeq=7&prcmBsneSeCd=01"
+      ],
+      "updated_at": "2026-11-15T11:58:30Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "2. 상세규격서.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01830846&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
+        },
+        {
+          "name": "1. 공고문(DGIST 제2026-199호).hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01830846&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        },
+        {
+          "name": "6. 공익·부패 신고제도 안내.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01830846&bidPbancOrd=000&fileType=&fileSeq=7&prcmBsneSeCd=01"
+        }
+      ],
+      "fields": {},
+      "chars": 8427,
+      "summary": {
+        "overview": "본 사업은 대구경북과학기술원(DGIST)의 인공지능 연구를 위해 DGX B200급 AI 연구용 GPU 서버 2식을 구매 및 설치하는 사업입니다. 주관사는 장비 반입 및 설치, 고속 네트워크와 AI/HPC 소프트웨어 환경 구축, 성능 검증을 수행하게 됩니다. 구축 후 3년간 안정적인 시스템 운영을 위한 기술지원 및 유지보수 서비스를 필수 제공해야 합니다.",
+        "evaluation": "규격 적합성 심사를 통과한 업체 중 예정가격 이하 최저가격으로 투찰한 업체를 낙찰자로 결정하는 규격가격동시입찰 방식을 적용합니다.",
+        "tasks": [
+          "GPU 서버 2식 구매 및 물리적 반입·설치",
+          "GPU 환경설정 및 고속 네트워크 구축",
+          "AI/HPC 소프트웨어 환경 구축 및 최적화",
+          "NVLink/NVSwitch 및 NCCL 통신성능 검증",
+          "H/W 및 S/W 운용·유지보수 교육",
+          "3년간 무상보증 및 정기점검 지원"
+        ],
+        "tech": [
+          "NVIDIA Blackwell GPU",
+          "NVIDIA NVSwitch",
+          "NVIDIA ConnectX-7 InfiniBand",
+          "NVIDIA BlueField-3 DPU",
+          "NVIDIA AI Enterprise",
+          "Linux (RHEL 9.4)"
+        ],
+        "requirements": [
+          "조달청 전자입찰 참가자격을 갖춘 업체",
+          "국내 NVIDIA Elite Partner를 통한 정품 공급 및 3년 기술지원 확약서 제출",
+          "NVIDIA-Certified Server Partners 제품 제안",
+          "NVIDIA 관련 자격 또는 동등 수준 역량 보유 전담 엔지니어 투입",
+          "NVIDIA Enterprise Support 및 AI Enterprise Subscription 3년 라이선스 제공"
+        ],
+        "cautions": [
+          "공동수급(공동이행/분담이행)은 불허됩니다.",
+          "장비 납기는 계약 후 36주 이내이며, 검수는 납품 후 2개월 이내에 완료되어야 합니다.",
+          "입찰 서류 제출 시 방문 접수는 불가하며 우편(마감 전일 18시 도착) 또는 전자메일(단일 PDF)로 제출해야 합니다.",
+          "계약 시 공급·기술지원 확약서를 제출해야 하며 검수 시 3년 라이선스 증서 및 NCCL 성능검증 보고서를 제출해야 합니다."
         ]
       },
       "model": "gemini-3.5-flash",

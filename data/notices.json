@@ -1,12 +1,79 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-14T11:29:49Z",
+  "generated_at": "2026-11-15T11:58:29Z",
   "mode": "g2b_api",
   "range": {
-    "since": "2026-11-11",
-    "until": "2026-11-14"
+    "since": "2026-11-12",
+    "until": "2026-11-15"
   },
   "notices": [
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01830846",
+      "bid_ord": "000",
+      "notice_date": "2026-11-15",
+      "open_date": "2026-11-23",
+      "open_at": "2026-11-23 13:00",
+      "close_at": "2026-11-23 12:00",
+      "close_date": "2026-11-23",
+      "org": "대구경북과학기술원",
+      "title": "AI 연구용 GPU 서버 2식 구매 설치",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 인프라"
+      ],
+      "nature": "인프라",
+      "budget_eok": 14.102,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 14.102,
+      "presmpt_eok": 12.82,
+      "base_amount_eok": null,
+      "contract_method": "일반경쟁",
+      "ntce_kind": "등록공고",
+      "biz": "thng",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01830846&bidPbancOrd=000",
+      "award_method": "규격가격동시입찰-제안적격자 중 예가 내 최저가 투찰자",
+      "tech_rate": null,
+      "price_rate": null,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": null,
+      "participation_limit": null,
+      "record_limit": null,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": "R26BD00295003",
+      "plan_no": "R26DD20917966",
+      "notice_files": [
+        {
+          "name": "1. 공고문(DGIST 제2026-199호).hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01830846&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        },
+        {
+          "name": "1. 공고문(DGIST 제2026-199호).pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01830846&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01"
+        },
+        {
+          "name": "2. 상세규격서.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01830846&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
+        },
+        {
+          "name": "3. BIDDING SPECIFICATION(양식).hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01830846&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01"
+        },
+        {
+          "name": "4. 퇴직자(재직자) 영입현황 확인서 및 수의계약 체결 제한 여부 확인서(양식).hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01830846&bidPbancOrd=000&fileType=&fileSeq=5&prcmBsneSeCd=01"
+        },
+        {
+          "name": "5. 청렴계약 이행각서(양식).hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01830846&bidPbancOrd=000&fileType=&fileSeq=6&prcmBsneSeCd=01"
+        },
+        {
+          "name": "6. 공익·부패 신고제도 안내.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01830846&bidPbancOrd=000&fileType=&fileSeq=7&prcmBsneSeCd=01"
+        }
+      ]
+    },
     {
       "source": "g2b_api",
       "bid_no": "R26BK01830636",
@@ -821,7 +888,13 @@
           "name": "6. 공익·부패 신고제도 안내.hwp",
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01829273&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01"
         }
-      ]
+      ],
+      "winner": "위고로보틱스",
+      "bid_count": 1,
+      "award_amount_eok": 0.5476,
+      "win_rate_pct": 99.568,
+      "status": "낙찰",
+      "award_to_budget_pct": 98.0
     },
     {
       "source": "g2b_api",
@@ -57463,7 +57536,13 @@
       "close_date": "2026-10-20",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.4523,
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-09",
+      "winner": "비엠지테크",
+      "bid_count": 26,
+      "award_amount_eok": 0.4218,
+      "win_rate_pct": 95.566,
+      "status": "낙찰",
+      "award_to_budget_pct": 93.3
     },
     {
       "source": "g2b_api",
@@ -109652,20 +109731,20 @@
     }
   ],
   "stats": {
-    "raw": 134,
-    "classified": 124,
-    "stored": 1955,
-    "band": 490,
-    "with_winner": 648,
+    "raw": 84,
+    "classified": 79,
+    "stored": 1956,
+    "band": 491,
+    "with_winner": 650,
     "awards": {
-      "fetched": 1898,
-      "updated": 0
+      "fetched": 1252,
+      "updated": 2
     },
     "scope": {
       "생성형·Agent": 199,
-      "AI SW 확대": 1756
+      "AI SW 확대": 1757
     },
     "budget_sanitized": 0
   },
-  "reclassified_at": "2026-11-14T11:29:49Z"
+  "reclassified_at": "2026-11-15T11:58:29Z"
 }
