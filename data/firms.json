@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-13T05:02:50Z",
+  "generated_at": "2026-11-16T12:50:04Z",
   "firms": {
     "2298137316": {
       "bizno": "2298137316",
@@ -14,8 +14,8 @@
       "hq_div": "본사",
       "homepage": "http://www.konantech.com",
       "g2b_registered_at": "2002-10-15",
-      "g2b_changed_at": "2026-11-04",
-      "fetched_at": "2026-11-09T06:14:54Z"
+      "g2b_changed_at": "2026-11-15",
+      "fetched_at": "2026-11-16T12:49:43Z"
     },
     "2118698485": {
       "bizno": "2118698485",
@@ -30,7 +30,7 @@
       "homepage": "www.wisenut.com",
       "g2b_registered_at": "2002-05-09",
       "g2b_changed_at": "2026-11-06",
-      "fetched_at": "2026-11-09T06:14:55Z"
+      "fetched_at": "2026-11-16T12:49:43Z"
     },
     "3318101353": {
       "bizno": "3318101353",
@@ -45,7 +45,7 @@
       "homepage": "https://mindlogic.ai",
       "g2b_registered_at": "2024-07-15",
       "g2b_changed_at": "2026-10-25",
-      "fetched_at": "2026-11-09T06:14:55Z"
+      "fetched_at": "2026-11-16T12:49:44Z"
     },
     "6968600654": {
       "bizno": "6968600654",
@@ -60,7 +60,7 @@
       "homepage": "https://personaai.co.kr/",
       "g2b_registered_at": "2019-01-11",
       "g2b_changed_at": "2026-09-30",
-      "fetched_at": "2026-11-09T06:14:56Z"
+      "fetched_at": "2026-11-16T12:49:44Z"
     },
     "6308702251": {
       "bizno": "6308702251",
@@ -75,7 +75,7 @@
       "homepage": "www.claion.co.kr",
       "g2b_registered_at": "2021-09-27",
       "g2b_changed_at": "2026-07-16",
-      "fetched_at": "2026-11-09T06:14:57Z"
+      "fetched_at": "2026-11-16T12:49:45Z"
     },
     "1028113061": {
       "bizno": "1028113061",
@@ -89,8 +89,8 @@
       "hq_div": "본사",
       "homepage": "www.saltlux.com",
       "g2b_registered_at": "2004-03-15",
-      "g2b_changed_at": "2026-10-30",
-      "fetched_at": "2026-11-09T06:14:57Z"
+      "g2b_changed_at": "2026-11-15",
+      "fetched_at": "2026-11-16T12:49:45Z"
     },
     "4638700328": {
       "bizno": "4638700328",
@@ -105,7 +105,7 @@
       "homepage": "",
       "g2b_registered_at": "2017-06-05",
       "g2b_changed_at": "2026-09-25",
-      "fetched_at": "2026-11-09T06:14:58Z"
+      "fetched_at": "2026-11-16T12:49:46Z"
     },
     "1708702633": {
       "bizno": "1708702633",
@@ -120,7 +120,7 @@
       "homepage": "https://www.imaginationgroup.co.kr/",
       "g2b_registered_at": "2024-07-18",
       "g2b_changed_at": "2026-11-09",
-      "fetched_at": "2026-11-09T06:14:58Z"
+      "fetched_at": "2026-11-16T12:49:46Z"
     },
     "7248101517": {
       "bizno": "7248101517",
@@ -135,7 +135,7 @@
       "homepage": "www.publicai.co.kr",
       "g2b_registered_at": "2020-09-23",
       "g2b_changed_at": "2026-10-19",
-      "fetched_at": "2026-11-09T06:14:59Z"
+      "fetched_at": "2026-11-16T12:49:47Z"
     },
     "2298103214": {
       "bizno": "2298103214",
@@ -149,8 +149,8 @@
       "hq_div": "본사",
       "homepage": "www.estsoft.com",
       "g2b_registered_at": "2001-07-25",
-      "g2b_changed_at": "2026-10-28",
-      "fetched_at": "2026-11-09T06:14:59Z"
+      "g2b_changed_at": "2026-11-15",
+      "fetched_at": "2026-11-16T12:49:47Z"
     },
     "1078785562": {
       "bizno": "1078785562",
@@ -165,7 +165,7 @@
       "homepage": "http://li-st.com",
       "g2b_registered_at": "2013-01-24",
       "g2b_changed_at": "2026-10-28",
-      "fetched_at": "2026-11-09T06:15:00Z"
+      "fetched_at": "2026-11-16T12:49:48Z"
     },
     "1658602221": {
       "bizno": "1658602221",
@@ -180,7 +180,7 @@
       "homepage": "",
       "g2b_registered_at": "2022-06-30",
       "g2b_changed_at": "2026-11-07",
-      "fetched_at": "2026-11-09T06:15:00Z"
+      "fetched_at": "2026-11-16T12:49:48Z"
     },
     "5628800151": {
       "bizno": "5628800151",
@@ -195,7 +195,7 @@
       "homepage": "www.42maru.ai",
       "g2b_registered_at": "2020-09-09",
       "g2b_changed_at": "2026-10-26",
-      "fetched_at": "2026-11-09T06:15:01Z"
+      "fetched_at": "2026-11-16T12:49:49Z"
     },
     "5868802378": {
       "bizno": "5868802378",
@@ -210,7 +210,7 @@
       "homepage": "",
       "g2b_registered_at": "2022-09-27",
       "g2b_changed_at": "2026-10-30",
-      "fetched_at": "2026-11-09T06:15:02Z"
+      "fetched_at": "2026-11-16T12:49:49Z"
     },
     "4508800071": {
       "bizno": "4508800071",
@@ -225,7 +225,7 @@
       "homepage": "www.mqnic.com",
       "g2b_registered_at": "2015-11-04",
       "g2b_changed_at": "2026-09-04",
-      "fetched_at": "2026-11-09T06:15:02Z"
+      "fetched_at": "2026-11-16T12:49:50Z"
     },
     "5028172988": {
       "bizno": "5028172988",
@@ -240,7 +240,7 @@
       "homepage": "www.theimc.co.kr",
       "g2b_registered_at": "2010-12-15",
       "g2b_changed_at": "2026-06-23",
-      "fetched_at": "2026-11-09T06:15:03Z"
+      "fetched_at": "2026-11-16T12:49:50Z"
     },
     "3148173245": {
       "bizno": "3148173245",
@@ -255,7 +255,7 @@
       "homepage": "www.gridone.co.kr",
       "g2b_registered_at": "2008-04-21",
       "g2b_changed_at": "2026-10-02",
-      "fetched_at": "2026-11-09T06:15:03Z"
+      "fetched_at": "2026-11-16T12:49:51Z"
     },
     "1208608334": {
       "bizno": "1208608334",
@@ -269,8 +269,8 @@
       "hq_div": "본사",
       "homepage": "vaiv.kr",
       "g2b_registered_at": "2001-06-22",
-      "g2b_changed_at": "2026-10-30",
-      "fetched_at": "2026-11-09T06:15:04Z"
+      "g2b_changed_at": "2026-11-15",
+      "fetched_at": "2026-11-16T12:49:51Z"
     },
     "7338101035": {
       "bizno": "7338101035",
@@ -285,7 +285,7 @@
       "homepage": "",
       "g2b_registered_at": "2020-05-08",
       "g2b_changed_at": "2026-09-15",
-      "fetched_at": "2026-11-09T06:15:04Z"
+      "fetched_at": "2026-11-16T12:49:52Z"
     },
     "7898700079": {
       "bizno": "7898700079",
@@ -300,7 +300,7 @@
       "homepage": "https://www.agilesoda.ai",
       "g2b_registered_at": "2017-10-24",
       "g2b_changed_at": "2026-09-28",
-      "fetched_at": "2026-11-09T06:15:05Z"
+      "fetched_at": "2026-11-16T12:49:52Z"
     },
     "2298801044": {
       "bizno": "2298801044",
@@ -315,7 +315,7 @@
       "homepage": "www.timely.kr",
       "g2b_registered_at": "2022-04-11",
       "g2b_changed_at": "2026-09-23",
-      "fetched_at": "2026-11-09T06:15:05Z"
+      "fetched_at": "2026-11-16T12:49:53Z"
     },
     "2458602885": {
       "bizno": "2458602885",
@@ -330,7 +330,7 @@
       "homepage": "https://www.sionic.ai/ko",
       "g2b_registered_at": "2025-12-04",
       "g2b_changed_at": "2026-09-03",
-      "fetched_at": "2026-11-09T06:15:06Z"
+      "fetched_at": "2026-11-16T12:49:53Z"
     },
     "2148664984": {
       "bizno": "2148664984",
@@ -344,8 +344,8 @@
       "hq_div": "본사",
       "homepage": "http://www.synapsoft.co.kr",
       "g2b_registered_at": "2004-06-03",
-      "g2b_changed_at": "2026-10-30",
-      "fetched_at": "2026-11-09T06:15:07Z"
+      "g2b_changed_at": "2026-11-11",
+      "fetched_at": "2026-11-16T12:49:54Z"
     },
     "7638101040": {
       "bizno": "7638101040",
@@ -359,8 +359,8 @@
       "hq_div": "본사",
       "homepage": "",
       "g2b_registered_at": "2018-06-01",
-      "g2b_changed_at": "2026-11-04",
-      "fetched_at": "2026-11-09T06:15:07Z",
+      "g2b_changed_at": "2026-11-15",
+      "fetched_at": "2026-11-16T12:49:54Z",
       "changes": [
         {
           "date": "2026-11-09",
@@ -384,8 +384,8 @@
       "hq_div": "본사",
       "homepage": "http://www.uplusit.com",
       "g2b_registered_at": "2008-08-22",
-      "g2b_changed_at": "2026-11-09",
-      "fetched_at": "2026-11-09T06:15:08Z"
+      "g2b_changed_at": "2026-11-16",
+      "fetched_at": "2026-11-16T12:49:55Z"
     },
     "1138643065": {
       "bizno": "1138643065",
@@ -399,8 +399,8 @@
       "hq_div": "본사",
       "homepage": "www.ccmedia.co.kr",
       "g2b_registered_at": "2013-04-04",
-      "g2b_changed_at": "2026-10-30",
-      "fetched_at": "2026-11-09T06:15:08Z"
+      "g2b_changed_at": "2026-11-12",
+      "fetched_at": "2026-11-16T12:49:55Z"
     },
     "2158711279": {
       "bizno": "2158711279",
@@ -415,7 +415,7 @@
       "homepage": "www.mtdata.co.kr",
       "g2b_registered_at": "2009-06-23",
       "g2b_changed_at": "2026-10-02",
-      "fetched_at": "2026-11-09T06:15:09Z"
+      "fetched_at": "2026-11-16T12:49:56Z"
     },
     "1338145679": {
       "bizno": "1338145679",
@@ -430,7 +430,7 @@
       "homepage": "https://cubig.ai/ ",
       "g2b_registered_at": "2023-06-14",
       "g2b_changed_at": "2026-09-12",
-      "fetched_at": "2026-11-09T06:15:09Z"
+      "fetched_at": "2026-11-16T12:49:56Z"
     },
     "7028600866": {
       "bizno": "7028600866",
@@ -445,7 +445,7 @@
       "homepage": "",
       "g2b_registered_at": "2018-04-25",
       "g2b_changed_at": "2026-11-05",
-      "fetched_at": "2026-11-09T06:15:10Z"
+      "fetched_at": "2026-11-16T12:49:57Z"
     },
     "2288105280": {
       "bizno": "2288105280",
@@ -460,7 +460,7 @@
       "homepage": "",
       "g2b_registered_at": "2021-11-26",
       "g2b_changed_at": "2026-11-07",
-      "fetched_at": "2026-11-09T06:15:10Z"
+      "fetched_at": "2026-11-16T12:49:57Z"
     },
     "4968602770": {
       "bizno": "4968602770",
@@ -475,7 +475,7 @@
       "homepage": "",
       "g2b_registered_at": "2022-11-01",
       "g2b_changed_at": "2026-06-07",
-      "fetched_at": "2026-11-09T06:15:11Z"
+      "fetched_at": "2026-11-16T12:49:58Z"
     },
     "1148706890": {
       "bizno": "1148706890",
@@ -490,7 +490,7 @@
       "homepage": "www.limesolution.co.kr",
       "g2b_registered_at": "2014-11-12",
       "g2b_changed_at": "2026-10-14",
-      "fetched_at": "2026-11-09T06:15:12Z"
+      "fetched_at": "2026-11-16T12:49:58Z"
     },
     "1078734272": {
       "bizno": "1078734272",
@@ -505,7 +505,7 @@
       "homepage": "www.sbctech.net",
       "g2b_registered_at": "2016-08-08",
       "g2b_changed_at": "2026-07-12",
-      "fetched_at": "2026-11-09T06:15:12Z"
+      "fetched_at": "2026-11-16T12:49:59Z"
     },
     "8128801619": {
       "bizno": "8128801619",
@@ -520,7 +520,7 @@
       "homepage": "exotech.kr",
       "g2b_registered_at": "2019-11-20",
       "g2b_changed_at": "2026-11-09",
-      "fetched_at": "2026-11-09T06:15:13Z"
+      "fetched_at": "2026-11-16T12:49:59Z"
     },
     "2208181227": {
       "bizno": "2208181227",
@@ -535,7 +535,7 @@
       "homepage": "www.mobigen.com",
       "g2b_registered_at": "2001-05-15",
       "g2b_changed_at": "2026-10-07",
-      "fetched_at": "2026-11-09T06:15:13Z"
+      "fetched_at": "2026-11-16T12:50:00Z"
     },
     "2208868581": {
       "bizno": "2208868581",
@@ -550,7 +550,7 @@
       "homepage": "",
       "g2b_registered_at": "2014-04-09",
       "g2b_changed_at": "2026-07-30",
-      "fetched_at": "2026-11-09T06:15:14Z"
+      "fetched_at": "2026-11-16T12:50:00Z"
     },
     "1138611016": {
       "bizno": "1138611016",
@@ -565,7 +565,7 @@
       "homepage": "www.t3q.co.kr",
       "g2b_registered_at": "2013-10-25",
       "g2b_changed_at": "2026-11-09",
-      "fetched_at": "2026-11-09T06:15:14Z"
+      "fetched_at": "2026-11-16T12:50:01Z"
     },
     "1168135346": {
       "bizno": "1168135346",
@@ -580,7 +580,7 @@
       "homepage": "www.penta.co.kr",
       "g2b_registered_at": "1999-06-11",
       "g2b_changed_at": "2026-11-03",
-      "fetched_at": "2026-11-09T06:15:15Z"
+      "fetched_at": "2026-11-16T12:50:02Z"
     },
     "1058608825": {
       "bizno": "1058608825",
@@ -594,8 +594,8 @@
       "hq_div": "본사",
       "homepage": "http://www.diquest.com",
       "g2b_registered_at": "2005-04-04",
-      "g2b_changed_at": "2026-11-08",
-      "fetched_at": "2026-11-09T06:15:15Z"
+      "g2b_changed_at": "2026-11-16",
+      "fetched_at": "2026-11-16T12:50:02Z"
     },
     "1138622298": {
       "bizno": "1138622298",
@@ -610,7 +610,7 @@
       "homepage": "",
       "g2b_registered_at": "2012-12-14",
       "g2b_changed_at": "2026-10-06",
-      "fetched_at": "2026-11-09T06:15:16Z"
+      "fetched_at": "2026-11-16T12:50:03Z"
     },
     "1168170775": {
       "bizno": "1168170775",
@@ -625,7 +625,7 @@
       "homepage": "http://www.solideos.com",
       "g2b_registered_at": "2003-06-23",
       "g2b_changed_at": "2026-10-20",
-      "fetched_at": "2026-11-09T06:15:16Z"
+      "fetched_at": "2026-11-16T12:50:03Z"
     },
     "5138141016": {
       "bizno": "5138141016",
@@ -640,7 +640,7 @@
       "homepage": "http://www.yhdatabase.com",
       "g2b_registered_at": "2007-02-20",
       "g2b_changed_at": "2026-10-01",
-      "fetched_at": "2026-11-09T06:15:17Z"
+      "fetched_at": "2026-11-16T12:50:04Z"
     },
     "6048142515": {
       "bizno": "6048142515",
@@ -655,7 +655,7 @@
       "homepage": "",
       "g2b_registered_at": "2021-03-12",
       "g2b_changed_at": "2026-10-15",
-      "fetched_at": "2026-11-09T06:15:18Z"
+      "fetched_at": "2026-11-16T12:50:04Z"
     }
   }
 }
