@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-17T12:45:45Z",
+  "generated_at": "2026-11-17T18:58:37Z",
   "range": {
-    "since": "2026-11-03",
+    "since": "2026-11-14",
     "until": "2026-11-17"
   },
   "prespecs": [

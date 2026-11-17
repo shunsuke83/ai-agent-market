@@ -1,7 +1,268 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-17T12:46:04Z",
+  "generated_at": "2026-11-17T18:58:58Z",
   "contracts": [
+    {
+      "contract_no": "R26TA01452990",
+      "title": "2026 대학연계 방과후 AI-SW 특화 프로그램 지원 사업 용역",
+      "org": "충청남도교육청 충청남도아산교육지원청",
+      "contract_org": "충청남도교육청 충청남도아산교육지원청",
+      "signed_date": "2026-11-17",
+      "period_text": "금차 284일, 총차 284일",
+      "end_date": "2026-12-18",
+      "amount_eok": 2.934,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "호서대학교 산학협력단",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "3128210256"
+        }
+      ],
+      "bid_no": "R26BK01282162",
+      "registered_at": "2026-11-17 10:39",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA01452990&ctrtChgOrd=02&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
+    {
+      "contract_no": "R26TA02435469",
+      "title": "화학 특화 AI(Vertical AI) 핵심 기술 심층 분석 및 모델 성능 검증 용역",
+      "org": "한국화학연구원",
+      "contract_org": "조달청 대전지방조달청",
+      "signed_date": "2026-11-17",
+      "period_text": "계약 후 45일 이내",
+      "end_date": "2027-01-01",
+      "amount_eok": 1.5959,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 우진지앤에스",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "3828700771"
+        }
+      ],
+      "bid_no": "R26BK01773871",
+      "registered_at": "2026-11-17 15:00",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02435469&ctrtChgOrd=00&prcmBsneSeCd=조070002&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
+    {
+      "contract_no": "R26TA02434340",
+      "title": "피지컬AI 실증단지 구축사업 공공건축 기획용역",
+      "org": "재단법인 전북테크노파크",
+      "contract_org": "조달청 전북지방조달청",
+      "signed_date": "2026-11-17",
+      "period_text": "금차 120일, 총차 120일",
+      "end_date": "2027-03-18",
+      "amount_eok": 1.1732,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "건축사사무소 예림",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "4020282352"
+        }
+      ],
+      "bid_no": "R26BK01788550",
+      "registered_at": "2026-11-17 16:49",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02434340&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화"
+    },
+    {
+      "contract_no": "R26TA02422014",
+      "title": "부산대학교 AI 기반 맞춤형 교육지원시스템(3단계) 구축",
+      "org": "부산대학교",
+      "contract_org": "조달청 부산지방조달청",
+      "signed_date": "2026-11-16",
+      "period_text": "계약 후 360일 이내",
+      "end_date": "2027-11-11",
+      "amount_eok": 11.0,
+      "long_term": "장기",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 코드팜",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "2308600361"
+        }
+      ],
+      "bid_no": "R26BK01741674",
+      "registered_at": "2026-11-16 12:58",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02422014&ctrtChgOrd=00&prcmBsneSeCd=조070002&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "연구·교육·행사"
+    },
+    {
+      "contract_no": "R26TA02417863",
+      "title": "자가차량 장착용 온디바이스 AI 카메라 모듈 디자인 및 금형 제작 용역",
+      "org": "주식회사 무한정보기술",
+      "contract_org": "주식회사 무한정보기술",
+      "signed_date": "2026-11-16",
+      "period_text": "금차 166일, 총차 166일",
+      "end_date": "2027-04-30",
+      "amount_eok": 1.265,
+      "long_term": "신규",
+      "method": "일반경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 필텍정보통신",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "1068198233"
+        }
+      ],
+      "bid_no": "R26BK01779839",
+      "registered_at": "2026-11-17 14:21",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02417863&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
+    {
+      "contract_no": "R26TA02422281",
+      "title": "2026년 전문대학 혁신지원 사업 AI에듀테크기반 원격교육지원(원격 콘텐츠 개발)",
+      "org": "대구과학대학 산학협력단",
+      "contract_org": "대구과학대학 산학협력단",
+      "signed_date": "2026-11-16",
+      "period_text": "금차 77일, 총차 77일",
+      "end_date": "2027-01-31",
+      "amount_eok": 1.5825,
+      "long_term": "신규",
+      "method": "수의계약",
+      "joint": false,
+      "firms": [
+        {
+          "name": "(주)이너모션",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "4118702136"
+        }
+      ],
+      "bid_no": null,
+      "registered_at": "2026-11-16 13:32",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02422281&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "연구·교육·행사"
+    },
+    {
+      "contract_no": "R26TA02419776",
+      "title": "AI 기반 지역혁신 데이터 플랫폼 구축",
+      "org": "부산대학교 산학협력단",
+      "contract_org": "부산대학교 산학협력단",
+      "signed_date": "2026-11-16",
+      "period_text": "금차 90일, 총차 90일",
+      "end_date": "2027-02-12",
+      "amount_eok": 2.955,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 한국취업정보기술",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "2108168815"
+        }
+      ],
+      "bid_no": "R26BK01783175",
+      "registered_at": "2026-11-16 12:46",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02419776&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화"
+    },
+    {
+      "contract_no": "R26TA02432921",
+      "title": "2026년 AI 기반 교육플랫폼 평가 학습지원 통합시스템 구축 용역",
+      "org": "전북특별자치도교육청",
+      "contract_org": "전북특별자치도교육청",
+      "signed_date": "2026-11-16",
+      "period_text": "금차 46일, 총차 46일",
+      "end_date": "2026-12-31",
+      "amount_eok": 4.94,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "(주)엔에스데블",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "3148629725"
+        }
+      ],
+      "bid_no": "R26BK01784910",
+      "registered_at": "2026-11-16 19:50",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02432921&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "연구·교육·행사"
+    },
+    {
+      "contract_no": "R26TA02431107",
+      "title": "광양만권 철강·금속 기업  AX 기술지원(기초단계) 용역",
+      "org": "한국산업기술시험원",
+      "contract_org": "조달청 경남지방조달청",
+      "signed_date": "2026-11-16",
+      "period_text": "계약 후 60일",
+      "end_date": "2027-01-15",
+      "amount_eok": 1.4,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 포드림",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "1288615542"
+        }
+      ],
+      "bid_no": "R26BK01792006",
+      "registered_at": "2026-11-17 15:14",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02431107&ctrtChgOrd=00&prcmBsneSeCd=조070002&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
     {
       "contract_no": "R26TA01599260",
       "title": "2026년 천안AI꿈키움터 체험프로그램 참가 전세버스 임차용역",
@@ -28180,35 +28441,6 @@
       "bid_no": "R25BK00928478",
       "registered_at": "2026-03-18 17:07",
       "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R25TA00771881&ctrtChgOrd=03&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
-      "scope": "AI SW 확대",
-      "fields": [
-        "AI 일반"
-      ],
-      "nature": null
-    },
-    {
-      "contract_no": "R26TA01452990",
-      "title": "2026 대학연계 방과후 AI-SW 특화 프로그램 지원 사업 용역",
-      "org": "충청남도교육청 충청남도아산교육지원청",
-      "contract_org": "충청남도교육청 충청남도아산교육지원청",
-      "signed_date": "2026-03-18",
-      "period_text": "금차 284일, 총차 284일",
-      "end_date": "2026-12-11",
-      "amount_eok": 2.934,
-      "long_term": "신규",
-      "method": "제한경쟁",
-      "joint": false,
-      "firms": [
-        {
-          "name": "호서대학교 산학협력단",
-          "role": "주계약업체",
-          "share": 100.0,
-          "bizno": "3128210256"
-        }
-      ],
-      "bid_no": "R26BK01282162",
-      "registered_at": "2026-03-18 13:39",
-      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA01452990&ctrtChgOrd=01&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
       "scope": "AI SW 확대",
       "fields": [
         "AI 일반"
