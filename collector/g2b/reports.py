@@ -388,7 +388,7 @@ def render_weekly_html(agg: dict[str, Any]) -> str:
     )
     body = (
         f'<div class="eyebrow">{html.escape(eyebrow)}</div>'
-        f"<h1>공공 AI Agent 주간 브리프</h1>"
+        f"<h1>AI 사업 주간 브리프</h1>"
         f'<p class="lede">{html.escape(lede)}</p>'
         f"{stats}{core_table}{award_table}{notes}{up_table}"
     )
@@ -727,7 +727,7 @@ def render_monthly_html(agg: dict[str, Any]) -> str:
 
     body = (
         f'<div class="eyebrow">{html.escape(eyebrow)}</div>'
-        f"<h1>공공 AI Agent 월간 리포트</h1>"
+        f"<h1>AI 사업 월간 리포트</h1>"
         f'<p class="lede">{html.escape(lede)}</p>'
         f"{stats}{trend_sec}{nature_sec}{field_sec}{top_sec}{org_sec}"
         f"{isp_sec}{win_sec}{bid_sec}"
