@@ -7,7 +7,17 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
-from .normalize import band_excluded, collapse_rounds, in_band, list_excluded, merge_by_bid, read_notices, sort_notices
+from .normalize import (
+    band_excluded,
+    collapse_rounds,
+    exclude_reason_summary,
+    in_band,
+    list_exclude_reason,
+    list_excluded,
+    merge_by_bid,
+    read_notices,
+    sort_notices,
+)
 from .classify import apply_summary_labels, classify_nature, load_keywords
 from .seed import load_seed
 from .site import detail_href, stamp_shell
@@ -184,7 +194,8 @@ def render_notice_row(notice: dict[str, Any], today: date | None = None) -> str:
 
     title = title_link(notice)
     if notice.get("_soft_excluded"):
-        title += ' <span class="meta">제외됨</span>'
+        why = notice.get("_exclude_reason") or list_exclude_reason(notice) or "규칙"
+        title += f' <span class="meta">제외: {html.escape(str(why))}</span>'
     cls = ' class="soft-excluded"' if notice.get("_soft_excluded") else ""
     return (
         f"<tr{cls}>"
@@ -240,6 +251,7 @@ def load_merged_band(
         n["status"] = infer_status(n, today)
         if list_excluded(n, rules):
             n["_soft_excluded"] = True
+            n["_exclude_reason"] = list_exclude_reason(n, rules)
             soft.append(n)
         else:
             kept.append(n)
@@ -323,9 +335,12 @@ def replace_band_results_table(
     count: int,
     meta_html: str | None = None,
 ) -> str:
+    # Accept a prior broken form where the soft-exclude checkbox sat outside <p class="meta">.
     pattern = re.compile(
         r"<h2>공고별 결과 \(\d+건\)</h2>"
         r"(?:<p class=\"meta\">.*?</p>)?"
+        r"(?:\s*·\s*<label class=\"tbl-only\">.*?</label>)?"
+        r"(?:\s*<span class=\"meta\">.*?</span>)?"
         r'<div class="tbl"><table(?:\s+class="[^"]*")?>'
         r"(<thead>.*?</thead><tbody>)"
         r".*?"
@@ -637,20 +652,30 @@ def render_band_page(repo_root: Path) -> dict[str, Any]:
     notices = load_merged_band(repo_root)
     today = _today_kst()
     active = [n for n in notices if not n.get("_soft_excluded")]
-    soft_n = len(notices) - len(active)
+    soft = [n for n in notices if n.get("_soft_excluded")]
+    soft_n = len(soft)
+    soft_why = exclude_reason_summary(soft, rules=rules)
     rows = "".join(render_notice_row(n, today) for n in notices)
     path = repo_root / "band.html"
     text = path.read_text(encoding="utf-8")
-    soft_note = (
-        f' · <label class="tbl-only"><input type="checkbox" id="show-excluded"> 제외됨 {soft_n}건 보기</label>'
-        if soft_n
-        else ""
-    )
+    meta = _status_meta(active, today)
+    if soft_n:
+        bits = [
+            f'<label class="tbl-only"><input type="checkbox" id="show-excluded"> '
+            f"제외됨 {soft_n}건 보기</label>"
+        ]
+        if soft_why:
+            bits.append(html.escape(soft_why))
+        # Fold into the existing <p class="meta">…</p> so replace_band_results_table stays stable.
+        if meta.endswith("</p>"):
+            meta = meta[: -len("</p>")] + " · " + " · ".join(bits) + "</p>"
+        else:
+            meta += '<p class="meta">' + " · ".join(bits) + "</p>"
     text = replace_band_results_table(
         text,
         rows,
         len(active),
-        meta_html=_status_meta(active, today) + soft_note,
+        meta_html=meta,
     )
     budget_sum = sum(
         float(n["budget_eok"]) for n in active if n.get("budget_eok") is not None

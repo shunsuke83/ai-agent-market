@@ -1,6 +1,6 @@
 from g2b.alerts import prespec_item
 from g2b.classify import apply_summary_labels
-from g2b.normalize import list_excluded
+from g2b.normalize import exclude_reason_summary, list_exclude_reason, list_excluded
 from g2b.pricing import budget_share
 
 
@@ -27,6 +27,21 @@ def test_list_excludes_purchase_lease_and_its_maintenance():
     assert list_excluded({"title": "ITS 유지관리 용역", "biz": "servc"})
     assert list_excluded({"title": "ChatGPT 라이선스 구매", "biz": "servc"})
     assert not list_excluded({"title": "생성형 AI 민원 상담 플랫폼 구축", "biz": "servc"})
+
+
+def test_list_exclude_reason_labels_and_summary():
+    gpu = {"title": "AI 학습용 GPU 서버 구매", "biz": "servc"}
+    its = {"title": "지능형교통 시스템 유지", "biz": "servc"}
+    edu = {"title": "AI 교육 과정 운영 용역", "biz": "servc", "nature": "연구·교육·행사"}
+    keep = {"title": "생성형 AI 민원 상담 플랫폼 구축", "biz": "servc"}
+    assert list_exclude_reason(gpu) == "GPU"
+    assert list_exclude_reason(its) == "교통·ITS"
+    assert list_exclude_reason(edu) == "교육·행사·감리"
+    assert list_exclude_reason(keep) is None
+    summary = exclude_reason_summary([gpu, gpu, its, edu])
+    assert "GPU 2건" in summary
+    assert "교통·ITS 1건" in summary
+    assert "교육·행사·감리 1건" in summary
 
 
 def test_budget_share_uses_amount_over_budget():

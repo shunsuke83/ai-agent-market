@@ -296,6 +296,65 @@ def list_excluded(notice: dict[str, Any], rules: dict[str, Any] | None = None) -
     return _has_any(title, (rules.get("filters") or {}).get("list_exclude_title") or [])
 
 
+# list_exclude_title 동의어 → 화면용 짧은 사유. 없으면 키워드 그대로.
+_EXCLUDE_LABELS = {
+    "GPU": "GPU",
+    "스토리지": "스토리지",
+    "서버 구매": "서버 구매",
+    "서버구매": "서버 구매",
+    "서버 도입": "서버 구매",
+    "서버도입": "서버 구매",
+    "전산물품": "전산물품",
+    "임차": "임차",
+    "전시 운영": "전시·시설",
+    "전시운영": "전시·시설",
+    "시설물 관리": "전시·시설",
+    "시설관리": "전시·시설",
+    "지능형교통": "교통·ITS",
+    "ITS 유지": "교통·ITS",
+    "ITS유지": "교통·ITS",
+    "라이선스": "라이선스",
+    "라이센스": "라이선스",
+    "ChatGPT": "라이선스",
+}
+
+
+def list_exclude_reason(
+    notice: dict[str, Any], rules: dict[str, Any] | None = None
+) -> str | None:
+    """Soft-hide 사유 라벨. 제외되지 않으면 None."""
+    rules = rules or load_keywords()
+    if not list_excluded(notice, rules):
+        return None
+    title = notice.get("title") or ""
+    for kw in (rules.get("filters") or {}).get("list_exclude_title") or []:
+        if _has_any(title, [kw]):
+            return _EXCLUDE_LABELS.get(kw, kw)
+    if band_excluded(notice, rules):
+        return "교육·행사·감리"
+    return "물품·HW"
+
+
+def exclude_reason_summary(
+    notices: list[dict[str, Any]],
+    *,
+    rules: dict[str, Any] | None = None,
+    limit: int = 6,
+) -> str:
+    """'교육·행사·감리 80건 · GPU 40건' 형태. 비어 있으면 ''."""
+    from collections import Counter
+
+    rules = rules or load_keywords()
+    counts = Counter(
+        list_exclude_reason(n, rules) or n.get("_exclude_reason")
+        for n in notices
+    )
+    counts.pop(None, None)
+    if not counts:
+        return ""
+    return " · ".join(f"{label} {n}건" for label, n in counts.most_common(limit))
+
+
 def merge_by_bid(existing: list[dict[str, Any]], incoming: list[dict[str, Any]]) -> list[dict[str, Any]]:
     by_key: dict[str, dict[str, Any]] = {}
     for row in existing + incoming:

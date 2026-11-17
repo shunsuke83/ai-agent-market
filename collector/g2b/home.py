@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import Any
 
 from .classify import apply_summary_labels, load_keywords
-from .normalize import list_excluded
+from .normalize import exclude_reason_summary, list_exclude_reason, list_excluded
 from .prespecs import STATUS_OPEN, load_prespecs, prespec_status
 from .pricing import ContextIndex
 from .render import (
@@ -274,8 +274,10 @@ def build_home(
         + "</div>"
     )
     delta = f"오늘 새 공고 {new_today}건 · 어제 {new_yest}건"
+    soft_why = exclude_reason_summary(soft, rules=rules)
     if soft:
-        delta += f" · 제외 규칙 {len(soft)}건 (기본 숨김)"
+        delta += f" · 제외 규칙 {len(soft)}건"
+        delta += f" ({soft_why}, 기본 숨김)" if soft_why else " (기본 숨김)"
 
     contexts = ContextIndex(notices)
 
@@ -346,7 +348,10 @@ def build_home(
         "<tr class=\"soft-excluded\">"
         + _td(html.escape((n.get("close_at") or "")[5:10]) + _dday(n.get("close_at"), today))
         + _td(html.escape(n.get("org") or ""))
-        + _td(_title_cell(n) + ' <span class="meta">제외됨</span>')
+        + _td(
+            _title_cell(n)
+            + f' <span class="meta">제외: {html.escape(list_exclude_reason(n, rules) or "규칙")}</span>'
+        )
         + _td(_fmt_budget(n.get("budget_eok")), num=True)
         + "</tr>"
         for n in soft_open[:LIMIT]
@@ -421,6 +426,11 @@ def build_home(
         + (more(len(opened_rows), len(opened), "awards.html", "수주 현황") if opened else "")
         + (
             '<h2>제외된 공고 <label class="tbl-only"><input type="checkbox" id="show-excluded"> 보기</label></h2>'
+            + (
+                f'<p class="meta">{html.escape(exclude_reason_summary(soft_open, rules=rules))}</p>'
+                if soft_open
+                else ""
+            )
             + _table(
                 [("입찰 마감", False), ("수요기관", False), ("사업명", False), ("예산(억)", True)],
                 soft_rows,
