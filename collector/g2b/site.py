@@ -8,6 +8,8 @@ from typing import Any
 
 from .assets import ASSET_VER, FONT_LINKS, stamp_asset_versions
 
+SITE_TITLE = "AI 사업 입찰·수주 분석"
+
 NAV_GROUPS = (
     ("", (("index.html", "홈"),)),
     ("시장 분석", (
@@ -40,7 +42,8 @@ _NAV_ACTIVE_JS = (
 
 FOOTER = (
     "<footer>데이터 출처: 조달청 나라장터 입찰공고·낙찰정보·사전규격정보(공공데이터포털 Open API), "
-    "각 사 공식 발표·보도자료. 사업명 기준 자동 분류라 일부 오분류가 있을 수 있습니다. "
+    "각 사 공식 발표·보도자료. 사업명 기준 자동 분류라 일부 오분류가 있을 수 있고, "
+    "나라장터 원문과 전수 대조하지 않았습니다. 개인이 운영하는 사이트입니다. "
     "확인하지 못한 항목은 '미확인'으로 표시합니다.</footer>"
 )
 
@@ -70,7 +73,7 @@ def nav(prefix: str = "") -> str:
     )
     return (
         f'<nav class="top" aria-label="사이트 메뉴"><a class="brand" href="{prefix}index.html">'
-        "공공 AI Agent 시장 리서치</a>"
+        f"{SITE_TITLE}</a>"
         f"{groups}{_NAV_ACTIVE_JS}</nav>"
     )
 

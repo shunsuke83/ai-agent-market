@@ -21,7 +21,7 @@ from .render import (
     stamp_text,
     title_link,
 )
-from .site import page, stat
+from .site import SITE_TITLE, page, stat
 
 DEADLINE_DAYS = 7
 NEW_DAYS = 7
@@ -274,9 +274,10 @@ def build_home(
         return f'<p class="meta" style="margin-top:8px">{extra}<a href="{href}">{label} →</a></p>'
 
     body = (
-        '<div class="eyebrow">Public AI Agent Market Research</div><h1>공공 AI Agent 시장 리서치</h1>'
-        '<p class="lede">나라장터 AI 사업의 오늘 기회(마감 임박·새 공고·사전규격)와 '
-        "누가 어떤 사업을 수주하는지를 매일 갱신합니다.</p>"
+        f'<div class="eyebrow">나라장터 · 공공데이터포털 Open API</div><h1>{SITE_TITLE}</h1>'
+        '<p class="lede">나라장터 AI 사업의 입찰공고·낙찰·사전규격·발주계획을 매일 모아 '
+        "마감 임박·새 공고·수주·투찰 경쟁을 한곳에서 봅니다. "
+        "사업명 기준 자동 분류이며, 나라장터 원문과 전수 대조하지 않았습니다. 개인이 운영합니다.</p>"
         f'<div class="stamp">{html.escape(stamp_text(run_status))}</div>'
         + stats
         + f"<h2>마감 임박 ({DEADLINE_DAYS}일 이내)</h2>"
@@ -318,7 +319,7 @@ def build_home(
         + STATIC_CARDS
         + keep_html
     )
-    return page("공공 AI Agent 시장 리서치", body)
+    return page(SITE_TITLE, body)
 
 
 def render_home(repo_root: Path, now: datetime | None = None) -> dict[str, Any]:
