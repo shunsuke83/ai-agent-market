@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-16T12:46:55Z",
+  "generated_at": "2026-11-17T03:43:18Z",
   "plans": [
     {
       "plan_no": "R26DD20515816",
@@ -2506,7 +2506,9 @@
       "dept": "항만연구본부",
       "tel": "051-797-4646",
       "posted_date": "2026-11-11",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01834774"
+      ],
       "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20925981",
       "biz": "servc",
       "biz_div": "일반용역",
@@ -2580,7 +2582,9 @@
       "dept": "구매관재팀",
       "tel": "02-2260-3091",
       "posted_date": "2026-11-11",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01826004"
+      ],
       "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20926111",
       "biz": "servc",
       "biz_div": "일반용역",
@@ -3714,6 +3718,56 @@
         "AI 일반"
       ],
       "nature": "연구·교육·행사"
+    },
+    {
+      "plan_no": "R26DD20932488",
+      "title": "제2기 AI MASTER 과정 운영 용역",
+      "org": "전남대학교 교육혁신본부",
+      "top_org": null,
+      "org_kind": "교육기관",
+      "order_ym": "2026-11",
+      "amount_eok": 1.4,
+      "contract_method": "일반경쟁",
+      "procurement": "자체조달",
+      "dept": "전남대학교 교육혁신본부  AI융합교육센터",
+      "tel": "062-530-2592",
+      "posted_date": "2026-11-17",
+      "bid_nos": [],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20932488",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
+    {
+      "plan_no": "R26DD20932825",
+      "title": "2027년 서울로봇인공지능과학관 청사 경비용역",
+      "org": "서울시립과학관",
+      "top_org": "서울특별시",
+      "org_kind": "지방자치단체",
+      "order_ym": "2026-11",
+      "amount_eok": 2.0656,
+      "contract_method": "제한경쟁",
+      "procurement": "자체조달",
+      "dept": "서울로봇인공지능과학관",
+      "tel": "02-920-4316",
+      "posted_date": "2026-11-17",
+      "bid_nos": [
+        "R26BK01835383"
+      ],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20932825",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
     },
     {
       "plan_no": "R26DD20561940",

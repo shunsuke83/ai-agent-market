@@ -1,11 +1,77 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-16T12:46:42Z",
+  "generated_at": "2026-11-17T03:43:04Z",
   "range": {
-    "since": "2026-11-02",
-    "until": "2026-11-16"
+    "since": "2026-11-03",
+    "until": "2026-11-17"
   },
   "prespecs": [
+    {
+      "prespec_no": "R26BD00301441",
+      "title": "AI학습분석실 구축 설치 및 시운전",
+      "org": "한국기술교육대학교",
+      "order_org": "한국기술교육대학교",
+      "registered_at": "2026-11-17 11:05",
+      "registered_date": "2026-11-17",
+      "opinion_close_at": "2026-11-22 23:59",
+      "asign_budget_eok": 0.989,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00301441&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00301333",
+      "title": "국민인공지능서비스혁신추진단 온프레미스SW 개발 환경 구성 용역",
+      "org": "과학기술정보통신부",
+      "order_org": "조달청 대전지방조달청",
+      "registered_at": "2026-11-17 09:34",
+      "registered_date": "2026-11-17",
+      "opinion_close_at": "2026-11-22 23:59",
+      "asign_budget_eok": 1.6571,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 인프라"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00301333&fileType=BFDTL&fileSeq=2"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
+    {
+      "prespec_no": "R26BD00301290",
+      "title": "부산교육대학교  AI 디지털 중심 에듀테크 전자도서관(교육특화 콘텐츠 플랫폼) 구축 용역",
+      "org": "부산교육대학교",
+      "order_org": "조달청 부산지방조달청",
+      "registered_at": "2026-11-17 09:04",
+      "registered_date": "2026-11-17",
+      "opinion_close_at": "2026-11-22 23:59",
+      "asign_budget_eok": 1.5145,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "연구·교육·행사",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00301290&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
     {
       "prespec_no": "R26BD00301226",
       "title": "AI기반 에너지 관리 서비스 개발",
@@ -1122,7 +1188,9 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01826004"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00298542&fileType=BFDTL&fileSeq=1",
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00298542&fileType=BFDTL&fileSeq=2",
@@ -1168,7 +1236,9 @@
         "데이터·예측"
       ],
       "nature": null,
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01834774"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00298478&fileType=BFDTL&fileSeq=1",
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00298478&fileType=BFDTL&fileSeq=2",
