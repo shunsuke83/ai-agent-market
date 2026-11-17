@@ -262,20 +262,97 @@ def aggregate_weekly(
     }
 
 
-def _weekly_core_rows(rows: list[dict[str, Any]]) -> str:
+def _fit_pill(scored: dict[str, Any] | None) -> str:
+    if not scored:
+        return ""
+    from .gonogo_policy import GO, NO_GO, REVIEW
+
+    label = {GO: "참여", REVIEW: "검토", NO_GO: "보류"}.get(scored["verdict"], scored["verdict"])
+    return (
+        f'<span class="fit-pill" data-verdict="{html.escape(str(scored["verdict"]))}">'
+        f"{html.escape(str(label))} {scored['score']}점</span>"
+    )
+
+
+def _fit_scores(
+    notices: list[dict[str, Any]],
+    profile: dict[str, Any] | None,
+    now: datetime,
+    summaries: dict[str, dict[str, Any]] | None = None,
+) -> dict[str, dict[str, Any]]:
+    if not profile:
+        return {}
+    from .classify import apply_summary_labels, load_keywords
+    from .gonogo_policy import score_policy
+
+    rules = load_keywords()
+    summaries = summaries or {}
+    out: dict[str, dict[str, Any]] = {}
+    for n in notices:
+        bid = n.get("bid_no") or ""
+        if not bid or bid in out:
+            continue
+        entry = summaries.get(bid)
+        apply_summary_labels(n, entry, rules)
+        out[bid] = score_policy(n, profile, now, summary=entry, rules=rules)
+    return out
+
+
+def _fit_rank_rows(
+    notices: list[dict[str, Any]],
+    fits: dict[str, dict[str, Any]],
+    *,
+    limit: int = 15,
+) -> list[tuple[dict[str, Any], dict[str, Any]]]:
+    from .gonogo_policy import GO, NO_GO, REVIEW
+
+    rows = [(n, fits[n["bid_no"]]) for n in notices if n.get("bid_no") in fits]
+    rows = [(n, s) for n, s in rows if not (s["verdict"] == NO_GO and s["score"] < 50)]
+    order = {GO: 0, REVIEW: 1, NO_GO: 2}
+    rows.sort(key=lambda x: (order.get(x[1]["verdict"], 9), -x[1]["score"]))
+    return rows[:limit]
+
+
+def _fit_section(rows: list[tuple[dict[str, Any], dict[str, Any]]]) -> str:
+    if not rows:
+        return ""
+    body = "".join(
+        "<tr>"
+        f"<td>{_fit_pill(s)}</td>"
+        f"<td>{html.escape(n.get('org') or '')}</td>"
+        f"<td>{_title_link(n)}</td>"
+        f'<td class="num">{_fmt_budget(sane_budget(n.get("budget_eok")))}</td>'
+        f"<td>{html.escape(' · '.join(s.get('reasons') or [])[:100])}</td>"
+        "</tr>"
+        for n, s in rows
+    )
+    return (
+        "<h2>적합도 · 참여 여부</h2>"
+        '<p class="meta">프로필 기준입니다. 참여 = GO, 검토 = REVIEW, 보류 = NO-GO.</p>'
+        '<div class="tbl"><table class="notices"><thead><tr>'
+        '<th>참여</th><th>수요기관</th><th>사업명</th><th class="num">예산(억)</th><th>사유</th>'
+        f"</tr></thead><tbody>{body}</tbody></table></div>"
+    )
+
+
+def _weekly_core_rows(
+    rows: list[dict[str, Any]], fits: dict[str, dict[str, Any]] | None = None
+) -> str:
+    fits = fits or {}
     parts: list[str] = []
     for n in rows:
         bud = sane_budget(n.get("budget_eok"))
-        parts.append(
-            "<tr>"
-            f"<td>{html.escape(n.get('notice_date') or '')}</td>"
-            f"<td>{html.escape(n.get('org') or '')}</td>"
-            f"<td>{_title_link(n)}</td>"
-            f"<td>{html.escape(nature_label(n.get('nature')))}</td>"
-            f'<td class="num">{_fmt_budget(bud) if bud is not None else ""}</td>'
-            f"<td>{html.escape(n.get('open_date') or '')}</td>"
-            "</tr>"
-        )
+        fit = _fit_pill(fits.get(n.get("bid_no") or ""))
+        cells = [
+            f"<td>{fit}</td>" if fits else "",
+            f"<td>{html.escape(n.get('notice_date') or '')}</td>",
+            f"<td>{html.escape(n.get('org') or '')}</td>",
+            f"<td>{_title_link(n)}</td>",
+            f"<td>{html.escape(nature_label(n.get('nature')))}</td>",
+            f'<td class="num">{_fmt_budget(bud) if bud is not None else ""}</td>',
+            f"<td>{html.escape(n.get('open_date') or '')}</td>",
+        ]
+        parts.append("<tr>" + "".join(c for c in cells if c is not None) + "</tr>")
     return "".join(parts)
 
 
@@ -306,23 +383,33 @@ def _weekly_award_rows(rows: list[dict[str, Any]]) -> str:
     return "".join(parts)
 
 
-def _weekly_upcoming_rows(rows: list[dict[str, Any]]) -> str:
+def _weekly_upcoming_rows(
+    rows: list[dict[str, Any]], fits: dict[str, dict[str, Any]] | None = None
+) -> str:
+    fits = fits or {}
     parts: list[str] = []
     for n in rows:
         bud = sane_budget(n.get("budget_eok"))
-        parts.append(
-            "<tr>"
-            f"<td>{html.escape(n.get('open_date') or '')}</td>"
-            f"<td>{html.escape(n.get('org') or '')}</td>"
-            f"<td>{_title_link(n)}</td>"
-            f"<td>{html.escape(n.get('contract_method') or '')}</td>"
-            f'<td class="num">{_fmt_budget(bud) if bud is not None else ""}</td>'
-            "</tr>"
-        )
+        fit = _fit_pill(fits.get(n.get("bid_no") or ""))
+        cells = [
+            f"<td>{fit}</td>" if fits else "",
+            f"<td>{html.escape(n.get('open_date') or '')}</td>",
+            f"<td>{html.escape(n.get('org') or '')}</td>",
+            f"<td>{_title_link(n)}</td>",
+            f"<td>{html.escape(n.get('contract_method') or '')}</td>",
+            f'<td class="num">{_fmt_budget(bud) if bud is not None else ""}</td>',
+        ]
+        parts.append("<tr>" + "".join(cells) + "</tr>")
     return "".join(parts)
 
 
-def render_weekly_html(agg: dict[str, Any]) -> str:
+def render_weekly_html(
+    agg: dict[str, Any],
+    *,
+    profile: dict[str, Any] | None = None,
+    summaries: dict[str, dict[str, Any]] | None = None,
+    now: datetime | None = None,
+) -> str:
     y, w = agg["year"], agg["week"]
     start: date = agg["start"]
     end: date = agg["end"]
@@ -337,6 +424,10 @@ def render_weekly_html(agg: dict[str, Any]) -> str:
     bud = agg["budget_sum"]
     other = agg["other_count"]
     awards_n = len(agg["awards"])
+    scored_at = now or datetime.combine(end, datetime.min.time(), tzinfo=KST)
+    pool = list(agg["core"]) + list(agg["upcoming"])
+    fits = _fit_scores(pool, profile, scored_at, summaries)
+    fit_head = "<th>참여</th>" if fits else ""
 
     stats = (
         '<div class="stats">'
@@ -351,11 +442,12 @@ def render_weekly_html(agg: dict[str, Any]) -> str:
         "</div>"
     )
 
+    fit_table = _fit_section(_fit_rank_rows(agg["core"], fits))
     core_table = (
         '<h2>신규 AI 사업 공고</h2><div class="tbl"><table class="notices">'
-        "<thead><tr><th>공고일</th><th>수요기관</th><th>사업명</th><th>성격</th>"
+        f"<thead><tr>{fit_head}<th>공고일</th><th>수요기관</th><th>사업명</th><th>성격</th>"
         '<th class="num">예산(억)</th><th>개찰 예정</th></tr></thead>'
-        f"<tbody>{_weekly_core_rows(agg['core'])}</tbody></table></div>"
+        f"<tbody>{_weekly_core_rows(agg['core'], fits)}</tbody></table></div>"
     )
     award_table = (
         '<h2>개찰 결과</h2><div class="tbl"><table class="notices">'
@@ -378,15 +470,15 @@ def render_weekly_html(agg: dict[str, Any]) -> str:
     up_table = (
         '<h2>다가오는 개찰 (향후 15일, 예산 1억 이상)</h2>'
         '<div class="tbl"><table class="notices">'
-        "<thead><tr><th>개찰 예정</th><th>수요기관</th><th>사업명</th><th>계약방법</th>"
+        f"<thead><tr>{fit_head}<th>개찰 예정</th><th>수요기관</th><th>사업명</th><th>계약방법</th>"
         '<th class="num">예산(억)</th></tr></thead>'
-        f"<tbody>{_weekly_upcoming_rows(agg['upcoming'])}</tbody></table></div>"
+        f"<tbody>{_weekly_upcoming_rows(agg['upcoming'], fits)}</tbody></table></div>"
     )
     body = (
         f'<div class="eyebrow">{html.escape(eyebrow)}</div>'
         f"<h1>AI 사업 주간 브리프</h1>"
         f'<p class="lede">{html.escape(lede)}</p>'
-        f"{stats}{core_table}{award_table}{notes}{up_table}"
+        f"{stats}{fit_table}{core_table}{award_table}{notes}{up_table}"
     )
     return _page(title, body)
 
@@ -569,19 +661,23 @@ def _trend_scope_table(trend: list[dict[str, Any]]) -> str:
     )
 
 
-def _top10_rows(rows: list[dict[str, Any]]) -> str:
+def _top10_rows(
+    rows: list[dict[str, Any]], fits: dict[str, dict[str, Any]] | None = None
+) -> str:
+    fits = fits or {}
     parts: list[str] = []
     for n in rows:
         bud = sane_budget(n.get("budget_eok"))
-        parts.append(
-            "<tr>"
-            f"<td>{html.escape(n.get('notice_date') or '')}</td>"
-            f"<td>{html.escape(n.get('org') or '')}</td>"
-            f"<td>{_title_link(n)}</td>"
-            f"<td>{html.escape(nature_label(n.get('nature')))}</td>"
-            f'<td class="num">{_fmt_budget(bud) if bud is not None else ""}</td>'
-            "</tr>"
-        )
+        fit = _fit_pill(fits.get(n.get("bid_no") or ""))
+        cells = [
+            f"<td>{fit}</td>" if fits else "",
+            f"<td>{html.escape(n.get('notice_date') or '')}</td>",
+            f"<td>{html.escape(n.get('org') or '')}</td>",
+            f"<td>{_title_link(n)}</td>",
+            f"<td>{html.escape(nature_label(n.get('nature')))}</td>",
+            f'<td class="num">{_fmt_budget(bud) if bud is not None else ""}</td>',
+        ]
+        parts.append("<tr>" + "".join(cells) + "</tr>")
     return "".join(parts)
 
 
@@ -593,18 +689,22 @@ def _org_rows(orgs: list[tuple[str, int]]) -> str:
     )
 
 
-def _isp_rows(rows: list[dict[str, Any]]) -> str:
+def _isp_rows(
+    rows: list[dict[str, Any]], fits: dict[str, dict[str, Any]] | None = None
+) -> str:
+    fits = fits or {}
     parts: list[str] = []
     for n in rows:
         bud = sane_budget(n.get("budget_eok"))
-        parts.append(
-            "<tr>"
-            f"<td>{html.escape(n.get('notice_date') or '')}</td>"
-            f"<td>{html.escape(n.get('org') or '')}</td>"
-            f"<td>{_title_link(n)}</td>"
-            f'<td class="num">{_fmt_budget(bud) if bud is not None else ""}</td>'
-            "</tr>"
-        )
+        fit = _fit_pill(fits.get(n.get("bid_no") or ""))
+        cells = [
+            f"<td>{fit}</td>" if fits else "",
+            f"<td>{html.escape(n.get('notice_date') or '')}</td>",
+            f"<td>{html.escape(n.get('org') or '')}</td>",
+            f"<td>{_title_link(n)}</td>",
+            f'<td class="num">{_fmt_budget(bud) if bud is not None else ""}</td>',
+        ]
+        parts.append("<tr>" + "".join(cells) + "</tr>")
     return "".join(parts)
 
 
@@ -627,7 +727,13 @@ def _bidder_rows(rows: list[tuple[str, int]]) -> str:
     )
 
 
-def render_monthly_html(agg: dict[str, Any]) -> str:
+def render_monthly_html(
+    agg: dict[str, Any],
+    *,
+    profile: dict[str, Any] | None = None,
+    summaries: dict[str, dict[str, Any]] | None = None,
+    now: datetime | None = None,
+) -> str:
     y, m = agg["year"], agg["month"]
     end: date = agg["end"]
     in_prog = agg["in_progress"]
@@ -648,6 +754,10 @@ def render_monthly_html(agg: dict[str, Any]) -> str:
     prev_b = agg["prev_budget"]
     bud_disp = _fmt_budget_sum(bud)
     prev_disp = _fmt_budget_sum(prev_b)
+    scored_at = now or datetime.combine(end, datetime.min.time(), tzinfo=KST)
+    pool = list(agg["core"]) + list(agg["isp"]) + list(agg["top10"])
+    fits = _fit_scores(pool, profile, scored_at, summaries)
+    fit_head = "<th>참여</th>" if fits else ""
     stats = (
         '<div class="stats">'
         f'<div class="stat"><div class="v">{n}건</div>'
@@ -661,6 +771,7 @@ def render_monthly_html(agg: dict[str, Any]) -> str:
         "</div>"
     )
 
+    fit_table = _fit_section(_fit_rank_rows(agg["core"], fits))
     trend_sec = (
         "<h2>최근 12개월 공고 추이</h2>"
         f"{_month_bars_html(agg['trend'])}"
@@ -680,9 +791,9 @@ def render_monthly_html(agg: dict[str, Any]) -> str:
     top_sec = (
         "<h2>예산 상위 10개 사업</h2>"
         '<div class="tbl"><table class="notices"><thead><tr>'
-        "<th>공고일</th><th>수요기관</th><th>사업명</th><th>성격</th>"
+        f"{fit_head}<th>공고일</th><th>수요기관</th><th>사업명</th><th>성격</th>"
         '<th class="num">예산(억)</th></tr></thead>'
-        f"<tbody>{_top10_rows(agg['top10'])}</tbody></table></div>"
+        f"<tbody>{_top10_rows(agg['top10'], fits)}</tbody></table></div>"
     )
     org_sec = (
         "<h2>발주 기관 상위 10</h2>"
@@ -693,9 +804,9 @@ def render_monthly_html(agg: dict[str, Any]) -> str:
     isp_sec = (
         "<h2>ISP·전략 공고</h2>"
         '<div class="tbl"><table class="notices"><thead><tr>'
-        '<th>공고일</th><th>수요기관</th><th>사업명</th>'
+        f"{fit_head}<th>공고일</th><th>수요기관</th><th>사업명</th>"
         '<th class="num">예산(억)</th></tr></thead>'
-        f"<tbody>{_isp_rows(agg['isp'])}</tbody></table></div>"
+        f"<tbody>{_isp_rows(agg['isp'], fits)}</tbody></table></div>"
     )
     win_sec = (
         "<h2>이번 달 낙찰 업체</h2>"
@@ -725,7 +836,7 @@ def render_monthly_html(agg: dict[str, Any]) -> str:
         f'<div class="eyebrow">{html.escape(eyebrow)}</div>'
         f"<h1>AI 사업 월간 리포트</h1>"
         f'<p class="lede">{html.escape(lede)}</p>'
-        f"{stats}{trend_sec}{nature_sec}{field_sec}{top_sec}{org_sec}"
+        f"{stats}{fit_table}{trend_sec}{nature_sec}{field_sec}{top_sec}{org_sec}"
         f"{isp_sec}{win_sec}{bid_sec}"
     )
     return _page(title, body)
@@ -862,13 +973,26 @@ def render_reports(
     if month is None:
         month = (today.year, today.month)
 
+    from .gonogo import load_profile
+    from .rfp import load_summaries
+
+    profile = load_profile()
+    summaries = load_summaries(repo_root)
+    now = datetime.now(KST)
+
     w_agg = aggregate_weekly(notices, week[0], week[1], today=today)
     m_agg = aggregate_monthly(notices, month[0], month[1], today=today)
 
     weekly_path = reports_dir / f"{w_agg['slug']}.html"
     monthly_path = reports_dir / f"{m_agg['slug']}.html"
-    weekly_path.write_text(render_weekly_html(w_agg), encoding="utf-8")
-    monthly_path.write_text(render_monthly_html(m_agg), encoding="utf-8")
+    weekly_path.write_text(
+        render_weekly_html(w_agg, profile=profile, summaries=summaries, now=now),
+        encoding="utf-8",
+    )
+    monthly_path.write_text(
+        render_monthly_html(m_agg, profile=profile, summaries=summaries, now=now),
+        encoding="utf-8",
+    )
 
     # Merge with any other already-rendered report files for the index. Past reports keep the
     # summary saved when they were rendered; ones saved without it are re-aggregated once.

@@ -87,6 +87,72 @@ def test_clean_bidder_name_strips_rank():
     assert clean_bidder_name(None) == ""
 
 
+def test_weekly_monthly_html_include_fit_when_profile():
+    from datetime import datetime
+
+    from g2b.render import KST
+    from g2b.reports import render_monthly_html, render_weekly_html
+    from tests.test_gonogo_policy import PROFILE
+
+    notices = [
+        {
+            "bid_no": "R26FIT1",
+            "title": "생성형 AI LLM 챗봇 구축",
+            "org": "한국가스공사",
+            "budget_eok": 10.0,
+            "fields": ["생성형·LLM"],
+            "nature": "시스템 구축·고도화",
+            "notice_date": "2026-10-20",
+            "open_date": "2026-11-05",
+            "close_at": "2026-11-20 10:00",
+            "contract_method": "협상에 의한 계약",
+        }
+    ]
+    weekly = {
+        "year": 2026,
+        "week": 43,
+        "start": date(2026, 10, 19),
+        "end": date(2026, 10, 25),
+        "core": notices,
+        "gen_count": 1,
+        "budget_sum": 10.0,
+        "other_count": 0,
+        "awards": [],
+        "failed_count": 0,
+        "pending_count": 0,
+        "upcoming": notices,
+        "slug": "weekly-2026-W43",
+    }
+    monthly = {
+        "year": 2026,
+        "month": 10,
+        "end": date(2026, 10, 31),
+        "in_progress": False,
+        "core": notices,
+        "budget_sum": 10.0,
+        "prev_count": 0,
+        "prev_budget": 0.0,
+        "large_count": 0,
+        "isp_count": 0,
+        "isp": [],
+        "trend": [{"ym": "2026-10", "label": "10월", "count": 1, "gen": 1, "sw": 0}],
+        "natures": [("시스템 구축·고도화", 1)],
+        "fields": [("생성형·LLM", 1)],
+        "top10": notices,
+        "top_orgs": [("한국가스공사", 1)],
+        "winners": [],
+        "bidders": [],
+        "slug": "monthly-2026-10",
+    }
+    now = datetime(2026, 11, 2, 9, 0, tzinfo=KST)
+    wh = render_weekly_html(weekly, profile=PROFILE, now=now)
+    mh = render_monthly_html(monthly, profile=PROFILE, now=now)
+    assert "적합도 · 참여 여부" in wh
+    assert "fit-pill" in wh and "<th>참여</th>" in wh
+    assert "적합도 · 참여 여부" in mh
+    assert "fit-pill" in mh and "<th>참여</th>" in mh
+
+
 def test_aggregate_month_bidders_skips_blank_and_counts_unique():
     notices = [
         {
