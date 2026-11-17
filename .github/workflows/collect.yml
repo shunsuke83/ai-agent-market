@@ -2,10 +2,9 @@ name: Collect G2B AI notices
 
 on:
   schedule:
-    # Daily 13:17 KST = 04:17 UTC. Keep it in daytime KST (apis.data.go.kr
-    # times out overnight) and off the hour (scheduled starts lag). The Monday
-    # (KST) run also does the heavy award / bidder backfills.
-    - cron: "17 4 * * *"
+    # Daily 19:00 KST = 10:00 UTC. Daytime KST so apis.data.go.kr stays up.
+    # The Monday (KST) run also does the heavy award / bidder backfills.
+    - cron: "0 10 * * *"
   workflow_dispatch:
     inputs:
       days:
