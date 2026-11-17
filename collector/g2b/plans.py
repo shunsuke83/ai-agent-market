@@ -326,7 +326,7 @@ def build_plans_page(
     )
 
     exp_rows = "".join(
-        "<tr>"
+        f'<tr id="c-{html.escape(c.get("contract_no") or c.get("bid_no") or str(i))}">'
         f"<td>{html.escape(c['end_date'])}"
         + ('<div class="meta">종료됨</div>' if c["end_date"] < today.isoformat() else "")
         + "</td>"
@@ -337,7 +337,7 @@ def build_plans_page(
         f"<td>{html.escape(c.get('signed_date') or '')}"
         f'<div class="meta">{_link(c.get("url"), "계약 ↗")}</div></td>'
         "</tr>"
-        for c in expiring
+        for i, c in enumerate(expiring)
     )
     exp_html = (
         '<div class="tbl"><table class="notices js-filter"><thead><tr><th>종료(추정)</th><th>수요기관</th>'
@@ -379,7 +379,9 @@ def build_plans_page(
         + "<h2>계약 종료 예정 (재발주 후보)</h2>"
         f'<p class="meta">최근 {EXPIRY_PAST_DAYS}일 안에 끝났거나 {EXPIRY_AHEAD_DAYS}일 안에 끝나는 1억 원 이상 AI 용역 계약입니다. '
         "종료일은 총완수일이 있으면 그 날짜, 없으면 계약기간 원문(날짜, '계약 후 N일')으로 추정합니다. "
-        "운영·유지보수는 해마다 다시 발주되는 경우가 많습니다.</p>"
+        "운영·유지보수는 해마다 다시 발주되는 경우가 많습니다. "
+        "검색창에 수행업체 이름을 넣으면 그 업체 계약만 남습니다. "
+        '종료 180일 전 알림은 <a href="feeds/renewals.ics">후속 캘린더</a>에 있습니다.</p>'
         + exp_html
         + "<h2>최근 1년 AI 용역 계약 업체</h2>"
         '<p class="meta">1억 원 이상 계약의 금액을 공동수급 지분율대로 나눠 더했습니다. '
@@ -424,4 +426,47 @@ def render_plans_page(repo_root: Path, today: date | None = None) -> dict[str, A
     path.write_text(
         build_plans_page(plans, contracts, load_run_status(repo_root), today, details), encoding="utf-8"
     )
+    write_renewal_ics(repo_root, contracts, today)
     return {"path": str(path), "plans": len(plans), "contracts": len(contracts)}
+
+
+def write_renewal_ics(repo_root: Path, contracts: list[dict[str, Any]], today: date) -> int:
+    """종료 180일 전 후속 검토 일정. 그 날이 지났으면 종료일 자체를 넣는다."""
+    from .alerts import _fold, _ics_text
+
+    horizon = today + timedelta(days=400)
+    lines = [
+        "BEGIN:VCALENDAR",
+        "VERSION:2.0",
+        "PRODID:-//ai-agent-market//renewals//KO",
+        "CALSCALE:GREGORIAN",
+        "X-WR-CALNAME:AI 용역 후속 검토",
+    ]
+    n = 0
+    for c in contracts:
+        end = (c.get("end_date") or "")[:10]
+        if len(end) < 10:
+            continue
+        try:
+            end_d = date.fromisoformat(end)
+        except ValueError:
+            continue
+        if not (today <= end_d <= horizon):
+            continue
+        remind = end_d - timedelta(days=180)
+        if remind < today:
+            remind = end_d
+        n += 1
+        lines += [
+            "BEGIN:VEVENT",
+            f"UID:renewal-{n}@ai-agent-market",
+            f"DTSTART;VALUE=DATE:{remind.strftime('%Y%m%d')}",
+            _fold("SUMMARY:" + _ics_text("후속 검토: " + (c.get("title") or ""))),
+            _fold("DESCRIPTION:" + _ics_text(f"{c.get('org') or ''} 종료 {end}")),
+            "END:VEVENT",
+        ]
+    lines.append("END:VCALENDAR")
+    feeds = repo_root / "feeds"
+    feeds.mkdir(exist_ok=True)
+    (feeds / "renewals.ics").write_text("\r\n".join(lines) + "\r\n", encoding="utf-8", newline="")
+    return n

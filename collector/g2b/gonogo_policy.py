@@ -2,7 +2,7 @@
 
 Gates are judged before scoring: fail → NO-GO, unknown → REVIEW (확인 먼저). Score components
 without evidence are left out and lower the 근거 충족률 instead of being guessed.
-Output goes to Slack only; no 수주 확률 wording.
+Scores may be shown on the internal site and Slack. No 수주 확률 wording.
 """
 
 from __future__ import annotations

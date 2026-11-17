@@ -184,9 +184,29 @@
     }
   }
 
+  function labelCards(root) {
+    var tables = (root || document).querySelectorAll(
+      "table.notices, table.home-list, table.prespecs, table.bidder-history, table.band-results"
+    );
+    Array.prototype.forEach.call(tables, function (table) {
+      if (!table.tHead || !table.tHead.rows[0]) return;
+      var labels = Array.prototype.map.call(table.tHead.rows[0].cells, function (th) {
+        return (th.textContent || "").replace(/[▲▼]/g, "").trim();
+      });
+      Array.prototype.forEach.call(table.tBodies, function (body) {
+        Array.prototype.forEach.call(body.rows, function (row) {
+          Array.prototype.forEach.call(row.cells, function (td, i) {
+            if (labels[i]) td.setAttribute("data-label", labels[i]);
+          });
+        });
+      });
+    });
+  }
+
   function init() {
     var tables = document.querySelectorAll(".tbl table");
     for (var i = 0; i < tables.length; i++) enhanceTable(tables[i]);
+    labelCards(document);
   }
 
   if (document.readyState === "loading") {

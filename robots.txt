@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shunsuke83.github.io/ai-agent-market/sitemap.xml

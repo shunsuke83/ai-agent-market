@@ -113,6 +113,7 @@
     var csvBtn = button("CSV 내보내기");
     var cmpBtn = button("비교");
     var addBtn = button("관심 등록");
+    var shareBtn = button("관심 링크 복사");
     var delBtn = button("관심 해제");
     var noneBtn = button("선택 해제");
     var only = document.createElement("label");
@@ -121,7 +122,7 @@
     onlyBox.type = "checkbox";
     only.appendChild(onlyBox);
     only.appendChild(document.createTextNode(" 관심만 보기"));
-    [info, csvBtn, cmpBtn, addBtn, delBtn, noneBtn, only].forEach(function (el) {
+    [info, csvBtn, cmpBtn, addBtn, shareBtn, delBtn, noneBtn, only].forEach(function (el) {
       bar.appendChild(el);
     });
     wrap.parentNode.insertBefore(bar, wrap);
@@ -165,6 +166,7 @@
       cmpBtn.disabled = n < 2 || n > 5;
       cmpBtn.title = "2~5건을 고르면 나란히 비교합니다";
       addBtn.disabled = delBtn.disabled = noneBtn.disabled = !n;
+      shareBtn.disabled = !Object.keys(loadWatch()).length;
       csvBtn.textContent = n ? "CSV 내보내기 (선택 " + n + "건)" : "CSV 내보내기 (검색 결과 전체)";
     }
 
@@ -228,6 +230,17 @@
 
     addBtn.addEventListener("click", function () {
       setWatch(true);
+    });
+    shareBtn.addEventListener("click", function () {
+      var api = window.aamWatch;
+      if (!api) return;
+      var url = api.shareUrl();
+      var done = function () { shareBtn.textContent = "관심 링크 복사됨"; };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(done);
+      } else {
+        shareBtn.textContent = "복사 불가";
+      }
     });
     delBtn.addEventListener("click", function () {
       setWatch(false);

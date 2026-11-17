@@ -1,4 +1,5 @@
 from datetime import date
+from pathlib import Path
 
 from g2b.bidders import build_bidder_index, build_bidders_page
 from g2b.site import stamp_shell
@@ -35,6 +36,19 @@ def test_bidders_page_points_at_versioned_index():
                               {}, "abc123")
     assert 'data-src="data/bidders.json?v=abc123"' in html
     assert "assets/bidder-search.js" in html and 'href="bidders.html"' in html
+
+
+def test_result_label_does_not_call_a_lower_rank_first():
+    js = (Path(__file__).resolve().parents[2] / "assets" / "bidder-search.js").read_text(encoding="utf-8")
+    assert 'notice[6] === "1순위"' in js and "1순위" in js and "firmLink(top[0])" in js
+
+
+def test_page_has_description_nav_and_main():
+    from g2b.site import page
+
+    html = page("제목", "<p>본문</p>", path="index.html")
+    assert 'name="description"' in html and 'rel="icon"' in html and "<main>" in html
+    assert 'href="alerts.html"' in html and "watch.js" in html
 
 
 def test_stamp_shell_replaces_hand_nav():

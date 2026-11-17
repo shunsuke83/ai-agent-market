@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import html
 import json
-from datetime import date
+from datetime import date, datetime
 from pathlib import Path
 from typing import Any
 from urllib.parse import quote
@@ -17,6 +17,7 @@ from .render import (
     _fmt_budget,
     _fmt_pct,
     _g2b_href,
+    KST,
     _today_kst,
     infer_status,
 )
@@ -212,6 +213,35 @@ def _terms_rows(n: dict[str, Any]) -> str:
     )
 
 
+def proposal_markdown(n: dict[str, Any], entry: dict[str, Any] | None, fit: dict[str, Any] | None) -> str:
+    s = (entry or {}).get("summary") or {}
+    lines = [
+        f"# {n.get('title') or ''}",
+        "",
+        f"- 기관: {n.get('org') or ''}",
+        f"- 예산: {n.get('budget_eok') if n.get('budget_eok') is not None else ''}억",
+        f"- 마감: {n.get('close_at') or n.get('close_date') or ''}",
+        f"- 개찰: {n.get('open_at') or n.get('open_date') or ''}",
+        f"- 분류: {' · '.join(x for x in (n.get('scope'), n.get('nature')) if x)}",
+    ]
+    if s.get("overview"):
+        lines += ["", "## 개요", str(s["overview"])]
+    if s.get("tasks"):
+        lines += ["", "## 과업", *[f"- {t}" for t in s["tasks"]]]
+    if s.get("tech"):
+        lines += ["", "## 요구 기술", *[f"- {t}" for t in s["tech"]]]
+    if s.get("evaluation"):
+        lines += ["", "## 평가", str(s["evaluation"])]
+    if fit:
+        lines += [
+            "",
+            f"## 적합도",
+            f"{fit['verdict']} {fit['score']}점 (근거 {round(fit['evidence'] * 100)}%)",
+            *fit.get("reasons", [])[:4],
+        ]
+    return "\n".join(lines).strip() + "\n"
+
+
 def render_detail_html(
     n: dict[str, Any],
     *,
@@ -220,6 +250,8 @@ def render_detail_html(
     competition_html: str = "",
     contract_html: str = "",
     summary_html: str = "",
+    fit_html: str = "",
+    proposal_md: str = "",
     today: date | None = None,
 ) -> str:
     today = today or _today_kst()
@@ -248,11 +280,27 @@ def render_detail_html(
         + _terms_rows(n)
         + _kv("나라장터 원문", f'<a href="{g2b}" target="_blank" rel="noopener">공고 보기 ↗</a>' if g2b else "")
     )
+    slug = detail_slug(n) or ""
+    actions = (
+        '<p class="detail-actions">'
+        f'<button type="button" class="tbl-act" id="watch-toggle" data-key="bids/{html.escape(slug)}.html">관심 등록</button> '
+        '<button type="button" class="tbl-act" id="copy-link">링크 복사</button> '
+        '<button type="button" class="tbl-act" id="proposal-copy">제안 메모 복사</button> '
+        '<button type="button" class="tbl-act" onclick="window.print()">인쇄</button>'
+        "</p>"
+        + (
+            f'<pre id="proposal-md" hidden>{html.escape(proposal_md)}</pre>'
+            if proposal_md
+            else ""
+        )
+    )
     body = (
-        f'<div class="eyebrow">사업 상세 · {html.escape(detail_slug(n) or "")}</div>'
+        f'<div class="eyebrow">사업 상세 · {html.escape(slug)}</div>'
         f"<h1>{html.escape(n.get('title') or '')}</h1>"
         f'<p class="lede">{html.escape(n.get("org") or "")}</p>'
-        "<h2>공고 정보</h2>"
+        + actions
+        + fit_html
+        + "<h2>공고 정보</h2>"
         f'<div class="tbl"><table class="kv"><tbody>{info}</tbody></table></div>'
         + summary_html
         + "<h2>개찰·낙찰 결과</h2>"
@@ -263,16 +311,36 @@ def render_detail_html(
         + _prespec_table(prespecs or [])
         + _same_org_table(same_org or [], today)
     )
-    return page(f"{n.get('title') or '사업 상세'} — 사업 상세", body, prefix="../")
+    desc = " · ".join(
+        x
+        for x in (
+            n.get("org") or "",
+            f"{n['budget_eok']:g}억" if n.get("budget_eok") is not None else "",
+            f"마감 {n.get('close_at') or n.get('close_date') or ''}".strip(),
+        )
+        if x and x != "마감"
+    )
+    return page(
+        f"{n.get('title') or '사업 상세'} — 사업 상세",
+        body,
+        prefix="../",
+        path=f"bids/{slug}.html",
+        description=desc or None,
+    )
 
 
 def render_detail_pages(repo_root: Path, today: date | None = None) -> dict[str, Any]:
+    from .classify import apply_summary_labels
+    from .gonogo import load_profile
+    from .gonogo_policy import score_policy
     from .plans import contract_block, contracts_by_bid
     from .pricing import ContextIndex, context_html, load_notices
     from .prespecs import load_prespecs
     from .rfp import load_summaries, summary_block
 
     today = today or _today_kst()
+    profile = load_profile()
+    scored_at = datetime.combine(today, datetime.min.time(), tzinfo=KST)
     notices = load_detail_notices(repo_root)
     summaries = load_summaries(repo_root)
     contexts = ContextIndex(load_notices(repo_root))
@@ -296,13 +364,27 @@ def render_detail_pages(repo_root: Path, today: date | None = None) -> dict[str,
         if not slug or slug in written:
             continue
         same = [r for r in by_org.get(n.get("org") or "", []) if detail_slug(r) != slug][:10]
+        entry = summaries.get(n["bid_no"])
+        apply_summary_labels(n, entry)
+        fit = score_policy(n, profile, scored_at, summary=entry) if profile else None
+        fit_html = ""
+        if fit:
+            reasons = " · ".join(fit["reasons"][:4])
+            fit_html = (
+                f'<p class="fit"><b>적합도 {html.escape(str(fit["verdict"]))} {fit["score"]}점</b>'
+                f' <span class="meta">근거 {round(fit["evidence"] * 100)}%</span>'
+                + (f"<br>{html.escape(reasons)}" if reasons else "")
+                + "</p>"
+            )
         text = render_detail_html(
             n,
             prespecs=by_bid.get(n["bid_no"]),
             same_org=same,
             competition_html=context_html(contexts.context(n)),
             contract_html=contract_block(contracts.get(n["bid_no"])),
-            summary_html=summary_block(summaries.get(n["bid_no"])),
+            summary_html=summary_block(entry),
+            fit_html=fit_html,
+            proposal_md=proposal_markdown(n, entry, fit),
             today=today,
         )
         path = out_dir / f"{slug}.html"

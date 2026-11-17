@@ -1,7 +1,7 @@
 """Go/No-Go: rule-based fit score of open AI notices against a private company profile.
 
-The profile comes from the COMPANY_PROFILE secret (YAML) and scores go to Slack only — never
-to the public site, data/ or the (public) Actions log.
+The profile comes from the COMPANY_PROFILE secret (YAML). Scores can be rendered for the
+internal site and Slack. The profile file itself is never written into HTML, data/, or logs.
 """
 
 from __future__ import annotations

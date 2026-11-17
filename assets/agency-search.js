@@ -127,10 +127,41 @@
       body.join("") + "</tbody></table></div>";
   }
 
+  var GROUPS = {
+    "발전5사": ["한국남동발전", "한국중부발전", "한국서부발전", "한국남부발전", "한국동서발전"],
+    "한국발전": ["한국남동발전", "한국중부발전", "한국서부발전", "한국남부발전", "한국동서발전"],
+    "금융공공기관": ["한국은행", "한국투자공사", "산업은행", "수출입은행", "예금보험", "자산관리공사", "주택금융", "신용보증기금", "기술보증기금", "무역보험", "한국거래소"]
+  };
+  // 공백을 지운 키로도 찾는다 (발전 5사, 금융 공공기관).
+  var ALIASES = {
+    "남동발전": "한국남동발전",
+    "중부발전": "한국중부발전",
+    "서부발전": "한국서부발전",
+    "남부발전": "한국남부발전",
+    "동서발전": "한국동서발전",
+    "한은": "한국은행",
+    "kic": "한국투자공사"
+  };
+
   function search() {
     if (!rows.length) return;
     var q = input.value.trim();
     var nq = norm(q);
+    if (ALIASES[nq]) {
+      q = ALIASES[nq];
+      nq = norm(q);
+    }
+    var group = GROUPS[nq] || GROUPS[nq.replace(/\s+/g, "")];
+    if (group) {
+      var keys = group.map(norm);
+      var grouped = orgs.filter(function (o) {
+        var name = norm(o);
+        return keys.some(function (k) { return name.indexOf(k) !== -1; });
+      });
+      if (!grouped.length) msg("묶음에 해당하는 기관 공고가 없습니다.");
+      else showList(grouped, q);
+      return;
+    }
     if (nq.length < 2) {
       msg("기관명을 2글자 이상 입력하세요.");
       return;

@@ -777,6 +777,10 @@ def cmd_render(args: argparse.Namespace) -> int:
         # Home reads data/reports.json, so it renders after reports.
         summary["index"] = render_home(ROOT)
         render_index_stamp(ROOT, home=False)
+    from .site import write_not_found, write_sitemap
+
+    write_not_found(ROOT)
+    write_sitemap(ROOT)
     print(json.dumps(summary, ensure_ascii=False, indent=2))
     return 0
 

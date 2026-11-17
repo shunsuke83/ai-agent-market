@@ -17,10 +17,11 @@ from .render import (
     _fmt_num,
     _parse_date,
     _today_kst,
+    infer_status,
     title_link,
 )
-from .assets import ASSET_VER, FONT_LINKS
-from .site import nav
+from .assets import ASSET_VER
+from .site import document_start, nav
 
 # 핵심 AI 사업 성격 (주간 「신규」·월간 「AI 사업」). 교육·장비·미분류는 기타.
 CORE_NATURES = frozenset(
@@ -49,17 +50,12 @@ FOOTER = (
     "확인하지 못한 항목은 '미확인'으로 표시합니다.</footer>"
 )
 
-HEAD_TMPL = (
-    "<!doctype html><html lang=\"ko\"><head><meta charset=\"utf-8\">"
-    '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'
-    "<title>{title}</title>"
-    + FONT_LINKS +
-    '<meta http-equiv="Cache-Control" content="no-cache">'
-    f'<link rel="stylesheet" href="../assets/site.css?v={ASSET_VER}"></head><body>'
-    '<div class="wrap">'
-)
 
-SCRIPT = f'<script src="../assets/table-sort.js?v={ASSET_VER}" defer></script>'
+SCRIPT = (
+    f'<script src="../assets/table-sort.js?v={ASSET_VER}" defer></script>'
+    f'<script src="../assets/watch.js?v={ASSET_VER}" defer></script>'
+)
+WATCH_SCRIPT = f'<script src="../assets/watch.js?v={ASSET_VER}" defer></script>'
 
 
 def sane_budget(v: Any) -> float | None:
@@ -192,8 +188,8 @@ def _fmt_budget_sum(n: float) -> str:
 
 
 def _page(title: str, body: str, with_sort: bool = True) -> str:
-    tail = f"</div>{SCRIPT}</body></html>" if with_sort else "</div></body></html>"
-    return HEAD_TMPL.format(title=html.escape(title)) + NAV + body + FOOTER + tail
+    tail = f"</div>{SCRIPT}</body></html>" if with_sort else f"</div>{WATCH_SCRIPT}</body></html>"
+    return document_start(title, "../") + NAV + "<main>" + body + "</main>" + FOOTER + tail
 
 
 # --- weekly -----------------------------------------------------------------
@@ -240,7 +236,7 @@ def aggregate_weekly(
 
     # 개찰됐지만 낙찰 미확정 / 유찰 notes
     opened = [n for n in notices if _in_range(n.get("open_date"), start, end)]
-    failed = sum(1 for n in opened if n.get("status") == "유찰")
+    failed = sum(1 for n in opened if infer_status(n) == "유찰")
     pending = sum(
         1
         for n in opened

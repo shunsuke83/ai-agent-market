@@ -5,7 +5,16 @@ import re
 from pathlib import Path
 
 ASSET_DIR = Path(__file__).resolve().parents[2] / "assets"
-ASSET_FILES = ("site.css", "table-sort.js", "table-filter.js", "bidder-search.js", "agency-search.js")
+ASSET_FILES = (
+    "site.css",
+    "table-sort.js",
+    "table-filter.js",
+    "bidder-search.js",
+    "agency-search.js",
+    "watch.js",
+    "price-calc.js",
+    "favicon.svg",
+)
 
 _ASSET_REF_RE = re.compile(
     r"(assets/(?:" + "|".join(re.escape(f) for f in ASSET_FILES) + r"))\?v=[\w.-]+"

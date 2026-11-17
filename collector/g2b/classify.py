@@ -69,3 +69,32 @@ def classify_title(title: str, rules: dict[str, Any] | None = None) -> dict[str,
         "fields": classify_fields(title, rules),
         "nature": classify_nature(title, rules),
     }
+
+
+def summary_text(title: str, entry: dict[str, Any] | None) -> str:
+    """Title plus public RFP summary fields. The summary is attachment text, not a profile."""
+    parts = [title]
+    summary = (entry or {}).get("summary") or {}
+    parts.extend(str(x) for x in (summary.get("tasks") or []) if x)
+    parts.extend(str(x) for x in (summary.get("tech") or []) if x)
+    overview = summary.get("overview") or ""
+    if overview:
+        parts.append(str(overview))
+    return "\n".join(p for p in parts if p)
+
+
+def apply_summary_labels(
+    notice: dict[str, Any], entry: dict[str, Any] | None, rules: dict[str, Any] | None = None
+) -> dict[str, Any]:
+    """Reclassify from the proposal text when a summary exists. Title-only labels stay otherwise."""
+    if not entry or entry.get("status") not in (None, "ok") or not (entry.get("summary") or {}):
+        return notice
+    labels = classify_title(summary_text(notice.get("title") or "", entry), rules)
+    if labels["scope"]:
+        notice["scope"] = labels["scope"]
+    fields = [f for f in labels["fields"] if f != "AI 일반"]
+    notice["fields"] = fields or labels["fields"]
+    # 요구 기술의 GPU 한 단어가 구축 사업을 인프라 구매로 바꾸지 않게, 사업 성격은 공고명을 유지한다.
+    title_nature = classify_nature(notice.get("title") or "", rules)
+    notice["nature"] = title_nature or labels["nature"] or notice.get("nature")
+    return notice

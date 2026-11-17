@@ -10,6 +10,7 @@ from datetime import date, datetime, timedelta, timezone
 from email.utils import format_datetime
 from pathlib import Path
 from typing import Any
+from urllib.parse import quote
 from xml.sax.saxutils import escape as xml_escape
 
 import yaml
@@ -70,7 +71,7 @@ def prespec_item(p: dict[str, Any], site_url: str) -> dict[str, Any]:
         "budget_eok": p.get("asign_budget_eok"),
         "date": p.get("registered_date") or "",
         "deadline": p.get("opinion_close_at") or "",
-        "url": site_url + "prespecs.html",
+        "url": site_url + "prespecs.html#p-" + quote(str(p.get("prespec_no") or ""), safe=""),
         "raw": p,
     }
 
@@ -273,7 +274,14 @@ def slack_text(groups: list[tuple[dict[str, Any], list[dict[str, Any]]]], today:
         lines.append(f"*{_slack_escape(rule['name'])}* — {len(got)}건")
         for i in got[:limit]:
             title = _slack_escape(i["title"]).replace("|", "¦")
-            lines.append(f"• [{KIND_LABEL[i['kind']]}] <{i['url']}|{title}>\n    {_slack_escape(_summary(i))}")
+            labels = " · ".join(
+                x for x in (i.get("scope"), i.get("nature"), i.get("fields") if isinstance(i.get("fields"), str) else None) if x
+            )
+            lines.append(
+                f"• [{KIND_LABEL[i['kind']]}] <{i['url']}|{title}>\n"
+                f"    {_slack_escape(_summary(i))}\n"
+                f"    {_slack_escape(labels or '분류 없음')}"
+            )
         if len(got) > limit:
             lines.append(f"    …외 {len(got) - limit}건 (<{site_url}feeds/{rule['id']}.xml|RSS>)")
     lines.append("")
@@ -362,6 +370,79 @@ def build_alerts_page(config: dict[str, Any], counts: dict[str, int]) -> str:
     return page("알림 구독", body)
 
 
+def slack_followups(
+    items: list[dict[str, Any]],
+    today: date,
+    site_url: str,
+    sent: dict[str, str],
+    repo_root: Path,
+) -> tuple[str, list[str]]:
+    """마감 3일 전, 최근 개찰, 월요일 주간 요약. 적합도는 프로필이 있을 때만 Slack 본문에 붙인다."""
+    from .gonogo import load_profile
+    from .gonogo_policy import score_policy
+    from .render import KST
+
+    keys: list[str] = []
+    blocks: list[str] = []
+    end = (today + timedelta(days=3)).isoformat()
+    start = today.isoformat()
+    profile = load_profile()
+    scored_at = datetime.combine(today, datetime.min.time(), tzinfo=KST)
+    due_lines = [""]
+    due_n = 0
+    for i in items:
+        deadline = (i.get("deadline") or "")[:10]
+        if len(deadline) < 10 or not (start <= deadline <= end):
+            continue
+        key = f"due:{i['key']}:{deadline}"
+        if key in sent:
+            continue
+        keys.append(key)
+        due_n += 1
+        title = _slack_escape(i["title"]).replace("|", "¦")
+        due_lines.append(f"• <{i['url']}|{title}>\n    마감 {i['deadline'][:16]} · {_slack_escape(i.get('org') or '')}")
+        raw = i.get("raw") or {}
+        if profile and raw.get("title"):
+            scored = score_policy(raw, profile, scored_at)
+            due_lines.append(f"    적합도 {scored['verdict']} {scored['score']}점")
+    if len(due_lines) > 1:
+        due_lines[0] = f"*마감 3일 이내 {due_n}건*"
+        blocks.append("\n".join(due_lines))
+
+    opened_lines = [""]
+    yesterday = (today - timedelta(days=1)).isoformat()
+    for i in items:
+        if i["kind"] != "notice":
+            continue
+        raw = i.get("raw") or {}
+        opened_on = (raw.get("open_date") or "")[:10]
+        if len(opened_on) < 10 or not (yesterday <= opened_on <= start):
+            continue
+        if not (raw.get("winner") or raw.get("first_rank") or raw.get("status") in ("유찰", "1순위", "낙찰")):
+            continue
+        key = f"opened:{i['key']}:{opened_on}"
+        if key in sent:
+            continue
+        keys.append(key)
+        who = raw.get("winner") or raw.get("first_rank") or raw.get("status") or ""
+        title = _slack_escape(i["title"]).replace("|", "¦")
+        opened_lines.append(
+            f"• <{i['url']}|{title}>\n    {opened_on} · {_slack_escape(str(who))}"
+        )
+    if len(opened_lines) > 1:
+        opened_lines[0] = f"*최근 개찰 {len(opened_lines) - 1}건*"
+        blocks.append("\n".join(opened_lines))
+
+    week_key = f"weekly:{today.strftime('%G-W%V')}"
+    if today.weekday() == 0 and week_key not in sent:
+        keys.append(week_key)
+        since = (today - timedelta(days=7)).isoformat()
+        notices = sum(1 for i in items if i["kind"] == "notice" and (i.get("date") or "") >= since)
+        prespecs = sum(1 for i in items if i["kind"] == "prespec" and (i.get("date") or "") >= since)
+        blocks.append(f"*이번 주 요약*\n최근 7일 공고 {notices}건 · 사전규격 {prespecs}건\n<{site_url}index.html|오늘의 사업 기회>")
+    return ("\n\n".join(blocks), keys)
+
+
 def run_alerts(
     repo_root: Path,
     *,
@@ -404,13 +485,16 @@ def run_alerts(
     changes = firm_change_items(load_firms(repo_root), state.get("sent", {}), since)
     new_count = sum(len(g) for _, g in groups)
     summary: dict[str, Any] = {"rules": counts, "new": new_count, "firm_changes": len(changes), "slack": "skipped"}
-    if not groups and not changes:
-        summary["slack"] = "nothing new"
-        return summary
     limit = int(config.get("slack_limit_per_rule", 15))
     parts = [slack_text(groups, today, limit, site_url)] if groups else []
     if changes:
         parts.append(firm_change_text(changes, site_url, limit))
+    extra, extra_keys = slack_followups(items, today, site_url, state.get("sent", {}), repo_root)
+    if extra:
+        parts.append(extra)
+    if not parts:
+        summary["slack"] = "nothing new"
+        return summary
     text = "\n\n".join(parts)
     if dry_run:
         print(text)
@@ -424,6 +508,8 @@ def run_alerts(
     sent = state.setdefault("sent", {})
     for i in [i for _, got in groups for i in got] + changes:
         sent[i["key"]] = today.isoformat()
+    for key in extra_keys:
+        sent[key] = today.isoformat()
     save_state(repo_root, state, today)
     summary["slack"] = "sent"
     return summary

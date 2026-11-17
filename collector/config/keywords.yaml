@@ -18,6 +18,9 @@ scope:
       - AI에이전트
       - Agent
       - 에이전틱
+      - Agentic
+      - LLMOps
+      - 가드레일
       - 챗봇
       - 콜봇
       - 언어모델
@@ -61,6 +64,8 @@ fields:
     - sLLM
     - SLLM
     - RAG
+    - LLMOps
+    - 가드레일
     - 챗봇
     - 언어모델
     - 거대 언어
@@ -71,6 +76,7 @@ fields:
     - 에이전트
     - Agent
     - 에이전틱
+    - Agentic
     - 어시스턴트
   AI 보안:
     - 침해대응
@@ -272,6 +278,26 @@ filters:
     - 시스템
   # index.html 오늘의 기회 목록: 이 금액 미만·장비 구매(prespec_goods_* 규칙)는 뺀다
   home_min_eok: 1.0
+  # 홈·8~30억·사전규격 목록에서 빼는 구매·임차·교통 유지. 구축형 AI 용역은 남긴다.
+  list_exclude_title:
+    - GPU
+    - 스토리지
+    - 서버 구매
+    - 서버구매
+    - 서버 도입
+    - 서버도입
+    - 전산물품
+    - 임차
+    - 전시 운영
+    - 전시운영
+    - 시설물 관리
+    - 시설관리
+    - 지능형교통
+    - ITS 유지
+    - ITS유지
+    - 라이선스
+    - 라이센스
+    - ChatGPT
   # band.html 후속 본사업 후보: ISP·전략 공고 lookback / floor / cap
   followup_days: 730
   followup_min_eok: 1.0

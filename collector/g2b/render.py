@@ -7,8 +7,8 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
-from .normalize import band_excluded, collapse_rounds, in_band, merge_by_bid, read_notices, sort_notices
-from .classify import classify_nature, load_keywords
+from .normalize import band_excluded, collapse_rounds, in_band, list_excluded, merge_by_bid, read_notices, sort_notices
+from .classify import apply_summary_labels, classify_nature, load_keywords
 from .seed import load_seed
 from .site import detail_href, stamp_shell
 
@@ -182,12 +182,16 @@ def render_notice_row(notice: dict[str, Any], today: date | None = None) -> str:
     else:
         winner_s = ""
 
+    title = title_link(notice)
+    if notice.get("_soft_excluded"):
+        title += ' <span class="meta">제외됨</span>'
+    cls = ' class="soft-excluded"' if notice.get("_soft_excluded") else ""
     return (
-        "<tr>"
+        f"<tr{cls}>"
         f"<td>{html.escape(notice.get('notice_date') or '')}</td>"
         f"<td>{html.escape(notice.get('scope') or '')}</td>"
         f"<td>{html.escape(notice.get('org') or '')}</td>"
-        f"<td>{title_link(notice)}</td>"
+        f"<td>{title}</td>"
         f"<td>{html.escape(field_txt)}</td>"
         f'<td class="num"{_budget_title(notice)}>{_fmt_budget(notice.get("budget_eok"))}</td>'
         f"<td>{html.escape(notice.get('open_date') or '')}</td>"
@@ -221,16 +225,25 @@ def load_merged_band(
                 incoming.append(n)
 
     merged = sort_notices(collapse_rounds(merge_by_bid(existing, incoming)))
+    from .rfp import load_summaries
+
+    summaries = load_summaries(repo_root)
     today = _today_kst()
     kept: list[dict[str, Any]] = []
+    soft: list[dict[str, Any]] = []
     for n in merged:
+        apply_summary_labels(n, summaries.get(n.get("bid_no")), rules)
         if not n.get("nature"):
             n["nature"] = classify_nature(n.get("title") or "", rules)
         if band_excluded(n, rules):
             continue
         n["status"] = infer_status(n, today)
-        kept.append(n)
-    return kept
+        if list_excluded(n, rules):
+            n["_soft_excluded"] = True
+            soft.append(n)
+        else:
+            kept.append(n)
+    return kept + soft
 
 
 def _status_meta(notices: list[dict[str, Any]], today: date | None = None) -> str:
@@ -350,7 +363,7 @@ def update_band_notice_stat(html_text: str, count: int, budget_sum_eok: float) -
     return new
 
 
-def _kst_date(iso: str | None) -> date | None:
+def _kst_dt(iso: str | None) -> datetime | None:
     if not iso:
         return None
     try:
@@ -359,7 +372,28 @@ def _kst_date(iso: str | None) -> date | None:
         return None
     if dt.tzinfo is None:
         dt = dt.replace(tzinfo=timezone.utc)
-    return dt.astimezone(KST).date()
+    return dt.astimezone(KST)
+
+
+def _kst_date(iso: str | None) -> date | None:
+    dt = _kst_dt(iso)
+    return dt.date() if dt else None
+
+
+def stage_stamp(stage: dict[str, Any], fallback: date | None = None) -> str:
+    """Last successful collect time in KST, not the render clock."""
+    dt = _kst_dt(stage.get("last_success_at"))
+    if dt:
+        text = f"데이터 기준 {dt.strftime('%Y-%m-%d %H:%M')} KST"
+    elif fallback:
+        text = f"데이터 기준 {fallback.isoformat()}"
+    else:
+        text = "데이터 기준 미확인"
+    if stage.get("last_outcome") not in (None, "success"):
+        tried = _kst_dt(stage.get("last_attempt_at"))
+        when = f" {tried.strftime('%Y-%m-%d %H:%M')} KST" if tried else ""
+        text += f" · 최근 수집 실패{when}, 기존 데이터 표시 중"
+    return text
 
 
 def load_run_status(repo_root: Path) -> dict[str, Any]:
@@ -372,13 +406,7 @@ def load_run_status(repo_root: Path) -> dict[str, Any]:
 def stamp_text(status: dict[str, Any], fallback: date | None = None) -> str:
     """'데이터 기준' = last successful 공고 collect, not the render date."""
     collect = (status.get("stages") or {}).get("collect") or {}
-    ok_day = _kst_date(collect.get("last_success_at")) or fallback
-    text = f"데이터 기준 {ok_day.isoformat()}" if ok_day else "데이터 기준 미확인"
-    if collect.get("last_outcome") not in (None, "success"):
-        tried = _kst_date(collect.get("last_attempt_at"))
-        when = f" {tried.isoformat()}" if tried else ""
-        text += f" · 최근 수집 실패{when}, 기존 데이터 표시 중"
-    return text
+    return stage_stamp(collect, fallback)
 
 
 def update_stamp(html_text: str, text: str) -> str:
@@ -608,21 +636,46 @@ def render_band_page(repo_root: Path) -> dict[str, Any]:
     rules = load_keywords()
     notices = load_merged_band(repo_root)
     today = _today_kst()
+    active = [n for n in notices if not n.get("_soft_excluded")]
+    soft_n = len(notices) - len(active)
     rows = "".join(render_notice_row(n, today) for n in notices)
     path = repo_root / "band.html"
     text = path.read_text(encoding="utf-8")
+    soft_note = (
+        f' · <label class="tbl-only"><input type="checkbox" id="show-excluded"> 제외됨 {soft_n}건 보기</label>'
+        if soft_n
+        else ""
+    )
     text = replace_band_results_table(
-        text, rows, len(notices), meta_html=_status_meta(notices, today)
+        text,
+        rows,
+        len(active),
+        meta_html=_status_meta(active, today) + soft_note,
     )
     budget_sum = sum(
-        float(n["budget_eok"]) for n in notices if n.get("budget_eok") is not None
+        float(n["budget_eok"]) for n in active if n.get("budget_eok") is not None
     )
-    text = update_band_notice_stat(text, len(notices), budget_sum)
+    text = update_band_notice_stat(text, len(active), budget_sum)
 
-    med_bids = _median(_num_list(notices, "bid_count"))
+    known_method = [n for n in active if n.get("award_method")]
+    if known_method:
+        nego = sum(1 for n in known_method if "협상" in str(n.get("award_method")))
+        text = replace_stat_card_by_prefix(
+            text,
+            "협상에 의한 계약 비중",
+            f"{round(100 * nego / len(known_method))}%",
+            f"협상에 의한 계약 비중 (낙찰방법 확인 {len(known_method)}건)",
+        )
+    ratio_counts = Counter(
+        f"기술 {n['tech_rate']:g}:가격 {n['price_rate']:g}"
+        for n in active
+        if n.get("tech_rate") is not None and n.get("price_rate") is not None
+    )
+
+    med_bids = _median(_num_list(active, "bid_count"))
     if med_bids is not None:
         text = replace_stat_card(text, "공고당 투찰 업체 (중앙값)", f"{med_bids:.1f}곳")
-    ratios = award_to_budget_list(notices)
+    ratios = award_to_budget_list(active)
     if ratios:
         text = replace_stat_card_by_prefix(
             text,
@@ -631,7 +684,7 @@ def render_band_page(repo_root: Path) -> dict[str, Any]:
             f"예산 대비 낙찰금액 (중앙값, 금액 확인 {len(ratios)}건)",
         )
 
-    quarters, current_q = quarter_counts(notices, today)
+    quarters, current_q = quarter_counts(active, today)
     text = replace_section_bars(
         text,
         "분기별 공고 추이",
@@ -640,25 +693,33 @@ def render_band_page(repo_root: Path) -> dict[str, Any]:
         "2025년부터 기관 단위 생성형 AI 구축이 본격화했습니다.</p>",
     )
 
-    org_counts = Counter(org_type(n.get("org")) for n in notices)
+    org_counts = Counter(org_type(n.get("org")) for n in active)
     text = replace_section_bars(
         text,
         "발주 기관 유형",
         _bars_html(sorted(org_counts.items(), key=lambda x: (-x[1], x[0]))),
     )
-    scope_counts, field_counts = scope_field_counts(notices)
+    scope_counts, field_counts = scope_field_counts(active)
     text = replace_section_bars(text, "사업 범위", _bars_html(scope_counts))
     text = replace_section_bars(text, "분야", _bars_html(field_counts))
     nature_counts = Counter(
-        NATURE_LABELS.get(n.get("nature"), n.get("nature")) for n in notices
+        NATURE_LABELS.get(n.get("nature"), n.get("nature")) for n in active
     )
     text = replace_section_bars(
         text,
         "사업 성격",
         _bars_html(sorted(nature_counts.items(), key=lambda x: (-x[1], x[0]))),
     )
+    if ratio_counts:
+        text = text.replace(
+            "<h2>사업 성격</h2>",
+            "<h2>평가 비율</h2>"
+            + _bars_html(sorted(ratio_counts.items(), key=lambda x: (-x[1], x[0])))
+            + "<h2>사업 성격</h2>",
+            1,
+        )
 
-    winners = band_winner_rollup(notices)
+    winners = band_winner_rollup(active)
     if winners:
         text = replace_awards_table(
             text,
@@ -668,11 +729,11 @@ def render_band_page(repo_root: Path) -> dict[str, Any]:
         )
         n_won = sum(c for _, c, _ in winners)
         top_name, top_c, _ = winners[0]
-        failed = sum(1 for n in notices if infer_status(n, today) == "유찰")
-        first_only = sum(1 for n in notices if infer_status(n, today) == "1순위")
+        failed = sum(1 for n in active if infer_status(n, today) == "유찰")
+        first_only = sum(1 for n in active if infer_status(n, today) == "1순위")
         amt_known = sum(
             1
-            for n in notices
+            for n in active
             if n.get("winner") and infer_status(n, today) == "낙찰" and _award_amount(n) is not None
         )
         share = 100.0 * top_c / n_won
@@ -685,13 +746,13 @@ def render_band_page(repo_root: Path) -> dict[str, Any]:
             text,
             "<h2>낙찰 업체</h2>",
             f'<p class="note">낙찰자 확인 {n_won}건. 최다 낙찰은 {html.escape(top_name)} '
-            f"{top_c}건으로, {verdict} 유찰 {failed}건. "
+            f"{top_c}건으로, {verdict} 유찰 {failed}건(개찰 결과 기준 infer_status). "
             f"개찰 1순위만 확인된 {first_only}건은 낙찰에 넣지 않았습니다. "
             f"낙찰금액 합계는 금액이 확인된 {amt_known}건만 더한 값입니다.</p>",
         )
 
     frequent = aggregate_frequent_bidders(
-        notices, min_bids=3, limit=20, build_only=False, rules=rules
+        active, min_bids=3, limit=20, build_only=False, rules=rules
     )
     if frequent:
         text = replace_awards_table(
@@ -725,10 +786,19 @@ def render_band_page(repo_root: Path) -> dict[str, Any]:
     )
 
     text = stamp_shell(text)
+    if soft_n:
+        text = text.replace(
+            "</body>",
+            '<script>(function(){var e=document.getElementById("show-excluded");'
+            'if(e)e.addEventListener("change",function(){document.body.classList.toggle("show-excluded",e.checked)});'
+            "})();</script></body>",
+            1,
+        )
     path.write_text(text, encoding="utf-8")
     return {
         "path": str(path),
-        "count": len(notices),
+        "count": len(active),
+        "soft_excluded": soft_n,
         "budget_sum_eok": round(budget_sum, 1),
         "scopes": dict(scope_counts),
         "fields_top": dict(field_counts[:5]),

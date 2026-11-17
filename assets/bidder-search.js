@@ -57,15 +57,21 @@
     return v != null && v >= 50 && v <= 110;
   }
 
-  function result(notice, bz, rank) {
+  function firmLink(bz, title) {
+    var name = data.firms[bz] ? data.firms[bz][0] : fmtBizno(bz);
+    return '<a href="#' + bz + '"' + (title ? ' title="' + title + '"' : "") + ">" + esc(name) + "</a>";
+  }
+
+  function result(notice, bz, rank, idx) {
     var winner = notice[5];
     if (winner === bz) return "<b>낙찰</b>";
-    if (winner) {
-      var name = data.firms[winner] ? data.firms[winner][0] : fmtBizno(winner);
-      return '<a href="#' + winner + '" title="낙찰 업체">' + esc(name) + "</a> 낙찰";
-    }
+    if (winner) return firmLink(winner, "낙찰 업체") + " 낙찰";
     if (notice[6] === "낙찰") return "다른 업체 낙찰";
-    if (rank === 1) return "1순위";
+    if (rank === 1) return "1순위 (확정 전)";
+    if (notice[6] === "1순위") {
+      var top = (byNotice[idx] || []).filter(function (o) { return o[1] === 1; })[0];
+      return top ? firmLink(top[0]) + " 1순위" : "다른 업체 1순위";
+    }
     return esc(notice[6] || "");
   }
 
@@ -104,13 +110,19 @@
     var wins = 0;
     var firsts = 0;
     var rates = [];
+    var shares = [];
     bids.forEach(function (b) {
       var n = data.notices[b[0]];
       if (n[5] === bz) wins += 1;
       else if (!n[5] && n[6] !== "낙찰" && b[1] === 1) firsts += 1;
       if (isRate(b[2])) rates.push(b[2]);
+      if (n[3] > 0 && b[3] > 0) {
+        var share = (100 * b[3]) / n[3];
+        if (share >= 20 && share <= 160) shares.push(share);
+      }
     });
     var med = median(rates);
+    var shareMed = median(shares);
     var head = ["사업자번호 " + fmtBizno(bz)];
     if (firm[1]) head.push(firm[1]);
     var rv = rivals(bz, bids);
@@ -129,7 +141,7 @@
             ? '<td class="num" title="협상계약 가격평가 점수">' + num(b[2], 2) + "점</td>"
             : '<td class="num"></td>') +
         '<td class="num">' + num(b[3], 2) + "</td>" +
-        "<td>" + result(n, bz, b[1]) + "</td></tr>";
+        "<td>" + result(n, bz, b[1], b[0]) + "</td></tr>";
     });
     box.innerHTML =
       "<h2>" + esc(firm[0] || fmtBizno(bz)) + "</h2>" +
@@ -141,6 +153,8 @@
       '<div class="stat"><div class="v">' + firsts + '건</div><div class="l">1순위 (확정 전)</div></div>' +
       '<div class="stat"><div class="v">' + (med == null ? "-" : med.toFixed(2) + "%") +
       '</div><div class="l">투찰률 중앙값 (' + rates.length + "건)</div></div>" +
+      '<div class="stat"><div class="v">' + (shareMed == null ? "-" : shareMed.toFixed(1) + "%") +
+      '</div><div class="l">예산 대비 투찰 중앙값 (' + shares.length + "건)</div></div>" +
       "</div>" +
       (rv.length ? '<p class="meta rivals">자주 맞붙은 업체(개찰 순위 기준): ' + rv.join(", ") + "</p>" : "") +
       '<div class="tbl"><table class="notices bidder-history"><thead><tr><th>개찰일</th><th>수요기관</th>' +
@@ -148,7 +162,77 @@
       '<th class="num">투찰금액(억)</th><th>결과</th></tr></thead><tbody>' + rows.join("") +
       "</tbody></table></div>" +
       '<p class="note">순위 옆 숫자는 그 공고의 투찰 업체 수입니다. \'%\'는 예정가격 대비 투찰률이고, ' +
-      "'점'은 협상계약의 가격평가 점수입니다. 투찰률 중앙값에는 투찰률만 씁니다.</p>";
+      "'점'은 협상계약의 가격평가 점수입니다. 투찰률 중앙값에는 투찰률만 쓰고, 예산 대비는 투찰금액÷예산입니다.</p>";
+    labelCards(box);
+  }
+
+  function labelCards(root) {
+    var tables = (root || document).querySelectorAll("table");
+    Array.prototype.forEach.call(tables, function (table) {
+      if (!table.tHead || !table.tHead.rows[0]) return;
+      var labels = Array.prototype.map.call(table.tHead.rows[0].cells, function (th) {
+        return (th.textContent || "").replace(/[▲▼]/g, "").trim();
+      });
+      Array.prototype.forEach.call(table.tBodies, function (body) {
+        Array.prototype.forEach.call(body.rows, function (row) {
+          Array.prototype.forEach.call(row.cells, function (td, i) {
+            if (labels[i]) td.setAttribute("data-label", labels[i]);
+          });
+        });
+      });
+    });
+  }
+
+  function findFirm(q) {
+    var d = digits(q);
+    if (d.length === 10 && data.firms[d]) return d;
+    var nq = String(q || "").replace(/\s+/g, "");
+    if (!nq) return "";
+    var hits = Object.keys(data.firms).filter(function (bz) {
+      return String(data.firms[bz][0] || "").replace(/\s+/g, "").indexOf(nq) !== -1;
+    });
+    hits.sort(function (a, b) {
+      return data.firms[b][2].length - data.firms[a][2].length;
+    });
+    return hits[0] || "";
+  }
+
+  function showHeadToHead() {
+    if (!data) return;
+    var a = findFirm(document.getElementById("h2h-a").value.trim());
+    var b = findFirm(document.getElementById("h2h-b").value.trim());
+    if (!a || !b || a === b) {
+      msg("맞대결할 업체 둘을 업체명 또는 사업자번호로 입력하세요.");
+      return;
+    }
+    var setB = {};
+    data.firms[b][2].forEach(function (bid) { setB[bid[0]] = bid; });
+    var rows = [];
+    var ahead = 0;
+    var behind = 0;
+    data.firms[a][2].forEach(function (bid) {
+      var other = setB[bid[0]];
+      if (!other) return;
+      var n = data.notices[bid[0]];
+      if (bid[1] != null && other[1] != null) {
+        if (bid[1] < other[1]) ahead += 1;
+        else if (bid[1] > other[1]) behind += 1;
+      }
+      var title = n[4] ? '<a href="' + esc(n[4]) + '">' + esc(n[2]) + "</a>" : esc(n[2]);
+      rows.push("<tr><td>" + esc(n[0]) + "</td><td>" + esc(n[1]) + "</td><td>" + title +
+        "</td><td class=\"num\">" + (bid[1] == null ? "" : bid[1]) + "</td><td class=\"num\">" +
+        (other[1] == null ? "" : other[1]) + "</td></tr>");
+    });
+    box.innerHTML =
+      "<h2>" + esc(data.firms[a][0]) + " 대 " + esc(data.firms[b][0]) + "</h2>" +
+      '<p class="meta">같이 투찰한 공고 ' + rows.length + "건 · " + esc(data.firms[a][0]) +
+      " 앞섬 " + ahead + " · 뒤짐 " + behind + "</p>" +
+      (rows.length
+        ? '<div class="tbl"><table class="notices"><thead><tr><th>개찰일</th><th>수요기관</th><th>사업명</th>' +
+          '<th class="num">' + esc(data.firms[a][0]) + '</th><th class="num">' + esc(data.firms[b][0]) +
+          "</th></tr></thead><tbody>" + rows.join("") + "</tbody></table></div>"
+        : '<p class="empty">같이 투찰한 공고가 없습니다.</p>');
+    labelCards(box);
   }
 
   function showList(matches, q) {
@@ -166,11 +250,22 @@
       '<p class="meta">"' + esc(q) + '"에 맞는 업체 ' + matches.length + "곳." + more + "</p>" +
       '<div class="tbl"><table class="notices"><thead><tr><th>업체</th><th>사업자번호</th><th>지역·규모</th>' +
       '<th class="num">투찰</th><th class="num">낙찰</th></tr></thead><tbody>' + rows.join("") + "</tbody></table></div>";
+    labelCards(box);
+  }
+
+  function writeQuery(q) {
+    if (!window.history || !history.replaceState) return;
+    var url = new URL(window.location.href);
+    if (q) url.searchParams.set("q", q);
+    else url.searchParams.delete("q");
+    if (!/^\d{10}$/.test(digits(q))) url.hash = "";
+    history.replaceState(null, "", url.pathname + url.search + url.hash);
   }
 
   function search() {
     if (!data) return;
     var q = input.value.trim();
+    writeQuery(q);
     if (!q) {
       msg("사업자번호(하이픈 있어도 됨)나 업체명 일부를 입력하세요.");
       return;
@@ -204,6 +299,8 @@
   }
 
   var timer = null;
+  var h2h = document.getElementById("h2h-go");
+  if (h2h) h2h.addEventListener("click", showHeadToHead);
   input.addEventListener("input", function () {
     clearTimeout(timer);
     timer = setTimeout(search, 200);
@@ -218,8 +315,12 @@
     })
     .then(function (json) {
       prepare(json);
+      var params = new URLSearchParams(window.location.search);
       if (digits(location.hash).length === 10) fromHash();
-      else search();
+      else if (params.get("q")) {
+        input.value = params.get("q");
+        search();
+      } else search();
     })
     .catch(function () {
       msg("업체 목록을 불러오지 못했습니다. 잠시 뒤 새로고침해 주세요.");

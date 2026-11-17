@@ -9,8 +9,8 @@ from datetime import date, datetime, timedelta
 from pathlib import Path
 from typing import Any
 
-from .classify import load_keywords
-from .normalize import prespec_excluded
+from .classify import apply_summary_labels, load_keywords
+from .normalize import list_excluded
 from .prespecs import STATUS_OPEN, load_prespecs, prespec_status
 from .pricing import ContextIndex
 from .render import (
@@ -69,12 +69,27 @@ STATIC_CARDS = (
 )
 
 
+_HEADER_HELP = {
+    "경쟁·낙찰 범위": (
+        "같은 기관의 과거 개찰에서 투찰 업체 수 중앙값과 낙찰 투찰률 25~75%입니다. "
+        "같은 기관 표본이 없으면 사업 성격·예산대를 씁니다. 괄호는 표본 수이고, 표본이 적으면 계산하지 않습니다."
+    ),
+}
+
+
 def _table(head: list[tuple[str, bool]], rows: list[str], empty: str) -> str:
     if not rows:
         return f'<p class="empty">{html.escape(empty)}</p>'
-    th = "".join(f'<th class="num">{h}</th>' if num else f"<th>{h}</th>" for h, num in head)
+
+    def th(label: str, num: bool) -> str:
+        help_text = _HEADER_HELP.get(label)
+        attr = f' title="{html.escape(help_text)}"' if help_text else ""
+        cls = ' class="num"' if num else ""
+        return f"<th{cls}{attr}>{html.escape(label)}</th>"
+
+    ths = "".join(th(h, num) for h, num in head)
     return (
-        f'<div class="tbl"><table class="notices home-list"><thead><tr>{th}</tr></thead>'
+        f'<div class="tbl"><table class="notices home-list js-filter"><thead><tr>{ths}</tr></thead>'
         f"<tbody>{''.join(rows)}</tbody></table></div>"
     )
 
@@ -108,19 +123,22 @@ def _dday(close_at: str | None, today: date) -> str:
 
 
 def _competition(ctx: dict[str, Any] | None) -> str:
-    """Median bidders and 낙찰 투찰률 IQR of similar past 사업, always with the sample size."""
+    """Median bidders and 낙찰 투찰률 IQR, phrased for a quick scan."""
     if not ctx:
         return '<span class="meta">비교 표본 부족</span>'
-    parts = []
+    title = html.escape(
+        f'{ctx["basis"]} · 표본 {ctx["n"]}건'
+        + (f', 투찰률 {ctx["rate_n"]}건' if ctx.get("rate_n") else "")
+    )
+    if ctx["median_bids"] is None and not ctx["rates"]:
+        return f'<span class="meta" title="{title}">비교 표본 부족</span>'
+    bits = []
     if ctx["median_bids"] is not None:
-        parts.append(f'{ctx["median_bids"]:g}곳 <span class="meta">({ctx["n"]}건 중앙값)</span>')
+        bits.append(f'보통 {ctx["median_bids"]:g}곳')
     if ctx["rates"]:
         lo, _, hi = ctx["rates"]
-        parts.append(f'{lo:.1f}~{hi:.1f}% <span class="meta">({ctx["rate_n"]}건)</span>')
-    else:
-        parts.append(f'<span class="meta">투찰률 표본 {ctx["rate_n"]}건 부족</span>')
-    title = html.escape(ctx["basis"])
-    return f'<span title="{title}">' + "<br>".join(parts) + "</span>"
+        bits.append(f"낙찰률 {lo:.1f}~{hi:.1f}%")
+    return f'<span title="{title}">{html.escape(" · ".join(bits))}</span>'
 
 
 def _result(n: dict[str, Any]) -> str:
@@ -180,21 +198,29 @@ def build_home(
     now_s = now.strftime("%Y-%m-%d %H:%M")
     deadline_s = (now + timedelta(days=DEADLINE_DAYS)).strftime("%Y-%m-%d %H:%M")
     min_eok = rules["filters"].get("home_min_eok", 0)
-    live = [
-        n
-        for n in notices
-        if (n.get("budget_eok") or 0) >= min_eok and not prespec_excluded(n, rules)
-    ]
+    budgeted = [n for n in notices if (n.get("budget_eok") or 0) >= min_eok]
+    soft = [n for n in budgeted if list_excluded(n, rules)]
+    live = [n for n in budgeted if not list_excluded(n, rules)]
 
     open_now = [n for n in live if (n.get("close_at") or "") >= now_s]
     closing = sorted(
         (n for n in open_now if n["close_at"] <= deadline_s), key=lambda n: n["close_at"]
     )
+    urgent = [
+        n
+        for n in closing
+        if (date.fromisoformat(n["close_at"][:10]) - today).days <= URGENT_DAYS
+    ]
+    later_closing = [n for n in closing if n not in urgent]
     new_since = (today - timedelta(days=NEW_DAYS - 1)).isoformat()
     new = sorted(
         (n for n in live if (n.get("notice_date") or "") >= new_since),
         key=lambda n: -(n.get("budget_eok") or 0),
     )
+    today_s = today.isoformat()
+    yest_s = (today - timedelta(days=1)).isoformat()
+    new_today = sum(1 for n in live if (n.get("notice_date") or "") == today_s)
+    new_yest = sum(1 for n in live if (n.get("notice_date") or "") == yest_s)
     opened_since = (today - timedelta(days=OPENED_DAYS - 1)).isoformat()
     opened = sorted(
         (
@@ -207,9 +233,36 @@ def build_home(
         reverse=True,
     )
     pre_open = sorted(
-        (p for p in prespecs if prespec_status(p, now) == STATUS_OPEN),
+        (p for p in prespecs if prespec_status(p, now) == STATUS_OPEN and not list_excluded(p, rules)),
         key=lambda p: (p.get("opinion_close_at") or "", -(p.get("asign_budget_eok") or 0)),
     )
+    soft_open = [
+        n
+        for n in soft
+        if (n.get("close_at") or "") >= now_s and (n.get("close_at") or "") <= deadline_s
+    ]
+
+    from .gonogo import load_profile
+    from .gonogo_policy import GO, NO_GO, REVIEW, score_policy
+
+    profile = load_profile()
+    fit_rows: list[tuple[dict[str, Any], dict[str, Any]]] = []
+    if profile:
+        for n in open_now:
+            scored = score_policy(n, profile, now)
+            if scored["verdict"] == NO_GO and scored["score"] < 50:
+                continue
+            fit_rows.append((n, scored))
+        order = {GO: 0, REVIEW: 1, NO_GO: 2}
+        fit_rows.sort(key=lambda x: (order.get(x[1]["verdict"], 9), -x[1]["score"]))
+        fit_rows = fit_rows[:LIMIT]
+
+    def _fit_cell(scored: dict[str, Any]) -> str:
+        label = {GO: "참여", REVIEW: "검토", NO_GO: "보류"}.get(scored["verdict"], scored["verdict"])
+        return (
+            f'<span class="fit-pill" data-verdict="{html.escape(scored["verdict"])}">'
+            f'{html.escape(label)} {scored["score"]}점</span>'
+        )
 
     stats = (
         '<div class="stats">'
@@ -220,19 +273,28 @@ def build_home(
         + stat(f"{len(opened):,}건", f"최근 {OPENED_DAYS}일 개찰 결과")
         + "</div>"
     )
+    delta = f"오늘 새 공고 {new_today}건 · 어제 {new_yest}건"
+    if soft:
+        delta += f" · 제외 규칙 {len(soft)}건 (기본 숨김)"
 
     contexts = ContextIndex(notices)
-    closing_rows = [
-        "<tr>"
-        + _td(html.escape(n["close_at"][5:]) + _dday(n["close_at"], today))
-        + _td(html.escape(n.get("org") or ""))
-        + _td(_title_cell(n))
-        + _td(html.escape(n.get("scope") or ""))
-        + _td(_fmt_budget(n.get("budget_eok")), num=True)
-        + _td(html.escape(n.get("contract_method") or ""))
-        + _td(_competition(contexts.context(n)))
-        + "</tr>"
-        for n in closing[: LIMIT * 2]
+
+    def _closing_row(n: dict[str, Any], *, collapsed: bool = False) -> str:
+        cls = ' class="dday-collapse"' if collapsed else ""
+        return (
+            f"<tr{cls}>"
+            + _td(html.escape(n["close_at"][5:]) + _dday(n["close_at"], today))
+            + _td(html.escape(n.get("org") or ""))
+            + _td(_title_cell(n))
+            + _td(html.escape(n.get("scope") or ""))
+            + _td(_fmt_budget(n.get("budget_eok")), num=True)
+            + _td(html.escape(n.get("contract_method") or ""))
+            + _td(_competition(contexts.context(n)))
+            + "</tr>"
+        )
+
+    closing_rows = [_closing_row(n) for n in later_closing[:LIMIT]] + [
+        _closing_row(n, collapsed=True) for n in urgent[:LIMIT]
     ]
     new_rows = [
         "<tr>"
@@ -245,8 +307,20 @@ def build_home(
             + (_dday(n.get("close_at"), today) if (n.get("close_at") or "") >= now_s else "")
         )
         + _td(_competition(contexts.context(n)))
+        + (f"<td>{_fit_cell(score_policy(n, profile, now))}</td>" if profile else "")
         + "</tr>"
         for n in new[:LIMIT]
+    ]
+    fit_table_rows = [
+        "<tr>"
+        + _td(_fit_cell(s))
+        + _td(html.escape(n.get("org") or ""))
+        + _td(_title_cell(n))
+        + _td(_fmt_budget(n.get("budget_eok")), num=True)
+        + _td(html.escape((n.get("close_at") or "")[:10]) + _dday(n.get("close_at"), today))
+        + _td(html.escape(" · ".join(s.get("reasons") or [])[:80]))
+        + "</tr>"
+        for n, s in fit_rows
     ]
     pre_rows = [
         "<tr>"
@@ -268,19 +342,61 @@ def build_home(
         + "</tr>"
         for n in opened[:LIMIT]
     ]
+    soft_rows = [
+        "<tr class=\"soft-excluded\">"
+        + _td(html.escape((n.get("close_at") or "")[5:10]) + _dday(n.get("close_at"), today))
+        + _td(html.escape(n.get("org") or ""))
+        + _td(_title_cell(n) + ' <span class="meta">제외됨</span>')
+        + _td(_fmt_budget(n.get("budget_eok")), num=True)
+        + "</tr>"
+        for n in soft_open[:LIMIT]
+    ]
 
     def more(shown: int, total: int, href: str, label: str) -> str:
         extra = f"{total - shown:,}건 더 · " if total > shown else ""
         return f'<p class="meta" style="margin-top:8px">{extra}<a href="{href}">{label} →</a></p>'
 
+    new_head = [
+        ("공고일", False),
+        ("수요기관", False),
+        ("사업명", False),
+        ("예산(억)", True),
+        ("입찰 마감", False),
+        ("경쟁·낙찰 범위", False),
+    ]
+    if profile:
+        new_head.append(("참여", False))
+
     body = (
-        f'<div class="eyebrow">나라장터 · 공공데이터포털 Open API</div><h1>{SITE_TITLE}</h1>'
+        f'<div class="eyebrow">나라장터 · 내부 검토용</div><h1>{SITE_TITLE}</h1>'
         '<p class="lede">나라장터 AI 사업의 입찰공고·낙찰·사전규격·발주계획을 매일 모아 '
-        "마감 임박·새 공고·수주·투찰 경쟁을 한곳에서 봅니다. "
-        "사업명 기준 자동 분류이며, 나라장터 원문과 전수 대조하지 않았습니다. 개인이 운영합니다.</p>"
-        f'<div class="stamp">{html.escape(stamp_text(run_status))}</div>'
+        "새 공고·적합도·마감·수주·투찰 경쟁을 한곳에서 봅니다. "
+        "제안요청서 요약이 있으면 그 내용으로 범위를 다시 매깁니다.</p>"
+        f'<div class="stamp">{html.escape(stamp_text(run_status))} · {html.escape(delta)}</div>'
         + stats
+        + f"<h2>오늘 새로 들어온 것 (최근 {NEW_DAYS}일)</h2>"
+        + _table(new_head, new_rows, f"최근 {NEW_DAYS}일 새 AI 공고가 없습니다.")
+        + (more(len(new_rows), len(new), "reports/index.html", "주간·월간 리포트") if new else "")
+        + (
+            "<h2>적합도 · 참여 여부</h2>"
+            '<p class="meta">프로필 기준으로 접수 중 공고를 점수화합니다. '
+            "참여 = GO, 검토 = REVIEW, 보류 = NO-GO.</p>"
+            + _table(
+                [("참여", False), ("수요기관", False), ("사업명", False), ("예산(억)", True),
+                 ("입찰 마감", False), ("사유", False)],
+                fit_table_rows,
+                "적합도 후보가 없습니다.",
+            )
+            if profile
+            else ""
+        )
         + f"<h2>마감 임박 ({DEADLINE_DAYS}일 이내)</h2>"
+        + (
+            f'<p class="meta"><label class="tbl-only"><input type="checkbox" id="show-urgent"> '
+            f"D-{URGENT_DAYS} 이하 {len(urgent)}건도 펼치기</label></p>"
+            if urgent
+            else ""
+        )
         + _table(
             [("입찰 마감", False), ("수요기관", False), ("사업명", False), ("범위", False),
              ("예산(억)", True), ("계약 방식", False), ("경쟁·낙찰 범위", False)],
@@ -288,14 +404,6 @@ def build_home(
             f"{DEADLINE_DAYS}일 안에 마감되는 AI 공고가 없습니다.",
         )
         + (more(len(closing_rows), len(closing), "band.html", "8~30억 구간 공고 검색") if closing else "")
-        + f"<h2>새 공고 (최근 {NEW_DAYS}일, 예산순)</h2>"
-        + _table(
-            [("공고일", False), ("수요기관", False), ("사업명", False), ("예산(억)", True),
-             ("입찰 마감", False), ("경쟁·낙찰 범위", False)],
-            new_rows,
-            f"최근 {NEW_DAYS}일 새 AI 공고가 없습니다.",
-        )
-        + (more(len(new_rows), len(new), "reports/index.html", "주간·월간 리포트") if new else "")
         + "<h2>의견 접수 중 사전규격</h2>"
         + _table(
             [("의견마감", False), ("수요기관", False), ("사전규격명", False), ("배정예산(억)", True)],
@@ -311,15 +419,30 @@ def build_home(
             f"최근 {OPENED_DAYS}일 개찰 결과가 없습니다.",
         )
         + (more(len(opened_rows), len(opened), "awards.html", "수주 현황") if opened else "")
-        + f'<p class="note">예산 {min_eok:g}억 미만, 장비 구매, 감리·PMO·교육·행사성 공고는 제외합니다. 사업명을 누르면 사업 상세(일정·금액·투찰 업체·비슷한 사업의 경쟁·관련 사전규격)로 이동합니다. 재공고는 이전 공고가 유찰돼 다시 낸 공고입니다. '
-        f"마감 {URGENT_DAYS}일 이내는 '임박'으로 표시합니다. "
-        "경쟁·낙찰 범위는 같은 기관(없으면 같은 사업 성격·예산대)의 개찰된 과거 사업에서 투찰 업체 수 중앙값과 "
-        "낙찰자의 예정가격 대비 투찰률 사분위(25~75%)이며, 괄호 안은 표본 수입니다. 표본이 적으면 계산하지 않습니다.</p>"
+        + (
+            '<h2>제외된 공고 <label class="tbl-only"><input type="checkbox" id="show-excluded"> 보기</label></h2>'
+            + _table(
+                [("입찰 마감", False), ("수요기관", False), ("사업명", False), ("예산(억)", True)],
+                soft_rows,
+                "제외 규칙에 걸린 마감 임박 공고가 없습니다.",
+            )
+            if soft_rows
+            else ""
+        )
+        + f'<p class="note">예산 {min_eok:g}억 미만, 감리·PMO·교육·행사성 공고는 목록에서 뺍니다. '
+        "구매·임차·ITS 유지·라이선스 구매는 '제외됨'으로 두고 기본 숨깁니다. "
+        "사업명을 누르면 사업 상세로 이동합니다. "
+        f"마감 {URGENT_DAYS}일 이하는 기본으로 접고, 경쟁·낙찰 범위는 비슷한 과거 사업의 투찰 업체 수와 낙찰률입니다.</p>"
         + reports_html
         + STATIC_CARDS
         + keep_html
+        + '<script>(function(){var u=document.getElementById("show-urgent");'
+        'if(u)u.addEventListener("change",function(){document.body.classList.toggle("show-urgent",u.checked)});'
+        'var e=document.getElementById("show-excluded");'
+        'if(e)e.addEventListener("change",function(){document.body.classList.toggle("show-excluded",e.checked)});'
+        "})();</script>"
     )
-    return page(SITE_TITLE, body)
+    return page(SITE_TITLE, body, scripts=("table-sort.js", "table-filter.js"))
 
 
 def render_home(repo_root: Path, now: datetime | None = None) -> dict[str, Any]:
@@ -329,7 +452,13 @@ def render_home(repo_root: Path, now: datetime | None = None) -> dict[str, Any]:
     m = _KEEP_BLOCK_RE.search(old)
     from .normalize import read_notices
 
+    from .rfp import load_summaries
+
     notices = read_notices(repo_root / "data" / "notices.json")
+    rules = load_keywords()
+    summaries = load_summaries(repo_root)
+    for n in notices:
+        apply_summary_labels(n, summaries.get(n.get("bid_no")), rules)
     text = build_home(
         notices,
         load_prespecs(repo_root),

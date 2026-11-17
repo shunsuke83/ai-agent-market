@@ -41,8 +41,10 @@ def test_home_lists_only_open_real_opportunities():
     out = build_home(notices, [], {}, now=NOW)
     closing = out.split("<h2>마감 임박")[1].split("<h2>")[0]
     assert "R26BK1-000" in closing
-    for bid in ("CLOSED", "TINY", "HW", "LATER"):
+    for bid in ("CLOSED", "TINY", "LATER"):
         assert bid not in closing
+    # 구매·장비는 지우지 않고 제외됨으로 숨긴다.
+    assert "제외된 공고" in out and "제외됨" in out and "HW" in out
     assert '<div class="v">2건</div><div class="l">입찰 접수 중인 AI 공고</div>' in out
 
 
@@ -56,16 +58,18 @@ def test_home_dday_badge_and_competition_column():
     notices = past + [_n(), _n(bid_no="LATE", close_at="2026-11-05 10:00", org="다른청", nature="ISP·전략")]
     out = build_home(notices, [], {}, now=NOW)
     closing = out.split("<h2>마감 임박")[1].split("<h2>")[0]
-    assert "<th>경쟁·낙찰 범위</th>" in closing
+    assert ">경쟁·낙찰 범위</th>" in closing
     assert '<span class="dday urgent">D-4 임박</span>' not in closing
     assert '<span class="dday">D-4</span>' in closing
     assert '<span class="dday">D-6</span>' in closing
-    assert "6곳" in closing and "(5건 중앙값)" in closing and "89.0~91.0%" in closing
+    assert "보통 6곳" in closing and "낙찰률 89.0~91.0%" in closing
     assert "비교 표본 부족" in closing
     soon = build_home([_n(close_at="2026-11-02 10:00")], [], {}, now=NOW)
     assert '<span class="dday urgent">D-3 임박</span>' in soon
     today = build_home([_n(close_at="2026-10-30 18:00")], [], {}, now=NOW)
     assert '<span class="dday urgent">D-day 임박</span>' in today
+    assert "오늘 새로 들어온 것" in out
+    assert 'class="dday-collapse"' in soon
 
 
 def test_detail_shows_first_rank_and_unknown_amount():

@@ -287,6 +287,15 @@ def band_excluded(notice: dict[str, Any], rules: dict[str, Any] | None = None) -
     return not any(k.casefold() in t for k in f.get("band_keep_title") or [])
 
 
+def list_excluded(notice: dict[str, Any], rules: dict[str, Any] | None = None) -> bool:
+    """홈·8~30억·사전규격 목록. 감리·교육·행사에 더해 장비 구매·임차·교통 유지를 뺀다."""
+    rules = rules or load_keywords()
+    if prespec_excluded(notice, rules):
+        return True
+    title = notice.get("title") or ""
+    return _has_any(title, (rules.get("filters") or {}).get("list_exclude_title") or [])
+
+
 def merge_by_bid(existing: list[dict[str, Any]], incoming: list[dict[str, Any]]) -> list[dict[str, Any]]:
     by_key: dict[str, dict[str, Any]] = {}
     for row in existing + incoming:

@@ -9,7 +9,7 @@ from pathlib import Path
 from typing import Any
 
 from .classify import load_keywords
-from .render import KST, _fmt_budget, _kst_date, load_run_status
+from .render import KST, _fmt_budget, load_run_status, stage_stamp
 from .site import DETAIL_DIR, page, stat
 
 STATUS_BID = "본공고 게시"
@@ -58,7 +58,7 @@ def _bid_link(bid_no: str, details: dict[str, str]) -> str:
     )
 
 
-def render_row(p: dict[str, Any], status: str, details: dict[str, str] | None = None) -> str:
+def render_row(p: dict[str, Any], status: str, details: dict[str, str] | None = None, extras: str = "") -> str:
     files = " ".join(
         f'<a href="{html.escape(u, quote=True)}" rel="noopener">{i}</a>'
         for i, u in enumerate(p.get("spec_files") or [], 1)
@@ -67,13 +67,14 @@ def render_row(p: dict[str, Any], status: str, details: dict[str, str] | None = 
     close = (p.get("opinion_close_at") or "")[:10]
     style = "color:var(--accent)" if status == STATUS_OPEN else "color:var(--muted)"
     return (
-        "<tr>"
+        f'<tr id="p-{html.escape(p.get("prespec_no") or "")}">'
         f"<td>{html.escape(p.get('registered_date') or '')}</td>"
         f"<td>{html.escape(close)}</td>"
         f'<td style="{style};white-space:nowrap" title="{html.escape(STATUS_TITLE[status])}">'
         f"{html.escape(status)}</td>"
         f"<td>{html.escape(p.get('org') or '')}</td>"
         f"<td>{html.escape(p.get('title') or '')}"
+        f"{extras}"
         f'<div class="meta">{html.escape(p.get("prespec_no") or "")}'
         f'{" · " + html.escape(p["biz_div"]) if p.get("biz_div") else ""}</div></td>'
         f"<td>{html.escape(p.get('scope') or '')}</td>"
@@ -85,13 +86,7 @@ def render_row(p: dict[str, Any], status: str, details: dict[str, str] | None = 
 
 
 def stamp_for(status: dict[str, Any]) -> str:
-    stage = (status.get("stages") or {}).get("prespecs") or {}
-    ok_day = _kst_date(stage.get("last_success_at"))
-    text = f"데이터 기준 {ok_day.isoformat()}" if ok_day else "데이터 기준 미확인"
-    if stage.get("last_outcome") not in (None, "success"):
-        tried = _kst_date(stage.get("last_attempt_at"))
-        text += f" · 최근 수집 실패{' ' + tried.isoformat() if tried else ''}, 기존 데이터 표시 중"
-    return text
+    return stage_stamp((status.get("stages") or {}).get("prespecs") or {})
 
 
 def render_prespecs_html(
@@ -99,11 +94,23 @@ def render_prespecs_html(
     run_status: dict[str, Any],
     now: datetime | None = None,
     details: dict[str, str] | None = None,
+    summaries: dict[str, dict[str, Any]] | None = None,
+    profile: dict[str, Any] | None = None,
 ) -> str:
     """details: 공고번호 → bids/ slug for notices that have a 사업 상세 page."""
+    from .classify import apply_summary_labels
+    from .normalize import list_excluded
+
+    if now is None:
+        now = datetime.now(KST)
     rules = load_keywords()
     lo, hi = rules["filters"]["band_min_eok"], rules["filters"]["band_max_eok"]
-    rows = sorted(prespecs, key=lambda p: p.get("registered_at") or "", reverse=True)
+    rows = sorted(
+        (p for p in prespecs if not list_excluded(p, rules)),
+        key=lambda p: p.get("registered_at") or "",
+        reverse=True,
+    )
+    summaries = summaries or {}
     statuses = [prespec_status(p, now) for p in rows]
     budgets = [p.get("asign_budget_eok") or 0 for p in rows]
     n_open = statuses.count(STATUS_OPEN)
@@ -120,7 +127,52 @@ def render_prespecs_html(
         + stat(f"{round(sum(budgets)):,}억", "배정예산 합계")
         + "</div>"
     )
-    body_rows = "".join(render_row(p, s, details) for p, s in zip(rows, statuses))
+    def _entry(p: dict[str, Any]) -> dict[str, Any] | None:
+        hit = summaries.get(p.get("prespec_no"))
+        if hit:
+            return hit
+        for b in p.get("bid_nos") or []:
+            hit = summaries.get(str(b).split("-")[0])
+            if hit:
+                return hit
+        return None
+
+    def _extras(p: dict[str, Any], entry: dict[str, Any] | None) -> str:
+        summary = ((entry or {}).get("summary") or {})
+        overview = str(summary.get("overview") or "").strip()
+        tech = ", ".join(summary.get("tech") or [])
+        line = ""
+        if overview:
+            line += f'<div class="meta">{html.escape(overview[:180])}{"…" if len(overview) > 180 else ""}</div>'
+        if tech:
+            line += f'<div class="meta">{html.escape(tech)}</div>'
+        if not profile or now is None:
+            return line
+        from .gonogo_policy import GO, NO_GO, REVIEW, score_policy
+
+        scored = score_policy(p, profile, now, summary=entry)
+        participate = {GO: "참여", REVIEW: "검토", NO_GO: "보류"}.get(
+            scored["verdict"], scored["verdict"]
+        )
+        line += (
+            f'<div class="meta">적합도 <span class="fit-pill" data-verdict="{html.escape(scored["verdict"])}">'
+            f'{html.escape(str(participate))} {scored["score"]}점</span></div>'
+        )
+        return line
+
+    labeled = []
+    extras = []
+    for p in rows:
+        entry = _entry(p)
+        shown = dict(p)
+        if shown.get("budget_eok") is None:
+            shown["budget_eok"] = shown.get("asign_budget_eok")
+        apply_summary_labels(shown, entry, rules)
+        labeled.append(shown)
+        extras.append(_extras(shown, entry))
+    body_rows = "".join(
+        render_row(p, s, details, extra) for p, s, extra in zip(labeled, statuses, extras)
+    )
     table = (
         '<div class="tbl"><table class="notices prespecs js-filter">'
         f"{THEAD}<tbody>{body_rows}</tbody></table></div>"
@@ -149,11 +201,18 @@ def detail_index(repo_root: Path) -> dict[str, str]:
 
 
 def render_prespecs_page(repo_root: Path) -> dict[str, Any]:
+    from .gonogo import load_profile
+    from .rfp import load_summaries
+
     prespecs = load_prespecs(repo_root)
     path = repo_root / "prespecs.html"
     path.write_text(
         render_prespecs_html(
-            prespecs, load_run_status(repo_root), details=detail_index(repo_root)
+            prespecs,
+            load_run_status(repo_root),
+            details=detail_index(repo_root),
+            summaries=load_summaries(repo_root),
+            profile=load_profile(),
         ),
         encoding="utf-8",
     )

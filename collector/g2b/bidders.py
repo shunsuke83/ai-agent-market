@@ -90,6 +90,11 @@ def build_bidders_page(index: dict[str, Any], run_status: dict[str, Any], versio
         '<input type="search" id="bidder-q" placeholder="사업자번호 10자리 또는 업체명" '
         'aria-label="사업자번호 또는 업체명" autocomplete="off">'
         "</form>"
+        '<form class="bidder-search" id="h2h" onsubmit="return false">'
+        '<input type="search" id="h2h-a" placeholder="맞대결 업체 A" aria-label="맞대결 업체 A" autocomplete="off"> '
+        '<input type="search" id="h2h-b" placeholder="맞대결 업체 B" aria-label="맞대결 업체 B" autocomplete="off"> '
+        '<button type="button" class="tbl-act" id="h2h-go">맞대결</button>'
+        "</form>"
         f'<div id="bidder-results" data-src="data/bidders.json?v={version}" aria-live="polite">'
         '<p class="meta">사업자번호(하이픈 있어도 됨)나 업체명 일부를 입력하세요.</p></div>'
         "<noscript><p class=\"empty\">검색에는 JavaScript가 필요합니다.</p></noscript>"

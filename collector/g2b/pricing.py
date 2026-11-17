@@ -34,6 +34,19 @@ BUDGET_BANDS: tuple[tuple[float, float, str], ...] = (
 )
 
 
+def budget_share(b: dict[str, Any], n: dict[str, Any]) -> float | None:
+    """투찰금액 ÷ 예산. 협상계약은 투찰률 대신 가격점수가 들어와 비율이 비는 경우를 채운다."""
+    try:
+        amount = float(b.get("amount_eok"))
+        budget = float(n.get("budget_eok") or 0)
+    except (TypeError, ValueError):
+        return None
+    if budget <= 0 or amount <= 0:
+        return None
+    share = 100.0 * amount / budget
+    return share if 20.0 <= share <= 160.0 else None
+
+
 def bid_rate(b: dict[str, Any]) -> float | None:
     try:
         r = float(b.get("rate_pct"))
@@ -166,13 +179,18 @@ def firm_habits(notices: list[dict[str, Any]], min_bids: int = FIRM_MIN_BIDS) ->
             if k in seen:
                 continue
             seen.add(k)
-            a = acc.setdefault(k, {"name": "", "day": "", "bids": 0, "rates": [], "wins": 0, "win_rates": []})
+            a = acc.setdefault(
+                k, {"name": "", "day": "", "bids": 0, "rates": [], "shares": [], "wins": 0, "win_rates": []}
+            )
             if day >= a["day"]:
                 a["name"], a["day"] = b["name"], day
             a["bids"] += 1
             rate = bid_rate(b)
             if rate is not None:
                 a["rates"].append(rate)
+            share = budget_share(b, n)
+            if share is not None:
+                a["shares"].append(share)
             if k == won_key:
                 a["wins"] += 1
                 if rate is not None:
@@ -185,6 +203,8 @@ def firm_habits(notices: list[dict[str, Any]], min_bids: int = FIRM_MIN_BIDS) ->
             "wins": a["wins"],
             "rate_n": len(a["rates"]),
             "median_rate": statistics.median(a["rates"]) if len(a["rates"]) >= MIN_SAMPLE else None,
+            "median_share": statistics.median(a["shares"]) if a["shares"] else None,
+            "share_n": len(a["shares"]),
             "median_win_rate": statistics.median(a["win_rates"]) if a["win_rates"] else None,
         }
         for k, a in acc.items()
@@ -394,7 +414,7 @@ def build_pricing(notices: list[dict[str, Any]], run_status: dict[str, Any], tod
         f'<td class="num">{r["bids"]}</td>'
         f'<td class="num">{r["wins"]}</td>'
         f'<td class="num">{_pct(100.0 * r["wins"] / r["bids"], 0)}</td>'
-        f'<td class="num">{_pct(r["median_rate"], 2) or SAMPLE_SHORT}</td>'
+        f'<td class="num">{_pct(r["median_rate"], 2) or (_pct(r["median_share"], 1) + f""" <span class="meta">예산대비 {r["share_n"]}건</span>""" if r["median_share"] is not None else SAMPLE_SHORT)}</td>'
         f'<td class="num">{_pct(r["median_win_rate"], 2)}</td>'
         "</tr>"
         for r in firms[:LIMIT]
@@ -423,8 +443,17 @@ def build_pricing(notices: list[dict[str, Any]], run_status: dict[str, Any], tod
         "입찰가와 참여 여부를 정할 때 참고하세요.</p>"
         f'<div class="stamp">{html.escape(stamp_text(run_status))}</div>'
         + stats
+        + "<h2>가격점수 계산</h2>"
+        '<p class="meta">협상에 의한 계약의 가격점수는 10 × 최저 투찰가 ÷ 해당 투찰가 입니다. 상한은 10점입니다. '
+        "예를 들어 최저가가 예산의 85%이고 다른 투찰이 예산의 100%이면 점수는 8.502점입니다.</p>"
+        '<form id="price-calc" class="bidder-search" onsubmit="return false">'
+        '<label>최저 투찰가(억) <input id="calc-low" inputmode="decimal" aria-label="최저 투찰가"></label> '
+        '<label>해당 투찰가(억) <input id="calc-ours" inputmode="decimal" aria-label="해당 투찰가"></label> '
+        '<label>경쟁사 과거 투찰가(억) <input id="calc-rival" inputmode="decimal" aria-label="경쟁사 과거 투찰가"></label>'
+        '<p id="calc-out" class="meta">최저 투찰가와 해당 투찰가를 입력하세요. 경쟁사 과거 투찰가를 넣으면 점수 차이도 계산합니다.</p></form>'
         + "<h2>낙찰 투찰률 분포</h2>"
         '<p class="meta">낙찰자의 예정가격 대비 투찰률입니다. 협상계약의 가격평가 점수 등 50~110% 밖의 값은 뺐고, '
+        "투찰률이 비면 투찰금액÷예산으로 예산 대비 비율을 보입니다. "
         f"낙찰이 {MIN_SAMPLE}건 미만인 구분은 수치 대신 '표본 부족'으로 둡니다.</p>"
         + _rate_table("사업 성격별", ordered(rate_rows(notices, by_nature)))
         + _rate_table("예산대별", ordered(rate_rows(notices, by_band), banded=True))
@@ -446,7 +475,7 @@ def build_pricing(notices: list[dict[str, Any]], run_status: dict[str, Any], tod
         "재공고 차수는 최신 1건만 둡니다. 같은 기관이 비슷한 사업을 다시 낼 때 진입 기회가 될 수 있습니다.</p>"
         + weak_html
     )
-    return page("투찰·경쟁 분석", body)
+    return page("투찰·경쟁 분석", body, scripts=("table-sort.js", "price-calc.js"))
 
 
 def load_notices(repo_root: Path, *, collapse: bool = True) -> list[dict[str, Any]]:
