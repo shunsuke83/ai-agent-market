@@ -2,9 +2,11 @@ name: Collect G2B AI notices
 
 on:
   schedule:
-    # Daily 19:00 KST = 10:00 UTC. Daytime KST so apis.data.go.kr stays up.
-    # The Monday (KST) run also does the heavy award / bidder backfills.
-    - cron: "0 10 * * *"
+    # Aim for an actual start around 19:00 KST. This repo's scheduled runs lag ~8h
+    # (old `17 4` / 13:17 KST → ~21:00 KST; `0 10` / 19:00 KST → ~04:00 KST).
+    # So cron is ~11:17 KST (02:17 UTC): 11:17 + ~8h ≈ 19:17 KST. :17 avoids top-of-hour pileup.
+    # Monday (KST) runs also do award / bidder / firm backfills.
+    - cron: "17 2 * * *"
   workflow_dispatch:
     inputs:
       days:
@@ -52,15 +54,23 @@ jobs:
       - name: Plan run (daily incremental vs weekly full)
         id: plan
         run: |
+          NOW_KST="$(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M %Z (weekday %u)')"
+          NOW_UTC="$(date -u '+%Y-%m-%d %H:%M UTC')"
+          echo "now_kst=$NOW_KST"
+          echo "now_utc=$NOW_UTC"
+          echo "event=${{ github.event_name }} cron=02:17 UTC (~11:17 KST nominal, ~19 KST after typical lag)"
           if [ "${{ github.event_name }}" != "schedule" ] || [ "$(TZ=Asia/Seoul date +%u)" = "1" ]; then
-            echo "weekly=true" >> "$GITHUB_OUTPUT"
+            WEEKLY=true
             DEFAULT_DAYS=14
           else
-            echo "weekly=false" >> "$GITHUB_OUTPUT"
+            WEEKLY=false
             DEFAULT_DAYS=3
           fi
           DAYS="${{ github.event.inputs.days }}"
-          echo "days=${DAYS:-$DEFAULT_DAYS}" >> "$GITHUB_OUTPUT"
+          DAYS="${DAYS:-$DEFAULT_DAYS}"
+          echo "weekly=$WEEKLY" >> "$GITHUB_OUTPUT"
+          echo "days=$DAYS" >> "$GITHUB_OUTPUT"
+          echo "planned weekly=$WEEKLY days=$DAYS"
 
       - name: Collect from Open API
         id: collect
@@ -193,8 +203,17 @@ jobs:
           --firms "${{ steps.firms.outcome }}"
         working-directory: collector
 
-      - name: Render band + awards + index + competitors + reports
-        run: python -m g2b.collect render all
+      # COMPANY_PROFILE enables 적합도 on index / bids / reports. YAML is never written to data/.
+      - name: Render site pages
+        env:
+          COMPANY_PROFILE: ${{ secrets.COMPANY_PROFILE }}
+        run: |
+          if [ -n "${COMPANY_PROFILE:-}" ]; then
+            echo "COMPANY_PROFILE set (length ${#COMPANY_PROFILE}) — fit scores on render."
+          else
+            echo "::warning::COMPANY_PROFILE secret missing — render without 적합도 (홈·리포트 참여 열 생략)."
+          fi
+          python -m g2b.collect render all
         working-directory: collector
 
       # Slack failure must not block the data commit; unsent items retry next run.
@@ -205,14 +224,17 @@ jobs:
         run: python -m g2b.collect alerts
         working-directory: collector
 
-      # Scores stay private: profile from a secret, output to Slack only, counts only in the log.
-      - name: Go/No-Go (Slack only)
+      # Same profile as render; Slack gets the scored shortlist. Counts only in the log.
+      - name: Go/No-Go (Slack)
         continue-on-error: true
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           COMPANY_PROFILE: ${{ secrets.COMPANY_PROFILE }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: python -m g2b.collect gonogo --days "${{ steps.plan.outputs.weekly == 'true' && 3 || 1 }}"
+        run: |
+          DAYS=1
+          if [ "${{ steps.plan.outputs.weekly }}" = "true" ]; then DAYS=3; fi
+          python -m g2b.collect gonogo --days "$DAYS"
         working-directory: collector
 
       # data/seed/ is a frozen editorial extract; never re-extract it from rendered pages.
@@ -220,6 +242,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Match `render all`: band awards index competitors reports prespecs pricing
+          # bidders agencies plans details (+ alerts/feeds from the alerts step).
           git add data/notices.json data/reports.json data/run_status.json \
             reports.json reports/ \
             band.html awards.html index.html competitors.html prespecs.html pricing.html plans.html \

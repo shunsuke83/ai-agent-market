@@ -32,7 +32,7 @@ jobs:
       - name: Install
         run: pip install -r collector/requirements.txt
 
-      - name: Go/No-Go (Slack only)
+      - name: Go/No-Go (Slack)
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           COMPANY_PROFILE: ${{ secrets.COMPANY_PROFILE }}
