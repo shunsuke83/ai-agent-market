@@ -1,11 +1,102 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-17T18:58:37Z",
+  "generated_at": "2026-11-18T03:41:55Z",
   "range": {
-    "since": "2026-11-14",
-    "until": "2026-11-17"
+    "since": "2026-11-15",
+    "until": "2026-11-18"
   },
   "prespecs": [
+    {
+      "prespec_no": "R26BD00302221",
+      "title": "AI기반 가상환자 교육시스템 외 7종 구입",
+      "org": "경북대학교병원",
+      "order_org": "경북대학교병원",
+      "registered_at": "2026-11-18 11:04",
+      "registered_date": "2026-11-18",
+      "opinion_close_at": "2026-11-23 23:59",
+      "asign_budget_eok": 5.4885,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "연구·교육·행사",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00302221&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "thng",
+      "biz_div": "물품",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00302193",
+      "title": "뿌리산업 AI 디지털 플랫폼 구축을 위한 멀티테넌트 산업데이터 운영 플랫폼 공급 및 통합 포털연동 규격 구축",
+      "org": "한국생산기술연구원",
+      "order_org": "한국생산기술연구원",
+      "registered_at": "2026-11-18 10:38",
+      "registered_date": "2026-11-18",
+      "opinion_close_at": "2026-11-23 23:59",
+      "asign_budget_eok": 2.0,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00302193&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00302141",
+      "title": "AI 클러스터 기반 지식재산권(IP) 창출 및 기술사업화 지원",
+      "org": "고려대학교 세종산학협력단",
+      "order_org": "고려대학교 세종산학협력단",
+      "registered_at": "2026-11-18 09:57",
+      "registered_date": "2026-11-18",
+      "opinion_close_at": "2026-11-23 23:59",
+      "asign_budget_eok": 0.3,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "bid_nos": [
+        "R26BK01838095"
+      ],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00302141&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00302141&fileType=BFDTL&fileSeq=2"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00302086",
+      "title": "27년 초등수학교육 활성화 지원 AI시스템 운영 및 유지관리",
+      "org": "한국교육학술정보원",
+      "order_org": "조달청 대구지방조달청",
+      "registered_at": "2026-11-18 09:07",
+      "registered_date": "2026-11-18",
+      "opinion_close_at": "2026-11-23 23:59",
+      "asign_budget_eok": 13.9878,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "운영·유지보수",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00302086&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
     {
       "prespec_no": "R26BD00301933",
       "title": "2027년 천안시 지능형교통체계(ITS) 현장장비 유지보수 용역",
