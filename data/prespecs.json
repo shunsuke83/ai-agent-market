@@ -1,11 +1,101 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-18T03:41:55Z",
+  "generated_at": "2026-11-18T10:07:10Z",
   "range": {
     "since": "2026-11-15",
     "until": "2026-11-18"
   },
   "prespecs": [
+    {
+      "prespec_no": "R26BD00302613",
+      "title": "N2SF 기반 AI서비스 연계구조 설계 및 보안통제 기술검증 용역",
+      "org": "한전KDN(주)",
+      "order_org": "한전KDN(주)",
+      "registered_at": "2026-11-18 17:03",
+      "registered_date": "2026-11-18",
+      "opinion_close_at": "2026-11-23 23:59",
+      "asign_budget_eok": 2.09,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00302613&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00302613&fileType=BFDTL&fileSeq=2"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
+    {
+      "prespec_no": "R26BD00302614",
+      "title": "우송 SW중심대학 AI기초교육 온라인 동영상 콘텐츠 개발",
+      "org": "우송대학교",
+      "order_org": "우송대학교",
+      "registered_at": "2026-11-18 17:03",
+      "registered_date": "2026-11-18",
+      "opinion_close_at": "2026-11-23 23:59",
+      "asign_budget_eok": 0.35,
+      "scope": "AI SW 확대",
+      "fields": [
+        "비전·영상"
+      ],
+      "nature": "연구·교육·행사",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00302614&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00301318",
+      "title": "제2기 AI MASTER 과정 운영 용역",
+      "org": "전남대학교 교육혁신본부",
+      "order_org": "전남대학교 교육혁신본부",
+      "registered_at": "2026-11-18 16:40",
+      "registered_date": "2026-11-18",
+      "opinion_close_at": "2026-11-23 23:59",
+      "asign_budget_eok": 1.4,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00301318&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00301318&fileType=BFDTL&fileSeq=2"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00302210",
+      "title": "2027년 천안시 빅데이터 플랫폼 유지관리 및 AI 기반 분석 사업 용역",
+      "org": "충청남도 천안시",
+      "order_org": "충청남도 천안시",
+      "registered_at": "2026-11-18 13:46",
+      "registered_date": "2026-11-18",
+      "opinion_close_at": "2026-11-21 23:59",
+      "asign_budget_eok": 2.99,
+      "scope": "AI SW 확대",
+      "fields": [
+        "데이터·예측"
+      ],
+      "nature": "운영·유지보수",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00302210&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
     {
       "prespec_no": "R26BD00302221",
       "title": "AI기반 가상환자 교육시스템 외 7종 구입",
@@ -20,7 +110,9 @@
         "AI 일반"
       ],
       "nature": "연구·교육·행사",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01840144"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00302221&fileType=BFDTL&fileSeq=1"
       ],

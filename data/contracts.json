@@ -1,7 +1,36 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-18T03:42:15Z",
+  "generated_at": "2026-11-18T10:07:31Z",
   "contracts": [
+    {
+      "contract_no": "R26TA02357763",
+      "title": "AI 스마트홈 과제3 클라우드 서비스 이용",
+      "org": "엔에이치엔와플랫 주식회사",
+      "contract_org": "엔에이치엔와플랫 주식회사",
+      "signed_date": "2026-11-18",
+      "period_text": "금차 67일, 총차 67일",
+      "end_date": "2026-12-31",
+      "amount_eok": 1.4103,
+      "long_term": "신규",
+      "method": "수의계약",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 인테크",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "4108668875"
+        }
+      ],
+      "bid_no": null,
+      "registered_at": "2026-11-18 15:20",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02357763&ctrtChgOrd=01&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
     {
       "contract_no": "R26TA01452990",
       "title": "2026 대학연계 방과후 AI-SW 특화 프로그램 지원 사업 용역",
@@ -117,6 +146,35 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화"
+    },
+    {
+      "contract_no": "R26TA01470403",
+      "title": "2026년 대학연계 SW, AI 특화 프로그램 지원 사업 용역",
+      "org": "충청남도교육청 충청남도공주교육지원청",
+      "contract_org": "충청남도교육청 충청남도공주교육지원청",
+      "signed_date": "2026-11-17",
+      "period_text": "금차 299일, 총차 299일",
+      "end_date": "2026-12-18",
+      "amount_eok": 2.5451,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "상명대학교 천안산학협력단",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "3128210241"
+        }
+      ],
+      "bid_no": "R26BK01276364",
+      "registered_at": "2026-11-18 13:02",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA01470403&ctrtChgOrd=01&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
     },
     {
       "contract_no": "R26TA02422014",
@@ -30252,35 +30310,6 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화"
-    },
-    {
-      "contract_no": "R26TA01470403",
-      "title": "2026년 대학연계 SW, AI 특화 프로그램 지원 사업 용역",
-      "org": "충청남도교육청 충청남도공주교육지원청",
-      "contract_org": "충청남도교육청 충청남도공주교육지원청",
-      "signed_date": "2026-02-20",
-      "period_text": "금차 299일, 총차 299일",
-      "end_date": "2026-12-18",
-      "amount_eok": 2.48,
-      "long_term": "신규",
-      "method": "제한경쟁",
-      "joint": false,
-      "firms": [
-        {
-          "name": "상명대학교 천안산학협력단",
-          "role": "주계약업체",
-          "share": 100.0,
-          "bizno": "3128210241"
-        }
-      ],
-      "bid_no": "R26BK01276364",
-      "registered_at": "2026-02-23 10:19",
-      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA01470403&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
-      "scope": "AI SW 확대",
-      "fields": [
-        "AI 일반"
-      ],
-      "nature": null
     },
     {
       "contract_no": "R26TA01490146",

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-18T03:42:08Z",
+  "generated_at": "2026-11-18T10:07:25Z",
   "plans": [
     {
       "plan_no": "R26DD20515816",
@@ -651,7 +651,9 @@
       "dept": "재무회계팀",
       "tel": "054-479-2017",
       "posted_date": "2026-11-02",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01836048"
+      ],
       "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20914984",
       "biz": "servc",
       "biz_div": "일반용역",
@@ -801,7 +803,9 @@
       "dept": "기획운영팀",
       "tel": "16445113",
       "posted_date": "2026-11-03",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01828138"
+      ],
       "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20915796",
       "biz": "servc",
       "biz_div": "일반용역",
@@ -2361,7 +2365,9 @@
       "dept": "ITS추진과",
       "tel": "033-640-5616",
       "posted_date": "2026-11-10",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01840091"
+      ],
       "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20924645",
       "biz": "servc",
       "biz_div": "기술용역",
@@ -2567,7 +2573,9 @@
       "dept": "앵커사업단",
       "tel": "02-970-9082",
       "posted_date": "2026-11-11",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01839912"
+      ],
       "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20926102",
       "biz": "servc",
       "biz_div": "일반용역",
@@ -3351,7 +3359,9 @@
       "dept": "교통정보운영과",
       "tel": "053-803-6717",
       "posted_date": "2026-11-13",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01839575"
+      ],
       "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20929890",
       "biz": "servc",
       "biz_div": "일반용역",
@@ -4245,7 +4255,9 @@
       "dept": "물류관리과",
       "tel": "053-200-5406",
       "posted_date": "2026-11-18",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01840144"
+      ],
       "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20934668",
       "biz": "thng",
       "biz_div": "물품",
@@ -4279,6 +4291,82 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화"
+    },
+    {
+      "plan_no": "R26DD20934875",
+      "title": "(2단계) AI, 빅데이터 기반 기뢰전작전지원체계 구축사업",
+      "org": "국방부 국군재정관리단",
+      "top_org": "국방부",
+      "org_kind": "국가기관",
+      "order_ym": "2026-11",
+      "amount_eok": 15.56,
+      "contract_method": "일반경쟁",
+      "procurement": "자체조달",
+      "dept": "특수계약TF",
+      "tel": "02-3146-6713",
+      "posted_date": "2026-11-18",
+      "bid_nos": [
+        "R26BK01839120"
+      ],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20934875",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "데이터·예측"
+      ],
+      "nature": "시스템 구축·고도화"
+    },
+    {
+      "plan_no": "R26DD20935625",
+      "title": "우송 SW중심대학 AI기초교육 온라인 동영상 콘텐츠 개발",
+      "org": "우송대학교",
+      "top_org": "교육부",
+      "org_kind": "교육기관",
+      "order_ym": "2026-11",
+      "amount_eok": 0.35,
+      "contract_method": "제한경쟁",
+      "procurement": "자체조달",
+      "dept": "구매과",
+      "tel": "042-630-9672",
+      "posted_date": "2026-11-18",
+      "bid_nos": [],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20935625",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "비전·영상"
+      ],
+      "nature": "연구·교육·행사"
+    },
+    {
+      "plan_no": "R26DD20935697",
+      "title": "2027년 서울로봇인공지능과학관 청소용역",
+      "org": "서울시립과학관",
+      "top_org": "서울특별시",
+      "org_kind": "지방자치단체",
+      "order_ym": "2026-11",
+      "amount_eok": 3.5133,
+      "contract_method": "제한경쟁",
+      "procurement": "자체조달",
+      "dept": "서울로봇인공지능과학관",
+      "tel": "02-920-4333",
+      "posted_date": "2026-11-18",
+      "bid_nos": [
+        "R26BK01840343"
+      ],
+      "url": "https://www.g2b.go.kr/link/PRPA015_01/single/?oderPlanNo=R26DD20935697",
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "product": null,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
     },
     {
       "plan_no": "R26DD20561940",
