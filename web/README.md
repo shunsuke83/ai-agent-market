@@ -16,7 +16,7 @@
 | 구분 | URL |
 |------|-----|
 | 내부 (D1+적합도) | https://ai-agent-market-internal.pages.dev/ |
-| 공개 (정적, 무프로필) | https://ai-agent-market.pages.dev/ |
+| 공개 (정적 HTML+적합도) | https://ai-agent-market.pages.dev/ |
 
 D1 `ai-agent-market` · 마이그레이션 적용됨 · notices 동기화됨.
 
@@ -25,9 +25,10 @@ GitHub Actions secrets (일부 등록됨):
 - `CLOUDFLARE_ACCOUNT_ID` — 등록됨
 - `CLOUDFLARE_D1_DATABASE_ID` — 등록됨
 - `CLOUDFLARE_API_TOKEN` — **아직 필요** (대시보드에서 API Token 발급, D1 edit + Pages deploy)
-- `COMPANY_PROFILE` — sync 시 적합도 컬럼
+- `COMPANY_PROFILE` — D1 sync·공개/내부 렌더 적합도 (YAML은 data/에 안 넣음)
 
-내부 사이트는 Cloudflare Zero Trust **Access**로 회사 메일만 허용하세요.
+공개·내부 모두 적합도를 표시합니다. 내부는 D1 실시간, 공개는 수집 시 렌더한 정적 HTML입니다.  
+내부 URL은 Cloudflare Zero Trust **Access**로 회사 메일만 허용하세요.
 
 ## 로컬
 

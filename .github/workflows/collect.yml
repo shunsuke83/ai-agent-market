@@ -203,9 +203,17 @@ jobs:
           --firms "${{ steps.firms.outcome }}"
         working-directory: collector
 
-      # Public GitHub Pages / CF public deploy: never pass COMPANY_PROFILE here.
+      # Public + git HTML: COMPANY_PROFILE enables 적합도(참여/검토/보류). YAML is never written to data/.
       - name: Render public site pages
-        run: python -m g2b.collect render all
+        env:
+          COMPANY_PROFILE: ${{ secrets.COMPANY_PROFILE }}
+        run: |
+          if [ -n "${COMPANY_PROFILE:-}" ]; then
+            echo "COMPANY_PROFILE set — fit scores on public render."
+          else
+            echo "::warning::COMPANY_PROFILE missing — public render without 적합도."
+          fi
+          python -m g2b.collect render all
         working-directory: collector
 
       # Internal D1: fit scores use COMPANY_PROFILE. Skip cleanly if Cloudflare secrets unset.
