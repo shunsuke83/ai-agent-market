@@ -231,9 +231,10 @@ jobs:
             exit 0
           fi
           python -m g2b.collect stage-public
-          npm install --prefix ../web
-          npx --prefix ../web wrangler pages deploy ../public-dist --project-name=ai-agent-market --commit-dirty=true
-        working-directory: collector
+          npm install --prefix web
+          # Deploy cwd=public-dist so web/functions are not bundled onto the public project.
+          npx --prefix web wrangler pages deploy public-dist --project-name=ai-agent-market --commit-dirty=true
+        working-directory: .
 
       # Slack failure must not block the data commit; unsent items retry next run.
       - name: Alerts (RSS, calendar, Slack)

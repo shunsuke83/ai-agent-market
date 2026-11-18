@@ -11,27 +11,23 @@
 | `migrations/` | D1 스키마 |
 | 수집 | repo root에서 `python -m g2b.collect sync-d1` |
 
-## 한 번만 할 설정
+## 현재 배포 (초기 셋업 완료)
 
-```bash
-cd web
-npm install
-npx wrangler login
-npx wrangler d1 create ai-agent-market
-# 출력된 database_id 를 wrangler.toml 에 붙여 넣기
-npm run db:migrate:remote
-npx wrangler pages project create ai-agent-market-internal
-npx wrangler pages project create ai-agent-market   # 공개용
-```
+| 구분 | URL |
+|------|-----|
+| 내부 (D1+적합도) | https://ai-agent-market-internal.pages.dev/ |
+| 공개 (정적, 무프로필) | https://ai-agent-market.pages.dev/ |
 
-GitHub Actions secrets:
+D1 `ai-agent-market` · 마이그레이션 적용됨 · notices 동기화됨.
 
-- `CLOUDFLARE_ACCOUNT_ID`
-- `CLOUDFLARE_API_TOKEN` (D1 edit + Pages deploy)
-- `CLOUDFLARE_D1_DATABASE_ID`
-- `COMPANY_PROFILE` (이미 사용 중 — sync 시 적합도 컬럼)
+GitHub Actions secrets (일부 등록됨):
 
-Cloudflare Zero Trust **Access**로 `ai-agent-market-internal` 프로젝트에 회사 메일만 허용합니다.
+- `CLOUDFLARE_ACCOUNT_ID` — 등록됨
+- `CLOUDFLARE_D1_DATABASE_ID` — 등록됨
+- `CLOUDFLARE_API_TOKEN` — **아직 필요** (대시보드에서 API Token 발급, D1 edit + Pages deploy)
+- `COMPANY_PROFILE` — sync 시 적합도 컬럼
+
+내부 사이트는 Cloudflare Zero Trust **Access**로 회사 메일만 허용하세요.
 
 ## 로컬
 

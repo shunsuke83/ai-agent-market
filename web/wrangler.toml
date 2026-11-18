@@ -8,5 +8,5 @@ pages_build_output_dir = "public"
 [[d1_databases]]
 binding = "DB"
 database_name = "ai-agent-market"
-database_id = "00000000-0000-0000-0000-000000000000"
+database_id = "70c9f8e4-f902-40b7-80e8-d9f94a5fa0b2"
 migrations_dir = "migrations"
