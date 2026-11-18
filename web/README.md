@@ -27,8 +27,19 @@ GitHub Actions secrets (일부 등록됨):
 - `CLOUDFLARE_API_TOKEN` — **아직 필요** (대시보드에서 API Token 발급, D1 edit + Pages deploy)
 - `COMPANY_PROFILE` — D1 sync·공개/내부 렌더 적합도 (YAML은 data/에 안 넣음)
 
-공개·내부 모두 적합도를 표시합니다. 내부는 D1 실시간, 공개는 수집 시 렌더한 정적 HTML입니다.  
-내부 URL은 Cloudflare Zero Trust **Access**로 회사 메일만 허용하세요.
+공개·내부 모두 적합도를 표시합니다. 내부는 D1 실시간, 공개는 수집 시 렌더한 정적 HTML입니다.
+
+### Access (`@genon.ai`만 허용)
+
+1. https://one.dash.cloudflare.com/ 에서 **Zero Trust** 조직 생성(팀 이름 입력, Free 플랜·결제수단 등록은 필수이나 과금 없음).
+2. 완료 후 로컬에서:
+
+```powershell
+cd web
+python _setup_access.py
+```
+
+`ai-agent-market-internal.pages.dev` (+ 프리뷰 `*.…pages.dev`)에 `@genon.ai` 메일만 Allow 정책을 만듭니다. 로그인 방식은 Zero Trust 기본 IdP(원타임 PIN 이메일 등)를 사용합니다.
 
 ## 로컬
 
