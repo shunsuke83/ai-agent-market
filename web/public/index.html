@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AI 사업 입찰 · 내부</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a class="brand" href="/">AI 사업 입찰 · 내부</a>
+      <span class="meta" id="stamp">D1 로딩…</span>
+    </header>
+    <main>
+      <h1>접수 중 공고</h1>
+      <p class="lede">Cloudflare D1 기준입니다. 적합도는 수집 sync 시점 프로필 점수입니다.</p>
+      <form class="filters" id="filters">
+        <input type="search" name="q" placeholder="사업명·기관·공고번호" />
+        <label><input type="checkbox" name="excluded" /> 제외 포함</label>
+        <label><input type="checkbox" name="open" checked /> 마감 전만</label>
+        <select name="fit">
+          <option value="">참여 전체</option>
+          <option value="GO">참여 (GO)</option>
+          <option value="REVIEW">검토</option>
+          <option value="NO-GO">보류</option>
+        </select>
+        <button type="submit">검색</button>
+      </form>
+      <p class="meta" id="count"></p>
+      <div class="tbl">
+        <table>
+          <thead>
+            <tr>
+              <th>참여</th>
+              <th>마감</th>
+              <th>수요기관</th>
+              <th>사업명</th>
+              <th class="num">예산(억)</th>
+              <th>제외</th>
+            </tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+  <script src="/app.js" type="module"></script>
+</body>
+</html>

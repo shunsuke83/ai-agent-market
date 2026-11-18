@@ -1,0 +1,12 @@
+# Internal app: Cloudflare Pages + D1.
+# Create the D1 DB once, then paste database_id here:
+#   npx wrangler d1 create ai-agent-market
+name = "ai-agent-market-internal"
+compatibility_date = "2025-11-01"
+pages_build_output_dir = "public"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "ai-agent-market"
+database_id = "00000000-0000-0000-0000-000000000000"
+migrations_dir = "migrations"

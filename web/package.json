@@ -1,0 +1,16 @@
+{
+  "name": "ai-agent-market-web",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Internal Cloudflare Pages + D1 app for AI bid notices",
+  "scripts": {
+    "dev": "wrangler pages dev public --d1=DB --persist-to=.wrangler/state",
+    "deploy:internal": "wrangler pages deploy public --project-name=ai-agent-market-internal",
+    "deploy:public": "wrangler pages deploy ../public-dist --project-name=ai-agent-market",
+    "db:migrate:local": "wrangler d1 migrations apply ai-agent-market --local",
+    "db:migrate:remote": "wrangler d1 migrations apply ai-agent-market --remote"
+  },
+  "devDependencies": {
+    "wrangler": "^4.45.0"
+  }
+}

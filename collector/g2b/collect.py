@@ -812,6 +812,27 @@ def cmd_summarize_rfp(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_sync_d1(args: argparse.Namespace) -> int:
+    from .sync_d1 import sync_notices_to_d1
+
+    summary = sync_notices_to_d1(
+        ROOT,
+        limit=args.limit,
+        dry_run=args.dry_run,
+    )
+    print(json.dumps(summary, ensure_ascii=False))
+    # Missing Cloudflare secrets → skipped (exit 0) so collect.yml can continue-on-error cleanly.
+    return 0
+
+
+def cmd_stage_public(args: argparse.Namespace) -> int:
+    from .public_dist import stage_public_dist
+
+    summary = stage_public_dist(ROOT, Path(args.out) if args.out else None)
+    print(json.dumps(summary, ensure_ascii=False))
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(description="나라장터 AI Agent market collector")
     sub = p.add_subparsers(dest="cmd", required=True)
@@ -993,6 +1014,21 @@ def build_parser() -> argparse.ArgumentParser:
     sr.add_argument("--bid", action="append",
                     help="Summarize these open 공고번호 first, beyond --limit (repeat or comma-separate)")
     sr.set_defaults(func=cmd_summarize_rfp)
+
+    sd = sub.add_parser(
+        "sync-d1",
+        help="Upsert notices (+ fit scores) into Cloudflare D1 (CLOUDFLARE_* secrets)",
+    )
+    sd.add_argument("--limit", type=int, default=None, help="Max notices to upsert (debug)")
+    sd.add_argument("--dry-run", action="store_true", help="Build rows only; no HTTP calls")
+    sd.set_defaults(func=cmd_sync_d1)
+
+    sp = sub.add_parser(
+        "stage-public",
+        help="Copy rendered public HTML into public-dist/ for Cloudflare Pages deploy",
+    )
+    sp.add_argument("--out", default=None, help="Destination directory (default: ../public-dist)")
+    sp.set_defaults(func=cmd_stage_public)
 
     return p
 

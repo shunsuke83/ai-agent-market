@@ -203,17 +203,36 @@ jobs:
           --firms "${{ steps.firms.outcome }}"
         working-directory: collector
 
-      # COMPANY_PROFILE enables 적합도 on index / bids / reports. YAML is never written to data/.
-      - name: Render site pages
+      # Public GitHub Pages / CF public deploy: never pass COMPANY_PROFILE here.
+      - name: Render public site pages
+        run: python -m g2b.collect render all
+        working-directory: collector
+
+      # Internal D1: fit scores use COMPANY_PROFILE. Skip cleanly if Cloudflare secrets unset.
+      - name: Sync notices to Cloudflare D1
+        continue-on-error: true
         env:
           COMPANY_PROFILE: ${{ secrets.COMPANY_PROFILE }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_D1_DATABASE_ID: ${{ secrets.CLOUDFLARE_D1_DATABASE_ID }}
+        run: python -m g2b.collect sync-d1
+        working-directory: collector
+
+      # Public CF Pages (optional until project + token exist). Uses profile-free render output.
+      - name: Deploy public site to Cloudflare Pages
+        continue-on-error: true
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: |
-          if [ -n "${COMPANY_PROFILE:-}" ]; then
-            echo "COMPANY_PROFILE set (length ${#COMPANY_PROFILE}) — fit scores on render."
-          else
-            echo "::warning::COMPANY_PROFILE secret missing — render without 적합도 (홈·리포트 참여 열 생략)."
+          if [ -z "${CLOUDFLARE_API_TOKEN:-}" ]; then
+            echo "CLOUDFLARE_API_TOKEN unset — skip public Pages deploy."
+            exit 0
           fi
-          python -m g2b.collect render all
+          python -m g2b.collect stage-public
+          npm install --prefix ../web
+          npx --prefix ../web wrangler pages deploy ../public-dist --project-name=ai-agent-market --commit-dirty=true
         working-directory: collector
 
       # Slack failure must not block the data commit; unsent items retry next run.
@@ -224,7 +243,7 @@ jobs:
         run: python -m g2b.collect alerts
         working-directory: collector
 
-      # Same profile as render; Slack gets the scored shortlist. Counts only in the log.
+      # Slack shortlist; same profile as D1 sync.
       - name: Go/No-Go (Slack)
         continue-on-error: true
         env:

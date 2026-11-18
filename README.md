@@ -131,3 +131,4 @@ research/                       편집 리서치 페이지
 
 - [`collector/README.md`](collector/README.md): 데이터 모델, Open API, 명령어 사용법, Actions 동작, 렌더 범위
 - [`data/README.md`](data/README.md): 데이터 파일별 생성 명령과 내용
+- [`web/README.md`](web/README.md): 내부용 Cloudflare Pages + D1 (적합도·Access), 공개 CF Pages 배포

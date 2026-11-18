@@ -1,1 +1,5 @@
 collector/config/profile.local.yaml
+
+public-dist/
+web/node_modules/
+web/.wrangler/
