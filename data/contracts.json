@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-18T10:07:31Z",
+  "generated_at": "2026-11-19T10:18:52Z",
   "contracts": [
     {
       "contract_no": "R26TA02357763",
@@ -25,6 +25,93 @@
       "bid_no": null,
       "registered_at": "2026-11-18 15:20",
       "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02357763&ctrtChgOrd=01&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
+    {
+      "contract_no": "R26TA02357614",
+      "title": "AI 스마트홈 과제2 클라우드 서비스 이용",
+      "org": "엔에이치엔 주식회사",
+      "contract_org": "엔에이치엔 주식회사",
+      "signed_date": "2026-11-18",
+      "period_text": "금차 67일, 총차 67일",
+      "end_date": "2026-12-31",
+      "amount_eok": 3.0627,
+      "long_term": "신규",
+      "method": "수의계약",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 인테크",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "4108668875"
+        }
+      ],
+      "bid_no": null,
+      "registered_at": "2026-11-18 19:43",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02357614&ctrtChgOrd=01&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
+    {
+      "contract_no": "R26TA02357541",
+      "title": "AI 스마트홈 과제1 클라우드 서비스 이용",
+      "org": "엔에이치엔 주식회사",
+      "contract_org": "엔에이치엔 주식회사",
+      "signed_date": "2026-11-18",
+      "period_text": "금차 67일, 총차 67일",
+      "end_date": "2026-12-31",
+      "amount_eok": 1.6506,
+      "long_term": "신규",
+      "method": "수의계약",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 인테크",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "4108668875"
+        }
+      ],
+      "bid_no": null,
+      "registered_at": "2026-11-18 19:42",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02357541&ctrtChgOrd=01&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
+    {
+      "contract_no": "R26TA02444943",
+      "title": "조류인플루엔자(AI) 발생농장 살처분 용역",
+      "org": "인천광역시 강화군",
+      "contract_org": "인천광역시 강화군",
+      "signed_date": "2026-11-18",
+      "period_text": "금차 186일, 총차 186일",
+      "end_date": "2027-05-22",
+      "amount_eok": 1.6301,
+      "long_term": "신규",
+      "method": "수의계약",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 크로스캐리어",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "5648800292"
+        }
+      ],
+      "bid_no": null,
+      "registered_at": "2026-11-19 15:00",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02444943&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
       "scope": "AI SW 확대",
       "fields": [
         "AI 일반"
@@ -175,6 +262,41 @@
         "AI 일반"
       ],
       "nature": null
+    },
+    {
+      "contract_no": "R26TA01882226",
+      "title": "AI 기반 제주어왓 고도화 사업",
+      "org": "제주특별자치도 제주학연구센터",
+      "contract_org": "제주특별자치도 제주학연구센터",
+      "signed_date": "2026-11-17",
+      "period_text": "금차 180일, 총차 180일",
+      "end_date": "2026-12-14",
+      "amount_eok": 2.225,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "(주)아트피큐",
+          "role": "도급업체",
+          "share": 20.0,
+          "bizno": "6168128632"
+        },
+        {
+          "name": "주식회사 피씨엔",
+          "role": "주계약업체",
+          "share": 80.0,
+          "bizno": "2158607972"
+        }
+      ],
+      "bid_no": "R26BK01494288",
+      "registered_at": "2026-11-19 09:40",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA01882226&ctrtChgOrd=01&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화"
     },
     {
       "contract_no": "R26TA02422014",
@@ -1901,35 +2023,6 @@
         "비전·영상"
       ],
       "nature": "시스템 구축·고도화"
-    },
-    {
-      "contract_no": "R26TA02357614",
-      "title": "AI 스마트홈 과제2 클라우드 서비스 이용",
-      "org": "엔에이치엔 주식회사",
-      "contract_org": "엔에이치엔 주식회사",
-      "signed_date": "2026-10-26",
-      "period_text": "금차 67일, 총차 67일",
-      "end_date": "2026-12-31",
-      "amount_eok": 1.7652,
-      "long_term": "신규",
-      "method": "수의계약",
-      "joint": false,
-      "firms": [
-        {
-          "name": "주식회사 인테크",
-          "role": "주계약업체",
-          "share": 100.0,
-          "bizno": "4108668875"
-        }
-      ],
-      "bid_no": null,
-      "registered_at": "2026-10-26 18:46",
-      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02357614&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
-      "scope": "AI SW 확대",
-      "fields": [
-        "AI 일반"
-      ],
-      "nature": null
     },
     {
       "contract_no": "R26TA02318384",
@@ -21412,41 +21505,6 @@
         "AX·전략"
       ],
       "nature": "ISP·전략"
-    },
-    {
-      "contract_no": "R26TA01882226",
-      "title": "AI 기반 제주어왓 고도화 사업",
-      "org": "제주특별자치도 제주학연구센터",
-      "contract_org": "제주특별자치도 제주학연구센터",
-      "signed_date": "2026-05-22",
-      "period_text": "금차 180일, 총차 180일",
-      "end_date": "2026-11-17",
-      "amount_eok": 2.225,
-      "long_term": "신규",
-      "method": "제한경쟁",
-      "joint": false,
-      "firms": [
-        {
-          "name": "(주)아트피큐",
-          "role": "도급업체",
-          "share": 20.0,
-          "bizno": "6168128632"
-        },
-        {
-          "name": "주식회사 피씨엔",
-          "role": "주계약업체",
-          "share": 80.0,
-          "bizno": "2158607972"
-        }
-      ],
-      "bid_no": "R26BK01494288",
-      "registered_at": "2026-05-26 09:19",
-      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA01882226&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
-      "scope": "AI SW 확대",
-      "fields": [
-        "AI 일반"
-      ],
-      "nature": "시스템 구축·고도화"
     },
     {
       "contract_no": "R26TA01921053",

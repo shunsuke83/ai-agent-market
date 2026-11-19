@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-18T10:10:58Z",
+  "generated_at": "2026-11-19T10:21:33Z",
   "summaries": {
     "R26BK01745687": {
       "bid_no": "R26BK01745687",
@@ -16554,6 +16554,72 @@
       "model": "gemini-3.5-flash",
       "status": "ok"
     },
+    "R26BK01833109": {
+      "bid_no": "R26BK01833109",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01833109&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01833109&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01833109&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01833109&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01833109&bidPbancOrd=000&fileType=&fileSeq=5&prcmBsneSeCd=03"
+      ],
+      "updated_at": "2026-11-19T10:21:11Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "(제안요청서) 2027년 용인시 지능형교통체계(ITS) 유지관리 용역(최종).hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01833109&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
+        },
+        {
+          "name": "(과업지시서) 2027년 용인시 지능형교통체계(ITS) 유지관리 용역.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01833109&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+        }
+      ],
+      "fields": {
+        "period": "2027. 01. 01. ~ 2027. 12. 31",
+        "sme_only": true,
+        "subcontract_limit": true,
+        "presentation": true
+      },
+      "chars": 60110,
+      "summary": {
+        "overview": "용인시 관내 지능형교통체계(ITS), 버스정보시스템(BIS), 교통신호제어시스템 등 센터 및 현장 시설물의 안정적 운영과 정기 예방정비를 위한 유지관리 용역 사업입니다. 용인시 첨단교통센터 운영시스템과 관내 전역의 현장 장비 일체에 대한 일상점검, 신속한 장애복구, 기술지원 및 민원처리를 2027년 1년간 수행합니다.",
+        "evaluation": "기술능력평가 90%와 가격평가 10%를 합산하여 종합평가점수 1위 업체부터 협상을 실시하는 협상에 의한 계약 방식입니다.",
+        "tasks": [
+          "센터 및 현장 ITS 시설물 운영·유지관리",
+          "현장장비(BIT, CCTV, VMS, VDS 등) 정기점검 및 장애복구",
+          "교통신호제어 및 스마트교차로 시스템 유지관리",
+          "자가통신망 및 광케이블 유지관리",
+          "버스정보시스템(BIS) DB 갱신 및 모니터링",
+          "소규모 추진사업 기술지원 및 자문"
+        ],
+        "tech": [
+          "지능형교통체계(ITS)",
+          "버스정보시스템(BIS)",
+          "스마트교차로",
+          "DSRC-RSE",
+          "교통관제 CCTV",
+          "자가통신망(광장비)"
+        ],
+        "requirements": [
+          "소프트웨어사업자(컴퓨터관련서비스사업) 및 정보통신공사업 면허 소지자",
+          "직접생산확인증명서(정보시스템유지관리서비스) 및 중·소기업·소상공인확인서 소지자",
+          "대기업 및 중견기업 소프트웨어 사업자 참여 제한 (20억원 미만 사업)",
+          "상주 유지관리 인력 9인 이상 배치 (PM은 중급기술자 이상)",
+          "계약 후 7일 이내 정비차량 5대 구비 및 비치"
+        ],
+        "cautions": [
+          "공동수급은 공동이행방식만 가능하며 5인 이하, 구성원별 최소 지분율 5% 이상이어야 함",
+          "하도급 시 사전승인 필수, 사업금액의 50% 초과 불가하며 재하도급은 원칙적으로 불허함",
+          "사업자 보안위규 처리기준 및 누출금지 대상정보 관련 보안 규정 준수 필수",
+          "회계연도 개시 전 계약으로 지방의회 세출예산 심의결과에 따라 계약금액이 변경될 수 있음"
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
+    },
     "R26BK01833175": {
       "bid_no": "R26BK01833175",
       "bid_ord": "000",
@@ -17363,6 +17429,73 @@
       "model": "gemini-3.5-flash",
       "status": "ok"
     },
+    "R26BK01837893": {
+      "bid_no": "R26BK01837893",
+      "bid_ord": "000",
+      "source": "notice+prespec",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01837893&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01837893&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00299444&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00299444&fileType=BFDTL&fileSeq=2",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00299444&fileType=BFDTL&fileSeq=3"
+      ],
+      "updated_at": "2026-11-19T10:19:35Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "1. 입찰공고(2026-0277).pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01837893&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        },
+        {
+          "name": "2. AI 기반 지능형 병원정보시스템 구축을 위한 고성능 GPU 서버 도입 시방서.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01837893&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01"
+        },
+        {
+          "name": "AI 기반 지능형 병원정보시스템 구축을 위한 고성능 GPU 서버 도입 시방서.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00299444&fileType=BFDTL&fileSeq=1"
+        }
+      ],
+      "fields": {
+        "sme_only": true
+      },
+      "chars": 45285,
+      "summary": {
+        "overview": "전북대학교병원의 AI 기반 지능형 병원정보시스템 구축을 위해 고성능 GPU 서버 및 관련 인프라를 도입하는 사업입니다. 독립적인 AI 운영환경을 확보하여 민감한 환자 정보를 내부에서 안전하게 처리하고, 의료진의 업무 부담을 경감하며 차세대 병원정보시스템 구축 기반을 선제적으로 확보하는 것을 목적으로 합니다.",
+        "evaluation": "예정가격 이하 낙찰하한율(89.995%) 이상 최저가격으로 입찰한 자를 대상으로 적격심사를 거쳐 종합평점 88점 이상인 자를 낙찰자로 결정합니다.",
+        "tasks": [
+          "고성능 GPU 서버 도입 및 설치",
+          "시스템 소프트웨어 및 운영환경 구성",
+          "네트워크 및 보안 환경 구성",
+          "성능 및 기능 검증",
+          "운영관리 및 기술지원 체계 마련",
+          "관리자 교육 및 상주 기술 지원"
+        ],
+        "tech": [
+          "고성능 GPU 서버",
+          "Ubuntu Linux",
+          "NVIDIA AI Enterprise",
+          "Docker 및 Kubernetes",
+          "NVMe 저장장치",
+          "GPU Passthrough"
+        ],
+        "requirements": [
+          "소프트웨어사업자(컴퓨터관련 서비스사업, 업종코드 1468) 등록 업체",
+          "직접생산확인증명서(컴퓨터서버 4321150102) 소지 업체",
+          "중·소기업 또는 소상공인 확인서 소지 업체",
+          "대기업 및 상호출자제한기업집단 참여 제한 (사업금액 20억 미만)",
+          "검수 완료 후 중급기술자 1인 이상(1일 이상) 상주 지원 가능 업체"
+        ],
+        "cautions": [
+          "공동수급 및 하도급은 불허됩니다.",
+          "무상하자보수 기간은 검수일로부터 3년입니다.",
+          "누출금지 대상정보 유출 시 보안위규 처리기준에 따른 위약금 부과 및 부정당업자 제재 조치를 받습니다.",
+          "동일 장비에서 3회 이상 동일 장애 발생 시 신품 기기로 교체하여야 합니다."
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
+    },
     "R26BK01838477": {
       "bid_no": "R26BK01838477",
       "bid_ord": "000",
@@ -17789,6 +17922,401 @@
           "기존 근로자 고용승계 및 예정가격 노임단가 이상의 임금 지급 필수",
           "국민건강보험료, 국민연금보험료, 산업안전보건관리비 등 사후정산 실시",
           "산업안전보건법 및 중대재해처벌법에 따른 안전보건관리계획서 제출 및 의무 준수"
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
+    },
+    "R26BK01840972": {
+      "bid_no": "R26BK01840972",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01840972&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01840972&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01840972&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01840972&bidPbancOrd=000&fileType=&fileSeq=5&prcmBsneSeCd=03"
+      ],
+      "updated_at": "2026-11-19T10:19:09Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "2027년 AI 무역지원센터 운영 용역 제안요청서.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01840972&bidPbancOrd=000&fileType=&fileSeq=5&prcmBsneSeCd=03"
+        },
+        {
+          "name": "입찰공고서.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01840972&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        },
+        {
+          "name": "안전보건수준평가 안내(적격수급업체 선정 지침 발췌)_최종.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01840972&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
+        }
+      ],
+      "fields": {
+        "period": "계약착수일로부터 2027년 12월 31일까지",
+        "presentation": true
+      },
+      "chars": 50531,
+      "summary": {
+        "overview": "본 사업은 지역 기업 및 창업 희망자를 위한 AI·디지털 수출지원 인프라를 운영하는 것을 목적을 합니다. 전국 20개 AI 무역지원센터를 통합 운영하고, 바이코리아 상품등록 콘텐츠 제작 및 지역 기업·청년 대상 AI 활용 교육을 추진합니다.",
+        "evaluation": "기술능력평가 90%와 가격평가 10%를 합산하여 기술평가 배점한도의 85% 이상인 적격자 중 종합 고득점순으로 협상을 진행하는 협상에 의한 계약방식입니다.",
+        "tasks": [
+          "전국 20개 AI 무역지원센터 운영 및 관리",
+          "바이코리아 상품등록 및 AI 활용 콘텐츠 제작",
+          "지역 기업·청년 대상 AI 활용 교육 기획 및 실행",
+          "수출상담회·전시회 등 발주처 사업 및 홍보 지원",
+          "개별기업 수출 성공사례 발굴 및 보고",
+          "센터별 물품·안전보건·정보보안 점검"
+        ],
+        "tech": [
+          "생성형 AI",
+          "RAG",
+          "CSAP",
+          "하드보안관",
+          "과업 전용 노트북",
+          "바이코리아"
+        ],
+        "requirements": [
+          "나라장터 입찰참가 자격등록을 완료한 사업자",
+          "총 25명 전담 인력 투입 (총괄 PM 1명, PL 3명, 상근 매니저 21명)",
+          "발표자(PM)는 입찰공고일 전날 이전부터 제안사(대표사) 소속 재직자일 것",
+          "공동수급(공동이행방식, 최대 3개사, 최소 지분율 10% 이상) 가능",
+          "참여 인력 전원용 초기화 노트북(MS Office, 한글 정품) 25대 자체 운용"
+        ],
+        "cautions": [
+          "하도급은 엄격히 금지되며, 공동수급은 최대 3개사(최소 지분율 10% 이상)까지 허용됩니다.",
+          "발표자(PM) 자격 미달, 미등록자 발표 또는 평가회 불참 시 서면 평가로만 진행됩니다.",
+          "생성형 AI 서비스 이용 시 고객 개인정보 입력이 금지되며 사전 체크리스트 승인을 받아야 합니다.",
+          "우선협상대상자는 별도의 안전보건수준평가에서 70점 이상을 받아야 계약 협상이 가능합니다."
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
+    },
+    "R26BK01841095": {
+      "bid_no": "R26BK01841095",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841095&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841095&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841095&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841095&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841095&bidPbancOrd=000&fileType=&fileSeq=5&prcmBsneSeCd=03"
+      ],
+      "updated_at": "2026-11-19T10:20:35Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "4. 제안요청서_AX 자율주행 공동조사 차량 구축 용역.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841095&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
+        },
+        {
+          "name": "3. 과업지시서_AX 자율주행 공동조사 차량 구축 용역.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841095&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+        },
+        {
+          "name": "1. 입찰공고문_AX 자율주행 공동조사 차량 구축 용역.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841095&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        }
+      ],
+      "fields": {
+        "period": "계약체결일로부터 2027. 11. 30.까지",
+        "presentation": true
+      },
+      "chars": 14392,
+      "summary": {
+        "overview": "본 사업은 기존 GPR 조사의 정합성 확보 한계를 극복하기 위해 발주기관 제공 차량에 자율주행 센서 및 컴퓨팅 장비를 구축하고 시스템을 통합하는 용역입니다. 계약체결일부터 2027년 11월 30일까지 자율주행차량 개조, 시스템 구축, 임시운행허가 취득 및 3개월간의 실증 운행과 유지보수를 수행합니다.",
+        "evaluation": "기술능력평가(90점)와 입찰가격평가(10점)를 합산하여 평가하며, 기술평가 점수가 배점한도의 85% 이상인 자 중 종합 고득점순으로 협상을 진행합니다.",
+        "tasks": [
+          "자율주행 센서 및 컴퓨팅 장비 구매·장착",
+          "자율주행 차량 개조 및 외부 랩핑",
+          "자율주행 시스템 통합 및 실증지 SW 연계",
+          "자율주행자동차 임시운행허가 인증 취득",
+          "안전요원 채용·교육 및 운영",
+          "자율주행 차량 실증 운행 및 SW·UI 유지보수"
+        ],
+        "tech": [
+          "자율주행 센서",
+          "자율주행 컴퓨팅 장비",
+          "자율주행 SW",
+          "차내 UI",
+          "자율주행 임시운행허가"
+        ],
+        "requirements": [
+          "소프트웨어사업자(컴퓨터관련서비스사업, 업종코드 1468)",
+          "제작자 등(자동차·국내 제작·조립, 업종코드 5898)",
+          "단독 참여 또는 분담이행방식 공동수급(대표사 포함 3개사 이하)",
+          "공동수급 대표사는 자율주행 시스템·SW 구축 분야(1468) 수행업체"
+        ],
+        "cautions": [
+          "대상 차량(현대 쏠라티) 및 GPR 장비·취득 시스템은 발주기관이 별도 제공하므로 차량 구매는 사업 범위 제외됨",
+          "연차별 협약에 따라 1·2차년도로 구분 수행되며 차년도 예산 확정 결과에 따라 2차년도 사업비가 조정될 수 있음",
+          "하도급 시 발주기관의 사전 승인이 필요함",
+          "차량 인수 후 관리 책임을 지며 개조 및 실증 운행 중 안전 관계 법령 준수 및 사고 책임 이행 필수"
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
+    },
+    "R26BK01841357": {
+      "bid_no": "R26BK01841357",
+      "bid_ord": "000",
+      "source": "notice+prespec",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841357&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00282575&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00282575&fileType=BFDTL&fileSeq=2",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00282575&fileType=BFDTL&fileSeq=3"
+      ],
+      "updated_at": "2026-11-19T10:20:14Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "3. 제안요청서(2027년 청주시 지능형교통체계(ITS) 유지보수 용역).hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00282575&fileType=BFDTL&fileSeq=1"
+        },
+        {
+          "name": "재공고서_R26BK01841357_청주시.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841357&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        }
+      ],
+      "fields": {
+        "period": "2027.01.01. ~ 2027.12.31",
+        "sme_only": true,
+        "presentation": true
+      },
+      "chars": 58979,
+      "summary": {
+        "overview": "청주시 지능형교통체계(ITS) 센터 및 관내 현장설비의 장애 예방과 신속한 복구를 위해 추진되는 유지보수 용역 사업입니다. 시스템 상시 모니터링, 예방점검, 최신 패치 적용 등을 통해 365일 무중단 교통정보 서비스를 제공하고 효율적인 운영 관리 체계를 구축하는 것을 목표로 합니다.",
+        "evaluation": "기술능력평가 90%와 가격평가 10%를 합산하여 종합평점 고득점순으로 협상을 진행하는 협상에 의한 계약 방식입니다.",
+        "tasks": [
+          "ITS 센터 및 현장설비 정기·수시 예방점검",
+          "장애 접수 및 4시간 이내 신속 복구 지원",
+          "센터 시스템 S/W 패치 및 DB 백업·최적화",
+          "CCTV 영상정보 내 개인정보 비식별화 지원",
+          "교통빅데이터 데이터셋 운영 및 분석보고서 작성",
+          "현장 장비 이전설치 및 신규·노후 장비 재구성 지원"
+        ],
+        "tech": [
+          "ITS S/W",
+          "DBMS",
+          "C-ITS",
+          "DSRC-RSE / VMS",
+          "CCTV 영상분석",
+          "네트워크 및 스토리지"
+        ],
+        "requirements": [
+          "소프트웨어사업자(컴퓨터관련서비스사업) 및 정보통신공사업 등록 업체",
+          "정보시스템유지관리서비스 직접생산확인증명서 및 중소기업·소상공인확인서 소지자",
+          "대기업 및 상호출자제한기업집단 참여 불가(사업금액 20억원 미만)",
+          "초급 이상 정보통신기술자 상주인력 1명 및 PM급 인력 1명 이상 투입",
+          "1톤 이상 고소작업차 보유 및 조종교육 이수확인서 제출"
+        ],
+        "cautions": [
+          "공동수급(공동이행)은 5개사 이내, 구성원별 최소 지분율 5% 이상으로 참여 가능합니다.",
+          "하도급 시 발주기관의 사전 서면 승인이 필요하며 사업금액의 50% 초과 및 재하도급은 금지됩니다.",
+          "ITS 세부 설비 구성 정보는 보안 대상이므로 사전 방문 및 보안서약서 제출 후 열람해야 합니다.",
+          "장애 발생 통보 후 4시간 이내에 복구를 완료해야 하며 지체 시 월 유지보수료 기반 위약금이 부과됩니다."
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
+    },
+    "R26BK01841725": {
+      "bid_no": "R26BK01841725",
+      "bid_ord": "001",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841725&bidPbancOrd=001&fileType=&fileSeq=1&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841725&bidPbancOrd=001&fileType=&fileSeq=2&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841725&bidPbancOrd=001&fileType=&fileSeq=3&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841725&bidPbancOrd=001&fileType=&fileSeq=4&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841725&bidPbancOrd=001&fileType=&fileSeq=5&prcmBsneSeCd=01"
+      ],
+      "updated_at": "2026-11-19T10:20:54Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "4. 제안요청서_AX 자율주행 공동조사 차량 구축용 GPR 센서(고정형 주파수) 구매.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841725&bidPbancOrd=001&fileType=&fileSeq=4&prcmBsneSeCd=01"
+        },
+        {
+          "name": "3. 과업지시서_AX 자율주행 공동조사 차량 구축용 GPR 센서(고정형 주파수) 구매.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841725&bidPbancOrd=001&fileType=&fileSeq=3&prcmBsneSeCd=01"
+        },
+        {
+          "name": "1. 입찰공고문_AX 자율주행 공동조사 차량 구축용 GPR 센서(고정형 주파수) 구매.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841725&bidPbancOrd=001&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        }
+      ],
+      "fields": {
+        "presentation": true
+      },
+      "chars": 13003,
+      "summary": {
+        "overview": "도로 하부 공동을 사전에 탐지하여 지반침하 사고를 예방하기 위해 자율주행 공동조사 차량에 탑재할 고정형 주파수(500MHz) 고해상도 멀티채널 3D GPR 장비를 구매하는 사업입니다. 장비 공급과 방수·방진 하우징 및 탑재 인터페이스 제공, 설치·시험, 교육 및 현장 기술지원을 포함합니다. 차량 특장 리프트 및 자율주행 시스템 구축은 별도 발주 사업으로 본 구매 범위에서 제외됩니다.",
+        "evaluation": "기술능력평가(90점)와 입찰가격평가(10점)를 합산하여 기술평가 배점한도의 85% 이상인 적격자 중 고득점순으로 협상을 진행하는 협상에 의한 계약입니다.",
+        "tasks": [
+          "500MHz 멀티채널 3D GPR 장비 공급",
+          "차량 탑재용 방수·방진 하우징 및 장착 규격 제공",
+          "자율주행 시스템 연동 인터페이스 및 연동 시험 지원",
+          "입고 검수 및 현장 주행 성능 시험",
+          "장비 운용 및 데이터 판독 교육",
+          "1년 하자보증 및 현장 기술지원"
+        ],
+        "tech": [
+          "500MHz 멀티채널 3D GPR",
+          "HDR 기술",
+          "GNSS RTK 연동",
+          "데이터 취득 소프트웨어",
+          "3D 후처리 및 가시화 소프트웨어",
+          "방수·방진 하우징"
+        ],
+        "requirements": [
+          "나라장터 물품 세부품명 지질탐지기(4111380901) 경쟁입찰참가자격 등록업체",
+          "국가계약법 시행령 제12조 자격요건 충족 및 제76조 부정당업자 제재 불이행 업체",
+          "제조사 또는 국내 공급권자의 물품공급 및 기술지원 확약서 제출",
+          "규격 적합 여부 확인서(규격 대비표), 카탈로그 및 기술사양서 제출",
+          "안테나 관련 해외 인증서(FCC 또는 CE) 제출"
+        ],
+        "cautions": [
+          "공동수급(공동이행방식 등)은 허용되지 않으며 단독으로만 입찰 가능합니다.",
+          "일부 업무 하도급 시 발주기관의 사전 승인이 필수입니다.",
+          "계약 후 30일 이내에 차량 리프트 장착 규격(외형, 중량, 브래킷, 전원 사양 등)을 제출해야 합니다.",
+          "보조사업 협약기간에 따라 2027년 5월 31일까지 납품 및 최종 검수를 완료해야 합니다."
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
+    },
+    "R26BK01841760": {
+      "bid_no": "R26BK01841760",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841760&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841760&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841760&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841760&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841760&bidPbancOrd=000&fileType=&fileSeq=5&prcmBsneSeCd=01"
+      ],
+      "updated_at": "2026-11-19T10:19:50Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "4. 제안요청서_AX 자율주행 공동조사 차량 구축용 GPR 센서(가변형 주파수) 구매.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841760&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01"
+        },
+        {
+          "name": "3. 과업지시서_AX 자율주행 공동조사 차량 구축용 GPR 센서(가변형 주파수) 구매.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841760&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
+        },
+        {
+          "name": "1. 입찰공고문_AX 자율주행 공동조사 차량 구축용 GPR 센서(가변형 주파수) 구매.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841760&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        }
+      ],
+      "fields": {
+        "period": "계약체결일로부터 2027. 11. 30.까지",
+        "presentation": true
+      },
+      "chars": 14609,
+      "summary": {
+        "overview": "본 사업은 자율주행 공동조사 차량에 탑재하여 도로 하부 공동 및 매설물을 정밀 탐지하기 위한 가변형 주파수(30MHz~4.5GHz) 스텝주파수 방식 3D GPR 장비를 구매하는 사업입니다. GPR 장비 및 내장 SW 공급부터 차량 특장 리프트 장착 규격 제공, DMI·GNSS·자율주행 시스템 연동, 현장 성능 시험 및 데이터 해석 교육까지 포함합니다. 총 2개 연차(2027년 11월 30일까지)로 나누어 수행되며, 연차별 계약 및 검수가 진행됩니다.",
+        "evaluation": "기술능력평가(90점)와 입찰가격평가(10점)를 합산하여 종합평가하며, 기술평가 배점한도의 85% 이상인 협상적격자 중 고득점순으로 협상에 의한 계약을 체결합니다.",
+        "tasks": [
+          "스텝주파수 3D GPR 장비 및 내장 SW 공급",
+          "특장 리프트 장착 규격 제공 및 배선·장착 지원",
+          "DMI·GNSS 및 자율주행 시스템 연동",
+          "입고 검수 및 현장 주행 성능 시험",
+          "장비 운용 및 데이터 해석 교육",
+          "하자보수 및 제조사 인증 국내 수리 체계 구축"
+        ],
+        "tech": [
+          "스텝주파수 GPR(30MHz~4.5GHz)",
+          "3D GPR 센서",
+          "RTK GNSS",
+          "DMI(거리측정)",
+          "PoE(Power over Ethernet)",
+          "데이터 수집 소프트웨어(Collection SW)"
+        ],
+        "requirements": [
+          "나라장터 물품 세부품명 '지질탐지기'(4111380901) 경쟁입찰참가자격 등록업체",
+          "국가계약법 시행령 제12조 자격 충족 및 제76조 제한 조치 대상이 아닌 자",
+          "공동수급 불허(단독 입찰 참여)",
+          "제조사 또는 국내 공급권 보유 업체의 물품공급 및 기술지원 확약서 제출",
+          "제조사 인증 국내 수리 자격 기술인력 확보(해당 시 증명서 제출)"
+        ],
+        "cautions": [
+          "공동수급은 허용되지 않으며 단독 입찰만 가능합니다.",
+          "차량 특장(리프트) 및 자율주행 시스템 구축은 별도 발주 사업이므로 본 사업 범위에서 제외됩니다.",
+          "보조사업 연차별 협약기간(1차년도: ~2027.06.30, 2차년도: 2027.07.01~11.30) 내 납품 및 검수를 완료해야 합니다.",
+          "일부 업무 하도급 시 사전에 발주기관의 승인을 받아야 합니다."
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
+    },
+    "R26BK01842568": {
+      "bid_no": "R26BK01842568",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01842568&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01842568&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01842568&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01842568&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01"
+      ],
+      "updated_at": "2026-11-19T10:19:19Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "MBC_제안요청서(RFP)_AI정밀도로센서_단말기_제조구매.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01842568&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
+        },
+        {
+          "name": "MBC_구매규격서_AI정밀도로센서_단말기_제조구매.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01842568&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01"
+        },
+        {
+          "name": "MBC_입찰공고서_AI정밀도로센서_단말기_제조구매.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01842568&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        }
+      ],
+      "fields": {},
+      "chars": 27640,
+      "summary": {
+        "overview": "본 사업은 시범지역 운행 차량에 장착하여 영상 및 RTK GNSS 데이터를 기반으로 차선별 실시간 교통정보를 생성하는 AI정밀도로센서 단말기 300대를 개발 및 제조 구매하는 사업입니다. 하드웨어 설계, OS 및 BSP 개발, 시제품 검증부터 단말기 300대 분할 납품 및 기술지원·유지보수까지 포함합니다.",
+        "evaluation": "기술능력평가 80점과 가격평가 20점을 합산한 종합평가점수 고득점 순으로 협상하여 낙찰자를 결정하며, 기술능력평가 점수가 68점(85%) 이상이어야 협상적격자로 선정됩니다.",
+        "tasks": [
+          "단말기 하드웨어 설계 및 전원부·케이스 제작",
+          "Linux OS 및 BSP 개발·설치",
+          "시제품 검증 및 요구 규격 충족 시험",
+          "AI정밀도로센서 단말기 300대 제조 및 분할 납품",
+          "무상 기술지원 및 하자보수 수행"
+        ],
+        "tech": [
+          "NVIDIA Jetson Orin Nano Super",
+          "RTK/INS 모듈",
+          "GMSL2 카메라",
+          "LTE Cat.4 모뎀",
+          "ATSC 3.0 수신보드",
+          "Linux OS"
+        ],
+        "requirements": [
+          "국가계약법 시행령 제12조 자격을 갖추고 부정당업자 제재 이력이 없는 업체",
+          "공고일 기준 설립 연혁 2년 이상인 업체",
+          "핵심부품(AI 연산, RTK/INS, 카메라 모듈) 물품 공급 확약서 제출 가능 업체",
+          "구매규격서의 세부 사양을 만족하고 납품기한 내 개발·제조·납품이 가능한 업체",
+          "기술지원 전담자 지정 가능 업체"
+        ],
+        "cautions": [
+          "공동수급(공동계약)이 불허됩니다.",
+          "MBC의 사전 서면 승인 없는 하도급은 불허됩니다.",
+          "입찰금액은 사업금액 994,070,000원(VAT 포함)을 초과할 수 없으며 초과 시 자동 부적격 처리됩니다.",
+          "개발 결과물(회로도, PCB 설계 파일, BOM, OS 이미지, BSP 소스 등) 및 관련 지적재산권은 대금 지급 완료 시 MBC에 귀속됩니다."
         ]
       },
       "model": "gemini-3.5-flash",

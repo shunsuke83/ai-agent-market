@@ -1,11 +1,260 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-18T10:07:10Z",
+  "generated_at": "2026-11-19T10:18:36Z",
   "range": {
-    "since": "2026-11-15",
-    "until": "2026-11-18"
+    "since": "2026-11-16",
+    "until": "2026-11-19"
   },
   "prespecs": [
+    {
+      "prespec_no": "R26BD00303409",
+      "title": "2026년 재학생맞춤형 고용서비스「CARE-Y 청년잇다 ·Career DNA 」 AI 에이전트 플랫폼 구축 용역",
+      "org": "국립창원대학교",
+      "order_org": "국립창원대학교",
+      "registered_at": "2026-11-19 17:40",
+      "registered_date": "2026-11-19",
+      "opinion_close_at": "2026-11-24 23:59",
+      "asign_budget_eok": 0.5,
+      "scope": "생성형·Agent",
+      "fields": [
+        "AI 에이전트"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00303409&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00303241",
+      "title": "경찰대학 치안정책연구소 치안AI연구센터 전산장비 유지보수 용역",
+      "org": "경찰청 경찰대학",
+      "order_org": "경찰청 경찰대학",
+      "registered_at": "2026-11-19 15:51",
+      "registered_date": "2026-11-19",
+      "opinion_close_at": "2026-11-24 23:59",
+      "asign_budget_eok": 0.9297,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "운영·유지보수",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00303241&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00303241&fileType=BFDTL&fileSeq=2"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00303179",
+      "title": "[K-Health 국민의료 AI서비스 사업] 거점병원 통합 CDW 구축을 위한 임상 데이터 마이그레이션",
+      "org": "조선대학교병원",
+      "order_org": "조선대학교병원",
+      "registered_at": "2026-11-19 15:15",
+      "registered_date": "2026-11-19",
+      "opinion_close_at": "2026-11-24 23:59",
+      "asign_budget_eok": 3.0,
+      "scope": "AI SW 확대",
+      "fields": [
+        "의료·바이오 AI"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00303179&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00303179&fileType=BFDTL&fileSeq=2",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00303179&fileType=BFDTL&fileSeq=3"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
+    {
+      "prespec_no": "R26BD00303167",
+      "title": "[K-Health 국민의료 AI서비스 사업] PACS 의료영상 일괄 추출 시스템",
+      "org": "조선대학교병원",
+      "order_org": "조선대학교병원",
+      "registered_at": "2026-11-19 15:11",
+      "registered_date": "2026-11-19",
+      "opinion_close_at": "2026-11-24 23:59",
+      "asign_budget_eok": 2.01,
+      "scope": "AI SW 확대",
+      "fields": [
+        "의료·바이오 AI",
+        "비전·영상"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00303167&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00303167&fileType=BFDTL&fileSeq=2",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00303167&fileType=BFDTL&fileSeq=3"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
+    {
+      "prespec_no": "R26BD00303108",
+      "title": "미래교원 역량 강화를 위한 ｢AI 마이크로티칭 랩｣ 1단계 구축 사업",
+      "org": "부산대학교",
+      "order_org": "조달청 부산지방조달청",
+      "registered_at": "2026-11-19 14:14",
+      "registered_date": "2026-11-19",
+      "opinion_close_at": "2026-11-24 23:59",
+      "asign_budget_eok": 2.905,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00303108&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
+    {
+      "prespec_no": "R26BD00303045",
+      "title": "한림대학교 동계 Hallym AI-powered Global Solve-A-Thon(HAIGS) 프로그램 운영 업체 선정",
+      "org": "한림대학교 산학협력단",
+      "order_org": "한림대학교 산학협력단",
+      "registered_at": "2026-11-19 13:26",
+      "registered_date": "2026-11-19",
+      "opinion_close_at": "2026-11-24 23:59",
+      "asign_budget_eok": 0.41,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "bid_nos": [
+        "R26BK01841860"
+      ],
+      "spec_files": [],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00303041",
+      "title": "AI 기반 기술사업화 플랫폼 도입 및 맞춤형 환경 구축 용역",
+      "org": "중앙대학교 산학협력단",
+      "order_org": "중앙대학교 산학협력단",
+      "registered_at": "2026-11-19 13:24",
+      "registered_date": "2026-11-19",
+      "opinion_close_at": "2026-11-24 23:59",
+      "asign_budget_eok": 0.4,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00303041&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00303035",
+      "title": "한림성심대학교 산학협력단 AI 스마트캠퍼스 시스템 구축",
+      "org": "한림성심대학교 산학협력단",
+      "order_org": "한림성심대학교 산학협력단",
+      "registered_at": "2026-11-19 13:16",
+      "registered_date": "2026-11-19",
+      "opinion_close_at": "2026-11-23 10:00",
+      "asign_budget_eok": 0.0,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00303035&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00303035&fileType=BFDTL&fileSeq=2"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00303019",
+      "title": "DSU-AX 플랫폼 구축 용역",
+      "org": "동서대학교",
+      "order_org": "동서대학교",
+      "registered_at": "2026-11-19 12:47",
+      "registered_date": "2026-11-19",
+      "opinion_close_at": "2026-11-23 14:00",
+      "asign_budget_eok": 8.0,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00303019&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "thng",
+      "biz_div": "물품",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00302902",
+      "title": "AI 단말 임차 용역",
+      "org": "국방과학연구소",
+      "order_org": "국방과학연구소",
+      "registered_at": "2026-11-19 10:08",
+      "registered_date": "2026-11-19",
+      "opinion_close_at": "2026-11-23 23:59",
+      "asign_budget_eok": 0.56,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00302902&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00302819",
+      "title": "UST AI 전환(AX) ISP 수립 사업",
+      "org": "과학기술연합대학원대학교",
+      "order_org": "과학기술연합대학원대학교",
+      "registered_at": "2026-11-18 21:38",
+      "registered_date": "2026-11-18",
+      "opinion_close_at": "2026-11-23 23:59",
+      "asign_budget_eok": 3.0,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AX·전략"
+      ],
+      "nature": "ISP·전략",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00302819&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "기술용역",
+      "sw_biz": true
+    },
     {
       "prespec_no": "R26BD00302613",
       "title": "N2SF 기반 AI서비스 연계구조 설계 및 보안통제 기술검증 용역",
