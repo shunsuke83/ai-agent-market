@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-20T08:15:22Z",
+  "generated_at": "2026-11-20T09:01:12Z",
   "mode": "g2b_api",
   "range": {
     "since": "2026-11-06",
@@ -34844,7 +34844,7 @@
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01800536&bidPbancOrd=000&fileType=&fileSeq=7&prcmBsneSeCd=01"
         }
       ],
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -36277,7 +36277,7 @@
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01799318&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
         }
       ],
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -36374,7 +36374,7 @@
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01799138&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
         }
       ],
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -36525,7 +36525,7 @@
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01798858&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01"
         }
       ],
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -36993,7 +36993,7 @@
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01798097&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01"
         }
       ],
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -37047,7 +37047,7 @@
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01798089&bidPbancOrd=000&fileType=&fileSeq=6&prcmBsneSeCd=03"
         }
       ],
-      "award_lookup_at": "2026-11-09",
+      "award_lookup_at": "2026-11-20",
       "bidders_empty": true
     },
     {
@@ -42084,7 +42084,7 @@
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01795936&bidPbancOrd=000&fileType=&fileSeq=6&prcmBsneSeCd=01"
         }
       ],
-      "award_lookup_at": "2026-11-09",
+      "award_lookup_at": "2026-11-20",
       "bidders_empty": true
     },
     {
@@ -42564,7 +42564,7 @@
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01795373&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
         }
       ],
-      "award_lookup_at": "2026-11-09",
+      "award_lookup_at": "2026-11-20",
       "bidders_empty": true
     },
     {
@@ -44794,7 +44794,7 @@
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01792965&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
         }
       ],
-      "award_lookup_at": "2026-11-09",
+      "award_lookup_at": "2026-11-20",
       "bidders_empty": true
     },
     {
@@ -44958,7 +44958,7 @@
         }
       ],
       "bidders_empty": true,
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -46166,7 +46166,7 @@
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01792078&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
         }
       ],
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -46991,7 +46991,7 @@
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01790774&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01"
         }
       ],
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -47294,7 +47294,7 @@
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01790310&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
         }
       ],
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -48707,7 +48707,7 @@
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01789216&bidPbancOrd=000&fileType=&fileSeq=5&prcmBsneSeCd=03"
         }
       ],
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -51424,7 +51424,7 @@
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01787619&bidPbancOrd=000&fileType=&fileSeq=6&prcmBsneSeCd=01"
         }
       ],
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -51445,7 +51445,7 @@
       "ntce_kind": "재공고",
       "biz": "thng",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01786288&bidPbancOrd=000",
-      "award_lookup_at": "2026-11-09",
+      "award_lookup_at": "2026-11-20",
       "open_at": "2026-10-29 11:00",
       "close_at": "2026-10-29 10:00",
       "close_date": "2026-10-29",
@@ -51580,7 +51580,7 @@
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01783260&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
         }
       ],
-      "award_lookup_at": "2026-11-09",
+      "award_lookup_at": "2026-11-20",
       "bidders_empty": true
     },
     {
@@ -51859,7 +51859,7 @@
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01787151&bidPbancOrd=000&fileType=&fileSeq=5&prcmBsneSeCd=01"
         }
       ],
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -52507,7 +52507,7 @@
       "ntce_kind": "재공고",
       "biz": "thng",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01785718&bidPbancOrd=000",
-      "award_lookup_at": "2026-11-09",
+      "award_lookup_at": "2026-11-20",
       "open_at": "2026-10-28 16:00",
       "close_at": "2026-10-28 15:00",
       "close_date": "2026-10-28",
@@ -53147,7 +53147,7 @@
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01785141&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
         }
       ],
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -55673,7 +55673,7 @@
       "ntce_kind": "등록공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01782314&bidPbancOrd=000",
-      "award_lookup_at": "2026-11-09",
+      "award_lookup_at": "2026-11-20",
       "open_at": "2026-10-27 14:00",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.73,
@@ -55986,7 +55986,7 @@
       "ntce_kind": "등록공고",
       "biz": "thng",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01781959&bidPbancOrd=000",
-      "award_lookup_at": "2026-11-09",
+      "award_lookup_at": "2026-11-20",
       "open_at": "2026-10-28 13:00",
       "close_at": "2026-10-28 12:00",
       "close_date": "2026-10-28",
@@ -56047,7 +56047,7 @@
       "ntce_kind": "등록공고",
       "biz": "thng",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01781805&bidPbancOrd=000",
-      "award_lookup_at": "2026-11-09",
+      "award_lookup_at": "2026-11-20",
       "open_at": "2026-10-28 14:00",
       "close_at": "2026-10-28 11:00",
       "close_date": "2026-10-28",
@@ -56092,7 +56092,7 @@
       "ntce_kind": "등록공고",
       "biz": "thng",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01781690&bidPbancOrd=000",
-      "award_lookup_at": "2026-11-09",
+      "award_lookup_at": "2026-11-20",
       "open_at": "2026-10-28 11:00",
       "close_at": "2026-10-28 10:00",
       "close_date": "2026-10-28",
@@ -57109,7 +57109,7 @@
       "ntce_kind": "등록공고",
       "biz": "thng",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01780902&bidPbancOrd=000",
-      "award_lookup_at": "2026-11-09",
+      "award_lookup_at": "2026-11-20",
       "open_at": "2026-10-28 11:00",
       "close_at": "2026-10-28 10:00",
       "close_date": "2026-10-28",
@@ -57182,7 +57182,7 @@
       "ntce_kind": "등록공고",
       "biz": "thng",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01780836&bidPbancOrd=000",
-      "award_lookup_at": "2026-11-09",
+      "award_lookup_at": "2026-11-20",
       "open_at": "2026-10-28 11:00",
       "close_at": "2026-10-28 10:00",
       "close_date": "2026-10-28",
@@ -57774,7 +57774,7 @@
       "ntce_kind": "등록공고",
       "biz": "thng",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01779907&bidPbancOrd=000",
-      "award_lookup_at": "2026-11-09",
+      "award_lookup_at": "2026-11-20",
       "open_at": "2026-10-27 10:00",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.8314,
@@ -60828,7 +60828,7 @@
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01779599&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
         }
       ],
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -61504,7 +61504,7 @@
       "ntce_kind": "등록공고",
       "biz": "thng",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01778225&bidPbancOrd=000",
-      "award_lookup_at": "2026-11-09",
+      "award_lookup_at": "2026-11-20",
       "open_at": "2026-10-27 11:00",
       "close_at": "2026-10-27 10:00",
       "close_date": "2026-10-27",
@@ -61552,7 +61552,7 @@
       "ntce_kind": "등록공고",
       "biz": "thng",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01778212&bidPbancOrd=000",
-      "award_lookup_at": "2026-11-09",
+      "award_lookup_at": "2026-11-20",
       "open_at": "2026-10-30 11:00",
       "close_at": "2026-10-30 10:00",
       "close_date": "2026-10-30",
@@ -61753,7 +61753,7 @@
       "ntce_kind": "등록공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01778130&bidPbancOrd=000",
-      "award_lookup_at": "2026-11-09",
+      "award_lookup_at": "2026-11-20",
       "open_at": "2026-10-30 10:06",
       "close_at": "2026-10-30 10:00",
       "close_date": "2026-10-30",
@@ -61847,7 +61847,7 @@
       "close_date": "2026-10-27",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.828,
-      "award_lookup_at": "2026-11-09",
+      "award_lookup_at": "2026-11-20",
       "award_method": "제한적최저가(낙찰하한율)-제한적최저가(낙찰하한율)",
       "joint_method": "(없음)공동수급불허",
       "rebid": true,
@@ -63150,7 +63150,7 @@
       "close_date": "2026-10-27",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.9319,
-      "award_lookup_at": "2026-11-09",
+      "award_lookup_at": "2026-11-20",
       "award_method": "규격가격동시입찰-제안적격자 중 예가 내 최저가 투찰자",
       "joint_method": "(없음)공동수급불허",
       "rebid": false,
@@ -63372,7 +63372,7 @@
       "close_date": "2026-10-23",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.77,
-      "award_lookup_at": "2026-11-09",
+      "award_lookup_at": "2026-11-20",
       "award_method": "소액수의견적-소액수의견적(1인 견적제출 허용)",
       "joint_method": "(없음)공동수급불허",
       "industry_limit": false,
@@ -66126,7 +66126,7 @@
       "ntce_kind": "등록공고",
       "biz": "thng",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01773704&bidPbancOrd=000",
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -66211,7 +66211,7 @@
       "ntce_kind": "등록공고",
       "biz": "thng",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01773649&bidPbancOrd=000",
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -67036,7 +67036,7 @@
       "close_date": "2026-10-27",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.7003,
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -69102,7 +69102,7 @@
       "close_date": "2026-10-26",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.847,
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -69170,7 +69170,7 @@
       "ntce_kind": "재공고",
       "biz": "thng",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01770042&bidPbancOrd=000",
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -69194,7 +69194,7 @@
       "open_at": "2026-11-02 14:30",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.7,
-      "award_lookup_at": "2026-11-09",
+      "award_lookup_at": "2026-11-20",
       "bidders_empty": true
     },
     {
@@ -71699,7 +71699,7 @@
       "close_date": "2026-10-27",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.84,
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -71820,7 +71820,7 @@
       "close_date": "2026-10-23",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.8367,
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -72548,7 +72548,7 @@
       "close_date": "2026-10-27",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.89,
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -72651,7 +72651,7 @@
       "close_date": "2026-10-21",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.8257,
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -73586,7 +73586,7 @@
       "close_date": "2026-10-23",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.9,
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -74536,7 +74536,7 @@
       "close_date": "2026-10-23",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.8332,
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -75518,7 +75518,7 @@
       "close_date": "2026-10-23",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.6706,
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -75674,7 +75674,7 @@
       "open_at": "2026-10-23 14:00",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.82,
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -76858,7 +76858,7 @@
       "second": "비제이컴퍼니",
       "first_rank": "제이컴",
       "status": "1순위",
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -77023,7 +77023,7 @@
       "close_date": "2026-10-20",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.83,
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -77105,7 +77105,7 @@
       "close_date": "2026-10-19",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.9,
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -77613,7 +77613,7 @@
       "close_date": "2026-11-05",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.968,
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -77639,7 +77639,7 @@
       "close_date": "2026-10-16",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.9,
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -78043,7 +78043,7 @@
       "close_date": "2026-10-19",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.95,
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -78489,7 +78489,7 @@
       "close_date": "2026-10-19",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.9,
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -85841,7 +85841,7 @@
       "close_date": "2026-10-20",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.8,
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -85868,7 +85868,7 @@
       "close_date": "2026-10-20",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.8,
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -87203,7 +87203,7 @@
       "open_at": "2026-10-20 11:00",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.89,
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -87712,7 +87712,7 @@
       "close_date": "2026-10-13",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.84,
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -87783,7 +87783,7 @@
       "open_at": "2026-10-19 15:00",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.73,
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -87807,7 +87807,7 @@
       "open_at": "2026-10-19 14:30",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.73,
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -87831,7 +87831,7 @@
       "open_at": "2026-10-19 14:00",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.755,
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -88271,7 +88271,7 @@
       "open_at": "2026-10-20 11:00",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.67,
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -88407,7 +88407,7 @@
       "close_date": "2026-10-19",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.86,
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -88540,7 +88540,7 @@
       "open_at": "2026-10-20 14:00",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.7,
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -88879,7 +88879,7 @@
       "ntce_kind": "등록공고",
       "biz": "thng",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01756316&bidPbancOrd=000",
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -89752,7 +89752,7 @@
       "close_date": "2026-10-13",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.748,
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -90002,7 +90002,7 @@
       "close_date": "2026-10-13",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.89,
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -90135,7 +90135,7 @@
       "close_date": "2026-10-12",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.77,
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -90383,7 +90383,7 @@
       "close_date": "2026-10-13",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.89,
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -90699,7 +90699,7 @@
       "close_date": "2026-10-20",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.705,
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -92927,7 +92927,7 @@
       "close_date": "2026-10-20",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.7003,
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -93777,7 +93777,7 @@
       "open_at": "2026-10-13 17:00",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.77,
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -95896,7 +95896,7 @@
       "close_date": "2026-10-14",
       "budget_kind": "배정예산",
       "asign_budget_eok": 0.8754,
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -97607,7 +97607,7 @@
       "ntce_kind": "재공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01749209&bidPbancOrd=000",
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -98012,7 +98012,7 @@
       "ntce_kind": "등록공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01748530&bidPbancOrd=000",
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -98300,7 +98300,7 @@
       "ntce_kind": "등록공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01747849&bidPbancOrd=000",
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -98737,7 +98737,7 @@
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01746762&bidPbancOrd=000",
       "bidders_empty": true,
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -99052,7 +99052,7 @@
       "biz": "thng",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01744041&bidPbancOrd=001",
       "bidders_empty": true,
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "source": "g2b_api",
@@ -100858,7 +100858,7 @@
       "ntce_kind": "등록공고",
       "biz": "servc",
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01725670&bidPbancOrd=000",
-      "award_lookup_at": "2026-11-09"
+      "award_lookup_at": "2026-11-20"
     },
     {
       "bid_no": "R26BK01739138",
@@ -120321,14 +120321,14 @@
     },
     "with_bidders": 518,
     "bidders_enrich": {
-      "targets": 32,
-      "fetched": 32,
-      "updated": 3,
-      "empty": 29,
+      "targets": 0,
+      "fetched": 0,
+      "updated": 0,
+      "empty": 0,
       "skipped": 0,
       "bootstrap_upserts": 0
     },
     "budget_sanitized": 0
   },
-  "reclassified_at": "2026-11-20T08:12:57Z"
+  "reclassified_at": "2026-11-20T08:58:19Z"
 }
