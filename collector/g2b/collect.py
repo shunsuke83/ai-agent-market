@@ -22,6 +22,7 @@ from .normalize import (
     sort_notices,
     utc_now_iso,
 )
+from .render import _today_kst
 
 ROOT = Path(__file__).resolve().parents[2]
 DATA = ROOT / "data"
@@ -57,7 +58,7 @@ def cmd_collect(args: argparse.Namespace) -> int:
 
     rules = load_keywords()
     start = _parse_date(args.since or rules["filters"]["history_start"])
-    end = _parse_date(args.until) if args.until else date.today()
+    end = _parse_date(args.until) if args.until else _today_kst()
     if args.days:
         start = end - timedelta(days=args.days)
 
@@ -145,7 +146,7 @@ def cmd_enrich_awards(args: argparse.Namespace) -> int:
         print("No notices to enrich")
         return 0
 
-    end = _parse_date(args.until) if args.until else date.today()
+    end = _parse_date(args.until) if args.until else _today_kst()
     if args.days:
         start = end - timedelta(days=args.days)
     elif args.since:
@@ -200,7 +201,7 @@ def cmd_enrich_awards(args: argparse.Namespace) -> int:
         limit = args.lookup_limit if args.lookup_limit is not None else len(missing)
         print(f"Per-bid lookup for up to {min(limit, len(missing))} / {len(missing)} missing …")
         extra: list[dict[str, Any]] = []
-        today_iso = date.today().isoformat()
+        today_iso = _today_kst().isoformat()
         for n in missing[:limit]:
             item = client.fetch_award_by_bid(n["bid_no"], n.get("bid_ord"))
             n["award_lookup_at"] = today_iso
@@ -243,7 +244,7 @@ def cmd_collect_prespecs(args: argparse.Namespace) -> int:
     from .client import G2BClient, G2BError
     from .normalize import normalize_prespec_item, prespec_excluded
 
-    end = _parse_date(args.until) if args.until else date.today()
+    end = _parse_date(args.until) if args.until else _today_kst()
     start = end - timedelta(days=args.days)
     try:
         client = G2BClient()
@@ -291,7 +292,7 @@ def cmd_collect_plans(args: argparse.Namespace) -> int:
     from .client import G2BClient, G2BError
     from .plans import normalize_plan_item
 
-    today = date.today()
+    today = _today_kst()
     rules = load_keywords()
     keywords = list(rules.get("search_keywords") or [])
     order_end = today.replace(day=1) + timedelta(days=31 * args.months_ahead)
@@ -329,7 +330,7 @@ def cmd_collect_contracts(args: argparse.Namespace) -> int:
 
     out = Path(args.out)
     prev = json.loads(out.read_text(encoding="utf-8")) if out.exists() else {}
-    end = date.today()
+    end = _today_kst()
     days = args.days if prev.get("contracts") else args.backfill_days
     start = end - timedelta(days=days)
     rules = load_keywords()
@@ -498,7 +499,7 @@ def cmd_enrich_bidders(args: argparse.Namespace) -> int:
     from .reports import is_core
 
     alias_index = _competitor_alias_index(ROOT)
-    today = date.today().isoformat()
+    today = _today_kst().isoformat()
 
     def _is_target(n: dict[str, Any]) -> bool:
         if not n.get("bid_no"):

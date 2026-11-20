@@ -94,8 +94,10 @@ def _table(head: list[tuple[str, bool]], rows: list[str], empty: str) -> str:
     )
 
 
-def _td(v: str, num: bool = False) -> str:
-    return f'<td class="num">{v}</td>' if num else f"<td>{v}</td>"
+def _td(v: str, num: bool = False, *, sort: str | None = None) -> str:
+    cls = ' class="num"' if num else ""
+    attr = f' data-sort="{html.escape(sort)}"' if sort else ""
+    return f"<td{cls}{attr}>{v}</td>"
 
 
 def _title_cell(n: dict[str, Any]) -> str:
@@ -262,9 +264,14 @@ def build_home(
 
     def _fit_cell(scored: dict[str, Any]) -> str:
         label = {GO: "참여", REVIEW: "검토", NO_GO: "보류"}.get(scored["verdict"], scored["verdict"])
+        # N-13: stop-driven 보류 shows reason instead of a high score.
+        if scored["verdict"] == NO_GO and scored.get("stops"):
+            text = f'{label} · {scored["stops"][0]}'
+        else:
+            text = f'{label} {scored["score"]}점'
         return (
             f'<span class="fit-pill" data-verdict="{html.escape(scored["verdict"])}">'
-            f'{html.escape(label)} {scored["score"]}점</span>'
+            f"{html.escape(text)}</span>"
         )
 
     stats = (
@@ -276,7 +283,8 @@ def build_home(
         + stat(f"{len(opened):,}건", f"최근 {OPENED_DAYS}일 개찰 결과")
         + "</div>"
     )
-    delta = f"오늘 새 공고 {new_today}건 · 어제 {new_yest}건"
+    # N-07: absolute calendar day so "오늘" does not drift until the next collect.
+    delta = f"{today.month}월 {today.day}일 새 공고 {new_today}건 · 전일 {new_yest}건"
     soft_why = exclude_reason_summary(soft, rules=rules)
     if soft:
         delta += f" · 제외 규칙 {len(soft)}건"
@@ -286,9 +294,14 @@ def build_home(
 
     def _closing_row(n: dict[str, Any], *, collapsed: bool = False) -> str:
         cls = ' class="dday-collapse"' if collapsed else ""
+        close = (n.get("close_at") or "")[:16]
+        close_day = close[:10]
         return (
             f"<tr{cls}>"
-            + _td(html.escape(n["close_at"][5:]) + _dday(n["close_at"], today))
+            + _td(
+                html.escape(close_day) + _dday(n.get("close_at"), today),
+                sort=close_day or None,
+            )
             + _td(html.escape(n.get("org") or ""))
             + _td(_title_cell(n))
             + _td(html.escape(n.get("scope") or ""))
@@ -348,8 +361,11 @@ def build_home(
         for n in opened[:LIMIT]
     ]
     soft_rows = [
-        "<tr class=\"soft-excluded\">"
-        + _td(html.escape((n.get("close_at") or "")[5:10]) + _dday(n.get("close_at"), today))
+        '<tr class="soft-excluded">'
+        + _td(
+            html.escape((n.get("close_at") or "")[:10]) + _dday(n.get("close_at"), today),
+            sort=(n.get("close_at") or "")[:10] or None,
+        )
         + _td(html.escape(n.get("org") or ""))
         + _td(
             _title_cell(n)
@@ -361,7 +377,8 @@ def build_home(
     ]
 
     def more(shown: int, total: int, href: str, label: str) -> str:
-        extra = f"{total - shown:,}건 더 · " if total > shown else ""
+        # B-21: name the destination list honestly when the rest of the section is truncated.
+        extra = f"{total - shown:,}건 더 있음 · " if total > shown else ""
         return f'<p class="meta" style="margin-top:8px">{extra}<a href="{href}">{label} →</a></p>'
 
     new_head = [
@@ -382,13 +399,13 @@ def build_home(
         "제안요청서 요약이 있으면 그 내용으로 범위를 다시 매깁니다.</p>"
         f'<div class="stamp">{html.escape(stamp_text(run_status))} · {html.escape(delta)}</div>'
         + stats
-        + f"<h2>오늘 새로 들어온 것 (최근 {NEW_DAYS}일)</h2>"
+        + f"<h2>최근 {NEW_DAYS}일 새 공고</h2>"
         + _table(new_head, new_rows, f"최근 {NEW_DAYS}일 새 AI 공고가 없습니다.")
-        + (more(len(new_rows), len(new), "reports/index.html", "주간·월간 리포트") if new else "")
+        + (more(len(new_rows), len(new), "band.html", "8~30억·전체 목록에서 검색") if new else "")
         + (
             "<h2>적합도 · 참여 여부</h2>"
             '<p class="meta">프로필 기준으로 접수 중 공고를 점수화합니다. '
-            "참여 = GO, 검토 = REVIEW, 보류 = NO-GO.</p>"
+            "참여 = GO, 검토 = REVIEW, 보류 = NO-GO. 중단 사유로 보류되면 점수 대신 사유를 보입니다.</p>"
             + _table(
                 [("참여", False), ("수요기관", False), ("사업명", False), ("예산(억)", True),
                  ("입찰 마감", False), ("사유", False)],

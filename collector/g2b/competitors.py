@@ -301,7 +301,7 @@ def render_overview_row(row: dict[str, Any]) -> str:
         f'<td class="num">{int(row["bids"])}</td>'
         f'<td class="num">{int(row["wins"])}</td>'
         f'<td class="num">{_fmt_amount(row)}</td>'
-        f'<td class="num">{_fmt_seed(row)}</td>'
+        f'<td class="num" data-sort="{int(row.get("seed_wins") or 0)}">{_fmt_seed(row)}</td>'
         f"<td>{html.escape(row.get('own_model') or '')}</td>"
         f"<td>{html.escape(row.get('procurement') or '')}</td>"
         "</tr>"

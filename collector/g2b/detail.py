@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import html
 import json
+import re
 from datetime import date, datetime
 from pathlib import Path
 from typing import Any
@@ -49,8 +50,19 @@ def _kv(label: str, value: str) -> str:
 
 
 def _eok(v: Any) -> str:
+    try:
+        if v is None or float(v) <= 0:
+            return ""
+    except (TypeError, ValueError):
+        return ""
     s = _fmt_budget(v)
     return f"{s}억" if s else ""
+
+
+def _joint_method(n: dict[str, Any]) -> str:
+    raw = (n.get("joint_method") or "").strip()
+    raw = re.sub(r"\(\s*\)", "", raw).strip()
+    return raw
 
 
 def _result_rows(n: dict[str, Any], status: str) -> str:
@@ -206,20 +218,33 @@ def _terms_rows(n: dict[str, Any]) -> str:
     return (
         _kv("낙찰 방법", html.escape(n.get("award_method") or ""))
         + _kv("평가 비율", rate)
-        + _kv("공동수급", html.escape(n.get("joint_method") or ""))
+        + _kv("공동수급", html.escape(_joint_method(n)))
         + _kv("제한", html.escape(" · ".join(limits) + " 제한 — 공고서에서 조건 확인") if limits else "")
         + _kv("이전 공고", html.escape(prev) + ' <span class="meta">재공고</span>' if prev else "")
         + _kv("공고 첨부", files)
     )
 
 
+def _fit_ko(fit: dict[str, Any]) -> str:
+    """N-13: same 참여/검토/보류 labels as home; stop-driven NO-GO shows reason over score."""
+    from .gonogo_policy import GO, NO_GO, REVIEW
+
+    label = {GO: "참여", REVIEW: "검토", NO_GO: "보류"}.get(fit.get("verdict"), fit.get("verdict") or "")
+    stops = fit.get("stops") or []
+    if fit.get("verdict") == NO_GO and stops:
+        return f"{label} · {stops[0]}"
+    score = fit.get("score")
+    return f"{label} {score}점" if score is not None else str(label)
+
+
 def proposal_markdown(n: dict[str, Any], entry: dict[str, Any] | None, fit: dict[str, Any] | None) -> str:
     s = (entry or {}).get("summary") or {}
+    budget = _fmt_budget(n.get("budget_eok"))
     lines = [
         f"# {n.get('title') or ''}",
         "",
         f"- 기관: {n.get('org') or ''}",
-        f"- 예산: {n.get('budget_eok') if n.get('budget_eok') is not None else ''}억",
+        f"- 예산: {budget + '억' if budget else ''}",
         f"- 마감: {n.get('close_at') or n.get('close_date') or ''}",
         f"- 개찰: {n.get('open_at') or n.get('open_date') or ''}",
         f"- 분류: {' · '.join(x for x in (n.get('scope'), n.get('nature')) if x)}",
@@ -235,8 +260,8 @@ def proposal_markdown(n: dict[str, Any], entry: dict[str, Any] | None, fit: dict
     if fit:
         lines += [
             "",
-            f"## 적합도",
-            f"{fit['verdict']} {fit['score']}점 (근거 {round(fit['evidence'] * 100)}%)",
+            "## 적합도",
+            f"{_fit_ko(fit)} (근거 {round(fit['evidence'] * 100)}%)",
             *fit.get("reasons", [])[:4],
         ]
     return "\n".join(lines).strip() + "\n"
@@ -371,7 +396,7 @@ def render_detail_pages(repo_root: Path, today: date | None = None) -> dict[str,
         if fit:
             reasons = " · ".join(fit["reasons"][:4])
             fit_html = (
-                f'<p class="fit"><b>적합도 {html.escape(str(fit["verdict"]))} {fit["score"]}점</b>'
+                f'<p class="fit"><b>적합도 {html.escape(_fit_ko(fit))}</b>'
                 f' <span class="meta">근거 {round(fit["evidence"] * 100)}%</span>'
                 + (f"<br>{html.escape(reasons)}" if reasons else "")
                 + "</p>"
@@ -391,9 +416,35 @@ def render_detail_pages(repo_root: Path, today: date | None = None) -> dict[str,
         if not path.exists() or path.read_text(encoding="utf-8") != text:
             path.write_text(text, encoding="utf-8")
         written.add(slug)
-    removed = 0
+    # B-11: keep a stub instead of deleting so old links still resolve.
+    stubbed = 0
     for path in out_dir.glob("*.html"):
-        if path.stem not in written:
-            path.unlink()
-            removed += 1
-    return {"dir": str(out_dir), "pages": len(written), "removed": removed}
+        if path.stem in written:
+            continue
+        bid = path.stem.rsplit("-", 1)[0]
+        newer = sorted(
+            (s for s in written if s == bid or s.startswith(bid + "-")),
+            reverse=True,
+        )
+        link = (
+            f'<p><a href="{html.escape(newer[0])}.html">최신 차수 보기 →</a></p>'
+            if newer
+            else '<p><a href="../index.html">홈으로</a> · <a href="../band.html">8~30억 공고</a></p>'
+        )
+        body = (
+            '<div class="eyebrow">사업 상세</div>'
+            "<h1>이 공고 페이지는 더 이상 없습니다</h1>"
+            '<p class="lede">재공고로 대체되었거나 목록에서 빠졌습니다.</p>'
+            + link
+        )
+        stub = page(
+            "공고 없음 — 사업 상세",
+            body,
+            prefix="../",
+            path=f"bids/{path.stem}.html",
+            scripts=(),
+        )
+        if not path.exists() or path.read_text(encoding="utf-8") != stub:
+            path.write_text(stub, encoding="utf-8")
+        stubbed += 1
+    return {"dir": str(out_dir), "pages": len(written), "stubbed": stubbed}

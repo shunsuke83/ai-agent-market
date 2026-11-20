@@ -268,9 +268,13 @@ def _fit_pill(scored: dict[str, Any] | None) -> str:
     from .gonogo_policy import GO, NO_GO, REVIEW
 
     label = {GO: "참여", REVIEW: "검토", NO_GO: "보류"}.get(scored["verdict"], scored["verdict"])
+    if scored.get("verdict") == NO_GO and scored.get("stops"):
+        text = f'{label} · {scored["stops"][0]}'
+    else:
+        text = f"{label} {scored['score']}점"
     return (
         f'<span class="fit-pill" data-verdict="{html.escape(str(scored["verdict"]))}">'
-        f"{html.escape(str(label))} {scored['score']}점</span>"
+        f"{html.escape(text)}</span>"
     )
 
 

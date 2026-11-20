@@ -116,6 +116,26 @@ def test_ax_dev_environment_can_go():
     assert s["solution_priority"] == "S"
 
 
+def test_ops_and_infra_cannot_go():
+    # N-03
+    ops = gp.score_policy(
+        _notice(
+            title="경기 생성형 AI 플랫폼 운영 및 유지보수 용역",
+            nature="운영·유지보수",
+            fields=["생성형·LLM"],
+        ),
+        PROFILE,
+        NOW,
+    )
+    assert ops["verdict"] != gp.GO
+    infra = gp.score_policy(
+        _notice(title="AI 인프라 및 서버도입 사업", nature="인프라", fields=["AI 인프라"]),
+        PROFILE,
+        NOW,
+    )
+    assert infra["verdict"] != gp.GO
+
+
 def test_budget_tier_default_review_and_min_budget():
     assert gp.score_policy(_notice(budget_eok=5.0), PROFILE, NOW)["verdict"] == gp.REVIEW
     assert gp.score_policy(_notice(budget_eok=2.0), PROFILE, NOW)["verdict"] == gp.NO_GO

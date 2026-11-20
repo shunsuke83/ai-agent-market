@@ -548,6 +548,7 @@ def score_policy(
         "evidence": round(evidence, 2),
         "verdict": verdict,
         "gates": gates,
+        "stops": stops,
         "reasons": lead_reasons + stops + caps_review + reasons,
         "notes": notes,
         "engagement": engagement,

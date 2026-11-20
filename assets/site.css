@@ -176,5 +176,5 @@ table.home-list td:nth-child(1){order:2}
 table.home-list td:nth-child(5){order:3}
 table.home-list td:nth-child(2){order:4}
 table.home-list td:nth-child(n+4){order:10}
-body.show-urgent tr.dday-collapse,body.show-excluded tr.soft-excluded{display:flex !important}
+body.show-urgent tr.dday-collapse:not([hidden]),body.show-excluded tr.soft-excluded:not([hidden]){display:flex !important}
 }

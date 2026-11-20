@@ -66,6 +66,13 @@ def test_nature_ops_and_infra():
     assert classify_nature("거대 생성형 모델 학습용 GPU Server 구매") == "인프라"
 
 
+def test_nature_event_ops_not_maintenance():
+    # N-01: "운영 용역" alone must not steal education/event titles.
+    assert classify_nature("POSTECH AI:Q 2026 행사 운영 용역") == "연구·교육·행사"
+    assert classify_nature("AI Trend Marketing 글로벌 창업캠프 운영 용역") == "연구·교육·행사"
+    assert classify_nature("생성형 AI 플랫폼 운영 용역") == "운영·유지보수"
+
+
 def test_classify_title_bundle():
     r = classify_title("JDC 사내 생성형 AI 언어모델(SLLM) 구축 사업")
     assert r["scope"] == "생성형·Agent"

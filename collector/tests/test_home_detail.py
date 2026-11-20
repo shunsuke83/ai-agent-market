@@ -59,16 +59,16 @@ def test_home_dday_badge_and_competition_column():
     out = build_home(notices, [], {}, now=NOW)
     closing = out.split("<h2>마감 임박")[1].split("<h2>")[0]
     assert ">경쟁·낙찰 범위</th>" in closing
-    assert '<span class="dday urgent">D-4 임박</span>' not in closing
-    assert '<span class="dday">D-4</span>' in closing
-    assert '<span class="dday">D-6</span>' in closing
+    assert "D-4 임박" not in closing
+    assert 'class="dday"' in closing and "data-close=" in closing
+    assert ">D-4</span>" in closing and ">D-6</span>" in closing
     assert "보통 6곳" in closing and "낙찰률 89.0~91.0%" in closing
     assert "비교 표본 부족" in closing
     soon = build_home([_n(close_at="2026-11-02 10:00")], [], {}, now=NOW)
-    assert '<span class="dday urgent">D-3 임박</span>' in soon
+    assert 'class="dday urgent"' in soon and ">D-3 임박</span>" in soon
     today = build_home([_n(close_at="2026-10-30 18:00")], [], {}, now=NOW)
-    assert '<span class="dday urgent">D-day 임박</span>' in today
-    assert "오늘 새로 들어온 것" in out
+    assert 'class="dday urgent"' in today and ">D-day 임박</span>" in today
+    assert "최근 7일 새 공고" in out
     assert 'class="dday-collapse"' in soon
 
 

@@ -11,7 +11,19 @@
     return (td.textContent || "").replace(/\s+/g, " ").trim();
   }
 
-  function parseCell(text, preferNum) {
+  function parseCell(text, preferNum, dataSort) {
+    // N-11: prefer explicit data-sort (counts, budget bands, full ISO dates).
+    if (dataSort != null && String(dataSort).trim() !== "") {
+      var ds = String(dataSort).trim();
+      if (/^\d{4}-\d{2}-\d{2}/.test(ds)) {
+        return { empty: false, type: "date", v: ds.slice(0, 10) };
+      }
+      if (/^-?\d+(?:\.\d+)?$/.test(ds)) {
+        return { empty: false, type: "num", v: parseFloat(ds) };
+      }
+      return { empty: false, type: "str", v: ds.toLocaleLowerCase("ko") };
+    }
+
     if (!text || text === "—" || text === "-" || text === "–") return EMPTY;
 
     if (/^\d{4}-\d{2}-\d{2}$/.test(text)) {
@@ -171,7 +183,9 @@
       var decorated = rows.map(function (row, idx) {
         var cells = row.cells;
         var td = cells[col];
-        var parsed = td ? parseCell(cellText(td), preferNum) : EMPTY;
+        var parsed = td
+          ? parseCell(cellText(td), preferNum, td.getAttribute("data-sort"))
+          : EMPTY;
         return { row: row, parsed: parsed, idx: idx };
       });
       decorated.sort(function (a, b) {

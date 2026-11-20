@@ -290,6 +290,8 @@ jobs:
             echo "No data changes."
           else
             git commit -m "data: refresh G2B AI notices and render pages"
+            # N-08: another push during collect must not fail the data commit.
+            git pull --rebase --autostash origin HEAD
             git push
           fi
 

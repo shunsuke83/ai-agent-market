@@ -20,6 +20,12 @@
   function norm(s) {
     return String(s || "").replace(/\s+/g, "").toLowerCase();
   }
+  /** B-22: strip corp suffixes so ㈜/주식회사 variants collapse when bizno is missing. */
+  function firmNorm(s) {
+    return norm(s)
+      .replace(/\(주\)|㈜|주식회사|유한회사/g, "")
+      .replace(/[^0-9a-z가-힣]/gi, "");
+  }
   function eok(v) {
     return v == null ? "" : Number(v).toFixed(1);
   }
@@ -68,8 +74,10 @@
       if (r[8] !== "낙찰" || !r[5]) return;
       won += 1;
       if (r[7] != null) { award += r[7]; awardN += 1; }
-      var k = r[6] || r[5];
-      var w = winners[k] || (winners[k] = { name: r[5], bz: r[6], n: 0, amt: 0 });
+      // B-22: prefer bizno; without it, normalize the firm name so spelling variants merge.
+      var k = r[6] || ("n:" + firmNorm(r[5]));
+      var w = winners[k] || (winners[k] = { name: r[5], bz: r[6] || "", n: 0, amt: 0 });
+      if (r[6] && !w.bz) w.bz = r[6];
       w.n += 1;
       if (r[7] != null) w.amt += r[7];
     });

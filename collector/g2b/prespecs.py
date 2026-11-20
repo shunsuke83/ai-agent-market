@@ -154,9 +154,14 @@ def render_prespecs_html(
         participate = {GO: "참여", REVIEW: "검토", NO_GO: "보류"}.get(
             scored["verdict"], scored["verdict"]
         )
+        # N-13: stop-driven 보류 shows reason instead of a confusing high score.
+        if scored["verdict"] == NO_GO and scored.get("stops"):
+            fit_text = f'{participate} · {scored["stops"][0]}'
+        else:
+            fit_text = f'{participate} {scored["score"]}점'
         line += (
             f'<div class="meta">적합도 <span class="fit-pill" data-verdict="{html.escape(scored["verdict"])}">'
-            f'{html.escape(str(participate))} {scored["score"]}점</span></div>'
+            f"{html.escape(fit_text)}</span></div>"
         )
         return line
 

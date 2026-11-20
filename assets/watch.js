@@ -5,8 +5,11 @@
   var KEY = "aam-watch";
 
   function load() {
+    // N-12: only plain objects; strings/numbers/arrays used to throw on detail toggle.
     try {
-      return JSON.parse(window.localStorage.getItem(KEY) || "{}") || {};
+      var raw = JSON.parse(window.localStorage.getItem(KEY) || "{}");
+      if (!raw || typeof raw !== "object" || Array.isArray(raw)) return {};
+      return raw;
     } catch (e) {
       return {};
     }
@@ -14,6 +17,7 @@
 
   function save(w) {
     try {
+      if (!w || typeof w !== "object" || Array.isArray(w)) return;
       window.localStorage.setItem(KEY, JSON.stringify(w));
     } catch (e) {}
   }

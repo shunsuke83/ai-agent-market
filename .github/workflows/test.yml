@@ -1,0 +1,34 @@
+name: Tests
+
+on:
+  push:
+    paths:
+      - "collector/**"
+      - "assets/**"
+      - ".github/workflows/test.yml"
+  pull_request:
+    paths:
+      - "collector/**"
+      - "assets/**"
+      - ".github/workflows/test.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: pip install -r collector/requirements.txt
+
+      - name: Pytest
+        run: python -m pytest -q
+        working-directory: collector

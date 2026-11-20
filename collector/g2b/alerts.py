@@ -52,8 +52,10 @@ def notice_item(n: dict[str, Any], site_url: str) -> dict[str, Any]:
         "fields": _fields(n.get("fields")),
         "nature": n.get("nature"),
         "budget_eok": n.get("budget_eok"),
-        "date": n.get("notice_date") or "",
+        # B-13: prefer notice_date, then open_date so RSS pubDate is not "today".
+        "date": n.get("notice_date") or n.get("open_date") or "",
         "deadline": n.get("close_at") or "",
+        "open_date": n.get("open_date") or "",
         "url": site_url + href if href else html.unescape(_g2b_href(n)),
         "raw": n,
     }
@@ -137,8 +139,8 @@ def _pub_date(item: dict[str, Any]) -> str:
     try:
         d = datetime.strptime(raw, "%Y-%m-%d").replace(tzinfo=KST)
     except ValueError:
-        # B-13: prefer deadline / generated day over Unix epoch.
-        for key in ("deadline", "close_at", "registered_at"):
+        # B-13: prefer open_date / deadline over "now" so opened notices keep a real day.
+        for key in ("open_date", "deadline", "close_at", "registered_at"):
             alt = (item.get(key) or "")[:10]
             try:
                 d = datetime.strptime(alt, "%Y-%m-%d").replace(tzinfo=KST)

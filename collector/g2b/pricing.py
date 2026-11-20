@@ -349,7 +349,8 @@ def _band_order(label: str) -> int:
 
 def _rate_table(title: str, rows: list[dict[str, Any]]) -> str:
     body = "".join(
-        f"<tr><td>{html.escape(r['label'])}</td><td class=\"num\">{r['n']}</td>{_q_cells(r['q'])}</tr>"
+        f'<tr><td data-sort="{_band_order(r["label"])}">{html.escape(r["label"])}</td>'
+        f'<td class="num">{r["n"]}</td>{_q_cells(r["q"])}</tr>'
         for r in rows
     )
     return (
@@ -370,8 +371,9 @@ def _competition_table(title: str, rows: list[dict[str, Any]]) -> str:
         )
 
     body = "".join(
-        f"<tr><td>{html.escape(r['label'])}</td><td class=\"num\">{r['n']}</td>{cells(r)}"
-        f"<td class=\"num\">{r['failed']}</td></tr>"
+        f'<tr><td data-sort="{_band_order(r["label"])}">{html.escape(r["label"])}</td>'
+        f'<td class="num">{r["n"]}</td>{cells(r)}'
+        f'<td class="num">{r["failed"]}</td></tr>'
         for r in rows
     )
     return (

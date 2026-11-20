@@ -14,7 +14,11 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SOLUTIONS = ROOT / "config" / "genon_solutions.yaml"
 
 PRIORITY_RANK = {"S": 0, "A": 1, "B": 2}
-BUILD_MARKERS = ("구축", "고도화", "개발", "플랫폼", "기능 개발", "도입")
+# Strong build words — ops titles may promote only with these (N-03).
+STRONG_BUILD_MARKERS = ("구축", "고도화", "기능 개발")
+# Weaker words: alone can mark build, but not when ops language is present.
+WEAK_BUILD_MARKERS = ("개발", "플랫폼", "도입")
+BUILD_MARKERS = STRONG_BUILD_MARKERS + WEAK_BUILD_MARKERS
 OPS_MARKERS = (
     "운영 용역",
     "센터 운영",
@@ -23,8 +27,33 @@ OPS_MARKERS = (
     "유지보수",
     "운영·유지",
     "운영 및 유지",
+    "시스템 운영",
+    "플랫폼 운영",
+    "서비스 운영",
 )
 PRODUCT_MARKERS = ("라이선스", "라이센스", "구독", "상용 SW", "소프트웨어 구매")
+INFRA_MARKERS = (
+    "GPU",
+    "서버 구매",
+    "장비 구매",
+    "물품 구매",
+    "서버도입",
+    "서버 도입",
+    "H/W",
+    "하드웨어",
+    "NPU",
+)
+# AX alone is too noisy (N-04); require a companion signal in the same text.
+AX_COMPANIONS = (
+    "플랫폼",
+    "개발환경",
+    "생성형",
+    "LLM",
+    "에이전트",
+    "전환",
+    "혁신",
+    "서비스",
+)
 
 
 @lru_cache(maxsize=4)
@@ -59,6 +88,21 @@ def _brand_aliases(profile: dict[str, Any] | None) -> list[tuple[str, str]]:
     return out
 
 
+def _synonym_hits(text: str, syns: list[str]) -> list[str]:
+    hits: list[str] = []
+    for s in syns:
+        if s == "AX":
+            if not _has_any(text, ["AX"]):
+                continue
+            if not _has_any(text, list(AX_COMPANIONS)):
+                continue
+            hits.append(s)
+            continue
+        if _has_any(text, [s]):
+            hits.append(s)
+    return hits
+
+
 def match_solutions(
     text: str,
     profile: dict[str, Any] | None = None,
@@ -75,7 +119,7 @@ def match_solutions(
 
     for sol in catalog.get("solutions") or []:
         syns = list(sol.get("synonyms") or [])
-        hits = [s for s in syns if _has_any(text, [s])]
+        hits = _synonym_hits(text, syns)
         if not hits:
             continue
         pr = str(sol.get("priority") or "B")
@@ -138,35 +182,44 @@ def classify_engagement(
 ) -> dict[str, Any]:
     """Classify work kind: build | product | ops | other, plus ops exception strength.
 
-    Exception C: ops titles can promote when title/summary shows build or product share.
+    Exception C: ops titles promote only with strong build words (구축/고도화), not
+    플랫폼/개발/도입 alone (N-03).
     """
     title = title or ""
     summary_text = _summary_blob(summary)
     blob = f"{title}\n{summary_text}"
     nature = nature or ""
 
-    title_build = bool(_has_any(title, list(BUILD_MARKERS)))
-    summary_build = bool(_has_any(summary_text, list(BUILD_MARKERS + PRODUCT_MARKERS)))
-    has_build = title_build or summary_build or nature == "시스템 구축·고도화"
-    has_product = bool(_has_any(blob, list(PRODUCT_MARKERS))) or nature == "구독·라이선스"
+    title_strong = bool(_has_any(title, list(STRONG_BUILD_MARKERS)))
+    title_weak = bool(_has_any(title, list(WEAK_BUILD_MARKERS)))
+    summary_strong = bool(_has_any(summary_text, list(STRONG_BUILD_MARKERS)))
+    summary_weak = bool(
+        _has_any(summary_text, list(WEAK_BUILD_MARKERS + PRODUCT_MARKERS))
+    )
     has_ops = bool(_has_any(blob, list(OPS_MARKERS))) or nature == "운영·유지보수"
+    has_product = bool(_has_any(blob, list(PRODUCT_MARKERS))) or nature == "구독·라이선스"
+    has_infra = nature == "인프라" or bool(_has_any(title, list(INFRA_MARKERS)))
 
-    # Build/product in the title wins outright.
-    if title_build or (nature == "시스템 구축·고도화" and not has_ops):
-        return {"engagement": "build", "ops_exception": "strong" if has_ops else None}
+    if has_infra and not title_strong:
+        return {"engagement": "other", "ops_exception": None}
+
+    # Pure build title (no ops): strong or weak markers ok.
+    if (title_strong or title_weak or nature == "시스템 구축·고도화") and not has_ops:
+        return {"engagement": "build", "ops_exception": None}
     if has_product and not has_ops:
         return {"engagement": "product", "ops_exception": None}
 
     if has_ops:
-        if title_build:
+        # N-03: only 구축/고도화 (or summary strong build) promote ops → build.
+        if title_strong:
             return {"engagement": "build", "ops_exception": "strong"}
-        if summary_build:
-            # RFP shows build/product share — strong if summary is substantive.
-            strength = "strong" if len(summary_text) >= 12 else "weak"
-            return {"engagement": "ops", "ops_exception": strength}
+        if summary_strong:
+            return {"engagement": "ops", "ops_exception": "strong"}
+        if title_weak or summary_weak:
+            return {"engagement": "ops", "ops_exception": "weak"}
         return {"engagement": "ops", "ops_exception": None}
 
-    if has_build:
+    if title_strong or title_weak or nature == "시스템 구축·고도화":
         return {"engagement": "build", "ops_exception": None}
     if has_product:
         return {"engagement": "product", "ops_exception": None}
@@ -181,11 +234,10 @@ def notice_match_text(
     n: dict[str, Any],
     summary: dict[str, Any] | None = None,
 ) -> str:
+    # N-04: do not feed site classification labels (fields/nature) into synonym match.
     return "\n".join(
         [
             n.get("title") or "",
-            n.get("nature") or "",
-            " ".join(n.get("fields") or []),
             _summary_blob(summary),
         ]
     )

@@ -25,10 +25,16 @@
     return -1;
   }
 
+  function isSoftExcluded(row) {
+    return row.classList.contains("soft-excluded");
+  }
+
   function buildSelect(rows, col, allLabel) {
     var counts = {};
     var order = [];
+    var showExcluded = document.body.classList.contains("show-excluded");
     for (var i = 0; i < rows.length; i++) {
+      if (isSoftExcluded(rows[i]) && !showExcluded) continue;
       var v = text(rows[i].cells[col]);
       if (!v) continue;
       if (!(v in counts)) {
@@ -68,8 +74,11 @@
   var WATCH_KEY = "aam-watch";
 
   function loadWatch() {
+    // N-12: reject non-object watch payloads.
     try {
-      return JSON.parse(window.localStorage.getItem(WATCH_KEY) || "{}") || {};
+      var raw = JSON.parse(window.localStorage.getItem(WATCH_KEY) || "{}");
+      if (!raw || typeof raw !== "object" || Array.isArray(raw)) return {};
+      return raw;
     } catch (e) {
       return {};
     }
@@ -77,8 +86,13 @@
 
   function saveWatch(w) {
     try {
+      if (!w || typeof w !== "object" || Array.isArray(w)) return;
       window.localStorage.setItem(WATCH_KEY, JSON.stringify(w));
     } catch (e) {}
+  }
+
+  function kstToday() {
+    return new Date(Date.now() + 9 * 3600 * 1000).toISOString().slice(0, 10);
   }
 
   function rowKey(row) {
@@ -94,6 +108,8 @@
   }
 
   function csvCell(v) {
+    v = String(v == null ? "" : v);
+    if (/^[=+\-@]/.test(v)) v = "'" + v;
     return /[",\n]/.test(v) ? '"' + v.replace(/"/g, '""') + '"' : v;
   }
 
@@ -192,7 +208,7 @@
       var a = document.createElement("a");
       var page = (window.location.pathname.split("/").pop() || "index").replace(/\.html$/, "");
       a.href = URL.createObjectURL(blob);
-      a.download = page + "-" + new Date().toISOString().slice(0, 10) + ".csv";
+      a.download = page + "-" + kstToday() + ".csv";
       document.body.appendChild(a);
       a.click();
       setTimeout(function () {
@@ -225,8 +241,15 @@
     function setWatch(on) {
       picked().forEach(function (r) {
         var k = rowKey(r);
-        if (on) watch[k] = { t: text(r.cells[headerIndex(table, "사업명")] || r.cells[0]).slice(0, 80), d: new Date().toISOString().slice(0, 10) };
-        else delete watch[k];
+        if (on) {
+          var titleCol = Math.max(
+            headerIndex(table, "사업명"),
+            headerIndex(table, "계약명"),
+            headerIndex(table, "사전규격명")
+          );
+          var titleCell = titleCol >= 0 ? r.cells[titleCol] : r.cells[0];
+          watch[k] = { t: text(titleCell).slice(0, 80), d: kstToday() };
+        } else delete watch[k];
         r.classList.toggle("watched", on);
       });
       saveWatch(watch);
@@ -326,7 +349,10 @@
 
     var limit = PAGE;
     var picks = addSelection(table, wrap, rows, function () {
-      return Array.prototype.filter.call(tbody.rows, matches);
+      return Array.prototype.filter.call(tbody.rows, function (r) {
+        if (isSoftExcluded(r) && !document.body.classList.contains("show-excluded")) return false;
+        return matches(r);
+      });
     }, reset);
 
     function matches(row) {
@@ -335,10 +361,17 @@
       if (scopeSel && scopeSel.value && text(row.cells[scopeCol]) !== scopeSel.value) return false;
       var needle = q.value.trim().toLocaleLowerCase("ko");
       if (!needle) return true;
-      for (var i = 0; i < searchCols.length; i++) {
-        if (text(row.cells[searchCols[i]]).toLocaleLowerCase("ko").indexOf(needle) >= 0) return true;
-      }
-      return false;
+      // N-10: space-separated tokens (all must match); also try compact form.
+      var tokens = needle.split(/\s+/).filter(Boolean);
+      var hay = searchCols
+        .map(function (c) {
+          return text(row.cells[c]).toLocaleLowerCase("ko");
+        })
+        .join(" ");
+      var compact = hay.replace(/\s+/g, "");
+      return tokens.every(function (tok) {
+        return hay.indexOf(tok) >= 0 || compact.indexOf(tok.replace(/\s+/g, "")) >= 0;
+      });
     }
 
     function sortState() {
@@ -454,6 +487,29 @@
       limit += PAGE * 2;
       apply();
     });
+    // N-02: 제외/임박 토글 후 다시 페이지·합계 계산.
+    ["show-excluded", "show-urgent"].forEach(function (id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      el.addEventListener("change", function () {
+        reset();
+      });
+    });
+    // B-15: open hash target row (e.g. #p-…) by raising the page limit.
+    function revealHash() {
+      var id = (window.location.hash || "").replace(/^#/, "");
+      if (!id) return;
+      var target = document.getElementById(id);
+      if (!target || !tbody.contains(target)) return;
+      var idx = Array.prototype.indexOf.call(tbody.rows, target);
+      if (idx < 0) return;
+      if (isSoftExcluded(target)) document.body.classList.add("show-excluded");
+      while (limit <= idx) limit += PAGE * 2;
+      apply();
+      try {
+        target.scrollIntoView({ block: "nearest" });
+      } catch (e) {}
+    }
     // table-sort.js reorders rows on header click; re-page in the new order.
     table.tHead.addEventListener("click", function () {
       setTimeout(apply, 0);
@@ -476,6 +532,8 @@
       }
     }
     apply();
+    revealHash();
+    window.addEventListener("hashchange", revealHash);
   }
 
   function init() {
