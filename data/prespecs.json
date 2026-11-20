@@ -1,11 +1,34 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-20T08:57:51Z",
+  "generated_at": "2026-11-20T09:59:55Z",
   "range": {
-    "since": "2026-11-06",
+    "since": "2026-11-17",
     "until": "2026-11-20"
   },
   "prespecs": [
+    {
+      "prespec_no": "R26BD00304214",
+      "title": "2027년~28년 지능형교통체계(ITS) 유지관리 용역(긴급, 협상에의한계약)",
+      "org": "울산광역시",
+      "order_org": "울산광역시",
+      "registered_at": "2026-11-20 18:22",
+      "registered_date": "2026-11-20",
+      "opinion_close_at": "2026-11-23 23:59",
+      "asign_budget_eok": 70.884,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "운영·유지보수",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00304214&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00304214&fileType=BFDTL&fileSeq=2"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
     {
       "prespec_no": "R26BD00304171",
       "title": "2027년 지능형교통체계(ITS) 전산시스템 유지관리 용역",

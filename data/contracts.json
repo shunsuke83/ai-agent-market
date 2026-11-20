@@ -1,7 +1,65 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-20T08:58:06Z",
+  "generated_at": "2026-11-20T10:00:14Z",
   "contracts": [
+    {
+      "contract_no": "R26TA02444846",
+      "title": "2026년 부산스마트시티 국가시범도시 AI데이터허브 구축 지원",
+      "org": "국토교통부",
+      "contract_org": "국토교통부",
+      "signed_date": "2026-11-20",
+      "period_text": "금차 365일, 총차 365일",
+      "end_date": "2027-11-19",
+      "amount_eok": 1.47,
+      "long_term": "신규",
+      "method": "수의계약",
+      "joint": false,
+      "firms": [
+        {
+          "name": "한국지능정보사회진흥원",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "1358204900"
+        }
+      ],
+      "bid_no": "R26BK01782252",
+      "registered_at": "2026-11-20 15:14",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02444846&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화"
+    },
+    {
+      "contract_no": "R26TA02452042",
+      "title": "AI 기반 통합 학생·취업지원 챗봇 서비스 구축 고도화",
+      "org": "인하대학교 산학협력단",
+      "contract_org": "인하대학교 산학협력단",
+      "signed_date": "2026-11-20",
+      "period_text": "금차 90일, 총차 90일",
+      "end_date": "2027-02-18",
+      "amount_eok": 1.0,
+      "long_term": "신규",
+      "method": "일반경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 클라비",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "5868802378"
+        }
+      ],
+      "bid_no": "R26BK01774755",
+      "registered_at": "2026-11-20 13:43",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02452042&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "생성형·Agent",
+      "fields": [
+        "생성형·LLM"
+      ],
+      "nature": "시스템 구축·고도화"
+    },
     {
       "contract_no": "R26TA02357763",
       "title": "AI 스마트홈 과제3 클라우드 서비스 이용",
