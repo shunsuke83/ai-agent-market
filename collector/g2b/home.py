@@ -197,8 +197,10 @@ def build_home(
     now: datetime,
     reports_html: str = "",
     keep_html: str = "",
+    summaries: dict[str, dict[str, Any]] | None = None,
 ) -> str:
     rules = load_keywords()
+    summaries = summaries or {}
     today = now.date()
     now_s = now.strftime("%Y-%m-%d %H:%M")
     deadline_s = (now + timedelta(days=DEADLINE_DAYS)).strftime("%Y-%m-%d %H:%M")
@@ -251,10 +253,16 @@ def build_home(
     from .gonogo_policy import GO, NO_GO, REVIEW, score_policy
 
     profile = load_profile()
+
+    def _score(n: dict[str, Any]) -> dict[str, Any]:
+        # Match detail pages: RFP summary drives GenON solution match (e.g. GenOS via LLM/RAG).
+        entry = summaries.get(n.get("bid_no") or "")
+        return score_policy(n, profile, now, summary=entry, rules=rules)
+
     fit_rows: list[tuple[dict[str, Any], dict[str, Any]]] = []
     if profile:
         for n in open_now:
-            scored = score_policy(n, profile, now)
+            scored = _score(n)
             if scored["verdict"] == NO_GO and scored["score"] < 50:
                 continue
             fit_rows.append((n, scored))
@@ -325,7 +333,7 @@ def build_home(
             + (_dday(n.get("close_at"), today) if (n.get("close_at") or "") >= now_s else "")
         )
         + _td(_competition(contexts.context(n)))
-        + (f"<td>{_fit_cell(score_policy(n, profile, now))}</td>" if profile else "")
+        + (f"<td>{_fit_cell(_score(n))}</td>" if profile else "")
         + "</tr>"
         for n in new[:LIMIT]
     ]
@@ -496,6 +504,7 @@ def render_home(repo_root: Path, now: datetime | None = None) -> dict[str, Any]:
         now=now,
         reports_html=_report_cards(repo_root),
         keep_html=m.group(0) if m else "",
+        summaries=summaries,
     )
     path.write_text(text, encoding="utf-8")
     return {"path": str(path), "stamp": stamp_text(load_run_status(repo_root))}

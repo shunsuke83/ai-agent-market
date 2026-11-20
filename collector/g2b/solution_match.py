@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import re
 from functools import lru_cache
 from pathlib import Path
 from typing import Any
@@ -12,6 +13,10 @@ from .classify import _has_any
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SOLUTIONS = ROOT / "config" / "genon_solutions.yaml"
+
+# Product name bits like "2.0" must not match dates ("2026.12.01").
+_VERSION_LIKE = re.compile(r"^\d+(\.\d+)*$")
+_BRAND_SPLIT = re.compile(r"[\s()（）]+")
 
 PRIORITY_RANK = {"S": 0, "A": 1, "B": 2}
 # Strong build words — ops titles may promote only with these (N-03).
@@ -63,8 +68,16 @@ def load_solutions(path: str | None = None) -> dict[str, Any]:
 
 
 def _summary_blob(summary: dict[str, Any] | None) -> str:
+    """RFP body used for solution/engagement — include tech signals, not only gates."""
     s = (summary or {}).get("summary") or {}
-    parts = [*(s.get("requirements") or []), *(s.get("cautions") or []), s.get("evaluation") or ""]
+    parts = [
+        s.get("overview") or "",
+        *(s.get("tasks") or []),
+        *(s.get("tech") or []),
+        *(s.get("requirements") or []),
+        *(s.get("cautions") or []),
+        s.get("evaluation") or "",
+    ]
     return "\n".join(str(p) for p in parts if p)
 
 
@@ -78,10 +91,15 @@ def _brand_aliases(profile: dict[str, Any] | None) -> list[tuple[str, str]]:
         name = str(p.get("name") or "").strip()
         if not name:
             continue
-        out.append((name.split()[0], name))
-        for part in name.replace("(", " ").replace(")", " ").split():
-            if len(part) >= 2:
-                out.append((name.split()[0], part))
+        display = _BRAND_SPLIT.split(name, 1)[0] or name
+        out.append((display, name))
+        for part in _BRAND_SPLIT.split(name):
+            part = part.strip()
+            if len(part) < 3 or _VERSION_LIKE.match(part):
+                continue
+            if part == name:
+                continue
+            out.append((display, part))
     for a in company.get("aliases") or []:
         if a:
             out.append((str(a), str(a)))

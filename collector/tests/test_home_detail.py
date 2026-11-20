@@ -72,6 +72,39 @@ def test_home_dday_badge_and_competition_column():
     assert 'class="dday-collapse"' in soon
 
 
+def test_home_fit_uses_rfp_summary(monkeypatch):
+    """Home and detail must score with the same RFP summary (not title-only)."""
+    from tests.test_gonogo_policy import PROFILE
+
+    monkeypatch.setattr("g2b.gonogo.load_profile", lambda: PROFILE)
+    notices = [
+        _n(
+            bid_no="R26BK01784078",
+            title="GKL 카지노 연계 AI 관광 플랫폼 앱 구축 사업",
+            org="그랜드코리아레저(주)",
+            budget_eok=9.9,
+            close_at="2026-11-05 10:00",
+            notice_date="2026-10-21",
+        )
+    ]
+    summary = {
+        "R26BK01784078": {
+            "summary": {
+                "overview": "LLM 및 RAG 기술 기반 AI 챗봇",
+                "tasks": ["LLM 챗봇 구축"],
+                "tech": ["LLM", "RAG"],
+                "requirements": [],
+                "cautions": [],
+                "evaluation": "",
+            }
+        }
+    }
+    without = build_home(notices, [], {}, now=NOW)
+    with_sum = build_home(notices, [], {}, now=NOW, summaries=summary)
+    assert "솔루션 미매칭" in without or "GenON S/A 솔루션 신호 없음" in without
+    assert "솔루션 미매칭" not in with_sum.split("<h2>적합도")[1].split("<h2>")[0]
+
+
 def test_detail_shows_first_rank_and_unknown_amount():
     pending = render_detail_html(
         _n(status="1순위", first_rank="가나다", bidders=[{"rank": 1, "name": "가나다", "amount_eok": 11.0, "rate_pct": 88.1}]),

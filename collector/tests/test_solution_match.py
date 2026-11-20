@@ -65,7 +65,43 @@ def test_build_title_wins():
 def test_notice_match_text_title_and_summary_only():
     text = notice_match_text(
         {"title": "A", "nature": "B", "fields": ["생성형·LLM"]},
-        {"summary": {"requirements": ["구축"], "cautions": [], "evaluation": ""}},
+        {
+            "summary": {
+                "overview": "LLM RAG 챗봇",
+                "tasks": ["구축"],
+                "tech": ["LLM"],
+                "requirements": ["자격"],
+                "cautions": [],
+                "evaluation": "",
+            }
+        },
     )
     assert "생성형·LLM" not in text
-    assert "구축" in text
+    assert "구축" in text and "LLM" in text and "자격" in text
+
+
+def test_brand_version_does_not_match_deadline_date():
+    # GenOS 2.0 must not hit "2026.12.01" via the "2.0" fragment.
+    profile = {"company": {"products": [{"name": "GenOS 2.0"}]}}
+    text = "GKL 카지노 연계 AI 관광 플랫폼 앱 구축\n마감시간(2026.12.01 11:00) 준수"
+    m = match_solutions(text, profile)
+    assert "2.0" not in (m.get("hits") or [])
+    assert m.get("name") != "GenOS" or "GenOS" in text
+
+
+def test_rfp_overview_drives_solution_match():
+    n = {"title": "GKL 카지노 연계 AI 관광 플랫폼 앱 구축 사업"}
+    summary = {
+        "summary": {
+            "overview": "LLM 및 RAG 기술 기반의 24시간 다국어 AI 개인비서 챗봇을 도입",
+            "tasks": ["LLM 및 RAG 기반 AI 컨시어지 챗봇 구축"],
+            "tech": ["LLM", "RAG"],
+            "requirements": ["소프트웨어사업자"],
+            "cautions": ["마감시간(2026.12.01 11:00) 준수"],
+            "evaluation": "",
+        }
+    }
+    assert match_solutions(notice_match_text(n)).get("priority") is None
+    m = match_solutions(notice_match_text(n, summary))
+    assert m.get("priority") in ("S", "A")
+    assert m.get("name") in ("GenOS", "GenMate", "AI Search / RAG", "LLM Ops")
