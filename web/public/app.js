@@ -9,9 +9,15 @@ function esc(s) {
 function fitPill(item) {
   if (!item.fit_verdict) return "";
   const label = { GO: "참여", REVIEW: "검토", "NO-GO": "보류" }[item.fit_verdict] || item.fit_verdict;
-  const score = item.fit_score != null ? ` ${item.fit_score}점` : "";
+  const score =
+    item.fit_score != null && Number.isFinite(Number(item.fit_score))
+      ? ` ${item.fit_score}점`
+      : "";
   return `<span class="fit" data-verdict="${esc(item.fit_verdict)}">${esc(label)}${esc(score)}</span>`;
 }
+
+let listOffset = 0;
+const PAGE = 100;
 
 async function loadMeta() {
   try {
@@ -26,7 +32,7 @@ async function loadMeta() {
   }
 }
 
-async function loadList() {
+async function loadList({ append = false } = {}) {
   const form = document.getElementById("filters");
   const fd = new FormData(form);
   const params = new URLSearchParams();
@@ -36,18 +42,23 @@ async function loadList() {
   if (!fd.get("open")) params.set("open", "0");
   const fit = String(fd.get("fit") || "");
   if (fit) params.set("fit", fit);
-  params.set("limit", "100");
+  if (!append) listOffset = 0;
+  params.set("limit", String(PAGE));
+  params.set("offset", String(listOffset));
 
-  const res = await fetch(`/api/notices?${params}`);
-  const data = await res.json();
-  document.getElementById("count").textContent = `총 ${data.total?.toLocaleString?.() ?? data.total}건`;
-
-  const tbody = document.getElementById("rows");
-  if (!data.items?.length) {
-    tbody.innerHTML = `<tr><td colspan="6" class="meta">조건에 맞는 공고가 없습니다.</td></tr>`;
+  let data;
+  try {
+    const res = await fetch(`/api/notices?${params}`);
+    data = await res.json();
+  } catch {
+    document.getElementById("count").textContent = "목록 조회 실패";
     return;
   }
-  tbody.innerHTML = data.items
+  const total = data.total ?? 0;
+  document.getElementById("count").textContent = `총 ${total.toLocaleString?.() ?? total}건`;
+
+  const tbody = document.getElementById("rows");
+  const rowsHtml = (data.items || [])
     .map((n) => {
       const id = esc(n.id);
       return `<tr>
@@ -60,12 +71,24 @@ async function loadList() {
       </tr>`;
     })
     .join("");
+  if (!append) {
+    tbody.innerHTML = rowsHtml || `<tr><td colspan="6" class="meta">조건에 맞는 공고가 없습니다.</td></tr>`;
+  } else if (rowsHtml) {
+    tbody.insertAdjacentHTML("beforeend", rowsHtml);
+  }
+  listOffset += (data.items || []).length;
+  const more = document.getElementById("more");
+  if (more) more.hidden = listOffset >= total;
 }
 
 document.getElementById("filters").addEventListener("submit", (e) => {
   e.preventDefault();
   loadList();
 });
+const moreBtn = document.getElementById("more");
+if (moreBtn) {
+  moreBtn.addEventListener("click", () => loadList({ append: true }));
+}
 
 loadMeta();
 loadList();

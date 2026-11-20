@@ -13,6 +13,7 @@ ASSET_FILES = (
     "agency-search.js",
     "watch.js",
     "price-calc.js",
+    "dday.js",
     "favicon.svg",
 )
 

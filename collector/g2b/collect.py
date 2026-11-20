@@ -304,8 +304,21 @@ def cmd_collect_plans(args: argparse.Namespace) -> int:
         return 1
     rows = {r["plan_no"]: r for r in (normalize_plan_item(x, rules) for x in raw) if r}
     plans = sorted(rows.values(), key=lambda p: (p.get("order_ym") or "", p["plan_no"]))
-    _write_json(Path(args.out), {"schema_version": 1, "generated_at": utc_now_iso(), "plans": plans})
-    print(f"Order plans: raw={len(raw)} ai={len(plans)} → {args.out}")
+    out = Path(args.out)
+    # B-03: empty successful fetch must not wipe a good snapshot.
+    if not plans and out.exists():
+        try:
+            prev = json.loads(out.read_text(encoding="utf-8"))
+            prev_n = len(prev.get("plans") or [])
+        except (OSError, json.JSONDecodeError, TypeError):
+            prev_n = 0
+        if prev_n:
+            print(
+                f"::warning::order plans empty (raw={len(raw)}); keeping previous {prev_n} rows in {out}"
+            )
+            return 0
+    _write_json(out, {"schema_version": 1, "generated_at": utc_now_iso(), "plans": plans})
+    print(f"Order plans: raw={len(raw)} ai={len(plans)} → {out}")
     return 0
 
 

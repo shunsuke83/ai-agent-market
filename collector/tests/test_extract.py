@@ -10,7 +10,8 @@ ROOT = Path(__file__).resolve().parents[2]
 
 def test_extract_band_has_rows():
     rows = extract_band_notices(ROOT)
-    assert len(rows) >= 400
+    # Soft-exclude + list filters shrink the rendered band below the old 400 floor (B-29).
+    assert len(rows) >= 300
     sample = next(r for r in rows if r.get("bid_no"))
     assert sample["title"]
     assert sample["scope"] in ("생성형·Agent", "AI SW 확대")

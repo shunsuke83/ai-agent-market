@@ -153,16 +153,31 @@ def page(
     return head + nav(prefix) + f"<main>{body}</main>" + footer + f"</div>{tail}</body></html>"
 
 
+def site_base_path() -> str:
+    """Absolute site root path for 404.html (served under nested URLs on GitHub Pages)."""
+    from urllib.parse import urlparse
+
+    path = urlparse(SITE_URL).path.rstrip("/")
+    return f"{path}/" if path else "/"
+
+
 def write_not_found(repo_root) -> None:
     from pathlib import Path
 
+    prefix = site_base_path()
     body = (
         "<h1>페이지를 찾을 수 없습니다</h1>"
         '<p class="lede">주소가 바뀌었거나 없는 페이지입니다.</p>'
-        '<p><a href="index.html">홈으로</a></p>'
+        f'<p><a href="{prefix}index.html">홈으로</a></p>'
     )
     Path(repo_root, "404.html").write_text(
-        page("페이지를 찾을 수 없습니다", body, path="404.html", scripts=()),
+        page(
+            "페이지를 찾을 수 없습니다",
+            body,
+            prefix=prefix,
+            path="404.html",
+            scripts=(),
+        ),
         encoding="utf-8",
     )
 

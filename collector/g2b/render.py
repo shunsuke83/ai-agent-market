@@ -18,6 +18,7 @@ from .normalize import (
     read_notices,
     sort_notices,
 )
+from .assets import ASSET_VER
 from .classify import apply_summary_labels, classify_nature, load_keywords
 from .seed import load_seed
 from .site import detail_href, stamp_shell
@@ -735,6 +736,13 @@ def render_band_page(repo_root: Path) -> dict[str, Any]:
         "사업 성격",
         _bars_html(sorted(nature_counts.items(), key=lambda x: (-x[1], x[0]))),
     )
+    # Idempotent: drop any prior "평가 비율" blocks before re-inserting (B-02).
+    text = re.sub(
+        r"<h2>평가 비율</h2>.*?(?=<h2>)",
+        "",
+        text,
+        flags=re.S,
+    )
     if ratio_counts:
         text = text.replace(
             "<h2>사업 성격</h2>",
@@ -811,12 +819,27 @@ def render_band_page(repo_root: Path) -> dict[str, Any]:
     )
 
     text = stamp_shell(text)
+    # Drop duplicated exclude toggles from earlier non-idempotent renders (B-02).
+    text = re.sub(
+        r'<script>\(function\(\)\{var e=document\.getElementById\("show-excluded"\);'
+        r".*?</script>",
+        "",
+        text,
+        flags=re.S,
+    )
     if soft_n:
         text = text.replace(
             "</body>",
             '<script>(function(){var e=document.getElementById("show-excluded");'
             'if(e)e.addEventListener("change",function(){document.body.classList.toggle("show-excluded",e.checked)});'
             "})();</script></body>",
+            1,
+        )
+    # B-06: band "관심 링크 복사" needs watch.js
+    if "assets/watch.js" not in text:
+        text = text.replace(
+            "</body>",
+            f'<script src="assets/watch.js?v={ASSET_VER}" defer></script></body>',
             1,
         )
     path.write_text(text, encoding="utf-8")

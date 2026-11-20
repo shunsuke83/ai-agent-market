@@ -109,17 +109,20 @@ URGENT_DAYS = 3
 
 
 def _dday(close_at: str | None, today: date) -> str:
-    """D-day badge; ≤ URGENT_DAYS is marked by the word 임박 as well as color."""
+    """D-day badge; data-close lets the browser recompute on the visitor's date (B-09)."""
+    raw = (close_at or "")[:16]
     try:
-        days = (date.fromisoformat((close_at or "")[:10]) - today).days
+        days = (date.fromisoformat(raw[:10]) - today).days
     except ValueError:
         return ""
     if days < 0:
         return ""
     label = "D-day" if days == 0 else f"D-{days}"
-    if days <= URGENT_DAYS:
-        return f' <span class="dday urgent">{label} 임박</span>'
-    return f' <span class="dday">{label}</span>'
+    urgent = " urgent" if days <= URGENT_DAYS else ""
+    text = f"{label} 임박" if days <= URGENT_DAYS else label
+    return (
+        f' <span class="dday{urgent}" data-close="{html.escape(raw)}">{text}</span>'
+    )
 
 
 def _competition(ctx: dict[str, Any] | None) -> str:
@@ -373,7 +376,7 @@ def build_home(
         new_head.append(("참여", False))
 
     body = (
-        f'<div class="eyebrow">나라장터 · 내부 검토용</div><h1>{SITE_TITLE}</h1>'
+        f'<div class="eyebrow">나라장터 · 공개 분석</div><h1>{SITE_TITLE}</h1>'
         '<p class="lede">나라장터 AI 사업의 입찰공고·낙찰·사전규격·발주계획을 매일 모아 '
         "새 공고·적합도·마감·수주·투찰 경쟁을 한곳에서 봅니다. "
         "제안요청서 요약이 있으면 그 내용으로 범위를 다시 매깁니다.</p>"
@@ -452,7 +455,7 @@ def build_home(
         'if(e)e.addEventListener("change",function(){document.body.classList.toggle("show-excluded",e.checked)});'
         "})();</script>"
     )
-    return page(SITE_TITLE, body, scripts=("table-sort.js", "table-filter.js"))
+    return page(SITE_TITLE, body, scripts=("table-sort.js", "table-filter.js", "dday.js"))
 
 
 def render_home(repo_root: Path, now: datetime | None = None) -> dict[str, Any]:

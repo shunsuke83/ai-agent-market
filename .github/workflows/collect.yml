@@ -227,7 +227,7 @@ jobs:
         run: python -m g2b.collect sync-d1
         working-directory: collector
 
-      # Public CF Pages (optional until project + token exist). Uses profile-free render output.
+      # Public CF Pages (optional until project + token exist). Render already includes fit when COMPANY_PROFILE is set.
       - name: Deploy public site to Cloudflare Pages
         continue-on-error: true
         env:
@@ -275,7 +275,9 @@ jobs:
           git add data/notices.json data/reports.json data/run_status.json \
             reports.json reports/ \
             band.html awards.html index.html competitors.html prespecs.html pricing.html plans.html \
-            bidders.html data/bidders.json agencies.html data/agencies.json deliverables.html
+            bidders.html data/bidders.json agencies.html data/agencies.json deliverables.html \
+            sitemap.xml robots.txt 404.html \
+            assets/site.css assets/table-filter.js assets/watch.js assets/dday.js assets/price-calc.js
           if [ -f alerts.html ]; then git add alerts.html feeds/; fi
           if [ -f data/alerts_state.json ]; then git add data/alerts_state.json; fi
           if [ -f data/prespecs.json ]; then git add data/prespecs.json; fi

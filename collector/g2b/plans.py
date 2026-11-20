@@ -442,6 +442,9 @@ def write_renewal_ics(repo_root: Path, contracts: list[dict[str, Any]], today: d
         "CALSCALE:GREGORIAN",
         "X-WR-CALNAME:AI 용역 후속 검토",
     ]
+    from datetime import datetime, timezone
+
+    stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     n = 0
     for c in contracts:
         end = (c.get("end_date") or "")[:10]
@@ -457,9 +460,11 @@ def write_renewal_ics(repo_root: Path, contracts: list[dict[str, Any]], today: d
         if remind < today:
             remind = end_d
         n += 1
+        contract_no = re.sub(r"[^\w.-]+", "-", str(c.get("contract_no") or c.get("id") or n))
         lines += [
             "BEGIN:VEVENT",
-            f"UID:renewal-{n}@ai-agent-market",
+            f"UID:renewal-{contract_no}@ai-agent-market",
+            f"DTSTAMP:{stamp}",
             f"DTSTART;VALUE=DATE:{remind.strftime('%Y%m%d')}",
             _fold("SUMMARY:" + _ics_text("후속 검토: " + (c.get("title") or ""))),
             _fold("DESCRIPTION:" + _ics_text(f"{c.get('org') or ''} 종료 {end}")),

@@ -444,9 +444,11 @@ def build_pricing(notices: list[dict[str, Any]], run_status: dict[str, Any], tod
         f'<div class="stamp">{html.escape(stamp_text(run_status))}</div>'
         + stats
         + "<h2>가격점수 계산</h2>"
-        '<p class="meta">협상에 의한 계약의 가격점수는 10 × 최저 투찰가 ÷ 해당 투찰가 입니다. 상한은 10점입니다. '
-        "예를 들어 최저가가 예산의 85%이고 다른 투찰이 예산의 100%이면 점수는 8.502점입니다.</p>"
+        '<p class="meta">협상에 의한 계약의 가격점수는 배점 × 최저 투찰가 ÷ 해당 투찰가 입니다(상한=배점). '
+        "배점이 10점이면 최저가가 예산의 85%·다른 투찰이 100%일 때 8.500점입니다. "
+        "기술:가격이 80:20·70:30인 공고는 배점을 20·30으로 바꾸세요.</p>"
         '<form id="price-calc" class="bidder-search" onsubmit="return false">'
+        '<label>가격 배점 <input id="calc-max" inputmode="numeric" value="10" aria-label="가격 배점"></label> '
         '<label>최저 투찰가(억) <input id="calc-low" inputmode="decimal" aria-label="최저 투찰가"></label> '
         '<label>해당 투찰가(억) <input id="calc-ours" inputmode="decimal" aria-label="해당 투찰가"></label> '
         '<label>경쟁사 과거 투찰가(억) <input id="calc-rival" inputmode="decimal" aria-label="경쟁사 과거 투찰가"></label>'

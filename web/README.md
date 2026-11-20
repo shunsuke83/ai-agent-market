@@ -65,4 +65,4 @@ npm run dev
 npx wrangler pages deploy public-dist --project-name=ai-agent-market
 ```
 
-공개 빌드에는 `COMPANY_PROFILE`을 넣지 않습니다.
+공개 사이트에도 적합도를 넣으려면 수집 렌더에 `COMPANY_PROFILE`이 필요합니다(YAML은 data/에 쓰지 않음).

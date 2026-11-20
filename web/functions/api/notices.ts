@@ -35,8 +35,10 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
   const showExcluded = url.searchParams.get("excluded") === "1";
   const openOnly = url.searchParams.get("open") !== "0";
   const fit = url.searchParams.get("fit"); // GO|REVIEW|NO-GO
-  const limit = Math.min(Math.max(Number(url.searchParams.get("limit") || 80), 1), 200);
-  const offset = Math.max(Number(url.searchParams.get("offset") || 0), 0);
+  const limitRaw = Number(url.searchParams.get("limit") || 80);
+  const offsetRaw = Number(url.searchParams.get("offset") || 0);
+  const limit = Math.min(Math.max(Number.isFinite(limitRaw) ? limitRaw : 80, 1), 200);
+  const offset = Math.max(Number.isFinite(offsetRaw) ? offsetRaw : 0, 0);
 
   const where: string[] = [];
   const params: (string | number)[] = [];
@@ -45,7 +47,8 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
     where.push("soft_excluded = 0");
   }
   if (openOnly) {
-    where.push("close_at IS NOT NULL AND close_at >= datetime('now', 'localtime')");
+    // close_at is stored as KST wall time ("YYYY-MM-DD HH:MM"); D1 now is UTC.
+    where.push("close_at IS NOT NULL AND close_at >= datetime('now', '+9 hours')");
   }
   if (fit) {
     where.push("fit_verdict = ?");

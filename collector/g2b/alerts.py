@@ -133,10 +133,20 @@ def _summary(item: dict[str, Any]) -> str:
 
 
 def _pub_date(item: dict[str, Any]) -> str:
+    raw = (item.get("date") or "")[:10]
     try:
-        d = datetime.strptime(item["date"][:10], "%Y-%m-%d").replace(tzinfo=KST)
+        d = datetime.strptime(raw, "%Y-%m-%d").replace(tzinfo=KST)
     except ValueError:
-        d = datetime(1970, 1, 1, tzinfo=timezone.utc)
+        # B-13: prefer deadline / generated day over Unix epoch.
+        for key in ("deadline", "close_at", "registered_at"):
+            alt = (item.get(key) or "")[:10]
+            try:
+                d = datetime.strptime(alt, "%Y-%m-%d").replace(tzinfo=KST)
+                break
+            except ValueError:
+                continue
+        else:
+            d = datetime.now(KST)
     return format_datetime(d)
 
 

@@ -82,8 +82,14 @@
   }
 
   function rowKey(row) {
+    if (row.id) return row.id;
+    var bid = row.getAttribute("data-bid") || row.getAttribute("data-key");
+    if (bid) return bid;
     var a = row.querySelector('a[href*="bids/"]') || row.querySelector("a[href]");
-    if (a) return a.getAttribute("href").replace(/^(\.\.\/)+/, "");
+    if (a) {
+      var href = (a.getAttribute("href") || "").replace(/^(\.\.\/)+/, "");
+      if (href) return href;
+    }
     return text(row).slice(0, 120);
   }
 
@@ -233,11 +239,24 @@
     });
     shareBtn.addEventListener("click", function () {
       var api = window.aamWatch;
-      if (!api) return;
+      if (!api) {
+        shareBtn.textContent = "watch.js 없음";
+        return;
+      }
       var url = api.shareUrl();
-      var done = function () { shareBtn.textContent = "관심 링크 복사됨"; };
+      if (!url) {
+        shareBtn.textContent = "관심 없음";
+        return;
+      }
       if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(url).then(done);
+        navigator.clipboard.writeText(url).then(
+          function () {
+            shareBtn.textContent = "관심 링크 복사됨";
+          },
+          function () {
+            shareBtn.textContent = "복사 실패";
+          }
+        );
       } else {
         shareBtn.textContent = "복사 불가";
       }
@@ -370,9 +389,15 @@
       var shown = 0;
       var matched = 0;
       var budget = 0;
+      var showExcluded = document.body.classList.contains("show-excluded");
       var current = tbody.rows;
       for (var i = 0; i < current.length; i++) {
         var row = current[i];
+        // B-05: soft-excluded rows stay out of counts unless "제외 보기" is on.
+        if (row.classList.contains("soft-excluded") && !showExcluded) {
+          row.hidden = true;
+          continue;
+        }
         var ok = matches(row);
         if (ok) {
           matched++;

@@ -25,15 +25,23 @@
     return path.replace(/[^/]*$/, "");
   }
 
+  /** B-07: allow bids/*.html and list-page keys (bid nos, #anchors), not only *.html. */
   function safe(key) {
-    key = String(key || "").replace(/^(\.\.\/)+/, "");
-    if (key.indexOf("..") >= 0 || !/^[A-Za-z0-9_./-]+\.html$/.test(key)) return "";
+    key = String(key || "").replace(/^(\.\.\/)+/, "").trim();
+    if (!key || key.indexOf("..") >= 0) return "";
+    if (!/^[A-Za-z0-9][A-Za-z0-9_./#%+-]*$/.test(key)) return "";
     return key;
   }
 
   function shareUrl() {
     var keys = Object.keys(load()).map(safe).filter(Boolean);
-    return window.location.origin + siteRoot() + "index.html#watch=" + encodeURIComponent(keys.join("|"));
+    if (!keys.length) return "";
+    return (
+      window.location.origin +
+      siteRoot() +
+      "index.html#watch=" +
+      encodeURIComponent(keys.join("|"))
+    );
   }
 
   function takeShared() {
@@ -45,17 +53,25 @@
       raw = "";
     }
     var watch = load();
+    var added = 0;
     raw.split("|").forEach(function (key) {
       key = safe(key);
-      if (key) watch[key] = 1;
+      if (!key) return;
+      if (!watch[key]) added++;
+      watch[key] = watch[key] || 1;
     });
     save(watch);
     if (window.history && history.replaceState) {
       history.replaceState(null, "", window.location.pathname + window.location.search);
     }
+    if (!added && !Object.keys(watch).length) return;
     var note = document.createElement("p");
     note.className = "note";
-    note.textContent = "공유된 관심 " + Object.keys(watch).length + "건을 이 브라우저에 저장했습니다.";
+    note.setAttribute("data-watch-shared", "1");
+    note.textContent =
+      "공유된 관심 " + Object.keys(watch).length + "건을 이 브라우저에 저장했습니다.";
+    var old = document.querySelector("[data-watch-shared]");
+    if (old) old.remove();
     var main = document.querySelector("main") || document.querySelector(".wrap");
     if (main) main.insertBefore(note, main.firstChild);
   }
@@ -86,9 +102,16 @@
       memo.addEventListener("click", function () {
         var text = pre.textContent || "";
         if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(text).then(function () {
-            memo.textContent = "메모 복사됨";
-          });
+          navigator.clipboard.writeText(text).then(
+            function () {
+              memo.textContent = "메모 복사됨";
+            },
+            function () {
+              memo.textContent = "복사 실패";
+            }
+          );
+        } else {
+          memo.textContent = "복사 불가";
         }
       });
     }
@@ -97,14 +120,23 @@
     copy.addEventListener("click", function () {
       var url = window.location.href.split("#")[0];
       if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(url).then(function () {
-          copy.textContent = "링크 복사됨";
-        });
+        navigator.clipboard.writeText(url).then(
+          function () {
+            copy.textContent = "링크 복사됨";
+          },
+          function () {
+            copy.textContent = "복사 실패";
+          }
+        );
+      } else {
+        copy.textContent = "복사 불가";
       }
     });
   }
 
   window.aamWatch = { load: load, save: save, shareUrl: shareUrl, safe: safe };
   takeShared();
+  // B-08: same-tab share links and back/forward.
+  window.addEventListener("hashchange", takeShared);
   bindDetail();
 })();
