@@ -51,7 +51,14 @@ PROFILE = {
         {"id": "schedule", "min_business_days_to_deadline": None}, {"id": "capacity", "max_concurrent_builds": None},
     ],
     "scoring": {
-        "weights": {"tech_fit": 30, "similar_track_record": 25, "staffing_schedule": 20, "budget_fit": 15, "domain_org": 10},
+        "weights": {
+            "solution_fit": 35,
+            "engagement_type": 15,
+            "similar_track_record": 15,
+            "qualification": 15,
+            "budget_fit": 10,
+            "staffing_schedule": 10,
+        },
         "thresholds": {"go": {"min_score": 70, "min_evidence_ratio": 0.8}, "no_go": {"max_score": 40}},
     },
 }
@@ -76,8 +83,37 @@ def test_detects_policy_profile():
 def test_go_in_core_tier_with_enough_evidence():
     s = gp.score_policy(_notice(), PROFILE, NOW)
     assert s["verdict"] == gp.GO
-    assert s["evidence"] == 0.8  # staffing_schedule left out (todo values are null)
+    assert s["solution_priority"] in ("S", "A")
+    assert s["engagement"] == "build"
+    # staffing_schedule left out (capacity/schedule todos null) → 90/100
+    assert s["evidence"] == 0.9
     assert s["score"] >= 70
+
+
+def test_kotra_ops_service_is_no_go():
+    s = gp.score_policy(
+        _notice(
+            title="2027년 AI 무역지원센터 운영 용역",
+            org="대한무역투자진흥공사",
+            nature="운영·유지보수",
+            fields=["AI 일반"],
+            budget_eok=12.2,
+        ),
+        PROFILE,
+        NOW,
+    )
+    assert s["verdict"] == gp.NO_GO
+    assert any("운영·단순 용역" in r for r in s["reasons"])
+
+
+def test_ax_dev_environment_can_go():
+    s = gp.score_policy(
+        _notice(title="AX서비스 개발환경 구축 용역", org="한국남동발전(주)", fields=["생성형·LLM"]),
+        PROFILE,
+        NOW,
+    )
+    assert s["verdict"] == gp.GO
+    assert s["solution_priority"] == "S"
 
 
 def test_budget_tier_default_review_and_min_budget():
@@ -86,8 +122,9 @@ def test_budget_tier_default_review_and_min_budget():
     own = gp.score_policy(_notice(budget_eok=2.0, org="한국남동발전(주)"), PROFILE, NOW)
     assert own["verdict"] == gp.REVIEW
     unknown = gp.score_policy(_notice(budget_eok=None), PROFILE, NOW)
-    assert unknown["verdict"] == gp.REVIEW and unknown["evidence"] < 0.8
-    assert unknown["reasons"][0].startswith("추가 확인 필요")
+    assert unknown["verdict"] == gp.REVIEW
+    assert unknown["evidence"] <= 0.8  # budget + staffing unknown
+    assert any("예산 미상" in r or r.startswith("추가 확인 필요") for r in unknown["reasons"])
 
 
 def test_avoid_rules_and_exceptions():
@@ -97,8 +134,9 @@ def test_avoid_rules_and_exceptions():
     assert maint["verdict"] == gp.NO_GO
     upgrade = gp.score_policy(_notice(title="AI 챗봇 고도화 및 유지보수", nature="운영·유지보수"), PROFILE, NOW)
     assert upgrade["verdict"] == gp.REVIEW
+    # Pure ops: even own customer — participation blocked (ops stop beats avoid exception).
     own = gp.score_policy(_notice(title="AI 챗봇 운영", nature="운영·유지보수", org="한국남동발전(주)"), PROFILE, NOW)
-    assert own["verdict"] == gp.REVIEW
+    assert own["verdict"] == gp.NO_GO
     audit = gp.score_policy(_notice(title="AI 챗봇 구축 사업 위탁감리"), PROFILE, NOW)
     assert audit["verdict"] == gp.NO_GO
 
@@ -192,5 +230,5 @@ def test_slack_text_policy_has_no_probability_wording():
     n = _notice()
     s = gp.score_policy(n, PROFILE, NOW)
     text = gp.slack_text_policy([(n, s)], NOW.date(), "https://x/", 3, PROFILE, {})
-    assert "GO" in text and "근거 80%" in text and "관측 메모" in text
+    assert "GO" in text and "근거 90%" in text and "관측 메모" in text
     assert "수주 확률이 아닙니다" in text and "확률:" not in text

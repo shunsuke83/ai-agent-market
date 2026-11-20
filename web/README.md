@@ -28,6 +28,7 @@ GitHub Actions secrets (일부 등록됨):
 - `COMPANY_PROFILE` — D1 sync·공개/내부 렌더 적합도 (YAML은 data/에 안 넣음)
 
 공개·내부 모두 적합도를 표시합니다. 내부는 D1 실시간, 공개는 수집 시 렌더한 정적 HTML입니다.
+적합도는 GenON 솔루션 매칭(S/A) + 구축·제품 여부 기준입니다. 순수 운영 용역·B등급은 참여(GO)가 나오지 않습니다.
 
 ### Access (`@genon.ai`만 허용)
 

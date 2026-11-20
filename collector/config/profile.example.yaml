@@ -1,31 +1,78 @@
-# Go/No-Go 회사 프로필 예시. 실제 값은 repo secret COMPANY_PROFILE에 이 YAML 그대로 넣습니다.
-# 로컬 시험은 같은 폴더의 profile.local.yaml (gitignore)에 두면 됩니다. 저장소에 커밋하지 마세요.
+# Go/No-Go 회사 프로필 예시.
+# 실제 값은 repo secret COMPANY_PROFILE에 넣습니다. 로컬은 profile.local.yaml (gitignore).
+#
+# 정책형(company + scoring)이 있으면 GenON Bid Radar 배점을 씁니다:
+#   솔루션35 · 사업유형15 · 레퍼런스15 · 자격15 · 수익10 · 수행10
+# GO(참여): S/A 솔루션 매칭 + 구축·제품(또는 운영이지만 구축·제품 비중 strong)
+# B등급(Physical AI·ML·DL·ISP 등) · 순수 운영 용역 → 참여 불가
+# 동의어 사전: collector/config/genon_solutions.yaml (공개). 브랜드명은 아래 products.
+
+version: 1
+company:
+  name: 예시주식회사
+  aliases: []
+  products:
+    - {name: GenOS}
+    - {name: GenMate}
+    - {name: OneAgent}
+    - {name: GenA}
+  todo_qualifications:
+    sw_business_registration: true
+    sme_certificate: null
+
+capabilities:
+  core_fields: [생성형·LLM, AI 에이전트]
+  adjacent_fields: [데이터·예측]
+  title_keywords:
+    strong: [LLM, RAG, 에이전트, 생성형]
+    medium: [챗봇, AX]
+
+track_record:
+  own_customers: []
+  largest_g2b_contract_eok: null
+
+policy:
+  budget:
+    min_eok: 3
+    tiers:
+      - {range: [3, 8], label: 소규모, default: REVIEW}
+      - {range: [8, 15], label: 주력, default: "GO 후보"}
+      - {range: [15, 30], label: 도전, default: REVIEW}
+  avoid: []
+
+hard_gates:
+  - {id: region}
+  - {id: eligibility}
+  - {id: track_record_amount}
+  - {id: certification}
+
+scoring:
+  weights:
+    solution_fit: 35
+    engagement_type: 15
+    similar_track_record: 15
+    qualification: 15
+    budget_fit: 10
+    staffing_schedule: 10
+  thresholds:
+    go: {min_score: 70, min_evidence_ratio: 0.8}
+    no_go: {max_score: 40}
+
+# --- 아래는 단순형 프로필(레거시)용. company+scoring이 있으면 무시됩니다. ---
 name: 예시주식회사
 aliases: []
-
-# 사업 성격별 가중치 0~1. 0이면 No-Go. 목록에 없는 성격은 other_nature_weight.
 natures:
   시스템 구축·고도화: 1.0
-  ISP·전략: 0.8
-  구독·라이선스: 0.5
-  운영·유지보수: 0.4
+  ISP·전략: 0.5
+  구독·라이선스: 0.7
+  운영·유지보수: 0.0
   인프라: 0.0
   연구·교육·행사: 0.0
 other_nature_weight: 0.3
-
-# 비어 있으면 범위를 가리지 않음. 목록 밖이면 적합도 절반.
 scopes: [생성형·Agent, AI SW 확대]
-
-keywords_prefer: [LLM, RAG, 챗봇, 에이전트, 생성형]
-keywords_avoid: [CCTV, 로봇, 교과서, 드론]
-orgs_prefer: []
-
-# 억 원. sweet 범위면 만점, min~max면 일부, 2배 넘게 벗어나면 No-Go.
+keywords_prefer: [LLM, RAG, 챗봇, 에이전트, 생성형, AX]
+keywords_avoid: [CCTV, 교과서, 드론]
 budget_eok: {min: 3, max: 30, sweet_min: 5, sweet_max: 15}
-
-# 단골 투찰 업체 중 이 이름이 있으면 경쟁 점수 감점.
-rivals: []
-
 min_days_to_prepare: 7
 go_score: 70
 review_score: 50

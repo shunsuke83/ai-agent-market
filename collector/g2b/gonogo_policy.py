@@ -13,9 +13,25 @@ from typing import Any
 
 from .competitors import normalize_firm
 from .normalize import load_keywords, prespec_excluded
+from .solution_match import (
+    classify_engagement,
+    match_solutions,
+    notice_match_text,
+)
 
 GO, REVIEW, NO_GO = "GO", "REVIEW", "NO-GO"
 PASS, FAIL, UNKNOWN = "통과", "미충족", "미확인"
+
+# GenON Bid Radar v1 — solution-first rubric (profile may override keys).
+DEFAULT_WEIGHTS = {
+    "solution_fit": 35,
+    "engagement_type": 15,
+    "similar_track_record": 15,
+    "qualification": 15,
+    "budget_fit": 10,
+    "staffing_schedule": 10,
+}
+SOLUTION_FIT = {"S": 1.0, "A": 0.8, "B": 0.51}  # ~35 / 28 / 18 of 35
 
 INDUSTRIES = {
     "발전·에너지": ("발전", "전력", "에너지", "가스", "석유", "원자력", "수력", "지역난방"),
@@ -336,18 +352,26 @@ def score_policy(
     caps = profile.get("capabilities") or {}
     record = profile.get("track_record") or {}
     policy = profile.get("policy") or {}
-    weights = (profile.get("scoring") or {}).get("weights") or {}
+    cfg_weights = (profile.get("scoring") or {}).get("weights") or {}
+    # Prefer GenON rubric keys; fall back to defaults when profile still has legacy tech_fit weights.
+    if "solution_fit" in cfg_weights:
+        weights = {**DEFAULT_WEIGHTS, **{k: cfg_weights[k] for k in DEFAULT_WEIGHTS if k in cfg_weights}}
+    else:
+        weights = dict(DEFAULT_WEIGHTS)
     title, org = n.get("title") or "", n.get("org") or ""
+    lead_reasons: list[str] = []
     reasons: list[str] = []
     stops: list[str] = []
     caps_review: list[str] = []
     notes: list[str] = []
 
     gates = judge_gates(n, profile, now, summary)
+    gate_unknown = False
     for name, status, why in gates:
         if status == FAIL:
             stops.append(f"{name} 미충족 ({why})")
         elif status == UNKNOWN:
+            gate_unknown = True
             caps_review.append(f"{name} 미확인 ({why})")
 
     if prespec_excluded(n, rules):
@@ -369,20 +393,66 @@ def score_policy(
     if n.get("nature") == "ISP·전략" and policy.get("isp_strategy"):
         caps_review.append("ISP: " + " / ".join(policy["isp_strategy"].get("required_checks") or [])[:120])
 
+    # --- engagement (build / product / ops) ---
+    eng = classify_engagement(title, n.get("nature"), summary)
+    engagement = eng.get("engagement") or "other"
+    ops_exc = eng.get("ops_exception")
+    effective = engagement
+    if engagement == "ops" and ops_exc == "strong":
+        effective = "build"
+        lead_reasons.append("운영·용역이나 구축·제품 비중 확인(예외)")
+    elif engagement == "ops" and ops_exc == "weak":
+        lead_reasons.append("운영·용역 — 구축·제품 비중 불명확")
+        caps_review.append("운영·단순 용역(구축·제품 비중 불명확)")
+    elif engagement == "ops":
+        stops.append("운영·단순 용역(구축·제품 비중 없음)")
+    elif engagement == "build":
+        lead_reasons.append("사업유형 구축·개발")
+    elif engagement == "product":
+        lead_reasons.append("사업유형 제품·도입")
+    else:
+        lead_reasons.append(f"사업유형 {n.get('nature') or '기타'}")
+        caps_review.append("구축·제품 중심 사업 아님(검토)")
+
+    # --- GenON solution match ---
+    matched = match_solutions(notice_match_text(n, summary), profile)
+    priority = matched.get("priority")
+    if matched.get("name"):
+        hit_s = ", ".join(matched.get("hits") or [])[:40]
+        lead_reasons.insert(
+            0,
+            f"솔루션 {matched['name']}({priority})" + (f" · {hit_s}" if hit_s else ""),
+        )
+    elif matched.get("exclude_only"):
+        lead_reasons.insert(0, "솔루션 미매칭(제외 힌트: " + ", ".join(matched.get("exclude_hits") or []) + ")")
+    else:
+        lead_reasons.insert(0, "솔루션 미매칭")
+
+    if priority == "B":
+        caps_review.append(f"B등급 솔루션({matched.get('name')}) — 참여 불가, 검토만")
+    if not priority:
+        caps_review.append("GenON S/A 솔루션 신호 없음")
+
     parts: dict[str, float | None] = {}
-    fields = set(n.get("fields") or [])
+    if matched.get("exclude_only"):
+        parts["solution_fit"] = 0.1
+    else:
+        parts["solution_fit"] = SOLUTION_FIT.get(priority or "", 0.23)
+
+    if effective in ("build", "product"):
+        parts["engagement_type"] = 1.0
+    elif engagement == "ops" and ops_exc == "weak":
+        parts["engagement_type"] = 0.33
+    elif engagement == "ops":
+        parts["engagement_type"] = 0.0
+    else:
+        parts["engagement_type"] = 0.2
+
+    # Legacy capability keywords — soft note only (no longer primary tech_fit).
     kw = caps.get("title_keywords") or {}
     strong, medium = _hits(title, kw.get("strong")), _hits(title, kw.get("medium"))
-    if fields & set(caps.get("core_fields") or []) or strong:
-        parts["tech_fit"] = 1.0
-    elif fields & set(caps.get("adjacent_fields") or []) or medium:
-        parts["tech_fit"] = 0.6
-    elif fields & set(caps.get("other_fields") or []):
-        parts["tech_fit"] = 0.25
-    else:
-        parts["tech_fit"] = 0.4
     if strong or medium:
-        reasons.append("키워드 " + ", ".join((strong + medium)[:3]))
+        notes.append("키워드 " + ", ".join((strong + medium)[:3]))
 
     customer_industries = {
         _industry(c) for c in record.get("own_customers") or []
@@ -395,6 +465,13 @@ def score_policy(
         reasons.append(f"실적 업종({_industry(org)})")
     else:
         parts["similar_track_record"] = 0.4
+
+    if gates and not any(s == FAIL for _, s, _ in gates):
+        parts["qualification"] = 0.5 if gate_unknown else 1.0
+    elif not gates:
+        parts["qualification"] = 1.0
+    else:
+        parts["qualification"] = 0.0
 
     gate_cfg = {g.get("id"): g for g in profile.get("hard_gates") or [] if isinstance(g, dict)}
     need_days = (gate_cfg.get("schedule") or {}).get("min_business_days_to_deadline")
@@ -410,6 +487,7 @@ def score_policy(
     tier = _tier(budget, profile)
     if budget is None:
         parts["budget_fit"] = None
+        caps_review.append("예산 미상")
     else:
         label = (tier or {}).get("label") or ""
         default = str((tier or {}).get("default") or "")
@@ -418,17 +496,15 @@ def score_policy(
             caps_review.append(f"예산 {budget:.1f}억 {label} — 구간 기본 REVIEW")
         else:
             reasons.append(f"예산 {budget:.1f}억 {label}".strip())
-    if budget is None:
-        caps_review.append("예산 미상")
-
-    kind = org_kind(org)
-    parts["domain_org"] = {"공기업·준정부기관": 1.0, "중앙부처": 0.7, "지자체·교육": 0.4}.get(kind, 0.5)
 
     total_w = sum(float(w) for w in weights.values()) or 100.0
     known_w = sum(float(weights.get(k, 0)) for k, v in parts.items() if v is not None)
     got = sum(float(weights.get(k, 0)) * v for k, v in parts.items() if v is not None)
     score = round(100 * got / known_w) if known_w else 0
     evidence = known_w / total_w
+
+    if engagement == "ops" and ops_exc == "weak":
+        score = min(score, 69)
 
     if context and context.get("median_bids") is not None:
         notes.append(f"비슷한 사업 투찰 중앙값 {context['median_bids']:g}곳")
@@ -451,12 +527,16 @@ def score_policy(
     th = (profile.get("scoring") or {}).get("thresholds") or {}
     go_th = th.get("go") or {}
     no_go_max = (th.get("no_go") or {}).get("max_score", 40)
+    go_ok_engagement = effective in ("build", "product")
+    go_ok_solution = priority in ("S", "A")
     if stops or score <= no_go_max:
         verdict = NO_GO
     elif (
         score >= go_th.get("min_score", 70)
         and evidence >= go_th.get("min_evidence_ratio", 0.8)
         and not caps_review
+        and go_ok_engagement
+        and go_ok_solution
     ):
         verdict = GO
     else:
@@ -468,8 +548,12 @@ def score_policy(
         "evidence": round(evidence, 2),
         "verdict": verdict,
         "gates": gates,
-        "reasons": stops + caps_review + reasons,
+        "reasons": lead_reasons + stops + caps_review + reasons,
         "notes": notes,
+        "engagement": engagement,
+        "ops_exception": ops_exc,
+        "solution": matched.get("name"),
+        "solution_priority": priority,
     }
 
 

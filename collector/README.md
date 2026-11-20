@@ -146,7 +146,8 @@ secret 갱신(PowerShell): `cmd /c "gh secret set COMPANY_PROFILE < collector\co
   - 일정: 마감까지 영업일 ≥ `min_business_days_to_deadline`. 동시 수행(`max_concurrent_builds`)은 현재 수행 건수가 없어 점수 항목에만 씁니다
 - `company.credit_rating.valid_until`이 지났으면 Slack 머리에 갱신 경고를 붙입니다.
 - `policy.avoid` 규칙(성격·제목 키워드)은 NO-GO입니다. 기존 고객 기관, 자사 제품명, 또는 성격으로만 걸렸고 제목에 고도화·구축이 있으면 REVIEW로 완화합니다. 사이트 제외 규칙(감리·PMO·교육·장비 구매)도 NO-GO입니다.
-- 점수는 `scoring.weights`로 계산하되 근거가 없는 항목은 빼고 비율로 환산하며, 뺀 비중만큼 근거 충족률이 내려갑니다. GO는 점수·충족률 기준을 넘고 미확인 게이트가 없으며 예산 구간 기본값이 GO인 경우에만 나옵니다.
+- 점수는 GenON Bid Radar 배점(`solution_fit` 35 · `engagement_type` 15 · 레퍼런스 15 · 자격 15 · 예산 10 · 일정 10)입니다. 동의어는 `config/genon_solutions.yaml`, 브랜드명은 프로필 `company.products`입니다. 근거 없는 항목은 빼고 비율로 환산합니다.
+- **참여(GO)** 는 S/A 솔루션 매칭 + 사업유형 구축·제품(운영이어도 RFP/제목에 구축·제품 비중 strong) + 점수·충족률 + 미확인 게이트 없음일 때만입니다. B등급(Physical AI·ML·DL·ISP 등)과 순수 운영·단순 용역은 참여 불가입니다.
 - Slack에는 판정 사유, 게이트 결과, 점수와 근거 충족률, 참고 관측을 보내고 수주 확률은 표기하지 않습니다.
 
 추천된 공고에 요약이 없으면 Go/No-Go 단계에서 최대 5건을 바로 요약해 Slack 한 줄 요약과 게이트 판정에 씁니다. 이 요약은 `data/`에 저장하지 않습니다(어떤 공고를 먼저 요약했는지로 프로필이 드러나지 않게).
