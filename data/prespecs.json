@@ -1,11 +1,286 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-19T10:18:36Z",
+  "generated_at": "2026-11-20T08:12:24Z",
   "range": {
-    "since": "2026-11-16",
-    "until": "2026-11-19"
+    "since": "2026-11-06",
+    "until": "2026-11-20"
   },
   "prespecs": [
+    {
+      "prespec_no": "R26BD00304171",
+      "title": "2027년 지능형교통체계(ITS) 전산시스템 유지관리 용역",
+      "org": "전북특별자치도 전주시",
+      "order_org": "전북특별자치도 전주시",
+      "registered_at": "2026-11-20 16:30",
+      "registered_date": "2026-11-20",
+      "opinion_close_at": "2026-11-25 23:59",
+      "asign_budget_eok": 1.5452,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "운영·유지보수",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00304171&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00304167",
+      "title": "2027년 지능형교통체계(ITS) 네트워크 유지관리 용역",
+      "org": "전북특별자치도 전주시",
+      "order_org": "전북특별자치도 전주시",
+      "registered_at": "2026-11-20 16:29",
+      "registered_date": "2026-11-20",
+      "opinion_close_at": "2026-11-25 23:59",
+      "asign_budget_eok": 0.6761,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "운영·유지보수",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00304167&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00302113",
+      "title": "2027년 지능형 분석기반 스마트 그린 플랫폼 유지관리 용역",
+      "org": "제주특별자치도",
+      "order_org": "제주특별자치도",
+      "registered_at": "2026-11-20 16:23",
+      "registered_date": "2026-11-20",
+      "opinion_close_at": "2026-11-24 23:59",
+      "asign_budget_eok": 1.2635,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "운영·유지보수",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00302113&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00304143",
+      "title": "VLA 기반 AI 로봇 자율작업 알고리즘 성능검증 연구",
+      "org": "한국산업기술시험원",
+      "order_org": "한국산업기술시험원",
+      "registered_at": "2026-11-20 16:22",
+      "registered_date": "2026-11-20",
+      "opinion_close_at": "2026-11-25 23:59",
+      "asign_budget_eok": 0.8965,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00304143&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00304143&fileType=BFDTL&fileSeq=2",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00304143&fileType=BFDTL&fileSeq=3"
+      ],
+      "biz": "servc",
+      "biz_div": "기술용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00303977",
+      "title": "(세종앵커) AI 활용 전주기 창업지원 및 원스톱 서비스 구축·운영",
+      "org": "고려대학교 세종산학협력단",
+      "order_org": "고려대학교 세종산학협력단",
+      "registered_at": "2026-11-20 15:06",
+      "registered_date": "2026-11-20",
+      "opinion_close_at": "2026-11-25 23:59",
+      "asign_budget_eok": 0.8,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [
+        "R26BK01845648"
+      ],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00303977&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00303977&fileType=BFDTL&fileSeq=2"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00303746",
+      "title": "한국인공지능고 기숙사 증축공사 설계용역",
+      "org": "강원특별자치도교육청 강원특별자치도화천교육지원청",
+      "order_org": "강원특별자치도교육청 강원특별자치도화천교육지원청",
+      "registered_at": "2026-11-20 14:32",
+      "registered_date": "2026-11-20",
+      "opinion_close_at": "2026-11-27 23:59",
+      "asign_budget_eok": 5.2644,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00303746&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00303746&fileType=BFDTL&fileSeq=2",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00303746&fileType=BFDTL&fileSeq=3",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00303746&fileType=BFDTL&fileSeq=4",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00303746&fileType=BFDTL&fileSeq=5"
+      ],
+      "biz": "servc",
+      "biz_div": "기술용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00303892",
+      "title": "[성장엔진 브랜드 단과대학 및 AI 거점대학 패키지] 첨단융합학부 Physical AI용 전지·반도체 소재의 신뢰성 분석 시스템 구매",
+      "org": "부산대학교",
+      "order_org": "조달청 부산지방조달청",
+      "registered_at": "2026-11-20 14:13",
+      "registered_date": "2026-11-20",
+      "opinion_close_at": "2026-11-26 23:59",
+      "asign_budget_eok": 8.0639,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00303892&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "thng",
+      "biz_div": "물품",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00303856",
+      "title": "[앵커사업 1-1] 철도 기관사 휴먼에러 예방 AI 시스템 전방영상 통합분석 구축",
+      "org": "한라대학교",
+      "order_org": "한라대학교",
+      "registered_at": "2026-11-20 13:50",
+      "registered_date": "2026-11-20",
+      "opinion_close_at": "2026-11-25 23:59",
+      "asign_budget_eok": 0.9,
+      "scope": "AI SW 확대",
+      "fields": [
+        "비전·영상"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00303856&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00303810",
+      "title": "[성장엔진 브랜드 단과대학 및 AI 거점대학 패키지] 기계공학부 수소 품질관리 분석 시스템(GC-MS 기반) 구매",
+      "org": "부산대학교",
+      "order_org": "조달청 부산지방조달청",
+      "registered_at": "2026-11-20 13:07",
+      "registered_date": "2026-11-20",
+      "opinion_close_at": "2026-11-23 23:59",
+      "asign_budget_eok": 1.5813,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00303810&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "thng",
+      "biz_div": "물품",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00303789",
+      "title": "2026년 수원시 중소기업 AX 지원 사업 운영 용역",
+      "org": "성균관대학교 자연과학캠퍼스 부총장 산학협력단",
+      "order_org": "성균관대학교 자연과학캠퍼스 부총장 산학협력단",
+      "registered_at": "2026-11-20 11:48",
+      "registered_date": "2026-11-20",
+      "opinion_close_at": "2026-11-25 23:59",
+      "asign_budget_eok": 0.4,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00303789&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00303697",
+      "title": "지능형 농기계 실증단지 통합플랫폼.부지인프라 조성",
+      "org": "한국농업기술진흥원",
+      "order_org": "조달청",
+      "registered_at": "2026-11-20 10:27",
+      "registered_date": "2026-11-20",
+      "opinion_close_at": "2026-11-25 23:59",
+      "asign_budget_eok": 111.1514,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00303697&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00303697&fileType=BFDTL&fileSeq=2"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
+    {
+      "prespec_no": "R26BD00303617",
+      "title": "BPA AI 과제 추진을 위한 공통 GPU 인프라 구축 용역",
+      "org": "부산항만공사",
+      "order_org": "부산항만공사",
+      "registered_at": "2026-11-20 09:32",
+      "registered_date": "2026-11-20",
+      "opinion_close_at": "2026-11-23 23:59",
+      "asign_budget_eok": 15.753,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 인프라"
+      ],
+      "nature": "인프라",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00303617&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00303617&fileType=BFDTL&fileSeq=2"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
     {
       "prespec_no": "R26BD00303409",
       "title": "2026년 재학생맞춤형 고용서비스「CARE-Y 청년잇다 ·Career DNA 」 AI 에이전트 플랫폼 구축 용역",
@@ -429,7 +704,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": "운영·유지보수",
+      "nature": "연구·교육·행사",
       "bid_nos": [],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00302086&fileType=BFDTL&fileSeq=1"
@@ -899,8 +1174,10 @@
       "fields": [
         "AI 인프라"
       ],
-      "nature": "인프라",
-      "bid_nos": [],
+      "nature": "연구·교육·행사",
+      "bid_nos": [
+        "R26BK01844200"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00300927&fileType=BFDTL&fileSeq=1",
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00300927&fileType=BFDTL&fileSeq=2"
@@ -923,7 +1200,9 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01839783"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00300891&fileType=BFDTL&fileSeq=1",
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00300891&fileType=BFDTL&fileSeq=2"
@@ -1038,7 +1317,9 @@
         "AI 일반"
       ],
       "nature": "운영·유지보수",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01839575"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00300333&fileType=BFDTL&fileSeq=1"
       ],
@@ -1060,7 +1341,9 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01841656"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00300244&fileType=BFDTL&fileSeq=1"
       ],
@@ -1082,7 +1365,9 @@
         "AI 일반"
       ],
       "nature": null,
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01842795"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00300234&fileType=BFDTL&fileSeq=1"
       ],
@@ -1104,7 +1389,9 @@
         "AI 일반"
       ],
       "nature": null,
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01840972"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00300214&fileType=BFDTL&fileSeq=1",
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00300214&fileType=BFDTL&fileSeq=2"
@@ -1358,7 +1645,9 @@
         "AI 일반"
       ],
       "nature": "연구·교육·행사",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01837933"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00299445&fileType=BFDTL&fileSeq=1",
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00299445&fileType=BFDTL&fileSeq=2",
@@ -1382,7 +1671,9 @@
         "AI 인프라"
       ],
       "nature": "인프라",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01837893"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00299444&fileType=BFDTL&fileSeq=1"
       ],
@@ -1404,7 +1695,9 @@
         "AI 일반"
       ],
       "nature": null,
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01837962"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00299426&fileType=BFDTL&fileSeq=1"
       ],
@@ -1474,7 +1767,9 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01838706"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00299233&fileType=BFDTL&fileSeq=1",
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00299233&fileType=BFDTL&fileSeq=2"
@@ -1613,7 +1908,10 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01838974",
+        "R26BK01841377"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00299176&fileType=BFDTL&fileSeq=1"
       ],
@@ -1752,7 +2050,9 @@
         "음성·언어·문서"
       ],
       "nature": "시스템 구축·고도화",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01841955"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00298955&fileType=BFDTL&fileSeq=1",
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00298955&fileType=BFDTL&fileSeq=2"
@@ -1919,7 +2219,9 @@
         "AI 일반"
       ],
       "nature": null,
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01839912"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00298534&fileType=BFDTL&fileSeq=1"
       ],
@@ -2013,7 +2315,9 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01841095"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00298244&fileType=BFDTL&fileSeq=1",
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00298244&fileType=BFDTL&fileSeq=2",
@@ -2133,7 +2437,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": "운영·유지보수",
+      "nature": "연구·교육·행사",
       "bid_nos": [],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00298036&fileType=BFDTL&fileSeq=1"
@@ -2180,7 +2484,9 @@
         "AI 일반"
       ],
       "nature": "운영·유지보수",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01840091"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00297931&fileType=BFDTL&fileSeq=1"
       ],
@@ -2248,7 +2554,9 @@
         "AI 일반"
       ],
       "nature": null,
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01837786"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00297696&fileType=BFDTL&fileSeq=1"
       ],
@@ -2407,7 +2715,9 @@
         "AI 일반"
       ],
       "nature": "운영·유지보수",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01834827"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00297042&fileType=BFDTL&fileSeq=1",
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00297042&fileType=BFDTL&fileSeq=2"
@@ -3285,7 +3595,7 @@
       "fields": [
         "데이터·예측"
       ],
-      "nature": "시스템 구축·고도화",
+      "nature": "운영·유지보수",
       "bid_nos": [
         "R26BK01819132"
       ],
@@ -4216,30 +4526,6 @@
       ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00292871&fileType=BFDTL&fileSeq=1"
-      ],
-      "biz": "servc",
-      "biz_div": "일반용역",
-      "sw_biz": false
-    },
-    {
-      "prespec_no": "R26BD00292833",
-      "title": "2027년도 슈퍼컴퓨팅AI교육연구센터 전체 네트워크 유지보수",
-      "org": "대구경북과학기술원",
-      "order_org": "대구경북과학기술원",
-      "registered_at": "2026-10-30 13:31",
-      "registered_date": "2026-10-30",
-      "opinion_close_at": "2026-11-04 23:59",
-      "asign_budget_eok": 0.5186,
-      "scope": "AI SW 확대",
-      "fields": [
-        "AI 일반"
-      ],
-      "nature": "운영·유지보수",
-      "bid_nos": [
-        "R26BK01812534"
-      ],
-      "spec_files": [
-        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00292833&fileType=BFDTL&fileSeq=1"
       ],
       "biz": "servc",
       "biz_div": "일반용역",
@@ -8261,7 +8547,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": "시스템 구축·고도화",
+      "nature": "운영·유지보수",
       "bid_nos": [],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00282810&fileType=BFDTL&fileSeq=1",
