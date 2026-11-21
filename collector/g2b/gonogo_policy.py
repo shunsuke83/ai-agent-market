@@ -301,7 +301,8 @@ def judge_gates(
     if "schedule" in gates_cfg:
         need = gates_cfg["schedule"].get("min_business_days_to_deadline")
         left = business_days_until(now, n.get("close_at"))
-        if need is not None and left is not None:
+        # T-04: closed notices are scored for fit, but schedule readiness no longer applies.
+        if need is not None and left is not None and left > 0:
             out.append(("일정", PASS if left >= int(need) else FAIL, f"마감까지 영업일 {left}일"))
     return out
 
@@ -477,11 +478,12 @@ def score_policy(
     need_days = (gate_cfg.get("schedule") or {}).get("min_business_days_to_deadline")
     max_builds = (gate_cfg.get("capacity") or {}).get("max_concurrent_builds")
     left = business_days_until(now, n.get("close_at"))
-    if need_days is not None and max_builds is not None and left is not None:
+    open_for_schedule = left is not None and left > 0
+    if need_days is not None and max_builds is not None and open_for_schedule:
         parts["staffing_schedule"] = 1.0 if left >= 2 * int(need_days) else 0.6 if left >= int(need_days) else 0.0
     else:
         parts["staffing_schedule"] = None
-        if left is not None:
+        if open_for_schedule:
             notes.append(f"마감까지 영업일 {left}일")
 
     tier = _tier(budget, profile)

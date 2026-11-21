@@ -66,6 +66,12 @@ def test_nature_ops_and_infra():
     assert classify_nature("거대 생성형 모델 학습용 GPU Server 구매") == "인프라"
 
 
+def test_nature_infra_before_education():
+    # T-06: 인프라 keywords win over 교육 when both appear (장비 구매).
+    assert classify_nature("AI 교육 및 학습용 GPU 서버 구매") == "인프라"
+    assert classify_nature("교육용 NPU 장비 구매") == "인프라"
+
+
 def test_nature_event_ops_not_maintenance():
     # N-01: "운영 용역" alone must not steal education/event titles.
     assert classify_nature("POSTECH AI:Q 2026 행사 운영 용역") == "연구·교육·행사"

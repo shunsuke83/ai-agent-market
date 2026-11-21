@@ -487,15 +487,28 @@
       limit += PAGE * 2;
       apply();
     });
-    // N-02: 제외/임박 토글 후 다시 페이지·합계 계산.
+    function refillSelect(sel, col, allLabel) {
+      if (!sel || col < 0) return;
+      var prev = sel.value;
+      var fresh = buildSelect(rows, col, allLabel);
+      sel.innerHTML = fresh.innerHTML;
+      setSelect(sel, prev);
+    }
+
+    // N-02 / T-07: 제외·임박 토글 후 페이지·합계·상태 괄호 건수 다시 계산.
     ["show-excluded", "show-urgent"].forEach(function (id) {
       var el = document.getElementById(id);
       if (!el) return;
       el.addEventListener("change", function () {
+        if (id === "show-excluded") {
+          document.body.classList.toggle("show-excluded", el.checked);
+          refillSelect(statusSel, statusCol, "상태 전체");
+          refillSelect(scopeSel, scopeCol, "범위 전체");
+        }
         reset();
       });
     });
-    // B-15: open hash target row (e.g. #p-…) by raising the page limit.
+    // B-15 / T-07: open hash target row (e.g. #p-…) by raising the page limit.
     function revealHash() {
       var id = (window.location.hash || "").replace(/^#/, "");
       if (!id) return;
@@ -503,7 +516,13 @@
       if (!target || !tbody.contains(target)) return;
       var idx = Array.prototype.indexOf.call(tbody.rows, target);
       if (idx < 0) return;
-      if (isSoftExcluded(target)) document.body.classList.add("show-excluded");
+      if (isSoftExcluded(target)) {
+        document.body.classList.add("show-excluded");
+        var box = document.getElementById("show-excluded");
+        if (box) box.checked = true;
+        refillSelect(statusSel, statusCol, "상태 전체");
+        refillSelect(scopeSel, scopeCol, "범위 전체");
+      }
       while (limit <= idx) limit += PAGE * 2;
       apply();
       try {
