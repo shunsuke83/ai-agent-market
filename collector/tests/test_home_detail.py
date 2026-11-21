@@ -66,10 +66,16 @@ def test_home_dday_badge_and_competition_column():
     assert "비교 표본 부족" in closing
     soon = build_home([_n(close_at="2026-11-02 10:00")], [], {}, now=NOW)
     assert 'class="dday urgent"' in soon and ">D-3 임박</span>" in soon
+    assert "11-02 10:00" in soon.split("<h2>마감 임박")[1].split("<h2>")[0]
+    assert "closing-soon" in soon
+    assert 'id="urgent-label"' in soon
     today = build_home([_n(close_at="2026-10-30 18:00")], [], {}, now=NOW)
     assert 'class="dday urgent"' in today and ">D-day 임박</span>" in today
     assert "최근 7일 새 공고" in out
     assert 'class="dday-collapse"' in soon
+    # New-notices table must not get closing-soon (T-03)
+    new_sec = soon.split("<h2>최근")[1].split("<h2>")[0]
+    assert "closing-soon" not in new_sec
 
 
 def test_home_fit_uses_rfp_summary(monkeypatch):

@@ -32,6 +32,16 @@ def _parse_date(s: str) -> date:
     return datetime.strptime(s, "%Y-%m-%d").date()
 
 
+def _range_has_weekday(start: date, end: date) -> bool:
+    """True if [start, end] includes at least one Mon–Fri day."""
+    cur = start
+    while cur <= end:
+        if cur.weekday() < 5:
+            return True
+        cur += timedelta(days=1)
+    return False
+
+
 def cmd_bootstrap(args: argparse.Namespace) -> int:
     from .seed import seed_path
 
@@ -72,6 +82,16 @@ def cmd_collect(args: argparse.Namespace) -> int:
     raw = client.search_bids_ai(start, end)
     print(f"Raw unique notices: {len(raw)}")
 
+    out = Path(args.out)
+    # T-01: a weekday-spanning window that returns 0 rows is almost always an API quirk,
+    # not a real empty market — keep the previous snapshot and fail the stage.
+    if not raw and _range_has_weekday(start, end) and out.exists() and not args.replace:
+        print(
+            f"::warning::bid collect empty for {start}→{end} (weekdays in range); "
+            f"keeping previous {out}"
+        )
+        return 1
+
     normalized: list[dict[str, Any]] = []
     for item in raw:
         n = normalize_bid_item(item, rules)
@@ -83,7 +103,6 @@ def cmd_collect(args: argparse.Namespace) -> int:
     print(f"In 8~30억 band: {len(band)}")
 
     existing: list[dict[str, Any]] = []
-    out = Path(args.out)
     if out.exists() and not args.replace:
         prev = json.loads(out.read_text(encoding="utf-8"))
         existing = prev.get("notices") or prev.get("band_notices") or []
@@ -307,17 +326,22 @@ def cmd_collect_plans(args: argparse.Namespace) -> int:
     plans = sorted(rows.values(), key=lambda p: (p.get("order_ym") or "", p["plan_no"]))
     out = Path(args.out)
     # B-03: empty successful fetch must not wipe a good snapshot.
-    if not plans and out.exists():
-        try:
-            prev = json.loads(out.read_text(encoding="utf-8"))
-            prev_n = len(prev.get("plans") or [])
-        except (OSError, json.JSONDecodeError, TypeError):
-            prev_n = 0
+    # If the on-disk file is already empty, treat empty again as stage failure (no stamp bump).
+    if not plans:
+        prev_n = 0
+        if out.exists():
+            try:
+                prev = json.loads(out.read_text(encoding="utf-8"))
+                prev_n = len(prev.get("plans") or [])
+            except (OSError, json.JSONDecodeError, TypeError):
+                prev_n = 0
         if prev_n:
             print(
                 f"::warning::order plans empty (raw={len(raw)}); keeping previous {prev_n} rows in {out}"
             )
             return 0
+        print(f"::warning::order plans empty (raw={len(raw)}); previous also empty — failing stage")
+        return 1
     _write_json(out, {"schema_version": 1, "generated_at": utc_now_iso(), "plans": plans})
     print(f"Order plans: raw={len(raw)} ai={len(plans)} → {out}")
     return 0

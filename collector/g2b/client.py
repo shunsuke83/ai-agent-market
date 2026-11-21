@@ -95,7 +95,7 @@ def _dt_param(d: date | datetime, end: bool = False) -> str:
 
 
 def month_windows(start: date, end: date) -> Iterator[tuple[date, date]]:
-    """API typically allows ~1 month per request — split ranges."""
+    """API typically allows ~1 month per request — split ranges (계약·사전규격)."""
     cur = start
     while cur <= end:
         if cur.month == 12:
@@ -103,6 +103,17 @@ def month_windows(start: date, end: date) -> Iterator[tuple[date, date]]:
         else:
             nxt = date(cur.year, cur.month + 1, 1)
         window_end = min(end, nxt - timedelta(days=1))
+        yield cur, window_end
+        cur = window_end + timedelta(days=1)
+
+
+def day_windows(start: date, end: date, max_days: int = 7) -> Iterator[tuple[date, date]]:
+    """Bid/award PPSSrch returns empty for wide windows (~14d); keep chunks ≤ max_days."""
+    if max_days < 1:
+        raise ValueError("max_days must be >= 1")
+    cur = start
+    while cur <= end:
+        window_end = min(end, cur + timedelta(days=max_days - 1))
         yield cur, window_end
         cur = window_end + timedelta(days=1)
 
@@ -256,7 +267,7 @@ class G2BClient:
         """Search bid notices whose 공고명 contains keyword (PPSSrch)."""
         url = BID_OPS[biz]
         out: list[dict[str, Any]] = []
-        for bgn, edn in month_windows(start, end):
+        for bgn, edn in day_windows(start, end, max_days=7):
             params = {
                 "inqryDiv": "1",
                 "inqryBgnDt": _dt_param(bgn),
@@ -382,7 +393,7 @@ class G2BClient:
         """개찰·낙찰 완료 목록 (inqryDiv=1, 등록일시 기준, ~1개월 창)."""
         url = SCSBID_OPS[biz]
         out: list[dict[str, Any]] = []
-        for bgn, edn in month_windows(start, end):
+        for bgn, edn in day_windows(start, end, max_days=7):
             params = {
                 "inqryDiv": "1",
                 "inqryBgnDt": _dt_param(bgn),

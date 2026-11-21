@@ -77,7 +77,7 @@ _HEADER_HELP = {
 }
 
 
-def _table(head: list[tuple[str, bool]], rows: list[str], empty: str) -> str:
+def _table(head: list[tuple[str, bool]], rows: list[str], empty: str, *, extra_class: str = "") -> str:
     if not rows:
         return f'<p class="empty">{html.escape(empty)}</p>'
 
@@ -88,10 +88,21 @@ def _table(head: list[tuple[str, bool]], rows: list[str], empty: str) -> str:
         return f"<th{cls}{attr}>{html.escape(label)}</th>"
 
     ths = "".join(th(h, num) for h, num in head)
+    cls = f"notices home-list js-filter{(' ' + extra_class) if extra_class else ''}"
     return (
-        f'<div class="tbl"><table class="notices home-list js-filter"><thead><tr>{ths}</tr></thead>'
+        f'<div class="tbl"><table class="{cls}"><thead><tr>{ths}</tr></thead>'
         f"<tbody>{''.join(rows)}</tbody></table></div>"
     )
+
+
+def _close_display(close_at: str | None) -> str:
+    """MM-DD HH:MM for closing-soon; empty if unusable."""
+    raw = (close_at or "")[:16]
+    if len(raw) >= 16 and raw[10] == " ":
+        return f"{raw[5:10]} {raw[11:16]}"
+    if len(raw) >= 10:
+        return raw[5:10]
+    return raw
 
 
 def _td(v: str, num: bool = False, *, sort: str | None = None) -> str:
@@ -303,12 +314,12 @@ def build_home(
     def _closing_row(n: dict[str, Any], *, collapsed: bool = False) -> str:
         cls = ' class="dday-collapse"' if collapsed else ""
         close = (n.get("close_at") or "")[:16]
-        close_day = close[:10]
+        shown = _close_display(n.get("close_at"))
         return (
             f"<tr{cls}>"
             + _td(
-                html.escape(close_day) + _dday(n.get("close_at"), today),
-                sort=close_day or None,
+                html.escape(shown) + _dday(n.get("close_at"), today),
+                sort=close or None,
             )
             + _td(html.escape(n.get("org") or ""))
             + _td(_title_cell(n))
@@ -426,7 +437,7 @@ def build_home(
         + f"<h2>마감 임박 ({DEADLINE_DAYS}일 이내)</h2>"
         + (
             f'<p class="meta"><label class="tbl-only"><input type="checkbox" id="show-urgent"> '
-            f"D-{URGENT_DAYS} 이하 {len(urgent)}건도 펼치기</label></p>"
+            f'<span id="urgent-label">D-{URGENT_DAYS} 이하 {len(urgent)}건도 펼치기</span></label></p>'
             if urgent
             else ""
         )
@@ -435,6 +446,7 @@ def build_home(
              ("예산(억)", True), ("계약 방식", False), ("경쟁·낙찰 범위", False)],
             closing_rows,
             f"{DEADLINE_DAYS}일 안에 마감되는 AI 공고가 없습니다.",
+            extra_class="closing-soon",
         )
         + (more(len(closing_rows), len(closing), "band.html", "8~30억 구간 공고 검색") if closing else "")
         + "<h2>의견 접수 중 사전규격</h2>"
