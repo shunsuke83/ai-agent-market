@@ -104,3 +104,21 @@ def test_failed_collect_keeps_last_success(tmp_path):
     assert "최근 수집 실패" in stamp_text(status)
     assert stamp_text(first).startswith("데이터 기준 ")
     assert "실패" not in stamp_text(first)
+
+
+def test_stamp_shows_d1_and_pages_outcomes(tmp_path):
+    out = tmp_path / "run_status.json"
+
+    def mark(**kw):
+        ns = argparse.Namespace(out=str(out))
+        for name in ("collect", "d1", "pages"):
+            setattr(ns, name, None)
+        for k, v in kw.items():
+            setattr(ns, k, v)
+        assert cmd_mark_run(ns) == 0
+        return json.loads(out.read_text(encoding="utf-8"))
+
+    status = mark(collect="success", d1="success", pages="failure")
+    text = stamp_text(status)
+    assert "D1 동기화" in text
+    assert "CF 미러 실패" in text

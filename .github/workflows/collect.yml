@@ -218,6 +218,7 @@ jobs:
 
       # Internal D1: fit scores use COMPANY_PROFILE. Skip cleanly if Cloudflare secrets unset.
       - name: Sync notices to Cloudflare D1
+        id: d1
         continue-on-error: true
         env:
           COMPANY_PROFILE: ${{ secrets.COMPANY_PROFILE }}
@@ -227,12 +228,14 @@ jobs:
         run: python -m g2b.collect sync-d1
         working-directory: collector
 
-      # Public CF Pages (optional until project + token exist). Render already includes fit when COMPANY_PROFILE is set.
+      # Public CF Pages. Must use PYTHONPATH=collector — cwd is repo root for public-dist/.
       - name: Deploy public site to Cloudflare Pages
+        id: pages
         continue-on-error: true
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          PYTHONPATH: collector
         run: |
           if [ -z "${CLOUDFLARE_API_TOKEN:-}" ]; then
             echo "CLOUDFLARE_API_TOKEN unset — skip public Pages deploy."
@@ -243,6 +246,15 @@ jobs:
           # Deploy cwd=public-dist so web/functions are not bundled onto the public project.
           npx --prefix web wrangler pages deploy public-dist --project-name=ai-agent-market --commit-dirty=true
         working-directory: .
+
+      # Record D1 / CF Pages after those steps so home stamp can show mirror health (DB plan §1).
+      - name: Record Cloudflare outcomes
+        run: |
+          python -m g2b.collect mark-run \
+            --d1 "${{ steps.d1.outcome }}" \
+            --pages "${{ steps.pages.outcome }}"
+          python -m g2b.collect render index
+        working-directory: collector
 
       # Slack failure must not block the data commit; unsent items retry next run.
       - name: Alerts (RSS, calendar, Slack)

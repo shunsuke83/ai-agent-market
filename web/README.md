@@ -20,12 +20,14 @@
 
 D1 `ai-agent-market` · 마이그레이션 적용됨 · notices 동기화됨.
 
-GitHub Actions secrets (일부 등록됨):
+GitHub Actions secrets (등록됨):
 
 - `CLOUDFLARE_ACCOUNT_ID` — 등록됨
 - `CLOUDFLARE_D1_DATABASE_ID` — 등록됨
-- `CLOUDFLARE_API_TOKEN` — **아직 필요** (대시보드에서 API Token 발급, D1 edit + Pages deploy)
+- `CLOUDFLARE_API_TOKEN` — 등록됨 (D1 edit 확인됨; 공개 Pages deploy는 `Account` → `Cloudflare Pages` → `Edit` 권한도 필요)
 - `COMPANY_PROFILE` — D1 sync·공개/내부 렌더 적합도 (YAML은 data/에 안 넣음)
+
+공개 미러(`ai-agent-market.pages.dev`)가 GitHub Pages보다 뒤처지면 Actions의 **Deploy public site to Cloudflare Pages** 로그와 홈 스탬프의 `CF 미러` 문구를 확인하세요.
 
 공개·내부 모두 적합도를 표시합니다. 내부는 D1 실시간, 공개는 수집 시 렌더한 정적 HTML입니다.
 적합도는 GenON 솔루션 매칭(S/A) + 구축·제품 여부 기준입니다. 순수 운영 용역·B등급은 참여(GO)가 나오지 않습니다.
@@ -58,11 +60,11 @@ npm run dev
 
 ## 공개 배포
 
-수집 Actions가 프로필 **없이** `render all` 한 뒤:
+수집 Actions가 `render all` 한 뒤 (repo root, `PYTHONPATH=collector`):
 
 ```bash
-# repo root 산출물을 public-dist 로 모은 다음
-npx wrangler pages deploy public-dist --project-name=ai-agent-market
+PYTHONPATH=collector python -m g2b.collect stage-public
+npx --prefix web wrangler pages deploy public-dist --project-name=ai-agent-market
 ```
 
 공개 사이트에도 적합도를 넣으려면 수집 렌더에 `COMPANY_PROFILE`이 필요합니다(YAML은 data/에 쓰지 않음).
