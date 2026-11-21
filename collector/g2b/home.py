@@ -356,8 +356,9 @@ def build_home(
             + "</tr>"
         )
 
-    closing_rows = [_closing_row(n) for n in later_closing[:LIMIT]] + [
-        _closing_row(n, collapsed=True) for n in urgent[:LIMIT]
+    # W-02: list every notice closing within DEADLINE_DAYS; D-3 rows stay collapsible.
+    closing_rows = [_closing_row(n) for n in later_closing] + [
+        _closing_row(n, collapsed=True) for n in urgent
     ]
     new_rows = [
         "<tr>"
@@ -463,7 +464,7 @@ def build_home(
         + f"<h2>마감 임박 ({DEADLINE_DAYS}일 이내)</h2>"
         + (
             f'<p class="meta"><label class="tbl-only"><input type="checkbox" id="show-urgent"> '
-            f'<span id="urgent-label">D-{URGENT_DAYS} 이하 {len(urgent)}건도 펼치기</span></label></p>'
+            f'<span id="urgent-label">D-{URGENT_DAYS} 이하도 펼치기</span></label></p>'
             if urgent
             else ""
         )
@@ -474,7 +475,6 @@ def build_home(
             f"{DEADLINE_DAYS}일 안에 마감되는 AI 공고가 없습니다.",
             extra_class="closing-soon",
         )
-        + (more(len(closing_rows), len(closing), "band.html", "8~30억 구간 공고 검색") if closing else "")
         + "<h2>의견 접수 중 사전규격</h2>"
         + _table(
             [("의견마감", False), ("수요기관", False), ("사전규격명", False), ("배정예산(억)", True)],

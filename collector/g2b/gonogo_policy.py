@@ -100,6 +100,25 @@ def business_days_until(now: datetime, close_at: str | None) -> int | None:
     return count
 
 
+def close_at_passed(now: datetime, close_at: str | None) -> bool:
+    """True when the notice deadline datetime is at or before now (W-04)."""
+    if not close_at:
+        return False
+    raw = str(close_at).strip()
+    end: datetime | None = None
+    for fmt, n in (("%Y-%m-%d %H:%M", 16), ("%Y-%m-%d", 10)):
+        try:
+            end = datetime.strptime(raw[:n], fmt)
+            break
+        except ValueError:
+            continue
+    if end is None:
+        return False
+    if now.tzinfo is not None and end.tzinfo is None:
+        end = end.replace(tzinfo=now.tzinfo)
+    return end <= now
+
+
 def _summary_text(summary: dict[str, Any] | None) -> str:
     s = (summary or {}).get("summary") or {}
     parts = [*(s.get("requirements") or []), *(s.get("cautions") or []), s.get("evaluation") or ""]
@@ -301,8 +320,8 @@ def judge_gates(
     if "schedule" in gates_cfg:
         need = gates_cfg["schedule"].get("min_business_days_to_deadline")
         left = business_days_until(now, n.get("close_at"))
-        # T-04: closed notices are scored for fit, but schedule readiness no longer applies.
-        if need is not None and left is not None and left > 0:
+        # T-04 / W-04: skip schedule only after close_at has passed (not when left==0 same day).
+        if need is not None and left is not None and not close_at_passed(now, n.get("close_at")):
             out.append(("일정", PASS if left >= int(need) else FAIL, f"마감까지 영업일 {left}일"))
     return out
 
@@ -478,7 +497,7 @@ def score_policy(
     need_days = (gate_cfg.get("schedule") or {}).get("min_business_days_to_deadline")
     max_builds = (gate_cfg.get("capacity") or {}).get("max_concurrent_builds")
     left = business_days_until(now, n.get("close_at"))
-    open_for_schedule = left is not None and left > 0
+    open_for_schedule = left is not None and not close_at_passed(now, n.get("close_at"))
     if need_days is not None and max_builds is not None and open_for_schedule:
         parts["staffing_schedule"] = 1.0 if left >= 2 * int(need_days) else 0.6 if left >= int(need_days) else 0.0
     else:

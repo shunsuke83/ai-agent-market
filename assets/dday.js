@@ -27,13 +27,17 @@
     el.classList.toggle("urgent", days <= URGENT);
   }
 
-  /** T-03: only rows in the 마감 임박 table are collapsible. */
+  /** T-03: only rows in the 마감 임박 table are collapsible. W-05: keep past-deadline rows collapsed. */
   function syncCollapse(tr) {
     var badge = tr.querySelector(".dday[data-close]");
     if (!badge) return;
     var days = daysUntil(badge.getAttribute("data-close") || "");
-    if (days == null || days < 0) {
+    if (days == null) {
       tr.classList.remove("dday-collapse");
+      return;
+    }
+    if (days < 0) {
+      tr.classList.add("dday-collapse");
       return;
     }
     tr.classList.toggle("dday-collapse", days <= URGENT);

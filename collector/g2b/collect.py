@@ -78,13 +78,19 @@ def cmd_collect(args: argparse.Namespace) -> int:
         print(f"error: {e}", file=sys.stderr)
         return 2
 
+    out = Path(args.out)
     print(f"Collecting G2B bids {start} → {end} …")
-    raw = client.search_bids_ai(start, end)
+    from .client import G2BEmptyWindow
+
+    try:
+        raw = client.search_bids_ai(start, end)
+    except G2BEmptyWindow as e:
+        # W-01: a weekday chunk stayed empty after bisect — keep snapshot, fail stage.
+        print(f"::warning::bid collect empty window; keeping previous {out}: {e}")
+        return 1 if out.exists() and not args.replace else 1
     print(f"Raw unique notices: {len(raw)}")
 
-    out = Path(args.out)
-    # T-01: a weekday-spanning window that returns 0 rows is almost always an API quirk,
-    # not a real empty market — keep the previous snapshot and fail the stage.
+    # T-01: whole range weekday empty — keep previous snapshot and fail the stage.
     if not raw and _range_has_weekday(start, end) and out.exists() and not args.replace:
         print(
             f"::warning::bid collect empty for {start}→{end} (weekdays in range); "
@@ -112,13 +118,18 @@ def cmd_collect(args: argparse.Namespace) -> int:
     award_stats: dict[str, Any] = {"fetched": 0, "updated": 0}
     if not args.skip_awards:
         print(f"Fetching Scsbid awards {start} → {end} …")
-        raw_awards = client.fetch_awards_range(start, end)
+        try:
+            raw_awards = client.fetch_awards_range(start, end)
+        except G2BEmptyWindow as e:
+            print(f"::warning::award collect empty window; writing bids without award refresh: {e}")
+            raw_awards = []
         awards = [a for a in (normalize_award_item(x) for x in raw_awards) if a]
         print(f"Award rows (normalized): {len(awards)}")
-        merged, n_upd = apply_awards_to_notices(merged, awards)
-        merged = sort_notices(merged)
-        award_stats = {"fetched": len(awards), "updated": n_upd}
-        print(f"Notices updated with award fields: {n_upd}")
+        if awards:
+            merged, n_upd = apply_awards_to_notices(merged, awards)
+            merged = sort_notices(merged)
+            award_stats = {"fetched": len(awards), "updated": n_upd}
+            print(f"Notices updated with award fields: {n_upd}")
 
     payload = {
         "schema_version": 1,
@@ -336,10 +347,12 @@ def cmd_collect_plans(args: argparse.Namespace) -> int:
             except (OSError, json.JSONDecodeError, TypeError):
                 prev_n = 0
         if prev_n:
+            # W-03: keep file but fail the stage so run_status does not bump "기준일".
             print(
-                f"::warning::order plans empty (raw={len(raw)}); keeping previous {prev_n} rows in {out}"
+                f"::warning::order plans empty (raw={len(raw)}); "
+                f"keeping previous {prev_n} rows in {out} — failing stage"
             )
-            return 0
+            return 1
         print(f"::warning::order plans empty (raw={len(raw)}); previous also empty — failing stage")
         return 1
     _write_json(out, {"schema_version": 1, "generated_at": utc_now_iso(), "plans": plans})

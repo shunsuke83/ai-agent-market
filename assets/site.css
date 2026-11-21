@@ -123,6 +123,7 @@ table.bidder-history th:nth-child(6){width:78px}table.bidder-history th:nth-chil
 .dday{display:inline-block;margin-left:6px;padding:0 6px;border-radius:999px;font-size:12px;font-weight:600;color:var(--accent);background:var(--accent-soft);white-space:nowrap}
 .dday.urgent{color:var(--stamp);background:var(--stamp-soft);font-weight:700}
 table.home-list .dday{display:table;margin:3px 0 0}
+.dday[hidden]{display:none !important}
 .tbl-select{margin-top:-4px}
 .tbl-act{font:inherit;font-size:13px;padding:4px 10px;border:1px solid var(--line);border-radius:var(--radius-sm);background:var(--surface);color:var(--fg);cursor:pointer}
 .tbl-act:hover:not(:disabled){border-color:var(--accent);color:var(--accent)}.tbl-act:disabled{opacity:.45;cursor:default}

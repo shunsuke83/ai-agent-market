@@ -46,6 +46,24 @@ def test_home_year_bars_live_from_notices():
     assert "2,719건" not in out  # frozen keep-block must not stick
 
 
+def test_home_closing_lists_all_within_deadline_days():
+    """W-02: do not truncate closing-soon to 2×LIMIT=30."""
+    notices = [
+        _n(
+            bid_no=f"C{i:02d}",
+            title=f"생성형 AI 챗봇 구축 {i}",
+            close_at=f"2026-11-{1 + (i % 5):02d} 10:00",
+            budget_eok=10.0 + i,
+        )
+        for i in range(35)
+    ]
+    out = build_home(notices, [], {}, now=NOW)
+    closing = out.split("<h2>마감 임박")[1].split("<h2>")[0]
+    assert all(f"C{i:02d}" in closing for i in range(35))
+    assert "건 더 있음" not in closing
+    assert "D-3 이하도 펼치기" in closing
+
+
 def test_home_lists_only_open_real_opportunities():
     notices = [
         _n(),
