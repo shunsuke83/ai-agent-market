@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-20T10:00:14Z",
+  "generated_at": "2026-11-21T09:46:15Z",
   "contracts": [
     {
       "contract_no": "R26TA02444846",
@@ -57,6 +57,35 @@
       "scope": "생성형·Agent",
       "fields": [
         "생성형·LLM"
+      ],
+      "nature": "시스템 구축·고도화"
+    },
+    {
+      "contract_no": "R26TA02448931",
+      "title": "2026년 인공지능(AI) 교과 도서 개발 인정도서 발행기관 운영 사업",
+      "org": "충남대학교 산학협력단",
+      "contract_org": "충남대학교 산학협력단",
+      "signed_date": "2026-11-20",
+      "period_text": "금차 0일, 총차 0일",
+      "end_date": "2027-10-31",
+      "amount_eok": 4.844,
+      "long_term": "신규",
+      "method": "일반경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "(주)비상교육",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "2118707735"
+        }
+      ],
+      "bid_no": "R26BK01785714",
+      "registered_at": "2026-11-21 15:03",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02448931&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
       ],
       "nature": "시스템 구축·고도화"
     },

@@ -1,11 +1,79 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-20T09:59:55Z",
+  "generated_at": "2026-11-21T09:45:59Z",
   "range": {
-    "since": "2026-11-17",
-    "until": "2026-11-20"
+    "since": "2026-11-18",
+    "until": "2026-11-21"
   },
   "prespecs": [
+    {
+      "prespec_no": "R26BD00304375",
+      "title": "제주 넙치양식 AX전환을 위한 AI지능형 양식실증 및 레트로핏 RAS 거점조성사업 실시설계 용역(양식시스템)",
+      "org": "어업회사법인 해온바다 주식회사",
+      "order_org": "어업회사법인 해온바다 주식회사",
+      "registered_at": "2026-11-20 22:20",
+      "registered_date": "2026-11-20",
+      "opinion_close_at": "2026-11-23 23:59",
+      "asign_budget_eok": 5.5441,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [],
+      "biz": "servc",
+      "biz_div": "기술용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00304368",
+      "title": "한림성심대학교 산학협력단 AI 스마트캠퍼스 시스템 구축",
+      "org": "한림성심대학교 산학협력단",
+      "order_org": "한림성심대학교 산학협력단",
+      "registered_at": "2026-11-20 20:58",
+      "registered_date": "2026-11-20",
+      "opinion_close_at": "2026-11-24 10:00",
+      "asign_budget_eok": 0.2178,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00304368&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00304368&fileType=BFDTL&fileSeq=2"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00304363",
+      "title": "AI 활용 의료기기 주요 인증제도 및 글로벌 시장 동향 분석 용역",
+      "org": "재단법인 한국에이아이의료헬스케어연구원",
+      "order_org": "재단법인 한국에이아이의료헬스케어연구원",
+      "registered_at": "2026-11-20 20:31",
+      "registered_date": "2026-11-20",
+      "opinion_close_at": "2026-11-25 23:59",
+      "asign_budget_eok": 1.0,
+      "scope": "AI SW 확대",
+      "fields": [
+        "의료·바이오 AI"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00304363&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00304363&fileType=BFDTL&fileSeq=2",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00304363&fileType=BFDTL&fileSeq=3",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00304363&fileType=BFDTL&fileSeq=4"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
     {
       "prespec_no": "R26BD00304214",
       "title": "2027년~28년 지능형교통체계(ITS) 유지관리 용역(긴급, 협상에의한계약)",
