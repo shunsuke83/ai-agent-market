@@ -123,3 +123,12 @@ def test_detail_shows_first_rank_and_unknown_amount():
     assert "<th>낙찰자</th><td>라마바</td>" in won
     assert "미확인" in won
     assert 'href="../assets/site.css' in won
+
+
+def test_proposal_markdown_omits_zero_budget():
+    from g2b.detail import proposal_markdown
+
+    md = proposal_markdown(_n(budget_eok=0), None, None)
+    assert "예산:" not in md
+    md2 = proposal_markdown(_n(budget_eok=12.0), None, None)
+    assert "- 예산:" in md2 and "12" in md2.split("- 예산:")[1].split("\n")[0]
