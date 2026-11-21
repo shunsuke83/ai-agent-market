@@ -7,9 +7,9 @@ from g2b.client import (
     BID_AWARD_WINDOW_DAYS,
     G2BClient,
     G2BEmptyWindow,
+    ORDER_PLAN_POSTED_WINDOW_DAYS,
     bisect_window,
     day_windows,
-    month_windows,
     window_has_weekday,
 )
 from g2b.collect import _range_has_weekday, cmd_collect
@@ -202,11 +202,11 @@ def test_award_continues_after_empty_weekday_chunk(monkeypatch):
     assert any(bgn >= date(2026, 11, 20) for bgn, _ in calls)
 
 
-def test_order_plans_use_month_windows(monkeypatch):
-    """X-02: posted range splits by calendar month, not 14-day chunks."""
+def test_order_plans_use_14_day_windows(monkeypatch):
+    """X-02: month windows return 0 after portal change; keep ≤14d posted chunks."""
     client = _client_no_http(monkeypatch)
     posted_start, posted_end = date(2025, 10, 16), date(2026, 11, 20)
-    expected = list(month_windows(posted_start, posted_end))
+    expected = list(day_windows(posted_start, posted_end, max_days=ORDER_PLAN_POSTED_WINDOW_DAYS))
     seen_windows: list[tuple[date, date]] = []
 
     def fake_pages(url, params, page_size=500):
@@ -232,6 +232,6 @@ def test_order_plans_use_month_windows(monkeypatch):
         posted_end,
         biz_types=["servc"],
     )
+    assert ORDER_PLAN_POSTED_WINDOW_DAYS == 14
     assert seen_windows == expected
-    assert len(seen_windows) < 29  # was 14d×29; month windows are fewer
-    assert all((edn - bgn).days + 1 <= 31 for bgn, edn in seen_windows)
+    assert all((edn - bgn).days + 1 <= 14 for bgn, edn in seen_windows)

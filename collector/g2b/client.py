@@ -77,8 +77,9 @@ class G2BEmptyWindow(G2BError):
 
 # Bid/award PPSSrch: 14d often empty; daily runs prove ≤4d is safe (W-01).
 BID_AWARD_WINDOW_DAYS = 4
-# Order-plan posted-date: wide 400d returns 0 (W-03). Guide max unknown → calendar month
-# (portal samples ≈1mo; cuts calls vs 14d×29 ≈522 → ~14×9×2 ≈252) (X-02).
+# Order-plan posted-date: wide 400d returns 0 (W-03). Calendar month returns 0 after
+# 2026-11-20 portal period change (Actions); keep ≤14d which still succeeds (X-02 revert).
+ORDER_PLAN_POSTED_WINDOW_DAYS = 14
 
 
 def redact_secrets(text: str | None) -> str:
@@ -407,11 +408,13 @@ class G2BClient:
         posted_end: date,
         biz_types: list[str] | None = None,
     ) -> list[dict[str, Any]]:
-        """발주계획 by 사업명 keyword. Split posted-date by calendar month (W-03/X-02)."""
+        """발주계획 by 사업명 keyword. Split posted-date into ≤14d windows (W-03/X-02)."""
         seen: dict[str, dict[str, Any]] = {}
         for biz in biz_types or ["servc", "thng"]:
             for kw in keywords:
-                for bgn, edn in month_windows(posted_start, posted_end):
+                for bgn, edn in day_windows(
+                    posted_start, posted_end, max_days=ORDER_PLAN_POSTED_WINDOW_DAYS
+                ):
                     params = {
                         "orderBgnYm": order_start.strftime("%Y%m"),
                         "orderEndYm": order_end.strftime("%Y%m"),
