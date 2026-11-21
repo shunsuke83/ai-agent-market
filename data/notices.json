@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-20T10:00:34Z",
+  "generated_at": "2026-11-21T09:46:29Z",
   "mode": "g2b_api",
   "range": {
-    "since": "2026-11-17",
-    "until": "2026-11-20"
+    "since": "2026-11-18",
+    "until": "2026-11-21"
   },
   "notices": [
     {
@@ -122056,14 +122056,14 @@
     }
   ],
   "stats": {
-    "raw": 170,
-    "classified": 159,
+    "raw": 110,
+    "classified": 104,
     "stored": 2173,
     "band": 509,
     "with_winner": 724,
     "awards": {
-      "fetched": 2630,
-      "updated": 14
+      "fetched": 1995,
+      "updated": 0
     },
     "scope": {
       "생성형·Agent": 217,
@@ -122071,5 +122071,5 @@
     },
     "budget_sanitized": 0
   },
-  "reclassified_at": "2026-11-20T10:00:33Z"
+  "reclassified_at": "2026-11-21T09:46:29Z"
 }
