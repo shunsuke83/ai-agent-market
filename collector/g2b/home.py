@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import html
 import json
-import re
 from datetime import date, datetime, timedelta
 from pathlib import Path
 from typing import Any
@@ -27,11 +26,6 @@ DEADLINE_DAYS = 7
 NEW_DAYS = 7
 OPENED_DAYS = 14
 LIMIT = 15
-
-# Editorial blocks of the old hand-written home that no collector owns.
-_KEEP_BLOCK_RE = re.compile(
-    r'<h2>AI 사업 공고 연도별 추이</h2>.*?<p class="note">.*?</p>', re.DOTALL
-)
 
 STATIC_CARDS = (
     '<h2>분석</h2><div class="cards">'
@@ -103,6 +97,39 @@ def _close_display(close_at: str | None) -> str:
     if len(raw) >= 10:
         return raw[5:10]
     return raw
+
+
+def year_counts(notices: list[dict[str, Any]]) -> list[tuple[str, int]]:
+    """U-01: live notice_date year tallies (no frozen keep-block)."""
+    from collections import Counter
+
+    c: Counter[str] = Counter()
+    for n in notices:
+        d = n.get("notice_date") or ""
+        if len(d) >= 4 and d[:4].isdigit():
+            c[d[:4]] += 1
+    return sorted(c.items(), key=lambda x: x[0])
+
+
+def _year_bars_html(counts: list[tuple[str, int]], as_of: date) -> str:
+    if not counts:
+        return (
+            '<h2>AI 사업 공고 연도별 추이</h2>'
+            '<p class="empty">연도별 집계할 공고가 없습니다.</p>'
+        )
+    top = max(n for _, n in counts) or 1
+    bars = "".join(
+        f'<div class="bar"><span>{html.escape(y)}</span>'
+        f'<div class="track"><div class="fill" style="width:{100.0 * n / top:.1f}%"></div></div>'
+        f'<span class="n">{n:,}건</span></div>'
+        for y, n in counts
+    )
+    return (
+        "<h2>AI 사업 공고 연도별 추이</h2>"
+        f'<div class="bars">{bars}</div>'
+        f'<p class="note">수집 공고 기준(공고일 연도). 올해는 {as_of.isoformat()}까지 누계입니다. '
+        "나라장터 Open API·사업명 자동 분류이며 원문과 전수 대조하지 않았습니다.</p>"
+    )
 
 
 def _td(v: str, num: bool = False, *, sort: str | None = None) -> str:
@@ -207,7 +234,6 @@ def build_home(
     *,
     now: datetime,
     reports_html: str = "",
-    keep_html: str = "",
     summaries: dict[str, dict[str, Any]] | None = None,
 ) -> str:
     rules = load_keywords()
@@ -485,21 +511,24 @@ def build_home(
         f"마감 {URGENT_DAYS}일 이하는 기본으로 접고, 경쟁·낙찰 범위는 비슷한 과거 사업의 투찰 업체 수와 낙찰률입니다.</p>"
         + reports_html
         + STATIC_CARDS
-        + keep_html
+        + _year_bars_html(year_counts(notices), today)
         + '<script>(function(){var u=document.getElementById("show-urgent");'
         'if(u)u.addEventListener("change",function(){document.body.classList.toggle("show-urgent",u.checked)});'
         'var e=document.getElementById("show-excluded");'
         'if(e)e.addEventListener("change",function(){document.body.classList.toggle("show-excluded",e.checked)});'
         "})();</script>"
     )
-    return page(SITE_TITLE, body, scripts=("table-sort.js", "table-filter.js", "dday.js"))
+    return page(
+        SITE_TITLE,
+        body,
+        path="index.html",
+        scripts=("table-sort.js", "table-filter.js", "dday.js"),
+    )
 
 
 def render_home(repo_root: Path, now: datetime | None = None) -> dict[str, Any]:
     now = now or datetime.now(KST)
     path = repo_root / "index.html"
-    old = path.read_text(encoding="utf-8") if path.exists() else ""
-    m = _KEEP_BLOCK_RE.search(old)
     from .normalize import read_notices
 
     from .rfp import load_summaries
@@ -515,7 +544,6 @@ def render_home(repo_root: Path, now: datetime | None = None) -> dict[str, Any]:
         load_run_status(repo_root),
         now=now,
         reports_html=_report_cards(repo_root),
-        keep_html=m.group(0) if m else "",
         summaries=summaries,
     )
     path.write_text(text, encoding="utf-8")

@@ -30,6 +30,22 @@ def test_title_link_points_to_detail_page():
     assert "g2b.go.kr" in title_link(_n(bid_no=None, g2b_url="https://www.g2b.go.kr/x"))
 
 
+def test_home_year_bars_live_from_notices():
+    from g2b.home import year_counts
+
+    notices = [
+        _n(bid_no="A", notice_date="2025-03-01"),
+        _n(bid_no="B", notice_date="2025-11-01"),
+        _n(bid_no="C", notice_date="2026-01-15"),
+    ]
+    assert year_counts(notices) == [("2025", 2), ("2026", 1)]
+    out = build_home(notices, [], {}, now=NOW)
+    assert "AI 사업 공고 연도별 추이" in out
+    assert "2건" in out and "1건" in out
+    assert "2026-10-30까지 누계" in out
+    assert "2,719건" not in out  # frozen keep-block must not stick
+
+
 def test_home_lists_only_open_real_opportunities():
     notices = [
         _n(),
@@ -132,3 +148,37 @@ def test_proposal_markdown_omits_zero_budget():
     assert "예산:" not in md
     md2 = proposal_markdown(_n(budget_eok=12.0), None, None)
     assert "- 예산:" in md2 and "12" in md2.split("- 예산:")[1].split("\n")[0]
+
+
+def test_render_detail_pages_stubs_reissue_via_prev_bid_no(tmp_path, monkeypatch):
+    """U-02: orphan bid HTML becomes a noindex stub linking to the reissue."""
+    from g2b.detail import render_detail_pages
+
+    live = _n(
+        bid_no="R26NEW",
+        title="재공고 AI 챗봇 구축",
+        prev_bid_no="R26OLD",
+        notice_date="2026-11-20",
+    )
+    orphan = tmp_path / "bids"
+    orphan.mkdir()
+    (orphan / "R26OLD-000.html").write_text("<html>old</html>", encoding="utf-8")
+    (orphan / "ORPHAN-000.html").write_text("<html>gone</html>", encoding="utf-8")
+
+    monkeypatch.setattr("g2b.detail.load_detail_notices", lambda root: [live])
+    monkeypatch.setattr("g2b.gonogo.load_profile", lambda: None)
+    monkeypatch.setattr("g2b.rfp.load_summaries", lambda root: {})
+    monkeypatch.setattr("g2b.pricing.load_notices", lambda root: [live])
+    monkeypatch.setattr("g2b.plans.contracts_by_bid", lambda root: {})
+    monkeypatch.setattr("g2b.prespecs.load_prespecs", lambda root: [])
+
+    out = render_detail_pages(tmp_path, today=date(2026, 11, 21))
+    assert out["pages"] == 1 and out["stubbed"] == 2
+
+    reissue = (orphan / "R26OLD-000.html").read_text(encoding="utf-8")
+    assert "이 공고 페이지는 더 이상 없습니다" in reissue
+    assert 'href="R26NEW-000.html">대체·재공고 보기' in reissue
+    assert 'name="robots" content="noindex,follow"' in reissue
+
+    lonely = (orphan / "ORPHAN-000.html").read_text(encoding="utf-8")
+    assert "홈으로" in lonely and "대체·재공고" not in lonely

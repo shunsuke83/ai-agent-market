@@ -53,3 +53,31 @@ def test_budget_share_uses_amount_over_budget():
 def test_prespec_alert_links_to_row():
     item = prespec_item({"prespec_no": "R26BD1", "title": "AI"}, "https://x/")
     assert item["url"] == "https://x/prespecs.html#p-R26BD1"
+
+
+def test_page_og_url_canonical_skip_link_and_noindex():
+    from g2b.site import SITE_URL, page, write_sitemap
+
+    html = page("밴드", "<p>x</p>", path="band.html")
+    assert f'og:url" content="{SITE_URL}band.html"' in html
+    assert f'rel="canonical" href="{SITE_URL}band.html"' in html
+    assert 'class="skip-link"' in html and 'href="#main"' in html
+    assert 'id="main"' in html
+    stub = page("없음", "<h1>이 공고 페이지는 더 이상 없습니다</h1>", path="bids/OLD-000.html", noindex=True)
+    assert 'name="robots" content="noindex,follow"' in stub
+
+
+def test_sitemap_skips_stub_detail_pages(tmp_path):
+    from g2b.site import SITE_URL, write_sitemap
+
+    bids = tmp_path / "bids"
+    bids.mkdir()
+    (bids / "LIVE-000.html").write_text("<html>live</html>", encoding="utf-8")
+    (bids / "GONE-000.html").write_text(
+        "<html><h1>이 공고 페이지는 더 이상 없습니다</h1></html>", encoding="utf-8"
+    )
+    (tmp_path / "index.html").write_text("<html/>", encoding="utf-8")
+    write_sitemap(tmp_path)
+    xml = (tmp_path / "sitemap.xml").read_text(encoding="utf-8")
+    assert f"{SITE_URL}bids/LIVE-000.html" in xml
+    assert "GONE-000" not in xml

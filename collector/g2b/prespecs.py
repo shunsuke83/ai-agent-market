@@ -195,7 +195,12 @@ def render_prespecs_html(
         "물품은 SW 납품이 분명한 건만 포함하고, GPU·서버 등 장비 구매와 교육·행사성 용역은 제외합니다.</p>"
         + table
     )
-    return page("AI 사업 사전규격", body, scripts=("table-sort.js", "table-filter.js"))
+    return page(
+        "AI 사업 사전규격",
+        body,
+        path="prespecs.html",
+        scripts=("table-sort.js", "table-filter.js"),
+    )
 
 
 def detail_index(repo_root: Path) -> dict[str, str]:

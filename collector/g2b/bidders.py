@@ -102,7 +102,7 @@ def build_bidders_page(index: dict[str, Any], run_status: dict[str, Any], versio
         "순위·투찰률·투찰금액은 나라장터 개찰결과 그대로이고, '낙찰'은 낙찰 확정 건, "
         "'1순위'는 낙찰 확정 표시 없이 개찰 1위인 건입니다. 업체명은 나라장터 조달업체 기본정보를 확인한 업체만 공식 상호로 바꿉니다.</p>"
     )
-    return page("업체 입찰이력 검색", body, scripts=("bidder-search.js",))
+    return page("업체 입찰이력 검색", body, path="bidders.html", scripts=("bidder-search.js",))
 
 
 def render_bidders_page(repo_root: Path) -> dict[str, Any]:

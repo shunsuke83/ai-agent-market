@@ -419,21 +419,39 @@ def render_detail_pages(repo_root: Path, today: date | None = None) -> dict[str,
         if not path.exists() or path.read_text(encoding="utf-8") != text:
             path.write_text(text, encoding="utf-8")
         written.add(slug)
-    # B-11: keep a stub instead of deleting so old links still resolve.
+    # B-11 / U-02: stub instead of delete; prefer reissue via prev_bid_no, else same bid_no round.
+    reissue_of: dict[str, tuple[str, str]] = {}  # prev_bid_no -> (notice_date, slug)
+    for n in notices:
+        prev = n.get("prev_bid_no")
+        slug = detail_slug(n)
+        if not prev or not slug:
+            continue
+        key = str(prev)
+        date_s = n.get("notice_date") or ""
+        if key not in reissue_of or date_s >= reissue_of[key][0]:
+            reissue_of[key] = (date_s, slug)
+
     stubbed = 0
     for path in out_dir.glob("*.html"):
         if path.stem in written:
             continue
         bid = path.stem.rsplit("-", 1)[0]
-        newer = sorted(
-            (s for s in written if s == bid or s.startswith(bid + "-")),
-            reverse=True,
-        )
-        link = (
-            f'<p><a href="{html.escape(newer[0])}.html">최신 차수 보기 →</a></p>'
-            if newer
-            else '<p><a href="../index.html">홈으로</a> · <a href="../band.html">8~30억 공고</a></p>'
-        )
+        successor = reissue_of[bid][1] if bid in reissue_of else None
+        if not successor:
+            same = sorted(
+                (s for s in written if s == bid or s.startswith(bid + "-")),
+                reverse=True,
+            )
+            successor = same[0] if same else None
+        if successor:
+            link = (
+                f'<p><a href="{html.escape(successor)}.html">대체·재공고 보기 →</a></p>'
+            )
+        else:
+            link = (
+                '<p><a href="../index.html">홈으로</a> · '
+                '<a href="../band.html">8~30억 공고</a></p>'
+            )
         body = (
             '<div class="eyebrow">사업 상세</div>'
             "<h1>이 공고 페이지는 더 이상 없습니다</h1>"
@@ -446,6 +464,7 @@ def render_detail_pages(repo_root: Path, today: date | None = None) -> dict[str,
             prefix="../",
             path=f"bids/{path.stem}.html",
             scripts=(),
+            noindex=True,
         )
         if not path.exists() or path.read_text(encoding="utf-8") != stub:
             path.write_text(stub, encoding="utf-8")

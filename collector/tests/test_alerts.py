@@ -61,7 +61,7 @@ def _p(i, **kw):
 def test_items_skip_cancelled_and_equipment():
     items = build_items(
         [_n(1), _n(2, ntce_kind="취소공고"), _n(3, title="AI 학습용 GPU 서버 구매", biz="thng")],
-        [_p(1)],
+        [_p(1), _p(2, title="AI 학습용 GPU 서버 구매")],  # U-06: same list_excluded as prespecs.html
         SITE,
     )
     assert [i["key"] for i in items] == ["n:R26BK0001-000", "p:R26BD0001"]

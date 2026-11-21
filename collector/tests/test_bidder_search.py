@@ -47,7 +47,7 @@ def test_page_has_description_nav_and_main():
     from g2b.site import page
 
     html = page("제목", "<p>본문</p>", path="index.html")
-    assert 'name="description"' in html and 'rel="icon"' in html and "<main>" in html
+    assert 'name="description"' in html and 'rel="icon"' in html and '<main id="main">' in html
     assert 'href="alerts.html"' in html and "watch.js" in html
 
 

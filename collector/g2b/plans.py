@@ -388,7 +388,12 @@ def build_plans_page(
         "계약명 기준 자동 분류이고, 물품 계약은 포함하지 않습니다.</p>"
         + firm_html
     )
-    return page("발주 예정 · 재발주 후보", body, scripts=("table-sort.js", "table-filter.js"))
+    return page(
+        "발주 예정 · 재발주 후보",
+        body,
+        path="plans.html",
+        scripts=("table-sort.js", "table-filter.js"),
+    )
 
 
 def contract_block(c: dict[str, Any] | None) -> str:

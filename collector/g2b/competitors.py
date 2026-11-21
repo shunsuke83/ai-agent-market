@@ -610,7 +610,7 @@ def render_competitors_page(repo_root: Path) -> dict[str, Any]:
     outside = outside_rivals(stats, bizno_index)
     text = replace_outside_section(text, render_outside_section(outside, stats, firms))
 
-    text = stamp_shell(text)
+    text = stamp_shell(text, path="competitors.html")
     path.write_text(text, encoding="utf-8")
 
     matched = sum(1 for r in rows if r["live_wins"] > 0)

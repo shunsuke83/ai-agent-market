@@ -187,9 +187,15 @@ def _fmt_budget_sum(n: float) -> str:
     return f"{n:,.1f}"
 
 
-def _page(title: str, body: str, with_sort: bool = True) -> str:
+def _page(title: str, body: str, with_sort: bool = True, *, path: str = "") -> str:
     tail = f"</div>{SCRIPT}</body></html>" if with_sort else f"</div>{WATCH_SCRIPT}</body></html>"
-    return document_start(title, "../") + NAV + "<main>" + body + "</main>" + FOOTER + tail
+    return (
+        document_start(title, "../", path=path)
+        + NAV
+        + f'<main id="main">{body}</main>'
+        + FOOTER
+        + tail
+    )
 
 
 # --- weekly -----------------------------------------------------------------
@@ -484,7 +490,7 @@ def render_weekly_html(
         f'<p class="lede">{html.escape(lede)}</p>'
         f"{stats}{fit_table}{core_table}{award_table}{notes}{up_table}"
     )
-    return _page(title, body)
+    return _page(title, body, path=f"reports/{agg['slug']}.html")
 
 
 # --- monthly ----------------------------------------------------------------
@@ -779,7 +785,8 @@ def render_monthly_html(
     trend_sec = (
         "<h2>최근 12개월 공고 추이</h2>"
         f"{_month_bars_html(agg['trend'])}"
-        '<p class="note">월별 AI 사업 공고 수(생성형·Agent + AI SW 확대, 공고일 기준). '
+        '<p class="note">월별 핵심 성격(구축·ISP·구독·운영) 공고 수, 공고일 기준. '
+        "수집 범위가 월마다 다를 수 있어(초기 편집 추출·이후 API 전수) 급증처럼 보일 수 있습니다. "
         "수집 기간 밖의 월은 0건일 수 있습니다.</p>"
         f"{_trend_scope_table(agg['trend'])}"
     )
@@ -843,7 +850,7 @@ def render_monthly_html(
         f"{stats}{fit_table}{trend_sec}{nature_sec}{field_sec}{top_sec}{org_sec}"
         f"{isp_sec}{win_sec}{bid_sec}"
     )
-    return _page(title, body)
+    return _page(title, body, path=f"reports/{agg['slug']}.html")
 
 
 # --- index + orchestrator ---------------------------------------------------
@@ -919,7 +926,7 @@ def render_reports_index(
         f'<h2>주간</h2><div class="cards">{w_cards}</div>'
         f'<h2>월간</h2><div class="cards">{m_cards}</div>'
     )
-    return _page("리포트 목록", body, with_sort=False)
+    return _page("리포트 목록", body, with_sort=False, path="reports/index.html")
 
 
 def _weekly_summary(agg: dict[str, Any]) -> dict[str, Any]:

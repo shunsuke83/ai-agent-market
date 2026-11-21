@@ -479,7 +479,12 @@ def build_pricing(notices: list[dict[str, Any]], run_status: dict[str, Any], tod
         "재공고 차수는 최신 1건만 둡니다. 같은 기관이 비슷한 사업을 다시 낼 때 진입 기회가 될 수 있습니다.</p>"
         + weak_html
     )
-    return page("투찰·경쟁 분석", body, scripts=("table-sort.js", "price-calc.js"))
+    return page(
+        "투찰·경쟁 분석",
+        body,
+        path="pricing.html",
+        scripts=("table-sort.js", "price-calc.js"),
+    )
 
 
 def load_notices(repo_root: Path, *, collapse: bool = True) -> list[dict[str, Any]]:
