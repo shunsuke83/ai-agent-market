@@ -238,6 +238,17 @@ def test_schedule_gate_when_configured():
     assert gp.business_days_until(NOW, "2026-11-09 10:00") == 5
 
 
+def test_past_deadline_skips_schedule_gate():
+    """T-04: closed notices must not become 보류 solely for 일정 미충족."""
+    profile = {**PROFILE, "hard_gates": [{"id": "schedule", "min_business_days_to_deadline": 7}]}
+    closed = _notice(close_at="2026-10-18 10:00")
+    assert gp.judge_gates(closed, profile, NOW, None) == []
+    s = gp.score_policy(closed, profile, NOW)
+    assert s["verdict"] != gp.NO_GO or not any("일정" in r for r in s["reasons"])
+    assert all("마감까지 영업일" not in r for r in s["reasons"])
+    assert all("마감까지 영업일" not in n for n in s.get("notes") or [])
+
+
 def test_incumbent_by_bizno_and_org_kind():
     inc = {"firms": [{"name": "다른이름", "bizno": "123-45-67890"}], "signed_date": "2025-01-01"}
     assert "자사 기존 수행" in gp.score_policy(_notice(), PROFILE, NOW, incumbent=inc)["reasons"]
