@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-21T09:45:59Z",
+  "generated_at": "2026-11-21T17:40:28Z",
   "range": {
-    "since": "2026-11-18",
-    "until": "2026-11-21"
+    "since": "2026-11-19",
+    "until": "2026-11-22"
   },
   "prespecs": [
     {
@@ -1265,7 +1265,7 @@
       "fields": [
         "AI 인프라"
       ],
-      "nature": "연구·교육·행사",
+      "nature": "인프라",
       "bid_nos": [
         "R26BK01844200"
       ],
@@ -1382,7 +1382,7 @@
       "fields": [
         "AI 인프라"
       ],
-      "nature": "운영·유지보수",
+      "nature": "인프라",
       "bid_nos": [],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00300344&fileType=BFDTL&fileSeq=1",
@@ -5415,7 +5415,7 @@
       "fields": [
         "AI 일반"
       ],
-      "nature": "운영·유지보수",
+      "nature": "인프라",
       "bid_nos": [
         "R26BK01803467"
       ],
