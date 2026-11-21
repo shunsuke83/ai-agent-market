@@ -18,7 +18,6 @@ import yaml
 from .classify import ROOT as COLLECTOR_ROOT
 from .classify import load_keywords
 from .firms import load_firms
-from .normalize import prespec_excluded
 from .render import KST, _fmt_budget, _g2b_href
 from .site import detail_href, page
 
@@ -81,17 +80,20 @@ def prespec_item(p: dict[str, Any], site_url: str) -> dict[str, Any]:
 def build_items(
     notices: list[dict[str, Any]], prespecs: list[dict[str, Any]], site_url: str
 ) -> list[dict[str, Any]]:
-    """Every alertable item, minus 장비·감리·교육행사 (same rule as the home page) and 취소공고."""
+    """Alertable items using the same exclude rules as home / prespecs.html (U-06)."""
+    from .normalize import list_excluded
+
     kw = load_keywords()
     items = [
         notice_item(n, site_url)
         for n in notices
-        if n.get("bid_no") and n.get("ntce_kind") != "취소공고" and not prespec_excluded(n, kw)
+        if n.get("bid_no") and n.get("ntce_kind") != "취소공고" and not list_excluded(n, kw)
     ]
+    # Match prespecs.html rows (list_excluded), not the looser prespec_excluded-only filter.
     items += [
         prespec_item(p, site_url)
         for p in prespecs
-        if p.get("prespec_no") and not prespec_excluded(p, kw)
+        if p.get("prespec_no") and not list_excluded(p, kw)
     ]
     return items
 
@@ -379,7 +381,7 @@ def build_alerts_page(config: dict[str, Any], counts: dict[str, int]) -> str:
         "<h2>Slack</h2>"
         "<p>매일 수집 후 새로 걸린 공고·사전규격을 팀 Slack 채널로 보냅니다. 같은 건은 한 번만 보냅니다.</p>"
     )
-    return page("알림 구독", body)
+    return page("알림 구독", body, path="alerts.html")
 
 
 def slack_followups(

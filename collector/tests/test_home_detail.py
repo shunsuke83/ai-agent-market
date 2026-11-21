@@ -30,6 +30,22 @@ def test_title_link_points_to_detail_page():
     assert "g2b.go.kr" in title_link(_n(bid_no=None, g2b_url="https://www.g2b.go.kr/x"))
 
 
+def test_home_year_bars_live_from_notices():
+    from g2b.home import year_counts
+
+    notices = [
+        _n(bid_no="A", notice_date="2025-03-01"),
+        _n(bid_no="B", notice_date="2025-11-01"),
+        _n(bid_no="C", notice_date="2026-01-15"),
+    ]
+    assert year_counts(notices) == [("2025", 2), ("2026", 1)]
+    out = build_home(notices, [], {}, now=NOW)
+    assert "AI 사업 공고 연도별 추이" in out
+    assert "2건" in out and "1건" in out
+    assert "2026-10-30까지 누계" in out
+    assert "2,719건" not in out  # frozen keep-block must not stick
+
+
 def test_home_lists_only_open_real_opportunities():
     notices = [
         _n(),

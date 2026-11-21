@@ -83,7 +83,7 @@ def build_agencies_page(index: dict[str, Any], run_status: dict[str, Any], versi
         "낙찰 업체는 낙찰 확정 건이고, 확정 전이면 개찰 1순위를 '(1순위)'로 표시합니다. "
         "낙찰금액은 나라장터에 공개된 건만 합칩니다.</p>"
     )
-    return page("발주기관 검색", body, scripts=("agency-search.js",))
+    return page("발주기관 검색", body, path="agencies.html", scripts=("agency-search.js",))
 
 
 def render_agencies_page(repo_root: Path) -> dict[str, Any]:

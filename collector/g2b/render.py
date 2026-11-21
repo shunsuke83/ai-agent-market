@@ -818,7 +818,7 @@ def render_band_page(repo_root: Path) -> dict[str, Any]:
         f"이 구간 영업의 선행 지표로 볼 수 있습니다. {shown_txt}</p>",
     )
 
-    text = stamp_shell(text)
+    text = stamp_shell(text, path="band.html")
     # Drop duplicated exclude toggles from earlier non-idempotent renders (B-02).
     text = re.sub(
         r'<script>\(function\(\)\{var e=document\.getElementById\("show-excluded"\);'
@@ -861,12 +861,15 @@ def render_index_stamp(repo_root: Path, home: bool = True) -> dict[str, Any]:
     stamp = stamp_text(load_run_status(repo_root))
     if home:
         text = update_stamp(path.read_text(encoding="utf-8"), stamp)
-        path.write_text(stamp_shell(text), encoding="utf-8")
+        path.write_text(stamp_shell(text, path="index.html"), encoding="utf-8")
     # Hand-edited pages that no renderer owns still need fresh asset versions.
     for extra in ("deliverables.html",):
         p = repo_root / extra
         if p.exists():
-            p.write_text(stamp_shell(p.read_text(encoding="utf-8")), encoding="utf-8")
+            p.write_text(
+                stamp_shell(p.read_text(encoding="utf-8"), path=extra),
+                encoding="utf-8",
+            )
     return {"path": str(path), "stamp": stamp}
 
 
@@ -1336,7 +1339,14 @@ def render_awards_page(repo_root: Path) -> dict[str, Any]:
             table_class="rank",
         )
 
-    yearly = aggregate_yearly(pool)
+    # U-01: compare years on the same band (8억+) so seed-era vs API-era is not mixed.
+    yearly_pool = [
+        r
+        for r in pool
+        if (r.get("budget_eok") is not None and float(r["budget_eok"]) >= 8.0)
+        or (r.get("_amount") is not None and float(r["_amount"]) >= 8.0)
+    ]
+    yearly = aggregate_yearly(yearly_pool)
     if yearly:
         year_rows = "".join(render_yearly_row(y, c, a) for y, c, a in yearly)
         text = replace_awards_table(
@@ -1344,6 +1354,18 @@ def render_awards_page(repo_root: Path) -> dict[str, Any]:
             h2="연도별 낙찰",
             rows_html=year_rows,
             table_class="rank",
+        )
+        note = (
+            '<p class="note">예산(또는 낙찰금) 8억 원 이상만 집계합니다. '
+            "2026-09-28 이전은 편집 시드·이후는 API 전수가 섞일 수 있어, "
+            "동일 밴드 비교로 급증 착시를 줄입니다.</p>"
+        )
+        text = re.sub(
+            r'(<h2>연도별 낙찰</h2>.*?</table></div>)(?:\s*<p class="note">.*?</p>)?',
+            r"\1" + note,
+            text,
+            count=1,
+            flags=re.S,
         )
 
     # 자주 투찰: OpengCompt bidder lists. Prefer 구축·고도화 ≥3; ease threshold
@@ -1389,7 +1411,7 @@ def render_awards_page(repo_root: Path) -> dict[str, Any]:
     # Stats: recompute from award pool + merged notices when we have winners
     text = update_awards_stats(text, repo_root, pool)
 
-    text = stamp_shell(text)
+    text = stamp_shell(text, path="awards.html")
     path.write_text(text, encoding="utf-8")
     return {
         "path": str(path),
