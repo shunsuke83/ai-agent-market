@@ -726,7 +726,17 @@ def cmd_migrate_results(args: argparse.Namespace) -> int:
     return 0
 
 
-STAGES = ("collect", "prespecs", "plans", "contracts", "awards", "bidders", "firms")
+STAGES = (
+    "collect",
+    "prespecs",
+    "plans",
+    "contracts",
+    "awards",
+    "bidders",
+    "firms",
+    "d1",
+    "pages",
+)
 
 
 def cmd_mark_run(args: argparse.Namespace) -> int:
@@ -739,7 +749,7 @@ def cmd_mark_run(args: argparse.Namespace) -> int:
     now = utc_now_iso()
     for name in STAGES:
         outcome = getattr(args, name, None)
-        if not outcome or outcome == "skipped":
+        if not outcome:
             continue
         s = stages.setdefault(name, {})
         s["last_attempt_at"] = now

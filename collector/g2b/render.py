@@ -419,10 +419,25 @@ def load_run_status(repo_root: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def _cf_mirror_suffix(status: dict[str, Any]) -> str:
+    """Compact D1 / Cloudflare Pages mirror status for the home stamp (DB plan stage 1)."""
+    stages = status.get("stages") or {}
+    bits: list[str] = []
+    for key, label in (("d1", "D1"), ("pages", "CF 미러")):
+        outcome = (stages.get(key) or {}).get("last_outcome")
+        if outcome == "success":
+            bits.append(f"{label} 동기화")
+        elif outcome == "failure":
+            bits.append(f"{label} 실패")
+        elif outcome == "skipped":
+            bits.append(f"{label} 생략")
+    return (" · " + " · ".join(bits)) if bits else ""
+
+
 def stamp_text(status: dict[str, Any], fallback: date | None = None) -> str:
     """'데이터 기준' = last successful 공고 collect, not the render date."""
     collect = (status.get("stages") or {}).get("collect") or {}
-    return stage_stamp(collect, fallback)
+    return stage_stamp(collect, fallback) + _cf_mirror_suffix(status)
 
 
 def update_stamp(html_text: str, text: str) -> str:
