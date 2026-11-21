@@ -239,12 +239,15 @@ def _fit_ko(fit: dict[str, Any]) -> str:
 
 def proposal_markdown(n: dict[str, Any], entry: dict[str, Any] | None, fit: dict[str, Any] | None) -> str:
     s = (entry or {}).get("summary") or {}
-    budget = _fmt_budget(n.get("budget_eok"))
     lines = [
         f"# {n.get('title') or ''}",
         "",
         f"- 기관: {n.get('org') or ''}",
-        f"- 예산: {budget + '억' if budget else ''}",
+    ]
+    # B-19: omit zero/blank budgets (avoid "예산: 0.0억").
+    if n.get("budget_eok"):
+        lines.append(f"- 예산: {_fmt_budget(n.get('budget_eok'))}억")
+    lines += [
         f"- 마감: {n.get('close_at') or n.get('close_date') or ''}",
         f"- 개찰: {n.get('open_at') or n.get('open_date') or ''}",
         f"- 분류: {' · '.join(x for x in (n.get('scope'), n.get('nature')) if x)}",
