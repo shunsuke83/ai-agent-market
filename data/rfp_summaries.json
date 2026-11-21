@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-21T17:48:47Z",
+  "generated_at": "2026-11-21T18:16:33Z",
   "summaries": {
     "R26BK01745687": {
       "bid_no": "R26BK01745687",
@@ -17958,6 +17958,62 @@
       "files": [],
       "status": "no_text"
     },
+    "R26BK01837962": {
+      "bid_no": "R26BK01837962",
+      "bid_ord": "001",
+      "source": "notice+prespec",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01837962&bidPbancOrd=001&fileType=&fileSeq=1&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00299426&fileType=BFDTL&fileSeq=1"
+      ],
+      "updated_at": "2026-11-21T18:16:15Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "제안요청서_수원시 중소기업 AX지원 사업.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00299426&fileType=BFDTL&fileSeq=1"
+        },
+        {
+          "name": "(긴급)_입찰공고문_수원시 중소기업 AX지원 사업.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01837962&bidPbancOrd=001&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        }
+      ],
+      "fields": {
+        "period": "계약체결일로부터 2027년 1월 29일(금) 까지",
+        "presentation": true
+      },
+      "chars": 8597,
+      "summary": {
+        "overview": "본 사업은 수원시 소재 중소제조기업의 AI 활용 역량 강화 및 경쟁력 제고를 위한 AX 지원 사업입니다. 기업별 AI 수준 진단 및 컨설팅을 바탕으로 현장 맞춤형 PBL 교육과정을 개발·운영하고 현업 적용 멘토링을 체계적으로 제공합니다.",
+        "evaluation": "기술능력평가(80%)와 입찰가격평가(20%)를 합산하여 평가하며, 기술능력평가 배점한도의 65% 이상인 업체 중 고득점자순으로 협상을 진행하는 협상에 의한 계약 방식입니다.",
+        "tasks": [
+          "중소제조기업 발굴 및 AI 수준 진단·컨설팅",
+          "기업 맞춤형 PBL 교육과정 개발",
+          "맞춤형 PBL 교육 실시",
+          "현업 적용 멘토링 수행"
+        ],
+        "tech": [
+          "AI 진단 툴",
+          "데이터",
+          "업무자동화"
+        ],
+        "requirements": [
+          "국가계약법 시행령 제12조 요건을 갖춘 사업자",
+          "교육서비스업(기타 교육지원 서비스업, 교육관련 자문 및 평가업) 등록 사업자",
+          "중·소기업·소상공인 확인서 보유자",
+          "직접생산확인증명서(기타행사기획 및 대행서비스) 보유자",
+          "제안사 자사인력으로만 참여인력 구성"
+        ],
+        "cautions": [
+          "공동수급(공동이행방식) 및 재하도급 불가",
+          "제안서 및 서류는 마감 전 지정 이메일로만 제출 가능",
+          "증빙서류 누락 및 기간 만료 시 입찰 부적격 처리",
+          "입찰 관련 소요 비용은 입찰자 부담이며 제출 서류는 반환 불가"
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
+    },
     "R26BK01838477": {
       "bid_no": "R26BK01838477",
       "bid_ord": "000",
@@ -18195,6 +18251,66 @@
           "하도급은 SW사업금액의 50%를 초과할 수 없으며 원칙적으로 재하도급이 불허되고 사전 승인을 얻어야 합니다.",
           "가격입찰서는 나라장터 전자투찰과 과업장소 방문 밀봉 제출을 함께 진행해야 하며 불일치 시 전자투찰가가 적용됩니다.",
           "국가사이버보안 기본지침 및 누출금지 대상 정보 유출 시 부정당업자 제재 조치가 적용됩니다."
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
+    },
+    "R26BK01839866": {
+      "bid_no": "R26BK01839866",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01839866&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01839866&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01839866&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01839866&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01"
+      ],
+      "updated_at": "2026-11-21T18:15:52Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "(조합추천)-공고문.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01839866&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        },
+        {
+          "name": "제품 사양서.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01839866&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01"
+        }
+      ],
+      "fields": {
+        "sme_only": true
+      },
+      "chars": 15416,
+      "summary": {
+        "overview": "오천초등학교 내 공간재구조화 및 경북형 지능형 과학실 환경 조성을 위해 각종 가구(안전매트, 게시판, 쉼터 가구, 쇼파 등)를 제작 및 구입하여 현장에 설치·납품하는 사업입니다. 계약체결일로부터 30일 이내 지정 장소에 현장설치도로 완료하여야 합니다.",
+        "evaluation": "예정가격의 88% 이상으로 견적서를 제출한 자 중 최저가격 제출자 순으로 수의계약 배제사유에 해당하지 않는 업체로 결정합니다.",
+        "tasks": [
+          "나무계단 안전매트 제작 및 납품",
+          "복도 및 미술·과학실 게시판 제작 및 납품",
+          "실내활동 쉼터 가구 제작 및 납품",
+          "과학실 앞 쇼파 제작 및 납품",
+          "지정장소 가구 현장 설치"
+        ],
+        "tech": [
+          "국가종합전자조달시스템(G2B)",
+          "중소기업공공구매종합정보망(SMPP)",
+          "E0 PB 및 LPM 마감",
+          "EGI 철판 및 분체도장",
+          "고탄성 스폰지 및 합성수지 외피"
+        ],
+        "requirements": [
+          "대구경북가구공업협동조합 추천을 받은 5개 지정 업체",
+          "경상북도 지역 제한 자격 충족 업체",
+          "소기업 또는 소상공인 확인서 소지 업체",
+          "조달청 입찰참가자격 및 지문인식 등록 업체",
+          "직접생산 확인 가능 중소기업"
+        ],
+        "cautions": [
+          "대구경북가구공업협동조합 추천 5개 업체 외의 견적 제출 시 무효 처리됩니다.",
+          "공동도급은 허용되지 않습니다.",
+          "채권양도금지 특약이 적용되어 어떠한 경우에도 채권양도가 불가합니다.",
+          "계약 체결 시 계약이행 통합서약서 등 제반 서류를 반드시 제출해야 합니다."
         ]
       },
       "model": "gemini-3.5-flash",
@@ -18773,6 +18889,66 @@
       "model": "gemini-3.5-flash",
       "status": "ok"
     },
+    "R26BK01841448": {
+      "bid_no": "R26BK01841448",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841448&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841448&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841448&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841448&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01"
+      ],
+      "updated_at": "2026-11-21T18:15:36Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "구매규격서_AI Edge Kit_목포대학교.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841448&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
+        },
+        {
+          "name": "공고문_소액수의견적(반도체공학과 실습재료 VEK385 AI KIT 구매)_목포대학교.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841448&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        }
+      ],
+      "fields": {
+        "sme_only": true
+      },
+      "chars": 15891,
+      "summary": {
+        "overview": "국립목포대학교 반도체공학과의 실습 교육을 위해 Zynq UltraScale+ MPSoC 기반 FPGA 실습 키트와 AMD VEK385 Evaluation Kit를 구입하는 사업입니다. 수급자는 규격에 부합하는 장비 및 부속 품목을 납품·설치하고 시스템 테스트와 기술/교육 지원을 수행해야 합니다. 납품 완료 후 1년간의 무상 보증 및 매뉴얼 제공이 포함됩니다.",
+        "evaluation": "예정가격 대비 88% 이상으로 견적서를 제출한 자 중 최저가격 제출자를 계약상대자로 결정하는 수의(총액) 소액견적 제한적최저가 방식입니다.",
+        "tasks": [
+          "FPGA 실습 키트 및 VEK385 Evaluation Kit 납품",
+          "장비 설치 및 현장 시스템 확인·테스트",
+          "하드카피 및 전자 매뉴얼·도면 제출",
+          "제조사 기술지원 및 교육지원 수행",
+          "1년간 무상 보증 및 인력 지원"
+        ],
+        "tech": [
+          "AMD Versal AI Edge Gen2",
+          "Zynq UltraScale+ MPSoC",
+          "Vivado Design Suite",
+          "DPS (Design ProShop) S/W",
+          "PetaLinux",
+          "FMC/FMC+ 인터페이스"
+        ],
+        "requirements": [
+          "전자공학교육용품(세부품명번호 6010640201) 제조 또는 공급물품 등록 업체",
+          "소기업 또는 소상공인확인서 소지 업체",
+          "제조사 기술지원 및 교육지원 확약서 제출 제출 가능 업체",
+          "공직자의 이해충돌 방지법 제12조 수의계약 체결 제한에 해당하지 않는 자"
+        ],
+        "cautions": [
+          "글로컬대학사업 종료에 따라 2026년 12월 24일까지 반드시 납품 완료해야 함 (기한 경과 시 지출 불가)",
+          "공동계약 및 분할납품 불가",
+          "낙찰 통보 후 5일 이내 산출내역서 포함 계약 체결 서류 미제출 시 차순위자로 넘어가며 목포대학교 소액수의계약 배제 조치 가능",
+          "수요부서와 규격 및 사양을 입찰 전 필수 확인하고 무리한 저가 투찰 자제"
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
+    },
     "R26BK01841519": {
       "bid_no": "R26BK01841519",
       "bid_ord": "000",
@@ -18830,6 +19006,60 @@
           "제안서 발표평가 시 사업관리자(PM)가 직접 발표하지 않을 경우 해당 항목 최저점 처리",
           "1차 설계·개발 기한이 엄수되어야 하며 계약 지연 시 수행 기간 확충 불가",
           "누출금지 대상 정보 유출 시 부정당업자 제재 및 손해배상 의무 발생"
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
+    },
+    "R26BK01841682": {
+      "bid_no": "R26BK01841682",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841682&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841682&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841682&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841682&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01"
+      ],
+      "updated_at": "2026-11-21T18:15:04Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "1. 피지컬 AI 물품 구매 수의계약 견적 제출 안내 공고.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841682&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        },
+        {
+          "name": "2. 피지컬 AI 물품 구매 계약 특수조건.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841682&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01"
+        }
+      ],
+      "fields": {
+        "sme_only": true
+      },
+      "chars": 6094,
+      "summary": {
+        "overview": "본 사업은 세종특별자치시교육청 양지고등학교에서 피지컬 AI 관련 교육용 물품을 구매 및 설치하기 위한 사업입니다. 지정된 물품 규격서에 따라 계약 체결일로부터 30일 이내에 학교가 지정한 장소에 일괄 납품 및 설치를 완료해야 합니다.",
+        "evaluation": "예정가격 이하로서 예정가격 대비 88% 이상 최저가격으로 견적서를 제출한 자를 계약상대자로 결정합니다.",
+        "tasks": [
+          "피지컬 AI 물품 납품 및 설치",
+          "정품 공급 증명서 제출",
+          "검수 및 파손 물품 교환"
+        ],
+        "tech": [
+          "교육용로봇",
+          "피지컬 AI"
+        ],
+        "requirements": [
+          "교육용로봇(세부품명번호: 6010621401) 제조물품 입찰참가 등록업체",
+          "해당 세부품명번호의 직접생산확인증명서 소지자",
+          "소기업 또는 소상공인확인서 소지자",
+          "조달청 전자입찰참가자격 및 전자서명인증서 등록 완료 업체"
+        ],
+        "cautions": [
+          "소액수의 견적 제출 건으로 공동계약이 불허됩니다.",
+          "제조일로부터 1년 이내의 정품 납품 및 정품 공급 증명서 제출이 필수입니다.",
+          "견적 제출 전 반드시 물품 규격 및 내역서를 숙지해야 하며 담당자 확인이 권장됩니다.",
+          "계약 체결 후 물품의 단가 및 규격에 대해 일체의 이의를 제기할 수 없습니다."
         ]
       },
       "model": "gemini-3.5-flash",
@@ -18965,6 +19195,60 @@
           "차량 특장(리프트) 및 자율주행 시스템 구축은 별도 발주 사업이므로 본 사업 범위에서 제외됩니다.",
           "보조사업 연차별 협약기간(1차년도: ~2027.06.30, 2차년도: 2027.07.01~11.30) 내 납품 및 검수를 완료해야 합니다.",
           "일부 업무 하도급 시 사전에 발주기관의 승인을 받아야 합니다."
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
+    },
+    "R26BK01841860": {
+      "bid_no": "R26BK01841860",
+      "bid_ord": "001",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841860&bidPbancOrd=001&fileType=&fileSeq=1&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841860&bidPbancOrd=001&fileType=&fileSeq=2&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841860&bidPbancOrd=001&fileType=&fileSeq=3&prcmBsneSeCd=03"
+      ],
+      "updated_at": "2026-11-21T18:14:01Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "2. 제안요청서.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841860&bidPbancOrd=001&fileType=&fileSeq=3&prcmBsneSeCd=03"
+        },
+        {
+          "name": "1. 입찰공고문.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841860&bidPbancOrd=001&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        }
+      ],
+      "fields": {
+        "period": "계약일로부터 ~ 2027. 1. 15.(금)"
+      },
+      "chars": 19657,
+      "summary": {
+        "overview": "본 사업은 한림대학교 AI·SW 전공생들의 문제 해결 능력과 글로벌 협업 강화를 위한 베트남 현지 프로그램 운영을 위탁하는 사업입니다. 수주업체는 학생 및 인솔교수 등 약 20명을 대상으로 항공, 숙박, 현지 이동 차량, 식사, 보험 등 연수 진행에 필요한 전반적인 현지 운영 대행 업무를 수행하게 됩니다.",
+        "evaluation": "기술능력평가(90점)와 입찰가격평가(10점)를 합산하며, 기술평가 배점 한도의 85%(68점) 이상인 협상적격자 중 고득점 순으로 협상을 진행하여 계약을 체결합니다.",
+        "tasks": [
+          "항공권 예약 및 발권 대행",
+          "4성급 숙박시설 수배 및 배정",
+          "현지 단체버스 및 통역 가이드 운영",
+          "현지 식사 수배 및 만찬 진행",
+          "참가자 여행자종합보험 가입",
+          "안전관리 및 비상 대응 체계 구축"
+        ],
+        "tech": [],
+        "requirements": [
+          "종합여행업(1261) 또는 국내외여행업(1262) 업종 등록 업체",
+          "단일 실적 4천만원 이상 보유 업체",
+          "국가계약법 시행령 제12조에 따른 경쟁입찰 참가 자격을 갖춘 사업자",
+          "부정당업자 입찰참가자격 제한 기간 중에 있지 아니한 업체",
+          "입찰금액의 5% 이상 입찰보증보험증권 제출"
+        ],
+        "cautions": [
+          "공동도급(공동수급)은 허용되지 않음",
+          "용역 전부 또는 일부에 대한 부당한 하도급 금지",
+          "학생과 인솔교수는 동일 항공편으로 단체 이동 필수",
+          "발주기관 사전 승인 없는 임의 인력 교체 불가 및 보안 규정 준수"
         ]
       },
       "model": "gemini-3.5-flash",
@@ -19154,6 +19438,66 @@
           "MBC의 사전 서면 승인 없는 하도급은 불허됩니다.",
           "입찰금액은 사업금액 994,070,000원(VAT 포함)을 초과할 수 없으며 초과 시 자동 부적격 처리됩니다.",
           "개발 결과물(회로도, PCB 설계 파일, BOM, OS 이미지, BSP 소스 등) 및 관련 지적재산권은 대금 지급 완료 시 MBC에 귀속됩니다."
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
+    },
+    "R26BK01842795": {
+      "bid_no": "R26BK01842795",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01842795&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01842795&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01842795&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+      ],
+      "updated_at": "2026-11-21T18:15:19Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "제안요청서(피지컬AI 기반 건설로보틱스 활성화 방안 연구).hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01842795&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+        },
+        {
+          "name": "입찰공고문(피지컬AI 기반 건설로보틱스 활성화 방안 연구).hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01842795&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        }
+      ],
+      "fields": {
+        "period": "착수일로부터 8개월(240일)",
+        "sme_only": true,
+        "presentation": true
+      },
+      "chars": 25996,
+      "summary": {
+        "overview": "본 사업은 국내외 피지컬AI 기반 건설로보틱스의 기술·산업·정책 동향과 현장 적용 실태를 조사하여 인증 체계 및 법·제도 개선방안을 마련하는 연구용역입니다. 피지컬AI 기반 건설로보틱스의 실증·인증 및 현장 도입을 단계적으로 확대하기 위한 중장기 활성화 로드맵을 수립하여 건설산업의 안전성과 생산성 향상을 도모합니다.",
+        "evaluation": "기술능력평가 80%와 입찰가격평가 20%를 합산하여 평가하며, 기술평가 배점한도의 85% 이상인 자를 협상적격자로 선정한 후 고득점순으로 협상을 진행합니다.",
+        "tasks": [
+          "피지컬AI 기반 건설로보틱스 현황 및 실태조사",
+          "건설로보틱스 현장 도입·확산을 위한 인증제도(안) 마련",
+          "성능·안전성·신뢰성 평가항목 및 시험·검증 방법 검토",
+          "피지컬AI 기반 건설로보틱스 활성화 로드맵(안) 수립",
+          "건설로보틱스 관련 법·제도 개선방안 제시"
+        ],
+        "tech": [
+          "피지컬AI",
+          "건설로보틱스",
+          "자율로봇",
+          "자율주행"
+        ],
+        "requirements": [
+          "나라장터 학술연구용역(업종코드: 1169) 입찰참가자격 등록업체",
+          "소기업·소상공인 확인서 소지자 (비영리법인은 증빙서류 제출 시 예외 적용)",
+          "국가계약법 관련 부정당업자 제재 및 조세포탈 결격사유가 없는 자",
+          "민법 관련 전공 박사 연구인력 보유 (기관평가 항목)",
+          "책임연구원의 민법 및 계약 관련 연구실적·경력 보유"
+        ],
+        "cautions": [
+          "공동수급(공동이행방식)이 허용됩니다.",
+          "제안서 최종 제출 완료 후에만 가격입찰서 제출이 가능하며 마감일시 엄수 필요합니다.",
+          "정성적 제안서와 정량적 제안서는 반드시 분리하여 온라인으로 제출해야 합니다.",
+          "사업 참여 시 보안서약서 및 청렴계약서를 필수 제출하고 보안규정을 준수해야 합니다."
         ]
       },
       "model": "gemini-3.5-flash",
@@ -19384,6 +19728,65 @@
           "하도급 진행 시 과업내용서 및 관련 법령에 따른 사전 승인 절차를 준수해야 합니다.",
           "실험용 돼지 및 사료 구입비는 용역 예산 외 별도 경비로 사전 승인 후 정산됩니다.",
           "가격입찰서와 제안서 중 하나라도 미제출 시 무효 입찰 처리됩니다."
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
+    },
+    "R26BK01844519": {
+      "bid_no": "R26BK01844519",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01844519&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01844519&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01844519&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01844519&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01844519&bidPbancOrd=000&fileType=&fileSeq=5&prcmBsneSeCd=03"
+      ],
+      "updated_at": "2026-11-21T18:14:48Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "2.[과업지시서]전 장병 AI 교육 플랫폼 보상체계 및 게이미피케이션 기획·디자인.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01844519&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+        },
+        {
+          "name": "수의계약 안내서.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01844519&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+        }
+      ],
+      "fields": {
+        "subcontract_limit": true
+      },
+      "chars": 6647,
+      "summary": {
+        "overview": "대한민국 국방부 45만 장병 대상 AI 교육 플랫폼 구축 사업의 일환으로, 군 장병의 자발적인 학습 참여와 지속적인 동기 부여를 위한 보상체계와 게이미피케이션 요소를 기획하고 디자인하는 용역사업입니다. 출석·학습완료·미션수행 등 학습 활동에 따른 보상 기준과 레벨·배지 체계를 설계하고, 웹·모바일 환경에서 활용 가능한 시각디자인 자산과 화면 설계를 2주간 진행합니다.",
+        "evaluation": "예정가격 이하로 견적을 제출한 자를 낙찰자로 선정하는 수의시담 방식입니다.",
+        "tasks": [
+          "플랫폼 및 학습자 특성 분석",
+          "학습 활동 기반 보상체계 기획",
+          "게이미피케이션 시나리오 및 화면 기획",
+          "보상 요소 시각디자인 및 자산 제작",
+          "기획·디자인 검토 및 플랫폼 적용 지원",
+          "운영 및 디자인 활용 가이드 제작"
+        ],
+        "tech": [
+          "웹·모바일 UI/UX 디자인",
+          "게이미피케이션 설계",
+          "화면설계(SB)",
+          "시각디자인 자산(2D 그래픽)"
+        ],
+        "requirements": [
+          "조달청 전자입찰 참가자격 등록을 필한 자",
+          "국가계약법 시행령 등에 따라 입찰참가자격 제한을 받지 않는 자",
+          "수의계약 체결 제한 사유에 해당하지 않는 자 (수의계약 체결 제한여부 확인서 제출)"
+        ],
+        "cautions": [
+          "공동수급 및 하도급 불가",
+          "계약체결일로부터 2주라는 매우 짧은 사업 수행기간 준수 필요",
+          "KISTI 정보보안 규정 및 개인정보보호 법규·지침 준수 필수",
+          "플랫폼 적용 시 사전에 담당자 작업 승인 후 적용 결과 보고 필요"
         ]
       },
       "model": "gemini-3.5-flash",
@@ -20599,6 +21002,75 @@
           "2027년 4월 중 본편 1편 중간성과물 우선 제출 및 검수 반영 필수",
           "AI 활용 시 외부 서비스에 비공개 자료 유출 금지 및 저작권·사용권 사전 확보",
           "정성제안서 사본 및 발표자료 내 제안사 식별 정보(업체명, 로고 등) 기재 금지"
+        ]
+      },
+      "model": "gemini-3.5-flash",
+      "status": "ok"
+    },
+    "R26BK01846535": {
+      "bid_no": "R26BK01846535",
+      "bid_ord": "000",
+      "source": "notice",
+      "source_urls": [
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01846535&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01846535&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01846535&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01846535&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01846535&bidPbancOrd=000&fileType=&fileSeq=5&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01846535&bidPbancOrd=000&fileType=&fileSeq=6&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01846535&bidPbancOrd=000&fileType=&fileSeq=7&prcmBsneSeCd=01",
+        "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01846535&bidPbancOrd=000&fileType=&fileSeq=8&prcmBsneSeCd=01"
+      ],
+      "updated_at": "2026-11-21T18:14:18Z",
+      "attempts": 0,
+      "files": [
+        {
+          "name": "내자 2026-281호 AI대학원 AX-Living Lab 냉난방기 납품설치 - 용도설명서 및 상세규격서.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01846535&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
+        },
+        {
+          "name": "내자 2026-281호 AI대학원 AX-Living Lab 냉난방기 납품설치 - 공고문.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01846535&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        },
+        {
+          "name": "내자 2026-281호 AI대학원 AX-Living Lab 냉난방기 납품설치 - 시방서.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01846535&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01"
+        }
+      ],
+      "fields": {
+        "sme_only": true
+      },
+      "chars": 22317,
+      "summary": {
+        "overview": "광주과학기술원 AI대학원 AX-Living Lab 증축공사에 필요한 냉난방기를 납품 및 설치하여 쾌적한 실험실 환경을 조성하는 사업입니다. 멀티 실외기·실내기, 스탠드형 및 벽걸이형 냉난방기 장비 납품을 비롯해 냉매 배관, 자동제어 결선, 시운전 일체를 수행합니다.",
+        "evaluation": "예정가격 이하로서 낙찰하한율 88% 이상으로 견적서를 제출한 자 중 최저가격 제출자를 계약상대자로 결정합니다.",
+        "tasks": [
+          "실외기 및 실내기 납품·설치",
+          "냉매 배관 및 드레인 배관 공사",
+          "제어선 결선 및 자동제어 공사",
+          "냉매 충진 및 누설·압력 시험",
+          "시운전 및 성능인증 검사",
+          "운용 요원 교육훈련 및 기술지원"
+        ],
+        "tech": [
+          "EHP 냉방기",
+          "멀티 실외기·실내기",
+          "스탠드형 냉난방기",
+          "벽걸이형 냉방기",
+          "자동제어 시스템 및 유선 리모컨"
+        ],
+        "requirements": [
+          "전남광주통합특별시 내 주된 영업소를 둔 업체",
+          "G2B에 냉난방기(4010178702) 공급 또는 제조물품 등록 업체",
+          "기계설비·가스공사업(기계설비공사, 업종코드 6202) 등록 업체",
+          "소기업 또는 소상공인 확인서 보유 업체",
+          "안전보건수준평가 C등급(60점) 이상 충족 업체"
+        ],
+        "cautions": [
+          "단독이행만 허용되며 공동수급은 불허됩니다.",
+          "납품 수량 중 일부를 하도급 주는 것이 금지됩니다.",
+          "계약 체결 시 보안서약서 및 안전보건관리계획서 등의 서류를 제출해야 합니다.",
+          "하자담보 책임기간은 납품 완료일로부터 2년(하자보증금 5%)입니다."
         ]
       },
       "model": "gemini-3.5-flash",
