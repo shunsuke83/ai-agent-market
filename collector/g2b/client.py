@@ -77,8 +77,8 @@ class G2BEmptyWindow(G2BError):
 
 # Bid/award PPSSrch: 14d often empty; daily runs prove ≤4d is safe (W-01).
 BID_AWARD_WINDOW_DAYS = 4
-# Order-plan posted-date range: split so wide 400d queries stop returning 0 (W-03).
-ORDER_PLAN_POSTED_WINDOW_DAYS = 14
+# Order-plan posted-date: wide 400d returns 0 (W-03). Guide max unknown → calendar month
+# (portal samples ≈1mo; cuts calls vs 14d×29 ≈522 → ~14×9×2 ≈252) (X-02).
 
 
 def redact_secrets(text: str | None) -> str:
@@ -285,6 +285,24 @@ class G2BClient:
                 break
             page += 1
 
+    def _pull_window(
+        self,
+        url: str,
+        bgn: date,
+        edn: date,
+        *,
+        extra_params: dict[str, Any] | None = None,
+        page_size: int = 100,
+    ) -> list[dict[str, Any]]:
+        base = dict(extra_params or {})
+        params = {
+            **base,
+            "inqryDiv": base.get("inqryDiv", "1"),
+            "inqryBgnDt": _dt_param(bgn),
+            "inqryEndDt": _dt_param(edn, end=True),
+        }
+        return [dict(i) for i in self.iter_pages(url, params, page_size=page_size)]
+
     def _fetch_day_windows(
         self,
         url: str,
@@ -295,19 +313,20 @@ class G2BClient:
         max_days: int = BID_AWARD_WINDOW_DAYS,
         page_size: int = 100,
         label: str = "window",
+        on_empty_weekday: str = "raise",
     ) -> list[dict[str, Any]]:
-        """Fetch pages over day windows; log counts; bisect once on empty weekday windows (W-01)."""
+        """Fetch pages over day windows; log counts; bisect once on empty weekday windows (W-01).
+
+        on_empty_weekday:
+          - \"raise\": fail after bisect (legacy per-call guard)
+          - \"continue\": skip empty holiday windows so later chunks still run (X-01 awards)
+        """
         out: list[dict[str, Any]] = []
-        base = dict(extra_params or {})
 
         def pull(bgn: date, edn: date) -> list[dict[str, Any]]:
-            params = {
-                **base,
-                "inqryDiv": base.get("inqryDiv", "1"),
-                "inqryBgnDt": _dt_param(bgn),
-                "inqryEndDt": _dt_param(edn, end=True),
-            }
-            return [dict(i) for i in self.iter_pages(url, params, page_size=page_size)]
+            return self._pull_window(
+                url, bgn, edn, extra_params=extra_params, page_size=page_size
+            )
 
         for bgn, edn in day_windows(start, end, max_days=max_days):
             chunk = pull(bgn, edn)
@@ -315,22 +334,28 @@ class G2BClient:
             if not chunk and window_has_weekday(bgn, edn):
                 recovered: list[dict[str, Any]] = []
                 halves = bisect_window(bgn, edn)
-                if halves == [(bgn, edn)]:
-                    raise G2BEmptyWindow(
-                        f"empty weekday window {bgn.isoformat()}→{edn.isoformat()} ({label})"
-                    )
-                for sb, se in halves:
-                    part = pull(sb, se)
+                if halves != [(bgn, edn)]:
+                    for sb, se in halves:
+                        part = pull(sb, se)
+                        print(
+                            f"::notice::{label} bisect {sb.isoformat()}→{se.isoformat()}: "
+                            f"{len(part)} rows"
+                        )
+                        recovered.extend(part)
+                if recovered:
+                    chunk = recovered
+                elif on_empty_weekday == "continue":
                     print(
-                        f"::notice::{label} bisect {sb.isoformat()}→{se.isoformat()}: {len(part)} rows"
+                        f"::warning::empty weekday window {bgn.isoformat()}→{edn.isoformat()} "
+                        f"({label}); continuing"
                     )
-                    recovered.extend(part)
-                if not recovered:
+                else:
                     raise G2BEmptyWindow(
                         f"empty weekday window {bgn.isoformat()}→{edn.isoformat()} "
                         f"after bisect ({label})"
+                        if halves != [(bgn, edn)]
+                        else f"empty weekday window {bgn.isoformat()}→{edn.isoformat()} ({label})"
                     )
-                chunk = recovered
             out.extend(chunk)
         return out
 
@@ -341,7 +366,10 @@ class G2BClient:
         end: date,
         biz: str = "servc",
     ) -> list[dict[str, Any]]:
-        """Search bid notices whose 공고명 contains keyword (PPSSrch)."""
+        """Search bid notices whose 공고명 contains keyword (PPSSrch).
+
+        Single-keyword empties are normal; empty-window fail is owned by search_bids_ai (X-01).
+        """
         return self._fetch_day_windows(
             BID_OPS[biz],
             start,
@@ -349,6 +377,7 @@ class G2BClient:
             extra_params={"bidNtceNm": keyword},
             max_days=BID_AWARD_WINDOW_DAYS,
             label=f"bid:{biz}:{keyword}",
+            on_empty_weekday="continue",
         )
 
     def fetch_prespecs(
@@ -378,13 +407,11 @@ class G2BClient:
         posted_end: date,
         biz_types: list[str] | None = None,
     ) -> list[dict[str, Any]]:
-        """발주계획 by 사업명 keyword. Split posted-date range (W-03); dedupe by 통합번호."""
+        """발주계획 by 사업명 keyword. Split posted-date by calendar month (W-03/X-02)."""
         seen: dict[str, dict[str, Any]] = {}
         for biz in biz_types or ["servc", "thng"]:
             for kw in keywords:
-                for bgn, edn in day_windows(
-                    posted_start, posted_end, max_days=ORDER_PLAN_POSTED_WINDOW_DAYS
-                ):
+                for bgn, edn in month_windows(posted_start, posted_end):
                     params = {
                         "orderBgnYm": order_start.strftime("%Y%m"),
                         "orderEndYm": order_end.strftime("%Y%m"),
@@ -443,7 +470,11 @@ class G2BClient:
         keywords: list[str] | None = None,
         biz_types: list[str] | None = None,
     ) -> list[dict[str, Any]]:
-        """Collect AI-related notices by several title keywords, dedupe by bidNtceNo+Ord."""
+        """Collect AI-related notices by several title keywords, dedupe by bidNtceNo+Ord.
+
+        Empty-weekday guard is per day-window across all keyword×biz pulls (X-01): a single
+        rare keyword returning 0 is normal; only the window total of 0 triggers bisect/fail.
+        """
         if keywords is None:
             try:
                 from .classify import load_keywords
@@ -454,15 +485,57 @@ class G2BClient:
         if not keywords:
             keywords = ["AI", "인공지능", "생성형", "LLM", "RAG", "AX"]
         biz_types = biz_types or ["servc", "thng"]
+
+        def collect_window(bgn: date, edn: date) -> list[dict[str, Any]]:
+            rows: list[dict[str, Any]] = []
+            for biz in biz_types:
+                for kw in keywords:
+                    chunk = self._pull_window(
+                        BID_OPS[biz],
+                        bgn,
+                        edn,
+                        extra_params={"bidNtceNm": kw},
+                    )
+                    print(
+                        f"::notice::bid:{biz}:{kw} {bgn.isoformat()}→{edn.isoformat()}: "
+                        f"{len(chunk)} rows"
+                    )
+                    for item in chunk:
+                        row = dict(item)
+                        row["_biz"] = biz
+                        row["_matched_kw"] = kw
+                        rows.append(row)
+            return rows
+
         seen: dict[str, dict[str, Any]] = {}
-        for biz in biz_types:
-            for kw in keywords:
-                for item in self.search_bids_by_name(kw, start, end, biz=biz):
-                    key = f"{item.get('bidNtceNo')}-{item.get('bidNtceOrd')}"
-                    item = dict(item)
-                    item["_biz"] = biz
-                    item["_matched_kw"] = kw
-                    seen[key] = item
+        for bgn, edn in day_windows(start, end, max_days=BID_AWARD_WINDOW_DAYS):
+            window_rows = collect_window(bgn, edn)
+            if not window_rows and window_has_weekday(bgn, edn):
+                halves = bisect_window(bgn, edn)
+                recovered: list[dict[str, Any]] = []
+                if halves != [(bgn, edn)]:
+                    for sb, se in halves:
+                        part = collect_window(sb, se)
+                        print(
+                            f"::notice::bid:total bisect {sb.isoformat()}→{se.isoformat()}: "
+                            f"{len(part)} rows"
+                        )
+                        recovered.extend(part)
+                if not recovered:
+                    raise G2BEmptyWindow(
+                        f"empty weekday window {bgn.isoformat()}→{edn.isoformat()} "
+                        f"after bisect (bid)"
+                        if halves != [(bgn, edn)]
+                        else f"empty weekday window {bgn.isoformat()}→{edn.isoformat()} (bid)"
+                    )
+                window_rows = recovered
+            print(
+                f"::notice::bid:total {bgn.isoformat()}→{edn.isoformat()}: "
+                f"{len(window_rows)} rows"
+            )
+            for item in window_rows:
+                key = f"{item.get('bidNtceNo')}-{item.get('bidNtceOrd')}"
+                seen[key] = item
         return list(seen.values())
 
     def fetch_award_status(
@@ -480,6 +553,7 @@ class G2BClient:
             max_days=BID_AWARD_WINDOW_DAYS,
             page_size=page_size,
             label=f"award:{biz}",
+            on_empty_weekday="continue",
         )
         for row in rows:
             row["_biz"] = biz
