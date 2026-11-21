@@ -81,3 +81,12 @@ def test_sitemap_skips_stub_detail_pages(tmp_path):
     xml = (tmp_path / "sitemap.xml").read_text(encoding="utf-8")
     assert f"{SITE_URL}bids/LIVE-000.html" in xml
     assert "GONE-000" not in xml
+
+
+def test_plans_stamp_uses_file_generated_at():
+    from g2b.plans import _stamp
+
+    status = {"stages": {"plans": {"last_success_at": "2026-11-21T12:00:00Z", "last_outcome": "failure"}}}
+    text = _stamp(status, "plans", "발주계획", as_of="2026-11-18T10:07:25Z")
+    assert "발주계획 기준 2026-11-18" in text
+    assert "최근 수집 실패" in text

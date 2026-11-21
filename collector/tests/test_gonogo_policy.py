@@ -249,6 +249,17 @@ def test_past_deadline_skips_schedule_gate():
     assert all("마감까지 영업일" not in n for n in s.get("notes") or [])
 
 
+def test_same_day_deadline_still_applies_schedule_gate():
+    """W-04: left==0 (today) must still fail min business-days, unlike a past close_at."""
+    profile = {**PROFILE, "hard_gates": [{"id": "schedule", "min_business_days_to_deadline": 5}]}
+    morning = datetime(2026, 11, 2, 9, 0, tzinfo=KST)
+    today_close = _notice(close_at="2026-11-02 18:00")
+    gates = gp.judge_gates(today_close, profile, morning, None)
+    assert gates == [("일정", gp.FAIL, "마감까지 영업일 0일")]
+    assert not gp.close_at_passed(morning, "2026-11-02 18:00")
+    assert gp.close_at_passed(morning, "2026-11-02 08:00")
+
+
 def test_incumbent_by_bizno_and_org_kind():
     inc = {"firms": [{"name": "다른이름", "bizno": "123-45-67890"}], "signed_date": "2025-01-01"}
     assert "자사 기존 수행" in gp.score_policy(_notice(), PROFILE, NOW, incumbent=inc)["reasons"]

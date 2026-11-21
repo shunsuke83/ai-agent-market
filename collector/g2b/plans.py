@@ -202,6 +202,16 @@ def load_plans(repo_root: Path) -> list[dict[str, Any]]:
     return _load(repo_root, PLANS_REL, "plans")
 
 
+def load_plans_generated_at(repo_root: Path) -> str | None:
+    path = repo_root / PLANS_REL
+    if not path.exists():
+        return None
+    try:
+        return json.loads(path.read_text(encoding="utf-8")).get("generated_at")
+    except (OSError, json.JSONDecodeError, TypeError, AttributeError):
+        return None
+
+
 def load_contracts(repo_root: Path) -> list[dict[str, Any]]:
     return _load(repo_root, CONTRACTS_REL, "contracts")
 
@@ -249,9 +259,10 @@ def firms_text(firms: list[dict[str, Any]]) -> str:
     return " · ".join(one(f) for f in firms)
 
 
-def _stamp(status: dict[str, Any], stage: str, label: str) -> str:
+def _stamp(status: dict[str, Any], stage: str, label: str, *, as_of: str | None = None) -> str:
+    """Stamp from stage success time, or from file generated_at when as_of is set (W-03)."""
     s = (status.get("stages") or {}).get(stage) or {}
-    ok_day = _kst_date(s.get("last_success_at"))
+    ok_day = _kst_date(as_of) if as_of else _kst_date(s.get("last_success_at"))
     text = f"{label} 기준 {ok_day.isoformat()}" if ok_day else f"{label} 미수집"
     if s.get("last_outcome") not in (None, "success"):
         text += " · 최근 수집 실패, 기존 데이터 표시 중"
@@ -283,6 +294,8 @@ def build_plans_page(
     run_status: dict[str, Any],
     today: date,
     details: dict[str, dict[str, Any]] | None = None,
+    *,
+    plans_generated_at: str | None = None,
 ) -> str:
     details = details or {}
     upcoming = upcoming_plans(plans, today)
@@ -369,7 +382,7 @@ def build_plans_page(
         '<div class="eyebrow">Pipeline</div><h1>발주 예정 · 재발주 후보</h1>'
         '<p class="lede">공고가 나오기 전에 움직일 수 있는 사업입니다. 기관이 올린 발주계획 중 아직 공고되지 않은 AI 사업과, '
         "곧 끝나는 AI 용역 계약(후속·재발주 후보)을 모았습니다.</p>"
-        f'<div class="stamp">{html.escape(_stamp(run_status, "plans", "발주계획"))} · '
+        f'<div class="stamp">{html.escape(_stamp(run_status, "plans", "발주계획", as_of=plans_generated_at))} · '
         f'{html.escape(_stamp(run_status, "contracts", "계약정보"))}</div>'
         + stats
         + "<h2>공고 전 발주계획</h2>"
@@ -429,7 +442,15 @@ def render_plans_page(repo_root: Path, today: date | None = None) -> dict[str, A
     details = {n["bid_no"]: n for n in load_detail_notices(repo_root)}
     path = repo_root / "plans.html"
     path.write_text(
-        build_plans_page(plans, contracts, load_run_status(repo_root), today, details), encoding="utf-8"
+        build_plans_page(
+            plans,
+            contracts,
+            load_run_status(repo_root),
+            today,
+            details,
+            plans_generated_at=load_plans_generated_at(repo_root),
+        ),
+        encoding="utf-8",
     )
     write_renewal_ics(repo_root, contracts, today)
     return {"path": str(path), "plans": len(plans), "contracts": len(contracts)}

@@ -71,6 +71,16 @@ class G2BError(RuntimeError):
         self.status_code = status_code
 
 
+class G2BEmptyWindow(G2BError):
+    """Weekday query window returned 0 rows even after a one-shot bisect (W-01)."""
+
+
+# Bid/award PPSSrch: 14d often empty; daily runs prove ≤4d is safe (W-01).
+BID_AWARD_WINDOW_DAYS = 4
+# Order-plan posted-date range: split so wide 400d queries stop returning 0 (W-03).
+ORDER_PLAN_POSTED_WINDOW_DAYS = 14
+
+
 def redact_secrets(text: str | None) -> str:
     """Strip serviceKey query values from log/exception text."""
     if not text:
@@ -107,7 +117,7 @@ def month_windows(start: date, end: date) -> Iterator[tuple[date, date]]:
         cur = window_end + timedelta(days=1)
 
 
-def day_windows(start: date, end: date, max_days: int = 7) -> Iterator[tuple[date, date]]:
+def day_windows(start: date, end: date, max_days: int = BID_AWARD_WINDOW_DAYS) -> Iterator[tuple[date, date]]:
     """Bid/award PPSSrch returns empty for wide windows (~14d); keep chunks ≤ max_days."""
     if max_days < 1:
         raise ValueError("max_days must be >= 1")
@@ -116,6 +126,24 @@ def day_windows(start: date, end: date, max_days: int = 7) -> Iterator[tuple[dat
         window_end = min(end, cur + timedelta(days=max_days - 1))
         yield cur, window_end
         cur = window_end + timedelta(days=1)
+
+
+def window_has_weekday(start: date, end: date) -> bool:
+    cur = start
+    while cur <= end:
+        if cur.weekday() < 5:
+            return True
+        cur += timedelta(days=1)
+    return False
+
+
+def bisect_window(bgn: date, edn: date) -> list[tuple[date, date]]:
+    """Split [bgn, edn] into two halves; single-day windows are returned unchanged."""
+    days = (edn - bgn).days + 1
+    if days <= 1:
+        return [(bgn, edn)]
+    mid = bgn + timedelta(days=days // 2 - 1)
+    return [(bgn, mid), (mid + timedelta(days=1), edn)]
 
 
 def _env_float(name: str, default: float) -> float:
@@ -257,6 +285,55 @@ class G2BClient:
                 break
             page += 1
 
+    def _fetch_day_windows(
+        self,
+        url: str,
+        start: date,
+        end: date,
+        *,
+        extra_params: dict[str, Any] | None = None,
+        max_days: int = BID_AWARD_WINDOW_DAYS,
+        page_size: int = 100,
+        label: str = "window",
+    ) -> list[dict[str, Any]]:
+        """Fetch pages over day windows; log counts; bisect once on empty weekday windows (W-01)."""
+        out: list[dict[str, Any]] = []
+        base = dict(extra_params or {})
+
+        def pull(bgn: date, edn: date) -> list[dict[str, Any]]:
+            params = {
+                **base,
+                "inqryDiv": base.get("inqryDiv", "1"),
+                "inqryBgnDt": _dt_param(bgn),
+                "inqryEndDt": _dt_param(edn, end=True),
+            }
+            return [dict(i) for i in self.iter_pages(url, params, page_size=page_size)]
+
+        for bgn, edn in day_windows(start, end, max_days=max_days):
+            chunk = pull(bgn, edn)
+            print(f"::notice::{label} {bgn.isoformat()}→{edn.isoformat()}: {len(chunk)} rows")
+            if not chunk and window_has_weekday(bgn, edn):
+                recovered: list[dict[str, Any]] = []
+                halves = bisect_window(bgn, edn)
+                if halves == [(bgn, edn)]:
+                    raise G2BEmptyWindow(
+                        f"empty weekday window {bgn.isoformat()}→{edn.isoformat()} ({label})"
+                    )
+                for sb, se in halves:
+                    part = pull(sb, se)
+                    print(
+                        f"::notice::{label} bisect {sb.isoformat()}→{se.isoformat()}: {len(part)} rows"
+                    )
+                    recovered.extend(part)
+                if not recovered:
+                    raise G2BEmptyWindow(
+                        f"empty weekday window {bgn.isoformat()}→{edn.isoformat()} "
+                        f"after bisect ({label})"
+                    )
+                chunk = recovered
+            out.extend(chunk)
+        return out
+
     def search_bids_by_name(
         self,
         keyword: str,
@@ -265,17 +342,14 @@ class G2BClient:
         biz: str = "servc",
     ) -> list[dict[str, Any]]:
         """Search bid notices whose 공고명 contains keyword (PPSSrch)."""
-        url = BID_OPS[biz]
-        out: list[dict[str, Any]] = []
-        for bgn, edn in day_windows(start, end, max_days=7):
-            params = {
-                "inqryDiv": "1",
-                "inqryBgnDt": _dt_param(bgn),
-                "inqryEndDt": _dt_param(edn, end=True),
-                "bidNtceNm": keyword,
-            }
-            out.extend(self.iter_pages(url, params))
-        return out
+        return self._fetch_day_windows(
+            BID_OPS[biz],
+            start,
+            end,
+            extra_params={"bidNtceNm": keyword},
+            max_days=BID_AWARD_WINDOW_DAYS,
+            label=f"bid:{biz}:{keyword}",
+        )
 
     def fetch_prespecs(
         self, start: date, end: date, biz_types: list[str] | None = None
@@ -304,21 +378,29 @@ class G2BClient:
         posted_end: date,
         biz_types: list[str] | None = None,
     ) -> list[dict[str, Any]]:
-        """발주계획 by 사업명 keyword; no 1-month cap on either range. Dedupe by 통합번호."""
+        """발주계획 by 사업명 keyword. Split posted-date range (W-03); dedupe by 통합번호."""
         seen: dict[str, dict[str, Any]] = {}
         for biz in biz_types or ["servc", "thng"]:
             for kw in keywords:
-                params = {
-                    "orderBgnYm": order_start.strftime("%Y%m"),
-                    "orderEndYm": order_end.strftime("%Y%m"),
-                    "inqryBgnDt": _dt_param(posted_start),
-                    "inqryEndDt": _dt_param(posted_end, end=True),
-                    "bizNm": kw,
-                }
-                for item in self.iter_pages(PLAN_PPS_OPS[biz], params, page_size=500):
-                    row = dict(item)
-                    row["_biz"] = biz
-                    seen[str(row.get("orderPlanUntyNo") or len(seen))] = row
+                for bgn, edn in day_windows(
+                    posted_start, posted_end, max_days=ORDER_PLAN_POSTED_WINDOW_DAYS
+                ):
+                    params = {
+                        "orderBgnYm": order_start.strftime("%Y%m"),
+                        "orderEndYm": order_end.strftime("%Y%m"),
+                        "inqryBgnDt": _dt_param(bgn),
+                        "inqryEndDt": _dt_param(edn, end=True),
+                        "bizNm": kw,
+                    }
+                    rows = list(self.iter_pages(PLAN_PPS_OPS[biz], params, page_size=500))
+                    print(
+                        f"::notice::plans:{biz}:{kw} {bgn.isoformat()}→{edn.isoformat()}: "
+                        f"{len(rows)} rows"
+                    )
+                    for item in rows:
+                        row = dict(item)
+                        row["_biz"] = biz
+                        seen[str(row.get("orderPlanUntyNo") or len(seen))] = row
         return list(seen.values())
 
     def fetch_contracts(self, keywords: list[str], start: date, end: date) -> list[dict[str, Any]]:
@@ -390,20 +472,18 @@ class G2BClient:
         biz: str = "servc",
         page_size: int = 999,
     ) -> list[dict[str, Any]]:
-        """개찰·낙찰 완료 목록 (inqryDiv=1, 등록일시 기준, ~1개월 창)."""
-        url = SCSBID_OPS[biz]
-        out: list[dict[str, Any]] = []
-        for bgn, edn in day_windows(start, end, max_days=7):
-            params = {
-                "inqryDiv": "1",
-                "inqryBgnDt": _dt_param(bgn),
-                "inqryEndDt": _dt_param(edn, end=True),
-            }
-            for item in self.iter_pages(url, params, page_size=page_size):
-                row = dict(item)
-                row["_biz"] = biz
-                out.append(row)
-        return out
+        """개찰·낙찰 완료 목록 (inqryDiv=1, 등록일시 기준)."""
+        rows = self._fetch_day_windows(
+            SCSBID_OPS[biz],
+            start,
+            end,
+            max_days=BID_AWARD_WINDOW_DAYS,
+            page_size=page_size,
+            label=f"award:{biz}",
+        )
+        for row in rows:
+            row["_biz"] = biz
+        return rows
 
     def fetch_awards_range(
         self,
