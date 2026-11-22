@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-21T18:56:50Z",
+  "generated_at": "2026-11-22T09:46:00Z",
   "mode": "g2b_api",
   "range": {
     "since": "2026-11-19",
@@ -122062,33 +122062,14 @@
     "band": 509,
     "with_winner": 724,
     "awards": {
-      "fetched": 1309,
+      "fetched": 1339,
       "updated": 0
     },
     "scope": {
       "생성형·Agent": 217,
       "AI SW 확대": 1956
     },
-    "awards_enrich": {
-      "range": {
-        "since": "2026-10-23",
-        "until": "2026-11-22"
-      },
-      "fetched": 13459,
-      "updated": 0,
-      "lookups": 80,
-      "lookup_api_errors": 0
-    },
-    "with_bidders": 518,
-    "bidders_enrich": {
-      "targets": 0,
-      "fetched": 0,
-      "updated": 0,
-      "empty": 0,
-      "skipped": 0,
-      "bootstrap_upserts": 0
-    },
     "budget_sanitized": 0
   },
-  "reclassified_at": "2026-11-21T18:53:34Z"
+  "reclassified_at": "2026-11-22T09:46:00Z"
 }

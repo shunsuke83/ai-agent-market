@@ -1,11 +1,33 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-21T18:48:36Z",
+  "generated_at": "2026-11-22T09:44:46Z",
   "range": {
     "since": "2026-11-19",
     "until": "2026-11-22"
   },
   "prespecs": [
+    {
+      "prespec_no": "R26BD00304436",
+      "title": "2026년 부산수학문화관 AI디지털 전시 콘텐츠 개발 제작 및 설치 제안요청서",
+      "org": "부산광역시교육청 부산광역시교육청창의융합교육원",
+      "order_org": "부산광역시교육청 부산광역시교육청창의융합교육원",
+      "registered_at": "2026-11-22 08:43",
+      "registered_date": "2026-11-22",
+      "opinion_close_at": "2026-11-25 09:00",
+      "asign_budget_eok": 2.21,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "연구·교육·행사",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00304436&fileType=BFDTL&fileSeq=2"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
     {
       "prespec_no": "R26BD00304375",
       "title": "제주 넙치양식 AX전환을 위한 AI지능형 양식실증 및 레트로핏 RAS 거점조성사업 실시설계 용역(양식시스템)",
