@@ -1,11 +1,232 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-23T02:19:08Z",
+  "generated_at": "2026-11-23T10:45:48Z",
   "range": {
     "since": "2026-11-09",
     "until": "2026-11-23"
   },
   "prespecs": [
+    {
+      "prespec_no": "R26BD00305187",
+      "title": "AI 기반 서·논술형 평가 평가지원시스템 솔루션 도입 및 운영 용역",
+      "org": "세종특별자치시교육청",
+      "order_org": "조달청",
+      "registered_at": "2026-11-23 18:38",
+      "registered_date": "2026-11-23",
+      "opinion_close_at": "2026-11-28 23:59",
+      "asign_budget_eok": 3.9327,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00305187&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
+    {
+      "prespec_no": "R26BD00305162",
+      "title": "AI기반 심혈관 위험 평가 보조 소프트웨어",
+      "org": "분당서울대학교병원",
+      "order_org": "분당서울대학교병원",
+      "registered_at": "2026-11-23 18:10",
+      "registered_date": "2026-11-23",
+      "opinion_close_at": "2026-11-28 23:59",
+      "asign_budget_eok": 0.0,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00305162&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "thng",
+      "biz_div": "물품",
+      "sw_biz": true
+    },
+    {
+      "prespec_no": "R26BD00305052",
+      "title": "AI 기반 LMS 및 스마트자기관리시스템 통합플랫폼 구축 사업",
+      "org": "한성대학교",
+      "order_org": "한성대학교",
+      "registered_at": "2026-11-23 17:14",
+      "registered_date": "2026-11-23",
+      "opinion_close_at": "2026-11-28 23:59",
+      "asign_budget_eok": 5.92,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
+    {
+      "prespec_no": "R26BD00304993",
+      "title": "[글로컬대학사업] 국방로봇웨어러블 전주기지원센터 국방 피지컬 AI 통합관제 S/W 연구개발 용역",
+      "org": "건양대학교 산학협력단",
+      "order_org": "건양대학교 산학협력단",
+      "registered_at": "2026-11-23 16:49",
+      "registered_date": "2026-11-23",
+      "opinion_close_at": "2026-11-28 23:59",
+      "asign_budget_eok": 1.21,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00304993&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00304956",
+      "title": "[용역] AI 기반 간호술기 자동 평가 프로그램 개발",
+      "org": "강원대학교 원주캠퍼스 원주산학협력단",
+      "order_org": "강원대학교 원주캠퍼스 원주산학협력단",
+      "registered_at": "2026-11-23 16:23",
+      "registered_date": "2026-11-23",
+      "opinion_close_at": "2026-11-28 23:59",
+      "asign_budget_eok": 0.095,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00304956&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00304956&fileType=BFDTL&fileSeq=2"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00304938",
+      "title": "차량 탑재형 엣지 AI 단말 케이스·센서탑재체 설계 및 50 세트 제작 용역",
+      "org": "주식회사 티아이랩",
+      "order_org": "주식회사 티아이랩",
+      "registered_at": "2026-11-23 16:13",
+      "registered_date": "2026-11-23",
+      "opinion_close_at": "2026-11-28 23:59",
+      "asign_budget_eok": 1.1825,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00304938&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00304877",
+      "title": "2027년 천안시 빅데이터 플랫폼 유지관리 및 AI기반 분석 사업",
+      "org": "충청남도 천안시",
+      "order_org": "조달청",
+      "registered_at": "2026-11-23 15:38",
+      "registered_date": "2026-11-23",
+      "opinion_close_at": "2026-11-28 23:59",
+      "asign_budget_eok": 3.0184,
+      "scope": "AI SW 확대",
+      "fields": [
+        "데이터·예측"
+      ],
+      "nature": "운영·유지보수",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00304877&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
+    {
+      "prespec_no": "R26BD00304766",
+      "title": "앵커 사업 관련 AI 및 자율주행 기반 디봇(Divot) 수리 로봇 개발 용역",
+      "org": "제주한라대학교산학협력단",
+      "order_org": "제주한라대학교산학협력단",
+      "registered_at": "2026-11-23 14:20",
+      "registered_date": "2026-11-23",
+      "opinion_close_at": "2026-11-26 23:59",
+      "asign_budget_eok": 1.4,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00304766&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00304766&fileType=BFDTL&fileSeq=2"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00304741",
+      "title": "앵커 사업 관련 AI 영화 창작 통합 프로그램 운영 용역",
+      "org": "제주한라대학교산학협력단",
+      "order_org": "제주한라대학교산학협력단",
+      "registered_at": "2026-11-23 14:00",
+      "registered_date": "2026-11-23",
+      "opinion_close_at": "2026-11-28 23:59",
+      "asign_budget_eok": 0.8,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00304741&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00304741&fileType=BFDTL&fileSeq=2"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00304738",
+      "title": "클라우드 기반 AI기반 지원 플랫폼",
+      "org": "(재)한국조선해양기자재연구원",
+      "order_org": "(재)한국조선해양기자재연구원",
+      "registered_at": "2026-11-23 13:58",
+      "registered_date": "2026-11-23",
+      "opinion_close_at": "2026-11-28 23:59",
+      "asign_budget_eok": 8.5,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00304738&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "thng",
+      "biz_div": "물품",
+      "sw_biz": true
+    },
     {
       "prespec_no": "R26BD00304503",
       "title": "인천항 AI기반 무인출입관리 시스템 구축(키오스크)",
@@ -950,7 +1171,9 @@
         "AI 일반"
       ],
       "nature": "연구·교육·행사",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01848407"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00301842&fileType=BFDTL&fileSeq=1"
       ],
@@ -972,7 +1195,9 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01848574"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00301516&fileType=BFDTL&fileSeq=1",
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00301516&fileType=BFDTL&fileSeq=2",
@@ -996,7 +1221,9 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01849387"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00301824&fileType=BFDTL&fileSeq=1",
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00301824&fileType=BFDTL&fileSeq=2",
@@ -1065,7 +1292,9 @@
         "AI 일반"
       ],
       "nature": null,
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01850244"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00301717&fileType=BFDTL&fileSeq=1"
       ],
@@ -1131,7 +1360,9 @@
         "AI 일반"
       ],
       "nature": "연구·교육·행사",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01848605"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00301494&fileType=BFDTL&fileSeq=1"
       ],
@@ -1547,6 +1778,7 @@
       ],
       "nature": null,
       "bid_nos": [
+        "R26BK01848403",
         "R26BK01842795"
       ],
       "spec_files": [
@@ -1665,7 +1897,9 @@
         "AX·전략"
       ],
       "nature": "ISP·전략",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01845930"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00299771&fileType=BFDTL&fileSeq=1"
       ],
@@ -1687,7 +1921,9 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화",
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01849816"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00299738&fileType=BFDTL&fileSeq=1"
       ],
@@ -2994,7 +3230,9 @@
         "AI 일반"
       ],
       "nature": null,
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01845616"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00296725&fileType=BFDTL&fileSeq=1"
       ],
