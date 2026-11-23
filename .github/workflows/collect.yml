@@ -248,7 +248,11 @@ jobs:
         working-directory: .
 
       # Record D1 / CF Pages after those steps so home stamp can show mirror health (DB plan §1).
+      # COMPANY_PROFILE must be set here too — otherwise this re-render drops 적합도 from index.html
+      # while CF Pages still has the earlier profile-aware copy (GH Pages / git diverge).
       - name: Record Cloudflare outcomes
+        env:
+          COMPANY_PROFILE: ${{ secrets.COMPANY_PROFILE }}
         run: |
           python -m g2b.collect mark-run \
             --d1 "${{ steps.d1.outcome }}" \
