@@ -1,11 +1,75 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-22T09:44:46Z",
+  "generated_at": "2026-11-23T02:19:08Z",
   "range": {
-    "since": "2026-11-19",
-    "until": "2026-11-22"
+    "since": "2026-11-09",
+    "until": "2026-11-23"
   },
   "prespecs": [
+    {
+      "prespec_no": "R26BD00304503",
+      "title": "인천항 AI기반 무인출입관리 시스템 구축(키오스크)",
+      "org": "인천항만공사",
+      "order_org": "조달청 인천지방조달청",
+      "registered_at": "2026-11-23 09:26",
+      "registered_date": "2026-11-23",
+      "opinion_close_at": "2026-11-28 23:59",
+      "asign_budget_eok": 2.2531,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [],
+      "biz": "thng",
+      "biz_div": "물품",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00304475",
+      "title": "2027년 AI 기반 아동·청소년 온라인 성착취 탐지·신고 시스템 운영 및 유지관리",
+      "org": "한국여성인권진흥원",
+      "order_org": "조달청 서울지방조달청",
+      "registered_at": "2026-11-23 08:05",
+      "registered_date": "2026-11-23",
+      "opinion_close_at": "2026-11-26 23:59",
+      "asign_budget_eok": 1.5145,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "운영·유지보수",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00304475&fileType=BFDTL&fileSeq=2"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
+    {
+      "prespec_no": "R26BD00304469",
+      "title": "LOFA AI 2단계 구축",
+      "org": "한국지방재정공제회",
+      "order_org": "조달청 서울지방조달청",
+      "registered_at": "2026-11-23 07:57",
+      "registered_date": "2026-11-23",
+      "opinion_close_at": "2026-11-28 23:59",
+      "asign_budget_eok": 17.1127,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00304469&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
     {
       "prespec_no": "R26BD00304436",
       "title": "2026년 부산수학문화관 AI디지털 전시 콘텐츠 개발 제작 및 설치 제안요청서",
@@ -43,7 +107,9 @@
       ],
       "nature": null,
       "bid_nos": [],
-      "spec_files": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00304375&fileType=BFDTL&fileSeq=1"
+      ],
       "biz": "servc",
       "biz_div": "기술용역",
       "sw_biz": false
@@ -1338,7 +1404,9 @@
         "AI 일반"
       ],
       "nature": null,
-      "bid_nos": [],
+      "bid_nos": [
+        "R26BK01846476"
+      ],
       "spec_files": [
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00300697&fileType=BFDTL&fileSeq=1",
         "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00300697&fileType=BFDTL&fileSeq=2"
