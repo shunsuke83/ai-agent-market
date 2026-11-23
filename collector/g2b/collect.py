@@ -792,6 +792,10 @@ def cmd_reclassify(args: argparse.Namespace) -> int:
 
 
 def cmd_render(args: argparse.Namespace) -> int:
+    # SPA cutover: set RENDER_HTML=0 to skip static HTML while keeping alerts/feeds/D1.
+    if os.environ.get("RENDER_HTML", "1").strip().lower() in ("0", "false", "no"):
+        print(json.dumps({"skipped": True, "reason": "RENDER_HTML=0"}, ensure_ascii=False))
+        return 0
     from .competitors import render_competitors_page
     from .render import render_awards_page, render_band_page, render_index_stamp
     from .reports import render_reports
@@ -890,6 +894,23 @@ def cmd_stage_public(args: argparse.Namespace) -> int:
     from .public_dist import stage_public_dist
 
     summary = stage_public_dist(ROOT, Path(args.out) if args.out else None)
+    print(json.dumps(summary, ensure_ascii=False))
+    return 0
+
+
+def cmd_export_spa(args: argparse.Namespace) -> int:
+    from .spa_export import write_spa_export
+
+    summary = write_spa_export(ROOT, Path(args.out) if args.out else None)
+    print(json.dumps(summary, ensure_ascii=False))
+    return 0
+
+
+def cmd_write_spa_redirects(args: argparse.Namespace) -> int:
+    from .spa_redirects import write_spa_redirects
+
+    out = Path(args.out) if args.out else ROOT
+    summary = write_spa_redirects(out, nested=not args.root)
     print(json.dumps(summary, ensure_ascii=False))
     return 0
 
@@ -1086,10 +1107,29 @@ def build_parser() -> argparse.ArgumentParser:
 
     sp = sub.add_parser(
         "stage-public",
-        help="Copy rendered public HTML into public-dist/ for Cloudflare Pages deploy",
+        help="Stage React dist (or public-dist) with SPA JSON + feeds for Pages deploy",
     )
-    sp.add_argument("--out", default=None, help="Destination directory (default: ../public-dist)")
+    sp.add_argument("--out", default=None, help="Destination directory (default: web/dist or ../public-dist)")
     sp.set_defaults(func=cmd_stage_public)
+
+    es = sub.add_parser(
+        "export-spa",
+        help="Write data/spa/summary.json + notices.json (+ per-id detail) for the React app",
+    )
+    es.add_argument("--out", default=None, help="Also write under this dest/data/spa/")
+    es.set_defaults(func=cmd_export_spa)
+
+    wr = sub.add_parser(
+        "write-spa-redirects",
+        help="Write legacy *.html stubs that redirect to SPA routes",
+    )
+    wr.add_argument("--out", default=None, help="Directory to write into (default: repo root)")
+    wr.add_argument(
+        "--root",
+        action="store_true",
+        help="Use /path redirects (Cloudflare Pages site root) instead of /ai-agent-market/path",
+    )
+    wr.set_defaults(func=cmd_write_spa_redirects)
 
     return p
 

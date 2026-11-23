@@ -203,17 +203,27 @@ jobs:
           --firms "${{ steps.firms.outcome }}"
         working-directory: collector
 
-      # Public + git HTML: COMPANY_PROFILE enables 적합도(참여/검토/보류). YAML is never written to data/.
-      - name: Render public site pages
+      # Legacy HTML: off by default (SPA). Set repo variable RENDER_HTML=1 to keep Python pages.
+      - name: Render public site pages (optional HTML)
         env:
           COMPANY_PROFILE: ${{ secrets.COMPANY_PROFILE }}
+          RENDER_HTML: ${{ vars.RENDER_HTML }}
         run: |
+          export RENDER_HTML="${RENDER_HTML:-0}"
           if [ -n "${COMPANY_PROFILE:-}" ]; then
-            echo "COMPANY_PROFILE set — fit scores on public render."
+            echo "COMPANY_PROFILE set — fit scores available for SPA export / D1."
           else
-            echo "::warning::COMPANY_PROFILE missing — public render without 적합도."
+            echo "::warning::COMPANY_PROFILE missing — SPA/D1 without 적합도."
           fi
+          echo "RENDER_HTML=$RENDER_HTML"
           python -m g2b.collect render all
+        working-directory: collector
+
+      # SPA JSON for the React public app (fit uses COMPANY_PROFILE when set).
+      - name: Export SPA JSON
+        env:
+          COMPANY_PROFILE: ${{ secrets.COMPANY_PROFILE }}
+        run: python -m g2b.collect export-spa
         working-directory: collector
 
       # Internal D1: fit scores use COMPANY_PROFILE. Skip cleanly if Cloudflare secrets unset.
@@ -228,13 +238,34 @@ jobs:
         run: python -m g2b.collect sync-d1
         working-directory: collector
 
-      # Public CF Pages. Must use PYTHONPATH=collector — cwd is repo root for public-dist/.
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: Build React SPA (public + internal)
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
+        run: |
+          npm ci --prefix web
+          npm run build:public --prefix web
+          cp -a web/dist web/dist-public
+          npm run build:internal --prefix web
+          cp -a web/dist web/dist-internal
+          # stage-public merges SPA JSON into web/dist — restore public build as web/dist
+          rm -rf web/dist
+          mv web/dist-public web/dist
+
+      # Public CF Pages: React dist + SPA JSON + feeds (no Functions on public project).
       - name: Deploy public site to Cloudflare Pages
         id: pages
         continue-on-error: true
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          COMPANY_PROFILE: ${{ secrets.COMPANY_PROFILE }}
           PYTHONPATH: collector
         run: |
           if [ -z "${CLOUDFLARE_API_TOKEN:-}" ]; then
@@ -242,18 +273,59 @@ jobs:
             exit 0
           fi
           python -m g2b.collect stage-public
-          npm install --prefix web
-          # Deploy cwd=public-dist so web/functions are not bundled onto the public project.
-          npx --prefix web wrangler pages deploy public-dist --project-name=ai-agent-market --commit-dirty=true
+          # Deploy from a copy without functions/ so public project stays static-only.
+          rm -rf /tmp/ai-agent-market-public-dist
+          cp -a web/dist /tmp/ai-agent-market-public-dist
+          npx --prefix web wrangler pages deploy /tmp/ai-agent-market-public-dist \
+            --project-name=ai-agent-market --commit-dirty=true
         working-directory: .
 
-      # Record D1 / CF Pages after those steps so home stamp can show mirror health (DB plan §1).
-      # COMPANY_PROFILE must be set here too — otherwise this re-render drops 적합도 from index.html
-      # while CF Pages still has the earlier profile-aware copy (GH Pages / git diverge).
+      - name: Deploy internal site to Cloudflare Pages
+        id: pages_internal
+        continue-on-error: true
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          if [ -z "${CLOUDFLARE_API_TOKEN:-}" ]; then
+            echo "CLOUDFLARE_API_TOKEN unset — skip internal Pages deploy."
+            exit 0
+          fi
+          npx --prefix web wrangler pages deploy web/dist-internal \
+            --project-name=ai-agent-market-internal --commit-dirty=true
+        working-directory: .
+
+      # GitHub Pages (main/): rebuild with base /ai-agent-market/ then sync into repo root on commit.
+      - name: Build GitHub Pages SPA
+        id: gh_pages
+        continue-on-error: true
+        env:
+          COMPANY_PROFILE: ${{ secrets.COMPANY_PROFILE }}
+          PYTHONPATH: collector
+        run: |
+          VITE_BASE=/ai-agent-market/ npm run build:public --prefix web
+          rm -rf web/dist-gh
+          mv web/dist web/dist-gh
+          python -c "
+          from pathlib import Path
+          from g2b.public_dist import stage_spa_onto_dist
+          print(stage_spa_onto_dist(Path('.').resolve(), Path('web/dist-gh')))
+          "
+          # GH Pages has no _redirects: 404.html = index.html for client routes.
+          cp web/dist-gh/index.html web/dist-gh/404.html
+          # Restore CF public dist if present
+          rm -rf web/dist
+          if [ -d /tmp/ai-agent-market-public-dist ]; then
+            cp -a /tmp/ai-agent-market-public-dist web/dist
+          fi
+
+      # Record D1 / CF Pages after those steps so home stamp can show mirror health.
       - name: Record Cloudflare outcomes
         env:
           COMPANY_PROFILE: ${{ secrets.COMPANY_PROFILE }}
+          RENDER_HTML: ${{ vars.RENDER_HTML }}
         run: |
+          export RENDER_HTML="${RENDER_HTML:-0}"
           python -m g2b.collect mark-run \
             --d1 "${{ steps.d1.outcome }}" \
             --pages "${{ steps.pages.outcome }}"
@@ -283,29 +355,60 @@ jobs:
 
       # data/seed/ is a frozen editorial extract; never re-extract it from rendered pages.
       - name: Commit data and pages if changed
+        env:
+          RENDER_HTML: ${{ vars.RENDER_HTML }}
+          PYTHONPATH: collector
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          # Match `render all`: band awards index competitors reports prespecs pricing
-          # bidders agencies plans details (+ alerts/feeds from the alerts step).
+          export RENDER_HTML="${RENDER_HTML:-0}"
+
           git add data/notices.json data/reports.json data/run_status.json \
-            reports.json reports/ \
-            band.html awards.html index.html competitors.html prespecs.html pricing.html plans.html \
-            bidders.html data/bidders.json agencies.html data/agencies.json deliverables.html \
-            sitemap.xml robots.txt 404.html \
-            assets/site.css assets/table-filter.js assets/watch.js assets/dday.js assets/price-calc.js
-          if [ -f alerts.html ]; then git add alerts.html feeds/; fi
+            data/bidders.json data/agencies.json reports.json reports/ \
+            sitemap.xml robots.txt
           if [ -f data/alerts_state.json ]; then git add data/alerts_state.json; fi
           if [ -f data/prespecs.json ]; then git add data/prespecs.json; fi
           if [ -f data/firms.json ]; then git add data/firms.json; fi
           if [ -f data/order_plans.json ]; then git add data/order_plans.json; fi
           if [ -f data/contracts.json ]; then git add data/contracts.json; fi
           if [ -f data/rfp_summaries.json ]; then git add data/rfp_summaries.json; fi
-          git add -A bids/
+          if [ -d feeds ]; then git add feeds/; fi
+
+          if [ "$RENDER_HTML" = "1" ]; then
+            git add band.html awards.html index.html competitors.html prespecs.html pricing.html plans.html \
+              bidders.html agencies.html deliverables.html alerts.html 404.html \
+              assets/site.css assets/table-filter.js assets/watch.js assets/dday.js assets/price-calc.js
+            git add -A bids/
+          elif [ -d web/dist-gh ]; then
+            # Sync React SPA (+ data/spa, feeds) into repo root for GitHub Pages (main/).
+            mkdir -p assets
+            cp -a web/dist-gh/assets/. assets/
+            cp web/dist-gh/index.html index.html
+            cp web/dist-gh/404.html 404.html
+            mkdir -p data
+            rm -rf data/spa
+            cp -a web/dist-gh/data/spa data/spa
+            if [ -d web/dist-gh/data ]; then
+              for f in bidders agencies firms prespecs order_plans reports contracts; do
+                if [ -f "web/dist-gh/data/${f}.json" ]; then cp "web/dist-gh/data/${f}.json" "data/${f}.json"; fi
+              done
+            fi
+            if [ -d web/dist-gh/feeds ]; then mkdir -p feeds; cp -a web/dist-gh/feeds/. feeds/; fi
+            # Legacy HTML stubs → SPA routes (only when HTML render is off).
+            python -m g2b.collect write-spa-redirects --out .
+            git add index.html 404.html assets/ data/spa/
+            for f in band awards pricing plans prespecs bidders agencies competitors alerts deliverables; do
+              if [ -f "${f}.html" ]; then git add "${f}.html"; fi
+            done
+            if [ -f reports/index.html ]; then git add reports/index.html; fi
+            # Retire per-bid HTML shells once SPA owns detail.
+            if [ -d bids ]; then git rm -r --ignore-unmatch bids/ || true; fi
+          fi
+
           if git diff --staged --quiet; then
             echo "No data changes."
           else
-            git commit -m "data: refresh G2B AI notices and render pages"
+            git commit -m "data: refresh G2B AI notices and SPA site"
             # N-08: another push during collect must not fail the data commit.
             git pull --rebase --autostash origin HEAD
             git push

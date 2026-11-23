@@ -17,6 +17,12 @@ type NoticeRow = {
   fit_verdict: string | null;
   fit_score: number | null;
   fit_reasons_json: string | null;
+  winner: string | null;
+  first_rank: string | null;
+  bid_count: number | null;
+  award_amount_eok: number | null;
+  win_rate_pct: number | null;
+  g2b_url: string | null;
 };
 
 function json(data: unknown, status = 200): Response {
@@ -66,7 +72,8 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
 
   const countSql = `SELECT COUNT(*) AS n FROM notices ${whereSql}`;
   const listSql = `SELECT bid_no, bid_ord, title, org, scope, nature, budget_eok, notice_date, close_at, open_date,
-    contract_method, soft_excluded, exclude_reason, fit_verdict, fit_score, fit_reasons_json
+    contract_method, soft_excluded, exclude_reason, fit_verdict, fit_score, fit_reasons_json,
+    winner, first_rank, bid_count, award_amount_eok, win_rate_pct, g2b_url
     FROM notices ${whereSql} ${order} LIMIT ? OFFSET ?`;
 
   const countRow = await context.env.DB.prepare(countSql)

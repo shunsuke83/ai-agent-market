@@ -1,0 +1,16 @@
+# Legacy Python HTML → SPA routes
+/band.html              /band              301
+/awards.html            /awards            301
+/pricing.html           /pricing           301
+/plans.html             /plans             301
+/prespecs.html          /prespecs          301
+/bidders.html           /bidders           301
+/agencies.html          /agencies          301
+/competitors.html       /competitors       301
+/alerts.html            /alerts            301
+/deliverables.html      /deliverables      301
+/reports/index.html     /reports           301
+/index.html             /                  301
+
+# SPA fallback
+/*    /index.html   200

@@ -1,11 +1,11 @@
 /* Tokens from @genonai/admin-design-system (Foundations: color · typography · radius) */
 :root{--bg:#f7faff;--surface:#fff;--surface-2:#f6f7f8;--fg:#101318;--muted:#516174;--line:#eceef2;--line-strong:#d9dde3;
---accent:#0161ed;--accent-hover:#014ebe;--accent-soft:#edf4ff;--accent-ring:#0161ed40;--stamp:#c8383a;--stamp-soft:#fef4f4;
+--accent:#7540ee;--accent-hover:#5b2ec4;--accent-soft:#f3edff;--accent-ring:#7540ee40;--stamp:#c8383a;--stamp-soft:#fef4f4;
 --radius:12px;--radius-sm:8px;--shadow:0 1px 2px #1013180a;
 --f-body:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
 --f-mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color-scheme:light}
 @media (prefers-color-scheme:dark){:root{--bg:#101318;--surface:#181c22;--surface-2:#1e232a;--fg:#eceef2;--muted:#a0a8b5;--line:#2a313b;--line-strong:#3b4656;
---accent:#67a0f4;--accent-hover:#99c0f8;--accent-soft:#0161ed26;--accent-ring:#67a0f466;--stamp:#f48585;--stamp-soft:#f054541a;--shadow:none;color-scheme:dark}}
+--accent:#a78bfa;--accent-hover:#c4b5fd;--accent-soft:#7540ee26;--accent-ring:#a78bfa66;--stamp:#f48585;--stamp-soft:#f054541a;--shadow:none;color-scheme:dark}}
 *{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:15px;line-height:1.6;letter-spacing:-.01em}
 .skip-link{position:absolute;left:12px;top:12px;z-index:1000;padding:8px 12px;background:var(--surface);color:var(--accent);border:1px solid var(--line);border-radius:var(--radius-sm);font-weight:600;text-decoration:none;transform:translateY(-200%);transition:transform .15s ease}
@@ -26,7 +26,7 @@ body{padding-left:240px}
 .nav-label{display:block;padding:0 12px 4px;font-size:12px;font-weight:600;color:var(--muted)}
 .top .nav-group a{display:block;padding:7px 12px;margin:1px 0;color:var(--fg);font-weight:500}
 .top .nav-group a[aria-current=page]{box-shadow:inset 3px 0 0 var(--accent)}
-.wrap{margin:16px 16px 16px 8px;padding:32px 36px 40px;background:var(--surface);border-radius:var(--radius);box-shadow:0 1px 3px #1013180f,0 4px 16px #0161ed0a;max-width:1100px}
+.wrap{margin:16px 16px 16px 8px;padding:32px 36px 40px;background:var(--surface);border-radius:var(--radius);box-shadow:0 1px 3px #1013180f,0 4px 16px #7540ee0a;max-width:1100px}
 .wrap:has(table.band-results),.wrap:has(table.prespecs){max-width:1300px}
 .wrap .stat,.wrap .tbl,.wrap .card,.wrap .bars{box-shadow:none}
 }
