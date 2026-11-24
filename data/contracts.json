@@ -1,7 +1,338 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-23T10:50:20Z",
+  "generated_at": "2026-11-24T12:31:56Z",
   "contracts": [
+    {
+      "contract_no": "R26TA02461691",
+      "title": "AX서비스 개발환경 구축 용역",
+      "org": "한국남동발전(주)",
+      "contract_org": "조달청 경남지방조달청",
+      "signed_date": "2026-11-24",
+      "period_text": "계약 후 120일 이내",
+      "end_date": "2027-03-24",
+      "amount_eok": 7.447,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 로이드케이",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "1208767951"
+        }
+      ],
+      "bid_no": "R26BK01791366",
+      "registered_at": "2026-11-24 15:50",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02461691&ctrtChgOrd=00&prcmBsneSeCd=조070002&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화"
+    },
+    {
+      "contract_no": "R26TA01899363",
+      "title": "수원시 홈페이지 생성형 AI 챗봇 서비스 구축 용역",
+      "org": "경기도 수원시",
+      "contract_org": "조달청 인천지방조달청",
+      "signed_date": "2026-11-23",
+      "period_text": "계약 후 180일 이내",
+      "end_date": "2027-05-22",
+      "amount_eok": 3.7012,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "(주)나라원시스템",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "1478602432"
+        }
+      ],
+      "bid_no": "R26BK01463497",
+      "registered_at": "2026-11-24 09:34",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA01899363&ctrtChgOrd=01&prcmBsneSeCd=조070002&srchName=ctrtCrst&openUrl=Y",
+      "scope": "생성형·Agent",
+      "fields": [
+        "생성형·LLM"
+      ],
+      "nature": "시스템 구축·고도화"
+    },
+    {
+      "contract_no": "R26TA01547209",
+      "title": "AI DU 신축사업 설계용역(2차)",
+      "org": "한국방송통신대학교",
+      "contract_org": "한국방송통신대학교",
+      "signed_date": "2026-11-23",
+      "period_text": "금차 268일, 총차 365일",
+      "end_date": "2026-12-23",
+      "amount_eok": 8.155,
+      "long_term": "장기",
+      "method": "수의계약",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 태인엠이씨",
+          "role": "도급업체",
+          "share": 11.0,
+          "bizno": "4658800675"
+        },
+        {
+          "name": "주식회사네임리스건축사사무소",
+          "role": "주계약업체",
+          "share": 89.0,
+          "bizno": "6838801670"
+        }
+      ],
+      "bid_no": null,
+      "registered_at": "2026-11-23 17:34",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA01547209&ctrtChgOrd=02&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
+    {
+      "contract_no": "R26TA01344520",
+      "title": "2025년 AI 기반 통합보안관제 운영 용역(2차년도)",
+      "org": "한국농어촌공사",
+      "contract_org": "한국농어촌공사",
+      "signed_date": "2026-11-23",
+      "period_text": "금차 341일, 총차 365일",
+      "end_date": "2026-12-31",
+      "amount_eok": 6.21,
+      "long_term": "장기",
+      "method": "일반경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 티앤디소프트",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "2648142938"
+        }
+      ],
+      "bid_no": null,
+      "registered_at": "2026-11-23 16:34",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA01344520&ctrtChgOrd=01&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
+    {
+      "contract_no": "R26TA02431983",
+      "title": "계약품의및요구서-지역 주도형 AI 대전환 사업 제조 AI 허브 쇼룸 제작·설치 용역",
+      "org": "(재)울산테크노파크",
+      "contract_org": "조달청 부산지방조달청",
+      "signed_date": "2026-11-23",
+      "period_text": "계약 후 90일 이내",
+      "end_date": "2027-02-21",
+      "amount_eok": 23.52,
+      "long_term": "신규",
+      "method": "일반경쟁",
+      "joint": true,
+      "firms": [
+        {
+          "name": "주식회사 와이엠엑스",
+          "role": "도급업체",
+          "share": 5.2,
+          "bizno": "8808700921"
+        },
+        {
+          "name": "(주)시즐",
+          "role": "주계약업체",
+          "share": 94.8,
+          "bizno": "2048800482"
+        }
+      ],
+      "bid_no": "R26BK01761803",
+      "registered_at": "2026-11-24 13:17",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02431983&ctrtChgOrd=00&prcmBsneSeCd=조070002&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
+    {
+      "contract_no": "R26TA02452725",
+      "title": "제조 데이터 통합 기반 AI 서비스 개발",
+      "org": "(재)구미전자정보기술원",
+      "contract_org": "조달청 대구지방조달청",
+      "signed_date": "2026-11-23",
+      "period_text": null,
+      "end_date": null,
+      "amount_eok": 2.0,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 유알정보기술",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "5138184733"
+        }
+      ],
+      "bid_no": "R26BK01735939",
+      "registered_at": "2026-11-24 09:01",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02452725&ctrtChgOrd=00&prcmBsneSeCd=조070002&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화"
+    },
+    {
+      "contract_no": "R26TA02456732",
+      "title": "여주 조류인플루엔자(AI) 발생 관련 살처분 용역(율극축산)",
+      "org": "경기도 여주시",
+      "contract_org": "경기도 여주시",
+      "signed_date": "2026-11-23",
+      "period_text": "금차 15일, 총차 15일",
+      "end_date": "2026-12-07",
+      "amount_eok": 7.6162,
+      "long_term": "신규",
+      "method": "수의계약",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 크로스캐리어",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "5648800292"
+        }
+      ],
+      "bid_no": null,
+      "registered_at": "2026-11-24 10:43",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02456732&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
+    {
+      "contract_no": "R26TA02445872",
+      "title": "MUM-T 체계 적용 AI 및 자율 참조 아키텍처 검증 지원",
+      "org": "국방과학연구소",
+      "contract_org": "국방과학연구소",
+      "signed_date": "2026-11-23",
+      "period_text": "금차 388일, 총차 388일",
+      "end_date": "2027-12-15",
+      "amount_eok": 1.1,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "육군사관학교 산학협력단",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "5648200077"
+        }
+      ],
+      "bid_no": "R26BK01783947",
+      "registered_at": "2026-11-24 16:55",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02445872&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
+    {
+      "contract_no": "R26TA02440670",
+      "title": "참조 아키텍처 검증을 위한 AI/자율 소프트웨어 연동 지원",
+      "org": "국방과학연구소",
+      "contract_org": "국방과학연구소",
+      "signed_date": "2026-11-23",
+      "period_text": "금차 754일, 총차 754일",
+      "end_date": "2028-12-15",
+      "amount_eok": 7.64,
+      "long_term": "신규",
+      "method": "수의계약",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 에이스웍스코리아",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "2208166279"
+        }
+      ],
+      "bid_no": null,
+      "registered_at": "2026-11-19 14:02",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02440670&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
+    {
+      "contract_no": "R26TA02452902",
+      "title": "AI 기반 국가R&D 사업화 유망성 탐색 플랫폼(APOLLO) 운영 및 관리",
+      "org": "한국과학기술정보연구원",
+      "contract_org": "한국과학기술정보연구원",
+      "signed_date": "2026-11-23",
+      "period_text": "금차 365일, 총차 365일",
+      "end_date": "2027-12-31",
+      "amount_eok": 1.89,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "(주)오픈메이트",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "1058636092"
+        }
+      ],
+      "bid_no": "R26BK01785770",
+      "registered_at": "2026-11-23 10:47",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02452902&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
+    {
+      "contract_no": "R26TA02456952",
+      "title": "2027년 경남인공지능혁신본부 시설물 관리용역",
+      "org": "재단법인 경남테크노파크",
+      "contract_org": "재단법인 경남테크노파크",
+      "signed_date": "2026-11-23",
+      "period_text": "금차 365일, 총차 365일",
+      "end_date": "2027-12-31",
+      "amount_eok": 3.8321,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 청송",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "1318143689"
+        }
+      ],
+      "bid_no": "R26BK01819479",
+      "registered_at": "2026-11-23 16:41",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02456952&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
     {
       "contract_no": "R26TA02444846",
       "title": "2026년 부산스마트시티 국가시범도시 AI데이터허브 구축 지원",
@@ -21068,35 +21399,6 @@
       "nature": "ISP·전략"
     },
     {
-      "contract_no": "R26TA01899363",
-      "title": "수원시 홈페이지 생성형 AI 챗봇 서비스 구축 용역",
-      "org": "경기도 수원시",
-      "contract_org": "조달청 인천지방조달청",
-      "signed_date": "2026-05-27",
-      "period_text": "계약 후 180일 이내",
-      "end_date": "2026-11-23",
-      "amount_eok": 3.7752,
-      "long_term": "신규",
-      "method": "제한경쟁",
-      "joint": false,
-      "firms": [
-        {
-          "name": "(주)나라원시스템",
-          "role": "주계약업체",
-          "share": 100.0,
-          "bizno": "1478602432"
-        }
-      ],
-      "bid_no": "R26BK01463497",
-      "registered_at": "2026-05-28 10:16",
-      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA01899363&ctrtChgOrd=00&prcmBsneSeCd=조070002&srchName=ctrtCrst&openUrl=Y",
-      "scope": "생성형·Agent",
-      "fields": [
-        "생성형·LLM"
-      ],
-      "nature": "시스템 구축·고도화"
-    },
-    {
       "contract_no": "R26TA01894959",
       "title": "AI 영업비밀 관리시스템 구축",
       "org": "한국지식재산보호원",
@@ -29603,41 +29905,6 @@
       "nature": "ISP·전략"
     },
     {
-      "contract_no": "R26TA01547209",
-      "title": "AI DU 신축사업 설계용역(2차)",
-      "org": "한국방송통신대학교",
-      "contract_org": "한국방송통신대학교",
-      "signed_date": "2026-03-01",
-      "period_text": "금차 268일, 총차 365일",
-      "end_date": "2026-11-23",
-      "amount_eok": 8.155,
-      "long_term": "장기",
-      "method": "수의계약",
-      "joint": false,
-      "firms": [
-        {
-          "name": "주식회사 태인엠이씨",
-          "role": "도급업체",
-          "share": 11.0,
-          "bizno": "4658800675"
-        },
-        {
-          "name": "주식회사네임리스건축사사무소",
-          "role": "주계약업체",
-          "share": 89.0,
-          "bizno": "6838801670"
-        }
-      ],
-      "bid_no": null,
-      "registered_at": "2026-03-04 15:45",
-      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA01547209&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
-      "scope": "AI SW 확대",
-      "fields": [
-        "AI 일반"
-      ],
-      "nature": null
-    },
-    {
       "contract_no": "R26TA01546522",
       "title": "2026년 지능형 산림항공 운항안전시스템 운영 및 유지관리",
       "org": "산림청 산림항공본부",
@@ -33303,35 +33570,6 @@
         "AI 일반"
       ],
       "nature": "운영·유지보수"
-    },
-    {
-      "contract_no": "R26TA01344520",
-      "title": "2025년 AI 기반 통합보안관제 운영 용역(2차년도)",
-      "org": "한국농어촌공사",
-      "contract_org": "한국농어촌공사",
-      "signed_date": "2026-01-01",
-      "period_text": "금차 341일, 총차 365일",
-      "end_date": "2026-12-07",
-      "amount_eok": 5.8,
-      "long_term": "장기",
-      "method": "일반경쟁",
-      "joint": false,
-      "firms": [
-        {
-          "name": "주식회사 티앤디소프트",
-          "role": "주계약업체",
-          "share": 100.0,
-          "bizno": "2648142938"
-        }
-      ],
-      "bid_no": null,
-      "registered_at": "2026-01-15 14:55",
-      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA01344520&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
-      "scope": "AI SW 확대",
-      "fields": [
-        "AI 일반"
-      ],
-      "nature": null
     },
     {
       "contract_no": "R26TA01347959",
