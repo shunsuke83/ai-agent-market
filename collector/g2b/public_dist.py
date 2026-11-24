@@ -78,6 +78,20 @@ def stage_spa_onto_dist(repo_root: Path, dist: Path) -> dict[str, Any]:
         shutil.copy2(favicon, assets / "favicon.svg")
         extras.append("assets/favicon.svg")
 
+    # Cloudflare Pages serves foo.html for /foo when that file exists, which would
+    # shadow the SPA fallback. Strip any leftover legacy HTML from the dist tree.
+    removed_html: list[str] = []
+    keep_html = {"index.html", "404.html"}
+    for path in dist.rglob("*.html"):
+        rel = path.relative_to(dist).as_posix()
+        if path.name in keep_html and path.parent == dist:
+            continue
+        if rel.startswith("data/") or rel.startswith("assets/"):
+            continue
+        path.unlink(missing_ok=True)
+        removed_html.append(rel)
+    extras.extend(f"-{name}" for name in removed_html)
+
     # Legacy HTML URL → SPA path (Cloudflare Pages _redirects). Vite also ships public/_redirects.
     redirects = dist / "_redirects"
     legacy_rules = """
@@ -98,7 +112,13 @@ def stage_spa_onto_dist(repo_root: Path, dist: Path) -> dict[str, Any]:
     if "/band.html" not in existing:
         redirects.write_text(legacy_rules + "\n" + existing.lstrip(), encoding="utf-8")
 
-    return {"dist": str(dist), "spa": write, "staged": spa, "extras": extras}
+    return {
+        "dist": str(dist),
+        "spa": write,
+        "staged": spa,
+        "extras": extras,
+        "removed_html": removed_html,
+    }
 
 
 def stage_public_dist(repo_root: Path, dest: Path | None = None) -> dict[str, Any]:

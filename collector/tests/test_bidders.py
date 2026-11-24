@@ -67,3 +67,33 @@ def test_render_frequent_row():
     assert "테스트" in html
     assert 'class="num">5</td>' in html
     assert "40%" in html
+
+
+def test_spa_bidders_index_counts_wins_by_notice_winner(tmp_path: Path):
+    """hist[0] is notice index, not a win flag — wins follow notice[5] == bizno."""
+    from g2b.spa_export import _bidders_index
+
+    root = tmp_path
+    (root / "data").mkdir()
+    payload = {
+        "notices": [
+            # [open_date, org, title, budget, href, winner_bizno, status]
+            ["2026-01-01", "기관", "A", 10.0, "bids/a.html", "1111111111", "낙찰"],
+            ["2026-01-02", "기관", "B", 20.0, "bids/b.html", "2222222222", "낙찰"],
+            ["2026-01-03", "기관", "C", 3.0, "bids/c.html", "", "1순위"],
+        ],
+        "firms": {
+            # rate 9.5 is price-score noise; avg_win_rate must use amount/budget → 95%
+            "1111111111": ["알파", "서울", [[0, 1, 9.5, 9.5], [1, 2, 90.0, 1.8], [2, 1, 88.0, None]]],
+            "2222222222": ["베타", "부산", [[1, 1, 92.0, 18.4]]],
+        },
+    }
+    (root / "data" / "bidders.json").write_text(
+        __import__("json").dumps(payload, ensure_ascii=False), encoding="utf-8"
+    )
+    rows = {r["bizno"]: r for r in _bidders_index(root)}
+    assert rows["1111111111"]["bids"] == 3
+    assert rows["1111111111"]["wins"] == 1
+    assert rows["1111111111"]["avg_win_rate"] == 95.0
+    assert rows["2222222222"]["wins"] == 1
+    assert rows["2222222222"]["avg_win_rate"] == 92.0

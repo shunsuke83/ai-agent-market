@@ -11,8 +11,9 @@ import { fmtEok } from "../lib/format";
 export default function AwardsPage() {
   const [search, setSearch] = useState("");
   const q = useDebounced(search);
+  // Awards must include soft-excluded rows (GPU·물품 등). Old awards.html did not apply list filters.
   const state = useAsync(
-    () => dataClient.listNotices({ openOnly: false, includeExcluded: false, limit: 2000 }),
+    () => dataClient.listNotices({ openOnly: false, includeExcluded: true, limit: 5000 }),
     [],
   );
 
@@ -26,13 +27,17 @@ export default function AwardsPage() {
         const hay = `${n.title ?? ""} ${n.org ?? ""} ${n.winner ?? ""} ${n.bid_no}`.toLowerCase();
         return hay.includes(needle);
       })
-      .sort((a, b) => (b.open_date ?? "").localeCompare(a.open_date ?? ""));
+      .sort((a, b) => {
+        const byDate = (b.open_date ?? "").localeCompare(a.open_date ?? "");
+        if (byDate) return byDate;
+        return (b.award_amount_eok ?? b.budget_eok ?? 0) - (a.award_amount_eok ?? a.budget_eok ?? 0);
+      });
   }, [state, q]);
 
   return (
     <ListPageLayout
       title="수주 현황"
-      description="낙찰자·개찰일이 있는 AI 공고"
+      description="낙찰·1순위가 있는 AI 공고 (분류 제외분 포함)"
       toolbar={<ListControl search="사업명·기관·낙찰자" searchValue={search} onSearchChange={setSearch} />}
     >
       <AsyncView state={state}>
@@ -50,8 +55,25 @@ export default function AwardsPage() {
                   header: "사업명",
                   render: (r) => <Link to={`/bids/${r.id}`}>{r.title ?? r.bid_no}</Link>,
                 },
-                { key: "winner", header: "낙찰자", render: (r) => r.winner ?? r.first_rank ?? "-" },
+                {
+                  key: "winner",
+                  header: "낙찰자",
+                  render: (r) =>
+                    r.winner ? r.winner : r.first_rank ? `${r.first_rank} (1순위)` : "-",
+                },
+                {
+                  key: "award",
+                  header: "낙찰(억)",
+                  align: "right",
+                  render: (r) => fmtEok(r.award_amount_eok),
+                },
                 { key: "budget", header: "예산(억)", align: "right", render: (r) => fmtEok(r.budget_eok) },
+                {
+                  key: "rate",
+                  header: "낙찰률",
+                  align: "right",
+                  render: (r) => (r.win_rate_pct != null ? `${r.win_rate_pct}%` : "-"),
+                },
               ]}
               rows={rows}
             />

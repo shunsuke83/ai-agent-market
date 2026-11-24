@@ -194,27 +194,68 @@ def build_spa_payload(repo_root: Path) -> dict[str, Any]:
 
 
 def _bidders_index(repo_root: Path) -> list[dict[str, Any]]:
+    """Compact firm list for SPA. hist entries are [notice_idx, rank, rate_pct, amount].
+
+    Wins = notices where notice[5] (winner 사업자번호) equals this firm — same rule as
+    assets/bidder-search.js. Do not treat hist[0]==0 as a win (that is a notice index).
+    """
     path = repo_root / "data" / "bidders.json"
     if not path.is_file():
         return []
     raw = json.loads(path.read_text(encoding="utf-8"))
     firms = raw.get("firms") if isinstance(raw, dict) else None
+    notices = raw.get("notices") if isinstance(raw, dict) else None
     if not isinstance(firms, dict):
         return []
+    if not isinstance(notices, list):
+        notices = []
     rows: list[dict[str, Any]] = []
     for bizno, v in firms.items():
         row = v if isinstance(v, list) else []
         hist = row[2] if len(row) > 2 and isinstance(row[2], list) else []
-        rows.append(
-            {
-                "bizno": bizno,
-                "name": row[0] if row else bizno,
-                "region": row[1] if len(row) > 1 else "",
-                "bids": len(hist),
-                "wins": sum(1 for h in hist if isinstance(h, list) and len(h) > 0 and h[0] == 0),
-            }
-        )
-    rows.sort(key=lambda r: (-int(r["bids"]), str(r["name"])))
+        wins = 0
+        win_rates: list[float] = []
+        for h in hist:
+            if not isinstance(h, list) or not h:
+                continue
+            try:
+                idx = int(h[0])
+            except (TypeError, ValueError):
+                continue
+            if idx < 0 or idx >= len(notices):
+                continue
+            notice = notices[idx]
+            winner_bz = notice[5] if isinstance(notice, list) and len(notice) > 5 else None
+            if str(winner_bz or "") != str(bizno):
+                continue
+            wins += 1
+            # Prefer amount/budget (true 낙찰률). hist rate_pct is often a 10-pt price score
+            # on negotiated contracts, not award-to-budget %.
+            budget = notice[3] if isinstance(notice, list) and len(notice) > 3 else None
+            amount = h[3] if len(h) > 3 else None
+            rate = None
+            try:
+                if amount not in (None, "") and budget not in (None, "") and float(budget) > 0:
+                    rate = float(amount) / float(budget) * 100.0
+                elif len(h) > 2 and h[2] not in (None, ""):
+                    candidate = float(h[2])
+                    if candidate >= 50:  # looks like 낙찰률, not 가격평가 점수
+                        rate = candidate
+            except (TypeError, ValueError):
+                rate = None
+            if rate is not None:
+                win_rates.append(rate)
+        entry: dict[str, Any] = {
+            "bizno": bizno,
+            "name": row[0] if row else bizno,
+            "region": row[1] if len(row) > 1 else "",
+            "bids": len(hist),
+            "wins": wins,
+        }
+        if win_rates:
+            entry["avg_win_rate"] = round(sum(win_rates) / len(win_rates), 1)
+        rows.append(entry)
+    rows.sort(key=lambda r: (-int(r["wins"]), -int(r["bids"]), str(r["name"])))
     return rows
 
 

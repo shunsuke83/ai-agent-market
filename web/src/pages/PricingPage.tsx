@@ -11,7 +11,7 @@ export default function PricingPage() {
   const [search, setSearch] = useState("");
   const q = useDebounced(search);
   const state = useAsync(
-    () => dataClient.listNotices({ openOnly: false, includeExcluded: false, limit: 2000 }),
+    () => dataClient.listNotices({ openOnly: false, includeExcluded: true, limit: 5000 }),
     [],
   );
 
