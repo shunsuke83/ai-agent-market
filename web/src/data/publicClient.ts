@@ -4,7 +4,9 @@ import type {
   Bidder,
   BiddersPayload,
   CompetitorsPayload,
+  ConsortiumPayload,
   DataClient,
+  DecisionsPayload,
   Firm,
   NoticeDetail,
   NoticeListItem,
@@ -199,6 +201,14 @@ export const publicClient: DataClient = {
       agencies,
       notices: [],
     };
+  },
+
+  getConsortium() {
+    return fetchJson<ConsortiumPayload>("/data/spa/consortium-index.json");
+  },
+
+  getDecisions() {
+    return fetchJson<DecisionsPayload>("/data/spa/decisions.json");
   },
 
   getReports() {

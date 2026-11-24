@@ -23,7 +23,17 @@ const FIT_ALERT: Record<FitVerdict, AlertTone> = { GO: "success", REVIEW: "warni
 const RATE_MIN = 50;
 const RATE_MAX = 110;
 
-function rateOrScore(rate: number | null | undefined): { rate: number | null; score: number | null } {
+function rateOrScore(
+  b: NoticeBidder,
+): { rate: number | null; score: number | null } {
+  if (b.price_score != null && Number.isFinite(b.price_score)) {
+    const rate =
+      b.rate_pct != null && b.rate_pct >= RATE_MIN && b.rate_pct <= RATE_MAX
+        ? b.rate_pct
+        : null;
+    return { rate, score: b.price_score };
+  }
+  const rate = b.rate_pct;
   if (rate == null || !Number.isFinite(rate)) return { rate: null, score: null };
   if (rate >= RATE_MIN && rate <= RATE_MAX) return { rate, score: null };
   if (rate >= 0 && rate < RATE_MIN) return { rate: null, score: rate };
@@ -36,9 +46,11 @@ function BidderTable({ notice }: { notice: NoticeDetail }) {
   );
   if (!bidders.length) return null;
 
-  const split = bidders.map((b) => rateOrScore(b.rate_pct ?? null));
+  const split = bidders.map((b) => rateOrScore(b));
   const hasRate = split.some((s) => s.rate != null);
   const hasScore = split.some((s) => s.score != null);
+  const hasTech = bidders.some((b) => b.tech_score != null);
+  const hasTotal = bidders.some((b) => b.total_score != null);
   const pricePts = notice.payload?.price_rate;
 
   const columns: DataTableColumn<NoticeBidder & { _i: number }>[] = [
@@ -85,6 +97,22 @@ function BidderTable({ notice }: { notice: NoticeDetail }) {
         const v = split[r._i]?.score;
         return v != null ? v.toFixed(3) : "-";
       },
+    });
+  }
+  if (hasTech) {
+    columns.push({
+      key: "tech",
+      header: "기술점수",
+      align: "right",
+      render: (r) => (r.tech_score != null ? r.tech_score.toFixed(3) : "-"),
+    });
+  }
+  if (hasTotal) {
+    columns.push({
+      key: "total",
+      header: "종합점수",
+      align: "right",
+      render: (r) => (r.total_score != null ? r.total_score.toFixed(3) : "-"),
     });
   }
 
@@ -255,6 +283,7 @@ export default function BidDetailPage() {
               <>
                 <FitBadge verdict={n.fit_verdict} score={n.fit_score} />
                 {n.status ? <Badge>{n.status}</Badge> : null}
+                {n.hw_included ? <Badge tone="warning">HW 포함</Badge> : null}
                 {n.scope ? <Badge tone="brand">{n.scope}</Badge> : null}
                 {n.nature ? <Badge>{n.nature}</Badge> : null}
                 {n.soft_excluded ? <Badge tone="danger">{n.exclude_reason || "제외"}</Badge> : null}
@@ -275,6 +304,15 @@ export default function BidDetailPage() {
                 ) : (
                   "판정 사유가 없습니다."
                 )}
+                {n.hw_included ? (
+                  <Text as="p" variant="muted">
+                    HW(GPU·서버) 신호가 있습니다. HW 파트너와 묶음 제안을 검토하세요.
+                  </Text>
+                ) : null}
+              </Alert>
+            ) : n.hw_included ? (
+              <Alert tone="warning" title="HW 포함">
+                제목·분류·RFP에 GPU·서버 신호가 있습니다. soft-exclude와 별도로 표시합니다.
               </Alert>
             ) : null}
             <Card>

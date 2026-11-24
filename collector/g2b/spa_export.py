@@ -66,6 +66,50 @@ def _win_rate_pct(n: dict[str, Any]) -> float | None:
     return None
 
 
+_HW_MARKERS = (
+    "GPU",
+    "서버",
+    "Server",
+    "H/W",
+    "하드웨어",
+    "NPU",
+    "서버팜",
+    "워크스테이션",
+    "스토리지",
+)
+
+
+def _hw_included(n: dict[str, Any], summary: dict[str, Any] | None = None) -> bool:
+    """True when title/nature/RFP text signals GPU·server hardware (not soft-exclude)."""
+    blobs = [
+        str(n.get("title") or ""),
+        str(n.get("nature") or ""),
+        str(n.get("scope") or ""),
+    ]
+    if summary:
+        s = summary.get("summary") if isinstance(summary.get("summary"), dict) else summary
+        if isinstance(s, dict):
+            blobs.append(str(s.get("overview") or ""))
+            for key in ("tasks", "tech"):
+                for item in s.get(key) or []:
+                    blobs.append(str(item))
+    text = " ".join(blobs)
+    return any(m.casefold() in text.casefold() for m in _HW_MARKERS)
+
+
+def _split_rate_score(rate: Any) -> tuple[float | None, float | None]:
+    """Heuristic: values in 50–110 look like 투찰률; 0–50 look like price score."""
+    try:
+        v = float(rate)
+    except (TypeError, ValueError):
+        return None, None
+    if 50 <= v <= 110:
+        return v, None
+    if 0 <= v < 50:
+        return None, v
+    return None, None
+
+
 def _compact_bidders(n: dict[str, Any]) -> list[dict[str, Any]] | None:
     raw = n.get("bidders")
     if not isinstance(raw, list) or not raw:
@@ -74,12 +118,24 @@ def _compact_bidders(n: dict[str, Any]) -> list[dict[str, Any]] | None:
     for b in raw:
         if not isinstance(b, dict):
             continue
+        rate = b.get("rate_pct")
+        price = b.get("price_score")
+        if price is None and rate is not None:
+            _r, score = _split_rate_score(rate)
+            if score is not None:
+                price = score
+                rate = _r
+            else:
+                rate = _r if _r is not None else rate
         row: dict[str, Any] = {
             "rank": b.get("rank"),
             "name": b.get("name"),
             "bizno": b.get("bizno"),
             "amount_eok": b.get("amount_eok"),
-            "rate_pct": b.get("rate_pct"),
+            "rate_pct": rate,
+            "price_score": price,
+            "tech_score": b.get("tech_score"),
+            "total_score": b.get("total_score"),
         }
         out.append(row)
     return out or None
@@ -90,6 +146,7 @@ def _slim_notice(
     *,
     rules: dict[str, Any],
     scored: dict[str, Any] | None,
+    summary: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     bid = n.get("bid_no") or ""
     ord_ = str(n.get("bid_ord") or "000").zfill(3)
@@ -121,6 +178,7 @@ def _slim_notice(
         "award_to_budget_pct": n.get("award_to_budget_pct"),
         "win_rate_pct": _win_rate_pct(n),
         "g2b_url": _g2b_url(n),
+        "hw_included": _hw_included(n, summary),
         "soft_excluded": soft,
         "exclude_reason": list_exclude_reason(n, rules) if soft else None,
         "fit_verdict": None,
@@ -189,11 +247,11 @@ def build_spa_payload(repo_root: Path) -> dict[str, Any]:
     details: dict[str, dict[str, Any]] = {}
 
     for n in notices:
+        entry = summaries.get(n.get("bid_no") or "") if summaries else None
         scored = None
         if profile:
-            entry = summaries.get(n.get("bid_no") or "")
             scored = score_policy(n, profile, now, summary=entry, rules=rules)
-        slim = _slim_notice(n, rules=rules, scored=scored)
+        slim = _slim_notice(n, rules=rules, scored=scored, summary=entry)
         slim_rows.append(slim)
         details[slim["id"]] = _detail(n, slim)
         if scored:
@@ -672,6 +730,250 @@ def _agencies_payload(repo_root: Path) -> dict[str, Any]:
     }
 
 
+XENON_BIZNO = "7638101040"
+LARGE_JOINT_MIN_EOK = 30.0
+
+
+def _firm_key_name(name: str, bizno: str | None) -> str:
+    if bizno:
+        return f"b:{bizno}"
+    cleaned = (
+        str(name or "")
+        .replace("(주)", "")
+        .replace("㈜", "")
+        .replace("주식회사", "")
+        .replace("유한회사", "")
+    )
+    return "n:" + "".join(ch for ch in cleaned.casefold() if ch.isalnum())
+
+
+def _consortium_payload(repo_root: Path) -> dict[str, Any]:
+    """Lead↔member edges and rollups from contracts.json (multi-firm = joint)."""
+    from .competitors import load_competitors_config
+    from .render import load_run_status, stamp_text
+
+    empty = {
+        "generated_at": stamp_text(load_run_status(repo_root)),
+        "summary": {
+            "contracts": 0,
+            "multi_firm": 0,
+            "large_joint": 0,
+            "external_lead_to_listed": 0,
+            "xenon_lead": 0,
+            "xenon_member": 0,
+        },
+        "edges": [],
+        "leaders": [],
+        "members": [],
+        "large_joint": [],
+        "xenon": {"bizno": XENON_BIZNO, "lead": 0, "member": 0, "contracts": []},
+    }
+    path = repo_root / "data" / "contracts.json"
+    if not path.is_file():
+        return empty
+    raw = json.loads(path.read_text(encoding="utf-8"))
+    contracts = raw.get("contracts") if isinstance(raw, dict) else None
+    if not isinstance(contracts, list):
+        return empty
+
+    listed_bz = {
+        "".join(ch for ch in str(c.get("bizno") or "") if ch.isdigit())
+        for c in load_competitors_config()
+    }
+    listed_bz.discard("")
+
+    edges: dict[tuple[str, str], dict[str, Any]] = {}
+    leaders: dict[str, dict[str, Any]] = {}
+    members: dict[str, dict[str, Any]] = {}
+    large_joint: list[dict[str, Any]] = []
+    xenon_contracts: list[dict[str, Any]] = []
+    xenon_lead = xenon_member = 0
+    multi_n = 0
+    external_lead_to_listed = 0
+
+    for c in contracts:
+        if not isinstance(c, dict):
+            continue
+        firms = [f for f in (c.get("firms") or []) if isinstance(f, dict) and f.get("name")]
+        try:
+            amount = float(c.get("amount_eok")) if c.get("amount_eok") not in (None, "") else None
+        except (TypeError, ValueError):
+            amount = None
+        multi = len(firms) > 1
+        if multi:
+            multi_n += 1
+
+        leads = [f for f in firms if f.get("role") == "주계약업체"] or (
+            [firms[0]] if firms and not multi else []
+        )
+        members_f = [f for f in firms if f.get("role") == "도급업체"]
+        if multi and not members_f:
+            lead_keys = {_firm_key_name(str(f.get("name")), str(f.get("bizno") or "") or None) for f in leads}
+            members_f = [
+                f
+                for f in firms
+                if _firm_key_name(str(f.get("name")), str(f.get("bizno") or "") or None) not in lead_keys
+            ]
+
+        for f in firms:
+            bz = "".join(ch for ch in str(f.get("bizno") or "") if ch.isdigit())
+            role = f.get("role") or ""
+            if bz == XENON_BIZNO or "제논" in str(f.get("name") or ""):
+                if role == "주계약업체":
+                    xenon_lead += 1
+                elif role == "도급업체":
+                    xenon_member += 1
+                elif multi:
+                    xenon_member += 1
+                else:
+                    xenon_lead += 1
+                xenon_contracts.append(
+                    {
+                        "contract_no": c.get("contract_no"),
+                        "title": c.get("title"),
+                        "org": c.get("org") or c.get("contract_org"),
+                        "amount_eok": amount,
+                        "role": role or ("주계약업체" if not multi else "도급업체"),
+                        "share": f.get("share"),
+                        "signed_date": c.get("signed_date"),
+                    }
+                )
+
+        for lead in leads:
+            lbz = "".join(ch for ch in str(lead.get("bizno") or "") if ch.isdigit()) or None
+            lk = _firm_key_name(str(lead.get("name")), lbz)
+            L = leaders.setdefault(
+                lk,
+                {
+                    "name": lead.get("name"),
+                    "bizno": lbz,
+                    "contracts": 0,
+                    "amount_eok": 0.0,
+                    "listed": bool(lbz and lbz in listed_bz),
+                },
+            )
+            L["contracts"] += 1
+            if amount is not None:
+                L["amount_eok"] = float(L["amount_eok"]) + amount
+
+            for mem in members_f:
+                mbz = "".join(ch for ch in str(mem.get("bizno") or "") if ch.isdigit()) or None
+                mk = _firm_key_name(str(mem.get("name")), mbz)
+                M = members.setdefault(
+                    mk,
+                    {
+                        "name": mem.get("name"),
+                        "bizno": mbz,
+                        "contracts": 0,
+                        "amount_eok": 0.0,
+                        "listed": bool(mbz and mbz in listed_bz),
+                    },
+                )
+                M["contracts"] += 1
+                if amount is not None:
+                    M["amount_eok"] = float(M["amount_eok"]) + amount
+
+                ek = (lk, mk)
+                E = edges.setdefault(
+                    ek,
+                    {
+                        "lead_name": lead.get("name"),
+                        "lead_bizno": lbz,
+                        "member_name": mem.get("name"),
+                        "member_bizno": mbz,
+                        "count": 0,
+                        "amount_eok_sum": 0.0,
+                        "sample_contract_no": c.get("contract_no"),
+                        "member_listed": bool(mbz and mbz in listed_bz),
+                        "lead_listed": bool(lbz and lbz in listed_bz),
+                    },
+                )
+                E["count"] += 1
+                if amount is not None:
+                    E["amount_eok_sum"] = float(E["amount_eok_sum"]) + amount
+                if (not lbz or lbz not in listed_bz) and mbz and mbz in listed_bz:
+                    external_lead_to_listed += 1
+
+        if multi and amount is not None and amount >= LARGE_JOINT_MIN_EOK:
+            large_joint.append(
+                {
+                    "contract_no": c.get("contract_no"),
+                    "title": c.get("title"),
+                    "org": c.get("org") or c.get("contract_org"),
+                    "amount_eok": amount,
+                    "signed_date": c.get("signed_date"),
+                    "bid_no": c.get("bid_no"),
+                    "url": c.get("url"),
+                    "firms": [
+                        {
+                            "name": f.get("name"),
+                            "role": f.get("role"),
+                            "share": f.get("share"),
+                            "bizno": "".join(ch for ch in str(f.get("bizno") or "") if ch.isdigit())
+                            or None,
+                        }
+                        for f in firms
+                    ],
+                }
+            )
+
+    def _roll(rows: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
+        out = list(rows.values())
+        for r in out:
+            r["amount_eok"] = round(float(r.get("amount_eok") or 0), 1)
+        out.sort(key=lambda r: (-float(r["amount_eok"]), -int(r["contracts"]), str(r["name"])))
+        return out
+
+    edge_rows = list(edges.values())
+    for e in edge_rows:
+        e["amount_eok_sum"] = round(float(e.get("amount_eok_sum") or 0), 1)
+    edge_rows.sort(
+        key=lambda e: (-int(e["count"]), -float(e["amount_eok_sum"]), str(e["lead_name"]))
+    )
+    large_joint.sort(key=lambda r: (-float(r.get("amount_eok") or 0), str(r.get("signed_date") or "")))
+
+    # Count unique contracts where external lead brought a listed member (dedupe by contract sample is weak;
+    # use edge flag sum of occurrences as in the idea brief: contract-level recount).
+    ext_contracts = 0
+    for c in contracts:
+        firms = [f for f in (c.get("firms") or []) if isinstance(f, dict)]
+        if len(firms) < 2:
+            continue
+        leads = [f for f in firms if f.get("role") == "주계약업체"]
+        mems = [f for f in firms if f.get("role") == "도급업체"]
+        lead_listed = any(
+            "".join(ch for ch in str(f.get("bizno") or "") if ch.isdigit()) in listed_bz for f in leads
+        )
+        mem_listed = any(
+            "".join(ch for ch in str(f.get("bizno") or "") if ch.isdigit()) in listed_bz for f in mems
+        )
+        if mem_listed and not lead_listed:
+            ext_contracts += 1
+
+    return {
+        "generated_at": stamp_text(load_run_status(repo_root)),
+        "summary": {
+            "contracts": len(contracts),
+            "multi_firm": multi_n,
+            "large_joint": len(large_joint),
+            "large_joint_min_eok": LARGE_JOINT_MIN_EOK,
+            "external_lead_to_listed": ext_contracts,
+            "xenon_lead": xenon_lead,
+            "xenon_member": xenon_member,
+        },
+        "edges": edge_rows[:200],
+        "leaders": _roll(leaders)[:50],
+        "members": _roll(members)[:50],
+        "large_joint": large_joint,
+        "xenon": {
+            "bizno": XENON_BIZNO,
+            "lead": xenon_lead,
+            "member": xenon_member,
+            "contracts": xenon_contracts,
+        },
+    }
+
+
 def write_spa_export(
     repo_root: Path,
     dest: Path | None = None,
@@ -690,6 +992,13 @@ def write_spa_export(
     bidders = _bidders_payload(repo_root)
     agencies = _agencies_payload(repo_root)
     competitors = build_spa_competitors(repo_root)
+    consortium = _consortium_payload(repo_root)
+    decisions_path = repo_root / "data" / "seed" / "xenon_decisions.json"
+    decisions = (
+        json.loads(decisions_path.read_text(encoding="utf-8"))
+        if decisions_path.is_file()
+        else {"decisions": []}
+    )
     targets = [repo_root / "data" / "spa"]
     if dest is not None:
         targets.append(Path(dest) / "data" / "spa")
@@ -719,6 +1028,14 @@ def write_spa_export(
             json.dumps(competitors, ensure_ascii=False),
             encoding="utf-8",
         )
+        (out / "consortium-index.json").write_text(
+            json.dumps(consortium, ensure_ascii=False),
+            encoding="utf-8",
+        )
+        (out / "decisions.json").write_text(
+            json.dumps(decisions, ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
         if write_detail_files:
             detail_dir = out / "notices"
             detail_dir.mkdir()
@@ -737,6 +1054,7 @@ def write_spa_export(
         "bidders": len(bidders.get("firms") or []),
         "agencies": len(agencies.get("agencies") or []),
         "competitors": len(competitors.get("firms") or []),
+        "consortium_edges": len(consortium.get("edges") or []),
         "has_fit": payload["summary"]["has_fit"],
         "open_notices": payload["summary"]["open_notices"],
         "dirs": [str(t) for t in targets],

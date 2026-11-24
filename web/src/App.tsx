@@ -7,6 +7,8 @@ import BandPage from "./pages/BandPage";
 import BidDetailPage from "./pages/BidDetailPage";
 import BiddersPage from "./pages/BiddersPage";
 import CompetitorsPage from "./pages/CompetitorsPage";
+import ConsortiumPage from "./pages/ConsortiumPage";
+import DecisionsPage from "./pages/DecisionsPage";
 import DeliverablesPage from "./pages/DeliverablesPage";
 import HomePage from "./pages/HomePage";
 import NotFoundPage from "./pages/NotFoundPage";
@@ -38,6 +40,8 @@ export default function App() {
           <Route path="bidders" element={<BiddersPage />} />
           <Route path="agencies" element={<AgenciesPage />} />
           <Route path="competitors" element={<CompetitorsPage />} />
+          <Route path="consortium" element={<ConsortiumPage />} />
+          <Route path="decisions" element={<DecisionsPage />} />
           <Route path="alerts" element={<AlertsPage />} />
           <Route path="reports" element={<ReportsPage />} />
           <Route path="deliverables" element={<DeliverablesPage />} />

@@ -11,6 +11,7 @@ export const NAV_GROUPS: NavGroup[] = [
       { to: "/pricing", label: "투찰·경쟁" },
       { to: "/plans", label: "발주 예정" },
       { to: "/prespecs", label: "사전규격" },
+      { to: "/consortium", label: "컨소시엄" },
     ],
   },
   {
@@ -25,6 +26,7 @@ export const NAV_GROUPS: NavGroup[] = [
     label: "기업·리포트",
     items: [
       { to: "/competitors", label: "국내 전문기업" },
+      { to: "/decisions", label: "적합도 사후검증" },
       { to: "/reports", label: "리포트 목록" },
       { to: "/deliverables", label: "산출물 안내" },
     ],

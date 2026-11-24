@@ -82,5 +82,7 @@ export const internalClient: DataClient = {
   getCompetitors: async () => null,
   getBidders: async () => null,
   getAgencies: async () => null as null,
+  getConsortium: async () => null,
+  getDecisions: async () => null,
   getReports: async () => null,
 };

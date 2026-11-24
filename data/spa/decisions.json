@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "company": "주식회사 제논",
+  "bizno": "7638101040",
+  "as_of": "2026-11-24",
+  "notes": "제논 투찰 12건 사후검증 시드. fit_score_at_decision는 당시 비공개 프로필이라 null.",
+  "decisions": [
+    {
+      "notice_id": "R25BK01118401-000",
+      "action": "go",
+      "outcome": "won",
+      "budget_eok": 10.8,
+      "listed3_present": false,
+      "notes": "낙찰 · 기술점수 우위"
+    },
+    {
+      "notice_id": "R25BK01137316-001",
+      "action": "go",
+      "outcome": "won",
+      "budget_eok": 9.9,
+      "listed3_present": false,
+      "notes": "낙찰"
+    },
+    {
+      "notice_id": "R25BK01214770-000",
+      "action": "go",
+      "outcome": "won",
+      "budget_eok": 9.0,
+      "listed3_present": false,
+      "notes": "낙찰"
+    },
+    {
+      "notice_id": "R25BK01077222-000",
+      "action": "go",
+      "outcome": "first",
+      "budget_eok": 12.5,
+      "listed3_present": false,
+      "notes": "1순위(확정 전)"
+    },
+    {
+      "notice_id": "R26BK01686343-000",
+      "action": "go",
+      "outcome": "first",
+      "budget_eok": 24.3,
+      "listed3_present": false,
+      "notes": "1순위 · 예산 20억 초과"
+    },
+    {
+      "notice_id": "R26BK01639098-000",
+      "action": "go",
+      "outcome": "lost",
+      "budget_eok": 19.9,
+      "listed3_present": true,
+      "notes": "와이즈넛 낙찰"
+    },
+    {
+      "notice_id": "R25BK01141537-000",
+      "action": "go",
+      "outcome": "lost",
+      "budget_eok": 8.3,
+      "listed3_present": false,
+      "notes": "포인투랩 낙찰"
+    },
+    {
+      "notice_id": "R25BK01030209-000",
+      "action": "go",
+      "outcome": "lost",
+      "budget_eok": 16.0,
+      "listed3_present": false,
+      "notes": "클라이온 낙찰"
+    },
+    {
+      "notice_id": "20230517417-000",
+      "action": "go",
+      "outcome": "lost",
+      "budget_eok": 15.1,
+      "listed3_present": false,
+      "notes": "웨슬리퀘스트 낙찰"
+    },
+    {
+      "notice_id": "20230413425-000",
+      "action": "go",
+      "outcome": "lost",
+      "budget_eok": 8.8,
+      "listed3_present": false,
+      "notes": "아크릴 낙찰"
+    },
+    {
+      "notice_id": "R26BK01318418-000",
+      "action": "go",
+      "outcome": "lost",
+      "budget_eok": 31.0,
+      "listed3_present": true,
+      "notes": "솔트룩스 낙찰 · 예산 20억 초과·상장3강"
+    },
+    {
+      "notice_id": "R25BK01109435-000",
+      "action": "go",
+      "outcome": "lost",
+      "budget_eok": 33.8,
+      "listed3_present": true,
+      "notes": "타임리 낙찰 · 예산 20억 초과"
+    }
+  ]
+}

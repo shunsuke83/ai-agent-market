@@ -6,6 +6,9 @@ export type NoticeBidder = {
   bizno?: string | null;
   amount_eok?: number | null;
   rate_pct?: number | null;
+  price_score?: number | null;
+  tech_score?: number | null;
+  total_score?: number | null;
 };
 
 export type NoticePayload = {
@@ -48,6 +51,7 @@ export type NoticeListItem = {
   ntce_kind?: string | null;
   soft_excluded?: boolean;
   exclude_reason?: string | null;
+  hw_included?: boolean;
   fit_verdict?: FitVerdict | null;
   fit_score?: number | null;
   fit_reasons?: string[];
@@ -248,6 +252,89 @@ export type CompetitorFirm = {
   faced_listed?: { name: string; count: number }[];
 };
 
+export type ConsortiumFirmRollup = {
+  name?: string | null;
+  bizno?: string | null;
+  contracts?: number;
+  amount_eok?: number | null;
+  listed?: boolean;
+};
+
+export type ConsortiumEdge = {
+  lead_name?: string | null;
+  lead_bizno?: string | null;
+  member_name?: string | null;
+  member_bizno?: string | null;
+  count?: number;
+  amount_eok_sum?: number | null;
+  sample_contract_no?: string | null;
+  member_listed?: boolean;
+  lead_listed?: boolean;
+};
+
+export type ConsortiumJointContract = {
+  contract_no?: string | null;
+  title?: string | null;
+  org?: string | null;
+  amount_eok?: number | null;
+  signed_date?: string | null;
+  bid_no?: string | null;
+  url?: string | null;
+  firms?: { name?: string; role?: string | null; share?: number | null; bizno?: string | null }[];
+};
+
+export type ConsortiumPayload = {
+  generated_at?: string | null;
+  summary?: {
+    contracts?: number;
+    multi_firm?: number;
+    large_joint?: number;
+    large_joint_min_eok?: number;
+    external_lead_to_listed?: number;
+    xenon_lead?: number;
+    xenon_member?: number;
+  };
+  edges?: ConsortiumEdge[];
+  leaders?: ConsortiumFirmRollup[];
+  members?: ConsortiumFirmRollup[];
+  large_joint?: ConsortiumJointContract[];
+  xenon?: {
+    bizno?: string;
+    lead?: number;
+    member?: number;
+    contracts?: {
+      contract_no?: string | null;
+      title?: string | null;
+      org?: string | null;
+      amount_eok?: number | null;
+      role?: string | null;
+      share?: number | null;
+      signed_date?: string | null;
+    }[];
+  };
+};
+
+export type DecisionRow = {
+  notice_id: string;
+  decided_at?: string | null;
+  action?: "go" | "skip" | "consortium" | string;
+  fit_score_at_decision?: number | null;
+  fit_verdict_at_decision?: string | null;
+  outcome?: "won" | "lost" | "first" | "n/a" | string | null;
+  notes?: string | null;
+  budget_eok?: number | null;
+  listed3_present?: boolean;
+};
+
+export type DecisionsPayload = {
+  schema_version?: number;
+  company?: string;
+  bizno?: string;
+  as_of?: string | null;
+  notes?: string | null;
+  decisions?: DecisionRow[];
+};
+
 export type CompetitorsPayload = {
   generated_at?: string | null;
   analysis?: {
@@ -265,6 +352,7 @@ export type CompetitorsPayload = {
     firms?: number;
     listed?: number;
     outside?: number;
+    auto?: number;
     bids?: number;
     wins?: number;
     award_amount_eok?: number;
@@ -302,5 +390,7 @@ export type DataClient = {
   getCompetitors(): Promise<CompetitorsPayload | null>;
   getBidders(): Promise<BiddersPayload | null>;
   getAgencies(): Promise<AgenciesPayload | null>;
+  getConsortium(): Promise<ConsortiumPayload | null>;
+  getDecisions(): Promise<DecisionsPayload | null>;
   getReports(): Promise<Record<string, unknown> | null>;
 };

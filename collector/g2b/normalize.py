@@ -500,8 +500,21 @@ def parse_openg_corp_info(raw: str | None) -> dict[str, Any]:
     return out
 
 
+def _parse_score(raw: Any) -> float | None:
+    if raw in (None, ""):
+        return None
+    try:
+        return float(str(raw).replace("%", "").replace(",", ""))
+    except (TypeError, ValueError):
+        return None
+
+
 def normalize_bidder_item(item: dict[str, Any]) -> dict[str, Any] | None:
-    """Map OpengCompt row → {rank, name, amount_eok, rate_pct, bizno}."""
+    """Map OpengCompt row → rank/name/amount + rate_pct and score fields.
+
+    rate_pct is 투찰률 (bidprcrt). Price/tech/total evaluation scores are stored
+    separately so negotiated contracts no longer overload rate_pct.
+    """
     name = clean_firm_name(item.get("prcbdrNm") or item.get("bidprcrNm"))
     if not name:
         return None
@@ -510,14 +523,15 @@ def normalize_bidder_item(item: dict[str, Any]) -> dict[str, Any] | None:
         rank_i = int(float(rank)) if rank not in (None, "") else None
     except (TypeError, ValueError):
         rank_i = None
-    rate_raw = item.get("bidprcrt") or item.get("bidPrceEvlVal")
-    rate: float | None = None
-    if rate_raw not in (None, ""):
-        try:
-            rate = float(str(rate_raw).replace("%", "").replace(",", ""))
-        except ValueError:
-            rate = None
-    return {
+    rate = _parse_score(item.get("bidprcrt"))
+    price_score = _parse_score(item.get("bidPrceEvlVal"))
+    tech_score = _parse_score(item.get("techEvlVal"))
+    total_score = _parse_score(item.get("totalEvlAmtVal"))
+    # Legacy rows / APIs that only populate bidPrceEvlVal: keep rate_pct filled for
+    # older consumers, but also set price_score explicitly.
+    if rate is None and price_score is not None:
+        rate = price_score
+    out: dict[str, Any] = {
         "rank": rank_i,
         "name": name,
         "amount_eok": always_won_to_eok(item.get("bidprcAmt")),
@@ -525,6 +539,13 @@ def normalize_bidder_item(item: dict[str, Any]) -> dict[str, Any] | None:
         "bizno": (item.get("prcbdrBizno") or "").strip() or None,
         "ceo": clean_firm_name(item.get("prcbdrCeoNm")) if item.get("prcbdrCeoNm") else None,
     }
+    if price_score is not None:
+        out["price_score"] = price_score
+    if tech_score is not None:
+        out["tech_score"] = tech_score
+    if total_score is not None:
+        out["total_score"] = total_score
+    return out
 
 
 def apply_bidders_to_notice(

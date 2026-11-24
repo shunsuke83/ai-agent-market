@@ -621,6 +621,140 @@ def _median(vals: list[float]) -> float | None:
     return round((s[mid - 1] + s[mid]) / 2.0, 1)
 
 
+AUTO_MIN_WINS = 2
+AUTO_MIN_AWARD_EOK = 50.0
+SI_MIN_AWARD_EOK = 100.0
+_SI_NAME_MARKERS = (
+    "삼성sds",
+    "삼성에스디에스",
+    "lgcns",
+    "엘지씨엔에스",
+    "엘지씨앤에스",
+    "케이티",
+    "kt ds",
+    "ktds",
+    "sk씨앤씨",
+    "sk c&c",
+    "현대오토에버",
+    "포스코dx",
+    "아이티센",
+    "대신정보통신",
+    "롯데정보통신",
+    "농심ndata",
+)
+
+
+def _is_large_si(name: str, award_amount_eok: float) -> bool:
+    n = normalize_firm(name)
+    if any(m.replace(" ", "") in n for m in _SI_NAME_MARKERS):
+        return True
+    return award_amount_eok >= SI_MIN_AWARD_EOK
+
+
+def _auto_admit_firms(
+    repo_root: Path,
+    *,
+    notices_by_key: dict[str, dict[str, Any]],
+    stats: dict[str, Any],
+    firms: dict[str, dict[str, Any]],
+    known_biznos: set[str],
+    known_names: set[str],
+) -> list[dict[str, Any]]:
+    """Admit winners with ≥2 AI awards or ≥50억 award sum (not already listed/outside)."""
+    from .firms import winner_bizno
+
+    pool = load_win_pool(repo_root)
+    by_key: dict[str, dict[str, Any]] = {}
+    for n in pool:
+        bz = winner_bizno(n) or ""
+        name = _CORP_RE.sub("", str(n.get("winner") or "")).strip()
+        if not name and not bz:
+            continue
+        key = f"b:{bz}" if bz else f"n:{normalize_firm(name)}"
+        if bz and bz in known_biznos:
+            continue
+        if not bz and normalize_firm(name) in known_names:
+            continue
+        cur = by_key.setdefault(
+            key,
+            {
+                "bizno": bz or None,
+                "name": name,
+                "wins": 0,
+                "award_amount_eok": 0.0,
+                "largest": None,
+                "win_keys": [],
+            },
+        )
+        cur["wins"] += 1
+        # Prefer shorter cleaned names (drop "(1순위)" noise).
+        if name and (
+            not cur["name"]
+            or ("순위" in str(cur["name"]) and "순위" not in name)
+            or len(name) < len(str(cur["name"]))
+        ):
+            cur["name"] = name
+        amt = _award_amount(n)
+        if amt is not None:
+            cur["award_amount_eok"] = float(cur["award_amount_eok"]) + float(amt)
+            largest = cur["largest"]
+            if largest is None or float(amt) > float(largest.get("award_amount_eok") or 0):
+                cur["largest"] = {
+                    "title": n.get("title"),
+                    "org": n.get("org"),
+                    "award_amount_eok": amt,
+                    "open_date": n.get("open_date"),
+                }
+        cur["win_keys"].append(_row_key(n))
+
+    out: list[dict[str, Any]] = []
+    for cur in by_key.values():
+        wins = int(cur["wins"])
+        amt = round(float(cur["award_amount_eok"] or 0), 1)
+        if wins < AUTO_MIN_WINS and amt < AUTO_MIN_AWARD_EOK:
+            continue
+        bz = cur.get("bizno") or ""
+        profile = firms.get(bz) or {}
+        s = stats.get(bz) if bz else None
+        bids = len(s.bids) if s else wins
+        rates: list[float] = []
+        gen_bids = 0
+        if s:
+            for key in s.bids:
+                n = notices_by_key.get(key)
+                if not n:
+                    continue
+                if _is_gen_agent(n):
+                    gen_bids += 1
+                rate = _bid_to_budget_rates(n, bz)
+                if rate is not None:
+                    rates.append(rate)
+        name = str(cur["name"] or _firm_name(bz, stats, firms))
+        si = _is_large_si(name, amt)
+        out.append(
+            {
+                "name": name,
+                "bizno": bz or None,
+                "group": "auto",
+                "type": "대형 SI" if si else "자동 편입",
+                "own_model": "",
+                "procurement": "",
+                "region": profile.get("region"),
+                "employees": profile.get("employees"),
+                "homepage": profile.get("homepage"),
+                "bids": bids,
+                "wins": wins,
+                "award_amount_eok": amt,
+                "gen_agent_bids": gen_bids,
+                "bid_to_budget_median_pct": _median(rates),
+                "largest_win": cur.get("largest"),
+                "faced": [],
+            }
+        )
+    out.sort(key=lambda r: (-float(r.get("award_amount_eok") or 0), -int(r["wins"]), str(r["name"])))
+    return out
+
+
 def _bid_to_budget_rates(notice: dict[str, Any], bizno: str) -> float | None:
     budget = notice.get("budget_eok")
     try:
@@ -772,7 +906,20 @@ def build_spa_competitors(repo_root: Path) -> dict[str, Any]:
             }
         )
 
-    all_firms = listed_out + outside_out
+    known_bz = {r["bizno"] for r in listed_out if r.get("bizno")} | {
+        r["bizno"] for r in outside_out if r.get("bizno")
+    }
+    known_names = {normalize_firm(r["name"]) for r in listed_out + outside_out}
+    auto_out = _auto_admit_firms(
+        repo_root,
+        notices_by_key=notices_by_key,
+        stats=stats,
+        firms=firms,
+        known_biznos=known_bz,
+        known_names=known_names,
+    )
+
+    all_firms = listed_out + outside_out + auto_out
     all_firms.sort(
         key=lambda r: (-int(r["wins"]), -float(r.get("award_amount_eok") or 0), str(r["name"]))
     )
@@ -847,6 +994,7 @@ def build_spa_competitors(repo_root: Path) -> dict[str, Any]:
             "firms": len(all_firms),
             "listed": len(listed_out),
             "outside": len(outside_out),
+            "auto": len(auto_out),
             "bids": total_bids,
             "wins": total_wins,
             "award_amount_eok": total_amt,

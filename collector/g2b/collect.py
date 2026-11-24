@@ -538,6 +538,29 @@ def cmd_enrich_bidders(args: argparse.Namespace) -> int:
     alias_index = _competitor_alias_index(ROOT)
     today = _today_kst().isoformat()
 
+    bid_whitelist: set[str] = set()
+    for part in str(getattr(args, "bids", "") or "").split(","):
+        part = part.strip()
+        if not part:
+            continue
+        bid_whitelist.add(part)
+        if "-" not in part:
+            bid_whitelist.add(f"{part}-000")
+
+    def _has_price_score(n: dict[str, Any]) -> bool:
+        for b in n.get("bidders") or []:
+            if not isinstance(b, dict):
+                continue
+            if b.get("price_score") not in (None, ""):
+                return True
+            try:
+                v = float(b.get("rate_pct"))
+            except (TypeError, ValueError):
+                continue
+            if 0 <= v < 50:
+                return True
+        return False
+
     def _is_target(n: dict[str, Any]) -> bool:
         if not n.get("bid_no"):
             return False
@@ -546,6 +569,14 @@ def cmd_enrich_bidders(args: argparse.Namespace) -> int:
             return False
         if getattr(args, "core_only", False) and not is_core(n):
             return False
+        if bid_whitelist:
+            key = _notice_key(n)
+            short = str(n.get("bid_no") or "")
+            if key not in bid_whitelist and short not in bid_whitelist:
+                return False
+            return True
+        if getattr(args, "price_scored_only", False):
+            return _has_price_score(n)
         if n.get("bidders"):
             return bool(args.force)
         if n.get("bidders_empty") and not args.force:
@@ -1035,6 +1066,16 @@ def build_parser() -> argparse.ArgumentParser:
         "--core-only",
         action="store_true",
         help="Only enrich core AI natures (구축·ISP·구독·운영)",
+    )
+    eb.add_argument(
+        "--price-scored-only",
+        action="store_true",
+        help="Only re-fetch notices whose stored bidders already have price-like scores (<50 in rate_pct or price_score)",
+    )
+    eb.add_argument(
+        "--bids",
+        default="",
+        help="Comma-separated bid_no or bid_no-ord whitelist (e.g. R25BK01118401-000,R25BK01077222)",
     )
     eb.set_defaults(func=cmd_enrich_bidders)
 

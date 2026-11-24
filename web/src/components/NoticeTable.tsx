@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { DataTable, EmptyState, type DataTableColumn } from "@genonai/admin-design-system";
+import { Badge, DataTable, EmptyState, type DataTableColumn } from "@genonai/admin-design-system";
 import type { NoticeListItem } from "../data/types";
 import { fmtDateTime, fmtEok } from "../lib/format";
 import FitBadge from "./FitBadge";
@@ -11,7 +11,17 @@ const COLUMNS: DataTableColumn<NoticeListItem>[] = [
   {
     key: "title",
     header: "공고명",
-    render: (n) => <Link to={`/bids/${encodeURIComponent(n.id)}`}>{n.title ?? n.bid_no}</Link>,
+    render: (n) => (
+      <span>
+        <Link to={`/bids/${encodeURIComponent(n.id)}`}>{n.title ?? n.bid_no}</Link>
+        {n.hw_included ? (
+          <>
+            {" "}
+            <Badge tone="warning">HW</Badge>
+          </>
+        ) : null}
+      </span>
+    ),
   },
   { key: "budget_eok", header: "예산", align: "right", render: (n) => fmtEok(n.budget_eok) },
 ];

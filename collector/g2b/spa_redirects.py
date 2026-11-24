@@ -15,6 +15,7 @@ REDIRECTS: tuple[tuple[str, str], ...] = (
     ("bidders.html", "bidders"),
     ("agencies.html", "agencies"),
     ("competitors.html", "competitors"),
+    ("consortium.html", "consortium"),
     ("alerts.html", "alerts"),
     ("deliverables.html", "deliverables"),
     ("reports/index.html", "reports"),

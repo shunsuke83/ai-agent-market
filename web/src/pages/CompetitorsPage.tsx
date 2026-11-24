@@ -29,6 +29,12 @@ const FIRM_COLUMNS: DataTableColumn<CompetitorFirm>[] = [
             · 목록 밖
           </Text>
         ) : null}
+        {r.group === "auto" ? (
+          <Text as="span" variant="muted" className="ds-text--caption">
+            {" "}
+            · 자동
+          </Text>
+        ) : null}
       </span>
     ),
   },
@@ -62,6 +68,18 @@ const FIRM_COLUMNS: DataTableColumn<CompetitorFirm>[] = [
       if (!w) return "-";
       const amt = w.award_amount_eok != null ? fmtEok(w.award_amount_eok) : "";
       return `${w.org ?? ""} ${amt}`.trim() || (w.title ?? "-");
+    },
+  },
+  {
+    key: "faced",
+    header: "맞대결",
+    render: (r) => {
+      const faced = r.faced?.length ? r.faced : r.faced_listed;
+      if (!faced?.length) return "-";
+      return faced
+        .slice(0, 3)
+        .map((f) => `${f.name} ${f.count}`)
+        .join(", ");
     },
   },
   {
@@ -199,21 +217,29 @@ function AnalysisBlock({ data }: { data: CompetitorsPayload }) {
   );
 }
 
+type GroupFilter = "all" | "listed" | "outside" | "auto" | "si";
+
 export default function CompetitorsPage() {
   const [search, setSearch] = useState("");
+  const [group, setGroup] = useState<GroupFilter>("all");
   const q = useDebounced(search);
   const state = useAsync(() => dataClient.getCompetitors(), []);
 
   const rows = useMemo(() => {
     if (state.status !== "ready" || !state.data?.firms) return [] as CompetitorFirm[];
     const needle = q.trim().toLowerCase();
-    const items = state.data.firms;
+    let items = state.data.firms;
+    if (group === "listed" || group === "outside" || group === "auto") {
+      items = items.filter((r) => r.group === group);
+    } else if (group === "si") {
+      items = items.filter((r) => (r.type || "").includes("대형 SI") || r.group === "auto");
+    }
     if (!needle) return items;
     return items.filter((r) => {
       const hay = `${r.name ?? ""} ${r.type ?? ""} ${r.region ?? ""} ${r.bizno ?? ""}`.toLowerCase();
       return hay.includes(needle);
     });
-  }, [state, q]);
+  }, [state, q, group]);
 
   const summary = state.status === "ready" ? state.data?.summary : null;
   const stamp = state.status === "ready" ? state.data?.generated_at : null;
@@ -221,12 +247,16 @@ export default function CompetitorsPage() {
   return (
     <DashboardPageLayout
       title="국내 전문기업"
-      description="전문기업·목록 밖 경쟁사의 투찰·낙찰 실적과 분석 요약"
+      description="전문기업·목록 밖·자동 편입(낙찰≥2 또는 50억+) 경쟁사의 투찰·낙찰 실적과 분석 요약"
       stamp={stamp ? `업데이트 ${stamp}` : undefined}
       stats={
         summary ? (
           <>
-            <StatCard label="분석 기업" value={fmtNum(summary.firms)} hint={`전문 ${summary.listed ?? "-"} · 목록 밖 ${summary.outside ?? "-"}`} />
+            <StatCard
+              label="분석 기업"
+              value={fmtNum(summary.firms)}
+              hint={`전문 ${summary.listed ?? "-"} · 밖 ${summary.outside ?? "-"} · 자동 ${summary.auto ?? "-"}`}
+            />
             <StatCard label="투찰" value={fmtNum(summary.bids)} />
             <StatCard label="낙찰" value={fmtNum(summary.wins)} />
             <StatCard label="낙찰금액" value={fmtEok(summary.award_amount_eok)} />
@@ -249,8 +279,34 @@ export default function CompetitorsPage() {
                     </Text>
                     <ListControl search="업체·유형·지역" searchValue={search} onSearchChange={setSearch} />
                   </div>
+                  <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                    {(
+                      [
+                        ["all", "전체"],
+                        ["listed", "전문목록"],
+                        ["outside", "목록 밖"],
+                        ["auto", "자동 편입"],
+                        ["si", "대형 SI"],
+                      ] as const
+                    ).map(([id, label]) => (
+                      <button
+                        key={id}
+                        type="button"
+                        onClick={() => setGroup(id)}
+                        style={{
+                          padding: "4px 10px",
+                          borderRadius: 6,
+                          border: group === id ? "1px solid var(--color-action-primary-default, #7540ee)" : "1px solid #ddd",
+                          background: group === id ? "rgba(117,64,238,0.08)" : "transparent",
+                          cursor: "pointer",
+                        }}
+                      >
+                        {label}
+                      </button>
+                    ))}
+                  </div>
                   <Text variant="muted">
-                    낙찰 건수 순. 투찰·낙찰은 수집한 나라장터 개찰·낙찰 결과 기준이며, 개찰 1순위만 있는 건은 낙찰에 넣지 않습니다.
+                    낙찰 건수 순. 자동 편입은 AI 낙찰 2건 이상 또는 낙찰금액 합계 50억 이상입니다.
                   </Text>
                   {rows.length === 0 ? (
                     <EmptyState title="조건에 맞는 기업이 없습니다" />
