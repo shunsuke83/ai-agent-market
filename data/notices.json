@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-23T10:53:55Z",
+  "generated_at": "2026-11-24T04:05:42Z",
   "mode": "g2b_api",
   "range": {
     "since": "2026-11-09",
@@ -33138,7 +33138,10 @@
           "amount_eok": null,
           "rate_pct": 10.0,
           "bizno": "1028142945",
-          "ceo": "박윤영"
+          "ceo": "박윤영",
+          "price_score": 10.0,
+          "tech_score": 79.83,
+          "total_score": 89.83
         },
         {
           "rank": 2,
@@ -33146,7 +33149,10 @@
           "amount_eok": null,
           "rate_pct": 10.0,
           "bizno": "3318101353",
-          "ceo": "김진욱"
+          "ceo": "김진욱",
+          "price_score": 10.0,
+          "tech_score": 79.67,
+          "total_score": 89.67
         },
         {
           "rank": null,
@@ -33154,7 +33160,10 @@
           "amount_eok": null,
           "rate_pct": 6.0,
           "bizno": "8348600713",
-          "ceo": "권기성"
+          "ceo": "권기성",
+          "price_score": 6.0,
+          "tech_score": 80.83,
+          "total_score": 86.83
         },
         {
           "rank": null,
@@ -33162,7 +33171,10 @@
           "amount_eok": null,
           "rate_pct": 6.1224,
           "bizno": "2218113682",
-          "ceo": "유지대"
+          "ceo": "유지대",
+          "price_score": 6.1224,
+          "tech_score": 75.67,
+          "total_score": 81.7924
         }
       ],
       "bid_count": 4,
@@ -37384,7 +37396,8 @@
           "amount_eok": 3.835,
           "rate_pct": 98.094,
           "bizno": "3148635042",
-          "ceo": "김진일"
+          "ceo": "김진일",
+          "price_score": 55.0
         },
         {
           "rank": 2,
@@ -37392,7 +37405,8 @@
           "amount_eok": 3.87,
           "rate_pct": 98.989,
           "bizno": "3148629685",
-          "ceo": "임경수"
+          "ceo": "임경수",
+          "price_score": 55.0
         },
         {
           "rank": null,
@@ -37400,7 +37414,8 @@
           "amount_eok": null,
           "rate_pct": 0.0,
           "bizno": "5138131541",
-          "ceo": "권순천"
+          "ceo": "권순천",
+          "price_score": 0.0
         }
       ],
       "second": "바스텍",
@@ -43003,18 +43018,24 @@
         {
           "rank": 1,
           "name": "지오멕스소프트",
-          "amount_eok": null,
+          "amount_eok": 1.998,
           "rate_pct": 10.0,
           "bizno": "2218133219",
-          "ceo": "안상섭"
+          "ceo": "안상섭",
+          "price_score": 10.0,
+          "tech_score": 84.15,
+          "total_score": 94.15
         },
         {
           "rank": 2,
           "name": "버넥트",
-          "amount_eok": null,
+          "amount_eok": 2.0547,
           "rate_pct": 9.7238,
           "bizno": "1948100551",
-          "ceo": "하태진"
+          "ceo": "하태진",
+          "price_score": 9.7238,
+          "tech_score": 83.85,
+          "total_score": 93.5738
         }
       ],
       "bid_count": 2,
@@ -59091,7 +59112,8 @@
           "amount_eok": 0.567,
           "rate_pct": 90.436,
           "bizno": "6928603697",
-          "ceo": "조현주"
+          "ceo": "조현주",
+          "price_score": 68.24
         },
         {
           "rank": 2,
@@ -59099,7 +59121,8 @@
           "amount_eok": 0.5744,
           "rate_pct": 91.612,
           "bizno": "1228646713",
-          "ceo": "김사헌"
+          "ceo": "김사헌",
+          "price_score": 63.56
         },
         {
           "rank": 3,
@@ -59107,7 +59130,8 @@
           "amount_eok": 0.5775,
           "rate_pct": 92.111,
           "bizno": "1208667968",
-          "ceo": "박노헌"
+          "ceo": "박노헌",
+          "price_score": 61.56
         },
         {
           "rank": null,
@@ -59115,7 +59139,8 @@
           "amount_eok": null,
           "rate_pct": 0.0,
           "bizno": "1728603252",
-          "ceo": "손동현"
+          "ceo": "손동현",
+          "price_score": 0.0
         }
       ],
       "bid_count": 4,
@@ -60544,7 +60569,10 @@
           "amount_eok": null,
           "rate_pct": 9.2141,
           "bizno": "8068802952",
-          "ceo": "석준현"
+          "ceo": "석준현",
+          "price_score": 9.2141,
+          "tech_score": 83.97,
+          "total_score": 93.1841
         },
         {
           "rank": 2,
@@ -60552,7 +60580,10 @@
           "amount_eok": null,
           "rate_pct": 9.8901,
           "bizno": "8938603475",
-          "ceo": "임준우"
+          "ceo": "임준우",
+          "price_score": 9.8901,
+          "tech_score": 81.342,
+          "total_score": 91.2321
         },
         {
           "rank": null,
@@ -60560,7 +60591,10 @@
           "amount_eok": null,
           "rate_pct": 10.0,
           "bizno": "5168103461",
-          "ceo": "신재욱"
+          "ceo": "신재욱",
+          "price_score": 10.0,
+          "tech_score": 0.0,
+          "total_score": 10.0
         }
       ],
       "bid_count": 3,
@@ -63275,7 +63309,8 @@
           "amount_eok": 1.9841,
           "rate_pct": 86.271,
           "bizno": "3141435235",
-          "ceo": "최원택"
+          "ceo": "최원택",
+          "price_score": 55.08
         },
         {
           "rank": 2,
@@ -63283,7 +63318,8 @@
           "amount_eok": 1.9843,
           "rate_pct": 86.279,
           "bizno": "2608603243",
-          "ceo": "유수정"
+          "ceo": "유수정",
+          "price_score": 55.12
         },
         {
           "rank": 3,
@@ -63291,7 +63327,8 @@
           "amount_eok": 1.9847,
           "rate_pct": 86.297,
           "bizno": "3328802499",
-          "ceo": "유재영"
+          "ceo": "유재영",
+          "price_score": 55.2
         },
         {
           "rank": 4,
@@ -63299,7 +63336,8 @@
           "amount_eok": 1.9855,
           "rate_pct": 86.333,
           "bizno": "2893001481",
-          "ceo": "김민지"
+          "ceo": "김민지",
+          "price_score": 55.32
         },
         {
           "rank": 5,
@@ -63307,7 +63345,8 @@
           "amount_eok": 1.9861,
           "rate_pct": 86.361,
           "bizno": "1228646713",
-          "ceo": "김사헌"
+          "ceo": "김사헌",
+          "price_score": 55.44
         },
         {
           "rank": 6,
@@ -63315,7 +63354,8 @@
           "amount_eok": 1.9864,
           "rate_pct": 86.37,
           "bizno": "1078793378",
-          "ceo": "이헌웅"
+          "ceo": "이헌웅",
+          "price_score": 55.48
         },
         {
           "rank": 7,
@@ -63323,7 +63363,8 @@
           "amount_eok": 1.9872,
           "rate_pct": 86.407,
           "bizno": "7595500382",
-          "ceo": "박종필"
+          "ceo": "박종필",
+          "price_score": 55.64
         },
         {
           "rank": 8,
@@ -63331,7 +63372,8 @@
           "amount_eok": 1.9872,
           "rate_pct": 86.408,
           "bizno": "2872501915",
-          "ceo": "윤현미"
+          "ceo": "윤현미",
+          "price_score": 55.64
         },
         {
           "rank": 9,
@@ -63339,7 +63381,8 @@
           "amount_eok": 1.9875,
           "rate_pct": 86.421,
           "bizno": "3148645220",
-          "ceo": "김동욱"
+          "ceo": "김동욱",
+          "price_score": 55.68
         },
         {
           "rank": 10,
@@ -63347,7 +63390,8 @@
           "amount_eok": 1.9889,
           "rate_pct": 86.481,
           "bizno": "6346100764",
-          "ceo": "김수선나"
+          "ceo": "김수선나",
+          "price_score": 55.92
         },
         {
           "rank": 11,
@@ -63355,7 +63399,8 @@
           "amount_eok": 1.9892,
           "rate_pct": 86.496,
           "bizno": "8258101445",
-          "ceo": "문병일"
+          "ceo": "문병일",
+          "price_score": 56.0
         },
         {
           "rank": 12,
@@ -63363,7 +63408,8 @@
           "amount_eok": 1.9898,
           "rate_pct": 86.52,
           "bizno": "6258701338",
-          "ceo": "이혜인"
+          "ceo": "이혜인",
+          "price_score": 56.08
         },
         {
           "rank": 13,
@@ -63371,7 +63417,8 @@
           "amount_eok": 1.9905,
           "rate_pct": 86.55,
           "bizno": "7620400047",
-          "ceo": "김상곤"
+          "ceo": "김상곤",
+          "price_score": 56.2
         },
         {
           "rank": 14,
@@ -63379,7 +63426,8 @@
           "amount_eok": 1.9906,
           "rate_pct": 86.556,
           "bizno": "1318152607",
-          "ceo": "이영심"
+          "ceo": "이영심",
+          "price_score": 56.24
         },
         {
           "rank": 15,
@@ -63387,7 +63435,8 @@
           "amount_eok": 1.991,
           "rate_pct": 86.57,
           "bizno": "5655900354",
-          "ceo": "신기범"
+          "ceo": "신기범",
+          "price_score": 56.28
         },
         {
           "rank": 16,
@@ -63395,7 +63444,8 @@
           "amount_eok": 1.9921,
           "rate_pct": 86.62,
           "bizno": "4778800659",
-          "ceo": "강현준"
+          "ceo": "강현준",
+          "price_score": 56.48
         },
         {
           "rank": 17,
@@ -63403,7 +63453,8 @@
           "amount_eok": 1.9923,
           "rate_pct": 86.63,
           "bizno": "4198802063",
-          "ceo": "안중철"
+          "ceo": "안중철",
+          "price_score": 56.52
         },
         {
           "rank": 18,
@@ -63411,7 +63462,8 @@
           "amount_eok": 1.9928,
           "rate_pct": 86.651,
           "bizno": "6978702327",
-          "ceo": "박윤정"
+          "ceo": "박윤정",
+          "price_score": 56.6
         },
         {
           "rank": 19,
@@ -63419,7 +63471,8 @@
           "amount_eok": 1.9938,
           "rate_pct": 86.695,
           "bizno": "6870700558",
-          "ceo": "이미정"
+          "ceo": "이미정",
+          "price_score": 56.8
         },
         {
           "rank": 20,
@@ -63427,7 +63480,8 @@
           "amount_eok": 1.994,
           "rate_pct": 86.705,
           "bizno": "7820901711",
-          "ceo": "김은아"
+          "ceo": "김은아",
+          "price_score": 56.84
         },
         {
           "rank": 21,
@@ -63435,7 +63489,8 @@
           "amount_eok": 1.9944,
           "rate_pct": 86.72,
           "bizno": "2568102328",
-          "ceo": "고윤찬"
+          "ceo": "고윤찬",
+          "price_score": 56.88
         },
         {
           "rank": 22,
@@ -63443,7 +63498,8 @@
           "amount_eok": 1.9955,
           "rate_pct": 86.77,
           "bizno": "1058714362",
-          "ceo": "신연희"
+          "ceo": "신연희",
+          "price_score": 57.08
         },
         {
           "rank": 23,
@@ -63451,7 +63507,8 @@
           "amount_eok": 1.9958,
           "rate_pct": 86.78,
           "bizno": "3091861646",
-          "ceo": "최중강"
+          "ceo": "최중강",
+          "price_score": 57.12
         },
         {
           "rank": 24,
@@ -63459,7 +63516,8 @@
           "amount_eok": 1.9967,
           "rate_pct": 86.82,
           "bizno": "2188602073",
-          "ceo": "배현숙"
+          "ceo": "배현숙",
+          "price_score": 57.28
         },
         {
           "rank": 25,
@@ -63467,7 +63525,8 @@
           "amount_eok": 1.9971,
           "rate_pct": 86.836,
           "bizno": "6671900936",
-          "ceo": "안홍진"
+          "ceo": "안홍진",
+          "price_score": 57.36
         },
         {
           "rank": 26,
@@ -63475,7 +63534,8 @@
           "amount_eok": 1.9975,
           "rate_pct": 86.855,
           "bizno": "4858601669",
-          "ceo": "김동섭"
+          "ceo": "김동섭",
+          "price_score": 57.44
         },
         {
           "rank": 27,
@@ -63483,7 +63543,8 @@
           "amount_eok": 1.9978,
           "rate_pct": 86.87,
           "bizno": "4658601952",
-          "ceo": "전종훈"
+          "ceo": "전종훈",
+          "price_score": 57.48
         },
         {
           "rank": 28,
@@ -63491,7 +63552,8 @@
           "amount_eok": 1.9982,
           "rate_pct": 86.886,
           "bizno": "4938702254",
-          "ceo": "유재화"
+          "ceo": "유재화",
+          "price_score": 57.56
         },
         {
           "rank": 29,
@@ -63499,7 +63561,8 @@
           "amount_eok": 1.999,
           "rate_pct": 86.92,
           "bizno": "1728603252",
-          "ceo": "손동현"
+          "ceo": "손동현",
+          "price_score": 57.68
         },
         {
           "rank": 30,
@@ -63507,7 +63570,8 @@
           "amount_eok": 1.999,
           "rate_pct": 86.92,
           "bizno": "1138646816",
-          "ceo": "임종필"
+          "ceo": "임종필",
+          "price_score": 57.68
         },
         {
           "rank": 31,
@@ -63515,7 +63579,8 @@
           "amount_eok": 1.9991,
           "rate_pct": 86.925,
           "bizno": "2658101401",
-          "ceo": "주영순"
+          "ceo": "주영순",
+          "price_score": 57.72
         },
         {
           "rank": 32,
@@ -63523,7 +63588,8 @@
           "amount_eok": 1.9992,
           "rate_pct": 86.93,
           "bizno": "7958701414",
-          "ceo": "조영숙"
+          "ceo": "조영숙",
+          "price_score": 57.72
         },
         {
           "rank": 33,
@@ -63531,7 +63597,8 @@
           "amount_eok": 1.9994,
           "rate_pct": 86.937,
           "bizno": "6118119031",
-          "ceo": "강지연"
+          "ceo": "강지연",
+          "price_score": 57.76
         },
         {
           "rank": 34,
@@ -63539,7 +63606,8 @@
           "amount_eok": 2.0001,
           "rate_pct": 86.968,
           "bizno": "2678600058",
-          "ceo": "송동욱"
+          "ceo": "송동욱",
+          "price_score": 57.88
         },
         {
           "rank": 35,
@@ -63547,7 +63615,8 @@
           "amount_eok": 2.0001,
           "rate_pct": 86.97,
           "bizno": "1168150463",
-          "ceo": "김한기"
+          "ceo": "김한기",
+          "price_score": 57.88
         },
         {
           "rank": 36,
@@ -63555,7 +63624,8 @@
           "amount_eok": 2.0003,
           "rate_pct": 86.977,
           "bizno": "6044071787",
-          "ceo": "이채경"
+          "ceo": "이채경",
+          "price_score": 57.92
         },
         {
           "rank": 37,
@@ -63563,7 +63633,8 @@
           "amount_eok": 2.001,
           "rate_pct": 87.005,
           "bizno": "1492302146",
-          "ceo": "김용진"
+          "ceo": "김용진",
+          "price_score": 58.04
         },
         {
           "rank": 38,
@@ -63571,7 +63642,8 @@
           "amount_eok": 2.0011,
           "rate_pct": 87.012,
           "bizno": "4081645522",
-          "ceo": "이경희"
+          "ceo": "이경희",
+          "price_score": 58.04
         },
         {
           "rank": 39,
@@ -63579,7 +63651,8 @@
           "amount_eok": 2.0013,
           "rate_pct": 87.02,
           "bizno": "7454101269",
-          "ceo": "이기현"
+          "ceo": "이기현",
+          "price_score": 58.08
         },
         {
           "rank": 40,
@@ -63587,7 +63660,8 @@
           "amount_eok": 2.0027,
           "rate_pct": 87.081,
           "bizno": "8272401230",
-          "ceo": "김영태"
+          "ceo": "김영태",
+          "price_score": 58.32
         },
         {
           "rank": 41,
@@ -63595,7 +63669,8 @@
           "amount_eok": 2.0031,
           "rate_pct": 87.097,
           "bizno": "7810302068",
-          "ceo": "김진욱"
+          "ceo": "김진욱",
+          "price_score": 58.4
         },
         {
           "rank": 42,
@@ -63603,7 +63678,8 @@
           "amount_eok": 2.0035,
           "rate_pct": 87.118,
           "bizno": "8254801069",
-          "ceo": "박지원"
+          "ceo": "박지원",
+          "price_score": 58.48
         },
         {
           "rank": 43,
@@ -63611,7 +63687,8 @@
           "amount_eok": 2.0039,
           "rate_pct": 87.134,
           "bizno": "1088154468",
-          "ceo": "이동필"
+          "ceo": "이동필",
+          "price_score": 58.52
         },
         {
           "rank": 44,
@@ -63619,7 +63696,8 @@
           "amount_eok": 2.0044,
           "rate_pct": 87.156,
           "bizno": "5898103310",
-          "ceo": "김윤현"
+          "ceo": "김윤현",
+          "price_score": 58.64
         },
         {
           "rank": 45,
@@ -63627,7 +63705,8 @@
           "amount_eok": 2.0047,
           "rate_pct": 87.169,
           "bizno": "3858701949",
-          "ceo": "정은용"
+          "ceo": "정은용",
+          "price_score": 58.68
         },
         {
           "rank": 46,
@@ -63635,7 +63714,8 @@
           "amount_eok": 2.0062,
           "rate_pct": 87.232,
           "bizno": "8125900833",
-          "ceo": "김수재"
+          "ceo": "김수재",
+          "price_score": 58.92
         },
         {
           "rank": 47,
@@ -63643,7 +63723,8 @@
           "amount_eok": 2.0097,
           "rate_pct": 87.384,
           "bizno": "4052302181",
-          "ceo": "유현상"
+          "ceo": "유현상",
+          "price_score": 59.52
         },
         {
           "rank": 48,
@@ -63651,7 +63732,8 @@
           "amount_eok": 2.0109,
           "rate_pct": 87.439,
           "bizno": "6048138568",
-          "ceo": "안병호"
+          "ceo": "안병호",
+          "price_score": 59.76
         },
         {
           "rank": 49,
@@ -63659,7 +63741,8 @@
           "amount_eok": 2.0113,
           "rate_pct": 87.457,
           "bizno": "5058172328",
-          "ceo": "김홍제"
+          "ceo": "김홍제",
+          "price_score": 59.84
         },
         {
           "rank": 50,
@@ -63667,7 +63750,8 @@
           "amount_eok": 2.0122,
           "rate_pct": 87.496,
           "bizno": "6928603697",
-          "ceo": "조현주"
+          "ceo": "조현주",
+          "price_score": 60.0
         },
         {
           "rank": 51,
@@ -63675,7 +63759,8 @@
           "amount_eok": 2.0132,
           "rate_pct": 87.536,
           "bizno": "5431303163",
-          "ceo": "박상미"
+          "ceo": "박상미",
+          "price_score": 60.16
         },
         {
           "rank": 52,
@@ -63683,7 +63768,8 @@
           "amount_eok": 2.0184,
           "rate_pct": 87.765,
           "bizno": "2650101980",
-          "ceo": "최현준"
+          "ceo": "최현준",
+          "price_score": 61.08
         },
         {
           "rank": 53,
@@ -63691,7 +63777,8 @@
           "amount_eok": 2.0208,
           "rate_pct": 87.87,
           "bizno": "6040121503",
-          "ceo": "최호남"
+          "ceo": "최호남",
+          "price_score": 61.48
         },
         {
           "rank": 54,
@@ -63699,7 +63786,8 @@
           "amount_eok": 2.2417,
           "rate_pct": 97.473,
           "bizno": "1578801924",
-          "ceo": "박창범"
+          "ceo": "박창범",
+          "price_score": 55.0
         },
         {
           "rank": 55,
@@ -63707,7 +63795,8 @@
           "amount_eok": 2.282,
           "rate_pct": 99.226,
           "bizno": "7738802351",
-          "ceo": "박창용"
+          "ceo": "박창용",
+          "price_score": 55.0
         },
         {
           "rank": null,
@@ -63715,7 +63804,8 @@
           "amount_eok": 1.9772,
           "rate_pct": 85.973,
           "bizno": "1138660327",
-          "ceo": "박정원"
+          "ceo": "박정원",
+          "price_score": 53.88
         },
         {
           "rank": null,
@@ -63723,7 +63813,8 @@
           "amount_eok": 1.9792,
           "rate_pct": 86.062,
           "bizno": "5658702812",
-          "ceo": "김인수"
+          "ceo": "김인수",
+          "price_score": 54.24
         },
         {
           "rank": null,
@@ -63731,7 +63822,8 @@
           "amount_eok": 1.9804,
           "rate_pct": 86.111,
           "bizno": "1058762466",
-          "ceo": "윤석인"
+          "ceo": "윤석인",
+          "price_score": 54.44
         },
         {
           "rank": null,
@@ -63739,7 +63831,8 @@
           "amount_eok": 1.9816,
           "rate_pct": 86.166,
           "bizno": "5338800245",
-          "ceo": "하정집"
+          "ceo": "하정집",
+          "price_score": 54.68
         },
         {
           "rank": null,
@@ -63747,7 +63840,8 @@
           "amount_eok": 1.9818,
           "rate_pct": 86.171,
           "bizno": "7394000782",
-          "ceo": "박정희"
+          "ceo": "박정희",
+          "price_score": 54.68
         },
         {
           "rank": null,
@@ -63755,7 +63849,8 @@
           "amount_eok": 2.3027,
           "rate_pct": 100.125,
           "bizno": "6158198528",
-          "ceo": "선승우"
+          "ceo": "선승우",
+          "price_score": 0.0
         },
         {
           "rank": null,
@@ -63763,7 +63858,8 @@
           "amount_eok": 2.3057,
           "rate_pct": 100.255,
           "bizno": "6120580971",
-          "ceo": "이정민"
+          "ceo": "이정민",
+          "price_score": 0.0
         },
         {
           "rank": null,
@@ -63771,7 +63867,8 @@
           "amount_eok": 2.3088,
           "rate_pct": 100.39,
           "bizno": "6042624430",
-          "ceo": "선현동"
+          "ceo": "선현동",
+          "price_score": 0.0
         },
         {
           "rank": null,
@@ -63779,7 +63876,8 @@
           "amount_eok": 2.31,
           "rate_pct": 100.443,
           "bizno": "5658802615",
-          "ceo": "허희은"
+          "ceo": "허희은",
+          "price_score": 0.0
         },
         {
           "rank": null,
@@ -63787,7 +63885,8 @@
           "amount_eok": 2.3105,
           "rate_pct": 100.465,
           "bizno": "3448603328",
-          "ceo": "이승미"
+          "ceo": "이승미",
+          "price_score": 0.0
         },
         {
           "rank": null,
@@ -63795,7 +63894,8 @@
           "amount_eok": 2.3111,
           "rate_pct": 100.491,
           "bizno": "5158143892",
-          "ceo": "강소연"
+          "ceo": "강소연",
+          "price_score": 0.0
         },
         {
           "rank": null,
@@ -63803,7 +63903,8 @@
           "amount_eok": 2.3176,
           "rate_pct": 100.773,
           "bizno": "1640103711",
-          "ceo": "윤영승"
+          "ceo": "윤영승",
+          "price_score": 0.0
         },
         {
           "rank": null,
@@ -63811,7 +63912,8 @@
           "amount_eok": 2.3317,
           "rate_pct": 101.388,
           "bizno": "6752001719",
-          "ceo": "김경자"
+          "ceo": "김경자",
+          "price_score": 0.0
         },
         {
           "rank": null,
@@ -63819,7 +63921,8 @@
           "amount_eok": null,
           "rate_pct": 0.0,
           "bizno": "8278602014",
-          "ceo": "유정아"
+          "ceo": "유정아",
+          "price_score": 0.0
         }
       ],
       "bid_count": 69,
@@ -69098,7 +69201,8 @@
           "amount_eok": 4.4919,
           "rate_pct": 80.505,
           "bizno": "3058149402",
-          "ceo": "송치선"
+          "ceo": "송치선",
+          "price_score": 45.02
         },
         {
           "rank": 2,
@@ -69106,7 +69210,8 @@
           "amount_eok": 4.4922,
           "rate_pct": 80.51,
           "bizno": "3388801483",
-          "ceo": "최재완"
+          "ceo": "최재완",
+          "price_score": 45.02
         },
         {
           "rank": 3,
@@ -69114,7 +69219,8 @@
           "amount_eok": 4.4989,
           "rate_pct": 80.631,
           "bizno": "1078793378",
-          "ceo": "이헌웅"
+          "ceo": "이헌웅",
+          "price_score": 45.26
         },
         {
           "rank": 4,
@@ -69122,7 +69228,8 @@
           "amount_eok": 4.4994,
           "rate_pct": 80.64,
           "bizno": "1088154468",
-          "ceo": "이동필"
+          "ceo": "이동필",
+          "price_score": 45.28
         },
         {
           "rank": 5,
@@ -69130,7 +69237,8 @@
           "amount_eok": 4.5031,
           "rate_pct": 80.705,
           "bizno": "6158607681",
-          "ceo": "김길종"
+          "ceo": "김길종",
+          "price_score": 45.42
         },
         {
           "rank": 6,
@@ -69138,7 +69246,8 @@
           "amount_eok": 4.5033,
           "rate_pct": 80.709,
           "bizno": "1138690758",
-          "ceo": "박연익"
+          "ceo": "박연익",
+          "price_score": 45.42
         },
         {
           "rank": 7,
@@ -69146,7 +69255,8 @@
           "amount_eok": 4.5173,
           "rate_pct": 80.961,
           "bizno": "3078143613",
-          "ceo": "송윤서"
+          "ceo": "송윤서",
+          "price_score": 45.92
         },
         {
           "rank": 8,
@@ -69154,7 +69264,8 @@
           "amount_eok": 4.529,
           "rate_pct": 81.169,
           "bizno": "3148800979",
-          "ceo": "정승원"
+          "ceo": "정승원",
+          "price_score": 46.34
         },
         {
           "rank": 9,
@@ -69162,7 +69273,8 @@
           "amount_eok": 4.5352,
           "rate_pct": 81.281,
           "bizno": "1288666624",
-          "ceo": "김찬제"
+          "ceo": "김찬제",
+          "price_score": 46.56
         },
         {
           "rank": 10,
@@ -69170,7 +69282,8 @@
           "amount_eok": 4.5489,
           "rate_pct": 81.527,
           "bizno": "1288602824",
-          "ceo": "송상의"
+          "ceo": "송상의",
+          "price_score": 47.06
         },
         {
           "rank": 11,
@@ -69178,7 +69291,8 @@
           "amount_eok": 4.5679,
           "rate_pct": 81.867,
           "bizno": "6040121503",
-          "ceo": "최호남"
+          "ceo": "최호남",
+          "price_score": 47.74
         },
         {
           "rank": 12,
@@ -69186,7 +69300,8 @@
           "amount_eok": 4.5798,
           "rate_pct": 82.081,
           "bizno": "5248701336",
-          "ceo": "김유빈"
+          "ceo": "김유빈",
+          "price_score": 48.16
         },
         {
           "rank": 13,
@@ -69194,7 +69309,8 @@
           "amount_eok": 4.62,
           "rate_pct": 82.801,
           "bizno": "1298626678",
-          "ceo": "정윤수"
+          "ceo": "정윤수",
+          "price_score": 49.6
         },
         {
           "rank": 14,
@@ -69202,7 +69318,8 @@
           "amount_eok": 4.7357,
           "rate_pct": 84.875,
           "bizno": "6168602428",
-          "ceo": "김대영"
+          "ceo": "김대영",
+          "price_score": 53.76
         },
         {
           "rank": 15,
@@ -69210,7 +69327,8 @@
           "amount_eok": 4.9159,
           "rate_pct": 88.104,
           "bizno": "1138184945",
-          "ceo": "이묵희"
+          "ceo": "이묵희",
+          "price_score": 59.8
         },
         {
           "rank": 16,
@@ -69218,7 +69336,8 @@
           "amount_eok": 5.018,
           "rate_pct": 89.934,
           "bizno": "1198617662",
-          "ceo": "김관종"
+          "ceo": "김관종",
+          "price_score": 56.14
         },
         {
           "rank": 17,
@@ -69226,7 +69345,8 @@
           "amount_eok": 5.1472,
           "rate_pct": 92.25,
           "bizno": "1218146073",
-          "ceo": "김미경"
+          "ceo": "김미경",
+          "price_score": 51.5
         },
         {
           "rank": 18,
@@ -69234,7 +69354,8 @@
           "amount_eok": 5.174,
           "rate_pct": 92.73,
           "bizno": "3148645220",
-          "ceo": "김동욱"
+          "ceo": "김동욱",
+          "price_score": 50.54
         },
         {
           "rank": 19,
@@ -69242,7 +69363,8 @@
           "amount_eok": 5.2847,
           "rate_pct": 94.714,
           "bizno": "1308655815",
-          "ceo": "김종필"
+          "ceo": "김종필",
+          "price_score": 46.58
         },
         {
           "rank": 20,
@@ -69250,7 +69372,8 @@
           "amount_eok": 5.3264,
           "rate_pct": 95.462,
           "bizno": "1188119473",
-          "ceo": "소병양"
+          "ceo": "소병양",
+          "price_score": 45.08
         },
         {
           "rank": 21,
@@ -69258,7 +69381,8 @@
           "amount_eok": 5.4127,
           "rate_pct": 97.007,
           "bizno": "3988100677",
-          "ceo": "신승영"
+          "ceo": "신승영",
+          "price_score": 45.0
         },
         {
           "rank": 22,
@@ -69266,7 +69390,8 @@
           "amount_eok": 5.428,
           "rate_pct": 97.282,
           "bizno": "7288600999",
-          "ceo": "박현승"
+          "ceo": "박현승",
+          "price_score": 45.0
         },
         {
           "rank": 23,
@@ -69274,7 +69399,8 @@
           "amount_eok": 5.4814,
           "rate_pct": 98.239,
           "bizno": "2148818539",
-          "ceo": "한가진"
+          "ceo": "한가진",
+          "price_score": 45.0
         },
         {
           "rank": 24,
@@ -69282,7 +69408,8 @@
           "amount_eok": 5.56,
           "rate_pct": 99.648,
           "bizno": "1418116705",
-          "ceo": "이동식"
+          "ceo": "이동식",
+          "price_score": 45.0
         },
         {
           "rank": 25,
@@ -69290,7 +69417,8 @@
           "amount_eok": 5.5625,
           "rate_pct": 99.693,
           "bizno": "3108135628",
-          "ceo": "장윤아"
+          "ceo": "장윤아",
+          "price_score": 45.0
         },
         {
           "rank": 26,
@@ -69298,7 +69426,8 @@
           "amount_eok": 5.57,
           "rate_pct": 99.827,
           "bizno": "6058701770",
-          "ceo": "노현서"
+          "ceo": "노현서",
+          "price_score": 45.0
         },
         {
           "rank": null,
@@ -69306,7 +69435,8 @@
           "amount_eok": 4.4602,
           "rate_pct": 79.936,
           "bizno": "1168150463",
-          "ceo": "김한기"
+          "ceo": "김한기",
+          "price_score": 43.88
         },
         {
           "rank": null,
@@ -69314,7 +69444,8 @@
           "amount_eok": 4.4657,
           "rate_pct": 80.036,
           "bizno": "1058714362",
-          "ceo": "신연희"
+          "ceo": "신연희",
+          "price_score": 44.08
         },
         {
           "rank": null,
@@ -69322,7 +69453,8 @@
           "amount_eok": 4.4712,
           "rate_pct": 80.135,
           "bizno": "6098193120",
-          "ceo": "정민영"
+          "ceo": "정민영",
+          "price_score": 44.28
         },
         {
           "rank": null,
@@ -69330,7 +69462,8 @@
           "amount_eok": 4.4768,
           "rate_pct": 80.234,
           "bizno": "8258101445",
-          "ceo": "문병일"
+          "ceo": "문병일",
+          "price_score": 44.46
         },
         {
           "rank": null,
@@ -69338,7 +69471,8 @@
           "amount_eok": 4.4795,
           "rate_pct": 80.284,
           "bizno": "2568102328",
-          "ceo": "고윤찬"
+          "ceo": "고윤찬",
+          "price_score": 44.56
         },
         {
           "rank": null,
@@ -69346,7 +69480,8 @@
           "amount_eok": 4.4812,
           "rate_pct": 80.314,
           "bizno": "5868102229",
-          "ceo": "심재정"
+          "ceo": "심재정",
+          "price_score": 44.62
         },
         {
           "rank": null,
@@ -69354,7 +69489,8 @@
           "amount_eok": 4.4815,
           "rate_pct": 80.318,
           "bizno": "1078820815",
-          "ceo": "윤동권"
+          "ceo": "윤동권",
+          "price_score": 44.64
         },
         {
           "rank": null,
@@ -69362,7 +69498,8 @@
           "amount_eok": 4.4823,
           "rate_pct": 80.333,
           "bizno": "1138646816",
-          "ceo": "임종필"
+          "ceo": "임종필",
+          "price_score": 44.66
         },
         {
           "rank": null,
@@ -69370,7 +69507,8 @@
           "amount_eok": 4.4858,
           "rate_pct": 80.395,
           "bizno": "2218131749",
-          "ceo": "변동희"
+          "ceo": "변동희",
+          "price_score": 44.8
         },
         {
           "rank": null,
@@ -69378,7 +69516,8 @@
           "amount_eok": 4.4868,
           "rate_pct": 80.415,
           "bizno": "8358103023",
-          "ceo": "홍진두"
+          "ceo": "홍진두",
+          "price_score": 44.84
         },
         {
           "rank": null,
@@ -69386,7 +69525,8 @@
           "amount_eok": 4.4878,
           "rate_pct": 80.432,
           "bizno": "4778800659",
-          "ceo": "강현준"
+          "ceo": "강현준",
+          "price_score": 44.86
         },
         {
           "rank": null,
@@ -69394,7 +69534,8 @@
           "amount_eok": 4.4883,
           "rate_pct": 80.441,
           "bizno": "1298617562",
-          "ceo": "남재권"
+          "ceo": "남재권",
+          "price_score": 44.88
         },
         {
           "rank": null,
@@ -69402,7 +69543,8 @@
           "amount_eok": 4.4892,
           "rate_pct": 80.457,
           "bizno": "8038700322",
-          "ceo": "김덕화"
+          "ceo": "김덕화",
+          "price_score": 44.92
         },
         {
           "rank": null,
@@ -69410,7 +69552,8 @@
           "amount_eok": null,
           "rate_pct": 0.0,
           "bizno": "6140476461",
-          "ceo": "김영우"
+          "ceo": "김영우",
+          "price_score": 0.0
         },
         {
           "rank": null,
@@ -69418,7 +69561,8 @@
           "amount_eok": null,
           "rate_pct": 0.0,
           "bizno": "4128108897",
-          "ceo": "박희용"
+          "ceo": "박희용",
+          "price_score": 0.0
         }
       ],
       "bid_count": 41,
@@ -70082,18 +70226,24 @@
         {
           "rank": 1,
           "name": "리안아이티컨설팅",
-          "amount_eok": null,
-          "rate_pct": 10.0,
+          "amount_eok": 0.8368,
+          "rate_pct": 80.0,
           "bizno": "7598102147",
-          "ceo": "최지원"
+          "ceo": "최지원",
+          "price_score": 10.0,
+          "tech_score": 86.0,
+          "total_score": 96.0
         },
         {
           "rank": 2,
           "name": "테크원",
-          "amount_eok": null,
-          "rate_pct": 9.9999,
+          "amount_eok": 0.8368,
+          "rate_pct": 80.001,
           "bizno": "2648116478",
-          "ceo": "김영호"
+          "ceo": "김영호",
+          "price_score": 9.9999,
+          "tech_score": 81.9167,
+          "total_score": 91.9166
         }
       ],
       "bid_count": 2,
@@ -70442,7 +70592,10 @@
           "amount_eok": null,
           "rate_pct": 9.0404,
           "bizno": "1198661402",
-          "ceo": "남기환"
+          "ceo": "남기환",
+          "price_score": 9.0404,
+          "tech_score": 80.0,
+          "total_score": 89.0404
         },
         {
           "rank": 2,
@@ -70450,7 +70603,10 @@
           "amount_eok": null,
           "rate_pct": 10.0,
           "bizno": "1298675086",
-          "ceo": "정현희"
+          "ceo": "정현희",
+          "price_score": 10.0,
+          "tech_score": 79.0,
+          "total_score": 89.0
         },
         {
           "rank": 3,
@@ -70458,7 +70614,10 @@
           "amount_eok": null,
           "rate_pct": 8.9679,
           "bizno": "1138677115",
-          "ceo": "이경우"
+          "ceo": "이경우",
+          "price_score": 8.9679,
+          "tech_score": 77.0,
+          "total_score": 85.9679
         },
         {
           "rank": null,
@@ -70466,7 +70625,10 @@
           "amount_eok": null,
           "rate_pct": 8.8263,
           "bizno": "1138655450",
-          "ceo": "안태강"
+          "ceo": "안태강",
+          "price_score": 8.8263,
+          "tech_score": 74.0,
+          "total_score": 82.8263
         },
         {
           "rank": null,
@@ -70474,7 +70636,10 @@
           "amount_eok": null,
           "rate_pct": 9.0526,
           "bizno": "2352601605",
-          "ceo": "최선주"
+          "ceo": "최선주",
+          "price_score": 9.0526,
+          "tech_score": 60.0,
+          "total_score": 69.0526
         }
       ],
       "bid_count": 5,
@@ -70634,7 +70799,8 @@
           "amount_eok": 0.3277,
           "rate_pct": 94.727,
           "bizno": "1348654875",
-          "ceo": "문병래"
+          "ceo": "문병래",
+          "price_score": 55.0
         },
         {
           "rank": null,
@@ -70642,7 +70808,8 @@
           "amount_eok": 0.2907,
           "rate_pct": 84.018,
           "bizno": "3418701084",
-          "ceo": "김인기"
+          "ceo": "김인기",
+          "price_score": 54.08
         },
         {
           "rank": null,
@@ -70650,7 +70817,8 @@
           "amount_eok": null,
           "rate_pct": 0.0,
           "bizno": "1108137628",
-          "ceo": "김동식"
+          "ceo": "김동식",
+          "price_score": 0.0
         }
       ],
       "award_to_budget_pct": 95.0,
@@ -70658,7 +70826,8 @@
       "close_at": "2026-10-26 10:00",
       "close_date": "2026-10-26",
       "budget_kind": "배정예산",
-      "asign_budget_eok": 0.345
+      "asign_budget_eok": 0.345,
+      "first_rank": "인프라칩"
     },
     {
       "source": "g2b_api",
@@ -72842,7 +73011,10 @@
           "amount_eok": 0.902,
           "rate_pct": 20.0,
           "bizno": "1807300256",
-          "ceo": "손준일"
+          "ceo": "손준일",
+          "price_score": 20.0,
+          "tech_score": 72.0,
+          "total_score": 92.0
         },
         {
           "rank": null,
@@ -72850,13 +73022,17 @@
           "amount_eok": 0.902,
           "rate_pct": 20.0,
           "bizno": "7368800994",
-          "ceo": "김태우"
+          "ceo": "김태우",
+          "price_score": 20.0,
+          "tech_score": 62.5,
+          "total_score": 82.5
         }
       ],
       "award_to_budget_pct": 100.0,
       "open_at": "2026-10-26 14:00",
       "budget_kind": "배정예산",
-      "asign_budget_eok": 0.902
+      "asign_budget_eok": 0.902,
+      "first_rank": "아이브이에스 IVS"
     },
     {
       "source": "g2b_api",
@@ -79122,7 +79298,10 @@
           "amount_eok": 6.6,
           "rate_pct": 9.8485,
           "bizno": "4238801215",
-          "ceo": "조윤찬"
+          "ceo": "조윤찬",
+          "price_score": 9.8485,
+          "tech_score": 85.77,
+          "total_score": 95.6185
         },
         {
           "rank": 2,
@@ -79130,7 +79309,10 @@
           "amount_eok": 6.5,
           "rate_pct": 10.0,
           "bizno": "7218800328",
-          "ceo": "이인식"
+          "ceo": "이인식",
+          "price_score": 10.0,
+          "tech_score": 80.23,
+          "total_score": 90.23
         }
       ],
       "second": "윈텍에스에이",
@@ -79139,7 +79321,8 @@
       "close_at": "2026-10-23 12:00",
       "close_date": "2026-10-23",
       "budget_kind": "배정예산",
-      "asign_budget_eok": 6.6
+      "asign_budget_eok": 6.6,
+      "first_rank": "잉클"
     },
     {
       "source": "g2b_api",
@@ -82506,42 +82689,57 @@
         {
           "rank": 1,
           "name": "넥스트클라우드",
-          "amount_eok": null,
+          "amount_eok": 1.5,
           "rate_pct": 18.0,
           "bizno": "3138703049",
-          "ceo": "박진성"
+          "ceo": "박진성",
+          "price_score": 18.0,
+          "tech_score": 76.75,
+          "total_score": 94.75
         },
         {
           "rank": 2,
           "name": "프리윌린",
-          "amount_eok": null,
+          "amount_eok": 1.5,
           "rate_pct": 18.0,
           "bizno": "8348600713",
-          "ceo": "권기성"
+          "ceo": "권기성",
+          "price_score": 18.0,
+          "tech_score": 72.0,
+          "total_score": 90.0
         },
         {
           "rank": 3,
           "name": "달파",
-          "amount_eok": null,
+          "amount_eok": 1.5,
           "rate_pct": 18.0,
           "bizno": "7448802542",
-          "ceo": "김도균"
+          "ceo": "김도균",
+          "price_score": 18.0,
+          "tech_score": 71.75,
+          "total_score": 89.75
         },
         {
           "rank": 4,
           "name": "지미디어시스",
-          "amount_eok": null,
+          "amount_eok": 1.4,
           "rate_pct": 19.2857,
           "bizno": "6178630306",
-          "ceo": "박성훈"
+          "ceo": "박성훈",
+          "price_score": 19.2857,
+          "tech_score": 69.0,
+          "total_score": 88.2857
         },
         {
           "rank": null,
           "name": "고래앤코",
-          "amount_eok": null,
+          "amount_eok": 1.35,
           "rate_pct": 20.0,
           "bizno": "8098703763",
-          "ceo": "황해인"
+          "ceo": "황해인",
+          "price_score": 20.0,
+          "tech_score": 65.0,
+          "total_score": 85.0
         },
         {
           "rank": null,
@@ -82549,7 +82747,10 @@
           "amount_eok": null,
           "rate_pct": 0.0,
           "bizno": "4758703255",
-          "ceo": "이서준"
+          "ceo": "이서준",
+          "price_score": 0.0,
+          "tech_score": 0.0,
+          "total_score": 0.0
         },
         {
           "rank": null,
@@ -82557,7 +82758,10 @@
           "amount_eok": null,
           "rate_pct": 0.0,
           "bizno": "2918800166",
-          "ceo": "김영국"
+          "ceo": "김영국",
+          "price_score": 0.0,
+          "tech_score": 0.0,
+          "total_score": 0.0
         }
       ],
       "bid_count": 7,
@@ -82570,7 +82774,8 @@
       "close_at": "2026-10-19 10:00",
       "close_date": "2026-10-19",
       "budget_kind": "배정예산",
-      "asign_budget_eok": 1.5
+      "asign_budget_eok": 1.5,
+      "first_rank": "넥스트클라우드"
     },
     {
       "source": "g2b_api",
@@ -83032,7 +83237,10 @@
           "amount_eok": 1.1,
           "rate_pct": 9.6835,
           "bizno": "2218139886",
-          "ceo": "옥원수"
+          "ceo": "옥원수",
+          "price_score": 9.6835,
+          "tech_score": 88.0,
+          "total_score": 97.6835
         },
         {
           "rank": 2,
@@ -83040,7 +83248,10 @@
           "amount_eok": 1.16,
           "rate_pct": 9.1826,
           "bizno": "2268121678",
-          "ceo": "조지현"
+          "ceo": "조지현",
+          "price_score": 9.1826,
+          "tech_score": 85.0,
+          "total_score": 94.1826
         },
         {
           "rank": null,
@@ -83048,7 +83259,10 @@
           "amount_eok": 1.0652,
           "rate_pct": 10.0,
           "bizno": "1188802665",
-          "ceo": "문원준"
+          "ceo": "문원준",
+          "price_score": 10.0,
+          "tech_score": 70.0,
+          "total_score": 80.0
         }
       ],
       "second": "지트",
@@ -83057,7 +83271,8 @@
       "close_at": "2026-10-19 10:00",
       "close_date": "2026-10-19",
       "budget_kind": "배정예산",
-      "asign_budget_eok": 1.177
+      "asign_budget_eok": 1.177,
+      "first_rank": "지오엔소프트"
     },
     {
       "source": "g2b_api",
@@ -90454,13 +90669,17 @@
           "amount_eok": 1.45,
           "rate_pct": 10.0,
           "bizno": "4428703779",
-          "ceo": "윤승규"
+          "ceo": "윤승규",
+          "price_score": 10.0,
+          "tech_score": 83.3,
+          "total_score": 93.3
         }
       ],
       "award_to_budget_pct": 90.9,
       "open_at": "2026-10-19 15:00",
       "budget_kind": "배정예산",
-      "asign_budget_eok": 1.595
+      "asign_budget_eok": 1.595,
+      "first_rank": "메디워크에이아이"
     },
     {
       "source": "g2b_api",
@@ -93095,26 +93314,35 @@
         {
           "rank": 1,
           "name": "위노베이트(WENOVATE)",
-          "amount_eok": null,
+          "amount_eok": 0.66,
           "rate_pct": 20.0,
           "bizno": "3498803652",
-          "ceo": "구용욱"
+          "ceo": "구용욱",
+          "price_score": 20.0,
+          "tech_score": 76.1667,
+          "total_score": 96.1667
         },
         {
           "rank": 2,
           "name": "데이타트렌드",
-          "amount_eok": null,
+          "amount_eok": 0.67,
           "rate_pct": 19.7015,
           "bizno": "4638101723",
-          "ceo": "표성수"
+          "ceo": "표성수",
+          "price_score": 19.7015,
+          "tech_score": 73.0833,
+          "total_score": 92.7848
         },
         {
           "rank": null,
           "name": "저스트스타트레이딩(Just Star Trading)",
-          "amount_eok": null,
+          "amount_eok": 0.697,
           "rate_pct": 18.9383,
           "bizno": "7447400552",
-          "ceo": "김종태"
+          "ceo": "김종태",
+          "price_score": 18.9383,
+          "tech_score": 61.5,
+          "total_score": 80.4383
         }
       ],
       "bid_count": 3,
@@ -95418,7 +95646,10 @@
           "amount_eok": null,
           "rate_pct": 8.9595,
           "bizno": "1678801241",
-          "ceo": "고유원"
+          "ceo": "고유원",
+          "price_score": 8.9595,
+          "tech_score": 84.75,
+          "total_score": 93.7095
         },
         {
           "rank": 2,
@@ -95426,7 +95657,10 @@
           "amount_eok": null,
           "rate_pct": 10.0,
           "bizno": "6438602226",
-          "ceo": "전종현"
+          "ceo": "전종현",
+          "price_score": 10.0,
+          "tech_score": 81.13,
+          "total_score": 91.13
         },
         {
           "rank": 3,
@@ -95434,7 +95668,10 @@
           "amount_eok": null,
           "rate_pct": 8.7943,
           "bizno": "6238102076",
-          "ceo": "최재완"
+          "ceo": "최재완",
+          "price_score": 8.7943,
+          "tech_score": 79.13,
+          "total_score": 87.9243
         }
       ],
       "bid_count": 3,
@@ -97449,42 +97686,57 @@
         {
           "rank": 1,
           "name": "세명소프트",
-          "amount_eok": null,
+          "amount_eok": 0.765,
           "rate_pct": 20.0,
           "bizno": "4588101696",
-          "ceo": "황바울"
+          "ceo": "황바울",
+          "price_score": 20.0,
+          "tech_score": 75.58,
+          "total_score": 95.58
         },
         {
           "rank": 2,
           "name": "(사)한국능률협회",
-          "amount_eok": null,
+          "amount_eok": 0.814,
           "rate_pct": 18.7961,
           "bizno": "1058201810",
-          "ceo": "최권석"
+          "ceo": "최권석",
+          "price_score": 18.7961,
+          "tech_score": 68.83,
+          "total_score": 87.6261
         },
         {
           "rank": null,
           "name": "케이아이티원",
-          "amount_eok": null,
+          "amount_eok": 0.8,
           "rate_pct": 19.125,
           "bizno": "8748100230",
-          "ceo": "김대권"
+          "ceo": "김대권",
+          "price_score": 19.125,
+          "tech_score": 64.67,
+          "total_score": 83.795
         },
         {
           "rank": null,
           "name": "위노베이트(WENOVATE)",
-          "amount_eok": null,
+          "amount_eok": 0.792,
           "rate_pct": 19.3182,
           "bizno": "3498803652",
-          "ceo": "구용욱"
+          "ceo": "구용욱",
+          "price_score": 19.3182,
+          "tech_score": 63.33,
+          "total_score": 82.6482
         },
         {
           "rank": null,
           "name": "비엔비에셋",
-          "amount_eok": null,
+          "amount_eok": 0.9,
           "rate_pct": 17.0,
           "bizno": "3338702438",
-          "ceo": "김복기"
+          "ceo": "김복기",
+          "price_score": 17.0,
+          "tech_score": 49.5,
+          "total_score": 66.5
         }
       ],
       "bid_count": 5,
@@ -97524,18 +97776,24 @@
         {
           "rank": 1,
           "name": "아이티센엔텍",
-          "amount_eok": null,
+          "amount_eok": 71.993,
           "rate_pct": 9.0009,
           "bizno": "2028132975",
-          "ceo": "신장호"
+          "ceo": "신장호",
+          "price_score": 9.0009,
+          "tech_score": 90.0,
+          "total_score": 99.0009
         },
         {
           "rank": 2,
           "name": "데이타트렌드",
-          "amount_eok": null,
+          "amount_eok": 64.8,
           "rate_pct": 10.0,
           "bizno": "4638101723",
-          "ceo": "표성수"
+          "ceo": "표성수",
+          "price_score": 10.0,
+          "tech_score": 84.0825,
+          "total_score": 94.0825
         }
       ],
       "bid_count": 2,
@@ -100597,7 +100855,10 @@
           "amount_eok": null,
           "rate_pct": 9.5,
           "bizno": "5498101478",
-          "ceo": "홍종림"
+          "ceo": "홍종림",
+          "price_score": 9.5,
+          "tech_score": 82.0,
+          "total_score": 91.5
         },
         {
           "rank": null,
@@ -100605,7 +100866,10 @@
           "amount_eok": null,
           "rate_pct": 10.0,
           "bizno": "5904001338",
-          "ceo": "홍재승"
+          "ceo": "홍재승",
+          "price_score": 10.0,
+          "tech_score": 74.0,
+          "total_score": 84.0
         }
       ],
       "bid_count": 2,
@@ -101303,7 +101567,8 @@
           "amount_eok": 4.895,
           "rate_pct": 93.872,
           "bizno": "3028700950",
-          "ceo": "이정훈"
+          "ceo": "이정훈",
+          "price_score": 62.26
         },
         {
           "rank": 2,
@@ -101311,7 +101576,8 @@
           "amount_eok": 5.1834,
           "rate_pct": 99.403,
           "bizno": "1448105508",
-          "ceo": "문대성"
+          "ceo": "문대성",
+          "price_score": 55.0
         },
         {
           "rank": null,
@@ -101319,7 +101585,8 @@
           "amount_eok": null,
           "rate_pct": 0.0,
           "bizno": "2898801406",
-          "ceo": "문형윤"
+          "ceo": "문형윤",
+          "price_score": 0.0
         }
       ],
       "second": "엠에스시스템즈",
@@ -101328,7 +101595,8 @@
       "close_at": "2026-10-08 15:00",
       "close_date": "2026-10-08",
       "budget_kind": "배정예산",
-      "asign_budget_eok": 5.2488
+      "asign_budget_eok": 5.2488,
+      "first_rank": "비투엔"
     },
     {
       "bid_no": "R26BK01750175",
@@ -101498,7 +101766,10 @@
           "amount_eok": 0.868,
           "rate_pct": 8.7558,
           "bizno": "6268701194",
-          "ceo": "김세엽"
+          "ceo": "김세엽",
+          "price_score": 8.7558,
+          "tech_score": 83.67,
+          "total_score": 92.4258
         },
         {
           "rank": 2,
@@ -101506,7 +101777,10 @@
           "amount_eok": 1.085,
           "rate_pct": 7.0046,
           "bizno": "7448802542",
-          "ceo": "김도균"
+          "ceo": "김도균",
+          "price_score": 7.0046,
+          "tech_score": 76.67,
+          "total_score": 83.6746
         },
         {
           "rank": null,
@@ -101514,7 +101788,10 @@
           "amount_eok": 1.08,
           "rate_pct": 7.037,
           "bizno": "2148757665",
-          "ceo": "최중락"
+          "ceo": "최중락",
+          "price_score": 7.037,
+          "tech_score": 68.0,
+          "total_score": 75.037
         },
         {
           "rank": null,
@@ -101522,7 +101799,10 @@
           "amount_eok": 0.76,
           "rate_pct": 3.0,
           "bizno": "2951002890",
-          "ceo": "박경준"
+          "ceo": "박경준",
+          "price_score": 3.0,
+          "tech_score": 63.0,
+          "total_score": 66.0
         },
         {
           "rank": null,
@@ -101530,7 +101810,10 @@
           "amount_eok": 1.067,
           "rate_pct": 7.1228,
           "bizno": "1138643065",
-          "ceo": "김기수"
+          "ceo": "김기수",
+          "price_score": 7.1228,
+          "tech_score": 56.0,
+          "total_score": 63.1228
         },
         {
           "rank": null,
@@ -101538,7 +101821,10 @@
           "amount_eok": 1.07,
           "rate_pct": 7.1028,
           "bizno": "1138666108",
-          "ceo": "홍찬호"
+          "ceo": "홍찬호",
+          "price_score": 7.1028,
+          "tech_score": 54.67,
+          "total_score": 61.7728
         },
         {
           "rank": null,
@@ -101546,7 +101832,10 @@
           "amount_eok": 1.0378,
           "rate_pct": 7.3228,
           "bizno": "1568602455",
-          "ceo": "이혁재"
+          "ceo": "이혁재",
+          "price_score": 7.3228,
+          "tech_score": 54.33,
+          "total_score": 61.6528
         },
         {
           "rank": null,
@@ -101554,7 +101843,10 @@
           "amount_eok": 1.0,
           "rate_pct": 7.6,
           "bizno": "2918800166",
-          "ceo": "김영국"
+          "ceo": "김영국",
+          "price_score": 7.6,
+          "tech_score": 42.0,
+          "total_score": 49.6
         }
       ],
       "second": "달파",
@@ -101563,7 +101855,8 @@
       "close_at": "2026-10-14 10:00",
       "close_date": "2026-10-14",
       "budget_kind": "배정예산",
-      "asign_budget_eok": 1.085
+      "asign_budget_eok": 1.085,
+      "first_rank": "셀렉트스타"
     },
     {
       "source": "g2b_api",
@@ -102191,7 +102484,8 @@
           "amount_eok": 0.4969,
           "rate_pct": 90.588,
           "bizno": "4098629697",
-          "ceo": "이홍선"
+          "ceo": "이홍선",
+          "price_score": 60.36
         },
         {
           "rank": 2,
@@ -102199,7 +102493,8 @@
           "amount_eok": 0.539,
           "rate_pct": 98.27,
           "bizno": "8348600713",
-          "ceo": "권기성"
+          "ceo": "권기성",
+          "price_score": 58.0
         },
         {
           "rank": null,
@@ -102207,11 +102502,13 @@
           "amount_eok": null,
           "rate_pct": 0.0,
           "bizno": "2148607396",
-          "ceo": "윤정희"
+          "ceo": "윤정희",
+          "price_score": 0.0
         }
       ],
       "second": "프리윌린",
-      "award_to_budget_pct": 98.0
+      "award_to_budget_pct": 98.0,
+      "first_rank": "휴안"
     },
     {
       "source": "g2b_api",
@@ -102319,18 +102616,24 @@
         {
           "rank": 1,
           "name": "피스페이스",
-          "amount_eok": null,
+          "amount_eok": 1.194,
           "rate_pct": 19.397,
           "bizno": "5028175364",
-          "ceo": "곽현수"
+          "ceo": "곽현수",
+          "price_score": 19.397,
+          "tech_score": 72.8571,
+          "total_score": 92.2541
         },
         {
           "rank": null,
           "name": "태건",
-          "amount_eok": null,
+          "amount_eok": 1.158,
           "rate_pct": 20.0,
           "bizno": "1548102930",
-          "ceo": "김규랑"
+          "ceo": "김규랑",
+          "price_score": 20.0,
+          "tech_score": 61.8571,
+          "total_score": 81.8571
         }
       ],
       "bid_count": 2,
@@ -102632,7 +102935,10 @@
           "amount_eok": 7.527,
           "rate_pct": 10.0,
           "bizno": "2158609494",
-          "ceo": "곽정하"
+          "ceo": "곽정하",
+          "price_score": 10.0,
+          "tech_score": 84.86,
+          "total_score": 94.86
         },
         {
           "rank": 2,
@@ -102640,11 +102946,15 @@
           "amount_eok": 7.722,
           "rate_pct": 9.7475,
           "bizno": "4328601030",
-          "ceo": "안영돈"
+          "ceo": "안영돈",
+          "price_score": 9.7475,
+          "tech_score": 70.26,
+          "total_score": 80.0075
         }
       ],
       "second": "보민글로벌",
-      "award_to_budget_pct": 96.5
+      "award_to_budget_pct": 96.5,
+      "first_rank": "셀파이엔씨"
     },
     {
       "source": "g2b_api",
@@ -102916,18 +103226,24 @@
         {
           "rank": 1,
           "name": "인터로이드",
-          "amount_eok": null,
+          "amount_eok": 0.99,
           "rate_pct": 8.0,
           "bizno": "2648104609",
-          "ceo": "김수화"
+          "ceo": "김수화",
+          "price_score": 8.0,
+          "tech_score": 83.66,
+          "total_score": 91.66
         },
         {
           "rank": 2,
           "name": "이노디스",
-          "amount_eok": null,
+          "amount_eok": 0.792,
           "rate_pct": 10.0,
           "bizno": "1208657776",
-          "ceo": "권영민"
+          "ceo": "권영민",
+          "price_score": 10.0,
+          "tech_score": 79.5,
+          "total_score": 89.5
         }
       ],
       "bid_count": 2,
@@ -102935,7 +103251,8 @@
       "winner": "인터로이드",
       "status": "낙찰",
       "award_amount_eok": 0.99,
-      "award_to_budget_pct": 100.0
+      "award_to_budget_pct": 100.0,
+      "first_rank": "인터로이드"
     },
     {
       "source": "g2b_api",
@@ -103099,18 +103416,24 @@
         {
           "rank": 1,
           "name": "콘센트게임즈",
-          "amount_eok": null,
+          "amount_eok": 0.7,
           "rate_pct": 9.4286,
           "bizno": "8390803338",
-          "ceo": "송창욱"
+          "ceo": "송창욱",
+          "price_score": 9.4286,
+          "tech_score": 73.4,
+          "total_score": 82.8286
         },
         {
           "rank": 2,
           "name": "NBSP(엔비에스피)",
-          "amount_eok": null,
+          "amount_eok": 0.66,
           "rate_pct": 10.0,
           "bizno": "7411000473",
-          "ceo": "이승민"
+          "ceo": "이승민",
+          "price_score": 10.0,
+          "tech_score": 71.0,
+          "total_score": 81.0
         }
       ],
       "bid_count": 2,
@@ -103230,7 +103553,10 @@
           "amount_eok": null,
           "rate_pct": 10.0,
           "bizno": "3578702472",
-          "ceo": "박정일"
+          "ceo": "박정일",
+          "price_score": 10.0,
+          "tech_score": 83.33,
+          "total_score": 93.33
         },
         {
           "rank": 2,
@@ -103238,7 +103564,10 @@
           "amount_eok": null,
           "rate_pct": 8.0402,
           "bizno": "2298139181",
-          "ceo": "오재철"
+          "ceo": "오재철",
+          "price_score": 8.0402,
+          "tech_score": 79.67,
+          "total_score": 87.7102
         },
         {
           "rank": null,
@@ -103246,7 +103575,8 @@
           "amount_eok": null,
           "rate_pct": 0.0,
           "bizno": "7878102609",
-          "ceo": "송주현"
+          "ceo": "송주현",
+          "price_score": 0.0
         }
       ],
       "bid_count": 3,
@@ -104404,7 +104734,10 @@
           "amount_eok": 0.4,
           "rate_pct": 7.0,
           "bizno": "3408102787",
-          "ceo": "김은희"
+          "ceo": "김은희",
+          "price_score": 7.0,
+          "tech_score": 86.17,
+          "total_score": 93.17
         },
         {
           "rank": 2,
@@ -104412,7 +104745,10 @@
           "amount_eok": 0.395,
           "rate_pct": 7.0886,
           "bizno": "2208791988",
-          "ceo": "김형진"
+          "ceo": "김형진",
+          "price_score": 7.0886,
+          "tech_score": 80.17,
+          "total_score": 87.2586
         },
         {
           "rank": 3,
@@ -104420,7 +104756,10 @@
           "amount_eok": 0.36,
           "rate_pct": 7.7778,
           "bizno": "6878100960",
-          "ceo": "유미란"
+          "ceo": "유미란",
+          "price_score": 7.7778,
+          "tech_score": 78.83,
+          "total_score": 86.6078
         },
         {
           "rank": 4,
@@ -104428,7 +104767,10 @@
           "amount_eok": 0.398,
           "rate_pct": 7.0352,
           "bizno": "5668101323",
-          "ceo": "강주혜"
+          "ceo": "강주혜",
+          "price_score": 7.0352,
+          "tech_score": 78.5,
+          "total_score": 85.5352
         },
         {
           "rank": null,
@@ -104436,11 +104778,15 @@
           "amount_eok": 0.1988,
           "rate_pct": 3.0,
           "bizno": "7812402331",
-          "ceo": "전준배"
+          "ceo": "전준배",
+          "price_score": 3.0,
+          "tech_score": 70.5,
+          "total_score": 73.5
         }
       ],
       "second": "헤브론스타",
-      "award_to_budget_pct": 100.0
+      "award_to_budget_pct": 100.0,
+      "first_rank": "라온데이터앤컨설팅"
     },
     {
       "source": "g2b_api",
@@ -105449,7 +105795,10 @@
           "amount_eok": 0.264,
           "rate_pct": 20.0,
           "bizno": "1930601720",
-          "ceo": "김진영"
+          "ceo": "김진영",
+          "price_score": 20.0,
+          "tech_score": 73.33,
+          "total_score": 93.33
         },
         {
           "rank": 2,
@@ -105457,11 +105806,15 @@
           "amount_eok": 0.27,
           "rate_pct": 19.5556,
           "bizno": "1058711837",
-          "ceo": "이자환"
+          "ceo": "이자환",
+          "price_score": 19.5556,
+          "tech_score": 68.0,
+          "total_score": 87.5556
         }
       ],
       "second": "비즈엠디지",
-      "award_to_budget_pct": 88.0
+      "award_to_budget_pct": 88.0,
+      "first_rank": "더블스택"
     },
     {
       "source": "g2b_api",
@@ -105655,7 +106008,10 @@
           "amount_eok": 7.897,
           "rate_pct": 9.1174,
           "bizno": "4638700328",
-          "ceo": "채종현"
+          "ceo": "채종현",
+          "price_score": 9.1174,
+          "tech_score": 85.625,
+          "total_score": 94.7424
         },
         {
           "rank": 2,
@@ -105663,7 +106019,10 @@
           "amount_eok": 7.59,
           "rate_pct": 9.4862,
           "bizno": "2148664984",
-          "ceo": "전경헌"
+          "ceo": "전경헌",
+          "price_score": 9.4862,
+          "tech_score": 83.875,
+          "total_score": 93.3612
         },
         {
           "rank": 3,
@@ -105671,7 +106030,10 @@
           "amount_eok": 8.55,
           "rate_pct": 8.4211,
           "bizno": "1248739200",
-          "ceo": "이상규"
+          "ceo": "이상규",
+          "price_score": 8.4211,
+          "tech_score": 84.75,
+          "total_score": 93.1711
         },
         {
           "rank": 4,
@@ -105679,7 +106041,10 @@
           "amount_eok": 8.46,
           "rate_pct": 8.5106,
           "bizno": "6038161668",
-          "ceo": "변동언"
+          "ceo": "변동언",
+          "price_score": 8.5106,
+          "tech_score": 84.0,
+          "total_score": 92.5106
         },
         {
           "rank": 5,
@@ -105687,7 +106052,10 @@
           "amount_eok": 7.2,
           "rate_pct": 10.0,
           "bizno": "1148694266",
-          "ceo": "홍성진"
+          "ceo": "홍성진",
+          "price_score": 10.0,
+          "tech_score": 82.25,
+          "total_score": 92.25
         },
         {
           "rank": 6,
@@ -105695,7 +106063,10 @@
           "amount_eok": 8.28,
           "rate_pct": 8.6957,
           "bizno": "3058172470",
-          "ceo": "이명기"
+          "ceo": "이명기",
+          "price_score": 8.6957,
+          "tech_score": 83.125,
+          "total_score": 91.8207
         },
         {
           "rank": 7,
@@ -105703,7 +106074,10 @@
           "amount_eok": 8.0,
           "rate_pct": 9.0,
           "bizno": "2208736025",
-          "ceo": "박경선"
+          "ceo": "박경선",
+          "price_score": 9.0,
+          "tech_score": 82.25,
+          "total_score": 91.25
         },
         {
           "rank": 8,
@@ -105711,7 +106085,10 @@
           "amount_eok": 8.28,
           "rate_pct": 8.6957,
           "bizno": "1138622298",
-          "ceo": "홍성호"
+          "ceo": "홍성호",
+          "price_score": 8.6957,
+          "tech_score": 80.875,
+          "total_score": 89.5707
         },
         {
           "rank": 9,
@@ -105719,7 +106096,10 @@
           "amount_eok": 7.65,
           "rate_pct": 9.4118,
           "bizno": "1198682071",
-          "ceo": "양해영"
+          "ceo": "양해영",
+          "price_score": 9.4118,
+          "tech_score": 79.5,
+          "total_score": 88.9118
         }
       ],
       "scope": "AI SW 확대",
@@ -105797,7 +106177,10 @@
           "amount_eok": 12.969,
           "rate_pct": 9.7926,
           "bizno": "1198682412",
-          "ceo": "윤훈주"
+          "ceo": "윤훈주",
+          "price_score": 9.7926,
+          "tech_score": 90.0,
+          "total_score": 99.7926
         },
         {
           "rank": 2,
@@ -105805,7 +106188,10 @@
           "amount_eok": 12.95,
           "rate_pct": 9.8069,
           "bizno": "1438133020",
-          "ceo": "박정숙"
+          "ceo": "박정숙",
+          "price_score": 9.8069,
+          "tech_score": 87.0,
+          "total_score": 96.8069
         },
         {
           "rank": 3,
@@ -105813,7 +106199,10 @@
           "amount_eok": 12.97,
           "rate_pct": 9.7918,
           "bizno": "4028158274",
-          "ceo": "강인구"
+          "ceo": "강인구",
+          "price_score": 9.7918,
+          "tech_score": 84.0,
+          "total_score": 93.7918
         },
         {
           "rank": 4,
@@ -105821,7 +106210,10 @@
           "amount_eok": 12.97,
           "rate_pct": 9.7918,
           "bizno": "1098636323",
-          "ceo": "김승용"
+          "ceo": "김승용",
+          "price_score": 9.7918,
+          "tech_score": 81.0,
+          "total_score": 90.7918
         },
         {
           "rank": 5,
@@ -105829,7 +106221,10 @@
           "amount_eok": 12.97,
           "rate_pct": 9.7918,
           "bizno": "3058195207",
-          "ceo": "이종규"
+          "ceo": "이종규",
+          "price_score": 9.7918,
+          "tech_score": 78.0,
+          "total_score": 87.7918
         },
         {
           "rank": null,
@@ -105837,7 +106232,10 @@
           "amount_eok": 12.7,
           "rate_pct": 10.0,
           "bizno": "2018615492",
-          "ceo": "김동련"
+          "ceo": "김동련",
+          "price_score": 10.0,
+          "tech_score": 75.0,
+          "total_score": 85.0
         }
       ],
       "scope": "AI SW 확대",
@@ -105845,7 +106243,8 @@
       "fields": [
         "AI 일반"
       ],
-      "award_to_budget_pct": 99.8
+      "award_to_budget_pct": 99.8,
+      "first_rank": "선도소프트"
     },
     {
       "bid_no": "R26BK01727277",
@@ -105889,7 +106288,10 @@
           "amount_eok": 8.39,
           "rate_pct": 9.0322,
           "bizno": "2888701240",
-          "ceo": "신영규"
+          "ceo": "신영규",
+          "price_score": 9.0322,
+          "tech_score": 80.6,
+          "total_score": 89.6322
         },
         {
           "rank": null,
@@ -105897,7 +106299,10 @@
           "amount_eok": 7.578,
           "rate_pct": 10.0,
           "bizno": "5388801948",
-          "ceo": "양국승"
+          "ceo": "양국승",
+          "price_score": 10.0,
+          "tech_score": 71.0,
+          "total_score": 81.0
         },
         {
           "rank": null,
@@ -105905,7 +106310,10 @@
           "amount_eok": 8.45,
           "rate_pct": 8.968,
           "bizno": "3148629725",
-          "ceo": "이언주"
+          "ceo": "이언주",
+          "price_score": 8.968,
+          "tech_score": 19.4,
+          "total_score": 28.368
         }
       ],
       "scope": "AI SW 확대",
@@ -105913,7 +106321,8 @@
       "fields": [
         "AI 일반"
       ],
-      "award_to_budget_pct": 98.7
+      "award_to_budget_pct": 98.7,
+      "first_rank": "버블콘"
     },
     {
       "bid_no": "R26BK01716243",
@@ -106020,7 +106429,10 @@
           "amount_eok": 25.6,
           "rate_pct": 8.982,
           "bizno": "3168126938",
-          "ceo": "한은희"
+          "ceo": "한은희",
+          "price_score": 8.982,
+          "tech_score": 90.0,
+          "total_score": 98.982
         },
         {
           "rank": 2,
@@ -106028,7 +106440,10 @@
           "amount_eok": 25.6,
           "rate_pct": 8.982,
           "bizno": "4638700328",
-          "ceo": "채종현"
+          "ceo": "채종현",
+          "price_score": 8.982,
+          "tech_score": 87.0,
+          "total_score": 95.982
         },
         {
           "rank": 3,
@@ -106036,7 +106451,10 @@
           "amount_eok": 25.6113,
           "rate_pct": 8.978,
           "bizno": "1478602432",
-          "ceo": "심재춘"
+          "ceo": "심재춘",
+          "price_score": 8.978,
+          "tech_score": 84.0,
+          "total_score": 92.978
         },
         {
           "rank": null,
@@ -106044,7 +106462,10 @@
           "amount_eok": 25.6174,
           "rate_pct": 8.9759,
           "bizno": "2158197498",
-          "ceo": "정진홍"
+          "ceo": "정진홍",
+          "price_score": 8.9759,
+          "tech_score": 81.0,
+          "total_score": 89.9759
         },
         {
           "rank": null,
@@ -106052,7 +106473,10 @@
           "amount_eok": 22.994,
           "rate_pct": 10.0,
           "bizno": "5268103003",
-          "ceo": "서진욱"
+          "ceo": "서진욱",
+          "price_score": 10.0,
+          "tech_score": 78.0,
+          "total_score": 88.0
         }
       ],
       "scope": "AI SW 확대",
@@ -106060,7 +106484,8 @@
       "fields": [
         "AI 일반"
       ],
-      "award_to_budget_pct": 100.0
+      "award_to_budget_pct": 100.0,
+      "first_rank": "유니에스아이엔씨"
     },
     {
       "bid_no": "R26BK01693309",
@@ -106083,7 +106508,10 @@
           "amount_eok": null,
           "rate_pct": 10.0,
           "bizno": "4558601519",
-          "ceo": "김기덕"
+          "ceo": "김기덕",
+          "price_score": 10.0,
+          "tech_score": 87.813,
+          "total_score": 97.813
         },
         {
           "rank": 2,
@@ -106091,7 +106519,10 @@
           "amount_eok": null,
           "rate_pct": 8.9807,
           "bizno": "1198156146",
-          "ceo": "전석호"
+          "ceo": "전석호",
+          "price_score": 8.9807,
+          "tech_score": 85.615,
+          "total_score": 94.5957
         },
         {
           "rank": null,
@@ -106099,7 +106530,10 @@
           "amount_eok": null,
           "rate_pct": 9.7901,
           "bizno": "5178800087",
-          "ceo": "윤석원"
+          "ceo": "윤석원",
+          "price_score": 9.7901,
+          "tech_score": 0.0,
+          "total_score": 9.7901
         },
         {
           "rank": null,
@@ -106107,7 +106541,10 @@
           "amount_eok": null,
           "rate_pct": 8.8359,
           "bizno": "2208705798",
-          "ceo": "박준형"
+          "ceo": "박준형",
+          "price_score": 8.8359,
+          "tech_score": 0.0,
+          "total_score": 8.8359
         },
         {
           "rank": null,
@@ -106115,7 +106552,10 @@
           "amount_eok": null,
           "rate_pct": 8.7525,
           "bizno": "2298137316",
-          "ceo": "김영섬"
+          "ceo": "김영섬",
+          "price_score": 8.7525,
+          "tech_score": 0.0,
+          "total_score": 8.7525
         }
       ],
       "scope": "AI SW 확대",
@@ -106168,7 +106608,10 @@
           "amount_eok": null,
           "rate_pct": 8.1963,
           "bizno": "5728101333",
-          "ceo": "한덕희"
+          "ceo": "한덕희",
+          "price_score": 8.1963,
+          "tech_score": 81.39,
+          "total_score": 89.5863
         },
         {
           "rank": 2,
@@ -106176,7 +106619,10 @@
           "amount_eok": null,
           "rate_pct": 8.6276,
           "bizno": "1658602221",
-          "ceo": "이승현"
+          "ceo": "이승현",
+          "price_score": 8.6276,
+          "tech_score": 78.88,
+          "total_score": 87.5076
         },
         {
           "rank": 3,
@@ -106184,7 +106630,10 @@
           "amount_eok": null,
           "rate_pct": 9.0849,
           "bizno": "7638101040",
-          "ceo": "고석태"
+          "ceo": "고석태",
+          "price_score": 9.0849,
+          "tech_score": 77.4,
+          "total_score": 86.4849
         },
         {
           "rank": null,
@@ -106192,7 +106641,10 @@
           "amount_eok": null,
           "rate_pct": 10.0,
           "bizno": "2458602885",
-          "ceo": "고석현"
+          "ceo": "고석현",
+          "price_score": 10.0,
+          "tech_score": 75.7,
+          "total_score": 85.7
         },
         {
           "rank": null,
@@ -106200,7 +106652,10 @@
           "amount_eok": null,
           "rate_pct": 9.0531,
           "bizno": "7288702830",
-          "ceo": "승현찬"
+          "ceo": "승현찬",
+          "price_score": 9.0531,
+          "tech_score": 72.19,
+          "total_score": 81.2431
         }
       ],
       "scope": "생성형·Agent",
@@ -106232,7 +106687,10 @@
           "amount_eok": 18.9897,
           "rate_pct": 9.8,
           "bizno": "2648137380",
-          "ceo": "전용주"
+          "ceo": "전용주",
+          "price_score": 9.8,
+          "tech_score": 90.0,
+          "total_score": 99.8
         },
         {
           "rank": 2,
@@ -106240,7 +106698,10 @@
           "amount_eok": 18.61,
           "rate_pct": 10.0,
           "bizno": "6138178017",
-          "ceo": "여두환"
+          "ceo": "여두환",
+          "price_score": 10.0,
+          "tech_score": 80.1,
+          "total_score": 90.1
         }
       ],
       "scope": "AI SW 확대",
@@ -106249,7 +106710,8 @@
         "AI 일반"
       ],
       "award_lookup_at": "2026-10-30",
-      "award_to_budget_pct": 99.9
+      "award_to_budget_pct": 99.9,
+      "first_rank": "디토닉"
     },
     {
       "bid_no": "R26BK01681859",
@@ -106421,7 +106883,10 @@
           "amount_eok": 9.84,
           "rate_pct": 18.9929,
           "bizno": "1138645971",
-          "ceo": "정재호"
+          "ceo": "정재호",
+          "price_score": 18.9929,
+          "tech_score": 72.84,
+          "total_score": 91.8329
         },
         {
           "rank": 2,
@@ -106429,7 +106894,10 @@
           "amount_eok": 9.3445,
           "rate_pct": 20.0,
           "bizno": "1078624267",
-          "ceo": "강원호"
+          "ceo": "강원호",
+          "price_score": 20.0,
+          "tech_score": 68.8,
+          "total_score": 88.8
         }
       ],
       "nature": "시스템 구축·고도화",
@@ -106437,7 +106905,8 @@
         "비전·영상"
       ],
       "scope": "AI SW 확대",
-      "award_to_budget_pct": 100.4
+      "award_to_budget_pct": 100.4,
+      "first_rank": "포딕스"
     },
     {
       "bid_no": "R26BK01656277",
@@ -106502,7 +106971,10 @@
           "amount_eok": 18.0,
           "rate_pct": 9.99,
           "bizno": "7248101517",
-          "ceo": "김성중"
+          "ceo": "김성중",
+          "price_score": 9.99,
+          "tech_score": 84.4,
+          "total_score": 94.39
         },
         {
           "rank": null,
@@ -106510,7 +106982,10 @@
           "amount_eok": 17.982,
           "rate_pct": 10.0,
           "bizno": "2288105280",
-          "ceo": "김정범"
+          "ceo": "김정범",
+          "price_score": 10.0,
+          "tech_score": 72.38,
+          "total_score": 82.38
         },
         {
           "rank": null,
@@ -106518,7 +106993,10 @@
           "amount_eok": 18.0,
           "rate_pct": 9.99,
           "bizno": "2148881328",
-          "ceo": "김재홍"
+          "ceo": "김재홍",
+          "price_score": 9.99,
+          "tech_score": 57.3,
+          "total_score": 67.29
         }
       ],
       "scope": "생성형·Agent",
@@ -106550,7 +107028,10 @@
           "amount_eok": 7.1975,
           "rate_pct": 9.1699,
           "bizno": "2298103214",
-          "ceo": "정상원"
+          "ceo": "정상원",
+          "price_score": 9.1699,
+          "tech_score": 84.25,
+          "total_score": 93.4199
         },
         {
           "rank": 2,
@@ -106558,7 +107039,10 @@
           "amount_eok": 6.6,
           "rate_pct": 10.0,
           "bizno": "4508800071",
-          "ceo": "유승모"
+          "ceo": "유승모",
+          "price_score": 10.0,
+          "tech_score": 81.1,
+          "total_score": 91.1
         },
         {
           "rank": 3,
@@ -106566,7 +107050,10 @@
           "amount_eok": 7.5973,
           "rate_pct": 8.6873,
           "bizno": "1338145679",
-          "ceo": "배호"
+          "ceo": "배호",
+          "price_score": 8.6873,
+          "tech_score": 82.4,
+          "total_score": 91.0873
         },
         {
           "rank": 4,
@@ -106574,7 +107061,10 @@
           "amount_eok": 7.59,
           "rate_pct": 8.6957,
           "bizno": "5418701291",
-          "ceo": "백진성"
+          "ceo": "백진성",
+          "price_score": 8.6957,
+          "tech_score": 81.4,
+          "total_score": 90.0957
         },
         {
           "rank": 5,
@@ -106582,7 +107072,10 @@
           "amount_eok": 7.037,
           "rate_pct": 9.379,
           "bizno": "3018616490",
-          "ceo": "신동용"
+          "ceo": "신동용",
+          "price_score": 9.379,
+          "tech_score": 79.275,
+          "total_score": 88.654
         },
         {
           "rank": 6,
@@ -106590,7 +107083,10 @@
           "amount_eok": 6.677,
           "rate_pct": 9.8847,
           "bizno": "3148173245",
-          "ceo": "김계관"
+          "ceo": "김계관",
+          "price_score": 9.8847,
+          "tech_score": 78.35,
+          "total_score": 88.2347
         },
         {
           "rank": 7,
@@ -106598,7 +107094,10 @@
           "amount_eok": 7.0375,
           "rate_pct": 9.3783,
           "bizno": "4768701809",
-          "ceo": "한의선"
+          "ceo": "한의선",
+          "price_score": 9.3783,
+          "tech_score": 77.3243,
+          "total_score": 86.7026
         },
         {
           "rank": 8,
@@ -106606,7 +107105,10 @@
           "amount_eok": 7.194,
           "rate_pct": 9.1743,
           "bizno": "1148706890",
-          "ceo": "김종균"
+          "ceo": "김종균",
+          "price_score": 9.1743,
+          "tech_score": 77.5,
+          "total_score": 86.6743
         },
         {
           "rank": 9,
@@ -106614,7 +107116,10 @@
           "amount_eok": 7.8,
           "rate_pct": 8.4615,
           "bizno": "6168131646",
-          "ceo": "강주경"
+          "ceo": "강주경",
+          "price_score": 8.4615,
+          "tech_score": 78.1405,
+          "total_score": 86.602
         },
         {
           "rank": null,
@@ -106622,7 +107127,10 @@
           "amount_eok": 7.4214,
           "rate_pct": 8.8932,
           "bizno": "3048131710",
-          "ceo": "김효곤"
+          "ceo": "김효곤",
+          "price_score": 8.8932,
+          "tech_score": 74.7,
+          "total_score": 83.5932
         }
       ],
       "scope": "생성형·Agent",
@@ -106630,7 +107138,8 @@
       "fields": [
         "생성형·LLM"
       ],
-      "award_to_budget_pct": 88.9
+      "award_to_budget_pct": 88.9,
+      "first_rank": "이스트소프트"
     },
     {
       "bid_no": "R26BK01649241",
@@ -106697,7 +107206,10 @@
           "amount_eok": 7.7,
           "rate_pct": 7.5714,
           "bizno": "4628602025",
-          "ceo": "조현수"
+          "ceo": "조현수",
+          "price_score": 7.5714,
+          "tech_score": 90.0,
+          "total_score": 97.5714
         },
         {
           "rank": 2,
@@ -106705,7 +107217,10 @@
           "amount_eok": 8.0,
           "rate_pct": 7.2875,
           "bizno": "1408198548",
-          "ceo": "최용우"
+          "ceo": "최용우",
+          "price_score": 7.2875,
+          "tech_score": 87.0,
+          "total_score": 94.2875
         },
         {
           "rank": 3,
@@ -106713,7 +107228,10 @@
           "amount_eok": 8.0014,
           "rate_pct": 7.2862,
           "bizno": "1388189385",
-          "ceo": "김민철"
+          "ceo": "김민철",
+          "price_score": 7.2862,
+          "tech_score": 84.0,
+          "total_score": 91.2862
         },
         {
           "rank": 4,
@@ -106721,7 +107239,10 @@
           "amount_eok": 8.005,
           "rate_pct": 7.283,
           "bizno": "2288105280",
-          "ceo": "김정범"
+          "ceo": "김정범",
+          "price_score": 7.283,
+          "tech_score": 81.0,
+          "total_score": 88.283
         },
         {
           "rank": 5,
@@ -106729,7 +107250,10 @@
           "amount_eok": 7.925,
           "rate_pct": 7.3565,
           "bizno": "1208604696",
-          "ceo": "전배문"
+          "ceo": "전배문",
+          "price_score": 7.3565,
+          "tech_score": 78.0,
+          "total_score": 85.3565
         },
         {
           "rank": 6,
@@ -106737,7 +107261,10 @@
           "amount_eok": 7.997,
           "rate_pct": 7.2902,
           "bizno": "4568100105",
-          "ceo": "장하영"
+          "ceo": "장하영",
+          "price_score": 7.2902,
+          "tech_score": 75.0,
+          "total_score": 82.2902
         },
         {
           "rank": 7,
@@ -106745,7 +107272,10 @@
           "amount_eok": 8.0,
           "rate_pct": 7.2875,
           "bizno": "1198635919",
-          "ceo": "조기현"
+          "ceo": "조기현",
+          "price_score": 7.2875,
+          "tech_score": 72.0,
+          "total_score": 79.2875
         },
         {
           "rank": 8,
@@ -106753,7 +107283,10 @@
           "amount_eok": 7.93,
           "rate_pct": 7.3518,
           "bizno": "1198683798",
-          "ceo": "전종욱"
+          "ceo": "전종욱",
+          "price_score": 7.3518,
+          "tech_score": 69.0,
+          "total_score": 76.3518
         },
         {
           "rank": null,
@@ -106761,7 +107294,10 @@
           "amount_eok": 7.7,
           "rate_pct": 7.5714,
           "bizno": "2108173754",
-          "ceo": "이상진"
+          "ceo": "이상진",
+          "price_score": 7.5714,
+          "tech_score": 66.0,
+          "total_score": 73.5714
         },
         {
           "rank": null,
@@ -106769,7 +107305,10 @@
           "amount_eok": 5.83,
           "rate_pct": 3.0,
           "bizno": "6118129261",
-          "ceo": "서원겸"
+          "ceo": "서원겸",
+          "price_score": 3.0,
+          "tech_score": 63.0,
+          "total_score": 66.0
         },
         {
           "rank": null,
@@ -106777,7 +107316,10 @@
           "amount_eok": null,
           "rate_pct": 0.0,
           "bizno": "1468701247",
-          "ceo": "최길주"
+          "ceo": "최길주",
+          "price_score": 0.0,
+          "tech_score": 58.935,
+          "total_score": 58.935
         }
       ],
       "scope": "AI SW 확대",
@@ -106786,7 +107328,8 @@
         "AI 일반"
       ],
       "award_lookup_at": "2026-11-01",
-      "award_to_budget_pct": 96.2
+      "award_to_budget_pct": 96.2,
+      "first_rank": "씨씨케이솔루션"
     },
     {
       "bid_no": "R26BK01648084",
@@ -106829,7 +107372,10 @@
           "amount_eok": null,
           "rate_pct": 10.0,
           "bizno": "5978803396",
-          "ceo": "김태형"
+          "ceo": "김태형",
+          "price_score": 10.0,
+          "tech_score": 82.0,
+          "total_score": 92.0
         },
         {
           "rank": null,
@@ -106837,7 +107383,10 @@
           "amount_eok": null,
           "rate_pct": 10.0,
           "bizno": "2118778088",
-          "ceo": "현재호"
+          "ceo": "현재호",
+          "price_score": 10.0,
+          "tech_score": 72.6,
+          "total_score": 82.6
         }
       ],
       "scope": "생성형·Agent",
@@ -106912,7 +107461,10 @@
           "amount_eok": null,
           "rate_pct": 8.4612,
           "bizno": "1208787883",
-          "ceo": "서덕진"
+          "ceo": "서덕진",
+          "price_score": 8.4612,
+          "tech_score": 80.55,
+          "total_score": 89.0112
         },
         {
           "rank": 2,
@@ -106920,7 +107472,10 @@
           "amount_eok": null,
           "rate_pct": 9.978,
           "bizno": "2238118325",
-          "ceo": "김광일"
+          "ceo": "김광일",
+          "price_score": 9.978,
+          "tech_score": 77.66,
+          "total_score": 87.638
         },
         {
           "rank": 3,
@@ -106928,7 +107483,10 @@
           "amount_eok": null,
           "rate_pct": 8.155,
           "bizno": "8348802582",
-          "ceo": "김성래"
+          "ceo": "김성래",
+          "price_score": 8.155,
+          "tech_score": 78.95,
+          "total_score": 87.105
         },
         {
           "rank": 4,
@@ -106936,7 +107494,10 @@
           "amount_eok": null,
           "rate_pct": 9.0911,
           "bizno": "2148607396",
-          "ceo": "윤정희"
+          "ceo": "윤정희",
+          "price_score": 9.0911,
+          "tech_score": 77.9,
+          "total_score": 86.9911
         },
         {
           "rank": 5,
@@ -106944,7 +107505,10 @@
           "amount_eok": null,
           "rate_pct": 9.0611,
           "bizno": "1028113061",
-          "ceo": "이경일"
+          "ceo": "이경일",
+          "price_score": 9.0611,
+          "tech_score": 77.53,
+          "total_score": 86.5911
         },
         {
           "rank": 6,
@@ -106952,7 +107516,10 @@
           "amount_eok": null,
           "rate_pct": 9.5902,
           "bizno": "2208868581",
-          "ceo": "김성환"
+          "ceo": "김성환",
+          "price_score": 9.5902,
+          "tech_score": 76.95,
+          "total_score": 86.5402
         },
         {
           "rank": 7,
@@ -106960,7 +107527,10 @@
           "amount_eok": null,
           "rate_pct": 9.945,
           "bizno": "1208127660",
-          "ceo": "홍승모"
+          "ceo": "홍승모",
+          "price_score": 9.945,
+          "tech_score": 76.55,
+          "total_score": 86.495
         },
         {
           "rank": null,
@@ -106968,7 +107538,10 @@
           "amount_eok": null,
           "rate_pct": 9.3736,
           "bizno": "1138611016",
-          "ceo": "박병훈"
+          "ceo": "박병훈",
+          "price_score": 9.3736,
+          "tech_score": 76.35,
+          "total_score": 85.7236
         },
         {
           "rank": null,
@@ -106976,7 +107549,10 @@
           "amount_eok": null,
           "rate_pct": 10.0,
           "bizno": "1438133020",
-          "ceo": "박정숙"
+          "ceo": "박정숙",
+          "price_score": 10.0,
+          "tech_score": 74.95,
+          "total_score": 84.95
         },
         {
           "rank": null,
@@ -106984,7 +107560,10 @@
           "amount_eok": null,
           "rate_pct": 8.7805,
           "bizno": "8288801569",
-          "ceo": "최보영"
+          "ceo": "최보영",
+          "price_score": 8.7805,
+          "tech_score": 75.9,
+          "total_score": 84.6805
         },
         {
           "rank": null,
@@ -106992,7 +107571,10 @@
           "amount_eok": null,
           "rate_pct": 8.6754,
           "bizno": "1078632618",
-          "ceo": "강응호"
+          "ceo": "강응호",
+          "price_score": 8.6754,
+          "tech_score": 75.6,
+          "total_score": 84.2754
         },
         {
           "rank": null,
@@ -107000,7 +107582,10 @@
           "amount_eok": null,
           "rate_pct": 8.8641,
           "bizno": "1198187479",
-          "ceo": "이왕석"
+          "ceo": "이왕석",
+          "price_score": 8.8641,
+          "tech_score": 74.7,
+          "total_score": 83.5641
         },
         {
           "rank": null,
@@ -107008,7 +107593,10 @@
           "amount_eok": null,
           "rate_pct": 8.3335,
           "bizno": "1388132261",
-          "ceo": "윤여주"
+          "ceo": "윤여주",
+          "price_score": 8.3335,
+          "tech_score": 74.95,
+          "total_score": 83.2835
         },
         {
           "rank": null,
@@ -107016,7 +107604,10 @@
           "amount_eok": null,
           "rate_pct": 8.9715,
           "bizno": "1478602432",
-          "ceo": "심재춘"
+          "ceo": "심재춘",
+          "price_score": 8.9715,
+          "tech_score": 73.95,
+          "total_score": 82.9215
         },
         {
           "rank": null,
@@ -107024,7 +107615,10 @@
           "amount_eok": null,
           "rate_pct": 9.8585,
           "bizno": "3548602476",
-          "ceo": "차원호"
+          "ceo": "차원호",
+          "price_score": 9.8585,
+          "tech_score": 72.9,
+          "total_score": 82.7585
         },
         {
           "rank": null,
@@ -107032,7 +107626,10 @@
           "amount_eok": null,
           "rate_pct": 8.4072,
           "bizno": "1468701247",
-          "ceo": "최길주"
+          "ceo": "최길주",
+          "price_score": 8.4072,
+          "tech_score": 72.15,
+          "total_score": 80.5572
         },
         {
           "rank": null,
@@ -107040,7 +107637,10 @@
           "amount_eok": null,
           "rate_pct": 8.8641,
           "bizno": "7068602890",
-          "ceo": "정성욱"
+          "ceo": "정성욱",
+          "price_score": 8.8641,
+          "tech_score": 70.95,
+          "total_score": 79.8141
         },
         {
           "rank": null,
@@ -107048,7 +107648,10 @@
           "amount_eok": null,
           "rate_pct": 9.2766,
           "bizno": "1088606113",
-          "ceo": "장순철"
+          "ceo": "장순철",
+          "price_score": 9.2766,
+          "tech_score": 69.35,
+          "total_score": 78.6266
         },
         {
           "rank": null,
@@ -107056,7 +107659,10 @@
           "amount_eok": null,
           "rate_pct": 8.3214,
           "bizno": "4638101723",
-          "ceo": "표성수"
+          "ceo": "표성수",
+          "price_score": 8.3214,
+          "tech_score": 64.95,
+          "total_score": 73.2714
         }
       ],
       "scope": "AI SW 확대",
@@ -107088,7 +107694,10 @@
           "amount_eok": 19.899,
           "rate_pct": 8.5019,
           "bizno": "2118698485",
-          "ceo": "강용성"
+          "ceo": "강용성",
+          "price_score": 8.5019,
+          "tech_score": 90.0,
+          "total_score": 98.5019
         },
         {
           "rank": 2,
@@ -107096,7 +107705,10 @@
           "amount_eok": 19.904,
           "rate_pct": 8.4998,
           "bizno": "6048130663",
-          "ceo": "배준희"
+          "ceo": "배준희",
+          "price_score": 8.4998,
+          "tech_score": 86.4333,
+          "total_score": 94.9331
         },
         {
           "rank": 3,
@@ -107104,7 +107716,10 @@
           "amount_eok": 19.616,
           "rate_pct": 8.6246,
           "bizno": "7638101040",
-          "ceo": "고석태"
+          "ceo": "고석태",
+          "price_score": 8.6246,
+          "tech_score": 83.4333,
+          "total_score": 92.0579
         },
         {
           "rank": 4,
@@ -107112,7 +107727,10 @@
           "amount_eok": 17.4762,
           "rate_pct": 9.6806,
           "bizno": "5868802378",
-          "ceo": "안인구"
+          "ceo": "안인구",
+          "price_score": 9.6806,
+          "tech_score": 80.4333,
+          "total_score": 90.1139
         },
         {
           "rank": 5,
@@ -107120,7 +107738,10 @@
           "amount_eok": 16.918,
           "rate_pct": 10.0,
           "bizno": "7608702192",
-          "ceo": "최성집"
+          "ceo": "최성집",
+          "price_score": 10.0,
+          "tech_score": 77.4333,
+          "total_score": 87.4333
         },
         {
           "rank": null,
@@ -107128,7 +107749,10 @@
           "amount_eok": 19.8846,
           "rate_pct": 8.5081,
           "bizno": "3148173245",
-          "ceo": "김계관"
+          "ceo": "김계관",
+          "price_score": 8.5081,
+          "tech_score": 74.4333,
+          "total_score": 82.9414
         },
         {
           "rank": null,
@@ -107136,7 +107760,10 @@
           "amount_eok": 19.5064,
           "rate_pct": 8.673,
           "bizno": "8628600042",
-          "ceo": "김지성"
+          "ceo": "김지성",
+          "price_score": 8.673,
+          "tech_score": 70.2077,
+          "total_score": 78.8807
         },
         {
           "rank": null,
@@ -107144,7 +107771,10 @@
           "amount_eok": 18.2107,
           "rate_pct": 9.2901,
           "bizno": "3418602655",
-          "ceo": "김민수"
+          "ceo": "김민수",
+          "price_score": 9.2901,
+          "tech_score": 67.2077,
+          "total_score": 76.4978
         }
       ],
       "scope": "AI SW 확대",
@@ -107152,7 +107782,8 @@
       "fields": [
         "AI 일반"
       ],
-      "award_to_budget_pct": 100.0
+      "award_to_budget_pct": 100.0,
+      "first_rank": "와이즈넛"
     },
     {
       "bid_no": "R26BK01635630",
@@ -107208,7 +107839,10 @@
           "amount_eok": 27.78,
           "rate_pct": 9.9587,
           "bizno": "2118697088",
-          "ceo": "조창제"
+          "ceo": "조창제",
+          "price_score": 9.9587,
+          "tech_score": 90.0,
+          "total_score": 99.9587
         },
         {
           "rank": 2,
@@ -107216,7 +107850,10 @@
           "amount_eok": 27.6653,
           "rate_pct": 10.0,
           "bizno": "1098173212",
-          "ceo": "위장복"
+          "ceo": "위장복",
+          "price_score": 10.0,
+          "tech_score": 87.0,
+          "total_score": 97.0
         },
         {
           "rank": 3,
@@ -107224,7 +107861,10 @@
           "amount_eok": 27.918,
           "rate_pct": 9.9095,
           "bizno": "1298639907",
-          "ceo": "이해석"
+          "ceo": "이해석",
+          "price_score": 9.9095,
+          "tech_score": 84.0,
+          "total_score": 93.9095
         }
       ],
       "scope": "AI SW 확대",
@@ -107232,7 +107872,8 @@
       "fields": [
         "AI 일반"
       ],
-      "award_to_budget_pct": 98.9
+      "award_to_budget_pct": 98.9,
+      "first_rank": "가온아이"
     },
     {
       "bid_no": "R26BK01625804",
@@ -107255,7 +107896,10 @@
           "amount_eok": 9.79,
           "rate_pct": 9.6885,
           "bizno": "7028600866",
-          "ceo": "이지현"
+          "ceo": "이지현",
+          "price_score": 9.6885,
+          "tech_score": 82.32,
+          "total_score": 92.0085
         },
         {
           "rank": 2,
@@ -107263,7 +107907,10 @@
           "amount_eok": 9.68,
           "rate_pct": 9.7986,
           "bizno": "5818800303",
-          "ceo": "김재원"
+          "ceo": "김재원",
+          "price_score": 9.7986,
+          "tech_score": 79.4,
+          "total_score": 89.1986
         },
         {
           "rank": null,
@@ -107271,7 +107918,10 @@
           "amount_eok": 9.485,
           "rate_pct": 10.0,
           "bizno": "4638101723",
-          "ceo": "표성수"
+          "ceo": "표성수",
+          "price_score": 10.0,
+          "tech_score": 75.36,
+          "total_score": 85.36
         }
       ],
       "scope": "AI SW 확대",
@@ -107280,7 +107930,8 @@
         "AI 일반"
       ],
       "award_lookup_at": "2026-10-30",
-      "award_to_budget_pct": 96.9
+      "award_to_budget_pct": 96.9,
+      "first_rank": "아이웨이브"
     },
     {
       "bid_no": "R26BK01631923",
@@ -107345,7 +107996,10 @@
           "amount_eok": 11.8027,
           "rate_pct": 8.4336,
           "bizno": "1138643065",
-          "ceo": "김기수"
+          "ceo": "김기수",
+          "price_score": 8.4336,
+          "tech_score": 90.0,
+          "total_score": 98.4336
         },
         {
           "rank": 2,
@@ -107353,7 +108007,10 @@
           "amount_eok": 11.7315,
           "rate_pct": 8.4848,
           "bizno": "2048612266",
-          "ceo": "진병삼"
+          "ceo": "진병삼",
+          "price_score": 8.4848,
+          "tech_score": 87.0,
+          "total_score": 95.4848
         },
         {
           "rank": 3,
@@ -107361,7 +108018,10 @@
           "amount_eok": 9.9539,
           "rate_pct": 10.0,
           "bizno": "1208606582",
-          "ceo": "조규곤"
+          "ceo": "조규곤",
+          "price_score": 10.0,
+          "tech_score": 84.0,
+          "total_score": 94.0
         },
         {
           "rank": 4,
@@ -107369,7 +108029,10 @@
           "amount_eok": 9.954,
           "rate_pct": 9.9999,
           "bizno": "5868802378",
-          "ceo": "안인구"
+          "ceo": "안인구",
+          "price_score": 9.9999,
+          "tech_score": 81.0,
+          "total_score": 90.9999
         },
         {
           "rank": 5,
@@ -107377,7 +108040,10 @@
           "amount_eok": 11.792,
           "rate_pct": 8.4412,
           "bizno": "1198196788",
-          "ceo": "김상하"
+          "ceo": "김상하",
+          "price_score": 8.4412,
+          "tech_score": 78.0,
+          "total_score": 86.4412
         },
         {
           "rank": 6,
@@ -107385,7 +108051,10 @@
           "amount_eok": 11.77,
           "rate_pct": 8.457,
           "bizno": "7028600866",
-          "ceo": "이지현"
+          "ceo": "이지현",
+          "price_score": 8.457,
+          "tech_score": 75.0,
+          "total_score": 83.457
         },
         {
           "rank": 7,
@@ -107393,7 +108062,10 @@
           "amount_eok": 11.792,
           "rate_pct": 8.4412,
           "bizno": "1148706890",
-          "ceo": "김종균"
+          "ceo": "김종균",
+          "price_score": 8.4412,
+          "tech_score": 72.0,
+          "total_score": 80.4412
         },
         {
           "rank": 8,
@@ -107401,7 +108073,10 @@
           "amount_eok": 11.847,
           "rate_pct": 8.402,
           "bizno": "4638700328",
-          "ceo": "채종현"
+          "ceo": "채종현",
+          "price_score": 8.402,
+          "tech_score": 69.0,
+          "total_score": 77.402
         },
         {
           "rank": 9,
@@ -107409,7 +108084,10 @@
           "amount_eok": 10.0,
           "rate_pct": 9.9539,
           "bizno": "8128801619",
-          "ceo": "이종태"
+          "ceo": "이종태",
+          "price_score": 9.9539,
+          "tech_score": 66.0,
+          "total_score": 75.9539
         },
         {
           "rank": null,
@@ -107417,7 +108095,10 @@
           "amount_eok": 11.85,
           "rate_pct": 8.3999,
           "bizno": "1058608825",
-          "ceo": "김경선"
+          "ceo": "김경선",
+          "price_score": 8.3999,
+          "tech_score": 59.1938,
+          "total_score": 67.5937
         },
         {
           "rank": null,
@@ -107425,7 +108106,10 @@
           "amount_eok": 11.85,
           "rate_pct": 8.3999,
           "bizno": "3148187147",
-          "ceo": "김진수"
+          "ceo": "김진수",
+          "price_score": 8.3999,
+          "tech_score": 56.1938,
+          "total_score": 64.5937
         },
         {
           "rank": null,
@@ -107433,7 +108117,10 @@
           "amount_eok": 11.85,
           "rate_pct": 8.3999,
           "bizno": "8968702453",
-          "ceo": "최성수"
+          "ceo": "최성수",
+          "price_score": 8.3999,
+          "tech_score": 53.1938,
+          "total_score": 61.5937
         },
         {
           "rank": null,
@@ -107441,7 +108128,10 @@
           "amount_eok": 11.8,
           "rate_pct": 8.4355,
           "bizno": "1938103327",
-          "ceo": "황성욱"
+          "ceo": "황성욱",
+          "price_score": 8.4355,
+          "tech_score": 50.1938,
+          "total_score": 58.6293
         }
       ],
       "scope": "AI SW 확대",
@@ -107450,7 +108140,8 @@
         "AI 일반"
       ],
       "award_lookup_at": "2026-10-30",
-      "award_to_budget_pct": 99.2
+      "award_to_budget_pct": 99.2,
+      "first_rank": "에이다루트"
     },
     {
       "bid_no": "R26BK01630829",
@@ -107518,7 +108209,10 @@
           "amount_eok": 11.234,
           "rate_pct": 9.7682,
           "bizno": "2118698485",
-          "ceo": "강용성"
+          "ceo": "강용성",
+          "price_score": 9.7682,
+          "tech_score": 85.72,
+          "total_score": 95.4882
         },
         {
           "rank": 2,
@@ -107526,7 +108220,10 @@
           "amount_eok": 12.21,
           "rate_pct": 8.9874,
           "bizno": "1028113061",
-          "ceo": "이경일"
+          "ceo": "이경일",
+          "price_score": 8.9874,
+          "tech_score": 84.49,
+          "total_score": 93.4774
         },
         {
           "rank": 3,
@@ -107534,7 +108231,10 @@
           "amount_eok": 11.645,
           "rate_pct": 9.4234,
           "bizno": "3418602655",
-          "ceo": "김민수"
+          "ceo": "김민수",
+          "price_score": 9.4234,
+          "tech_score": 81.2,
+          "total_score": 90.6234
         },
         {
           "rank": 4,
@@ -107542,7 +108242,10 @@
           "amount_eok": 10.9736,
           "rate_pct": 10.0,
           "bizno": "4508800071",
-          "ceo": "유승모"
+          "ceo": "유승모",
+          "price_score": 10.0,
+          "tech_score": 80.46,
+          "total_score": 90.46
         },
         {
           "rank": 5,
@@ -107550,7 +108253,10 @@
           "amount_eok": 13.2873,
           "rate_pct": 8.2587,
           "bizno": "6798701392",
-          "ceo": "김현종"
+          "ceo": "김현종",
+          "price_score": 8.2587,
+          "tech_score": 79.97,
+          "total_score": 88.2287
         },
         {
           "rank": 6,
@@ -107558,7 +108264,10 @@
           "amount_eok": 12.193,
           "rate_pct": 8.9999,
           "bizno": "1058608825",
-          "ceo": "김경선"
+          "ceo": "김경선",
+          "price_score": 8.9999,
+          "tech_score": 77.78,
+          "total_score": 86.7799
         },
         {
           "rank": null,
@@ -107566,7 +108275,10 @@
           "amount_eok": 10.98,
           "rate_pct": 9.9942,
           "bizno": "1198137606",
-          "ceo": "황정일"
+          "ceo": "황정일",
+          "price_score": 9.9942,
+          "tech_score": 75.77,
+          "total_score": 85.7642
         },
         {
           "rank": null,
@@ -107574,7 +108286,10 @@
           "amount_eok": 12.5357,
           "rate_pct": 8.7539,
           "bizno": "1438133957",
-          "ceo": "이상연"
+          "ceo": "이상연",
+          "price_score": 8.7539,
+          "tech_score": 76.08,
+          "total_score": 84.8339
         },
         {
           "rank": null,
@@ -107582,7 +108297,10 @@
           "amount_eok": 11.097,
           "rate_pct": 9.8888,
           "bizno": "2208196318",
-          "ceo": "정기태"
+          "ceo": "정기태",
+          "price_score": 9.8888,
+          "tech_score": 73.63,
+          "total_score": 83.5188
         },
         {
           "rank": null,
@@ -107590,7 +108308,10 @@
           "amount_eok": 13.013,
           "rate_pct": 8.4328,
           "bizno": "1478602432",
-          "ceo": "심재춘"
+          "ceo": "심재춘",
+          "price_score": 8.4328,
+          "tech_score": 73.76,
+          "total_score": 82.1928
         }
       ],
       "scope": "생성형·Agent",
@@ -107599,7 +108320,8 @@
         "생성형·LLM"
       ],
       "award_lookup_at": "2026-10-30",
-      "award_to_budget_pct": 82.0
+      "award_to_budget_pct": 82.0,
+      "first_rank": "와이즈넛"
     },
     {
       "bid_no": "R26BK01625929",
@@ -107838,7 +108560,10 @@
           "amount_eok": 17.96,
           "rate_pct": 8.5006,
           "bizno": "6308702251",
-          "ceo": "박윤지"
+          "ceo": "박윤지",
+          "price_score": 8.5006,
+          "tech_score": 90.0,
+          "total_score": 98.5006
         },
         {
           "rank": 2,
@@ -107846,7 +108571,10 @@
           "amount_eok": 15.2671,
           "rate_pct": 10.0,
           "bizno": "6138114177",
-          "ceo": "오상석"
+          "ceo": "오상석",
+          "price_score": 10.0,
+          "tech_score": 87.0,
+          "total_score": 97.0
         }
       ],
       "scope": "생성형·Agent",
@@ -107855,7 +108583,8 @@
         "AI 에이전트"
       ],
       "award_lookup_at": "2026-10-30",
-      "award_to_budget_pct": 99.8
+      "award_to_budget_pct": 99.8,
+      "first_rank": "클라이온"
     },
     {
       "bid_no": "R26BK01604073",
@@ -107899,7 +108628,10 @@
           "amount_eok": 15.675,
           "rate_pct": 9.2632,
           "bizno": "1658602221",
-          "ceo": "이승현"
+          "ceo": "이승현",
+          "price_score": 9.2632,
+          "tech_score": 90.0,
+          "total_score": 99.2632
         },
         {
           "rank": 2,
@@ -107907,7 +108639,10 @@
           "amount_eok": 15.89,
           "rate_pct": 9.1378,
           "bizno": "1298650144",
-          "ceo": "민상일"
+          "ceo": "민상일",
+          "price_score": 9.1378,
+          "tech_score": 87.4083,
+          "total_score": 96.5461
         },
         {
           "rank": 3,
@@ -107915,7 +108650,10 @@
           "amount_eok": 15.8841,
           "rate_pct": 9.1412,
           "bizno": "1198196788",
-          "ceo": "김상하"
+          "ceo": "김상하",
+          "price_score": 9.1412,
+          "tech_score": 85.4083,
+          "total_score": 94.5495
         },
         {
           "rank": null,
@@ -107923,7 +108661,10 @@
           "amount_eok": 15.8998,
           "rate_pct": 9.1322,
           "bizno": "7878103312",
-          "ceo": "김우중"
+          "ceo": "김우중",
+          "price_score": 9.1322,
+          "tech_score": 83.4083,
+          "total_score": 92.5405
         },
         {
           "rank": null,
@@ -107931,7 +108672,10 @@
           "amount_eok": 14.52,
           "rate_pct": 10.0,
           "bizno": "2148664984",
-          "ceo": "전경헌"
+          "ceo": "전경헌",
+          "price_score": 10.0,
+          "tech_score": 80.1268,
+          "total_score": 90.1268
         }
       ],
       "scope": "AI SW 확대",
@@ -107940,7 +108684,8 @@
         "AI 일반"
       ],
       "award_lookup_at": "2026-10-30",
-      "award_to_budget_pct": 98.0
+      "award_to_budget_pct": 98.0,
+      "first_rank": "인핸스"
     },
     {
       "bid_no": "R26BK01587987",
@@ -107997,7 +108742,10 @@
           "amount_eok": 9.5,
           "rate_pct": 9.9474,
           "bizno": "2118698485",
-          "ceo": "강용성"
+          "ceo": "강용성",
+          "price_score": 9.9474,
+          "tech_score": 90.0,
+          "total_score": 99.9474
         },
         {
           "rank": 2,
@@ -108005,7 +108753,10 @@
           "amount_eok": 9.5,
           "rate_pct": 9.9474,
           "bizno": "7878103312",
-          "ceo": "김우중"
+          "ceo": "김우중",
+          "price_score": 9.9474,
+          "tech_score": 87.0,
+          "total_score": 96.9474
         },
         {
           "rank": 3,
@@ -108013,7 +108764,10 @@
           "amount_eok": 9.45,
           "rate_pct": 10.0,
           "bizno": "1658602221",
-          "ceo": "이승현"
+          "ceo": "이승현",
+          "price_score": 10.0,
+          "tech_score": 84.0,
+          "total_score": 94.0
         }
       ],
       "scope": "AI SW 확대",
@@ -108022,7 +108776,8 @@
         "AI 일반"
       ],
       "award_lookup_at": "2026-10-30",
-      "award_to_budget_pct": 99.0
+      "award_to_budget_pct": 99.0,
+      "first_rank": "와이즈넛"
     },
     {
       "bid_no": "R26BK01585030",
@@ -108399,7 +109154,10 @@
           "amount_eok": 20.999,
           "rate_pct": 8.3337,
           "bizno": "2118698485",
-          "ceo": "강용성"
+          "ceo": "강용성",
+          "price_score": 8.3337,
+          "tech_score": 90.0,
+          "total_score": 98.3337
         },
         {
           "rank": 2,
@@ -108407,7 +109165,10 @@
           "amount_eok": 20.966,
           "rate_pct": 8.3468,
           "bizno": "2158711279",
-          "ceo": "옥정원"
+          "ceo": "옥정원",
+          "price_score": 8.3468,
+          "tech_score": 87.0,
+          "total_score": 95.3468
         },
         {
           "rank": 3,
@@ -108415,7 +109176,10 @@
           "amount_eok": 17.5,
           "rate_pct": 10.0,
           "bizno": "3118140288",
-          "ceo": "정범호"
+          "ceo": "정범호",
+          "price_score": 10.0,
+          "tech_score": 83.9429,
+          "total_score": 93.9429
         }
       ],
       "scope": "생성형·Agent",
@@ -108424,7 +109188,8 @@
         "생성형·LLM"
       ],
       "award_lookup_at": "2026-10-30",
-      "award_to_budget_pct": 99.5
+      "award_to_budget_pct": 99.5,
+      "first_rank": "와이즈넛"
     },
     {
       "bid_no": "R26BK01569355",
@@ -109057,7 +109822,10 @@
           "amount_eok": 17.49,
           "rate_pct": 10.0,
           "bizno": "7248101517",
-          "ceo": "김성중"
+          "ceo": "김성중",
+          "price_score": 10.0,
+          "tech_score": 90.0,
+          "total_score": 100.0
         },
         {
           "rank": 2,
@@ -109065,7 +109833,10 @@
           "amount_eok": 17.7813,
           "rate_pct": 9.8362,
           "bizno": "2208868581",
-          "ceo": "김성환"
+          "ceo": "김성환",
+          "price_score": 9.8362,
+          "tech_score": 87.0,
+          "total_score": 96.8362
         },
         {
           "rank": 3,
@@ -109073,7 +109844,10 @@
           "amount_eok": 17.7816,
           "rate_pct": 9.836,
           "bizno": "2118698485",
-          "ceo": "강용성"
+          "ceo": "강용성",
+          "price_score": 9.836,
+          "tech_score": 83.4,
+          "total_score": 93.236
         },
         {
           "rank": 4,
@@ -109081,7 +109855,10 @@
           "amount_eok": 17.7814,
           "rate_pct": 9.8361,
           "bizno": "2158711279",
-          "ceo": "옥정원"
+          "ceo": "옥정원",
+          "price_score": 9.8361,
+          "tech_score": 80.4,
+          "total_score": 90.2361
         }
       ],
       "scope": "생성형·Agent",
@@ -109090,7 +109867,8 @@
       ],
       "nature": null,
       "award_lookup_at": "2026-10-30",
-      "award_to_budget_pct": 97.7
+      "award_to_budget_pct": 97.7,
+      "first_rank": "퍼블릭에이아이"
     },
     {
       "bid_no": "R26BK01537257",
@@ -109304,7 +110082,10 @@
           "amount_eok": 19.342,
           "rate_pct": 9.0,
           "bizno": "6308702251",
-          "ceo": "박윤지"
+          "ceo": "박윤지",
+          "price_score": 9.0,
+          "tech_score": 90.0,
+          "total_score": 99.0
         },
         {
           "rank": 2,
@@ -109312,7 +110093,10 @@
           "amount_eok": 19.342,
           "rate_pct": 9.0,
           "bizno": "1168170775",
-          "ceo": "김숙희"
+          "ceo": "김숙희",
+          "price_score": 9.0,
+          "tech_score": 87.0,
+          "total_score": 96.0
         },
         {
           "rank": 3,
@@ -109320,7 +110104,10 @@
           "amount_eok": 18.8972,
           "rate_pct": 9.2119,
           "bizno": "1058644840",
-          "ceo": "남기원"
+          "ceo": "남기원",
+          "price_score": 9.2119,
+          "tech_score": 84.0,
+          "total_score": 93.2119
         },
         {
           "rank": 4,
@@ -109328,7 +110115,10 @@
           "amount_eok": 19.3227,
           "rate_pct": 9.009,
           "bizno": "2148627387",
-          "ceo": "조풍연"
+          "ceo": "조풍연",
+          "price_score": 9.009,
+          "tech_score": 81.0,
+          "total_score": 90.009
         },
         {
           "rank": 5,
@@ -109336,7 +110126,10 @@
           "amount_eok": 17.4078,
           "rate_pct": 10.0,
           "bizno": "5248702048",
-          "ceo": "이원철"
+          "ceo": "이원철",
+          "price_score": 10.0,
+          "tech_score": 78.0,
+          "total_score": 88.0
         }
       ],
       "scope": "AI SW 확대",
@@ -109345,7 +110138,8 @@
       ],
       "nature": null,
       "award_lookup_at": "2026-10-30",
-      "award_to_budget_pct": 99.2
+      "award_to_budget_pct": 99.2,
+      "first_rank": "클라이온"
     },
     {
       "bid_no": "R26BK01525469",
@@ -109687,7 +110481,10 @@
           "amount_eok": 17.857,
           "rate_pct": 9.9003,
           "bizno": "4638700328",
-          "ceo": "채종현"
+          "ceo": "채종현",
+          "price_score": 9.9003,
+          "tech_score": 90.0,
+          "total_score": 99.9003
         },
         {
           "rank": 2,
@@ -109695,7 +110492,10 @@
           "amount_eok": 17.6789,
           "rate_pct": 10.0,
           "bizno": "4508800071",
-          "ceo": "유승모"
+          "ceo": "유승모",
+          "price_score": 10.0,
+          "tech_score": 87.0,
+          "total_score": 97.0
         }
       ],
       "scope": "AI SW 확대",
@@ -109704,7 +110504,8 @@
       ],
       "nature": null,
       "award_lookup_at": "2026-10-30",
-      "award_to_budget_pct": 99.2
+      "award_to_budget_pct": 99.2,
+      "first_rank": "아이브릭스"
     },
     {
       "bid_no": "R26BK01515600",
@@ -109990,7 +110791,10 @@
           "amount_eok": 11.44,
           "rate_pct": 10.0,
           "bizno": "4638700328",
-          "ceo": "채종현"
+          "ceo": "채종현",
+          "price_score": 10.0,
+          "tech_score": 90.0,
+          "total_score": 100.0
         },
         {
           "rank": 2,
@@ -109998,7 +110802,10 @@
           "amount_eok": 11.44,
           "rate_pct": 10.0,
           "bizno": "8158702319",
-          "ceo": "안준형"
+          "ceo": "안준형",
+          "price_score": 10.0,
+          "tech_score": 88.0,
+          "total_score": 98.0
         }
       ],
       "scope": "AI SW 확대",
@@ -110007,7 +110814,8 @@
       ],
       "nature": null,
       "award_lookup_at": "2026-10-30",
-      "award_to_budget_pct": 100.4
+      "award_to_budget_pct": 100.4,
+      "first_rank": "아이브릭스"
     },
     {
       "bid_no": "R26BK01499701",
@@ -110030,7 +110838,10 @@
           "amount_eok": 14.6335,
           "rate_pct": 9.9976,
           "bizno": "5628800151",
-          "ceo": "김동환"
+          "ceo": "김동환",
+          "price_score": 9.9976,
+          "tech_score": 84.5614,
+          "total_score": 94.559
         },
         {
           "rank": 2,
@@ -110038,7 +110849,10 @@
           "amount_eok": 18.281,
           "rate_pct": 8.0028,
           "bizno": "1138622298",
-          "ceo": "홍성호"
+          "ceo": "홍성호",
+          "price_score": 8.0028,
+          "tech_score": 83.2757,
+          "total_score": 91.2785
         },
         {
           "rank": 3,
@@ -110046,7 +110860,10 @@
           "amount_eok": 16.016,
           "rate_pct": 9.1346,
           "bizno": "2208868581",
-          "ceo": "김성환"
+          "ceo": "김성환",
+          "price_score": 9.1346,
+          "tech_score": 79.9329,
+          "total_score": 89.0675
         },
         {
           "rank": 4,
@@ -110054,7 +110871,10 @@
           "amount_eok": 14.63,
           "rate_pct": 10.0,
           "bizno": "1088606113",
-          "ceo": "장순철"
+          "ceo": "장순철",
+          "price_score": 10.0,
+          "tech_score": 77.6057,
+          "total_score": 87.6057
         }
       ],
       "scope": "생성형·Agent",
@@ -110063,7 +110883,8 @@
         "생성형·LLM"
       ],
       "award_lookup_at": "2026-10-30",
-      "award_to_budget_pct": 80.0
+      "award_to_budget_pct": 80.0,
+      "first_rank": "포티투마루"
     },
     {
       "bid_no": "R26BK01494547",
@@ -110520,7 +111341,10 @@
           "amount_eok": 19.6432,
           "rate_pct": 9.6217,
           "bizno": "1078785562",
-          "ceo": "오원석"
+          "ceo": "오원석",
+          "price_score": 9.6217,
+          "tech_score": 90.0,
+          "total_score": 99.6217
         },
         {
           "rank": 2,
@@ -110528,7 +111352,10 @@
           "amount_eok": 19.8416,
           "rate_pct": 9.5254,
           "bizno": "8348802582",
-          "ceo": "김성래"
+          "ceo": "김성래",
+          "price_score": 9.5254,
+          "tech_score": 88.0,
+          "total_score": 97.5254
         },
         {
           "rank": 3,
@@ -110536,7 +111363,10 @@
           "amount_eok": 19.8416,
           "rate_pct": 9.5254,
           "bizno": "2208181227",
-          "ceo": "김태수"
+          "ceo": "김태수",
+          "price_score": 9.5254,
+          "tech_score": 86.0,
+          "total_score": 95.5254
         },
         {
           "rank": 4,
@@ -110544,7 +111374,10 @@
           "amount_eok": 19.4448,
           "rate_pct": 9.7198,
           "bizno": "2208876854",
-          "ceo": "한상진"
+          "ceo": "한상진",
+          "price_score": 9.7198,
+          "tech_score": 81.32,
+          "total_score": 91.0398
         },
         {
           "rank": 5,
@@ -110552,7 +111385,10 @@
           "amount_eok": 18.9,
           "rate_pct": 10.0,
           "bizno": "3148186546",
-          "ceo": "조상호"
+          "ceo": "조상호",
+          "price_score": 10.0,
+          "tech_score": 79.32,
+          "total_score": 89.32
         }
       ],
       "scope": "생성형·Agent",
@@ -110561,7 +111397,8 @@
         "생성형·LLM"
       ],
       "award_lookup_at": "2026-10-30",
-      "award_to_budget_pct": 98.2
+      "award_to_budget_pct": 98.2,
+      "first_rank": "리스트"
     },
     {
       "bid_no": "R26BK01461971",
@@ -110710,7 +111547,10 @@
           "amount_eok": 28.29,
           "rate_pct": 9.544,
           "bizno": "2118698485",
-          "ceo": "강용성"
+          "ceo": "강용성",
+          "price_score": 9.544,
+          "tech_score": 90.0,
+          "total_score": 99.544
         },
         {
           "rank": 2,
@@ -110718,7 +111558,10 @@
           "amount_eok": 27.0,
           "rate_pct": 10.0,
           "bizno": "2998600021",
-          "ceo": "이복기"
+          "ceo": "이복기",
+          "price_score": 10.0,
+          "tech_score": 87.0,
+          "total_score": 97.0
         },
         {
           "rank": 3,
@@ -110726,7 +111569,10 @@
           "amount_eok": 28.2617,
           "rate_pct": 9.5536,
           "bizno": "1148187983",
-          "ceo": "곽민철"
+          "ceo": "곽민철",
+          "price_score": 9.5536,
+          "tech_score": 84.0,
+          "total_score": 93.5536
         }
       ],
       "scope": "AI SW 확대",
@@ -110735,7 +111581,8 @@
         "AI 일반"
       ],
       "award_lookup_at": "2026-10-30",
-      "award_to_budget_pct": 100.0
+      "award_to_budget_pct": 100.0,
+      "first_rank": "와이즈넛"
     },
     {
       "bid_no": "R26BK01439676",
@@ -112151,7 +112998,10 @@
           "amount_eok": 8.0022,
           "rate_pct": 9.8972,
           "bizno": "7638101040",
-          "ceo": "고석태"
+          "ceo": "고석태",
+          "price_score": 9.8972,
+          "tech_score": 84.15,
+          "total_score": 94.0472
         },
         {
           "rank": 2,
@@ -112159,11 +113009,15 @@
           "amount_eok": 7.92,
           "rate_pct": 10.0,
           "bizno": "5028172988",
-          "ceo": "전채남"
+          "ceo": "전채남",
+          "price_score": 10.0,
+          "tech_score": 81.1,
+          "total_score": 91.1
         }
       ],
       "award_lookup_at": "2026-10-30",
-      "award_to_budget_pct": 88.9
+      "award_to_budget_pct": 88.9,
+      "first_rank": "제논"
     },
     {
       "bid_no": "R25BK01218170",
@@ -112563,7 +113417,10 @@
           "amount_eok": 8.7532,
           "rate_pct": 9.0366,
           "bizno": "7638101040",
-          "ceo": "고석태"
+          "ceo": "고석태",
+          "price_score": 9.0366,
+          "tech_score": 83.6333,
+          "total_score": 92.6699
         },
         {
           "rank": 2,
@@ -112571,7 +113428,10 @@
           "amount_eok": 7.997,
           "rate_pct": 9.8912,
           "bizno": "3148173245",
-          "ceo": "김계관"
+          "ceo": "김계관",
+          "price_score": 9.8912,
+          "tech_score": 82.6333,
+          "total_score": 92.5245
         },
         {
           "rank": null,
@@ -112579,7 +113439,10 @@
           "amount_eok": 8.6981,
           "rate_pct": 9.0939,
           "bizno": "8148801920",
-          "ceo": "남명진"
+          "ceo": "남명진",
+          "price_score": 9.0939,
+          "tech_score": 75.1833,
+          "total_score": 84.2772
         },
         {
           "rank": null,
@@ -112587,7 +113450,10 @@
           "amount_eok": 7.91,
           "rate_pct": 10.0,
           "bizno": "4968602770",
-          "ceo": "김래환"
+          "ceo": "김래환",
+          "price_score": 10.0,
+          "tech_score": 71.4833,
+          "total_score": 81.4833
         },
         {
           "rank": null,
@@ -112595,7 +113461,10 @@
           "amount_eok": 8.939,
           "rate_pct": 8.8489,
           "bizno": "4558601519",
-          "ceo": "김기덕"
+          "ceo": "김기덕",
+          "price_score": 8.8489,
+          "tech_score": 71.6833,
+          "total_score": 80.5322
         },
         {
           "rank": null,
@@ -112603,11 +113472,15 @@
           "amount_eok": 9.2912,
           "rate_pct": 8.5135,
           "bizno": "1058681660",
-          "ceo": "김상욱"
+          "ceo": "김상욱",
+          "price_score": 8.5135,
+          "tech_score": 70.45,
+          "total_score": 78.9635
         }
       ],
       "award_lookup_at": "2026-10-30",
-      "award_to_budget_pct": 88.4
+      "award_to_budget_pct": 88.4,
+      "first_rank": "제논"
     },
     {
       "bid_no": "R25BK01153970",
@@ -112836,7 +113709,10 @@
           "amount_eok": 7.3176,
           "rate_pct": 9.1014,
           "bizno": "1028113061",
-          "ceo": "이경일"
+          "ceo": "이경일",
+          "price_score": 9.1014,
+          "tech_score": 81.9,
+          "total_score": 91.0014
         },
         {
           "rank": 2,
@@ -112844,7 +113720,10 @@
           "amount_eok": 6.9849,
           "rate_pct": 9.5348,
           "bizno": "3148173245",
-          "ceo": "김계관"
+          "ceo": "김계관",
+          "price_score": 9.5348,
+          "tech_score": 78.35,
+          "total_score": 87.8848
         },
         {
           "rank": null,
@@ -112852,7 +113731,10 @@
           "amount_eok": 6.66,
           "rate_pct": 10.0,
           "bizno": "4968602770",
-          "ceo": "김래환"
+          "ceo": "김래환",
+          "price_score": 10.0,
+          "tech_score": 70.38,
+          "total_score": 80.38
         },
         {
           "rank": null,
@@ -112860,7 +113742,10 @@
           "amount_eok": 7.7595,
           "rate_pct": 8.5831,
           "bizno": "1058681660",
-          "ceo": "김상욱"
+          "ceo": "김상욱",
+          "price_score": 8.5831,
+          "tech_score": 71.78,
+          "total_score": 80.3631
         },
         {
           "rank": null,
@@ -112868,7 +113753,10 @@
           "amount_eok": 7.7842,
           "rate_pct": 8.5558,
           "bizno": "6638700651",
-          "ceo": "오성조"
+          "ceo": "오성조",
+          "price_score": 8.5558,
+          "tech_score": 57.51,
+          "total_score": 66.0658
         }
       ],
       "scope": "생성형·Agent",
@@ -112877,7 +113765,8 @@
         "AI 일반"
       ],
       "award_lookup_at": "2026-10-30",
-      "award_to_budget_pct": 88.2
+      "award_to_budget_pct": 88.2,
+      "first_rank": "솔트룩스"
     },
     {
       "bid_no": "R25BK01126516",
@@ -112942,7 +113831,10 @@
           "amount_eok": 7.93,
           "rate_pct": 8.9912,
           "bizno": "2298137316",
-          "ceo": "김영섬"
+          "ceo": "김영섬",
+          "price_score": 8.9912,
+          "tech_score": 90.0,
+          "total_score": 98.9912
         },
         {
           "rank": 2,
@@ -112950,7 +113842,10 @@
           "amount_eok": 8.03,
           "rate_pct": 8.8792,
           "bizno": "2118698485",
-          "ceo": "강용성"
+          "ceo": "강용성",
+          "price_score": 8.8792,
+          "tech_score": 87.0,
+          "total_score": 95.8792
         },
         {
           "rank": 3,
@@ -112958,7 +113853,10 @@
           "amount_eok": 7.7,
           "rate_pct": 9.2597,
           "bizno": "3148173245",
-          "ceo": "김계관"
+          "ceo": "김계관",
+          "price_score": 9.2597,
+          "tech_score": 83.2,
+          "total_score": 92.4597
         },
         {
           "rank": 4,
@@ -112966,7 +113864,10 @@
           "amount_eok": 7.13,
           "rate_pct": 10.0,
           "bizno": "1158600908",
-          "ceo": "이제환"
+          "ceo": "이제환",
+          "price_score": 10.0,
+          "tech_score": 79.78,
+          "total_score": 89.78
         },
         {
           "rank": null,
@@ -112974,7 +113875,10 @@
           "amount_eok": 7.3,
           "rate_pct": 9.7671,
           "bizno": "4968602770",
-          "ceo": "김래환"
+          "ceo": "김래환",
+          "price_score": 9.7671,
+          "tech_score": 76.78,
+          "total_score": 86.5471
         },
         {
           "rank": null,
@@ -112982,7 +113886,10 @@
           "amount_eok": 7.7,
           "rate_pct": 9.2597,
           "bizno": "8538600261",
-          "ceo": "정인호"
+          "ceo": "정인호",
+          "price_score": 9.2597,
+          "tech_score": 72.6,
+          "total_score": 81.8597
         }
       ],
       "scope": "AI SW 확대",
@@ -112991,7 +113898,8 @@
         "AI 일반"
       ],
       "award_lookup_at": "2026-10-30",
-      "award_to_budget_pct": 97.9
+      "award_to_budget_pct": 97.9,
+      "first_rank": "코난테크놀로지"
     },
     {
       "bid_no": "R25BK01118401",
@@ -113019,7 +113927,10 @@
           "amount_eok": 9.7955,
           "rate_pct": 9.2531,
           "bizno": "7638101040",
-          "ceo": "고석태"
+          "ceo": "고석태",
+          "price_score": 9.2531,
+          "tech_score": 85.25,
+          "total_score": 94.5031
         },
         {
           "rank": 2,
@@ -113027,7 +113938,10 @@
           "amount_eok": 9.307,
           "rate_pct": 9.7388,
           "bizno": "1388189385",
-          "ceo": "김민철"
+          "ceo": "김민철",
+          "price_score": 9.7388,
+          "tech_score": 83.55,
+          "total_score": 93.2888
         },
         {
           "rank": 3,
@@ -113035,7 +113949,10 @@
           "amount_eok": 9.68,
           "rate_pct": 9.3635,
           "bizno": "1208767951",
-          "ceo": "김대훈"
+          "ceo": "김대훈",
+          "price_score": 9.3635,
+          "tech_score": 82.1167,
+          "total_score": 91.4802
         },
         {
           "rank": 4,
@@ -113043,7 +113960,10 @@
           "amount_eok": 9.0639,
           "rate_pct": 10.0,
           "bizno": "1628101174",
-          "ceo": "박선춘"
+          "ceo": "박선춘",
+          "price_score": 10.0,
+          "tech_score": 80.4167,
+          "total_score": 90.4167
         },
         {
           "rank": 5,
@@ -113051,11 +113971,15 @@
           "amount_eok": 9.9,
           "rate_pct": 9.1554,
           "bizno": "1158600908",
-          "ceo": "이제환"
+          "ceo": "이제환",
+          "price_score": 9.1554,
+          "tech_score": 80.3667,
+          "total_score": 89.5221
         }
       ],
       "award_lookup_at": "2026-10-30",
-      "award_to_budget_pct": 90.7
+      "award_to_budget_pct": 90.7,
+      "first_rank": "제논"
     },
     {
       "bid_no": "R25BK01111922",
@@ -113605,7 +114529,10 @@
           "amount_eok": null,
           "rate_pct": 9.2842,
           "bizno": "7638101040",
-          "ceo": "고석태"
+          "ceo": "고석태",
+          "price_score": 9.2842,
+          "tech_score": 82.88,
+          "total_score": 92.1642
         },
         {
           "rank": 2,
@@ -113613,7 +114540,10 @@
           "amount_eok": null,
           "rate_pct": 10.0,
           "bizno": "7898700079",
-          "ceo": "최대우"
+          "ceo": "최대우",
+          "price_score": 10.0,
+          "tech_score": 80.1,
+          "total_score": 90.1
         },
         {
           "rank": 3,
@@ -113621,7 +114551,10 @@
           "amount_eok": null,
           "rate_pct": 9.3388,
           "bizno": "7938600407",
-          "ceo": "박대귀"
+          "ceo": "박대귀",
+          "price_score": 9.3388,
+          "tech_score": 76.65,
+          "total_score": 85.9888
         }
       ],
       "first_rank": "제논",
@@ -113648,7 +114581,10 @@
           "amount_eok": 17.15,
           "rate_pct": 10.0,
           "bizno": "2298137316",
-          "ceo": "김영섬"
+          "ceo": "김영섬",
+          "price_score": 10.0,
+          "tech_score": 80.46,
+          "total_score": 90.46
         },
         {
           "rank": null,
@@ -113656,7 +114592,10 @@
           "amount_eok": 17.3933,
           "rate_pct": 9.8601,
           "bizno": "1028113061",
-          "ceo": "이경일"
+          "ceo": "이경일",
+          "price_score": 9.8601,
+          "tech_score": 73.04,
+          "total_score": 82.9001
         }
       ],
       "scope": "생성형·Agent",
@@ -113665,7 +114604,8 @@
         "생성형·LLM"
       ],
       "award_lookup_at": "2026-10-30",
-      "award_to_budget_pct": 98.6
+      "award_to_budget_pct": 98.6,
+      "first_rank": "코난테크놀로지"
     },
     {
       "bid_no": "R25BK01057521",
@@ -113988,7 +114928,10 @@
           "amount_eok": 15.8035,
           "rate_pct": 9.2296,
           "bizno": "6308702251",
-          "ceo": "박윤지"
+          "ceo": "박윤지",
+          "price_score": 9.2296,
+          "tech_score": 90.0,
+          "total_score": 99.2296
         },
         {
           "rank": 2,
@@ -113996,7 +114939,10 @@
           "amount_eok": 14.586,
           "rate_pct": 10.0,
           "bizno": "7638101040",
-          "ceo": "고석태"
+          "ceo": "고석태",
+          "price_score": 10.0,
+          "tech_score": 87.0,
+          "total_score": 97.0
         },
         {
           "rank": 3,
@@ -114004,7 +114950,10 @@
           "amount_eok": 15.8035,
           "rate_pct": 9.2296,
           "bizno": "4508800071",
-          "ceo": "유승모"
+          "ceo": "유승모",
+          "price_score": 9.2296,
+          "tech_score": 84.0,
+          "total_score": 93.2296
         },
         {
           "rank": null,
@@ -114012,7 +114961,10 @@
           "amount_eok": 15.3406,
           "rate_pct": 9.5081,
           "bizno": "1028113061",
-          "ceo": "이경일"
+          "ceo": "이경일",
+          "price_score": 9.5081,
+          "tech_score": 81.0,
+          "total_score": 90.5081
         },
         {
           "rank": null,
@@ -114020,7 +114972,10 @@
           "amount_eok": 15.95,
           "rate_pct": 9.1448,
           "bizno": "4638700328",
-          "ceo": "채종현"
+          "ceo": "채종현",
+          "price_score": 9.1448,
+          "tech_score": 78.0,
+          "total_score": 87.1448
         },
         {
           "rank": null,
@@ -114028,7 +114983,10 @@
           "amount_eok": 15.9615,
           "rate_pct": 9.1382,
           "bizno": "2148627387",
-          "ceo": "조풍연"
+          "ceo": "조풍연",
+          "price_score": 9.1382,
+          "tech_score": 75.0,
+          "total_score": 84.1382
         },
         {
           "rank": null,
@@ -114036,7 +114994,10 @@
           "amount_eok": 15.9631,
           "rate_pct": 9.1373,
           "bizno": "2298137316",
-          "ceo": "김영섬"
+          "ceo": "김영섬",
+          "price_score": 9.1373,
+          "tech_score": 72.0,
+          "total_score": 81.1373
         },
         {
           "rank": null,
@@ -114044,7 +115005,10 @@
           "amount_eok": 15.963,
           "rate_pct": 9.1374,
           "bizno": "1078827157",
-          "ceo": "고평석"
+          "ceo": "고평석",
+          "price_score": 9.1374,
+          "tech_score": 69.0,
+          "total_score": 78.1374
         }
       ],
       "scope": "생성형·Agent",
@@ -114053,7 +115017,8 @@
         "생성형·LLM"
       ],
       "award_lookup_at": "2026-10-30",
-      "award_to_budget_pct": 98.8
+      "award_to_budget_pct": 98.8,
+      "first_rank": "클라이온"
     },
     {
       "bid_no": "R25BK01030010",
@@ -114724,7 +115689,10 @@
           "amount_eok": 7.9283,
           "rate_pct": 8.2587,
           "bizno": "4508800071",
-          "ceo": "유승모"
+          "ceo": "유승모",
+          "price_score": 8.2587,
+          "tech_score": 80.055,
+          "total_score": 88.3137
         },
         {
           "rank": 2,
@@ -114732,7 +115700,10 @@
           "amount_eok": 7.7649,
           "rate_pct": 8.4325,
           "bizno": "1358184566",
-          "ceo": "김택균"
+          "ceo": "김택균",
+          "price_score": 8.4325,
+          "tech_score": 79.425,
+          "total_score": 87.8575
         },
         {
           "rank": 3,
@@ -114740,7 +115711,10 @@
           "amount_eok": 7.02,
           "rate_pct": 9.3273,
           "bizno": "4968602770",
-          "ceo": "김래환"
+          "ceo": "김래환",
+          "price_score": 9.3273,
+          "tech_score": 78.0225,
+          "total_score": 87.3498
         },
         {
           "rank": 4,
@@ -114748,7 +115722,10 @@
           "amount_eok": 7.111,
           "rate_pct": 9.2079,
           "bizno": "7338101035",
-          "ceo": "이창수"
+          "ceo": "이창수",
+          "price_score": 9.2079,
+          "tech_score": 76.5,
+          "total_score": 85.7079
         },
         {
           "rank": null,
@@ -114756,7 +115733,10 @@
           "amount_eok": 7.5605,
           "rate_pct": 8.6604,
           "bizno": "1028113061",
-          "ceo": "이경일"
+          "ceo": "이경일",
+          "price_score": 8.6604,
+          "tech_score": 76.1839,
+          "total_score": 84.8443
         },
         {
           "rank": null,
@@ -114764,7 +115744,10 @@
           "amount_eok": 7.9283,
           "rate_pct": 8.2587,
           "bizno": "1098650437",
-          "ceo": "강성욱"
+          "ceo": "강성욱",
+          "price_score": 8.2587,
+          "tech_score": 75.4463,
+          "total_score": 83.705
         },
         {
           "rank": null,
@@ -114772,7 +115755,10 @@
           "amount_eok": 7.3153,
           "rate_pct": 8.9507,
           "bizno": "2148627427",
-          "ceo": "김형원"
+          "ceo": "김형원",
+          "price_score": 8.9507,
+          "tech_score": 74.205,
+          "total_score": 83.1557
         },
         {
           "rank": null,
@@ -114780,7 +115766,10 @@
           "amount_eok": 7.0783,
           "rate_pct": 9.2505,
           "bizno": "3148173245",
-          "ceo": "김계관"
+          "ceo": "김계관",
+          "price_score": 9.2505,
+          "tech_score": 73.512,
+          "total_score": 82.7625
         },
         {
           "rank": null,
@@ -114788,7 +115777,10 @@
           "amount_eok": 6.5477,
           "rate_pct": 10.0,
           "bizno": "1058744546",
-          "ceo": "이재인"
+          "ceo": "이재인",
+          "price_score": 10.0,
+          "tech_score": 71.5078,
+          "total_score": 81.5078
         },
         {
           "rank": null,
@@ -114796,7 +115788,10 @@
           "amount_eok": 8.0101,
           "rate_pct": 8.1744,
           "bizno": "3218101680",
-          "ceo": "이정근"
+          "ceo": "이정근",
+          "price_score": 8.1744,
+          "tech_score": 72.9,
+          "total_score": 81.0744
         },
         {
           "rank": null,
@@ -114804,7 +115799,10 @@
           "amount_eok": 8.052,
           "rate_pct": 8.1318,
           "bizno": "2208604415",
-          "ceo": "조준희"
+          "ceo": "조준희",
+          "price_score": 8.1318,
+          "tech_score": 72.75,
+          "total_score": 80.8818
         },
         {
           "rank": null,
@@ -114812,7 +115810,10 @@
           "amount_eok": 7.425,
           "rate_pct": 8.8185,
           "bizno": "1198196788",
-          "ceo": "김상하"
+          "ceo": "김상하",
+          "price_score": 8.8185,
+          "tech_score": 69.3398,
+          "total_score": 78.1583
         },
         {
           "rank": null,
@@ -114820,7 +115821,10 @@
           "amount_eok": 6.6,
           "rate_pct": 9.9208,
           "bizno": "3468601103",
-          "ceo": "김지웅"
+          "ceo": "김지웅",
+          "price_score": 9.9208,
+          "tech_score": 36.075,
+          "total_score": 45.9958
         }
       ],
       "scope": "생성형·Agent",
@@ -114829,7 +115833,8 @@
         "생성형·LLM"
       ],
       "award_lookup_at": "2026-10-30",
-      "award_to_budget_pct": 96.7
+      "award_to_budget_pct": 96.7,
+      "first_rank": "엠큐닉"
     },
     {
       "bid_no": "R25BK00938315",
@@ -114874,7 +115879,10 @@
           "amount_eok": 8.2,
           "rate_pct": 9.939,
           "bizno": "2118698485",
-          "ceo": "강용성"
+          "ceo": "강용성",
+          "price_score": 9.939,
+          "tech_score": 90.0,
+          "total_score": 99.939
         },
         {
           "rank": 2,
@@ -114882,7 +115890,10 @@
           "amount_eok": 9.35,
           "rate_pct": 8.7166,
           "bizno": "6308702251",
-          "ceo": "박윤지"
+          "ceo": "박윤지",
+          "price_score": 8.7166,
+          "tech_score": 87.915,
+          "total_score": 96.6316
         },
         {
           "rank": 3,
@@ -114890,7 +115901,10 @@
           "amount_eok": 9.4,
           "rate_pct": 8.6702,
           "bizno": "1198196788",
-          "ceo": "김상하"
+          "ceo": "김상하",
+          "price_score": 8.6702,
+          "tech_score": 86.915,
+          "total_score": 95.5852
         },
         {
           "rank": 4,
@@ -114898,7 +115912,10 @@
           "amount_eok": 9.2,
           "rate_pct": 8.8587,
           "bizno": "7938101852",
-          "ceo": "이준호"
+          "ceo": "이준호",
+          "price_score": 8.8587,
+          "tech_score": 83.795,
+          "total_score": 92.6537
         },
         {
           "rank": 5,
@@ -114906,7 +115923,10 @@
           "amount_eok": 8.7548,
           "rate_pct": 9.3092,
           "bizno": "7338101035",
-          "ceo": "이창수"
+          "ceo": "이창수",
+          "price_score": 9.3092,
+          "tech_score": 82.795,
+          "total_score": 92.1042
         },
         {
           "rank": 6,
@@ -114914,7 +115934,10 @@
           "amount_eok": 8.15,
           "rate_pct": 10.0,
           "bizno": "1058811095",
-          "ceo": "김남현"
+          "ceo": "김남현",
+          "price_score": 10.0,
+          "tech_score": 81.64,
+          "total_score": 91.64
         }
       ],
       "scope": "생성형·Agent",
@@ -114923,7 +115946,8 @@
       ],
       "nature": null,
       "award_lookup_at": "2026-10-30",
-      "award_to_budget_pct": 79.6
+      "award_to_budget_pct": 79.6,
+      "first_rank": "와이즈넛"
     },
     {
       "bid_no": "R25BK00928661",
@@ -115317,7 +116341,10 @@
           "amount_eok": 9.879,
           "rate_pct": 9.2135,
           "bizno": "7248101517",
-          "ceo": "김성중"
+          "ceo": "김성중",
+          "price_score": 9.2135,
+          "tech_score": 90.0,
+          "total_score": 99.2135
         },
         {
           "rank": 2,
@@ -115325,7 +116352,10 @@
           "amount_eok": 9.768,
           "rate_pct": 9.3182,
           "bizno": "2118698485",
-          "ceo": "강용성"
+          "ceo": "강용성",
+          "price_score": 9.3182,
+          "tech_score": 89.0,
+          "total_score": 98.3182
         },
         {
           "rank": 3,
@@ -115333,7 +116363,10 @@
           "amount_eok": 10.989,
           "rate_pct": 8.2828,
           "bizno": "2298137316",
-          "ceo": "김영섬"
+          "ceo": "김영섬",
+          "price_score": 8.2828,
+          "tech_score": 88.0,
+          "total_score": 96.2828
         },
         {
           "rank": 4,
@@ -115341,7 +116374,10 @@
           "amount_eok": 9.102,
           "rate_pct": 10.0,
           "bizno": "2208613501",
-          "ceo": "장신규"
+          "ceo": "장신규",
+          "price_score": 10.0,
+          "tech_score": 83.67,
+          "total_score": 93.67
         },
         {
           "rank": 5,
@@ -115349,7 +116385,10 @@
           "amount_eok": 10.323,
           "rate_pct": 8.8172,
           "bizno": "1338145679",
-          "ceo": "배호"
+          "ceo": "배호",
+          "price_score": 8.8172,
+          "tech_score": 84.67,
+          "total_score": 93.4872
         },
         {
           "rank": 6,
@@ -115357,7 +116396,10 @@
           "amount_eok": 11.0,
           "rate_pct": 8.2745,
           "bizno": "4638101723",
-          "ceo": "표성수"
+          "ceo": "표성수",
+          "price_score": 8.2745,
+          "tech_score": 82.67,
+          "total_score": 90.9445
         },
         {
           "rank": null,
@@ -115365,7 +116407,8 @@
           "amount_eok": null,
           "rate_pct": 0.0,
           "bizno": "7938101852",
-          "ceo": "이준호"
+          "ceo": "이준호",
+          "price_score": 0.0
         }
       ],
       "scope": "생성형·Agent",
@@ -115374,7 +116417,8 @@
       ],
       "nature": null,
       "award_lookup_at": "2026-10-30",
-      "award_to_budget_pct": 88.2
+      "award_to_budget_pct": 88.2,
+      "first_rank": "퍼블릭에이아이"
     },
     {
       "bid_no": "R25BK00911854",
@@ -115571,7 +116615,10 @@
           "amount_eok": 22.7831,
           "rate_pct": 9.9767,
           "bizno": "2118698485",
-          "ceo": "강용성"
+          "ceo": "강용성",
+          "price_score": 9.9767,
+          "tech_score": 84.7208,
+          "total_score": 94.6975
         },
         {
           "rank": null,
@@ -115579,7 +116626,10 @@
           "amount_eok": 22.73,
           "rate_pct": 10.0,
           "bizno": "1208767951",
-          "ceo": "김대훈"
+          "ceo": "김대훈",
+          "price_score": 10.0,
+          "tech_score": 74.4167,
+          "total_score": 84.4167
         }
       ],
       "first_rank": "와이즈넛",
@@ -115890,7 +116940,10 @@
           "amount_eok": 15.18,
           "rate_pct": 9.8814,
           "bizno": "1028113061",
-          "ceo": "이경일"
+          "ceo": "이경일",
+          "price_score": 9.8814,
+          "tech_score": 90.0,
+          "total_score": 99.8814
         },
         {
           "rank": 2,
@@ -115898,7 +116951,10 @@
           "amount_eok": 15.2,
           "rate_pct": 9.8684,
           "bizno": "6968600654",
-          "ceo": "유승재"
+          "ceo": "유승재",
+          "price_score": 9.8684,
+          "tech_score": 87.0,
+          "total_score": 96.8684
         },
         {
           "rank": 3,
@@ -115906,7 +116962,10 @@
           "amount_eok": 15.328,
           "rate_pct": 9.786,
           "bizno": "2298137316",
-          "ceo": "김영섬"
+          "ceo": "김영섬",
+          "price_score": 9.786,
+          "tech_score": 84.0,
+          "total_score": 93.786
         },
         {
           "rank": 4,
@@ -115914,7 +116973,10 @@
           "amount_eok": 15.0,
           "rate_pct": 10.0,
           "bizno": "2118698485",
-          "ceo": "강용성"
+          "ceo": "강용성",
+          "price_score": 10.0,
+          "tech_score": 81.0,
+          "total_score": 91.0
         },
         {
           "rank": 5,
@@ -115922,7 +116984,10 @@
           "amount_eok": 15.0304,
           "rate_pct": 9.9798,
           "bizno": "1138643065",
-          "ceo": "김기수"
+          "ceo": "김기수",
+          "price_score": 9.9798,
+          "tech_score": 78.0,
+          "total_score": 87.9798
         },
         {
           "rank": 6,
@@ -115930,7 +116995,10 @@
           "amount_eok": 15.1,
           "rate_pct": 9.9337,
           "bizno": "1208608334",
-          "ceo": "김경서"
+          "ceo": "김경서",
+          "price_score": 9.9337,
+          "tech_score": 75.0,
+          "total_score": 84.9337
         }
       ],
       "first_rank": "솔트룩스",
@@ -118439,7 +119507,10 @@
           "amount_eok": 7.8648,
           "rate_pct": 9.2367,
           "bizno": "2298137316",
-          "ceo": "김영섬"
+          "ceo": "김영섬",
+          "price_score": 9.2367,
+          "tech_score": 84.6257,
+          "total_score": 93.8624
         },
         {
           "rank": 2,
@@ -118447,7 +119518,10 @@
           "amount_eok": 7.2645,
           "rate_pct": 10.0,
           "bizno": "1298631676",
-          "ceo": "김동성"
+          "ceo": "김동성",
+          "price_score": 10.0,
+          "tech_score": 81.7971,
+          "total_score": 91.7971
         },
         {
           "rank": 3,
@@ -118455,7 +119529,10 @@
           "amount_eok": 7.395,
           "rate_pct": 9.8235,
           "bizno": "2118698485",
-          "ceo": "강용성"
+          "ceo": "강용성",
+          "price_score": 9.8235,
+          "tech_score": 81.5914,
+          "total_score": 91.4149
         },
         {
           "rank": 4,
@@ -118463,7 +119540,10 @@
           "amount_eok": 8.208,
           "rate_pct": 8.8505,
           "bizno": "5238101457",
-          "ceo": "이진행"
+          "ceo": "이진행",
+          "price_score": 8.8505,
+          "tech_score": 82.2086,
+          "total_score": 91.0591
         },
         {
           "rank": null,
@@ -118471,7 +119551,10 @@
           "amount_eok": null,
           "rate_pct": 0.0,
           "bizno": "1148642166",
-          "ceo": "이상훈"
+          "ceo": "이상훈",
+          "price_score": 0.0,
+          "tech_score": 0.0,
+          "total_score": 0.0
         }
       ],
       "first_rank": "코난테크놀로지",
@@ -122338,7 +123421,10 @@
           "amount_eok": null,
           "rate_pct": 10.0,
           "bizno": "1208186581",
-          "ceo": "이남작"
+          "ceo": "이남작",
+          "price_score": 10.0,
+          "tech_score": 84.7528,
+          "total_score": 94.7528
         },
         {
           "rank": 2,
@@ -122346,14 +123432,18 @@
           "amount_eok": null,
           "rate_pct": 9.881,
           "bizno": "1048122547",
-          "ceo": "윤찬의"
+          "ceo": "윤찬의",
+          "price_score": 9.881,
+          "tech_score": 83.4589,
+          "total_score": 93.3399
         }
       ],
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "first_rank": "에스넷시스템"
     },
     {
       "bid_no": "R26BK01659837",
@@ -122376,7 +123466,10 @@
           "amount_eok": 31.185,
           "rate_pct": 8.9787,
           "bizno": "8308801918",
-          "ceo": "김성훈"
+          "ceo": "김성훈",
+          "price_score": 8.9787,
+          "tech_score": 90.0,
+          "total_score": 98.9787
         },
         {
           "rank": 2,
@@ -122384,7 +123477,10 @@
           "amount_eok": 31.5,
           "rate_pct": 8.8889,
           "bizno": "1018669359",
-          "ceo": "박찬용"
+          "ceo": "박찬용",
+          "price_score": 8.8889,
+          "tech_score": 86.3,
+          "total_score": 95.1889
         },
         {
           "rank": 3,
@@ -122392,7 +123488,10 @@
           "amount_eok": 31.185,
           "rate_pct": 8.9787,
           "bizno": "1208755358",
-          "ceo": "남운성"
+          "ceo": "남운성",
+          "price_score": 8.9787,
+          "tech_score": 83.3,
+          "total_score": 92.2787
         },
         {
           "rank": 4,
@@ -122400,7 +123499,10 @@
           "amount_eok": 29.61,
           "rate_pct": 9.4563,
           "bizno": "1208633565",
-          "ceo": "허주환"
+          "ceo": "허주환",
+          "price_score": 9.4563,
+          "tech_score": 80.3,
+          "total_score": 89.7563
         },
         {
           "rank": 5,
@@ -122408,7 +123510,10 @@
           "amount_eok": 30.555,
           "rate_pct": 9.1638,
           "bizno": "5868802378",
-          "ceo": "안인구"
+          "ceo": "안인구",
+          "price_score": 9.1638,
+          "tech_score": 77.3,
+          "total_score": 86.4638
         },
         {
           "rank": 6,
@@ -122416,7 +123521,10 @@
           "amount_eok": 31.46,
           "rate_pct": 8.9002,
           "bizno": "2158711279",
-          "ceo": "옥정원"
+          "ceo": "옥정원",
+          "price_score": 8.9002,
+          "tech_score": 74.3,
+          "total_score": 83.2002
         },
         {
           "rank": null,
@@ -122424,7 +123532,10 @@
           "amount_eok": 31.47,
           "rate_pct": 8.8974,
           "bizno": "1298650144",
-          "ceo": "민상일"
+          "ceo": "민상일",
+          "price_score": 8.8974,
+          "tech_score": 71.3,
+          "total_score": 80.1974
         },
         {
           "rank": null,
@@ -122432,7 +123543,10 @@
           "amount_eok": 31.4899,
           "rate_pct": 8.8917,
           "bizno": "2158607972",
-          "ceo": "송광헌"
+          "ceo": "송광헌",
+          "price_score": 8.8917,
+          "tech_score": 68.3,
+          "total_score": 77.1917
         },
         {
           "rank": null,
@@ -122440,7 +123554,10 @@
           "amount_eok": 31.437,
           "rate_pct": 8.9067,
           "bizno": "3148165556",
-          "ceo": "노균택"
+          "ceo": "노균택",
+          "price_score": 8.9067,
+          "tech_score": 65.3,
+          "total_score": 74.2067
         },
         {
           "rank": null,
@@ -122448,7 +123565,10 @@
           "amount_eok": 31.5,
           "rate_pct": 8.8889,
           "bizno": "2148858206",
-          "ceo": "최우식"
+          "ceo": "최우식",
+          "price_score": 8.8889,
+          "tech_score": 62.3,
+          "total_score": 71.1889
         },
         {
           "rank": null,
@@ -122456,7 +123576,10 @@
           "amount_eok": 28.0,
           "rate_pct": 10.0,
           "bizno": "1258701916",
-          "ceo": "나진수"
+          "ceo": "나진수",
+          "price_score": 10.0,
+          "tech_score": 59.3,
+          "total_score": 69.3
         },
         {
           "rank": null,
@@ -122464,7 +123587,10 @@
           "amount_eok": 29.92,
           "rate_pct": 9.3583,
           "bizno": "7068602890",
-          "ceo": "정성욱"
+          "ceo": "정성욱",
+          "price_score": 9.3583,
+          "tech_score": 52.02,
+          "total_score": 61.3783
         },
         {
           "rank": null,
@@ -122472,7 +123598,10 @@
           "amount_eok": 30.87,
           "rate_pct": 9.0703,
           "bizno": "4638101723",
-          "ceo": "표성수"
+          "ceo": "표성수",
+          "price_score": 9.0703,
+          "tech_score": 49.02,
+          "total_score": 58.0903
         }
       ],
       "scope": "AI SW 확대",
@@ -122480,7 +123609,8 @@
       "fields": [
         "AI 일반"
       ],
-      "award_to_budget_pct": 99.0
+      "award_to_budget_pct": 99.0,
+      "first_rank": "업스테이지"
     },
     {
       "bid_no": "R26BK01659421",
@@ -122503,7 +123633,10 @@
           "amount_eok": 102.8214,
           "rate_pct": 9.9999,
           "bizno": "1168119477",
-          "ceo": "현신균"
+          "ceo": "현신균",
+          "price_score": 9.9999,
+          "tech_score": 90.0,
+          "total_score": 99.9999
         },
         {
           "rank": 2,
@@ -122511,7 +123644,10 @@
           "amount_eok": 102.82,
           "rate_pct": 10.0,
           "bizno": "1028142945",
-          "ceo": "박윤영"
+          "ceo": "박윤영",
+          "price_score": 10.0,
+          "tech_score": 87.0,
+          "total_score": 97.0
         }
       ],
       "scope": "AI SW 확대",
@@ -122519,7 +123655,8 @@
       "fields": [
         "AI 일반"
       ],
-      "award_to_budget_pct": 100.0
+      "award_to_budget_pct": 100.0,
+      "first_rank": "엘지씨엔에스"
     },
     {
       "bid_no": "R26BK01648665",
@@ -122542,7 +123679,10 @@
           "amount_eok": 214.027,
           "rate_pct": 10.0,
           "bizno": "1028142945",
-          "ceo": "박윤영"
+          "ceo": "박윤영",
+          "price_score": 10.0,
+          "tech_score": 90.0,
+          "total_score": 100.0
         },
         {
           "rank": 2,
@@ -122550,7 +123690,10 @@
           "amount_eok": 214.027,
           "rate_pct": 10.0,
           "bizno": "1168119477",
-          "ceo": "현신균"
+          "ceo": "현신균",
+          "price_score": 10.0,
+          "tech_score": 87.0,
+          "total_score": 97.0
         },
         {
           "rank": 3,
@@ -122558,14 +123701,18 @@
           "amount_eok": 214.027,
           "rate_pct": 10.0,
           "bizno": "1108128774",
-          "ceo": "이준희"
+          "ceo": "이준희",
+          "price_score": 10.0,
+          "tech_score": 84.0,
+          "total_score": 94.0
         }
       ],
       "nature": "시스템 구축·고도화",
       "fields": [
         "AI 일반"
       ],
-      "scope": "AI SW 확대"
+      "scope": "AI SW 확대",
+      "first_rank": "케이티"
     },
     {
       "bid_no": "R26BK01646930",
@@ -122618,7 +123765,10 @@
           "amount_eok": 49.9999,
           "rate_pct": 9.79,
           "bizno": "6968600654",
-          "ceo": "유승재"
+          "ceo": "유승재",
+          "price_score": 9.79,
+          "tech_score": 90.0,
+          "total_score": 99.79
         },
         {
           "rank": 2,
@@ -122626,7 +123776,10 @@
           "amount_eok": 49.9,
           "rate_pct": 9.8096,
           "bizno": "1218624069",
-          "ceo": "양봉열"
+          "ceo": "양봉열",
+          "price_score": 9.8096,
+          "tech_score": 87.0,
+          "total_score": 96.8096
         },
         {
           "rank": 3,
@@ -122634,7 +123787,10 @@
           "amount_eok": 48.95,
           "rate_pct": 10.0,
           "bizno": "1208767951",
-          "ceo": "김대훈"
+          "ceo": "김대훈",
+          "price_score": 10.0,
+          "tech_score": 84.0,
+          "total_score": 94.0
         }
       ],
       "scope": "생성형·Agent",
@@ -122642,7 +123798,8 @@
       "fields": [
         "생성형·LLM",
         "AI 보안"
-      ]
+      ],
+      "first_rank": "페르소나에이아이"
     },
     {
       "bid_no": "R26BK01630323",
@@ -122665,7 +123822,10 @@
           "amount_eok": 29.99,
           "rate_pct": 9.8019,
           "bizno": "2158607972",
-          "ceo": "송광헌"
+          "ceo": "송광헌",
+          "price_score": 9.8019,
+          "tech_score": 90.0,
+          "total_score": 99.8019
         },
         {
           "rank": 2,
@@ -122673,14 +123833,18 @@
           "amount_eok": 29.3959,
           "rate_pct": 10.0,
           "bizno": "1468701247",
-          "ceo": "최길주"
+          "ceo": "최길주",
+          "price_score": 10.0,
+          "tech_score": 82.8,
+          "total_score": 92.8
         }
       ],
       "scope": "AI SW 확대",
       "nature": "시스템 구축·고도화",
       "fields": [
         "AI 일반"
-      ]
+      ],
+      "first_rank": "피씨엔"
     },
     {
       "bid_no": "R26BK01620533",
@@ -122733,7 +123897,10 @@
           "amount_eok": 66.5,
           "rate_pct": 10.0,
           "bizno": "3318101353",
-          "ceo": "김진욱"
+          "ceo": "김진욱",
+          "price_score": 10.0,
+          "tech_score": 79.7143,
+          "total_score": 89.7143
         },
         {
           "rank": 2,
@@ -122741,7 +123908,10 @@
           "amount_eok": 92.0,
           "rate_pct": 7.2283,
           "bizno": "2298801044",
-          "ceo": "김대환"
+          "ceo": "김대환",
+          "price_score": 7.2283,
+          "tech_score": 81.0,
+          "total_score": 88.2283
         },
         {
           "rank": 3,
@@ -122749,7 +123919,10 @@
           "amount_eok": 87.4,
           "rate_pct": 7.6087,
           "bizno": "2208605258",
-          "ceo": "이형세"
+          "ceo": "이형세",
+          "price_score": 7.6087,
+          "tech_score": 78.2857,
+          "total_score": 85.8944
         },
         {
           "rank": null,
@@ -122757,14 +123930,18 @@
           "amount_eok": 76.0,
           "rate_pct": 8.75,
           "bizno": "2298103214",
-          "ceo": "정상원"
+          "ceo": "정상원",
+          "price_score": 8.75,
+          "tech_score": 73.8571,
+          "total_score": 82.6071
         }
       ],
       "scope": "생성형·Agent",
       "fields": [
         "생성형·LLM"
       ],
-      "nature": null
+      "nature": null,
+      "first_rank": "마인드로직"
     },
     {
       "bid_no": "R26BK01606492",
@@ -123418,7 +124595,10 @@
           "amount_eok": 31.2454,
           "rate_pct": 10.0,
           "bizno": "1708702633",
-          "ceo": "송진혁"
+          "ceo": "송진혁",
+          "price_score": 10.0,
+          "tech_score": 86.85,
+          "total_score": 96.85
         },
         {
           "rank": 2,
@@ -123426,7 +124606,10 @@
           "amount_eok": 32.3,
           "rate_pct": 9.6735,
           "bizno": "1078734272",
-          "ceo": "정규섭"
+          "ceo": "정규섭",
+          "price_score": 9.6735,
+          "tech_score": 80.775,
+          "total_score": 90.4485
         },
         {
           "rank": 3,
@@ -123434,14 +124617,18 @@
           "amount_eok": 31.2454,
           "rate_pct": 10.0,
           "bizno": "2298801044",
-          "ceo": "김대환"
+          "ceo": "김대환",
+          "price_score": 10.0,
+          "tech_score": 76.8,
+          "total_score": 86.8
         }
       ],
       "scope": "생성형·Agent",
       "nature": "연구·교육·행사",
       "fields": [
         "생성형·LLM"
-      ]
+      ],
+      "first_rank": "상상력집단"
     },
     {
       "bid_no": "R26BK01467529",
@@ -123753,7 +124940,10 @@
           "amount_eok": 65.5,
           "rate_pct": 8.4061,
           "bizno": "2298137316",
-          "ceo": "김영섬"
+          "ceo": "김영섬",
+          "price_score": 8.4061,
+          "tech_score": 90.0,
+          "total_score": 98.4061
         },
         {
           "rank": 2,
@@ -123761,7 +124951,10 @@
           "amount_eok": 61.938,
           "rate_pct": 8.8895,
           "bizno": "2118698485",
-          "ceo": "강용성"
+          "ceo": "강용성",
+          "price_score": 8.8895,
+          "tech_score": 89.0,
+          "total_score": 97.8895
         },
         {
           "rank": 3,
@@ -123769,7 +124962,10 @@
           "amount_eok": 61.039,
           "rate_pct": 9.0205,
           "bizno": "4088118945",
-          "ceo": "이재원"
+          "ceo": "이재원",
+          "price_score": 9.0205,
+          "tech_score": 88.0,
+          "total_score": 97.0205
         },
         {
           "rank": 4,
@@ -123777,7 +124973,10 @@
           "amount_eok": 61.1725,
           "rate_pct": 9.0008,
           "bizno": "1058786298",
-          "ceo": "이춘식"
+          "ceo": "이춘식",
+          "price_score": 9.0008,
+          "tech_score": 87.0,
+          "total_score": 96.0008
         },
         {
           "rank": 5,
@@ -123785,7 +124984,10 @@
           "amount_eok": 60.5,
           "rate_pct": 9.1008,
           "bizno": "1028113061",
-          "ceo": "이경일"
+          "ceo": "이경일",
+          "price_score": 9.1008,
+          "tech_score": 86.0,
+          "total_score": 95.1008
         },
         {
           "rank": null,
@@ -123793,14 +124995,18 @@
           "amount_eok": 55.06,
           "rate_pct": 10.0,
           "bizno": "4278602060",
-          "ceo": "이장원"
+          "ceo": "이장원",
+          "price_score": 10.0,
+          "tech_score": 77.8625,
+          "total_score": 87.8625
         }
       ],
       "scope": "생성형·Agent",
       "nature": "시스템 구축·고도화",
       "fields": [
         "생성형·LLM"
-      ]
+      ],
+      "first_rank": "코난테크놀로지"
     },
     {
       "bid_no": "R26BK01417488",
@@ -124255,7 +125461,10 @@
           "amount_eok": 30.965,
           "rate_pct": 9.2782,
           "bizno": "1028113061",
-          "ceo": "이경일"
+          "ceo": "이경일",
+          "price_score": 9.2782,
+          "tech_score": 90.0,
+          "total_score": 99.2782
         },
         {
           "rank": 2,
@@ -124263,7 +125472,10 @@
           "amount_eok": 30.54,
           "rate_pct": 9.4073,
           "bizno": "2298137316",
-          "ceo": "김영섬"
+          "ceo": "김영섬",
+          "price_score": 9.4073,
+          "tech_score": 87.0,
+          "total_score": 96.4073
         },
         {
           "rank": 3,
@@ -124271,7 +125483,10 @@
           "amount_eok": 31.0,
           "rate_pct": 9.2677,
           "bizno": "2118698485",
-          "ceo": "강용성"
+          "ceo": "강용성",
+          "price_score": 9.2677,
+          "tech_score": 84.0,
+          "total_score": 93.2677
         },
         {
           "rank": null,
@@ -124279,7 +125494,10 @@
           "amount_eok": 28.73,
           "rate_pct": 10.0,
           "bizno": "7638101040",
-          "ceo": "고석태"
+          "ceo": "고석태",
+          "price_score": 10.0,
+          "tech_score": 78.55,
+          "total_score": 88.55
         },
         {
           "rank": null,
@@ -124287,7 +125505,10 @@
           "amount_eok": 30.998,
           "rate_pct": 9.2683,
           "bizno": "2148627427",
-          "ceo": "김형원"
+          "ceo": "김형원",
+          "price_score": 9.2683,
+          "tech_score": 75.55,
+          "total_score": 84.8183
         },
         {
           "rank": null,
@@ -124295,7 +125516,10 @@
           "amount_eok": 31.0,
           "rate_pct": 9.2677,
           "bizno": "2148874981",
-          "ceo": "박외진"
+          "ceo": "박외진",
+          "price_score": 9.2677,
+          "tech_score": 72.55,
+          "total_score": 81.8177
         },
         {
           "rank": null,
@@ -124303,7 +125527,10 @@
           "amount_eok": 29.45,
           "rate_pct": 9.7555,
           "bizno": "5868802378",
-          "ceo": "안인구"
+          "ceo": "안인구",
+          "price_score": 9.7555,
+          "tech_score": 69.55,
+          "total_score": 79.3055
         },
         {
           "rank": null,
@@ -124311,7 +125538,10 @@
           "amount_eok": 30.965,
           "rate_pct": 9.2782,
           "bizno": "6968600654",
-          "ceo": "유승재"
+          "ceo": "유승재",
+          "price_score": 9.2782,
+          "tech_score": 66.55,
+          "total_score": 75.8282
         },
         {
           "rank": null,
@@ -124319,7 +125549,10 @@
           "amount_eok": 30.3819,
           "rate_pct": 9.4563,
           "bizno": "2298118298",
-          "ceo": "유용석"
+          "ceo": "유용석",
+          "price_score": 9.4563,
+          "tech_score": 63.55,
+          "total_score": 73.0063
         },
         {
           "rank": null,
@@ -124327,14 +125560,18 @@
           "amount_eok": 30.69,
           "rate_pct": 9.3614,
           "bizno": "2028167042",
-          "ceo": "이세영"
+          "ceo": "이세영",
+          "price_score": 9.3614,
+          "tech_score": 59.72,
+          "total_score": 69.0814
         }
       ],
       "scope": "생성형·Agent",
       "nature": "시스템 구축·고도화",
       "fields": [
         "생성형·LLM"
-      ]
+      ],
+      "first_rank": "솔트룩스"
     },
     {
       "bid_no": "R26BK01281376",
@@ -124707,7 +125944,10 @@
           "amount_eok": null,
           "rate_pct": 10.0,
           "bizno": "2298801044",
-          "ceo": "김대환"
+          "ceo": "김대환",
+          "price_score": 10.0,
+          "tech_score": 81.7071,
+          "total_score": 91.7071
         },
         {
           "rank": 2,
@@ -124715,7 +125955,10 @@
           "amount_eok": null,
           "rate_pct": 8.4211,
           "bizno": "1708702633",
-          "ceo": "송진혁"
+          "ceo": "송진혁",
+          "price_score": 8.4211,
+          "tech_score": 81.7714,
+          "total_score": 90.1925
         },
         {
           "rank": 3,
@@ -124723,7 +125966,10 @@
           "amount_eok": null,
           "rate_pct": 8.7912,
           "bizno": "8848101731",
-          "ceo": "안재만"
+          "ceo": "안재만",
+          "price_score": 8.7912,
+          "tech_score": 81.0,
+          "total_score": 89.7912
         },
         {
           "rank": 4,
@@ -124731,7 +125977,10 @@
           "amount_eok": null,
           "rate_pct": 8.2749,
           "bizno": "1078734272",
-          "ceo": "정규섭"
+          "ceo": "정규섭",
+          "price_score": 8.2749,
+          "tech_score": 81.3857,
+          "total_score": 89.6606
         },
         {
           "rank": 5,
@@ -124739,7 +125988,10 @@
           "amount_eok": null,
           "rate_pct": 10.0,
           "bizno": "3318101353",
-          "ceo": "김진욱"
+          "ceo": "김진욱",
+          "price_score": 10.0,
+          "tech_score": 78.8143,
+          "total_score": 88.8143
         },
         {
           "rank": 6,
@@ -124747,7 +125999,10 @@
           "amount_eok": null,
           "rate_pct": 8.4305,
           "bizno": "6048142515",
-          "ceo": "표철민"
+          "ceo": "표철민",
+          "price_score": 8.4305,
+          "tech_score": 79.9071,
+          "total_score": 88.3376
         },
         {
           "rank": 7,
@@ -124755,7 +126010,10 @@
           "amount_eok": null,
           "rate_pct": 8.5178,
           "bizno": "2618701129",
-          "ceo": "홍성완"
+          "ceo": "홍성완",
+          "price_score": 8.5178,
+          "tech_score": 79.65,
+          "total_score": 88.1678
         },
         {
           "rank": 8,
@@ -124763,7 +126021,10 @@
           "amount_eok": null,
           "rate_pct": 8.0812,
           "bizno": "1428128238",
-          "ceo": "구천리"
+          "ceo": "구천리",
+          "price_score": 8.0812,
+          "tech_score": 79.5214,
+          "total_score": 87.6026
         },
         {
           "rank": 9,
@@ -124771,7 +126032,10 @@
           "amount_eok": null,
           "rate_pct": 9.4124,
           "bizno": "7638101040",
-          "ceo": "고석태"
+          "ceo": "고석태",
+          "price_score": 9.4124,
+          "tech_score": 77.85,
+          "total_score": 87.2624
         },
         {
           "rank": 10,
@@ -124779,7 +126043,10 @@
           "amount_eok": null,
           "rate_pct": 8.9741,
           "bizno": "5268700181",
-          "ceo": "정성철"
+          "ceo": "정성철",
+          "price_score": 8.9741,
+          "tech_score": 77.1429,
+          "total_score": 86.117
         },
         {
           "rank": 11,
@@ -124787,7 +126054,10 @@
           "amount_eok": null,
           "rate_pct": 8.0761,
           "bizno": "2208880135",
-          "ceo": "어정선"
+          "ceo": "어정선",
+          "price_score": 8.0761,
+          "tech_score": 76.95,
+          "total_score": 85.0261
         },
         {
           "rank": null,
@@ -124795,7 +126065,10 @@
           "amount_eok": null,
           "rate_pct": 9.9976,
           "bizno": "4968602770",
-          "ceo": "김래환"
+          "ceo": "김래환",
+          "price_score": 9.9976,
+          "tech_score": 75.7286,
+          "total_score": 85.7262
         }
       ],
       "scope": "생성형·Agent",
@@ -125074,10 +126347,10 @@
     },
     "with_bidders": 519,
     "bidders_enrich": {
-      "targets": 2,
-      "fetched": 2,
-      "updated": 1,
-      "empty": 1,
+      "targets": 80,
+      "fetched": 80,
+      "updated": 80,
+      "empty": 0,
       "skipped": 0,
       "bootstrap_upserts": 0
     },
