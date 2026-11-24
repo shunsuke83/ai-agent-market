@@ -19,7 +19,7 @@ from typing import Any
 from .classify import load_keywords
 from .gonogo import load_profile
 from .gonogo_policy import GO, NO_GO, REVIEW, score_policy
-from .normalize import list_exclude_reason, list_excluded, read_notices, sort_notices
+from .normalize import list_exclude_reason, list_excluded, sort_notices
 from .render import KST, load_run_status, stamp_text
 from .rfp import load_summaries
 
@@ -38,6 +38,53 @@ def _now_s(now: datetime) -> str:
     return now.strftime("%Y-%m-%d %H:%M")
 
 
+def _g2b_url(n: dict[str, Any]) -> str | None:
+    """Prefer stored URL; otherwise synthesize from bid_no (same as render._g2b_href)."""
+    url = (n.get("g2b_url") or "").strip()
+    if url:
+        return url
+    bid = n.get("bid_no") or ""
+    if not bid:
+        return None
+    ord_ = str(n.get("bid_ord") or "000").zfill(3)
+    return (
+        "https://www.g2b.go.kr/link/PNPE027_01/single/"
+        f"?bidPbancNo={bid}&bidPbancOrd={ord_}"
+    )
+
+
+def _win_rate_pct(n: dict[str, Any]) -> float | None:
+    """win_rate_pct, else award_to_budget_pct (budget-share stand-in)."""
+    for key in ("win_rate_pct", "award_to_budget_pct"):
+        v = n.get(key)
+        if v in (None, ""):
+            continue
+        try:
+            return round(float(v), 2)
+        except (TypeError, ValueError):
+            continue
+    return None
+
+
+def _compact_bidders(n: dict[str, Any]) -> list[dict[str, Any]] | None:
+    raw = n.get("bidders")
+    if not isinstance(raw, list) or not raw:
+        return None
+    out: list[dict[str, Any]] = []
+    for b in raw:
+        if not isinstance(b, dict):
+            continue
+        row: dict[str, Any] = {
+            "rank": b.get("rank"),
+            "name": b.get("name"),
+            "bizno": b.get("bizno"),
+            "amount_eok": b.get("amount_eok"),
+            "rate_pct": b.get("rate_pct"),
+        }
+        out.append(row)
+    return out or None
+
+
 def _slim_notice(
     n: dict[str, Any],
     *,
@@ -47,6 +94,8 @@ def _slim_notice(
     bid = n.get("bid_no") or ""
     ord_ = str(n.get("bid_ord") or "000").zfill(3)
     soft = list_excluded(n, rules)
+    close = (n.get("close_at") or n.get("close_date") or "")
+    close_at = str(close)[:16] or None
     row: dict[str, Any] = {
         "id": f"{bid}-{ord_}",
         "bid_no": bid,
@@ -58,40 +107,35 @@ def _slim_notice(
         "fields": list(n.get("fields") or []),
         "budget_eok": n.get("budget_eok"),
         "notice_date": n.get("notice_date"),
-        "close_at": (n.get("close_at") or "")[:16] or None,
+        "close_at": close_at,
         "open_date": n.get("open_date"),
         "open_at": n.get("open_at"),
         "contract_method": n.get("contract_method"),
         "ntce_kind": n.get("ntce_kind"),
         "winner": n.get("winner"),
         "first_rank": n.get("first_rank"),
+        "second": n.get("second"),
+        "status": n.get("status"),
         "bid_count": n.get("bid_count"),
         "award_amount_eok": n.get("award_amount_eok"),
-        "win_rate_pct": n.get("win_rate_pct"),
-        "g2b_url": n.get("g2b_url"),
+        "award_to_budget_pct": n.get("award_to_budget_pct"),
+        "win_rate_pct": _win_rate_pct(n),
+        "g2b_url": _g2b_url(n),
         "soft_excluded": soft,
         "exclude_reason": list_exclude_reason(n, rules) if soft else None,
         "fit_verdict": None,
         "fit_score": None,
         "fit_reasons": [],
     }
-    if scored:
-        row["fit_verdict"] = scored.get("verdict")
-        row["fit_score"] = scored.get("score")
-        row["fit_reasons"] = list(scored.get("reasons") or [])
-        if scored.get("stops"):
-            row["fit_stops"] = list(scored["stops"])
-    return row
-
-
-def _detail(n: dict[str, Any], slim: dict[str, Any]) -> dict[str, Any]:
-    """Detail payload = slim + optional raw extras (notice files, bidders)."""
-    out = dict(slim)
+    bidders = _compact_bidders(n)
+    if bidders:
+        row["bidders"] = bidders
+        if row.get("bid_count") is None:
+            row["bid_count"] = len(bidders)
     extras = {
         k: n.get(k)
         for k in (
             "notice_files",
-            "bidders",
             "price_rate",
             "tech_rate",
             "award_method",
@@ -102,18 +146,36 @@ def _detail(n: dict[str, Any], slim: dict[str, Any]) -> dict[str, Any]:
             "prespec_no",
             "plan_no",
             "biz",
+            "asign_budget_eok",
+            "presmpt_eok",
+            "base_amount_eok",
+            "budget_kind",
             "source",
         )
         if n.get(k) is not None
     }
     if extras:
-        out["payload"] = extras
-    return out
+        row["payload"] = extras
+    if scored:
+        row["fit_verdict"] = scored.get("verdict")
+        row["fit_score"] = scored.get("score")
+        row["fit_reasons"] = list(scored.get("reasons") or [])
+        if scored.get("stops"):
+            row["fit_stops"] = list(scored["stops"])
+    return row
+
+
+def _detail(n: dict[str, Any], slim: dict[str, Any]) -> dict[str, Any]:
+    """Detail payload = slim (already carries bidders + payload extras)."""
+    return dict(slim)
 
 
 def build_spa_payload(repo_root: Path) -> dict[str, Any]:
+    from .detail import load_detail_notices
+
     rules = load_keywords()
-    notices = sort_notices(read_notices(repo_root / "data" / "notices.json", collapse=True))
+    # Same merge as legacy detail HTML: editorial seed fills blanks on bootstrap rows.
+    notices = sort_notices(load_detail_notices(repo_root))
     summaries = load_summaries(repo_root)
     profile = load_profile()
     now = _now()

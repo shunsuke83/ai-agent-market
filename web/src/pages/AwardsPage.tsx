@@ -6,7 +6,7 @@ import FitBadge from "../components/FitBadge";
 import { dataClient, type NoticeListItem } from "../data/client";
 import { useAsync } from "../hooks/useAsync";
 import { useDebounced } from "../hooks/useDebounced";
-import { fmtEok } from "../lib/format";
+import { fmtEok, fmtWinRate } from "../lib/format";
 
 export default function AwardsPage() {
   const [search, setSearch] = useState("");
@@ -72,7 +72,7 @@ export default function AwardsPage() {
                   key: "rate",
                   header: "낙찰률",
                   align: "right",
-                  render: (r) => (r.win_rate_pct != null ? `${r.win_rate_pct}%` : "-"),
+                  render: (r) => fmtWinRate(r.win_rate_pct, r.award_to_budget_pct),
                 },
               ]}
               rows={rows}

@@ -1,5 +1,34 @@
 export type FitVerdict = "GO" | "REVIEW" | "NO-GO";
 
+export type NoticeBidder = {
+  rank?: number | null;
+  name?: string | null;
+  bizno?: string | null;
+  amount_eok?: number | null;
+  rate_pct?: number | null;
+};
+
+export type NoticePayload = {
+  notice_files?: { name?: string; url?: string }[];
+  price_rate?: number | null;
+  tech_rate?: number | null;
+  award_method?: string | null;
+  industry_limit?: string | null;
+  participation_limit?: string | null;
+  record_limit?: string | null;
+  joint_method?: string | null;
+  prespec_no?: string | null;
+  plan_no?: string | null;
+  biz?: string | null;
+  asign_budget_eok?: number | null;
+  presmpt_eok?: number | null;
+  base_amount_eok?: number | null;
+  budget_kind?: string | null;
+  source?: string | null;
+  bidders?: NoticeBidder[];
+  [key: string]: unknown;
+};
+
 /** Row shown in notice lists. Public (spa/notices.json) and internal (/api/notices) share this shape. */
 export type NoticeListItem = {
   id: string;
@@ -14,7 +43,9 @@ export type NoticeListItem = {
   notice_date: string | null;
   close_at: string | null;
   open_date?: string | null;
+  open_at?: string | null;
   contract_method?: string | null;
+  ntce_kind?: string | null;
   soft_excluded?: boolean;
   exclude_reason?: string | null;
   fit_verdict?: FitVerdict | null;
@@ -22,23 +53,19 @@ export type NoticeListItem = {
   fit_reasons?: string[];
   winner?: string | null;
   first_rank?: string | null;
+  second?: string | null;
+  status?: string | null;
   bid_count?: number | null;
   award_amount_eok?: number | null;
+  award_to_budget_pct?: number | null;
   win_rate_pct?: number | null;
   g2b_url?: string | null;
+  bidders?: NoticeBidder[];
+  payload?: NoticePayload | null;
 };
 
 export type NoticeDetail = NoticeListItem & {
-  open_at?: string | null;
-  ntce_kind?: string | null;
-  winner?: string | null;
-  first_rank?: string | null;
-  bid_count?: number | null;
-  award_amount_eok?: number | null;
-  win_rate_pct?: number | null;
-  g2b_url?: string | null;
   updated_at?: string | null;
-  payload?: Record<string, unknown> | null;
 };
 
 export type NoticeListQuery = {

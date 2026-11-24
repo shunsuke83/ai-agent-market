@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import {
   Button,
   Card,
@@ -175,7 +175,8 @@ function AgencyDetail({
 }
 
 export default function AgenciesPage() {
-  const [search, setSearch] = useState("");
+  const [searchParams] = useSearchParams();
+  const [search, setSearch] = useState(searchParams.get("q") ?? "");
   const [selected, setSelected] = useState<string | null>(null);
   const [skipAuto, setSkipAuto] = useState(false);
   const q = useDebounced(search);

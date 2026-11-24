@@ -5,7 +5,7 @@ import AsyncView from "../components/AsyncView";
 import { dataClient, type NoticeListItem } from "../data/client";
 import { useAsync } from "../hooks/useAsync";
 import { useDebounced } from "../hooks/useDebounced";
-import { fmtEok } from "../lib/format";
+import { fmtEok, fmtWinRate } from "../lib/format";
 
 export default function PricingPage() {
   const [search, setSearch] = useState("");
@@ -19,7 +19,13 @@ export default function PricingPage() {
     if (state.status !== "ready") return [] as NoticeListItem[];
     const needle = q.trim().toLowerCase();
     return state.data.items
-      .filter((n) => n.bid_count != null || n.win_rate_pct != null || n.winner)
+      .filter(
+        (n) =>
+          n.bid_count != null ||
+          n.win_rate_pct != null ||
+          n.award_to_budget_pct != null ||
+          n.winner,
+      )
       .filter((n) => {
         if (!needle) return true;
         const hay = `${n.title ?? ""} ${n.org ?? ""} ${n.winner ?? ""}`.toLowerCase();
@@ -52,7 +58,7 @@ export default function PricingPage() {
                   key: "rate",
                   header: "낙찰률",
                   align: "right",
-                  render: (r) => (r.win_rate_pct != null ? `${r.win_rate_pct}%` : "-"),
+                  render: (r) => fmtWinRate(r.win_rate_pct, r.award_to_budget_pct),
                 },
                 { key: "budget", header: "예산(억)", align: "right", render: (r) => fmtEok(r.budget_eok) },
                 { key: "winner", header: "낙찰자", render: (r) => r.winner ?? "-" },

@@ -1,8 +1,8 @@
 {
   "generated_at": "데이터 기준 2026-11-23 19:56 KST · D1 동기화 · CF 미러 동기화",
-  "generated_at_iso": "2026-11-24T11:15:18.700984+09:00",
+  "generated_at_iso": "2026-11-24T11:25:43.028446+09:00",
   "has_fit": true,
-  "total_notices": 890,
+  "total_notices": 909,
   "open_notices": 116,
   "new_notices": 55,
   "go_count": 4,
@@ -30,8 +30,11 @@
       "ntce_kind": "등록공고",
       "winner": null,
       "first_rank": null,
+      "second": null,
+      "status": null,
       "bid_count": null,
       "award_amount_eok": null,
+      "award_to_budget_pct": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01837786&bidPbancOrd=000",
       "soft_excluded": false,
@@ -43,7 +46,32 @@
         "운영·용역이나 구축·제품 비중 확인(예외)",
         "자격 미확인 (업종 제한 — 공고서 확인)",
         "예산 81.0억 대형 — 제논 주관 컨소시엄 구성 가능할 때만 — 구간 기본 REVIEW"
-      ]
+      ],
+      "payload": {
+        "notice_files": [
+          {
+            "name": "공고서_국가_장기_일반_보안관제_단독_설명회_수요기관평가.hwpx",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01837786&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+          },
+          {
+            "name": "공고서_국가_장기_일반_보안관제_단독_설명회_수요기관평가.pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01837786&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+          }
+        ],
+        "price_rate": 10.0,
+        "tech_rate": 90.0,
+        "award_method": "협상에의한계약-협상에 의한 낙찰자 결정(SW사업)",
+        "industry_limit": true,
+        "participation_limit": false,
+        "record_limit": false,
+        "joint_method": "(없음)공동수급불허",
+        "prespec_no": "R26BD00297696",
+        "biz": "servc",
+        "asign_budget_eok": 81.008,
+        "presmpt_eok": 73.2637,
+        "budget_kind": "배정예산",
+        "source": "g2b_api"
+      }
     },
     {
       "id": "R26BK01837670-000",
@@ -65,8 +93,11 @@
       "ntce_kind": "재공고",
       "winner": null,
       "first_rank": null,
+      "second": null,
+      "status": null,
       "bid_count": null,
       "award_amount_eok": null,
+      "award_to_budget_pct": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01837670&bidPbancOrd=000",
       "soft_excluded": false,
@@ -80,6 +111,20 @@
         "자격 미확인 (업종 제한 — 공고서 확인)",
         "예산 61.7억 대형 — 제논 주관 컨소시엄 구성 가능할 때만 — 구간 기본 REVIEW"
       ],
+      "payload": {
+        "notice_files": [],
+        "award_method": "수의시담-일반경쟁->수의",
+        "industry_limit": true,
+        "participation_limit": false,
+        "record_limit": false,
+        "joint_method": "(전자)공동이행",
+        "prespec_no": "R26BD00272299",
+        "biz": "servc",
+        "asign_budget_eok": 61.7359,
+        "presmpt_eok": 55.8273,
+        "budget_kind": "배정예산",
+        "source": "g2b_api"
+      },
       "fit_stops": [
         "일정 미충족 (마감까지 영업일 0일)"
       ]
@@ -104,8 +149,11 @@
       "ntce_kind": "등록공고",
       "winner": null,
       "first_rank": null,
+      "second": null,
+      "status": null,
       "bid_count": null,
       "award_amount_eok": null,
+      "award_to_budget_pct": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01849387&bidPbancOrd=000",
       "soft_excluded": false,
@@ -118,7 +166,37 @@
         "자격 미확인 (업종 제한 — 공고서 확인)",
         "GenON S/A 솔루션 신호 없음",
         "예산 61.6억 대형 — 제논 주관 컨소시엄 구성 가능할 때만 — 구간 기본 REVIEW"
-      ]
+      ],
+      "payload": {
+        "notice_files": [
+          {
+            "name": "[긴급 공고] AI-HEMS, CEMS 운영플랫폼 개발 및 구축 용역.pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01849387&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+          },
+          {
+            "name": "01. [과업지시서] AI-HEMS, CEMS 운영플랫폼 개발 및 구축 용역.pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01849387&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+          },
+          {
+            "name": "02. [제안요청서] AI-HEMS, CEMS 운영플랫폼 개발 및 구축 용역.pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01849387&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+          }
+        ],
+        "price_rate": 10.0,
+        "tech_rate": 90.0,
+        "award_method": "협상에의한계약-협상에 의한 낙찰자 결정",
+        "industry_limit": true,
+        "participation_limit": false,
+        "record_limit": false,
+        "joint_method": "(수기)공동이행",
+        "prespec_no": "R26BD00301824",
+        "plan_no": "R26DD20933618",
+        "biz": "servc",
+        "asign_budget_eok": 61.6,
+        "presmpt_eok": 56.0,
+        "budget_kind": "배정예산",
+        "source": "g2b_api"
+      }
     },
     {
       "id": "R26BK01848903-000",
@@ -140,8 +218,11 @@
       "ntce_kind": "등록공고",
       "winner": null,
       "first_rank": null,
+      "second": null,
+      "status": null,
       "bid_count": null,
       "award_amount_eok": null,
+      "award_to_budget_pct": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01848903&bidPbancOrd=000",
       "soft_excluded": false,
@@ -153,7 +234,29 @@
         "사업유형 구축·개발",
         "GenON S/A 솔루션 신호 없음",
         "예산 42.9억 대형 — 제논 주관 컨소시엄 구성 가능할 때만 — 구간 기본 REVIEW"
-      ]
+      ],
+      "payload": {
+        "notice_files": [
+          {
+            "name": "공고서.zip",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01848903&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+          }
+        ],
+        "price_rate": 10.0,
+        "tech_rate": 90.0,
+        "award_method": "협상에의한계약-협상에 의한 낙찰자 결정",
+        "industry_limit": false,
+        "participation_limit": false,
+        "record_limit": false,
+        "joint_method": "(전자)공동이행",
+        "prespec_no": "R26BD00264052",
+        "plan_no": "R26DD20940648",
+        "biz": "servc",
+        "asign_budget_eok": 42.8784,
+        "presmpt_eok": 38.9804,
+        "budget_kind": "배정예산",
+        "source": "g2b_api"
+      }
     },
     {
       "id": "R26BK01839120-000",
@@ -175,8 +278,11 @@
       "ntce_kind": "등록공고",
       "winner": null,
       "first_rank": null,
+      "second": null,
+      "status": null,
       "bid_count": null,
       "award_amount_eok": null,
+      "award_to_budget_pct": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01839120&bidPbancOrd=000",
       "soft_excluded": false,
@@ -189,7 +295,29 @@
         "자격 미확인 (직접생산확인 품목 확인)",
         "GenON S/A 솔루션 신호 없음",
         "예산 15.6억 도전 (근거 충족률 엄격 적용) — 구간 기본 REVIEW"
-      ]
+      ],
+      "payload": {
+        "notice_files": [
+          {
+            "name": "공고 자료.zip",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01839120&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+          }
+        ],
+        "price_rate": 10.0,
+        "tech_rate": 90.0,
+        "award_method": "협상에의한계약-협상에 의한 낙찰자 결정(SW사업)",
+        "industry_limit": true,
+        "participation_limit": false,
+        "record_limit": false,
+        "joint_method": "(전자)공동이행",
+        "prespec_no": "R26BD00284570",
+        "plan_no": "R26DD20934875",
+        "biz": "servc",
+        "asign_budget_eok": 15.56,
+        "presmpt_eok": 14.1455,
+        "budget_kind": "배정예산",
+        "source": "g2b_api"
+      }
     },
     {
       "id": "R26BK01834827-000",
@@ -211,8 +339,11 @@
       "ntce_kind": "등록공고",
       "winner": null,
       "first_rank": null,
+      "second": null,
+      "status": null,
       "bid_count": null,
       "award_amount_eok": null,
+      "award_to_budget_pct": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01834827&bidPbancOrd=000",
       "soft_excluded": false,
@@ -227,6 +358,32 @@
         "GenON S/A 솔루션 신호 없음",
         "예산 14.5억 주력 (공공 낙찰 실적 구간)"
       ],
+      "payload": {
+        "notice_files": [
+          {
+            "name": "공고서(국가SW,중기간,20억미만,발표,긴급,차등)_정보시스템유지관리서비스.hwpx",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01834827&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+          },
+          {
+            "name": "공고서(국가SW,중기간,20억미만,발표,긴급,차등)_정보시스템유지관리서비스.pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01834827&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+          }
+        ],
+        "price_rate": 10.0,
+        "tech_rate": 90.0,
+        "award_method": "협상에의한계약-협상에 의한 낙찰자 결정(SW사업)",
+        "industry_limit": true,
+        "participation_limit": false,
+        "record_limit": false,
+        "joint_method": "(전자)공동이행",
+        "prespec_no": "R26BD00297042",
+        "plan_no": "R26DD20918790",
+        "biz": "servc",
+        "asign_budget_eok": 14.5052,
+        "presmpt_eok": 13.0863,
+        "budget_kind": "배정예산",
+        "source": "g2b_api"
+      },
       "fit_stops": [
         "회피: 타사가 구축한 시스템의 단순 운영·유지보수"
       ]
@@ -251,8 +408,11 @@
       "ntce_kind": "등록공고",
       "winner": null,
       "first_rank": null,
+      "second": null,
+      "status": null,
       "bid_count": null,
       "award_amount_eok": null,
+      "award_to_budget_pct": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01841656&bidPbancOrd=000",
       "soft_excluded": false,
@@ -264,7 +424,38 @@
         "사업유형 구축·개발",
         "GenON S/A 솔루션 신호 없음",
         "예산 13.1억 주력 (공공 낙찰 실적 구간)"
-      ]
+      ],
+      "payload": {
+        "notice_files": [
+          {
+            "name": "0. 입찰공고문.pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841656&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+          },
+          {
+            "name": "2. 제안 요청서.hwp",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841656&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01"
+          },
+          {
+            "name": "3. 가격입찰서.hwp",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841656&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
+          },
+          {
+            "name": "4. 공동수급표준협정서(공동이행방식)(안).hwp",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841656&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01"
+          }
+        ],
+        "price_rate": 10.0,
+        "tech_rate": 90.0,
+        "award_method": "협상에의한계약-협상에 의한 낙찰자 결정(SW사업)",
+        "joint_method": "(수기)공동이행",
+        "prespec_no": "R26BD00300244",
+        "plan_no": "R26DD20929757",
+        "biz": "thng",
+        "asign_budget_eok": 13.11,
+        "presmpt_eok": 11.9182,
+        "budget_kind": "배정예산",
+        "source": "g2b_api"
+      }
     },
     {
       "id": "R26BK01840972-000",
@@ -286,8 +477,11 @@
       "ntce_kind": "등록공고",
       "winner": null,
       "first_rank": null,
+      "second": null,
+      "status": null,
       "bid_count": null,
       "award_amount_eok": null,
+      "award_to_budget_pct": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01840972&bidPbancOrd=000",
       "soft_excluded": false,
@@ -300,6 +494,40 @@
         "실적 업종(금융)",
         "예산 12.2억 주력 (공공 낙찰 실적 구간)"
       ],
+      "payload": {
+        "notice_files": [
+          {
+            "name": "입찰공고서.hwp",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01840972&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+          },
+          {
+            "name": "입찰공고서.pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01840972&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+          },
+          {
+            "name": "안전보건수준평가 안내(적격수급업체 선정 지침 발췌)_최종.hwp",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01840972&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
+          },
+          {
+            "name": "2027년 AI 무역지원센터 운영 용역 제안요청서.hwp",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01840972&bidPbancOrd=000&fileType=&fileSeq=5&prcmBsneSeCd=03"
+          }
+        ],
+        "price_rate": 10.0,
+        "tech_rate": 90.0,
+        "award_method": "협상에의한계약-협상에 의한 낙찰자 결정",
+        "industry_limit": false,
+        "participation_limit": false,
+        "record_limit": false,
+        "joint_method": "(전자)공동이행",
+        "prespec_no": "R26BD00300214",
+        "plan_no": "R26DD20929416",
+        "biz": "servc",
+        "asign_budget_eok": 12.155,
+        "presmpt_eok": 11.05,
+        "budget_kind": "배정예산",
+        "source": "g2b_api"
+      },
       "fit_stops": [
         "운영·단순 용역(구축·제품 비중 없음)"
       ]
@@ -324,8 +552,11 @@
       "ntce_kind": "등록공고",
       "winner": null,
       "first_rank": null,
+      "second": null,
+      "status": null,
       "bid_count": null,
       "award_amount_eok": null,
+      "award_to_budget_pct": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01849452&bidPbancOrd=000",
       "soft_excluded": false,
@@ -336,7 +567,36 @@
         "솔루션 GenOS(S) · LLM, AX",
         "사업유형 구축·개발",
         "예산 8.0억 주력 (공공 낙찰 실적 구간)"
-      ]
+      ],
+      "payload": {
+        "notice_files": [
+          {
+            "name": "입찰공고문.hwp",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01849452&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+          },
+          {
+            "name": "입찰공고문.pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01849452&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+          },
+          {
+            "name": "DSU-AX 플랫폼 구축 제안요청서.hwp",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01849452&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+          }
+        ],
+        "price_rate": 10.0,
+        "tech_rate": 90.0,
+        "award_method": "협상에의한계약-협상에 의한 낙찰자 결정",
+        "industry_limit": true,
+        "participation_limit": false,
+        "record_limit": true,
+        "joint_method": "(전자)공동이행 또는 분담이행",
+        "plan_no": "R26DD20940938",
+        "biz": "servc",
+        "asign_budget_eok": 8.0,
+        "presmpt_eok": 7.2727,
+        "budget_kind": "배정예산",
+        "source": "g2b_api"
+      }
     },
     {
       "id": "R26BK01845527-000",
@@ -358,8 +618,11 @@
       "ntce_kind": "등록공고",
       "winner": null,
       "first_rank": null,
+      "second": null,
+      "status": null,
       "bid_count": null,
       "award_amount_eok": null,
+      "award_to_budget_pct": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01845527&bidPbancOrd=000",
       "soft_excluded": false,
@@ -370,7 +633,29 @@
         "솔루션 AI Agent 개발환경(S) · MCP",
         "사업유형 구축·개발",
         "예산 7.6억 소규모·레퍼런스 — 구간 기본 REVIEW"
-      ]
+      ],
+      "payload": {
+        "notice_files": [
+          {
+            "name": "R26BK01845527_국가과학기술연구회.pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01845527&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+          }
+        ],
+        "price_rate": 10.0,
+        "tech_rate": 90.0,
+        "award_method": "협상에의한계약-협상에 의한 낙찰자 결정(SW사업)",
+        "industry_limit": true,
+        "participation_limit": false,
+        "record_limit": false,
+        "joint_method": "(없음)공동수급불허",
+        "prespec_no": "R26BD00278862",
+        "plan_no": "R26DD20879071",
+        "biz": "servc",
+        "asign_budget_eok": 7.6499,
+        "presmpt_eok": 6.8992,
+        "budget_kind": "배정예산",
+        "source": "g2b_api"
+      }
     },
     {
       "id": "R26BK01839783-000",
@@ -392,8 +677,11 @@
       "ntce_kind": "등록공고",
       "winner": null,
       "first_rank": null,
+      "second": null,
+      "status": null,
       "bid_count": null,
       "award_amount_eok": null,
+      "award_to_budget_pct": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01839783&bidPbancOrd=000",
       "soft_excluded": false,
@@ -405,7 +693,43 @@
         "사업유형 구축·개발",
         "자격 미확인 (업종 제한 — 공고서 확인)",
         "예산 7.0억 소규모·레퍼런스 — 구간 기본 REVIEW"
-      ]
+      ],
+      "payload": {
+        "notice_files": [
+          {
+            "name": "2. 제안공모지침서.hwpx",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01839783&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=05"
+          },
+          {
+            "name": "2. 제안공모지침서.pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01839783&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=05"
+          },
+          {
+            "name": "3. 과업이행요청서.hwpx",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01839783&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=05"
+          },
+          {
+            "name": "3. 과업이행요청서.pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01839783&bidPbancOrd=000&fileType=&fileSeq=5&prcmBsneSeCd=05"
+          },
+          {
+            "name": "1. 「지역거점 AX 혁신 기술개발 사업」 AX 혁신 R&D센터 구축 설계 용역 공고.pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01839783&bidPbancOrd=000&fileType=&fileSeq=6&prcmBsneSeCd=05"
+          }
+        ],
+        "award_method": "설계공모-제안설계공모",
+        "industry_limit": true,
+        "participation_limit": false,
+        "record_limit": false,
+        "joint_method": "(수기)공동이행",
+        "prespec_no": "R26BD00300891",
+        "plan_no": "R26DD20930532",
+        "biz": "servc",
+        "asign_budget_eok": 7.04,
+        "presmpt_eok": 6.4,
+        "budget_kind": "배정예산",
+        "source": "g2b_api"
+      }
     },
     {
       "id": "R26BK01841095-000",
@@ -427,8 +751,11 @@
       "ntce_kind": "등록공고",
       "winner": null,
       "first_rank": null,
+      "second": null,
+      "status": null,
       "bid_count": null,
       "award_amount_eok": null,
+      "award_to_budget_pct": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01841095&bidPbancOrd=000",
       "soft_excluded": false,
@@ -442,6 +769,44 @@
         "일정 미충족 (마감까지 영업일 4일)",
         "예산 5.5억 소규모·레퍼런스 — 구간 기본 REVIEW"
       ],
+      "payload": {
+        "notice_files": [
+          {
+            "name": "1. 입찰공고문_AX 자율주행 공동조사 차량 구축 용역.hwpx",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841095&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+          },
+          {
+            "name": "2. 긴급입찰사유서_AX 자율주행 공동조사 차량 구축 용역.hwpx",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841095&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+          },
+          {
+            "name": "3. 과업지시서_AX 자율주행 공동조사 차량 구축 용역.hwpx",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841095&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+          },
+          {
+            "name": "4. 제안요청서_AX 자율주행 공동조사 차량 구축 용역.hwpx",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841095&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
+          },
+          {
+            "name": "1. 입찰공고문_AX 자율주행 공동조사 차량 구축 용역.pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01841095&bidPbancOrd=000&fileType=&fileSeq=5&prcmBsneSeCd=03"
+          }
+        ],
+        "price_rate": 10.0,
+        "tech_rate": 90.0,
+        "award_method": "협상에의한계약-협상에 의한 낙찰자 결정",
+        "industry_limit": true,
+        "participation_limit": false,
+        "record_limit": false,
+        "joint_method": "(전자)공동이행",
+        "prespec_no": "R26BD00298244",
+        "plan_no": "R26DD20936487",
+        "biz": "servc",
+        "asign_budget_eok": 5.55,
+        "presmpt_eok": 5.0455,
+        "budget_kind": "배정예산",
+        "source": "g2b_api"
+      },
       "fit_stops": [
         "자격 미충족 (업종 5898)",
         "일정 미충족 (마감까지 영업일 4일)"
@@ -469,8 +834,11 @@
       "ntce_kind": "등록공고",
       "winner": null,
       "first_rank": null,
+      "second": null,
+      "status": null,
       "bid_count": null,
       "award_amount_eok": null,
+      "award_to_budget_pct": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01849452&bidPbancOrd=000",
       "soft_excluded": false,
@@ -481,7 +849,36 @@
         "솔루션 GenOS(S) · LLM, AX",
         "사업유형 구축·개발",
         "예산 8.0억 주력 (공공 낙찰 실적 구간)"
-      ]
+      ],
+      "payload": {
+        "notice_files": [
+          {
+            "name": "입찰공고문.hwp",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01849452&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+          },
+          {
+            "name": "입찰공고문.pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01849452&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+          },
+          {
+            "name": "DSU-AX 플랫폼 구축 제안요청서.hwp",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01849452&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+          }
+        ],
+        "price_rate": 10.0,
+        "tech_rate": 90.0,
+        "award_method": "협상에의한계약-협상에 의한 낙찰자 결정",
+        "industry_limit": true,
+        "participation_limit": false,
+        "record_limit": true,
+        "joint_method": "(전자)공동이행 또는 분담이행",
+        "plan_no": "R26DD20940938",
+        "biz": "servc",
+        "asign_budget_eok": 8.0,
+        "presmpt_eok": 7.2727,
+        "budget_kind": "배정예산",
+        "source": "g2b_api"
+      }
     },
     {
       "id": "R26BK01817766-000",
@@ -503,8 +900,11 @@
       "ntce_kind": "등록공고",
       "winner": null,
       "first_rank": null,
+      "second": null,
+      "status": null,
       "bid_count": null,
       "award_amount_eok": null,
+      "award_to_budget_pct": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01817766&bidPbancOrd=000",
       "soft_excluded": false,
@@ -515,7 +915,45 @@
         "솔루션 GenOS(S) · 생성형, LLM",
         "사업유형 구축·개발",
         "예산 10.0억 주력 (공공 낙찰 실적 구간)"
-      ]
+      ],
+      "payload": {
+        "notice_files": [
+          {
+            "name": "1.입찰공고문(전자입찰).hwp",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01817766&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+          },
+          {
+            "name": "2.용역계약 일반조건(재정경제부).pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01817766&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+          },
+          {
+            "name": "3.과업지시서.pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01817766&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+          },
+          {
+            "name": "4.제안요청서.pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01817766&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
+          },
+          {
+            "name": "1.입찰공고문(전자입찰).pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01817766&bidPbancOrd=000&fileType=&fileSeq=5&prcmBsneSeCd=03"
+          }
+        ],
+        "price_rate": 10.0,
+        "tech_rate": 90.0,
+        "award_method": "협상에의한계약-협상에 의한 낙찰자 결정(SW사업)",
+        "industry_limit": true,
+        "participation_limit": false,
+        "record_limit": false,
+        "joint_method": "(없음)공동수급불허",
+        "prespec_no": "R26BD00294421",
+        "plan_no": "R26DD20916461",
+        "biz": "servc",
+        "asign_budget_eok": 10.0,
+        "presmpt_eok": 9.0909,
+        "budget_kind": "배정예산",
+        "source": "g2b_api"
+      }
     },
     {
       "id": "R26BK01805572-000",
@@ -537,8 +975,11 @@
       "ntce_kind": "등록공고",
       "winner": null,
       "first_rank": null,
+      "second": null,
+      "status": null,
       "bid_count": null,
       "award_amount_eok": null,
+      "award_to_budget_pct": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01805572&bidPbancOrd=000",
       "soft_excluded": false,
@@ -549,7 +990,33 @@
         "솔루션 AI Search / RAG(S) · RAG, 검색 증강, 지식 기반",
         "사업유형 구축·개발",
         "예산 8.8억 주력 (공공 낙찰 실적 구간)"
-      ]
+      ],
+      "payload": {
+        "notice_files": [
+          {
+            "name": "1. 공고서_국가_제한_개발_단독_수요기관평가.hwpx",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01805572&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+          },
+          {
+            "name": "1. 공고서_국가_제한_개발_단독_수요기관평가.pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01805572&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+          }
+        ],
+        "price_rate": 10.0,
+        "tech_rate": 90.0,
+        "award_method": "협상에의한계약-협상에 의한 낙찰자 결정(SW사업)",
+        "industry_limit": true,
+        "participation_limit": false,
+        "record_limit": false,
+        "joint_method": "(없음)공동수급불허",
+        "prespec_no": "R26BD00287993",
+        "plan_no": "R26DD20902266",
+        "biz": "servc",
+        "asign_budget_eok": 8.8095,
+        "presmpt_eok": 7.9455,
+        "budget_kind": "배정예산",
+        "source": "g2b_api"
+      }
     },
     {
       "id": "R26BK01784078-000",
@@ -571,8 +1038,11 @@
       "ntce_kind": "등록공고",
       "winner": null,
       "first_rank": null,
+      "second": null,
+      "status": "개찰 예정",
       "bid_count": null,
       "award_amount_eok": null,
+      "award_to_budget_pct": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01784078&bidPbancOrd=000",
       "soft_excluded": false,
@@ -583,7 +1053,37 @@
         "솔루션 GenMate(S) · 챗봇",
         "사업유형 구축·개발",
         "예산 9.9억 주력 (공공 낙찰 실적 구간)"
-      ]
+      ],
+      "payload": {
+        "notice_files": [
+          {
+            "name": "1-1. 입찰공고문(카지노 연계 AI 관광 플랫폼 앱 구축).hwp",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01784078&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+          },
+          {
+            "name": "1-2. 제안요청서(카지노 연계 AI 관광 플랫폼 앱 구축).hwpx",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01784078&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+          },
+          {
+            "name": "1-1. 입찰공고문(카지노 연계 AI 관광 플랫폼 앱 구축).pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01784078&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+          }
+        ],
+        "price_rate": 10.0,
+        "tech_rate": 90.0,
+        "award_method": "협상에의한계약-협상에 의한 낙찰자 결정(SW사업)",
+        "industry_limit": true,
+        "participation_limit": false,
+        "record_limit": false,
+        "joint_method": "(없음)공동수급불허",
+        "prespec_no": "R26BD00284200",
+        "plan_no": "R26DD20894053",
+        "biz": "servc",
+        "asign_budget_eok": 9.94,
+        "presmpt_eok": 9.0364,
+        "budget_kind": "배정예산",
+        "source": "g2b_api"
+      }
     },
     {
       "id": "R26BK01821717-000",
@@ -605,8 +1105,11 @@
       "ntce_kind": "등록공고",
       "winner": null,
       "first_rank": null,
+      "second": null,
+      "status": null,
       "bid_count": null,
       "award_amount_eok": null,
+      "award_to_budget_pct": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01821717&bidPbancOrd=000",
       "soft_excluded": false,
@@ -619,7 +1122,37 @@
         "ISP: RFP에 ISP 수행사의 후속 본사업 참여 제한 조항이 있는지 / 후속 본사업 예산·시기 근거가 있는지 (발주계획·사전규격·중기 예산)",
         "실적 업종(해양·물류)",
         "예산 9.8억 주력 (공공 낙찰 실적 구간)"
-      ]
+      ],
+      "payload": {
+        "notice_files": [
+          {
+            "name": "1. 입찰공고문.hwp",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01821717&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+          },
+          {
+            "name": "2. 제안요청서.hwpx",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01821717&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+          },
+          {
+            "name": "1. 입찰공고문.pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01821717&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+          }
+        ],
+        "price_rate": 10.0,
+        "tech_rate": 90.0,
+        "award_method": "협상에의한계약-협상에 의한 낙찰자 결정(SW사업)",
+        "industry_limit": true,
+        "participation_limit": false,
+        "record_limit": false,
+        "joint_method": "(전자)공동이행",
+        "prespec_no": "R26BD00294498",
+        "plan_no": "R26DD20916679",
+        "biz": "servc",
+        "asign_budget_eok": 9.8,
+        "presmpt_eok": 8.9091,
+        "budget_kind": "배정예산",
+        "source": "g2b_api"
+      }
     },
     {
       "id": "R26BK01819132-000",
@@ -641,8 +1174,11 @@
       "ntce_kind": "등록공고",
       "winner": null,
       "first_rank": null,
+      "second": null,
+      "status": null,
       "bid_count": null,
       "award_amount_eok": null,
+      "award_to_budget_pct": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01819132&bidPbancOrd=000",
       "soft_excluded": false,
@@ -655,7 +1191,37 @@
         "회피 규칙 예외 검토: 타사가 구축한 시스템의 단순 운영·유지보수",
         "예산 46.0억 대형 — 제논 주관 컨소시엄 구성 가능할 때만 — 구간 기본 REVIEW",
         "실적 업종(해양·물류)"
-      ]
+      ],
+      "payload": {
+        "notice_files": [
+          {
+            "name": "1. 입찰공고문.hwp",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01819132&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+          },
+          {
+            "name": "2. 제안요청서.hwpx",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01819132&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+          },
+          {
+            "name": "1. 입찰공고문.pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01819132&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+          }
+        ],
+        "price_rate": 10.0,
+        "tech_rate": 90.0,
+        "award_method": "협상에의한계약-협상에 의한 낙찰자 결정(SW사업)",
+        "industry_limit": true,
+        "participation_limit": false,
+        "record_limit": false,
+        "joint_method": "(전자)공동이행",
+        "prespec_no": "R26BD00294490",
+        "plan_no": "R26DD20916666",
+        "biz": "servc",
+        "asign_budget_eok": 46.0,
+        "presmpt_eok": 41.8182,
+        "budget_kind": "배정예산",
+        "source": "g2b_api"
+      }
     },
     {
       "id": "R26BK01845527-000",
@@ -677,8 +1243,11 @@
       "ntce_kind": "등록공고",
       "winner": null,
       "first_rank": null,
+      "second": null,
+      "status": null,
       "bid_count": null,
       "award_amount_eok": null,
+      "award_to_budget_pct": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01845527&bidPbancOrd=000",
       "soft_excluded": false,
@@ -689,7 +1258,29 @@
         "솔루션 AI Agent 개발환경(S) · MCP",
         "사업유형 구축·개발",
         "예산 7.6억 소규모·레퍼런스 — 구간 기본 REVIEW"
-      ]
+      ],
+      "payload": {
+        "notice_files": [
+          {
+            "name": "R26BK01845527_국가과학기술연구회.pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01845527&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+          }
+        ],
+        "price_rate": 10.0,
+        "tech_rate": 90.0,
+        "award_method": "협상에의한계약-협상에 의한 낙찰자 결정(SW사업)",
+        "industry_limit": true,
+        "participation_limit": false,
+        "record_limit": false,
+        "joint_method": "(없음)공동수급불허",
+        "prespec_no": "R26BD00278862",
+        "plan_no": "R26DD20879071",
+        "biz": "servc",
+        "asign_budget_eok": 7.6499,
+        "presmpt_eok": 6.8992,
+        "budget_kind": "배정예산",
+        "source": "g2b_api"
+      }
     },
     {
       "id": "R26BK01843717-000",
@@ -711,8 +1302,11 @@
       "ntce_kind": "등록공고",
       "winner": null,
       "first_rank": null,
+      "second": null,
+      "status": null,
       "bid_count": null,
       "award_amount_eok": null,
+      "award_to_budget_pct": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01843717&bidPbancOrd=000",
       "soft_excluded": false,
@@ -723,7 +1317,29 @@
         "솔루션 GenOS(S) · LLM",
         "사업유형 구축·개발",
         "예산 4.4억 소규모·레퍼런스 — 구간 기본 REVIEW"
-      ]
+      ],
+      "payload": {
+        "notice_files": [
+          {
+            "name": "R26BK01845527_국가과학기술연구회.pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01843717&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+          }
+        ],
+        "price_rate": 10.0,
+        "tech_rate": 90.0,
+        "award_method": "협상에의한계약-협상에 의한 낙찰자 결정(SW사업)",
+        "industry_limit": true,
+        "participation_limit": false,
+        "record_limit": false,
+        "joint_method": "(전자)공동이행",
+        "prespec_no": "R26BD00278861",
+        "plan_no": "R26DD20879075",
+        "biz": "servc",
+        "asign_budget_eok": 4.3533,
+        "presmpt_eok": 3.9575,
+        "budget_kind": "배정예산",
+        "source": "g2b_api"
+      }
     },
     {
       "id": "R26BK01834642-000",
@@ -745,8 +1361,11 @@
       "ntce_kind": "등록공고",
       "winner": null,
       "first_rank": null,
+      "second": null,
+      "status": null,
       "bid_count": null,
       "award_amount_eok": null,
+      "award_to_budget_pct": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01834642&bidPbancOrd=000",
       "soft_excluded": false,
@@ -758,7 +1377,40 @@
         "사업유형 구축·개발",
         "ISP: RFP에 ISP 수행사의 후속 본사업 참여 제한 조항이 있는지 / 후속 본사업 예산·시기 근거가 있는지 (발주계획·사전규격·중기 예산)",
         "예산 3.0억 소규모·레퍼런스 — 구간 기본 REVIEW"
-      ]
+      ],
+      "payload": {
+        "notice_files": [
+          {
+            "name": "(공고서) 용역_협상_SWO_국가_일반_국제_유지관리_1468,1542_3억미만_공동,사전,차등X_자체.hwpx",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01834642&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+          },
+          {
+            "name": "(공고서) 용역_협상_SWO_국가_일반_국제_유지관리_1468,1542_3억미만_공동,사전,차등X_자체.pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01834642&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+          },
+          {
+            "name": "네트워크 장비 구축·운영사업 추가특수조건(조달청지침)(제8258호)(20210615).hwpx",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01834642&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+          },
+          {
+            "name": "Summary Notice.pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01834642&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
+          }
+        ],
+        "price_rate": 10.0,
+        "tech_rate": 90.0,
+        "award_method": "협상에의한계약-협상에 의한 낙찰자 결정(SW사업)",
+        "industry_limit": true,
+        "participation_limit": false,
+        "record_limit": false,
+        "joint_method": "(전자)공동이행",
+        "prespec_no": "R26BD00289758",
+        "biz": "servc",
+        "asign_budget_eok": 3.0285,
+        "presmpt_eok": 2.7273,
+        "budget_kind": "배정예산",
+        "source": "g2b_api"
+      }
     },
     {
       "id": "R26BK01826851-001",
@@ -780,8 +1432,11 @@
       "ntce_kind": "변경공고",
       "winner": null,
       "first_rank": null,
+      "second": null,
+      "status": null,
       "bid_count": null,
       "award_amount_eok": null,
+      "award_to_budget_pct": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01826851&bidPbancOrd=001",
       "soft_excluded": false,
@@ -792,7 +1447,37 @@
         "솔루션 GenOS(S) · LLM",
         "사업유형 구축·개발",
         "예산 5.0억 소규모·레퍼런스 — 구간 기본 REVIEW"
-      ]
+      ],
+      "payload": {
+        "notice_files": [
+          {
+            "name": "1. 입찰공고문.hwp",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01826851&bidPbancOrd=001&fileType=&fileSeq=1&prcmBsneSeCd=03"
+          },
+          {
+            "name": "1. 입찰공고문.pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01826851&bidPbancOrd=001&fileType=&fileSeq=2&prcmBsneSeCd=03"
+          },
+          {
+            "name": "2. 제안요청서.hwp",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01826851&bidPbancOrd=001&fileType=&fileSeq=3&prcmBsneSeCd=03"
+          }
+        ],
+        "price_rate": 10.0,
+        "tech_rate": 90.0,
+        "award_method": "협상에의한계약-협상에 의한 낙찰자 결정",
+        "industry_limit": true,
+        "participation_limit": false,
+        "record_limit": false,
+        "joint_method": "(없음)공동수급불허",
+        "prespec_no": "R26BD00299198",
+        "plan_no": "R26DD20927657",
+        "biz": "servc",
+        "asign_budget_eok": 5.0,
+        "presmpt_eok": 4.5455,
+        "budget_kind": "배정예산",
+        "source": "g2b_api"
+      }
     },
     {
       "id": "R26BK01795668-000",
@@ -814,8 +1499,11 @@
       "ntce_kind": "등록공고",
       "winner": null,
       "first_rank": null,
+      "second": null,
+      "status": null,
       "bid_count": null,
       "award_amount_eok": null,
+      "award_to_budget_pct": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01795668&bidPbancOrd=000",
       "soft_excluded": false,
@@ -826,7 +1514,41 @@
         "솔루션 GenOS(S) · 생성형",
         "사업유형 구축·개발",
         "예산 3.8억 소규모·레퍼런스 — 구간 기본 REVIEW"
-      ]
+      ],
+      "payload": {
+        "notice_files": [
+          {
+            "name": "붙임1 입찰공고.pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01795668&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+          },
+          {
+            "name": "붙임2 제안요청서(최종).hwp",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01795668&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+          },
+          {
+            "name": "붙임3 계약 관련 제출서류(대학 소정양식).hwp",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01795668&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+          },
+          {
+            "name": "붙임4 영남이공대학교 산학협력단 사업자등록증.pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01795668&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
+          }
+        ],
+        "price_rate": 20.0,
+        "tech_rate": 80.0,
+        "award_method": "협상에의한계약-협상에 의한 낙찰자 결정(SW사업)",
+        "industry_limit": true,
+        "participation_limit": false,
+        "record_limit": false,
+        "joint_method": "(없음)공동수급불허",
+        "prespec_no": "R26BD00284173",
+        "plan_no": "R26DD20893991",
+        "biz": "servc",
+        "asign_budget_eok": 3.8,
+        "presmpt_eok": 3.4545,
+        "budget_kind": "배정예산",
+        "source": "g2b_api"
+      }
     },
     {
       "id": "R26BK01820030-000",
@@ -848,8 +1570,11 @@
       "ntce_kind": "등록공고",
       "winner": null,
       "first_rank": null,
+      "second": null,
+      "status": null,
       "bid_count": null,
       "award_amount_eok": null,
+      "award_to_budget_pct": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01820030&bidPbancOrd=000",
       "soft_excluded": false,
@@ -861,7 +1586,33 @@
         "운영·용역이나 구축·제품 비중 확인(예외)",
         "회피 규칙 예외 검토: 타사가 구축한 시스템의 단순 운영·유지보수",
         "예산 86.9억 대형 — 제논 주관 컨소시엄 구성 가능할 때만 — 구간 기본 REVIEW"
-      ]
+      ],
+      "payload": {
+        "notice_files": [
+          {
+            "name": "공고서(국가SW,80억이상,온라인발표)_유지관리.hwpx",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01820030&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+          },
+          {
+            "name": "공고서(국가SW,80억이상,온라인발표)_유지관리.pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01820030&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+          }
+        ],
+        "price_rate": 10.0,
+        "tech_rate": 90.0,
+        "award_method": "협상에의한계약-협상에 의한 낙찰자 결정(SW사업)",
+        "industry_limit": true,
+        "participation_limit": false,
+        "record_limit": false,
+        "joint_method": "(전자)공동이행",
+        "prespec_no": "R26BD00292967",
+        "plan_no": "R26DD20910414",
+        "biz": "servc",
+        "asign_budget_eok": 86.9228,
+        "presmpt_eok": 78.5748,
+        "budget_kind": "배정예산",
+        "source": "g2b_api"
+      }
     }
   ],
   "closing": [
@@ -885,8 +1636,11 @@
       "ntce_kind": "등록공고",
       "winner": null,
       "first_rank": null,
+      "second": null,
+      "status": null,
       "bid_count": null,
       "award_amount_eok": null,
+      "award_to_budget_pct": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01848324&bidPbancOrd=000",
       "soft_excluded": false,
@@ -900,6 +1654,28 @@
         "예산 0.4억 < 최소 3억",
         "예산 0.4억"
       ],
+      "payload": {
+        "notice_files": [
+          {
+            "name": "과업지시서.hwp",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01848324&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+          },
+          {
+            "name": "산출내역서.xlsx",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01848324&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+          }
+        ],
+        "award_method": "수의시담-수의시담",
+        "industry_limit": false,
+        "participation_limit": false,
+        "record_limit": false,
+        "joint_method": "(없음)공동수급불허",
+        "biz": "servc",
+        "asign_budget_eok": 0.374,
+        "presmpt_eok": 0.34,
+        "budget_kind": "배정예산",
+        "source": "g2b_api"
+      },
       "fit_stops": [
         "일정 미충족 (마감까지 영업일 0일)",
         "예산 0.4억 < 최소 3억"
@@ -925,8 +1701,11 @@
       "ntce_kind": "재공고",
       "winner": null,
       "first_rank": null,
+      "second": null,
+      "status": null,
       "bid_count": null,
       "award_amount_eok": null,
+      "award_to_budget_pct": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01837670&bidPbancOrd=000",
       "soft_excluded": false,
@@ -940,6 +1719,20 @@
         "자격 미확인 (업종 제한 — 공고서 확인)",
         "예산 61.7억 대형 — 제논 주관 컨소시엄 구성 가능할 때만 — 구간 기본 REVIEW"
       ],
+      "payload": {
+        "notice_files": [],
+        "award_method": "수의시담-일반경쟁->수의",
+        "industry_limit": true,
+        "participation_limit": false,
+        "record_limit": false,
+        "joint_method": "(전자)공동이행",
+        "prespec_no": "R26BD00272299",
+        "biz": "servc",
+        "asign_budget_eok": 61.7359,
+        "presmpt_eok": 55.8273,
+        "budget_kind": "배정예산",
+        "source": "g2b_api"
+      },
       "fit_stops": [
         "일정 미충족 (마감까지 영업일 0일)"
       ]
@@ -964,8 +1757,11 @@
       "ntce_kind": "등록공고",
       "winner": null,
       "first_rank": null,
+      "second": null,
+      "status": null,
       "bid_count": null,
       "award_amount_eok": null,
+      "award_to_budget_pct": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01808642&bidPbancOrd=000",
       "soft_excluded": false,
@@ -978,6 +1774,27 @@
         "일정 미충족 (마감까지 영업일 0일)",
         "예산 7.0억 소규모·레퍼런스 — 구간 기본 REVIEW"
       ],
+      "payload": {
+        "notice_files": [
+          {
+            "name": "입찰공고.zip",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01808642&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+          }
+        ],
+        "price_rate": 30.0,
+        "tech_rate": 70.0,
+        "award_method": "협상에의한계약-협상에 의한 낙찰자 결정(SW사업)",
+        "industry_limit": false,
+        "participation_limit": false,
+        "record_limit": false,
+        "joint_method": "(없음)공동수급불허",
+        "plan_no": "R26DD20916499",
+        "biz": "servc",
+        "asign_budget_eok": 7.0,
+        "presmpt_eok": 6.3636,
+        "budget_kind": "배정예산",
+        "source": "g2b_api"
+      },
       "fit_stops": [
         "일정 미충족 (마감까지 영업일 0일)"
       ]
@@ -1002,8 +1819,11 @@
       "ntce_kind": "등록공고",
       "winner": null,
       "first_rank": null,
+      "second": null,
+      "status": null,
       "bid_count": null,
       "award_amount_eok": null,
+      "award_to_budget_pct": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01806913&bidPbancOrd=000",
       "soft_excluded": false,
@@ -1019,6 +1839,40 @@
         "예산 3.3억 소규모·레퍼런스 — 구간 기본 REVIEW",
         "기존 고객 기관"
       ],
+      "payload": {
+        "notice_files": [
+          {
+            "name": "붙임. 입찰공고문.hwp",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01806913&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+          },
+          {
+            "name": "붙임. 입찰공고문.pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01806913&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+          },
+          {
+            "name": "붙임. 과업내용서.hwp",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01806913&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+          },
+          {
+            "name": "붙임. 제안요청서.hwp",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01806913&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
+          }
+        ],
+        "price_rate": 10.0,
+        "tech_rate": 90.0,
+        "award_method": "협상에의한계약-협상에 의한 낙찰자 결정",
+        "industry_limit": true,
+        "participation_limit": false,
+        "record_limit": false,
+        "joint_method": "(전자)공동이행",
+        "prespec_no": "R26BD00290104",
+        "plan_no": "R26DD20906875",
+        "biz": "servc",
+        "asign_budget_eok": 3.279,
+        "presmpt_eok": 2.9809,
+        "budget_kind": "배정예산",
+        "source": "g2b_api"
+      },
       "fit_stops": [
         "인증 미충족 (CSAP)",
         "일정 미충족 (마감까지 영업일 0일)"
@@ -1044,8 +1898,11 @@
       "ntce_kind": "등록공고",
       "winner": null,
       "first_rank": null,
+      "second": null,
+      "status": null,
       "bid_count": null,
       "award_amount_eok": null,
+      "award_to_budget_pct": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01832373&bidPbancOrd=000",
       "soft_excluded": false,
@@ -1061,6 +1918,35 @@
         "GenON S/A 솔루션 신호 없음",
         "예산 2.8억"
       ],
+      "payload": {
+        "notice_files": [
+          {
+            "name": "1. 입찰공고서(신규_022호)_일반(총액)2단계(규격가격동시).pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01832373&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+          },
+          {
+            "name": "2. 구매사양서 및 도면.pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01832373&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01"
+          },
+          {
+            "name": "규격입찰서_양식.hwp",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01832373&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
+          },
+          {
+            "name": "보안서약서 및 청렴계약 입찰특별유의서.hwp",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01832373&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01"
+          }
+        ],
+        "award_method": "규격가격동시입찰-제안적격자 중 예가 내 최저가 투찰자",
+        "joint_method": "(없음)공동수급불허",
+        "prespec_no": "R26BD00297940",
+        "plan_no": "R26DD20924641",
+        "biz": "thng",
+        "asign_budget_eok": 2.842,
+        "presmpt_eok": 2.5836,
+        "budget_kind": "배정예산",
+        "source": "g2b_api"
+      },
       "fit_stops": [
         "일정 미충족 (마감까지 영업일 0일)",
         "예산 2.8억 < 최소 3억"
@@ -1086,8 +1972,11 @@
       "ntce_kind": "재공고",
       "winner": null,
       "first_rank": null,
+      "second": null,
+      "status": null,
       "bid_count": null,
       "award_amount_eok": null,
+      "award_to_budget_pct": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01842085&bidPbancOrd=000",
       "soft_excluded": false,
@@ -1103,6 +1992,35 @@
         "GenON S/A 솔루션 신호 없음",
         "예산 0.4억"
       ],
+      "payload": {
+        "notice_files": [
+          {
+            "name": "1.2026-057-1입찰공고(화재 및 요구조자 검출용 AI 기술 실증을 위한 CCTV 모니터링 시스템 고도화).hwpx",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01842085&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+          },
+          {
+            "name": "1.2026-057-1입찰공고(화재 및 요구조자 검출용 AI 기술 실증을 위한 CCTV 모니터링 시스템 고도화).pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01842085&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01"
+          },
+          {
+            "name": "3.제작사양서_CCTV모니터링프로그램_고도화_261104_최종.hwpx",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01842085&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
+          },
+          {
+            "name": "5.제안요청서_CCTV모니터링프로그램_고도화_261104_규격가격동시입찰_최종.hwpx",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01842085&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=01"
+          }
+        ],
+        "award_method": "규격가격동시입찰-제안적격자 중 예가 내 최저가 투찰자",
+        "joint_method": "(없음)공동수급불허",
+        "prespec_no": "R26BD00295451",
+        "plan_no": "R26DD20919194",
+        "biz": "thng",
+        "asign_budget_eok": 0.36,
+        "presmpt_eok": 0.3273,
+        "budget_kind": "배정예산",
+        "source": "g2b_api"
+      },
       "fit_stops": [
         "자격 미충족 (직접생산확인 없음(패키지소프트웨어개발및도입서비스))",
         "일정 미충족 (마감까지 영업일 1일)",
@@ -1129,8 +2047,11 @@
       "ntce_kind": "재공고",
       "winner": null,
       "first_rank": null,
+      "second": null,
+      "status": null,
       "bid_count": null,
       "award_amount_eok": null,
+      "award_to_budget_pct": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01822606&bidPbancOrd=000",
       "soft_excluded": false,
@@ -1145,6 +2066,40 @@
         "GenON S/A 솔루션 신호 없음",
         "예산 1.1억"
       ],
+      "payload": {
+        "notice_files": [
+          {
+            "name": "(재입찰공고문)26년도 PIM인공지능반도체 핵심기술개발사업 효과분석 및 산업동향조사 연구(변환본).pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01822606&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+          },
+          {
+            "name": "(재입찰공고문)26년도 PIM인공지능반도체 핵심기술개발사업 효과분석 및 산업동향조사 연구.hwp",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01822606&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+          },
+          {
+            "name": "(제안요청서) 26년도 PIM인공지능반도체 핵심기술개발사업 효과분석 및 산업동향조사 연구.hwp",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01822606&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+          },
+          {
+            "name": "(계약예규) 용역계약일반조건(계약예규)(제149호)(20260430).hwpx",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01822606&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
+          }
+        ],
+        "price_rate": 10.0,
+        "tech_rate": 90.0,
+        "award_method": "협상에의한계약-협상에 의한 낙찰자 결정",
+        "industry_limit": true,
+        "participation_limit": false,
+        "record_limit": false,
+        "joint_method": "(전자)공동이행",
+        "prespec_no": "R26BD00287950",
+        "plan_no": "R26DD20902391",
+        "biz": "servc",
+        "asign_budget_eok": 1.09,
+        "presmpt_eok": 0.9909,
+        "budget_kind": "배정예산",
+        "source": "g2b_api"
+      },
       "fit_stops": [
         "일정 미충족 (마감까지 영업일 1일)",
         "예산 1.1억 < 최소 3억"
@@ -1170,8 +2125,11 @@
       "ntce_kind": "재공고",
       "winner": null,
       "first_rank": null,
+      "second": null,
+      "status": null,
       "bid_count": null,
       "award_amount_eok": null,
+      "award_to_budget_pct": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01820448&bidPbancOrd=000",
       "soft_excluded": false,
@@ -1187,6 +2145,32 @@
         "예산 7.1억 소규모·레퍼런스 — 구간 기본 REVIEW",
         "실적 업종(발전·에너지)"
       ],
+      "payload": {
+        "notice_files": [
+          {
+            "name": "재공고서(한강홍수통제소)_국가_중기간_유지관리_수평_SW_1468+0036_공동.hwpx",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01820448&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+          },
+          {
+            "name": "재공고서(한강홍수통제소)_국가_중기간_유지관리_수평_SW_1468+0036_공동.pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01820448&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+          }
+        ],
+        "price_rate": 10.0,
+        "tech_rate": 90.0,
+        "award_method": "협상에의한계약-협상에 의한 낙찰자 결정(SW사업)",
+        "industry_limit": true,
+        "participation_limit": false,
+        "record_limit": false,
+        "joint_method": "(전자)공동이행",
+        "prespec_no": "R26BD00287478",
+        "plan_no": "R26DD20900742",
+        "biz": "servc",
+        "asign_budget_eok": 7.0563,
+        "presmpt_eok": 6.3636,
+        "budget_kind": "배정예산",
+        "source": "g2b_api"
+      },
       "fit_stops": [
         "자격 미충족 (직접생산확인 없음(정보시스템유지관리서비스))",
         "일정 미충족 (마감까지 영업일 1일)",
@@ -1214,8 +2198,11 @@
       "ntce_kind": "등록공고",
       "winner": null,
       "first_rank": null,
+      "second": null,
+      "status": null,
       "bid_count": null,
       "award_amount_eok": null,
+      "award_to_budget_pct": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01803784&bidPbancOrd=000",
       "soft_excluded": false,
@@ -1230,6 +2217,32 @@
         "실적 업종(해양·물류)",
         "예산 2.5억"
       ],
+      "payload": {
+        "notice_files": [
+          {
+            "name": "공고서_국가_제한_개발_단독_수요기관평가.hwpx",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01803784&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+          },
+          {
+            "name": "공고서_국가_제한_개발_단독_수요기관평가.pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01803784&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+          }
+        ],
+        "price_rate": 20.0,
+        "tech_rate": 80.0,
+        "award_method": "협상에의한계약-협상에 의한 낙찰자 결정(SW사업)",
+        "industry_limit": true,
+        "participation_limit": false,
+        "record_limit": false,
+        "joint_method": "(없음)공동수급불허",
+        "prespec_no": "R26BD00293445",
+        "plan_no": "R26DD20891261",
+        "biz": "servc",
+        "asign_budget_eok": 2.5221,
+        "presmpt_eok": 2.2727,
+        "budget_kind": "배정예산",
+        "source": "g2b_api"
+      },
       "fit_stops": [
         "일정 미충족 (마감까지 영업일 1일)",
         "예산 2.5억 < 최소 3억"
@@ -1255,8 +2268,11 @@
       "ntce_kind": "등록공고",
       "winner": null,
       "first_rank": null,
+      "second": null,
+      "status": null,
       "bid_count": null,
       "award_amount_eok": null,
+      "award_to_budget_pct": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01805007&bidPbancOrd=000",
       "soft_excluded": false,
@@ -1270,6 +2286,32 @@
         "일정 미충족 (마감까지 영업일 1일)",
         "예산 5.0억 소규모·레퍼런스 — 구간 기본 REVIEW"
       ],
+      "payload": {
+        "notice_files": [
+          {
+            "name": "공고서(지방SW,중기간,20억미만,서면,긴급)경북 학생평가 전환을 위한 AI  기반 서·논술형 평가지원시스템 도입 및 운영.hwpx",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01805007&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+          },
+          {
+            "name": "공고서(지방SW,중기간,20억미만,서면,긴급)경북 학생평가 전환을 위한 AI  기반 서·논술형 평가지원시스템 도입 및 운영.pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01805007&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+          }
+        ],
+        "price_rate": 10.0,
+        "tech_rate": 90.0,
+        "award_method": "협상에의한계약-협상에 의한 낙찰자 결정(SW사업)",
+        "industry_limit": true,
+        "participation_limit": false,
+        "record_limit": false,
+        "joint_method": "(전자)공동이행",
+        "prespec_no": "R26BD00287650",
+        "plan_no": "R26DD20894201",
+        "biz": "servc",
+        "asign_budget_eok": 5.0452,
+        "presmpt_eok": 4.5455,
+        "budget_kind": "배정예산",
+        "source": "g2b_api"
+      },
       "fit_stops": [
         "인증 미충족 (CSAP)",
         "일정 미충족 (마감까지 영업일 1일)"
@@ -1295,8 +2337,11 @@
       "ntce_kind": "등록공고",
       "winner": null,
       "first_rank": null,
+      "second": null,
+      "status": "개찰 예정",
       "bid_count": null,
       "award_amount_eok": null,
+      "award_to_budget_pct": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01764898&bidPbancOrd=000",
       "soft_excluded": false,
@@ -1311,6 +2356,13 @@
         "예산 19.8억 도전 (근거 충족률 엄격 적용) — 구간 기본 REVIEW",
         "기존 고객 기관"
       ],
+      "payload": {
+        "biz": "servc",
+        "asign_budget_eok": 19.788,
+        "presmpt_eok": 17.8636,
+        "budget_kind": "배정예산",
+        "source": "g2b_api"
+      },
       "fit_stops": [
         "일정 미충족 (마감까지 영업일 1일)"
       ]
@@ -1335,8 +2387,11 @@
       "ntce_kind": "등록공고",
       "winner": null,
       "first_rank": null,
+      "second": null,
+      "status": null,
       "bid_count": null,
       "award_amount_eok": null,
+      "award_to_budget_pct": null,
       "win_rate_pct": null,
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01835383&bidPbancOrd=000",
       "soft_excluded": false,
@@ -1354,6 +2409,41 @@
         "기존 고객 기관",
         "예산 2.1억"
       ],
+      "payload": {
+        "notice_files": [
+          {
+            "name": "1. 입찰공고문(재무공고 제2026-2624호).hwpx",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01835383&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+          },
+          {
+            "name": "2. 용역설명서.hwpx",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01835383&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+          },
+          {
+            "name": "3. 과업내용서.hwpx",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01835383&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
+          },
+          {
+            "name": "4. 단가산출서.pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01835383&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
+          },
+          {
+            "name": "1. 입찰공고문(재무공고 제2026-2624호).pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01835383&bidPbancOrd=000&fileType=&fileSeq=5&prcmBsneSeCd=03"
+          }
+        ],
+        "award_method": "적격심사제-관리규정외 수기심사(총점입력)",
+        "industry_limit": true,
+        "participation_limit": false,
+        "record_limit": false,
+        "joint_method": "(없음)공동수급불허",
+        "plan_no": "R26DD20932825",
+        "biz": "servc",
+        "asign_budget_eok": 2.0656,
+        "presmpt_eok": 1.8779,
+        "budget_kind": "배정예산",
+        "source": "g2b_api"
+      },
       "fit_stops": [
         "일정 미충족 (마감까지 영업일 1일)"
       ]
