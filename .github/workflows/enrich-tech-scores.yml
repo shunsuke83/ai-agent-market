@@ -1,0 +1,164 @@
+name: Enrich tech scores (OpengCompt)
+
+# One-shot / on-demand: re-fetch OpengCompt rows so techEvlVal/totalEvlAmtVal
+# land in notices.json when the API returns them.
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "probe (4 notices) | scored (price-scored batch) | both"
+        required: true
+        default: "both"
+        type: choice
+        options:
+          - probe
+          - scored
+          - both
+      scored_limit:
+        description: "Max notices for --price-scored-only"
+        required: false
+        default: "80"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: enrich-tech-scores
+  cancel-in-progress: false
+
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Require DATA_GO_KR_SERVICE_KEY
+        env:
+          KEY: ${{ secrets.DATA_GO_KR_SERVICE_KEY }}
+        run: |
+          if [ -z "$KEY" ]; then
+            echo "::error::Repo secret DATA_GO_KR_SERVICE_KEY is missing."
+            exit 1
+          fi
+
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: pip install -r collector/requirements.txt
+
+      - name: Probe verification notices
+        if: inputs.mode == 'probe' || inputs.mode == 'both'
+        env:
+          DATA_GO_KR_SERVICE_KEY: ${{ secrets.DATA_GO_KR_SERVICE_KEY }}
+          G2B_CONNECT_TIMEOUT: "15"
+          G2B_TIMEOUT: "90"
+          G2B_HTTP_RETRIES: "8"
+          G2B_SLEEP: "0.6"
+          G2B_429_COOLDOWN: "120"
+        working-directory: collector
+        run: >
+          python -m g2b.collect enrich-bidders --force
+          --bids R25BK01118401-000,R25BK01137316-001,R25BK01214770-000,R25BK01077222-000
+
+      - name: Score coverage after probe
+        if: inputs.mode == 'probe' || inputs.mode == 'both'
+        working-directory: collector
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          notices = json.loads(Path("../data/notices.json").read_text(encoding="utf-8"))["notices"]
+          want = {
+              "R25BK01118401-000",
+              "R25BK01137316-001",
+              "R25BK01214770-000",
+              "R25BK01077222-000",
+          }
+          tech = price = total = 0
+          for n in notices:
+              key = f"{n.get('bid_no')}-{n.get('bid_ord') or '000'}"
+              if key not in want:
+                  continue
+              print("notice", key, "bidders", len(n.get("bidders") or []))
+              for b in n.get("bidders") or []:
+                  if not isinstance(b, dict):
+                      continue
+                  print(
+                      " ",
+                      b.get("rank"),
+                      b.get("name"),
+                      "rate",
+                      b.get("rate_pct"),
+                      "price",
+                      b.get("price_score"),
+                      "tech",
+                      b.get("tech_score"),
+                      "total",
+                      b.get("total_score"),
+                  )
+                  if b.get("tech_score") not in (None, ""):
+                      tech += 1
+                  if b.get("price_score") not in (None, ""):
+                      price += 1
+                  if b.get("total_score") not in (None, ""):
+                      total += 1
+          print(json.dumps({"probe_tech": tech, "probe_price": price, "probe_total": total}))
+          if tech == 0:
+              print("::warning::techEvlVal still empty after probe — API may not return it.")
+          PY
+
+      - name: Backfill price-scored notices
+        if: inputs.mode == 'scored' || inputs.mode == 'both'
+        env:
+          DATA_GO_KR_SERVICE_KEY: ${{ secrets.DATA_GO_KR_SERVICE_KEY }}
+          G2B_CONNECT_TIMEOUT: "15"
+          G2B_TIMEOUT: "90"
+          G2B_HTTP_RETRIES: "8"
+          G2B_SLEEP: "0.6"
+          G2B_429_COOLDOWN: "120"
+        working-directory: collector
+        run: >
+          python -m g2b.collect enrich-bidders --force --price-scored-only
+          --limit ${{ inputs.scored_limit }}
+
+      - name: Global score coverage
+        working-directory: collector
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          notices = json.loads(Path("../data/notices.json").read_text(encoding="utf-8"))["notices"]
+          tech = price = total = 0
+          for n in notices:
+              for b in n.get("bidders") or []:
+                  if not isinstance(b, dict):
+                      continue
+                  if b.get("tech_score") not in (None, ""):
+                      tech += 1
+                  if b.get("price_score") not in (None, ""):
+                      price += 1
+                  if b.get("total_score") not in (None, ""):
+                      total += 1
+          print(json.dumps({"tech_score_rows": tech, "price_score_rows": price, "total_score_rows": total}))
+          PY
+
+      - name: Export SPA JSON
+        env:
+          COMPANY_PROFILE: ${{ secrets.COMPANY_PROFILE }}
+        working-directory: collector
+        run: python -m g2b.collect export-spa
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/notices.json data/spa/
+          if git diff --staged --quiet; then
+            echo "No data changes."
+          else
+            git commit -m "Backfill OpengCompt bidder scores (tech/price/total)."
+            git push
+          fi

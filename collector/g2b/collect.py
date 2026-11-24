@@ -661,7 +661,10 @@ def cmd_enrich_bidders(args: argparse.Namespace) -> int:
         consecutive_429 = 0
         fetched += 1
         if rows and not logged_keys:
-            print(f"Bidder item keys: {sorted(rows[0])}")
+            keys = sorted(rows[0])
+            print(f"Bidder item keys: {keys}")
+            for k in ("bidprcrt", "bidPrceEvlVal", "techEvlVal", "totalEvlAmtVal"):
+                print(f"  sample {k}={rows[0].get(k)!r}")
             logged_keys = True
         if not rows:
             empty += 1
