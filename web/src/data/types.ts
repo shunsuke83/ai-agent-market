@@ -75,10 +75,16 @@ export type Prespec = {
   title: string | null;
   org: string | null;
   registered_at: string | null;
+  registered_date?: string | null;
   opinion_close_at: string | null;
   asign_budget_eok: number | null;
   scope?: string | null;
   nature?: string | null;
+  fields?: string[];
+  bid_nos?: string[];
+  spec_files?: string[];
+  biz_div?: string | null;
+  order_org?: string | null;
 };
 
 export type OrderPlan = Record<string, unknown>;

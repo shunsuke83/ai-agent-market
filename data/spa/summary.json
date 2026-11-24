@@ -1,13 +1,13 @@
 {
   "generated_at": "데이터 기준 2026-11-23 19:56 KST · D1 동기화 · CF 미러 동기화",
-  "generated_at_iso": "2026-11-24T10:11:44.968334+09:00",
+  "generated_at_iso": "2026-11-24T11:00:32.780009+09:00",
   "has_fit": true,
   "total_notices": 890,
   "open_notices": 119,
   "new_notices": 55,
   "go_count": 4,
-  "review_count": 19,
-  "closing_soon": 97,
+  "review_count": 21,
+  "closing_soon": 98,
   "band_count": 16,
   "new": [
     {
@@ -829,38 +829,37 @@
       ]
     },
     {
-      "id": "R26BK01820030-000",
-      "bid_no": "R26BK01820030",
+      "id": "R26BK01829604-000",
+      "bid_no": "R26BK01829604",
       "bid_ord": "000",
-      "title": "2027년 지능형 업무관리 플랫폼(온AI) 운영 및 유지관리",
-      "org": "한국지능정보사회진흥원",
+      "title": "26~27-N-교육훈련용 AI 조교 체계개발 실증",
+      "org": "해군교육사령부",
       "scope": "AI SW 확대",
-      "nature": "운영·유지보수",
+      "nature": "연구·교육·행사",
       "fields": [
         "AI 일반"
       ],
-      "budget_eok": 86.9228,
-      "notice_date": "2026-11-10",
-      "close_at": "2026-12-03 10:00",
-      "open_date": "2026-12-03",
-      "open_at": "2026-12-03 11:00",
-      "contract_method": "일반경쟁",
-      "ntce_kind": "등록공고",
+      "budget_eok": 7.99,
+      "notice_date": "2026-11-13",
+      "close_at": "2026-11-24 11:00",
+      "open_date": "2026-11-30",
+      "open_at": "2026-11-30 11:00",
+      "contract_method": "제한경쟁",
+      "ntce_kind": "재공고",
       "winner": null,
       "first_rank": null,
       "bid_count": null,
       "award_amount_eok": null,
       "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01820030&bidPbancOrd=000",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01829604&bidPbancOrd=000",
       "soft_excluded": false,
       "exclude_reason": null,
       "fit_verdict": "REVIEW",
-      "fit_score": 80,
+      "fit_score": 86,
       "fit_reasons": [
-        "솔루션 AI Agent 개발환경(S) · MCP",
-        "운영·용역이나 구축·제품 비중 확인(예외)",
-        "회피 규칙 예외 검토: 타사가 구축한 시스템의 단순 운영·유지보수",
-        "예산 86.9억 대형 — 제논 주관 컨소시엄 구성 가능할 때만 — 구간 기본 REVIEW"
+        "솔루션 AI Search / RAG(S) · RAG, 지식베이스",
+        "사업유형 구축·개발",
+        "예산 8.0억 소규모·레퍼런스 — 구간 기본 REVIEW"
       ]
     }
   ],
@@ -891,18 +890,14 @@
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01840144&bidPbancOrd=000",
       "soft_excluded": false,
       "exclude_reason": null,
-      "fit_verdict": "NO-GO",
-      "fit_score": 23,
+      "fit_verdict": "REVIEW",
+      "fit_score": 42,
       "fit_reasons": [
         "솔루션 미매칭",
         "사업유형 연구·교육·행사",
-        "일정 미충족 (마감까지 영업일 0일)",
         "구축·제품 중심 사업 아님(검토)",
         "GenON S/A 솔루션 신호 없음",
         "예산 5.5억 소규모·레퍼런스 — 구간 기본 REVIEW"
-      ],
-      "fit_stops": [
-        "일정 미충족 (마감까지 영업일 0일)"
       ]
     },
     {
@@ -931,16 +926,12 @@
       "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01829604&bidPbancOrd=000",
       "soft_excluded": false,
       "exclude_reason": null,
-      "fit_verdict": "NO-GO",
-      "fit_score": 62,
+      "fit_verdict": "REVIEW",
+      "fit_score": 86,
       "fit_reasons": [
         "솔루션 AI Search / RAG(S) · RAG, 지식베이스",
         "사업유형 구축·개발",
-        "일정 미충족 (마감까지 영업일 0일)",
         "예산 8.0억 소규모·레퍼런스 — 구간 기본 REVIEW"
-      ],
-      "fit_stops": [
-        "일정 미충족 (마감까지 영업일 0일)"
       ]
     },
     {
@@ -970,16 +961,14 @@
       "soft_excluded": false,
       "exclude_reason": null,
       "fit_verdict": "NO-GO",
-      "fit_score": 59,
+      "fit_score": 82,
       "fit_reasons": [
         "솔루션 GenOS(S) · LLM, sLLM, SLLM",
         "사업유형 구축·개발",
-        "일정 미충족 (마감까지 영업일 0일)",
         "예산 0.3억 < 최소 3억",
         "예산 0.3억"
       ],
       "fit_stops": [
-        "일정 미충족 (마감까지 영업일 0일)",
         "예산 0.3억 < 최소 3억"
       ]
     },
