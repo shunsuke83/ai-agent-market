@@ -297,9 +297,12 @@ def write_spa_export(
     and the React client falls back to the list. Set write_detail_files=True for CDN
     single-object fetches.
     """
+    from .competitors import build_spa_competitors
+
     payload = build_spa_payload(repo_root)
     bidders = _bidders_index(repo_root)
     agencies = _agencies_index(repo_root)
+    competitors = build_spa_competitors(repo_root)
     targets = [repo_root / "data" / "spa"]
     if dest is not None:
         targets.append(Path(dest) / "data" / "spa")
@@ -325,6 +328,10 @@ def write_spa_export(
             json.dumps({"agencies": agencies}, ensure_ascii=False),
             encoding="utf-8",
         )
+        (out / "competitors.json").write_text(
+            json.dumps(competitors, ensure_ascii=False),
+            encoding="utf-8",
+        )
         if write_detail_files:
             detail_dir = out / "notices"
             detail_dir.mkdir()
@@ -342,6 +349,7 @@ def write_spa_export(
         "details": detail_count,
         "bidders": len(bidders),
         "agencies": len(agencies),
+        "competitors": len(competitors.get("firms") or []),
         "has_fit": payload["summary"]["has_fit"],
         "open_notices": payload["summary"]["open_notices"],
         "dirs": [str(t) for t in targets],

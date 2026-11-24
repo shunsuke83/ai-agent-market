@@ -6,6 +6,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from g2b.competitors import (
     aggregate_competitor_kpis,
     build_alias_index,
+    build_spa_competitors,
     core_bidder_coverage,
     count_live_bids,
     load_competitors_config,
@@ -97,7 +98,11 @@ def test_count_live_bids_from_openg_bidders():
 
 
 def test_replace_overview_roundtrip():
-    html = (ROOT / "competitors.html").read_text(encoding="utf-8")
+    # Root competitors.html is an SPA redirect stub; use a minimal legacy table fixture.
+    html = (
+        "<h2>한눈에 보기</h2><div class=\"tbl\"><table>"
+        "<thead><tr><th>x</th></tr></thead><tbody><tr><td>old</td></tr></tbody></table></div>"
+    )
     row = render_overview_row(
         {
             "name": "테스트사",
@@ -114,3 +119,15 @@ def test_replace_overview_roundtrip():
     assert 'class="num">1.5</td>' in updated
     assert updated.count("편집 조사 낙찰</th>") == 1
     assert replace_overview_table(updated, row).count('<p class="note">낙찰 건수 순.') == 1
+
+
+def test_spa_competitors_includes_analysis_and_kpis():
+    payload = build_spa_competitors(ROOT)
+    assert payload["summary"]["listed"] == 23
+    assert payload["summary"]["outside"] == 20
+    assert payload["summary"]["firms"] == 43
+    assert len(payload["firms"]) == 43
+    assert payload["analysis"]["title"]
+    assert payload["analysis"]["sections"]
+    assert any(f["name"] == "와이즈넛" and f["wins"] >= 1 for f in payload["firms"])
+    assert any(f.get("group") == "outside" for f in payload["firms"])

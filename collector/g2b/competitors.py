@@ -17,6 +17,7 @@ from .render import _award_amount, _fmt_budget, infer_status
 from .seed import load_seed
 
 CONFIG = Path(__file__).resolve().parents[1] / "config" / "competitors.yaml"
+ANALYSIS_CONFIG = Path(__file__).resolve().parents[1] / "config" / "competitors_analysis.yaml"
 
 # Strip corporate suffixes / rank markers before alias match.
 _CORP_RE = re.compile(
@@ -592,6 +593,268 @@ def firm_targets(repo_root: Path, competitors: list[dict[str, Any]] | None = Non
     idx = build_bizno_index(competitors)
     stats = bidder_stats(load_all_notices(repo_root))
     return list(idx) + [s.bizno for s, _ in outside_rivals(stats, idx)]
+
+
+def load_competitors_analysis(path: Path | None = None) -> dict[str, Any]:
+    p = path or ANALYSIS_CONFIG
+    if not p.is_file():
+        return {}
+    raw = yaml.safe_load(p.read_text(encoding="utf-8"))
+    return dict(raw) if isinstance(raw, dict) else {}
+
+
+def _is_gen_agent(notice: dict[str, Any]) -> bool:
+    scope = str(notice.get("scope") or "")
+    if "생성형" in scope or "Agent" in scope or "에이전트" in scope:
+        return True
+    fields = notice.get("fields") or []
+    return any("생성형" in str(f) or "Agent" in str(f) or "LLM" in str(f) for f in fields)
+
+
+def _median(vals: list[float]) -> float | None:
+    if not vals:
+        return None
+    s = sorted(vals)
+    mid = len(s) // 2
+    if len(s) % 2:
+        return round(s[mid], 1)
+    return round((s[mid - 1] + s[mid]) / 2.0, 1)
+
+
+def _bid_to_budget_rates(notice: dict[str, Any], bizno: str) -> float | None:
+    budget = notice.get("budget_eok")
+    try:
+        b = float(budget) if budget not in (None, "") else None
+    except (TypeError, ValueError):
+        b = None
+    for bid in notice.get("bidders") or []:
+        if not isinstance(bid, dict) or str(bid.get("bizno") or "") != bizno:
+            continue
+        amt = bid.get("amount_eok")
+        try:
+            a = float(amt) if amt not in (None, "") else None
+        except (TypeError, ValueError):
+            a = None
+        if a is not None and b and b > 0:
+            return a / b * 100.0
+    return None
+
+
+def build_spa_competitors(repo_root: Path) -> dict[str, Any]:
+    """SPA payload: listed + outside rivals KPIs, type rollups, editorial analysis."""
+    from .render import load_run_status, stamp_text
+
+    competitors = load_competitors_config()
+    listed_rows = aggregate_competitor_kpis(repo_root, competitors)
+    bizno_index = build_bizno_index(competitors)
+    notices = load_all_notices(repo_root)
+    stats = bidder_stats(notices)
+    firms = load_firms(repo_root)
+    analysis = load_competitors_analysis()
+    notices_by_key = {_row_key(n): n for n in notices if n.get("bid_no")}
+
+    alias_index = build_alias_index(competitors)
+    largest_by_name: dict[str, dict[str, Any]] = {}
+    for n in load_win_pool(repo_root):
+        canon = match_competitor(n.get("winner"), alias_index)
+        if not canon:
+            continue
+        amt = _award_amount(n)
+        if amt is None:
+            continue
+        cur = largest_by_name.get(canon)
+        if cur is None or float(amt) > float(cur.get("award_amount_eok") or 0):
+            largest_by_name[canon] = {
+                "title": n.get("title"),
+                "org": n.get("org"),
+                "award_amount_eok": amt,
+                "open_date": n.get("open_date"),
+            }
+
+    listed_out: list[dict[str, Any]] = []
+    for r in listed_rows:
+        bz = r.get("bizno") or ""
+        profile = firms.get(bz) or {}
+        rates: list[float] = []
+        gen_bids = 0
+        s = stats.get(bz)
+        if s:
+            for key in s.bids:
+                n = notices_by_key.get(key)
+                if not n:
+                    continue
+                if _is_gen_agent(n):
+                    gen_bids += 1
+                rate = _bid_to_budget_rates(n, bz)
+                if rate is not None:
+                    rates.append(rate)
+        largest = largest_by_name.get(r["name"])
+        listed_out.append(
+            {
+                "name": r["name"],
+                "bizno": bz,
+                "group": "listed",
+                "type": r.get("type") or "",
+                "own_model": r.get("own_model") or "",
+                "procurement": r.get("procurement") or "",
+                "region": profile.get("region"),
+                "employees": profile.get("employees"),
+                "homepage": profile.get("homepage"),
+                "bids": int(r["bids"]),
+                "wins": int(r["wins"]),
+                "award_amount_eok": r["award_amount_eok"],
+                "gen_agent_bids": gen_bids,
+                "bid_to_budget_median_pct": _median(rates),
+                "largest_win": largest,
+                "faced": (
+                    [
+                        {
+                            "name": bizno_index.get(other)
+                            or _firm_name(other, stats, firms),
+                            "count": cnt,
+                            "beat": int(s.beat[other]),
+                            "lost": int(s.lost[other]),
+                        }
+                        for other, cnt in s.faced.most_common(4)
+                    ]
+                    if s
+                    else []
+                ),
+            }
+        )
+
+    outside_out: list[dict[str, Any]] = []
+    for s, vs in outside_rivals(stats, bizno_index):
+        profile = firms.get(s.bizno) or {}
+        win_rows = [notices_by_key[k] for k in s.wins if k in notices_by_key]
+        amounts = [a for a in (_award_amount(n) for n in win_rows) if a is not None]
+        rates = []
+        gen_bids = 0
+        for key in s.bids:
+            n = notices_by_key.get(key)
+            if not n:
+                continue
+            if _is_gen_agent(n):
+                gen_bids += 1
+            rate = _bid_to_budget_rates(n, s.bizno)
+            if rate is not None:
+                rates.append(rate)
+        largest = None
+        for n in win_rows:
+            amt = _award_amount(n)
+            if amt is None:
+                continue
+            if largest is None or float(amt) > float(largest.get("award_amount_eok") or 0):
+                largest = {
+                    "title": n.get("title"),
+                    "org": n.get("org"),
+                    "award_amount_eok": amt,
+                    "open_date": n.get("open_date"),
+                }
+        outside_out.append(
+            {
+                "name": _firm_name(s.bizno, stats, firms),
+                "bizno": s.bizno,
+                "group": "outside",
+                "type": "목록 밖 경쟁사",
+                "own_model": "",
+                "procurement": "",
+                "region": profile.get("region"),
+                "employees": profile.get("employees"),
+                "homepage": profile.get("homepage"),
+                "bids": len(s.bids),
+                "wins": len(s.wins),
+                "award_amount_eok": round(sum(amounts), 1) if amounts else 0.0,
+                "gen_agent_bids": gen_bids,
+                "bid_to_budget_median_pct": _median(rates),
+                "largest_win": largest,
+                "faced_listed": [{"name": n, "count": c} for n, c in vs.most_common(3)],
+            }
+        )
+
+    all_firms = listed_out + outside_out
+    all_firms.sort(
+        key=lambda r: (-int(r["wins"]), -float(r.get("award_amount_eok") or 0), str(r["name"]))
+    )
+
+    type_rollups: dict[str, dict[str, Any]] = {}
+    for row in all_firms:
+        t = row.get("type") or "기타"
+        cur = type_rollups.setdefault(
+            t, {"type": t, "firms": 0, "bids": 0, "wins": 0, "award_amount_eok": 0.0}
+        )
+        cur["firms"] += 1
+        cur["bids"] += int(row["bids"])
+        cur["wins"] += int(row["wins"])
+        cur["award_amount_eok"] = round(
+            float(cur["award_amount_eok"]) + float(row.get("award_amount_eok") or 0), 1
+        )
+    rollups = sorted(
+        type_rollups.values(),
+        key=lambda r: (-float(r["award_amount_eok"]), -int(r["wins"]), str(r["type"])),
+    )
+
+    # Head-to-head among listed biznos
+    listed_bz = {r["bizno"] for r in listed_out if r.get("bizno")}
+    name_by_bz = {r["bizno"]: r["name"] for r in listed_out if r.get("bizno")}
+    pairs: dict[tuple[str, str], dict[str, Any]] = {}
+    for bz in listed_bz:
+        s = stats.get(bz)
+        if not s:
+            continue
+        for other, cnt in s.faced.items():
+            if other not in listed_bz or other == bz:
+                continue
+            a, b = sorted([bz, other])
+            key = (a, b)
+            cur = pairs.setdefault(
+                key,
+                {
+                    "a": name_by_bz[a],
+                    "b": name_by_bz[b],
+                    "meetings": 0,
+                    "a_ahead": 0,
+                    "b_ahead": 0,
+                },
+            )
+            # count each unordered pair once via the lower bizno's perspective only
+            if bz != a:
+                continue
+            cur["meetings"] = int(cnt)
+            cur["a_ahead"] = int(s.beat[other])
+            cur["b_ahead"] = int(s.lost[other])
+    head_to_head = sorted(pairs.values(), key=lambda r: -int(r["meetings"]))[:8]
+
+    stamp = stamp_text(load_run_status(repo_root))
+    total_bids = sum(int(r["bids"]) for r in all_firms)
+    total_wins = sum(int(r["wins"]) for r in all_firms)
+    total_amt = round(sum(float(r.get("award_amount_eok") or 0) for r in all_firms), 1)
+
+    return {
+        "generated_at": stamp,
+        "analysis": {
+            "title": analysis.get("title") or "국내 AI 전문기업 분석",
+            "as_of": analysis.get("as_of"),
+            "author": analysis.get("author"),
+            "lede": (analysis.get("lede") or "").strip(),
+            "bullets": list(analysis.get("bullets") or []),
+            "sections": list(analysis.get("sections") or []),
+            "limitations": list(analysis.get("limitations") or []),
+            "sources": list(analysis.get("sources") or []),
+            "head_to_head_notes": list(analysis.get("head_to_head_notes") or []),
+        },
+        "summary": {
+            "firms": len(all_firms),
+            "listed": len(listed_out),
+            "outside": len(outside_out),
+            "bids": total_bids,
+            "wins": total_wins,
+            "award_amount_eok": total_amt,
+        },
+        "type_rollups": rollups,
+        "firms": all_firms,
+        "head_to_head": head_to_head,
+    }
 
 
 def render_competitors_page(repo_root: Path) -> dict[str, Any]:

@@ -1,6 +1,7 @@
 import type {
   Agency,
   Bidder,
+  CompetitorsPayload,
   DataClient,
   Firm,
   NoticeDetail,
@@ -121,6 +122,10 @@ export const publicClient: DataClient = {
     if (Array.isArray(firms)) return firms as Firm[];
     if (firms && typeof firms === "object") return Object.values(firms as Record<string, Firm>);
     return [];
+  },
+
+  getCompetitors() {
+    return fetchJson<CompetitorsPayload>("/data/spa/competitors.json");
   },
 
   async getBidders() {

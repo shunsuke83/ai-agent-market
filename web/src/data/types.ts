@@ -86,6 +86,69 @@ export type Firm = Record<string, unknown>;
 export type Bidder = Record<string, unknown>;
 export type Agency = Record<string, unknown>;
 
+export type CompetitorFirm = {
+  name: string;
+  bizno?: string;
+  group?: "listed" | "outside" | string;
+  type?: string;
+  own_model?: string;
+  procurement?: string;
+  region?: string | null;
+  employees?: number | null;
+  homepage?: string | null;
+  bids?: number;
+  wins?: number;
+  award_amount_eok?: number | null;
+  gen_agent_bids?: number;
+  bid_to_budget_median_pct?: number | null;
+  largest_win?: {
+    title?: string | null;
+    org?: string | null;
+    award_amount_eok?: number | null;
+    open_date?: string | null;
+  } | null;
+  faced?: { name: string; count: number; beat?: number; lost?: number }[];
+  faced_listed?: { name: string; count: number }[];
+};
+
+export type CompetitorsPayload = {
+  generated_at?: string | null;
+  analysis?: {
+    title?: string;
+    as_of?: string;
+    author?: string;
+    lede?: string;
+    bullets?: string[];
+    sections?: { id?: string; title?: string; paragraphs?: string[] }[];
+    limitations?: string[];
+    sources?: string[];
+    head_to_head_notes?: { pair?: string[]; note?: string }[];
+  };
+  summary?: {
+    firms?: number;
+    listed?: number;
+    outside?: number;
+    bids?: number;
+    wins?: number;
+    award_amount_eok?: number;
+  };
+  type_rollups?: {
+    type: string;
+    firms: number;
+    bids: number;
+    wins: number;
+    award_amount_eok: number;
+  }[];
+  firms?: CompetitorFirm[];
+  head_to_head?: {
+    a: string;
+    b: string;
+    meetings: number;
+    a_ahead: number;
+    b_ahead: number;
+  }[];
+};
+
 export type MetaInfo = {
   stamp: string | null;
 };
@@ -99,6 +162,7 @@ export type DataClient = {
   getPrespecs(): Promise<Prespec[] | null>;
   getOrderPlans(): Promise<OrderPlan[] | null>;
   getFirms(): Promise<Firm[] | null>;
+  getCompetitors(): Promise<CompetitorsPayload | null>;
   getBidders(): Promise<Bidder[] | null>;
   getAgencies(): Promise<Agency[] | null>;
   getReports(): Promise<Record<string, unknown> | null>;
