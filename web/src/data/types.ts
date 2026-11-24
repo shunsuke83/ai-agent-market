@@ -90,7 +90,50 @@ export type Prespec = {
 export type OrderPlan = Record<string, unknown>;
 export type Firm = Record<string, unknown>;
 export type Bidder = Record<string, unknown>;
-export type Agency = Record<string, unknown>;
+
+export type AgencyWinner = {
+  name: string;
+  bizno?: string | null;
+  wins: number;
+  award_amount_eok?: number | null;
+};
+
+export type Agency = {
+  name: string;
+  org?: string;
+  notices?: number;
+  count?: number;
+  wins?: number;
+  budget_eok?: number | null;
+  total_budget_eok?: number | null;
+  award_amount_eok?: number | null;
+  award_known?: number;
+  gen_agent_notices?: number;
+  avg_bid_count?: number | null;
+  latest_date?: string | null;
+  top_winners?: AgencyWinner[];
+};
+
+export type AgencyNotice = {
+  date?: string | null;
+  org: string;
+  title?: string | null;
+  budget_eok?: number | null;
+  id?: string | null;
+  winner?: string | null;
+  winner_bizno?: string | null;
+  award_amount_eok?: number | null;
+  status?: string | null;
+  bid_count?: number | null;
+  gen_agent?: boolean;
+};
+
+export type AgenciesPayload = {
+  generated_at?: string | null;
+  summary?: { orgs?: number; notices?: number; wins?: number };
+  agencies?: Agency[];
+  notices?: AgencyNotice[];
+};
 
 export type CompetitorFirm = {
   name: string;
@@ -170,6 +213,6 @@ export type DataClient = {
   getFirms(): Promise<Firm[] | null>;
   getCompetitors(): Promise<CompetitorsPayload | null>;
   getBidders(): Promise<Bidder[] | null>;
-  getAgencies(): Promise<Agency[] | null>;
+  getAgencies(): Promise<AgenciesPayload | null>;
   getReports(): Promise<Record<string, unknown> | null>;
 };

@@ -1,4 +1,5 @@
 import type {
+  AgenciesPayload,
   Agency,
   Bidder,
   CompetitorsPayload,
@@ -149,25 +150,37 @@ export const publicClient: DataClient = {
     return unwrapList<Bidder>(raw, "bidders") ?? [];
   },
 
-  async getAgencies() {
-    const spa = unwrapList<Agency>(await fetchJson<unknown>("/data/spa/agencies-index.json"), "agencies");
-    if (spa && spa.length) return spa;
+  async getAgencies(): Promise<AgenciesPayload | null> {
+    const spa = await fetchJson<AgenciesPayload>("/data/spa/agencies-index.json");
+    if (spa && Array.isArray(spa.agencies)) return spa;
+    // Legacy agencies.json: compact notice rows → build a minimal payload.
     const raw = await fetchJson<unknown>("/data/agencies.json");
-    if (!raw) return [];
-    // Legacy agencies.json stores table rows as arrays under notices.
-    const notices = unwrapList<unknown>(raw, "notices") ?? [];
+    if (!raw) return null;
+    const noticesRaw = unwrapList<unknown>(raw, "notices") ?? [];
     const byOrg = new Map<string, Agency>();
-    for (const row of notices) {
+    for (const row of noticesRaw) {
       if (!Array.isArray(row)) continue;
       const org = String(row[1] ?? "");
       if (!org) continue;
-      const cur = byOrg.get(org) || { name: org, notices: 0, budget_eok: 0 };
+      const cur = byOrg.get(org) || { name: org, notices: 0, wins: 0, budget_eok: 0 };
       cur.notices = Number(cur.notices ?? 0) + 1;
       const budget = Number(row[3] ?? 0);
       if (Number.isFinite(budget)) cur.budget_eok = Number(cur.budget_eok ?? 0) + budget;
+      if (row[8] === "낙찰") cur.wins = Number(cur.wins ?? 0) + 1;
       byOrg.set(org, cur);
     }
-    return [...byOrg.values()].sort((a, b) => Number(b.notices ?? 0) - Number(a.notices ?? 0));
+    const agencies = [...byOrg.values()].sort(
+      (a, b) => Number(b.notices ?? 0) - Number(a.notices ?? 0),
+    );
+    return {
+      summary: {
+        orgs: agencies.length,
+        notices: noticesRaw.length,
+        wins: agencies.reduce((s, a) => s + Number(a.wins ?? 0), 0),
+      },
+      agencies,
+      notices: [],
+    };
   },
 
   getReports() {

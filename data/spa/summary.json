@@ -1,13 +1,13 @@
 {
   "generated_at": "데이터 기준 2026-11-23 19:56 KST · D1 동기화 · CF 미러 동기화",
-  "generated_at_iso": "2026-11-24T11:00:32.780009+09:00",
+  "generated_at_iso": "2026-11-24T11:09:56.522429+09:00",
   "has_fit": true,
   "total_notices": 890,
-  "open_notices": 119,
+  "open_notices": 116,
   "new_notices": 55,
   "go_count": 4,
-  "review_count": 21,
-  "closing_soon": 98,
+  "review_count": 19,
+  "closing_soon": 95,
   "band_count": 16,
   "new": [
     {
@@ -829,149 +829,42 @@
       ]
     },
     {
-      "id": "R26BK01829604-000",
-      "bid_no": "R26BK01829604",
+      "id": "R26BK01820030-000",
+      "bid_no": "R26BK01820030",
       "bid_ord": "000",
-      "title": "26~27-N-교육훈련용 AI 조교 체계개발 실증",
-      "org": "해군교육사령부",
+      "title": "2027년 지능형 업무관리 플랫폼(온AI) 운영 및 유지관리",
+      "org": "한국지능정보사회진흥원",
       "scope": "AI SW 확대",
-      "nature": "연구·교육·행사",
+      "nature": "운영·유지보수",
       "fields": [
         "AI 일반"
       ],
-      "budget_eok": 7.99,
-      "notice_date": "2026-11-13",
-      "close_at": "2026-11-24 11:00",
-      "open_date": "2026-11-30",
-      "open_at": "2026-11-30 11:00",
-      "contract_method": "제한경쟁",
-      "ntce_kind": "재공고",
+      "budget_eok": 86.9228,
+      "notice_date": "2026-11-10",
+      "close_at": "2026-12-03 10:00",
+      "open_date": "2026-12-03",
+      "open_at": "2026-12-03 11:00",
+      "contract_method": "일반경쟁",
+      "ntce_kind": "등록공고",
       "winner": null,
       "first_rank": null,
       "bid_count": null,
       "award_amount_eok": null,
       "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01829604&bidPbancOrd=000",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01820030&bidPbancOrd=000",
       "soft_excluded": false,
       "exclude_reason": null,
       "fit_verdict": "REVIEW",
-      "fit_score": 86,
+      "fit_score": 80,
       "fit_reasons": [
-        "솔루션 AI Search / RAG(S) · RAG, 지식베이스",
-        "사업유형 구축·개발",
-        "예산 8.0억 소규모·레퍼런스 — 구간 기본 REVIEW"
+        "솔루션 AI Agent 개발환경(S) · MCP",
+        "운영·용역이나 구축·제품 비중 확인(예외)",
+        "회피 규칙 예외 검토: 타사가 구축한 시스템의 단순 운영·유지보수",
+        "예산 86.9억 대형 — 제논 주관 컨소시엄 구성 가능할 때만 — 구간 기본 REVIEW"
       ]
     }
   ],
   "closing": [
-    {
-      "id": "R26BK01840144-000",
-      "bid_no": "R26BK01840144",
-      "bid_ord": "000",
-      "title": "AI기반 가상환자 교육시스템 외 7종 구입(긴급)",
-      "org": "경북대학교병원",
-      "scope": "AI SW 확대",
-      "nature": "연구·교육·행사",
-      "fields": [
-        "AI 일반"
-      ],
-      "budget_eok": 5.4885,
-      "notice_date": "2026-11-18",
-      "close_at": "2026-11-24 11:00",
-      "open_date": "2026-11-24",
-      "open_at": "2026-11-24 12:00",
-      "contract_method": "제한경쟁",
-      "ntce_kind": "등록공고",
-      "winner": null,
-      "first_rank": null,
-      "bid_count": null,
-      "award_amount_eok": null,
-      "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01840144&bidPbancOrd=000",
-      "soft_excluded": false,
-      "exclude_reason": null,
-      "fit_verdict": "REVIEW",
-      "fit_score": 42,
-      "fit_reasons": [
-        "솔루션 미매칭",
-        "사업유형 연구·교육·행사",
-        "구축·제품 중심 사업 아님(검토)",
-        "GenON S/A 솔루션 신호 없음",
-        "예산 5.5억 소규모·레퍼런스 — 구간 기본 REVIEW"
-      ]
-    },
-    {
-      "id": "R26BK01829604-000",
-      "bid_no": "R26BK01829604",
-      "bid_ord": "000",
-      "title": "26~27-N-교육훈련용 AI 조교 체계개발 실증",
-      "org": "해군교육사령부",
-      "scope": "AI SW 확대",
-      "nature": "연구·교육·행사",
-      "fields": [
-        "AI 일반"
-      ],
-      "budget_eok": 7.99,
-      "notice_date": "2026-11-13",
-      "close_at": "2026-11-24 11:00",
-      "open_date": "2026-11-30",
-      "open_at": "2026-11-30 11:00",
-      "contract_method": "제한경쟁",
-      "ntce_kind": "재공고",
-      "winner": null,
-      "first_rank": null,
-      "bid_count": null,
-      "award_amount_eok": null,
-      "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01829604&bidPbancOrd=000",
-      "soft_excluded": false,
-      "exclude_reason": null,
-      "fit_verdict": "REVIEW",
-      "fit_score": 86,
-      "fit_reasons": [
-        "솔루션 AI Search / RAG(S) · RAG, 지식베이스",
-        "사업유형 구축·개발",
-        "예산 8.0억 소규모·레퍼런스 — 구간 기본 REVIEW"
-      ]
-    },
-    {
-      "id": "R26BK01825456-000",
-      "bid_no": "R26BK01825456",
-      "bid_ord": "000",
-      "title": "동국대학교 반도체 현장 특화 SLLM 개발 용역",
-      "org": "동국대학교 산학협력단",
-      "scope": "생성형·Agent",
-      "nature": "시스템 구축·고도화",
-      "fields": [
-        "생성형·LLM"
-      ],
-      "budget_eok": 0.29,
-      "notice_date": "2026-11-12",
-      "close_at": "2026-11-24 11:00",
-      "open_date": "2026-11-24",
-      "open_at": "2026-11-24 12:00",
-      "contract_method": "제한경쟁",
-      "ntce_kind": "등록공고",
-      "winner": null,
-      "first_rank": null,
-      "bid_count": null,
-      "award_amount_eok": null,
-      "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01825456&bidPbancOrd=000",
-      "soft_excluded": false,
-      "exclude_reason": null,
-      "fit_verdict": "NO-GO",
-      "fit_score": 82,
-      "fit_reasons": [
-        "솔루션 GenOS(S) · LLM, sLLM, SLLM",
-        "사업유형 구축·개발",
-        "예산 0.3억 < 최소 3억",
-        "예산 0.3억"
-      ],
-      "fit_stops": [
-        "예산 0.3억 < 최소 3억"
-      ]
-    },
     {
       "id": "R26BK01848324-000",
       "bid_no": "R26BK01848324",
@@ -1340,6 +1233,129 @@
       "fit_stops": [
         "일정 미충족 (마감까지 영업일 1일)",
         "예산 2.5억 < 최소 3억"
+      ]
+    },
+    {
+      "id": "R26BK01805007-000",
+      "bid_no": "R26BK01805007",
+      "bid_ord": "000",
+      "title": "경북 학생평가 전환을 위한 AI  기반 서·논술형 평가지원시스템 도입 및 운영",
+      "org": "경상북도교육청",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 5.0452,
+      "notice_date": "2026-11-04",
+      "close_at": "2026-11-25 10:00",
+      "open_date": "2026-11-25",
+      "open_at": "2026-11-25 11:00",
+      "contract_method": "제한경쟁",
+      "ntce_kind": "등록공고",
+      "winner": null,
+      "first_rank": null,
+      "bid_count": null,
+      "award_amount_eok": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01805007&bidPbancOrd=000",
+      "soft_excluded": false,
+      "exclude_reason": null,
+      "fit_verdict": "NO-GO",
+      "fit_score": 62,
+      "fit_reasons": [
+        "솔루션 GenOS(S) · LLM",
+        "사업유형 구축·개발",
+        "인증 미충족 (CSAP)",
+        "일정 미충족 (마감까지 영업일 1일)",
+        "예산 5.0억 소규모·레퍼런스 — 구간 기본 REVIEW"
+      ],
+      "fit_stops": [
+        "인증 미충족 (CSAP)",
+        "일정 미충족 (마감까지 영업일 1일)"
+      ]
+    },
+    {
+      "id": "R26BK01764898-000",
+      "bid_no": "R26BK01764898",
+      "bid_ord": "000",
+      "title": "KEIT AX 기반 구축 사업",
+      "org": "한국산업기술기획평가원",
+      "scope": "AI SW 확대",
+      "nature": "시스템 구축·고도화",
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 19.788,
+      "notice_date": "2026-10-12",
+      "close_at": "2026-11-25 10:00",
+      "open_date": "2026-11-25",
+      "open_at": "2026-11-25 11:00",
+      "contract_method": "제한경쟁",
+      "ntce_kind": "등록공고",
+      "winner": null,
+      "first_rank": null,
+      "bid_count": null,
+      "award_amount_eok": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01764898&bidPbancOrd=000",
+      "soft_excluded": false,
+      "exclude_reason": null,
+      "fit_verdict": "NO-GO",
+      "fit_score": 44,
+      "fit_reasons": [
+        "솔루션 미매칭",
+        "사업유형 구축·개발",
+        "일정 미충족 (마감까지 영업일 1일)",
+        "GenON S/A 솔루션 신호 없음",
+        "예산 19.8억 도전 (근거 충족률 엄격 적용) — 구간 기본 REVIEW",
+        "기존 고객 기관"
+      ],
+      "fit_stops": [
+        "일정 미충족 (마감까지 영업일 1일)"
+      ]
+    },
+    {
+      "id": "R26BK01835383-000",
+      "bid_no": "R26BK01835383",
+      "bid_ord": "000",
+      "title": "2027년 서울로봇인공지능과학관 청사 경비 용역",
+      "org": "서울특별시 서울시립과학관",
+      "scope": "AI SW 확대",
+      "nature": null,
+      "fields": [
+        "AI 일반"
+      ],
+      "budget_eok": 2.0656,
+      "notice_date": "2026-11-17",
+      "close_at": "2026-11-25 12:00",
+      "open_date": "2026-11-25",
+      "open_at": "2026-11-25 13:10",
+      "contract_method": "제한경쟁",
+      "ntce_kind": "등록공고",
+      "winner": null,
+      "first_rank": null,
+      "bid_count": null,
+      "award_amount_eok": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01835383&bidPbancOrd=000",
+      "soft_excluded": false,
+      "exclude_reason": null,
+      "fit_verdict": "NO-GO",
+      "fit_score": 29,
+      "fit_reasons": [
+        "솔루션 미매칭",
+        "사업유형 기타",
+        "일정 미충족 (마감까지 영업일 1일)",
+        "자격 미확인 (업종 제한 — 공고서 확인)",
+        "예산 2.1억 < 3억, 기존 고객 후속",
+        "구축·제품 중심 사업 아님(검토)",
+        "GenON S/A 솔루션 신호 없음",
+        "기존 고객 기관",
+        "예산 2.1억"
+      ],
+      "fit_stops": [
+        "일정 미충족 (마감까지 영업일 1일)"
       ]
     }
   ]

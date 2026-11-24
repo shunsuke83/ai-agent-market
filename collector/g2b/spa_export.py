@@ -259,30 +259,153 @@ def _bidders_index(repo_root: Path) -> list[dict[str, Any]]:
     return rows
 
 
-def _agencies_index(repo_root: Path) -> list[dict[str, Any]]:
+def _agencies_payload(repo_root: Path) -> dict[str, Any]:
+    """SPA agencies search: org rollups + notice rows (same shape as agency-search.js)."""
+    from .render import load_run_status, stamp_text
+
     path = repo_root / "data" / "agencies.json"
     if not path.is_file():
-        return []
+        return {
+            "generated_at": stamp_text(load_run_status(repo_root)),
+            "summary": {"orgs": 0, "notices": 0, "wins": 0},
+            "agencies": [],
+            "notices": [],
+        }
     raw = json.loads(path.read_text(encoding="utf-8"))
-    notices = raw.get("notices") if isinstance(raw, dict) else raw
-    if not isinstance(notices, list):
-        return []
+    rows_raw = raw.get("notices") if isinstance(raw, dict) else raw
+    if not isinstance(rows_raw, list):
+        rows_raw = []
+
+    notices: list[dict[str, Any]] = []
     by_org: dict[str, dict[str, Any]] = {}
-    for row in notices:
+
+    def _firm_key(name: str, bizno: str) -> str:
+        if bizno:
+            return f"b:{bizno}"
+        cleaned = (
+            str(name or "")
+            .replace("(주)", "")
+            .replace("㈜", "")
+            .replace("주식회사", "")
+            .replace("유한회사", "")
+        )
+        return "n:" + "".join(ch for ch in cleaned.casefold() if ch.isalnum())
+
+    for row in rows_raw:
         if not isinstance(row, list) or len(row) < 2:
             continue
-        org = str(row[1] or "")
+        org = str(row[1] or "").strip()
         if not org:
             continue
-        cur = by_org.setdefault(org, {"name": org, "notices": 0, "budget_eok": 0.0})
-        cur["notices"] += 1
+        href = str(row[4] or "")
+        nid = ""
+        if href:
+            base = href.rsplit("/", 1)[-1]
+            nid = base.replace(".html", "")
         try:
-            cur["budget_eok"] = float(cur["budget_eok"]) + float(row[3] or 0)
+            budget = float(row[3]) if row[3] not in (None, "") else None
         except (TypeError, ValueError):
-            pass
-    rows = list(by_org.values())
-    rows.sort(key=lambda r: (-int(r["notices"]), str(r["name"])))
-    return rows
+            budget = None
+        try:
+            award = float(row[7]) if len(row) > 7 and row[7] not in (None, "") else None
+        except (TypeError, ValueError):
+            award = None
+        try:
+            bid_count = int(float(row[9])) if len(row) > 9 and row[9] not in (None, "") else None
+        except (TypeError, ValueError):
+            bid_count = None
+        status = str(row[8] or "") if len(row) > 8 else ""
+        winner = str(row[5] or "").strip() if len(row) > 5 else ""
+        winner_bizno = str(row[6] or "") if len(row) > 6 else ""
+        gen_agent = bool(row[10]) if len(row) > 10 else False
+        day = str(row[0] or "")
+        notice = {
+            "date": day,
+            "org": org,
+            "title": row[2] or "",
+            "budget_eok": budget,
+            "id": nid or None,
+            "winner": winner or None,
+            "winner_bizno": winner_bizno or None,
+            "award_amount_eok": award,
+            "status": status or None,
+            "bid_count": bid_count,
+            "gen_agent": gen_agent,
+        }
+        notices.append(notice)
+
+        cur = by_org.setdefault(
+            org,
+            {
+                "name": org,
+                "notices": 0,
+                "wins": 0,
+                "budget_eok": 0.0,
+                "award_amount_eok": 0.0,
+                "award_known": 0,
+                "gen_agent_notices": 0,
+                "bid_counts": [],
+                "latest_date": "",
+                "_winners": {},
+            },
+        )
+        cur["notices"] += 1
+        if budget is not None:
+            cur["budget_eok"] = float(cur["budget_eok"]) + budget
+        if gen_agent:
+            cur["gen_agent_notices"] += 1
+        if bid_count is not None:
+            cur["bid_counts"].append(bid_count)
+        if day >= str(cur["latest_date"] or ""):
+            cur["latest_date"] = day
+        if status == "낙찰" and winner:
+            cur["wins"] += 1
+            if award is not None:
+                cur["award_amount_eok"] = float(cur["award_amount_eok"]) + award
+                cur["award_known"] += 1
+            wk = _firm_key(winner, winner_bizno)
+            w = cur["_winners"].setdefault(
+                wk, {"name": winner, "bizno": winner_bizno or None, "wins": 0, "award_amount_eok": 0.0}
+            )
+            if winner_bizno and not w.get("bizno"):
+                w["bizno"] = winner_bizno
+            w["wins"] += 1
+            if award is not None:
+                w["award_amount_eok"] = float(w["award_amount_eok"]) + award
+
+    agencies: list[dict[str, Any]] = []
+    for org, cur in by_org.items():
+        counts = cur.pop("bid_counts")
+        winners_map = cur.pop("_winners")
+        top = sorted(
+            winners_map.values(),
+            key=lambda w: (-int(w["wins"]), -float(w.get("award_amount_eok") or 0), str(w["name"])),
+        )[:10]
+        for w in top:
+            w["award_amount_eok"] = round(float(w.get("award_amount_eok") or 0), 1)
+        avg_bids = round(sum(counts) / len(counts), 1) if counts else None
+        agencies.append(
+            {
+                "name": org,
+                "notices": int(cur["notices"]),
+                "wins": int(cur["wins"]),
+                "budget_eok": round(float(cur["budget_eok"]), 1),
+                "award_amount_eok": round(float(cur["award_amount_eok"]), 1),
+                "award_known": int(cur["award_known"]),
+                "gen_agent_notices": int(cur["gen_agent_notices"]),
+                "avg_bid_count": avg_bids,
+                "latest_date": cur["latest_date"] or None,
+                "top_winners": top,
+            }
+        )
+    agencies.sort(key=lambda r: (-int(r["notices"]), -int(r["wins"]), str(r["name"])))
+    wins_n = sum(1 for n in notices if n.get("status") == "낙찰")
+    return {
+        "generated_at": stamp_text(load_run_status(repo_root)),
+        "summary": {"orgs": len(agencies), "notices": len(notices), "wins": wins_n},
+        "agencies": agencies,
+        "notices": notices,
+    }
 
 
 def write_spa_export(
@@ -301,7 +424,7 @@ def write_spa_export(
 
     payload = build_spa_payload(repo_root)
     bidders = _bidders_index(repo_root)
-    agencies = _agencies_index(repo_root)
+    agencies = _agencies_payload(repo_root)
     competitors = build_spa_competitors(repo_root)
     targets = [repo_root / "data" / "spa"]
     if dest is not None:
@@ -325,7 +448,7 @@ def write_spa_export(
             encoding="utf-8",
         )
         (out / "agencies-index.json").write_text(
-            json.dumps({"agencies": agencies}, ensure_ascii=False),
+            json.dumps(agencies, ensure_ascii=False),
             encoding="utf-8",
         )
         (out / "competitors.json").write_text(
@@ -348,7 +471,7 @@ def write_spa_export(
         "notices": len(payload["notices"]["notices"]),
         "details": detail_count,
         "bidders": len(bidders),
-        "agencies": len(agencies),
+        "agencies": len(agencies.get("agencies") or []),
         "competitors": len(competitors.get("firms") or []),
         "has_fit": payload["summary"]["has_fit"],
         "open_notices": payload["summary"]["open_notices"],
