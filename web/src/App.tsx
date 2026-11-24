@@ -58,6 +58,8 @@ export default function App() {
           <Route path="agencies.html" element={<Navigate to="/agencies" replace />} />
           <Route path="alerts.html" element={<Navigate to="/alerts" replace />} />
           <Route path="competitors.html" element={<Navigate to="/competitors" replace />} />
+          <Route path="consortium.html" element={<Navigate to="/consortium" replace />} />
+          <Route path="decisions.html" element={<Navigate to="/decisions" replace />} />
           <Route path="deliverables.html" element={<Navigate to="/deliverables" replace />} />
           <Route path="reports/index.html" element={<Navigate to="/reports" replace />} />
 

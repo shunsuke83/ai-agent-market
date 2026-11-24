@@ -27,7 +27,7 @@ def test_public_text_hides_ceo_names_and_slack_shows_them():
     assert [i["field"] for i in items] == ["ceo"]
     assert firm_change_items(firms, {items[0]["key"]: "2026-11-16"}, "2026-11-10") == []
     text = firm_change_text(items, "https://x/", 15)
-    assert "bidders.html#1111111111|에이" in text and "김대표 → 이대표" in text
+    assert "bidders?q=1111111111|에이" in text and "김대표 → 이대표" in text
 
     idx = build_bidder_index(
         [{"bid_no": "R1", "open_date": "2026-11-01", "bidders": [{"rank": 1, "name": "에이", "bizno": "1111111111"}]}],

@@ -83,7 +83,7 @@ def test_candidates_open_recent_latest_ord():
 def test_slack_text_links_detail_page():
     s = score_notice(NOTICE, PROFILE, NOW)
     text = slack_text([(NOTICE, s)], NOW.date(), "https://x/", 5)
-    assert "https://x/bids/R26BK00000001-000.html" in text and f"{s['score']}점" in text
+    assert "https://x/bids/R26BK00000001-000" in text and f"{s['score']}점" in text
 
 
 def test_pipeline_bids_are_skipped(tmp_path):

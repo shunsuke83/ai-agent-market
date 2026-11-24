@@ -22,7 +22,7 @@ def test_index_rows_dedupe_and_keep_winner_bizno():
     assert len(rows) == 2
     a = next(r for r in rows if r[1] == "한국전력공사")
     assert a[5:11] == ["에이(주)", "1111111111", 9.1, "낙찰", 3, 1]
-    assert a[4] == "bids/A1-000.html"
+    assert a[4] == "bids/A1-000"
     b = next(r for r in rows if r[1] == "통일부")
     assert b[5] == "비" and b[6] == "" and b[8] != "낙찰"
 

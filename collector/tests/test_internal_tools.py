@@ -52,7 +52,7 @@ def test_budget_share_uses_amount_over_budget():
 
 def test_prespec_alert_links_to_row():
     item = prespec_item({"prespec_no": "R26BD1", "title": "AI"}, "https://x/")
-    assert item["url"] == "https://x/prespecs.html#p-R26BD1"
+    assert item["url"] == "https://x/prespecs?p=R26BD1"
 
 
 def test_page_og_url_canonical_skip_link_and_noindex():
@@ -67,20 +67,30 @@ def test_page_og_url_canonical_skip_link_and_noindex():
     assert 'name="robots" content="noindex,follow"' in stub
 
 
-def test_sitemap_skips_stub_detail_pages(tmp_path):
+def test_sitemap_lists_spa_paths_and_notice_ids(tmp_path):
+    import json
+
     from g2b.site import SITE_URL, write_sitemap
 
-    bids = tmp_path / "bids"
-    bids.mkdir()
-    (bids / "LIVE-000.html").write_text("<html>live</html>", encoding="utf-8")
-    (bids / "GONE-000.html").write_text(
-        "<html><h1>이 공고 페이지는 더 이상 없습니다</h1></html>", encoding="utf-8"
+    data = tmp_path / "data"
+    data.mkdir()
+    (data / "notices.json").write_text(
+        json.dumps([{"bid_no": "LIVE", "bid_ord": "000", "title": "ok"}]),
+        encoding="utf-8",
     )
-    (tmp_path / "index.html").write_text("<html/>", encoding="utf-8")
+    reports = tmp_path / "reports"
+    reports.mkdir()
+    (reports / "weekly-2026-W01.html").write_text("<html>week</html>", encoding="utf-8")
+    (reports / "index.html").write_text(
+        '<meta http-equiv="refresh" content="0;url=/reports">', encoding="utf-8"
+    )
     write_sitemap(tmp_path)
     xml = (tmp_path / "sitemap.xml").read_text(encoding="utf-8")
-    assert f"{SITE_URL}bids/LIVE-000.html" in xml
-    assert "GONE-000" not in xml
+    assert f"{SITE_URL}band" in xml
+    assert f"{SITE_URL}bids/LIVE-000" in xml
+    assert f"{SITE_URL}reports/weekly-2026-W01.html" in xml
+    assert "bids/LIVE-000.html" not in xml
+    assert "reports/index.html" not in xml
 
 
 def test_plans_stamp_uses_file_generated_at():

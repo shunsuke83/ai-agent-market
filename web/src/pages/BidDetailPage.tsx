@@ -119,15 +119,21 @@ function BidderTable({ notice }: { notice: NoticeDetail }) {
   const rows = bidders.map((b, i) => ({ ...b, _i: i }));
   const notes = ["나라장터 개찰결과 기준."];
   if (hasRate) notes.push("투찰률은 예정가격 대비입니다.");
-  if (hasScore) {
+  if (hasScore || hasTech || hasTotal) {
     const tech = notice.payload?.tech_rate;
     const weights =
       tech != null && pricePts != null
         ? `기술평가 ${tech}점과 가격평가 ${pricePts}점을`
         : "기술평가 점수와 가격평가 점수를";
-    notes.push(
-      `협상에 의한 계약은 ${weights} 합친 종합점수로 순위를 정합니다. 이 사이트가 받는 개찰결과에는 가격점수만 있어 기술점수·종합점수는 표시하지 못합니다.`,
-    );
+    if (hasTech || hasTotal) {
+      notes.push(
+        `협상에 의한 계약은 ${weights} 합친 종합점수로 순위를 정합니다. 개찰결과에 공개된 기술·가격·종합점수를 표시합니다.`,
+      );
+    } else {
+      notes.push(
+        `협상에 의한 계약은 ${weights} 합친 종합점수로 순위를 정합니다. 이 공고 개찰결과에는 가격점수만 있어 기술·종합점수는 표시하지 못합니다.`,
+      );
+    }
   }
 
   return (

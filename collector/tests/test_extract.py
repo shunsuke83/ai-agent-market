@@ -1,11 +1,18 @@
 import sys
 from pathlib import Path
 
+import pytest
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from g2b.extract_html import bootstrap_all, extract_band_notices, extract_large_awards
 
 ROOT = Path(__file__).resolve().parents[2]
+
+pytestmark = pytest.mark.skipif(
+    not (ROOT / "band.html").is_file(),
+    reason="legacy HTML pages retired (SPA); extract_html tests need RENDER_HTML=1",
+)
 
 
 def test_extract_band_has_rows():

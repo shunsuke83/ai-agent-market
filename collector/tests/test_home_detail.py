@@ -25,8 +25,8 @@ def _n(**kw):
 
 
 def test_title_link_points_to_detail_page():
-    assert 'href="bids/R26BK1-000.html"' in title_link(_n())
-    assert 'href="../bids/R26BK1-000.html"' in title_link(_n(), "../")
+    assert 'href="bids/R26BK1-000"' in title_link(_n())
+    assert 'href="../bids/R26BK1-000"' in title_link(_n(), "../")
     assert "g2b.go.kr" in title_link(_n(bid_no=None, g2b_url="https://www.g2b.go.kr/x"))
 
 

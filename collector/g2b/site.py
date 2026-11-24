@@ -65,8 +65,9 @@ def detail_slug(n: dict[str, Any]) -> str | None:
 
 
 def detail_href(n: dict[str, Any], prefix: str = "") -> str:
+    """SPA detail path (no .html). Legacy bids/*.html shells are retired."""
     slug = detail_slug(n)
-    return f"{prefix}{DETAIL_DIR}/{slug}.html" if slug else ""
+    return f"{prefix}{DETAIL_DIR}/{slug}" if slug else ""
 
 
 def nav(prefix: str = "") -> str:
@@ -243,41 +244,64 @@ _STUB_MARKER = "이 공고 페이지는 더 이상 없습니다"
 
 
 def write_sitemap(repo_root) -> None:
+    import json
     from pathlib import Path
 
     root = Path(repo_root)
-    names = [
-        "index.html",
-        "band.html",
-        "awards.html",
-        "pricing.html",
-        "plans.html",
-        "prespecs.html",
-        "bidders.html",
-        "agencies.html",
-        "alerts.html",
-        "competitors.html",
-        "deliverables.html",
-        "reports/index.html",
+    # SPA client routes (GitHub Pages + Cloudflare). Do not list deleted bids/*.html.
+    spa_paths = [
+        "",
+        "band",
+        "awards",
+        "pricing",
+        "plans",
+        "prespecs",
+        "bidders",
+        "agencies",
+        "alerts",
+        "competitors",
+        "consortium",
+        "decisions",
+        "deliverables",
+        "reports",
     ]
-    # U-02: omit stub detail pages from sitemap.
     extra: list[str] = []
-    for p in sorted((root / "bids").glob("*.html")):
+    notices_path = root / "data" / "notices.json"
+    if notices_path.is_file():
         try:
-            if _STUB_MARKER in p.read_text(encoding="utf-8"):
-                continue
+            raw = json.loads(notices_path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            raw = []
+        if isinstance(raw, dict):
+            notices = raw.get("notices") or raw.get("items") or []
+        else:
+            notices = raw
+        if isinstance(notices, list):
+            for n in notices:
+                if not isinstance(n, dict):
+                    continue
+                slug = detail_slug(n)
+                if slug:
+                    extra.append(f"bids/{slug}")
+    for p in sorted((root / "reports").glob("*.html")):
+        if p.name == "index.html":
+            continue
+        try:
+            body = p.read_text(encoding="utf-8", errors="ignore")
         except OSError:
             continue
-        extra.append(f"bids/{p.name}")
-    extra += [
-        f"reports/{p.name}"
-        for p in sorted((root / "reports").glob("*.html"))
-        if p.name != "index.html"
-    ]
-    locs = []
-    for name in names + extra:
-        if (root / name).exists():
-            locs.append(f"  <url><loc>{html.escape(SITE_URL + name)}</loc></url>")
+        if _STUB_MARKER in body or 'meta http-equiv="refresh"' in body:
+            continue
+        extra.append(f"reports/{p.name}")
+    # Dedupe while preserving order.
+    seen: set[str] = set()
+    ordered: list[str] = []
+    for name in spa_paths + extra:
+        if name in seen:
+            continue
+        seen.add(name)
+        ordered.append(name)
+    locs = [f"  <url><loc>{html.escape(SITE_URL + name)}</loc></url>" for name in ordered]
     xml = (
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
@@ -286,8 +310,7 @@ def write_sitemap(repo_root) -> None:
     )
     (root / "sitemap.xml").write_text(xml, encoding="utf-8")
     (root / "robots.txt").write_text(
-        f"User-agent: *\nAllow: /\n\nSitemap: {SITE_URL}sitemap.xml\n",
-        encoding="utf-8",
+        f"User-agent: *\nAllow: /\n\nSitemap: {SITE_URL}sitemap.xml\n",        encoding="utf-8",
     )
 
 

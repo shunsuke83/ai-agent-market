@@ -394,13 +394,16 @@ jobs:
               done
             fi
             if [ -d web/dist-gh/feeds ]; then mkdir -p feeds; cp -a web/dist-gh/feeds/. feeds/; fi
-            # Legacy HTML stubs → SPA routes (only when HTML render is off).
-            python -m g2b.collect write-spa-redirects --out .
-            git add index.html 404.html assets/ data/spa/
-            for f in band awards pricing plans prespecs bidders agencies competitors alerts deliverables; do
-              if [ -f "${f}.html" ]; then git add "${f}.html"; fi
+            # GH Pages maps /band → band.html; meta-refresh stubs to /band cause an infinite loop.
+            # Rely on 404.html (= SPA) + App.tsx *.html Navigate routes instead.
+            for f in band awards pricing plans prespecs bidders agencies competitors consortium alerts deliverables; do
+              if [ -f "${f}.html" ]; then git rm -f --ignore-unmatch "${f}.html" || rm -f "${f}.html"; fi
             done
-            if [ -f reports/index.html ]; then git add reports/index.html; fi
+            # Keep real weekly/monthly report HTML under reports/; only drop the SPA redirect stub.
+            if [ -f reports/index.html ] && grep -q 'meta http-equiv="refresh"' reports/index.html 2>/dev/null; then
+              git rm -f --ignore-unmatch reports/index.html || rm -f reports/index.html
+            fi
+            git add index.html 404.html assets/ data/spa/
             # Retire per-bid HTML shells once SPA owns detail.
             if [ -d bids ]; then git rm -r --ignore-unmatch bids/ || true; fi
           fi

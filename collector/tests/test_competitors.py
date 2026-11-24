@@ -125,9 +125,12 @@ def test_spa_competitors_includes_analysis_and_kpis():
     payload = build_spa_competitors(ROOT)
     assert payload["summary"]["listed"] == 23
     assert payload["summary"]["outside"] == 20
-    assert payload["summary"]["firms"] == 43
-    assert len(payload["firms"]) == 43
+    # Listed+outside seed (43) plus auto-admit (낙찰≥2 or ≥50억).
+    assert payload["summary"]["firms"] >= 43
+    assert len(payload["firms"]) == payload["summary"]["firms"]
+    assert (payload["summary"].get("auto") or 0) == payload["summary"]["firms"] - 43
     assert payload["analysis"]["title"]
     assert payload["analysis"]["sections"]
     assert any(f["name"] == "와이즈넛" and f["wins"] >= 1 for f in payload["firms"])
     assert any(f.get("group") == "outside" for f in payload["firms"])
+    assert any(f.get("group") == "auto" for f in payload["firms"])

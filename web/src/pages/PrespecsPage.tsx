@@ -16,6 +16,9 @@ import AsyncView from "../components/AsyncView";
 import { dataClient, type Prespec } from "../data/client";
 import { useAsync } from "../hooks/useAsync";
 import { useDebounced } from "../hooks/useDebounced";
+import { usePaged } from "../hooks/usePaged";
+import { downloadCsv } from "../lib/csv";
+import { ddayLabel } from "../lib/dday";
 import { fmtDateTime, fmtEok, fmtNum } from "../lib/format";
 
 const BAND_MIN = 8;
@@ -91,6 +94,8 @@ export default function PrespecsPage() {
       .sort((a, b) => (b.registered_at ?? "").localeCompare(a.registered_at ?? ""));
   }, [enriched, q, statusFilter]);
 
+  const paged = usePaged(rows, 50, `${q}|${statusFilter}`);
+
   const columns: DataTableColumn<Row>[] = [
     {
       key: "registered",
@@ -100,7 +105,17 @@ export default function PrespecsPage() {
     {
       key: "close",
       header: "의견 마감",
-      render: (r) => fmtDateTime(r.opinion_close_at),
+      render: (r) => (
+        <span>
+          {fmtDateTime(r.opinion_close_at)}
+          {ddayLabel(r.opinion_close_at) ? (
+            <>
+              {" "}
+              <Badge tone="warning">{ddayLabel(r.opinion_close_at)}</Badge>
+            </>
+          ) : null}
+        </span>
+      ),
     },
     {
       key: "status",
@@ -223,12 +238,44 @@ export default function PrespecsPage() {
                     </Button>
                   ))}
                 </div>
-                <ListControl search="사업명·기관·번호" searchValue={search} onSearchChange={setSearch} />
+                <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
+                  <Button
+                    variant="secondary"
+                    onClick={() =>
+                      downloadCsv(
+                        "prespecs.csv",
+                        ["등록", "의견마감", "상태", "기관", "제목", "배정예산", "번호"],
+                        rows.map((p) => [
+                          p.registered_date || p.registered_at,
+                          p.opinion_close_at,
+                          p.status,
+                          p.org,
+                          p.title,
+                          p.asign_budget_eok,
+                          p.prespec_no,
+                        ]),
+                      )
+                    }
+                  >
+                    CSV
+                  </Button>
+                  <ListControl search="사업명·기관·번호" searchValue={search} onSearchChange={setSearch} />
+                </div>
               </div>
+              <Text variant="muted">
+                {paged.shown}/{paged.total}건
+              </Text>
               {rows.length === 0 ? (
                 <EmptyState title="조건에 맞는 사전규격이 없습니다" />
               ) : (
-                <DataTable columns={columns} rows={rows} />
+                <>
+                  <DataTable columns={columns} rows={paged.page} />
+                  {paged.hasMore ? (
+                    <Button variant="secondary" onClick={paged.more}>
+                      더 보기
+                    </Button>
+                  ) : null}
+                </>
               )}
             </div>
           </Card>

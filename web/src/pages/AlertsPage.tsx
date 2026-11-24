@@ -2,9 +2,12 @@ import { Alert, Card, DetailPageLayout, Text } from "@genonai/admin-design-syste
 import { IS_INTERNAL } from "../config";
 
 const FEEDS = [
-  { href: "/feeds/notices.xml", label: "신규 공고 RSS" },
-  { href: "/feeds/closing.xml", label: "마감 임박 RSS" },
-  { href: "/feeds/calendar.ics", label: "마감 캘린더 (ICS)" },
+  { href: "/feeds/genai.xml", label: "생성형 AI RSS" },
+  { href: "/feeds/band-build.xml", label: "8~30억 구축 RSS" },
+  { href: "/feeds/isp.xml", label: "ISP·컨설팅 RSS" },
+  { href: "/feeds/large.xml", label: "대형 사업 RSS" },
+  { href: "/feeds/deadlines.ics", label: "마감 캘린더 (ICS)" },
+  { href: "/feeds/renewals.ics", label: "갱신 캘린더 (ICS)" },
 ];
 
 export default function AlertsPage() {

@@ -23,7 +23,7 @@ def test_bidder_index_groups_by_bizno_and_drops_ceo():
     idx = build_bidder_index(notices, {"2222222222": {"corp_name": "비주식", "employees": 30}}, date(2026, 11, 6))
 
     assert [r[2] for r in idx["notices"]] == ["사업 R2", "사업 R1"]
-    assert idx["notices"][1][4] == "bids/R1-000.html"
+    assert idx["notices"][1][4] == "bids/R1-000"
     assert idx["notices"][1][5] == "1111111111"
     a = idx["firms"]["1111111111"]
     assert a[0] == "에이(구)" and [b[0] for b in a[2]] == [0, 1]

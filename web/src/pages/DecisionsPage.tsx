@@ -104,7 +104,7 @@ export default function DecisionsPage() {
               </Alert>
               {data.notes ? <Text variant="muted">{data.notes}</Text> : null}
               <Card>
-                <div style={{ padding: 16 }}>
+                <div style={{ padding: 16, maxWidth: "100%", overflowX: "auto" }}>
                   <DataTable columns={cols} rows={rows} empty="행이 없습니다." />
                 </div>
               </Card>

@@ -78,8 +78,25 @@ def stage_spa_onto_dist(repo_root: Path, dist: Path) -> dict[str, Any]:
         shutil.copy2(favicon, assets / "favicon.svg")
         extras.append("assets/favicon.svg")
 
+    # Keep real weekly/monthly report HTML for /reports links (Z-04).
+    reports_src = repo_root / "reports"
+    if reports_src.is_dir():
+        dest_reports = dist / "reports"
+        dest_reports.mkdir(parents=True, exist_ok=True)
+        for src in reports_src.glob("*.html"):
+            if src.name == "index.html":
+                continue
+            try:
+                body = src.read_text(encoding="utf-8", errors="ignore")
+            except OSError:
+                continue
+            if 'meta http-equiv="refresh"' in body:
+                continue
+            shutil.copy2(src, dest_reports / src.name)
+            extras.append(f"reports/{src.name}")
+
     # Cloudflare Pages serves foo.html for /foo when that file exists, which would
-    # shadow the SPA fallback. Strip any leftover legacy HTML from the dist tree.
+    # shadow the SPA fallback. Strip leftover legacy page shells; keep reports/*.html.
     removed_html: list[str] = []
     keep_html = {"index.html", "404.html"}
     for path in dist.rglob("*.html"):
@@ -87,6 +104,8 @@ def stage_spa_onto_dist(repo_root: Path, dist: Path) -> dict[str, Any]:
         if path.name in keep_html and path.parent == dist:
             continue
         if rel.startswith("data/") or rel.startswith("assets/"):
+            continue
+        if rel.startswith("reports/") and path.name != "index.html":
             continue
         path.unlink(missing_ok=True)
         removed_html.append(rel)

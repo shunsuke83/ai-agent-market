@@ -65,7 +65,7 @@ def test_items_skip_cancelled_and_equipment():
         SITE,
     )
     assert [i["key"] for i in items] == ["n:R26BK0001-000", "p:R26BD0001"]
-    assert items[0]["url"] == SITE + "bids/R26BK0001-000.html"
+    assert items[0]["url"] == SITE + "bids/R26BK0001-000"
 
 
 def test_match_conditions_are_anded():
@@ -133,7 +133,7 @@ def test_run_alerts_posts_once_and_records_state(repo, monkeypatch):
     first = run_alerts(repo, now=NOW, webhook="https://hooks.test/x", config=CONFIG)
     assert first["slack"] == "sent" and first["new"] == 2 and len(posted) == 1
     assert (repo / "feeds" / "genai.xml").exists() and (repo / "feeds" / "deadlines.ics").exists()
-    assert "알림 구독" in (repo / "alerts.html").read_text(encoding="utf-8")
+    assert not (repo / "alerts.html").exists()
     second = run_alerts(repo, now=NOW, webhook="https://hooks.test/x", config=CONFIG)
     assert second["slack"] == "nothing new" and len(posted) == 1
 

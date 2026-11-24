@@ -72,7 +72,7 @@ def prespec_item(p: dict[str, Any], site_url: str) -> dict[str, Any]:
         "budget_eok": p.get("asign_budget_eok"),
         "date": p.get("registered_date") or "",
         "deadline": p.get("opinion_close_at") or "",
-        "url": site_url + "prespecs.html#p-" + quote(str(p.get("prespec_no") or ""), safe=""),
+        "url": site_url + "prespecs?p=" + quote(str(p.get("prespec_no") or ""), safe=""),
         "raw": p,
     }
 
@@ -168,7 +168,7 @@ def build_rss(rule: dict[str, Any], items: list[dict[str, Any]], site_url: str) 
     return (
         '<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel>'
         f"<title>{xml_escape('공공 AI 사업 알림 — ' + rule['name'])}</title>"
-        f"<link>{xml_escape(site_url)}alerts.html</link>"
+        f"<link>{xml_escape(site_url)}alerts</link>"
         f"<description>{xml_escape(rule['name'] + ' 조건에 맞는 나라장터 AI 공고·사전규격')}</description>"
         "<language>ko</language>"
         f"{entries}</channel></rss>\n"
@@ -299,7 +299,7 @@ def slack_text(groups: list[tuple[dict[str, Any], list[dict[str, Any]]]], today:
         if len(got) > limit:
             lines.append(f"    …외 {len(got) - limit}건 (<{site_url}feeds/{rule['id']}.xml|RSS>)")
     lines.append("")
-    lines.append(f"<{site_url}alerts.html|알림 규칙·구독 안내> · <{site_url}index.html|오늘의 사업 기회>")
+    lines.append(f"<{site_url}alerts|알림 규칙·구독 안내> · <{site_url}|오늘의 사업 기회>")
     return "\n".join(lines)
 
 
@@ -321,7 +321,7 @@ def firm_change_text(items: list[dict[str, Any]], site_url: str, limit: int) -> 
         name = _slack_escape(str(i["name"])).replace("|", "¦")
         change = _slack_escape(f"{i['label']}: {i['from']} → {i['to']}")
         when = f"나라장터 변경 {i['changed_at']}" if i.get("changed_at") else f"{i['date']} 확인"
-        lines.append(f"• <{site_url}bidders.html#{i['bizno']}|{name}> — {change} ({when})")
+        lines.append(f"• <{site_url}bidders?q={i['bizno']}|{name}> — {change} ({when})")
     if len(items) > limit:
         lines.append(f"    …외 {len(items) - limit}건")
     return "\n".join(lines)
@@ -453,7 +453,7 @@ def slack_followups(
         since = (today - timedelta(days=7)).isoformat()
         notices = sum(1 for i in items if i["kind"] == "notice" and (i.get("date") or "") >= since)
         prespecs = sum(1 for i in items if i["kind"] == "prespec" and (i.get("date") or "") >= since)
-        blocks.append(f"*이번 주 요약*\n최근 7일 공고 {notices}건 · 사전규격 {prespecs}건\n<{site_url}index.html|오늘의 사업 기회>")
+        blocks.append(f"*이번 주 요약*\n최근 7일 공고 {notices}건 · 사전규격 {prespecs}건\n<{site_url}|오늘의 사업 기회>")
     return ("\n\n".join(blocks), keys)
 
 
@@ -491,7 +491,14 @@ def run_alerts(
     (feeds / "deadlines.ics").write_text(
         build_ics(list(matched.values()), now, int(config.get("calendar_days", 60))), encoding="utf-8", newline=""
     )
-    (repo_root / "alerts.html").write_text(build_alerts_page(config, counts), encoding="utf-8")
+    # SPA owns /alerts; do not write alerts.html (GH Pages /alerts → alerts.html loop).
+    stub = repo_root / "alerts.html"
+    if stub.is_file():
+        try:
+            if 'meta http-equiv="refresh"' in stub.read_text(encoding="utf-8", errors="ignore"):
+                stub.unlink(missing_ok=True)
+        except OSError:
+            pass
 
     state = load_state(repo_root)
     since = (today - timedelta(days=int(config.get("slack_max_age_days", 7)))).isoformat()

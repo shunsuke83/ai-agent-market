@@ -1,0 +1,5 @@
+/data/*
+  Cache-Control: public, max-age=300
+
+/feeds/*
+  Cache-Control: public, max-age=300

@@ -2,6 +2,8 @@ import sys
 from datetime import date
 from pathlib import Path
 
+import pytest
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from g2b.render import (
@@ -51,6 +53,7 @@ def test_render_row_contains_link():
     assert 'class="num">10.5</td>' in row
 
 
+@pytest.mark.skipif(not (ROOT / "band.html").is_file(), reason="legacy band.html retired")
 def test_replace_table_and_stamp_roundtrip():
     band = (ROOT / "band.html").read_text(encoding="utf-8")
     updated = replace_band_results_table(
@@ -98,6 +101,7 @@ def test_needs_confirm_total_is_live_count():
     assert total < 849  # the old editorial count is no longer a floor
 
 
+@pytest.mark.skipif(not (ROOT / "awards.html").is_file(), reason="legacy awards.html retired")
 def test_replace_awards_large_table():
     awards = (ROOT / "awards.html").read_text(encoding="utf-8")
     updated = replace_awards_table(
