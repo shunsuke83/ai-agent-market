@@ -89,7 +89,68 @@ export type Prespec = {
 
 export type OrderPlan = Record<string, unknown>;
 export type Firm = Record<string, unknown>;
-export type Bidder = Record<string, unknown>;
+
+export type BidderRival = {
+  bizno: string;
+  name: string;
+  faced: number;
+  ahead: number;
+  behind: number;
+};
+
+export type BidderChange = {
+  date?: string;
+  text?: string;
+  confirmed?: boolean;
+};
+
+export type BidderHistoryItem = {
+  notice_idx: number;
+  rank?: number | null;
+  rate_pct?: number | null;
+  price_score?: number | null;
+  amount_eok?: number | null;
+};
+
+export type Bidder = {
+  bizno: string;
+  name?: string;
+  firm?: string;
+  bidder?: string;
+  region?: string | null;
+  bids?: number;
+  bid_count?: number;
+  wins?: number;
+  win_count?: number;
+  firsts?: number;
+  avg_win_rate?: number | null;
+  median_bid_rate?: number | null;
+  bid_rate_n?: number;
+  median_budget_share?: number | null;
+  budget_share_n?: number;
+  history?: BidderHistoryItem[];
+  rivals?: BidderRival[];
+  changes?: BidderChange[];
+};
+
+export type BidderNotice = {
+  date?: string | null;
+  org?: string;
+  title?: string | null;
+  budget_eok?: number | null;
+  id?: string | null;
+  winner_bizno?: string;
+  status?: string | null;
+  bidder_count?: number;
+};
+
+export type BiddersPayload = {
+  generated_at?: string | null;
+  summary?: { firms?: number; notices?: number; bids?: number; wins?: number };
+  firms?: Bidder[];
+  bidders?: Bidder[];
+  notices?: BidderNotice[];
+};
 
 export type AgencyWinner = {
   name: string;
@@ -212,7 +273,7 @@ export type DataClient = {
   getOrderPlans(): Promise<OrderPlan[] | null>;
   getFirms(): Promise<Firm[] | null>;
   getCompetitors(): Promise<CompetitorsPayload | null>;
-  getBidders(): Promise<Bidder[] | null>;
+  getBidders(): Promise<BiddersPayload | null>;
   getAgencies(): Promise<AgenciesPayload | null>;
   getReports(): Promise<Record<string, unknown> | null>;
 };

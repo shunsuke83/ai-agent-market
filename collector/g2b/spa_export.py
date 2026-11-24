@@ -193,28 +193,123 @@ def build_spa_payload(repo_root: Path) -> dict[str, Any]:
     }
 
 
-def _bidders_index(repo_root: Path) -> list[dict[str, Any]]:
-    """Compact firm list for SPA. hist entries are [notice_idx, rank, rate_pct, amount].
+def _median(xs: list[float]) -> float | None:
+    if not xs:
+        return None
+    s = sorted(xs)
+    mid = len(s) // 2
+    if len(s) % 2:
+        return s[mid]
+    return (s[mid - 1] + s[mid]) / 2
 
-    Wins = notices where notice[5] (winner 사업자번호) equals this firm — same rule as
-    assets/bidder-search.js. Do not treat hist[0]==0 as a win (that is a notice index).
+
+def _bidders_payload(repo_root: Path) -> dict[str, Any]:
+    """SPA bidder search: firm rollups + shared notices + per-bid history.
+
+    hist entries are [notice_idx, rank, rate_pct|score, amount]. Wins = notices where
+    notice[5] (winner 사업자번호) equals this firm — same rule as assets/bidder-search.js.
     """
+    from .render import load_run_status, stamp_text
+
+    empty = {
+        "generated_at": stamp_text(load_run_status(repo_root)),
+        "summary": {"firms": 0, "notices": 0, "bids": 0, "wins": 0},
+        "notices": [],
+        "firms": [],
+    }
     path = repo_root / "data" / "bidders.json"
     if not path.is_file():
-        return []
+        return empty
     raw = json.loads(path.read_text(encoding="utf-8"))
-    firms = raw.get("firms") if isinstance(raw, dict) else None
-    notices = raw.get("notices") if isinstance(raw, dict) else None
-    if not isinstance(firms, dict):
-        return []
-    if not isinstance(notices, list):
-        notices = []
-    rows: list[dict[str, Any]] = []
-    for bizno, v in firms.items():
+    firms_raw = raw.get("firms") if isinstance(raw, dict) else None
+    notices_raw = raw.get("notices") if isinstance(raw, dict) else None
+    if not isinstance(firms_raw, dict):
+        return empty
+    if not isinstance(notices_raw, list):
+        notices_raw = []
+
+    notices: list[dict[str, Any]] = []
+    for row in notices_raw:
+        if not isinstance(row, list) or len(row) < 3:
+            notices.append(
+                {
+                    "date": None,
+                    "org": "",
+                    "title": "",
+                    "budget_eok": None,
+                    "id": None,
+                    "winner_bizno": "",
+                    "status": "",
+                    "bidder_count": 0,
+                }
+            )
+            continue
+        href = str(row[4] or "") if len(row) > 4 else ""
+        nid = ""
+        if href:
+            base = href.rsplit("/", 1)[-1]
+            nid = base.replace(".html", "")
+        try:
+            budget = float(row[3]) if len(row) > 3 and row[3] not in (None, "") else None
+        except (TypeError, ValueError):
+            budget = None
+        notices.append(
+            {
+                "date": str(row[0] or "") or None,
+                "org": str(row[1] or ""),
+                "title": str(row[2] or ""),
+                "budget_eok": budget,
+                "id": nid or None,
+                "winner_bizno": str(row[5] or "") if len(row) > 5 else "",
+                "status": str(row[6] or "") if len(row) > 6 else "",
+                "bidder_count": 0,
+            }
+        )
+
+    # Participants per notice: [(bizno, rank), ...] for rivals + bidder_count.
+    by_notice: list[list[tuple[str, int | None]]] = [[] for _ in notices]
+    firm_hists: dict[str, list[list[Any]]] = {}
+    for bizno, v in firms_raw.items():
         row = v if isinstance(v, list) else []
         hist = row[2] if len(row) > 2 and isinstance(row[2], list) else []
+        firm_hists[str(bizno)] = hist
+        for h in hist:
+            if not isinstance(h, list) or not h:
+                continue
+            try:
+                idx = int(h[0])
+            except (TypeError, ValueError):
+                continue
+            if idx < 0 or idx >= len(notices):
+                continue
+            rank: int | None
+            try:
+                rank = int(h[1]) if len(h) > 1 and h[1] not in (None, "") else None
+            except (TypeError, ValueError):
+                rank = None
+            by_notice[idx].append((str(bizno), rank))
+    for i, parts in enumerate(by_notice):
+        notices[i]["bidder_count"] = len(parts)
+
+    firm_name = {
+        str(bz): (v[0] if isinstance(v, list) and v else bz) for bz, v in firms_raw.items()
+    }
+
+    firms: list[dict[str, Any]] = []
+    total_bids = 0
+    total_wins = 0
+    for bizno, v in firms_raw.items():
+        bz = str(bizno)
+        row = v if isinstance(v, list) else []
+        hist = firm_hists.get(bz, [])
         wins = 0
+        firsts = 0
         win_rates: list[float] = []
+        bid_rates: list[float] = []
+        shares: list[float] = []
+        history: list[dict[str, Any]] = []
+        faced: dict[str, dict[str, int]] = {}
+
         for h in hist:
             if not isinstance(h, list) or not h:
                 continue
@@ -225,38 +320,145 @@ def _bidders_index(repo_root: Path) -> list[dict[str, Any]]:
             if idx < 0 or idx >= len(notices):
                 continue
             notice = notices[idx]
-            winner_bz = notice[5] if isinstance(notice, list) and len(notice) > 5 else None
-            if str(winner_bz or "") != str(bizno):
-                continue
-            wins += 1
-            # Prefer amount/budget (true 낙찰률). hist rate_pct is often a 10-pt price score
-            # on negotiated contracts, not award-to-budget %.
-            budget = notice[3] if isinstance(notice, list) and len(notice) > 3 else None
-            amount = h[3] if len(h) > 3 else None
-            rate = None
+            winner_bz = str(notice.get("winner_bizno") or "")
             try:
-                if amount not in (None, "") and budget not in (None, "") and float(budget) > 0:
-                    rate = float(amount) / float(budget) * 100.0
-                elif len(h) > 2 and h[2] not in (None, ""):
-                    candidate = float(h[2])
-                    if candidate >= 50:  # looks like 낙찰률, not 가격평가 점수
-                        rate = candidate
+                rank = int(h[1]) if len(h) > 1 and h[1] not in (None, "") else None
             except (TypeError, ValueError):
+                rank = None
+            raw_rate = None
+            if len(h) > 2 and h[2] not in (None, ""):
+                try:
+                    raw_rate = float(h[2])
+                except (TypeError, ValueError):
+                    raw_rate = None
+            amount = None
+            if len(h) > 3 and h[3] not in (None, ""):
+                try:
+                    amount = float(h[3])
+                except (TypeError, ValueError):
+                    amount = None
+            budget = notice.get("budget_eok")
+            is_rate = raw_rate is not None and 50 <= raw_rate <= 110
+            is_score = raw_rate is not None and 0 <= raw_rate < 50
+            if is_rate:
+                bid_rates.append(raw_rate)
+            if (
+                amount is not None
+                and budget not in (None, "")
+                and float(budget or 0) > 0
+            ):
+                share = 100.0 * amount / float(budget)  # type: ignore[arg-type]
+                if 20 <= share <= 160:
+                    shares.append(share)
+
+            won = winner_bz == bz
+            if won:
+                wins += 1
+                # Prefer amount/budget (true 낙찰률). hist rate is often a 10-pt price score.
                 rate = None
-            if rate is not None:
-                win_rates.append(rate)
+                try:
+                    if amount is not None and budget not in (None, "") and float(budget or 0) > 0:
+                        rate = amount / float(budget) * 100.0  # type: ignore[arg-type]
+                    elif is_rate and raw_rate is not None:
+                        rate = raw_rate
+                except (TypeError, ValueError):
+                    rate = None
+                if rate is not None:
+                    win_rates.append(rate)
+            elif not winner_bz and notice.get("status") != "낙찰" and rank == 1:
+                firsts += 1
+
+            for other_bz, other_rank in by_notice[idx]:
+                if other_bz == bz:
+                    continue
+                slot = faced.get(other_bz) or {"n": 0, "ahead": 0, "behind": 0}
+                slot["n"] += 1
+                if rank is not None and other_rank is not None:
+                    if rank < other_rank:
+                        slot["ahead"] += 1
+                    elif rank > other_rank:
+                        slot["behind"] += 1
+                faced[other_bz] = slot
+
+            history.append(
+                {
+                    "notice_idx": idx,
+                    "rank": rank,
+                    "rate_pct": round(raw_rate, 3) if is_rate and raw_rate is not None else None,
+                    "price_score": round(raw_rate, 3) if is_score and raw_rate is not None else None,
+                    "amount_eok": amount,
+                }
+            )
+
+        rivals = sorted(
+            (
+                {
+                    "bizno": obz,
+                    "name": firm_name.get(obz, obz),
+                    "faced": stats["n"],
+                    "ahead": stats["ahead"],
+                    "behind": stats["behind"],
+                }
+                for obz, stats in faced.items()
+            ),
+            key=lambda r: (-int(r["faced"]), str(r["name"])),
+        )[:8]
+
+        changes: list[dict[str, Any]] = []
+        raw_changes = row[3] if len(row) > 3 and isinstance(row[3], list) else []
+        for c in raw_changes:
+            if not isinstance(c, list) or not c:
+                continue
+            changes.append(
+                {
+                    "date": str(c[0] or "") if len(c) > 0 else "",
+                    "text": str(c[1] or "") if len(c) > 1 else "",
+                    "confirmed": bool(c[2]) if len(c) > 2 else False,
+                }
+            )
+
+        med_rate = _median(bid_rates)
+        med_share = _median(shares)
         entry: dict[str, Any] = {
-            "bizno": bizno,
-            "name": row[0] if row else bizno,
+            "bizno": bz,
+            "name": row[0] if row else bz,
             "region": row[1] if len(row) > 1 else "",
-            "bids": len(hist),
+            "bids": len(history),
             "wins": wins,
+            "firsts": firsts,
+            "history": history,
+            "rivals": rivals,
+            "changes": changes,
         }
         if win_rates:
             entry["avg_win_rate"] = round(sum(win_rates) / len(win_rates), 1)
-        rows.append(entry)
-    rows.sort(key=lambda r: (-int(r["wins"]), -int(r["bids"]), str(r["name"])))
-    return rows
+        if med_rate is not None:
+            entry["median_bid_rate"] = round(med_rate, 2)
+            entry["bid_rate_n"] = len(bid_rates)
+        if med_share is not None:
+            entry["median_budget_share"] = round(med_share, 1)
+            entry["budget_share_n"] = len(shares)
+        firms.append(entry)
+        total_bids += len(history)
+        total_wins += wins
+
+    firms.sort(key=lambda r: (-int(r["wins"]), -int(r["bids"]), str(r["name"])))
+    return {
+        "generated_at": stamp_text(load_run_status(repo_root)),
+        "summary": {
+            "firms": len(firms),
+            "notices": len(notices),
+            "bids": total_bids,
+            "wins": total_wins,
+        },
+        "notices": notices,
+        "firms": firms,
+    }
+
+
+def _bidders_index(repo_root: Path) -> list[dict[str, Any]]:
+    """Firm summary rows only (tests / callers that do not need history)."""
+    return list(_bidders_payload(repo_root).get("firms") or [])
 
 
 def _agencies_payload(repo_root: Path) -> dict[str, Any]:
@@ -423,7 +625,7 @@ def write_spa_export(
     from .competitors import build_spa_competitors
 
     payload = build_spa_payload(repo_root)
-    bidders = _bidders_index(repo_root)
+    bidders = _bidders_payload(repo_root)
     agencies = _agencies_payload(repo_root)
     competitors = build_spa_competitors(repo_root)
     targets = [repo_root / "data" / "spa"]
@@ -444,7 +646,7 @@ def write_spa_export(
             encoding="utf-8",
         )
         (out / "bidders-index.json").write_text(
-            json.dumps({"bidders": bidders}, ensure_ascii=False),
+            json.dumps(bidders, ensure_ascii=False),
             encoding="utf-8",
         )
         (out / "agencies-index.json").write_text(
@@ -470,7 +672,7 @@ def write_spa_export(
     return {
         "notices": len(payload["notices"]["notices"]),
         "details": detail_count,
-        "bidders": len(bidders),
+        "bidders": len(bidders.get("firms") or []),
         "agencies": len(agencies.get("agencies") or []),
         "competitors": len(competitors.get("firms") or []),
         "has_fit": payload["summary"]["has_fit"],

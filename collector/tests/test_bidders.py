@@ -71,7 +71,7 @@ def test_render_frequent_row():
 
 def test_spa_bidders_index_counts_wins_by_notice_winner(tmp_path: Path):
     """hist[0] is notice index, not a win flag — wins follow notice[5] == bizno."""
-    from g2b.spa_export import _bidders_index
+    from g2b.spa_export import _bidders_index, _bidders_payload
 
     root = tmp_path
     (root / "data").mkdir()
@@ -97,3 +97,11 @@ def test_spa_bidders_index_counts_wins_by_notice_winner(tmp_path: Path):
     assert rows["1111111111"]["avg_win_rate"] == 95.0
     assert rows["2222222222"]["wins"] == 1
     assert rows["2222222222"]["avg_win_rate"] == 92.0
+    rich = _bidders_payload(root)
+    assert rich["summary"]["firms"] == 2
+    assert len(rich["notices"]) == 3
+    alpha = next(f for f in rich["firms"] if f["bizno"] == "1111111111")
+    assert alpha["firsts"] == 1
+    assert alpha["history"][0]["price_score"] == 9.5
+    assert alpha["history"][1]["rate_pct"] == 90.0
+    assert any(r["bizno"] == "2222222222" for r in alpha["rivals"])

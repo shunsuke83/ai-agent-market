@@ -2,6 +2,7 @@ import type {
   AgenciesPayload,
   Agency,
   Bidder,
+  BiddersPayload,
   CompetitorsPayload,
   DataClient,
   Firm,
@@ -129,25 +130,42 @@ export const publicClient: DataClient = {
     return fetchJson<CompetitorsPayload>("/data/spa/competitors.json");
   },
 
-  async getBidders() {
-    // Prefer SPA-normalized index; fall back to firms map inside bidders.json.
-    const spa = unwrapList<Bidder>(await fetchJson<unknown>("/data/spa/bidders-index.json"), "bidders");
-    if (spa && spa.length) return spa;
-    const raw = await fetchJson<Record<string, unknown>>("/data/bidders.json");
-    if (!raw) return [];
-    const firms = raw.firms;
-    if (firms && typeof firms === "object" && !Array.isArray(firms)) {
-      return Object.entries(firms as Record<string, unknown>).map(([bizno, v]) => {
-        const row = Array.isArray(v) ? v : [];
-        return {
-          bizno,
-          name: row[0] ?? bizno,
-          region: row[1] ?? "",
-          bids: Array.isArray(row[2]) ? row[2].length : 0,
-        } as Bidder;
-      });
+  async getBidders(): Promise<BiddersPayload | null> {
+    const spa = await fetchJson<BiddersPayload>("/data/spa/bidders-index.json");
+    if (spa && (Array.isArray(spa.firms) || Array.isArray(spa.bidders))) {
+      return {
+        ...spa,
+        firms: spa.firms ?? spa.bidders ?? [],
+        notices: spa.notices ?? [],
+      };
     }
-    return unwrapList<Bidder>(raw, "bidders") ?? [];
+    // Legacy compact firms map → thin payload (no shared notices).
+    const raw = await fetchJson<Record<string, unknown>>("/data/bidders.json");
+    if (!raw) return null;
+    const firmsMap = raw.firms;
+    if (firmsMap && typeof firmsMap === "object" && !Array.isArray(firmsMap)) {
+      const firms: Bidder[] = Object.entries(firmsMap as Record<string, unknown>).map(
+        ([bizno, v]) => {
+          const row = Array.isArray(v) ? v : [];
+          return {
+            bizno,
+            name: String(row[0] ?? bizno),
+            region: String(row[1] ?? ""),
+            bids: Array.isArray(row[2]) ? row[2].length : 0,
+            wins: 0,
+            history: [],
+          };
+        },
+      );
+      firms.sort((a, b) => Number(b.bids ?? 0) - Number(a.bids ?? 0));
+      return {
+        summary: { firms: firms.length, notices: 0, bids: 0, wins: 0 },
+        firms,
+        notices: [],
+      };
+    }
+    const list = unwrapList<Bidder>(raw, "bidders") ?? [];
+    return { firms: list, notices: [] };
   },
 
   async getAgencies(): Promise<AgenciesPayload | null> {
