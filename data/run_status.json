@@ -1,50 +1,50 @@
 {
   "stages": {
     "collect": {
-      "last_attempt_at": "2026-11-24T12:35:19Z",
+      "last_attempt_at": "2026-11-25T11:23:01Z",
       "last_outcome": "success",
-      "last_success_at": "2026-11-24T12:35:19Z"
+      "last_success_at": "2026-11-25T11:23:01Z"
     },
     "awards": {
-      "last_attempt_at": "2026-11-24T12:35:19Z",
+      "last_attempt_at": "2026-11-25T11:23:01Z",
       "last_outcome": "skipped",
       "last_success_at": "2026-11-23T10:56:48Z"
     },
     "bidders": {
-      "last_attempt_at": "2026-11-24T12:35:19Z",
+      "last_attempt_at": "2026-11-25T11:23:01Z",
       "last_outcome": "skipped",
       "last_success_at": "2026-11-23T10:56:48Z"
     },
     "prespecs": {
-      "last_attempt_at": "2026-11-24T12:35:19Z",
+      "last_attempt_at": "2026-11-25T11:23:01Z",
       "last_outcome": "success",
-      "last_success_at": "2026-11-24T12:35:19Z"
+      "last_success_at": "2026-11-25T11:23:01Z"
     },
     "firms": {
-      "last_attempt_at": "2026-11-24T12:35:19Z",
+      "last_attempt_at": "2026-11-25T11:23:01Z",
       "last_outcome": "skipped",
       "last_success_at": "2026-11-23T10:56:48Z"
     },
     "plans": {
-      "last_attempt_at": "2026-11-24T12:35:19Z",
+      "last_attempt_at": "2026-11-25T11:23:01Z",
       "last_outcome": "failure",
       "last_success_at": "2026-11-21T09:49:08Z"
     },
     "contracts": {
-      "last_attempt_at": "2026-11-24T12:35:19Z",
+      "last_attempt_at": "2026-11-25T11:23:01Z",
       "last_outcome": "success",
-      "last_success_at": "2026-11-24T12:35:19Z"
+      "last_success_at": "2026-11-25T11:23:01Z"
     },
     "d1": {
-      "last_attempt_at": "2026-11-24T12:43:37Z",
+      "last_attempt_at": "2026-11-25T11:31:50Z",
       "last_outcome": "success",
-      "last_success_at": "2026-11-24T12:43:37Z"
+      "last_success_at": "2026-11-25T11:31:50Z"
     },
     "pages": {
-      "last_attempt_at": "2026-11-24T12:43:37Z",
+      "last_attempt_at": "2026-11-25T11:31:50Z",
       "last_outcome": "success",
-      "last_success_at": "2026-11-24T12:43:37Z"
+      "last_success_at": "2026-11-25T11:31:50Z"
     }
   },
-  "run_id": "45393490228"
+  "run_id": "45602591221"
 }

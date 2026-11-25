@@ -1,7 +1,71 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-24T12:31:56Z",
+  "generated_at": "2026-11-25T11:20:18Z",
   "contracts": [
+    {
+      "contract_no": "R26TA02467503",
+      "title": "2027년 Geo-AI 플랫폼 SW, HW 유지관리 용역",
+      "org": "제주특별자치도",
+      "contract_org": "조달청 제주지방조달청",
+      "signed_date": "2026-11-25",
+      "period_text": "2027/12/31",
+      "end_date": "2027-12-31",
+      "amount_eok": 2.254,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": true,
+      "firms": [
+        {
+          "name": "(주)유비즈정보기술",
+          "role": "도급업체",
+          "share": 10.5,
+          "bizno": "6168154799"
+        },
+        {
+          "name": "주식회사 이노팸",
+          "role": "주계약업체",
+          "share": 89.5,
+          "bizno": "2048651274"
+        }
+      ],
+      "bid_no": "R26BK01793314",
+      "registered_at": "2026-11-25 17:42",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02467503&ctrtChgOrd=00&prcmBsneSeCd=조070002&srchName=ctrtCrst&openUrl=Y",
+      "scope": "생성형·Agent",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "운영·유지보수"
+    },
+    {
+      "contract_no": "R26TA02459130",
+      "title": "(동의대학교 산학협력단) 2026학년도 동의대학교 AI부트캠프 소프트웨어(AI Agent 개발 솔루션) 플랫폼 구축 및 운영지원",
+      "org": "동의대학교 산학협력단",
+      "contract_org": "동의대학교 산학협력단",
+      "signed_date": "2026-11-25",
+      "period_text": "금차 96일, 총차 96일",
+      "end_date": "2027-02-28",
+      "amount_eok": 1.0,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 제네시스랩",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "4218800471"
+        }
+      ],
+      "bid_no": "R26BK01796464",
+      "registered_at": "2026-11-25 09:55",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02459130&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "생성형·Agent",
+      "fields": [
+        "AI 에이전트"
+      ],
+      "nature": "연구·교육·행사"
+    },
     {
       "contract_no": "R26TA02461691",
       "title": "AX서비스 개발환경 구축 용역",
@@ -30,6 +94,187 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화"
+    },
+    {
+      "contract_no": "R26TA01871951",
+      "title": "2026년 해양산업 AI 전환 및 기술 실증·확산 지원 용역",
+      "org": "한국해양진흥공사",
+      "contract_org": "한국해양진흥공사",
+      "signed_date": "2026-11-24",
+      "period_text": "금차 212일, 총차 212일",
+      "end_date": "2026-12-31",
+      "amount_eok": 24.75,
+      "long_term": "신규",
+      "method": "수의계약",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 엘지씨엔에스",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "1168119477"
+        }
+      ],
+      "bid_no": "R26BK01481598",
+      "registered_at": "2026-11-25 17:14",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA01871951&ctrtChgOrd=01&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
+    {
+      "contract_no": "R26TA02460819",
+      "title": "국세청 AI 시스템 구축 ISMP 수립",
+      "org": "국세청",
+      "contract_org": "조달청",
+      "signed_date": "2026-11-24",
+      "period_text": "계약 후 180일 이내",
+      "end_date": "2027-05-23",
+      "amount_eok": 15.4185,
+      "long_term": "신규",
+      "method": "일반경쟁",
+      "joint": true,
+      "firms": [
+        {
+          "name": "주식회사 아이티센엔텍",
+          "role": "주계약업체",
+          "share": 40.0,
+          "bizno": "2028132975"
+        },
+        {
+          "name": "주식회사 케이티",
+          "role": "도급업체",
+          "share": 10.0,
+          "bizno": "1028142945"
+        },
+        {
+          "name": "주식회사 유플러스아이티",
+          "role": "도급업체",
+          "share": 20.0,
+          "bizno": "1198196788"
+        },
+        {
+          "name": "주식회사 지티아이씨",
+          "role": "도급업체",
+          "share": 10.0,
+          "bizno": "1078841902"
+        },
+        {
+          "name": "주식회사 업스테이지",
+          "role": "도급업체",
+          "share": 20.0,
+          "bizno": "8308801918"
+        }
+      ],
+      "bid_no": "R26BK01736987",
+      "registered_at": "2026-11-25 10:19",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02460819&ctrtChgOrd=00&prcmBsneSeCd=조070002&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AX·전략"
+      ],
+      "nature": "ISP·전략"
+    },
+    {
+      "contract_no": "R26TA02443748",
+      "title": "화학 Vertical AI 도입을 위한 화학 데이터 표준화 체계 정립 및 시범 구축 용역",
+      "org": "한국화학연구원",
+      "contract_org": "조달청 대전지방조달청",
+      "signed_date": "2026-11-24",
+      "period_text": "계약 후 45일 이내",
+      "end_date": "2027-01-08",
+      "amount_eok": 1.5675,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "쿤텍 주식회사",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "1238648219"
+        }
+      ],
+      "bid_no": "R26BK01766037",
+      "registered_at": "2026-11-25 13:41",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02443748&ctrtChgOrd=00&prcmBsneSeCd=조070002&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화"
+    },
+    {
+      "contract_no": "R26TA02460849",
+      "title": "AI기반 실시간 가스배관망 안전관리시스템 시범구축 용역",
+      "org": "(주)한국가스기술공사",
+      "contract_org": "(주)한국가스기술공사",
+      "signed_date": "2026-11-24",
+      "period_text": "금차 275일, 총차 275일",
+      "end_date": "2027-08-31",
+      "amount_eok": 1.998,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 지오멕스소프트",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "2218133219"
+        }
+      ],
+      "bid_no": "R26BK01796859",
+      "registered_at": "2026-11-25 11:36",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02460849&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화"
+    },
+    {
+      "contract_no": "R26TA02457047",
+      "title": "EBS 인공지능 기반 영어말하기 학습지원 서비스 운영(장기계속 2차)",
+      "org": "한국교육방송공사",
+      "contract_org": "조달청 서울지방조달청",
+      "signed_date": "2026-11-24",
+      "period_text": null,
+      "end_date": null,
+      "amount_eok": 46.3378,
+      "long_term": "장기",
+      "method": "일반경쟁",
+      "joint": true,
+      "firms": [
+        {
+          "name": "(주)잉글리시헌트",
+          "role": "도급업체",
+          "share": 38.0,
+          "bizno": "2118669826"
+        },
+        {
+          "name": "(주)이노그리드",
+          "role": "주계약업체",
+          "share": 52.0,
+          "bizno": "2208736743"
+        },
+        {
+          "name": "주식회사 유탑소프트",
+          "role": "도급업체",
+          "share": 10.0,
+          "bizno": "1248668144"
+        }
+      ],
+      "bid_no": "R26BK01381385",
+      "registered_at": "2026-11-25 08:46",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02457047&ctrtChgOrd=00&prcmBsneSeCd=조070002&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "운영·유지보수"
     },
     {
       "contract_no": "R26TA01899363",
@@ -21281,35 +21526,6 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화"
-    },
-    {
-      "contract_no": "R26TA01871951",
-      "title": "2026년 해양산업 AI 전환 및 기술 실증·확산 지원 용역",
-      "org": "한국해양진흥공사",
-      "contract_org": "한국해양진흥공사",
-      "signed_date": "2026-05-28",
-      "period_text": "금차 212일, 총차 212일",
-      "end_date": "2026-12-31",
-      "amount_eok": 24.75,
-      "long_term": "신규",
-      "method": "수의계약",
-      "joint": false,
-      "firms": [
-        {
-          "name": "주식회사 엘지씨엔에스",
-          "role": "주계약업체",
-          "share": 100.0,
-          "bizno": "1168119477"
-        }
-      ],
-      "bid_no": "R26BK01481598",
-      "registered_at": "2026-05-28 16:44",
-      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA01871951&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
-      "scope": "AI SW 확대",
-      "fields": [
-        "AI 일반"
-      ],
-      "nature": null
     },
     {
       "contract_no": "R26TA01908527",
