@@ -1,7 +1,135 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-25T11:20:18Z",
+  "generated_at": "2026-11-26T10:57:32Z",
   "contracts": [
+    {
+      "contract_no": "R26TA02022939",
+      "title": "광주비엔날레 AI라키비움 시스템 구축 용역",
+      "org": "재단법인 광주비엔날레",
+      "contract_org": "재단법인 광주비엔날레",
+      "signed_date": "2026-11-26",
+      "period_text": "금차 182일, 총차 182일",
+      "end_date": "2026-12-31",
+      "amount_eok": 23.34,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "(주)크루메이트",
+          "role": "주계약업체",
+          "share": 60.0,
+          "bizno": "2158675524"
+        },
+        {
+          "name": "주식회사 아키브소프트",
+          "role": "도급업체",
+          "share": 40.0,
+          "bizno": "8628600042"
+        }
+      ],
+      "bid_no": "R26BK01537257",
+      "registered_at": "2026-11-26 13:07",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02022939&ctrtChgOrd=02&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화"
+    },
+    {
+      "contract_no": "R26TA02155726",
+      "title": "지능형 가전 지식산업센터 구축사업 설계용역",
+      "org": "전남광주통합특별시 광주청사",
+      "contract_org": "전남광주통합특별시 광주청사",
+      "signed_date": "2026-11-26",
+      "period_text": "금차 310일, 총차 360일",
+      "end_date": "2027-08-18",
+      "amount_eok": 9.7561,
+      "long_term": "신규",
+      "method": "수의계약",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 새터이엔지",
+          "role": "도급업체",
+          "share": 0.0,
+          "bizno": "4098622054"
+        },
+        {
+          "name": "(주)건축사사무소휴먼플랜",
+          "role": "주계약업체",
+          "share": 0.0,
+          "bizno": "4738800394"
+        }
+      ],
+      "bid_no": null,
+      "registered_at": "2026-11-26 13:02",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02155726&ctrtChgOrd=01&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "시스템 구축·고도화"
+    },
+    {
+      "contract_no": "R26TA01908527",
+      "title": "지역 주력 중소기업형 인공지능 데이터 가공 지원사업 기획 연구용역",
+      "org": "경상북도 구미시",
+      "contract_org": "경상북도 구미시",
+      "signed_date": "2026-11-26",
+      "period_text": "금차 180일, 총차 180일",
+      "end_date": "2027-02-26",
+      "amount_eok": 1.1,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 더비엔아이",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "1148609487"
+        }
+      ],
+      "bid_no": null,
+      "registered_at": "2026-11-26 17:01",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA01908527&ctrtChgOrd=01&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "ISP·전략"
+    },
+    {
+      "contract_no": "R26TA02474444",
+      "title": "야생조류의 AI 바이러스 수용체 분포 및 감염특성 분석 연구",
+      "org": "기후에너지환경부 국립야생동물질병관리원",
+      "contract_org": "기후에너지환경부 국립야생동물질병관리원",
+      "signed_date": "2026-11-26",
+      "period_text": "금차 300일, 총차 300일",
+      "end_date": "2027-09-30",
+      "amount_eok": 1.0,
+      "long_term": "신규",
+      "method": "수의계약",
+      "joint": false,
+      "firms": [
+        {
+          "name": "건국대학교 산학협력단",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "2068207325"
+        }
+      ],
+      "bid_no": "R26BK01809404",
+      "registered_at": "2026-11-26 17:45",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02474444&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
     {
       "contract_no": "R26TA02467503",
       "title": "2027년 Geo-AI 플랫폼 SW, HW 유지관리 용역",
@@ -65,6 +193,151 @@
         "AI 에이전트"
       ],
       "nature": "연구·교육·행사"
+    },
+    {
+      "contract_no": "R26TA02466839",
+      "title": "피지컬 AI기반 항만기술산업 육성 프로그램형 R&D사업 기획연구",
+      "org": "해양수산과학기술진흥원",
+      "contract_org": "조달청 서울지방조달청",
+      "signed_date": "2026-11-25",
+      "period_text": "계약 후 360일 이내",
+      "end_date": "2027-11-20",
+      "amount_eok": 1.5,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 이니씽크",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "6448600916"
+        }
+      ],
+      "bid_no": "R26BK01777752",
+      "registered_at": "2026-11-26 08:00",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02466839&ctrtChgOrd=00&prcmBsneSeCd=조070002&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AX·전략"
+      ],
+      "nature": "ISP·전략"
+    },
+    {
+      "contract_no": "R26TA02459045",
+      "title": "(동의대학교 산학협력단) 2026학년도 동의대학교 AI부트캠프 (AWS Skill Builder) 플랫폼 제공 및 운영지원",
+      "org": "동의대학교 산학협력단",
+      "contract_org": "동의대학교 산학협력단",
+      "signed_date": "2026-11-25",
+      "period_text": "금차 96일, 총차 96일",
+      "end_date": "2027-02-28",
+      "amount_eok": 1.0,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 넥스트클라우드",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "3138703049"
+        }
+      ],
+      "bid_no": "R26BK01796586",
+      "registered_at": "2026-11-26 16:53",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02459045&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "연구·교육·행사"
+    },
+    {
+      "contract_no": "R26TA02466114",
+      "title": "한국해양과학기술원 연구·행정 지원 AI Agent 개발 및 적용",
+      "org": "한국해양과학기술원",
+      "contract_org": "한국해양과학기술원",
+      "signed_date": "2026-11-25",
+      "period_text": "금차 150일, 총차 150일",
+      "end_date": "2027-04-23",
+      "amount_eok": 1.4929,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 비즈데이터",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "2648135854"
+        }
+      ],
+      "bid_no": "R26BK01788041",
+      "registered_at": "2026-11-26 13:30",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02466114&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "생성형·Agent",
+      "fields": [
+        "AI 에이전트"
+      ],
+      "nature": "시스템 구축·고도화"
+    },
+    {
+      "contract_no": "R26TA02467771",
+      "title": "여주 조류인플루엔자(AI) 발생 관련 예방적 살처분 용역(일우농장)",
+      "org": "경기도 여주시",
+      "contract_org": "경기도 여주시",
+      "signed_date": "2026-11-25",
+      "period_text": "금차 15일, 총차 15일",
+      "end_date": "2026-12-09",
+      "amount_eok": 1.8942,
+      "long_term": "신규",
+      "method": "수의계약",
+      "joint": false,
+      "firms": [
+        {
+          "name": "성호글로벌주식회사",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "2578801020"
+        }
+      ],
+      "bid_no": null,
+      "registered_at": "2026-11-26 15:03",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02467771&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
+    {
+      "contract_no": "R26TA02468886",
+      "title": "CES2027 KOREA-M.AX Alliance 공동관 운영 용역",
+      "org": "한국로봇산업진흥원",
+      "contract_org": "한국로봇산업진흥원",
+      "signed_date": "2026-11-25",
+      "period_text": "금차 96일, 총차 96일",
+      "end_date": "2027-02-28",
+      "amount_eok": 1.48,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 더 웰컴",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "2208775519"
+        }
+      ],
+      "bid_no": "R26BK01788950",
+      "registered_at": "2026-11-26 15:02",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02468886&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
     },
     {
       "contract_no": "R26TA02461691",
@@ -1622,41 +1895,6 @@
         "AI 인프라"
       ],
       "nature": "인프라"
-    },
-    {
-      "contract_no": "R26TA02022939",
-      "title": "광주비엔날레 AI라키비움 시스템 구축 용역",
-      "org": "재단법인 광주비엔날레",
-      "contract_org": "재단법인 광주비엔날레",
-      "signed_date": "2026-11-04",
-      "period_text": "금차 182일, 총차 182일",
-      "end_date": "2026-12-31",
-      "amount_eok": 22.44,
-      "long_term": "신규",
-      "method": "제한경쟁",
-      "joint": false,
-      "firms": [
-        {
-          "name": "(주)크루메이트",
-          "role": "주계약업체",
-          "share": 60.0,
-          "bizno": "2158675524"
-        },
-        {
-          "name": "주식회사 아키브소프트",
-          "role": "도급업체",
-          "share": 40.0,
-          "bizno": "8628600042"
-        }
-      ],
-      "bid_no": "R26BK01537257",
-      "registered_at": "2026-11-04 13:53",
-      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02022939&ctrtChgOrd=01&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
-      "scope": "AI SW 확대",
-      "fields": [
-        "AI 일반"
-      ],
-      "nature": "시스템 구축·고도화"
     },
     {
       "contract_no": "R26TA02382077",
@@ -10130,41 +10368,6 @@
         "AI 일반"
       ],
       "nature": null
-    },
-    {
-      "contract_no": "R26TA02155726",
-      "title": "지능형 가전 지식산업센터 구축사업 설계용역(1차)",
-      "org": "전남광주통합특별시 광주청사",
-      "contract_org": "전남광주통합특별시 광주청사",
-      "signed_date": "2026-08-21",
-      "period_text": "금차 310일, 총차 360일",
-      "end_date": "2027-08-18",
-      "amount_eok": 9.7561,
-      "long_term": "장기",
-      "method": "수의계약",
-      "joint": false,
-      "firms": [
-        {
-          "name": "주식회사 새터이엔지",
-          "role": "도급업체",
-          "share": 0.0,
-          "bizno": "4098622054"
-        },
-        {
-          "name": "(주)건축사사무소휴먼플랜",
-          "role": "주계약업체",
-          "share": 0.0,
-          "bizno": "4738800394"
-        }
-      ],
-      "bid_no": null,
-      "registered_at": "2026-08-21 11:01",
-      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02155726&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
-      "scope": "AI SW 확대",
-      "fields": [
-        "AI 일반"
-      ],
-      "nature": "시스템 구축·고도화"
     },
     {
       "contract_no": "R26TA02149526",
@@ -21526,35 +21729,6 @@
         "AI 일반"
       ],
       "nature": "시스템 구축·고도화"
-    },
-    {
-      "contract_no": "R26TA01908527",
-      "title": "지역 주력 중소기업형 인공지능 데이터 가공 지원사업 기획 연구용역",
-      "org": "경상북도 구미시",
-      "contract_org": "경상북도 구미시",
-      "signed_date": "2026-05-28",
-      "period_text": "금차 180일, 총차 180일",
-      "end_date": "2026-11-27",
-      "amount_eok": 1.1,
-      "long_term": "신규",
-      "method": "제한경쟁",
-      "joint": false,
-      "firms": [
-        {
-          "name": "주식회사 더비엔아이",
-          "role": "주계약업체",
-          "share": 100.0,
-          "bizno": "1148609487"
-        }
-      ],
-      "bid_no": null,
-      "registered_at": "2026-05-28 11:25",
-      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA01908527&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
-      "scope": "AI SW 확대",
-      "fields": [
-        "AI 일반"
-      ],
-      "nature": "ISP·전략"
     },
     {
       "contract_no": "202432023CB02",
