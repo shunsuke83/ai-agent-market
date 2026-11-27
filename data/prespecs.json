@@ -1,11 +1,190 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T10:52:24Z",
+  "generated_at": "2026-11-27T10:50:37Z",
   "range": {
-    "since": "2026-11-23",
-    "until": "2026-11-26"
+    "since": "2026-11-24",
+    "until": "2026-11-27"
   },
   "prespecs": [
+    {
+      "prespec_no": "R26BD00308343",
+      "title": "2027년 ~ 2028년 오산AI코딩에듀랩 청소 용역(장기계속계약)",
+      "org": "경기도 오산시",
+      "order_org": "경기도 오산시",
+      "registered_at": "2026-11-27 18:15",
+      "registered_date": "2026-11-27",
+      "opinion_close_at": "2026-12-01 23:59",
+      "asign_budget_eok": 0.9286,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00308343&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00308114",
+      "title": "전남광주 지역 데이터 생성형 AI 문제해결 챌린지 프로그램 운영",
+      "org": "광주과학기술원",
+      "order_org": "광주과학기술원",
+      "registered_at": "2026-11-27 16:13",
+      "registered_date": "2026-11-27",
+      "opinion_close_at": "2026-12-02 23:59",
+      "asign_budget_eok": 0.43,
+      "scope": "생성형·Agent",
+      "fields": [
+        "생성형·LLM"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00308114&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00308114&fileType=BFDTL&fileSeq=2"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00307968",
+      "title": "전문대학 혁신지원사업 충청대학교 AI챗봇 구축",
+      "org": "충청대학교 산학협력단",
+      "order_org": "충청대학교 산학협력단",
+      "registered_at": "2026-11-27 14:34",
+      "registered_date": "2026-11-27",
+      "opinion_close_at": "2026-12-02 15:00",
+      "asign_budget_eok": 0.55,
+      "scope": "생성형·Agent",
+      "fields": [
+        "생성형·LLM"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00307968&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
+    {
+      "prespec_no": "R26BD00307821",
+      "title": "AI 기반 지역정주형 통합돌봄 교육혁신 모델 구축 성과공유회 운영 용역 계약 품의",
+      "org": "군산간호대학교산학협력단",
+      "order_org": "군산간호대학교산학협력단",
+      "registered_at": "2026-11-27 11:39",
+      "registered_date": "2026-11-27",
+      "opinion_close_at": "2026-12-02 23:59",
+      "asign_budget_eok": 0.0546,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "연구·교육·행사",
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00307821&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00307820",
+      "title": "보행자/차량 수요 예측을 위한 AI 학습용 합성데이터 생성증강스티칭 용역",
+      "org": "(주)싸인텔레콤",
+      "order_org": "(주)싸인텔레콤",
+      "registered_at": "2026-11-27 11:37",
+      "registered_date": "2026-11-27",
+      "opinion_close_at": "2026-12-02 23:59",
+      "asign_budget_eok": 0.66,
+      "scope": "AI SW 확대",
+      "fields": [
+        "데이터·예측"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00307820&fileType=BFDTL&fileSeq=1",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00307820&fileType=BFDTL&fileSeq=2",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00307820&fileType=BFDTL&fileSeq=3",
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00307820&fileType=BFDTL&fileSeq=4"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": true
+    },
+    {
+      "prespec_no": "R26BD00307800",
+      "title": "AI 자율실험실 설계 용역",
+      "org": "한국생산기술연구원",
+      "order_org": "한국생산기술연구원",
+      "registered_at": "2026-11-27 11:22",
+      "registered_date": "2026-11-27",
+      "opinion_close_at": "2026-12-02 23:59",
+      "asign_budget_eok": 0.495,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00307800&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00307736",
+      "title": "「2026년 앵커사업」반려동물 푸드 실무 동영상 콘텐츠(AI 제작) 개발 용역",
+      "org": "성운대학교 산학협력단",
+      "order_org": "성운대학교 산학협력단",
+      "registered_at": "2026-11-27 10:33",
+      "registered_date": "2026-11-27",
+      "opinion_close_at": "2026-12-02 23:59",
+      "asign_budget_eok": 1.6,
+      "scope": "AI SW 확대",
+      "fields": [
+        "비전·영상"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [
+        "R26BK01861246"
+      ],
+      "spec_files": [],
+      "biz": "servc",
+      "biz_div": "일반용역",
+      "sw_biz": false
+    },
+    {
+      "prespec_no": "R26BD00307684",
+      "title": "외부 상용 AI 연계 및 AI Agent 구축을 위한 생성형 AI 플랫폼 고도화 사업 용역",
+      "org": "(주)한국가스기술공사",
+      "order_org": "(주)한국가스기술공사",
+      "registered_at": "2026-11-27 09:37",
+      "registered_date": "2026-11-27",
+      "opinion_close_at": "2026-11-22 00:00",
+      "asign_budget_eok": 1.6643,
+      "scope": "생성형·Agent",
+      "fields": [
+        "생성형·LLM",
+        "AI 에이전트"
+      ],
+      "nature": "시스템 구축·고도화",
+      "bid_nos": [],
+      "spec_files": [],
+      "biz": "servc",
+      "biz_div": "기술용역",
+      "sw_biz": false
+    },
     {
       "prespec_no": "R26BD00307514",
       "title": "공단형 AI 플랫폼 구축",

@@ -1,7 +1,77 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-26T10:57:32Z",
+  "generated_at": "2026-11-27T10:55:37Z",
   "contracts": [
+    {
+      "contract_no": "R26TA02466051",
+      "title": "새만금 피지컬 AI 지원 시설 기본구상 용역",
+      "org": "새만금개발청",
+      "contract_org": "조달청 전북지방조달청",
+      "signed_date": "2026-11-27",
+      "period_text": "계약 후 180일 이내",
+      "end_date": "2027-05-26",
+      "amount_eok": 1.067,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": true,
+      "firms": [
+        {
+          "name": "주식회사 종합건축사사무소가람건축",
+          "role": "주계약업체",
+          "share": 50.0,
+          "bizno": "2118153940"
+        },
+        {
+          "name": "주식회사 디케이컨설턴츠",
+          "role": "도급업체",
+          "share": 50.0,
+          "bizno": "7148800558"
+        }
+      ],
+      "bid_no": "R26BK01795517",
+      "registered_at": "2026-11-27 18:09",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02466051&ctrtChgOrd=00&prcmBsneSeCd=조070002&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
+    {
+      "contract_no": "R26TA02482249",
+      "title": "DGIST 산업AX혁신허브 조성사업 설계 용역",
+      "org": "대구경북과학기술원",
+      "contract_org": "대구경북과학기술원",
+      "signed_date": "2026-11-27",
+      "period_text": "금차 271일, 총차 271일",
+      "end_date": "2027-08-24",
+      "amount_eok": 14.68,
+      "long_term": "신규",
+      "method": "수의계약",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 범건축종합건축사사무소",
+          "role": "주계약업체",
+          "share": 96.525886,
+          "bizno": "2208141152"
+        },
+        {
+          "name": "주식회사 서원이엔지",
+          "role": "도급업체",
+          "share": 3.4741145,
+          "bizno": "6588700756"
+        }
+      ],
+      "bid_no": "R26BK01665320",
+      "registered_at": "2026-11-27 17:17",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R26TA02482249&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null
+    },
     {
       "contract_no": "R26TA02022939",
       "title": "광주비엔날레 AI라키비움 시스템 구축 용역",
@@ -129,6 +199,35 @@
         "AI 일반"
       ],
       "nature": null
+    },
+    {
+      "contract_no": "R25TA01297095",
+      "title": "2026년 파주시 지능형 교통시스템(ITS) 유지관리 용역",
+      "org": "경기도 파주시",
+      "contract_org": "경기도 파주시",
+      "signed_date": "2026-11-26",
+      "period_text": "금차 365일, 총차 365일",
+      "end_date": "2026-12-31",
+      "amount_eok": 17.6957,
+      "long_term": "신규",
+      "method": "제한경쟁",
+      "joint": false,
+      "firms": [
+        {
+          "name": "주식회사 한일에스티엠",
+          "role": "주계약업체",
+          "share": 100.0,
+          "bizno": "2158185459"
+        }
+      ],
+      "bid_no": "R25BK01227587",
+      "registered_at": "2026-11-27 17:22",
+      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R25TA01297095&ctrtChgOrd=01&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": "운영·유지보수"
     },
     {
       "contract_no": "R26TA02467503",
@@ -34165,35 +34264,6 @@
       "bid_no": "R25BK01119092",
       "registered_at": "2025-12-18 15:23",
       "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R25TA01186950&ctrtChgOrd=00&prcmBsneSeCd=조070002&srchName=ctrtCrst&openUrl=Y",
-      "scope": "AI SW 확대",
-      "fields": [
-        "AI 일반"
-      ],
-      "nature": "운영·유지보수"
-    },
-    {
-      "contract_no": "R25TA01297095",
-      "title": "2026년 파주시 지능형 교통시스템(ITS) 유지관리 용역",
-      "org": "경기도 파주시",
-      "contract_org": "경기도 파주시",
-      "signed_date": "2026-01-01",
-      "period_text": "금차 365일, 총차 365일",
-      "end_date": "2026-12-31",
-      "amount_eok": 17.7896,
-      "long_term": "신규",
-      "method": "제한경쟁",
-      "joint": false,
-      "firms": [
-        {
-          "name": "주식회사 한일에스티엠",
-          "role": "주계약업체",
-          "share": 100.0,
-          "bizno": "2158185459"
-        }
-      ],
-      "bid_no": "R25BK01227587",
-      "registered_at": "2026-05-15 16:11",
-      "url": "https://www.g2b.go.kr/link/FIUA027_01/single/?ctrtNo=R25TA01297095&ctrtChgOrd=00&prcmBsneSeCd=조070003&srchName=ctrtCrst&openUrl=Y",
       "scope": "AI SW 확대",
       "fields": [
         "AI 일반"
