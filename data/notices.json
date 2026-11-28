@@ -1,12 +1,63 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T10:56:05Z",
+  "generated_at": "2026-11-28T10:27:38Z",
   "mode": "g2b_api",
   "range": {
-    "since": "2026-11-24",
-    "until": "2026-11-27"
+    "since": "2026-11-25",
+    "until": "2026-11-28"
   },
   "notices": [
+    {
+      "source": "g2b_api",
+      "bid_no": "R26BK01863384",
+      "bid_ord": "000",
+      "notice_date": "2026-11-28",
+      "open_date": "2026-12-04",
+      "open_at": "2026-12-04 16:00",
+      "close_at": "2026-12-04 15:00",
+      "close_date": "2026-12-04",
+      "org": "재단법인 대구경북디자인진흥원",
+      "title": "디자인 AI 인프라 구축사업 디자인 AI 지원시스템 서버 구매",
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 인프라"
+      ],
+      "nature": "인프라",
+      "budget_eok": 14.0,
+      "budget_kind": "배정예산",
+      "asign_budget_eok": 14.0,
+      "presmpt_eok": 12.7273,
+      "base_amount_eok": null,
+      "contract_method": "일반경쟁",
+      "ntce_kind": "등록공고",
+      "biz": "thng",
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01863384&bidPbancOrd=000",
+      "award_method": "적격심사제-추정가격이 10억원 이상인 물품의 평가기준(물품구매)",
+      "tech_rate": null,
+      "price_rate": null,
+      "joint_method": "(없음)공동수급불허",
+      "industry_limit": null,
+      "participation_limit": null,
+      "record_limit": null,
+      "rebid": false,
+      "prev_bid_no": null,
+      "prespec_no": "R26BD00303180",
+      "plan_no": "R26DD20936958",
+      "notice_files": [
+        {
+          "name": "1. 입찰 공고문.hwpx",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01863384&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=01"
+        },
+        {
+          "name": "1. 입찰 공고문.pdf",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01863384&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=01"
+        },
+        {
+          "name": "2. 장비 규격서.hwp",
+          "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01863384&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=01"
+        }
+      ]
+    },
     {
       "source": "g2b_api",
       "bid_no": "R26BK01863111",
@@ -29595,7 +29646,13 @@
           "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01822377&bidPbancOrd=000&fileType=&fileSeq=5&prcmBsneSeCd=03"
         }
       ],
-      "award_lookup_at": "2026-11-20"
+      "award_lookup_at": "2026-11-20",
+      "winner": "대우투어",
+      "bid_count": 24,
+      "award_amount_eok": 0.0055,
+      "win_rate_pct": 87.865,
+      "status": "낙찰",
+      "award_to_budget_pct": 0.4
     },
     {
       "source": "g2b_api",
@@ -48136,7 +48193,13 @@
         }
       ],
       "award_lookup_at": "2026-11-23",
-      "bidders_empty": true
+      "bidders_empty": true,
+      "winner": "마인드로직",
+      "bid_count": 3,
+      "award_amount_eok": 0.7934,
+      "win_rate_pct": 80.0,
+      "status": "낙찰",
+      "award_to_budget_pct": 80.0
     },
     {
       "source": "g2b_api",
@@ -135695,20 +135758,20 @@
     }
   ],
   "stats": {
-    "raw": 189,
-    "classified": 173,
-    "stored": 2399,
-    "band": 520,
-    "with_winner": 822,
+    "raw": 147,
+    "classified": 136,
+    "stored": 2400,
+    "band": 521,
+    "with_winner": 824,
     "awards": {
-      "fetched": 2979,
-      "updated": 19
+      "fetched": 2172,
+      "updated": 2
     },
     "scope": {
       "생성형·Agent": 234,
-      "AI SW 확대": 2165
+      "AI SW 확대": 2166
     },
     "budget_sanitized": 0
   },
-  "reclassified_at": "2026-11-27T10:56:04Z"
+  "reclassified_at": "2026-11-28T10:27:37Z"
 }

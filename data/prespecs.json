@@ -1,11 +1,33 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-27T10:50:37Z",
+  "generated_at": "2026-11-28T10:22:35Z",
   "range": {
-    "since": "2026-11-24",
-    "until": "2026-11-27"
+    "since": "2026-11-25",
+    "until": "2026-11-28"
   },
   "prespecs": [
+    {
+      "prespec_no": "R26BD00308418",
+      "title": "[긴급]2026년 울산과학관 AI·로봇 체험 놀이터 제작 설치",
+      "org": "울산광역시교육청 울산과학관",
+      "order_org": "울산광역시교육청 울산과학관",
+      "registered_at": "2026-11-28 09:51",
+      "registered_date": "2026-11-28",
+      "opinion_close_at": "2026-12-03 23:59",
+      "asign_budget_eok": 2.9487,
+      "scope": "AI SW 확대",
+      "fields": [
+        "AI 일반"
+      ],
+      "nature": null,
+      "bid_nos": [],
+      "spec_files": [
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00308418&fileType=BFDTL&fileSeq=1"
+      ],
+      "biz": "thng",
+      "biz_div": "물품",
+      "sw_biz": true
+    },
     {
       "prespec_no": "R26BD00308343",
       "title": "2027년 ~ 2028년 오산AI코딩에듀랩 청소 용역(장기계속계약)",
@@ -22,7 +44,7 @@
       "nature": null,
       "bid_nos": [],
       "spec_files": [
-        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00308343&fileType=BFDTL&fileSeq=1"
+        "https://www.g2b.go.kr/pn/pnz/pnza/UntyAtchFile/downloadFile.do?bfSpecRegNo=R26BD00308343&fileType=BFDTL&fileSeq=2"
       ],
       "biz": "servc",
       "biz_div": "일반용역",

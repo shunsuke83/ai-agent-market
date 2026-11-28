@@ -1,6 +1,6 @@
 {
-  "generated_at": "데이터 기준 2026-11-27 19:58 KST · D1 동기화 · CF 미러 동기화",
-  "generated_at_iso": "2026-11-27T20:07:41.316136+09:00",
+  "generated_at": "데이터 기준 2026-11-28 19:30 KST · D1 동기화 · CF 미러 동기화",
+  "generated_at_iso": "2026-11-28T19:39:33.793167+09:00",
   "has_fit": true,
   "total_notices": 948,
   "open_notices": 111,
@@ -1391,6 +1391,71 @@
       }
     },
     {
+      "id": "R26BK01845930-000",
+      "bid_no": "R26BK01845930",
+      "bid_ord": "000",
+      "title": "한국어능력시험(TOPIK) 통합형 AI 디지털 평가플랫폼 구축정보화전략계획(ISP) 수립 용역",
+      "org": "교육부 국립국제교육원",
+      "scope": "AI SW 확대",
+      "nature": "ISP·전략",
+      "fields": [
+        "AX·전략"
+      ],
+      "budget_eok": 5.4486,
+      "notice_date": "2026-11-23",
+      "close_at": "2027-01-06 10:00",
+      "open_date": "2027-01-06",
+      "open_at": "2027-01-06 11:00",
+      "contract_method": "일반경쟁",
+      "ntce_kind": "등록공고",
+      "winner": null,
+      "first_rank": null,
+      "second": null,
+      "status": null,
+      "bid_count": null,
+      "award_amount_eok": null,
+      "award_to_budget_pct": null,
+      "win_rate_pct": null,
+      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01845930&bidPbancOrd=000",
+      "hw_included": true,
+      "soft_excluded": false,
+      "exclude_reason": null,
+      "fit_verdict": "REVIEW",
+      "fit_score": 87,
+      "fit_reasons": [
+        "솔루션 GenOS(S) · 생성형",
+        "사업유형 구축·개발",
+        "ISP: RFP에 ISP 수행사의 후속 본사업 참여 제한 조항이 있는지 / 후속 본사업 예산·시기 근거가 있는지 (발주계획·사전규격·중기 예산)",
+        "예산 5.4억 소규모·레퍼런스 — 구간 기본 REVIEW"
+      ],
+      "payload": {
+        "notice_files": [
+          {
+            "name": "입찰공고서-1468_ISP(국가_일반_온서_공동).hwpx",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01845930&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
+          },
+          {
+            "name": "입찰공고서-1468_ISP(국가_일반_온서_공동).pdf",
+            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01845930&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
+          }
+        ],
+        "price_rate": 10.0,
+        "tech_rate": 90.0,
+        "award_method": "협상에의한계약-협상에 의한 낙찰자 결정(SW사업)",
+        "industry_limit": true,
+        "participation_limit": false,
+        "record_limit": false,
+        "joint_method": "(전자)공동이행",
+        "prespec_no": "R26BD00299771",
+        "plan_no": "R26DD20919690",
+        "biz": "servc",
+        "asign_budget_eok": 5.4486,
+        "presmpt_eok": 4.9091,
+        "budget_kind": "배정예산",
+        "source": "g2b_api"
+      }
+    },
+    {
       "id": "R26BK01845527-000",
       "bid_no": "R26BK01845527",
       "bid_ord": "000",
@@ -1646,78 +1711,6 @@
         "biz": "servc",
         "asign_budget_eok": 5.0,
         "presmpt_eok": 4.5455,
-        "budget_kind": "배정예산",
-        "source": "g2b_api"
-      }
-    },
-    {
-      "id": "R26BK01795668-000",
-      "bid_no": "R26BK01795668",
-      "bid_ord": "000",
-      "title": "AI-LXP(AI 개인화 학습성장 플랫폼) 구축 및 일학습병행과정 컨텐츠 개발 사업",
-      "org": "영남이공대학교 산학협력단",
-      "scope": "AI SW 확대",
-      "nature": "시스템 구축·고도화",
-      "fields": [
-        "AI 일반"
-      ],
-      "budget_eok": 3.8,
-      "notice_date": "2026-10-28",
-      "close_at": "2026-12-09 12:00",
-      "open_date": "2026-12-09",
-      "open_at": "2026-12-09 13:00",
-      "contract_method": "제한경쟁",
-      "ntce_kind": "등록공고",
-      "winner": null,
-      "first_rank": null,
-      "second": null,
-      "status": null,
-      "bid_count": null,
-      "award_amount_eok": null,
-      "award_to_budget_pct": null,
-      "win_rate_pct": null,
-      "g2b_url": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01795668&bidPbancOrd=000",
-      "hw_included": false,
-      "soft_excluded": false,
-      "exclude_reason": null,
-      "fit_verdict": "REVIEW",
-      "fit_score": 83,
-      "fit_reasons": [
-        "솔루션 GenOS(S) · 생성형",
-        "사업유형 구축·개발",
-        "예산 3.8억 소규모·레퍼런스 — 구간 기본 REVIEW"
-      ],
-      "payload": {
-        "notice_files": [
-          {
-            "name": "붙임1 입찰공고.pdf",
-            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01795668&bidPbancOrd=000&fileType=&fileSeq=1&prcmBsneSeCd=03"
-          },
-          {
-            "name": "붙임2 제안요청서(최종).hwp",
-            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01795668&bidPbancOrd=000&fileType=&fileSeq=2&prcmBsneSeCd=03"
-          },
-          {
-            "name": "붙임3 계약 관련 제출서류(대학 소정양식).hwp",
-            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01795668&bidPbancOrd=000&fileType=&fileSeq=3&prcmBsneSeCd=03"
-          },
-          {
-            "name": "붙임4 영남이공대학교 산학협력단 사업자등록증.pdf",
-            "url": "https://www.g2b.go.kr/pn/pnp/pnpe/UntyAtchFile/downloadFile.do?bidPbancNo=R26BK01795668&bidPbancOrd=000&fileType=&fileSeq=4&prcmBsneSeCd=03"
-          }
-        ],
-        "price_rate": 20.0,
-        "tech_rate": 80.0,
-        "award_method": "협상에의한계약-협상에 의한 낙찰자 결정(SW사업)",
-        "industry_limit": true,
-        "participation_limit": false,
-        "record_limit": false,
-        "joint_method": "(없음)공동수급불허",
-        "prespec_no": "R26BD00284173",
-        "plan_no": "R26DD20893991",
-        "biz": "servc",
-        "asign_budget_eok": 3.8,
-        "presmpt_eok": 3.4545,
         "budget_kind": "배정예산",
         "source": "g2b_api"
       }
